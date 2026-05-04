@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+37770,error_based,oracle,0.95,XMLType error-based Oracle technique
+37771,error_based,oracle,0.95,XMLType extracts data via error
+37772,benign,generic,0.6,Simple string comparison
+37773,error_based,oracle,0.95,XMLType from dual error-based
+37774,error_based,oracle,0.95,ctxsys.drithsx.sn Oracle text
+37775,error_based,oracle,0.95,ctxsys and dbms_utility Oracle
+37776,error_based,oracle,0.95,PostgreSQL cast numeric syntax
+37777,error_based,oracle,0.95,PostgreSQL cast case when
+37778,error_based,oracle,0.95,XMLType extracts data via error
+37779,error_based,oracle,0.95,XMLType error-based Oracle
+37780,error_based,oracle,0.95,PostgreSQL cast numeric syntax
+37781,error_based,oracle,0.95,Oracle XMLType error-based
+37782,error_based,oracle,0.95,XMLType case when from dual
+37783,error_based,oracle,0.95,XMLType case when from dual
+37784,benign,generic,0.6,Normal username comparison
+37785,error_based,oracle,0.95,PostgreSQL cast numeric syntax
+37786,benign,generic,0.6,Simple username comparison
+37787,error_based,oracle,0.95,XMLType from dual case when
+37788,error_based,oracle,0.95,XMLType error-based Oracle
+37789,error_based,oracle,0.95,XMLType case when from dual
+37790,error_based,oracle,0.95,XMLType error-based Oracle technique
+37791,error_based,oracle,0.95,XMLType extracts data from dual
+37792,benign,generic,0.6,Simple username query
+37793,benign,generic,0.6,Simple string comparison
+37794,error_based,oracle,0.95,PostgreSQL cast numeric syntax
+37795,error_based,oracle,0.95,XMLType with ctxsys Oracle
+37796,benign,generic,0.6,Normal username comparison
+37797,error_based,oracle,0.95,PostgreSQL cast numeric syntax
+37798,error_based,oracle,0.95,XMLType error-based extraction
+37799,error_based,oracle,0.95,XMLType extracts data via error
