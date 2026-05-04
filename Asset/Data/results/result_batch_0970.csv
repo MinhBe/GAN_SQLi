@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29070,benign,generic,1.0,Normal SQL INSERT with VALUES
+29071,benign,generic,1.0,Normal SQL INSERT
+29072,benign,generic,1.0,Normal SQL SELECT IS NULL
+29073,benign,generic,1.0,Normal SQL SELECT IS NOT NULL
+29074,benign,generic,1.0,Normal SQL UPDATE
+29075,benign,generic,1.0,Normal SQL UPDATE WHERE
+29076,benign,generic,1.0,Normal SQL SELECT all
+29077,benign,generic,1.0,Normal SQL DELETE WHERE
+29078,benign,generic,1.0,Normal SQL DELETE all
+29079,benign,generic,1.0,Normal SQL SELECT function
+29080,benign,generic,1.0,Normal SQL SELECT subquery
+29081,benign,generic,1.0,Normal SQL SELECT TOP
+29082,benign,generic,1.0,Normal SQL syntax number
+29083,benign,generic,1.0,Normal SQL SELECT FETCH
+29084,benign,generic,1.0,Normal SQL SELECT TOP PERCENT
+29085,benign,generic,1.0,Normal SQL SELECT FETCH PERCENT
+29086,benign,generic,1.0,Normal SQL SELECT TOP WHERE
+29087,benign,generic,1.0,Normal SQL SELECT LIMIT
+29088,benign,generic,1.0,Normal SQL SELECT FETCH WHERE
+29089,benign,generic,1.0,Normal SQL SELECT MIN
+29090,benign,generic,1.0,Normal SQL SELECT MIN
+29091,benign,generic,1.0,Normal SQL SELECT subquery
+29092,benign,generic,1.0,Normal SQL multiple queries
+29093,benign,generic,1.0,Normal SQL syntax errors
+29094,benign,generic,1.0,Normal SQL mixed dialects
+29095,benign,generic,1.0,Normal SQL mixed dialects
+29096,benign,generic,1.0,Normal SQL mixed dialects
+29097,benign,generic,1.0,Normal SQL SELECT TOP WHERE UNION
+29098,benign,generic,1.0,Normal SQL SELECT LIMIT WHERE
+29099,benign,generic,1.0,Normal SQL SELECT FETCH WHERE

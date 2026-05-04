@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+39000,error_based,postgresql,0.9,PostgreSQL cast for error
+39001,error_based,oracle,0.95,Oracle XMLType error extraction
+39002,error_based,oracle,0.95,Oracle XMLType + PostgreSQL cast
+39003,error_based,oracle,0.95,Oracle XMLType error extraction
+39004,error_based,oracle,0.95,Oracle XMLType + comment
+39005,error_based,oracle,0.95,Oracle XMLType error extraction
+39006,boolean_blind,generic,0.85,Pattern matching blind
+39007,error_based,oracle,0.95,Oracle XMLType error extraction
+39008,error_based,oracle,0.95,Oracle XMLType error extraction
+39009,error_based,oracle,0.95,Oracle XMLType + subquery
+39010,boolean_blind,generic,0.85,Pattern matching blind
+39011,error_based,oracle,0.95,Oracle XMLType error extraction
+39012,error_based,oracle,0.95,Oracle XMLType + subquery
+39013,boolean_blind,generic,0.85,Pattern matching blind
+39014,boolean_blind,generic,0.85,LIKE operator blind
+39015,error_based,oracle,0.95,Oracle XMLType error extraction
+39016,boolean_blind,generic,0.85,Equality check blind
+39017,error_based,oracle,0.95,Oracle XMLType + PostgreSQL cast
+39018,error_based,oracle,0.95,Oracle XMLType error extraction
+39019,boolean_blind,generic,0.85,Subquery blind
+39020,error_based,oracle,0.95,Oracle XMLType error extraction
+39021,error_based,oracle,0.95,Oracle XMLType error extraction
+39022,error_based,oracle,0.95,Oracle XMLType + PostgreSQL cast
+39023,error_based,oracle,0.95,Oracle XMLType error extraction
+39024,error_based,oracle,0.95,Oracle XMLType error extraction
+39025,boolean_blind,generic,0.85,Equality check blind
+39026,error_based,oracle,0.95,Oracle XMLType error extraction
+39027,error_based,oracle,0.95,Oracle XMLType error extraction
+39028,error_based,oracle,0.95,Oracle XMLType error extraction
+39029,error_based,oracle,0.95,Oracle XMLType error extraction

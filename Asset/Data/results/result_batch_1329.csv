@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+39840,error_based,postgresql,0.90,PostgreSQL cast for injection
+39841,error_based,oracle,0.90,Oracle with nested query
+39842,error_based,oracle,0.90,Oracle xmltype case-based
+39843,error_based,oracle,0.90,Oracle with double xmltype
+39844,error_based,oracle,0.90,Oracle ctxsys.drithsx.sn error
+39845,error_based,oracle,0.90,Oracle with case statement
+39846,error_based,postgresql,0.90,PostgreSQL cast for injection
+39847,error_based,oracle,0.90,Oracle xmltype case-based
+39848,error_based,oracle,0.90,Oracle with boolean mode
+39849,error_based,oracle,0.90,Oracle with comment injection
+39850,error_based,oracle,0.85,basic Oracle injection
+39851,error_based,oracle,0.80,basic Oracle injection
+39852,error_based,oracle,0.90,Oracle xmltype case statement
+39853,error_based,oracle,0.85,basic Oracle injection
+39854,error_based,oracle,0.90,Oracle xmltype error extraction
+39855,error_based,oracle,0.85,basic Oracle with LIKE
+39856,error_based,oracle,0.90,Oracle with case statement
+39857,error_based,oracle,0.90,Oracle with LIKE injection
+39858,error_based,postgresql,0.90,PostgreSQL cast for injection
+39859,error_based,oracle,0.90,Oracle xmltype case statement
+39860,error_based,oracle,0.85,basic Oracle with LIKE
+39861,error_based,oracle,0.90,Oracle with comment injection
+39862,error_based,oracle,0.90,Oracle xmltype case-based
+39863,error_based,oracle,0.90,Oracle ctxsys error function
+39864,error_based,oracle,0.85,basic Oracle injection
+39865,error_based,oracle,0.90,Oracle with comment injection
+39866,error_based,oracle,0.85,basic Oracle with LIKE
+39867,error_based,oracle,0.90,Oracle ctxsys.drithsx.sn error
+39868,error_based,oracle,0.85,basic Oracle injection
+39869,error_based,oracle,0.90,Oracle with xmltype case

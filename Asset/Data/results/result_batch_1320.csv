@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+39570,error_based,oracle,0.95,Oracle ctxsys.drithsx.sn error technique
+39571,error_based,oracle,0.90,Oracle xmltype with case statement
+39572,error_based,oracle,0.90,Oracle injection with PostgreSQL cast
+39573,error_based,postgresql,0.90,PostgreSQL cast numeric injection
+39574,error_based,oracle,0.90,Oracle ctxsys error injection
+39575,error_based,oracle,0.85,basic Oracle with LIKE
+39576,error_based,oracle,0.90,Oracle xmltype error extraction
+39577,error_based,oracle,0.90,Oracle with LIKE and select
+39578,error_based,oracle,0.90,Oracle with dual subquery
+39579,error_based,oracle,0.90,Oracle xmltype with nested query
+39580,error_based,oracle,0.90,Oracle error-based with ovhh alias
+39581,error_based,oracle,0.95,Oracle ctxsys.drithsx.sn technique
+39582,error_based,oracle,0.80,basic Oracle with LIKE
+39583,error_based,oracle,0.90,Oracle xmltype case-based error
+39584,error_based,oracle,0.95,Oracle ctxsys error technique
+39585,error_based,oracle,0.90,Oracle injection with xmltype
+39586,error_based,oracle,0.85,Oracle with alias injection
+39587,error_based,oracle,0.90,Oracle xmltype chr encoding
+39588,error_based,oracle,0.90,Oracle with dual subquery
+39589,error_based,oracle,0.90,Oracle xmltype case statement
+39590,error_based,oracle,0.90,Oracle with xfah alias
+39591,error_based,oracle,0.85,basic Oracle with LIKE
+39592,error_based,oracle,0.90,Oracle with ctxsys error function
+39593,error_based,oracle,0.90,Oracle xmltype chr encoding
+39594,error_based,oracle,0.85,basic Oracle injection
+39595,error_based,postgresql,0.90,PostgreSQL cast numeric injection
+39596,error_based,oracle,0.90,Oracle with comment-based injection
+39597,error_based,oracle,0.90,Oracle with chr encoding
+39598,error_based,postgresql,0.90,PostgreSQL cast for injection
+39599,error_based,oracle,0.90,Oracle xmltype with chr concat

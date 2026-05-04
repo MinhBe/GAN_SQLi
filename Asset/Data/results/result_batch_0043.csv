@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1260,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1261,boolean_blind,mysql,0.80,make_set() for boolean blind
+1262,union_based,generic,0.85,UNION ALL for union-based
+1263,boolean_blind,generic,0.80,CASE WHEN for boolean blind
+1264,unknown,generic,0.70,WHERE clause without full query
+1265,union_based,generic,0.85,UNION ALL for union-based
+1266,boolean_blind,generic,0.80,WHERE equality for blind
+1267,time_blind,generic,0.90,sleep() for time blind
+1268,time_blind,mssql,0.90,waitfor delay for MSSQL time blind
+1269,boolean_blind,mysql,0.80,CASE WHEN for boolean blind
+1270,boolean_blind,generic,0.80,OR comparison for blind
+1271,unknown,oracle,0.70,SELECT without clear type
+1272,boolean_blind,generic,0.80,WHERE equality for blind
+1273,boolean_blind,generic,0.75,Multiplication for blind
+1274,error_based,mysql,0.85,exp() with concat for error extraction
+1275,time_blind,postgresql,0.85,regexp_substring for time blind
+1276,boolean_blind,generic,0.75,Multiplication for blind
+1277,heavy_query,db2,0.85,Multiple systables join for heavy query
+1278,union_based,generic,0.85,UNION ALL for union-based
+1279,union_based,generic,0.85,UNION ALL for union-based
+1280,time_blind,mysql,0.90,benchmark() for time blind
+1281,boolean_blind,generic,0.80,CASE WHEN for boolean blind
+1282,boolean_blind,generic,0.80,CASE WHEN for boolean blind
+1283,boolean_blind,generic,0.80,WHERE equality for blind
+1284,union_based,generic,0.85,UNION ALL for union-based
+1285,error_based,mysql,0.85,extractvalue() with procedure analyse
+1286,heavy_query,db2,0.85,Multiple systables join for heavy query
+1287,union_based,generic,0.85,UNION ALL for union-based
+1288,time_blind,generic,0.90,sleep() for time blind
+1289,heavy_query,mysql,0.85,Multiple domain table join

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+27480,benign,generic,1.0,Invalid SQL syntax - not an attack
+27481,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27482,benign,generic,1.0,Invalid SQL - not a valid SQL statement
+27483,benign,generic,1.0,Normal SELECT all rows
+27484,benign,generic,1.0,Invalid SQL - not a valid SQL statement
+27485,benign,generic,1.0,Normal SELECT DISTINCT query
+27486,benign,generic,1.0,Normal SELECT COUNT DISTINCT
+27487,benign,generic,1.0,Normal SELECT COUNT aggregate
+27488,benign,generic,1.0,Invalid SQL syntax - not an attack
+27489,benign,generic,1.0,Normal SELECT all rows
+27490,benign,generic,1.0,Normal SELECT with WHERE clause
+27491,benign,generic,1.0,Normal SELECT with WHERE clause
+27492,benign,generic,1.0,Normal SELECT with WHERE clause
+27493,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27494,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27495,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27496,benign,generic,1.0,Normal SELECT with NOT operator
+27497,benign,generic,1.0,Normal SELECT with AND/OR conditions
+27498,benign,generic,1.0,Normal SELECT with NOT AND conditions
+27499,benign,generic,1.0,Normal SELECT with ORDER BY
+27500,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+27501,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+27502,benign,generic,1.0,Normal SELECT with ORDER BY ASC/DESC
+27503,benign,generic,1.0,Normal INSERT statement
+27504,benign,generic,1.0,Normal INSERT statement
+27505,benign,generic,1.0,Normal SELECT with IS NULL
+27506,benign,generic,1.0,Normal SELECT with IS NOT NULL
+27507,benign,generic,1.0,Normal UPDATE statement
+27508,benign,generic,1.0,Normal UPDATE statement
+27509,benign,generic,1.0,Normal DELETE statement

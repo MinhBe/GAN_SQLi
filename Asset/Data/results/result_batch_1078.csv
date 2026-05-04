@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+32310,auth_bypass,generic,0.6,wildcard for auth bypass
+32311,error_based,oracle,0.9,cast for PostgreSQL injection
+32312,error_based,oracle,0.95,xmltype for Oracle error extraction
+32313,error_based,oracle,0.9,char for Oracle encoding
+32314,auth_bypass,generic,0.6,wildcard for auth bypass
+32315,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32316,error_based,oracle,0.95,xmltype for Oracle error extraction
+32317,error_based,oracle,0.9,cast for PostgreSQL injection
+32318,error_based,oracle,0.95,xmltype for Oracle error extraction
+32319,error_based,oracle,0.9,cast for PostgreSQL injection
+32320,error_based,oracle,0.9,dbms_utility for Oracle error extraction
+32321,auth_bypass,generic,0.6,simple quote injection
+32322,error_based,oracle,0.95,xmltype for Oracle error extraction
+32323,auth_bypass,generic,0.7,quote escaping for auth bypass
+32324,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32325,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32326,error_based,oracle,0.9,cast for PostgreSQL injection
+32327,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32328,error_based,oracle,0.95,xmltype for Oracle error extraction
+32329,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32330,auth_bypass,generic,0.6,wildcard for auth bypass
+32331,error_based,oracle,0.95,xmltype for Oracle error extraction
+32332,error_based,oracle,0.9,cast for PostgreSQL injection
+32333,auth_bypass,generic,0.6,wildcard for auth bypass
+32334,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32335,error_based,oracle,0.95,xmltype for Oracle error extraction
+32336,error_based,oracle,0.95,xmltype for Oracle error extraction
+32337,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32338,error_based,oracle,0.9,cast for PostgreSQL injection
+32339,error_based,oracle,0.95,xmltype for Oracle error extraction

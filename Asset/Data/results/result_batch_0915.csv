@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+27420,benign,generic,1.0,Normal SELECT query with no SQL injection indicators
+27421,benign,generic,1.0,Normal SELECT query with no SQL injection indicators
+27422,benign,generic,1.0,Normal SELECT query with no SQL injection indicators
+27423,benign,generic,1.0,Normal SELECT MIN aggregate query
+27424,benign,generic,1.0,Normal SELECT MIN aggregate query
+27425,benign,generic,1.0,Normal SELECT subquery
+27426,benign,generic,1.0,Normal SELECT query with no SQL injection indicators
+27427,benign,generic,1.0,Normal SELECT query with no SQL injection indicators
+27428,benign,generic,1.0,Normal SELECT query with no SQL injection indicators
+27429,benign,generic,1.0,Normal SELECT query with no SQL injection indicators
+27430,benign,generic,1.0,Normal SELECT query with no SQL injection indicators
+27431,benign,generic,1.0,Normal SELECT query with no SQL injection indicators
+27432,benign,generic,1.0,Normal SELECT query with WHERE clause
+27433,benign,generic,1.0,Normal SELECT query with WHERE clause
+27434,benign,generic,1.0,Normal SELECT AVG aggregate query
+27435,benign,generic,1.0,Normal SELECT query with WHERE NOT LIKE
+27436,benign,generic,1.0,Normal SELECT AVG aggregate query
+27437,benign,generic,1.0,Normal SELECT AVG aggregate query
+27438,benign,generic,1.0,Normal SELECT AVG aggregate query
+27439,benign,generic,1.0,Normal SELECT COUNT aggregate query
+27440,benign,generic,1.0,Normal SELECT COUNT aggregate query
+27441,benign,generic,1.0,Normal SELECT AVG aggregate query
+27442,benign,generic,1.0,Normal SELECT query with WHERE NOT LIKE
+27443,benign,generic,1.0,Normal SELECT query with WHERE LIKE
+27444,benign,generic,1.0,Normal SELECT query with WHERE NOT LIKE
+27445,benign,generic,1.0,Normal SELECT query with IN clause
+27446,benign,generic,1.0,Normal SELECT query with NOT IN clause
+27447,benign,generic,1.0,Normal SELECT query with subquery
+27448,benign,generic,1.0,Normal SELECT query with BETWEEN clause
+27449,benign,generic,1.0,Normal SELECT query with NOT BETWEEN clause

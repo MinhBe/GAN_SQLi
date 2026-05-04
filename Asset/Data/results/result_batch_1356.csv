@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+40650,error_based,oracle,0.95,upper xmltype error function
+40651,error_based,oracle,0.95,select from dual xmltype
+40652,error_based,oracle,0.95,ctxsys drithsx Oracle error
+40653,error_based,oracle,0.95,select from dual xmltype
+40654,error_based,oracle,0.95,select from dual xmltype error
+40655,error_based,oracle,0.95,upper xmltype Oracle error
+40656,error_based,oracle,0.95,select from dual xmltype error
+40657,error_based,mssql,0.85,char mssql injection
+40658,error_based,oracle,0.95,select from dual xmltype
+40659,error_based,oracle,0.95,select from dual xmltype error
+40660,error_based,oracle,0.95,upper xmltype Oracle error
+40661,error_based,oracle,0.95,select from dual xmltype error
+40662,error_based,oracle,0.95,select from dual xmltype error
+40663,error_based,postgresql,0.9,cast numeric postgresql
+40664,error_based,oracle,0.95,select from dual xmltype
+40665,error_based,oracle,0.95,select from dual xmltype error
+40666,error_based,oracle,0.95,upper xmltype error function
+40667,error_based,generic,0.85,SQL quote bypass pattern
+40668,error_based,oracle,0.95,upper xmltype Oracle error
+40669,error_based,generic,0.85,wildcard injection pattern
+40670,error_based,oracle,0.95,upper xmltype error function
+40671,error_based,oracle,0.95,ctxsys drithsx Oracle
+40672,error_based,oracle,0.95,upper xmltype error function
+40673,error_based,oracle,0.95,select from dual xmltype
+40674,error_based,oracle,0.95,upper xmltype Oracle error
+40675,error_based,oracle,0.95,select from dual xmltype
+40676,error_based,generic,0.85,subquery injection pattern
+40677,error_based,oracle,0.95,select from dual xmltype
+40678,error_based,generic,0.85,wildcard injection pattern
+40679,error_based,oracle,0.95,upper xmltype error

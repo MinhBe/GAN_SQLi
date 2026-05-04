@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1380,boolean_blind,generic,0.80,AND equality comparison
+1381,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1382,time_blind,generic,0.90,sleep() for time blind
+1383,boolean_blind,mysql,0.80,elt() for boolean blind
+1384,time_blind,postgresql,0.90,pg_sleep() for time blind
+1385,union_based,generic,0.85,UNION ALL for union-based
+1386,error_based,mysql,0.85,extractvalue() for error extraction
+1387,unknown,oracle,0.70,SELECT without full context
+1388,unknown,generic,0.60,END keyword without context
+1389,unknown,generic,0.70,ORDER BY without full query
+1390,boolean_blind,generic,0.80,OR comparison for blind
+1391,time_blind,postgresql,0.90,pg_sleep() for time blind
+1392,union_based,generic,0.85,UNION ALL for union-based
+1393,time_blind,postgresql,0.90,pg_sleep() for time blind
+1394,boolean_blind,generic,0.80,WHERE equality for blind
+1395,heavy_query,postgresql,0.90,generate_series for heavy query
+1396,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1397,boolean_blind,generic,0.80,CASE WHEN for boolean blind
+1398,error_based,generic,0.85,Row/concat for error extraction
+1399,error_based,oracle,0.90,utl_inaddr for Oracle error-based
+1400,boolean_blind,oracle,0.80,CASE WHEN for boolean blind
+1401,heavy_query,db2,0.85,Multiple systables join for heavy query
+1402,error_based,mysql,0.90,updatexml() for error extraction
+1403,boolean_blind,generic,0.80,OR comparison for blind
+1404,time_blind,generic,0.90,sleep() for time blind
+1405,union_based,generic,0.85,UNION ALL for union-based
+1406,time_blind,generic,0.90,sleep() for time blind
+1407,boolean_blind,generic,0.80,rlike() for boolean blind
+1408,union_based,generic,0.85,UNION ALL for union-based
+1409,time_blind,oracle,0.90,dbms_pipe for Oracle time blind

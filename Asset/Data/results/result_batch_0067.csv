@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1980,union_based,generic,0.85,UNION ALL for union-based
+1981,time_blind,mssql,0.90,waitfor delay for time blind
+1982,boolean_blind,generic,0.80,WHERE equality for blind
+1983,boolean_blind,generic,0.80,WHERE equality for blind
+1984,heavy_query,mysql,0.85,Multiple domain table join
+1985,union_based,generic,0.85,UNION ALL for union-based
+1986,union_based,generic,0.85,UNION ALL for union-based
+1987,boolean_blind,firebird,0.80,Case when for Firebird blind
+1988,boolean_blind,generic,0.80,OR comparison for blind
+1989,time_blind,mysql,0.90,benchmark() with procedure analyse
+1990,time_blind,postgresql,0.90,pg_sleep() for time blind
+1991,time_blind,sqlite,0.85,randomblob() for time blind
+1992,union_based,generic,0.85,UNION ALL for union-based
+1993,time_blind,postgresql,0.90,pg_sleep() for time blind
+1994,boolean_blind,generic,0.80,WHERE equality for blind
+1995,error_based,mysql,0.90,updatexml() for error extraction
+1996,heavy_query,db2,0.85,Multiple systables join
+1997,unknown,generic,0.60,SELECT without clear type
+1998,boolean_blind,generic,0.80,IN with char for blind
+1999,union_based,generic,0.85,UNION ALL for union-based
+2000,union_based,generic,0.85,UNION ALL for union-based
+2001,heavy_query,postgresql,0.90,generate_series for heavy query
+2002,heavy_query,oracle,0.85,Multiple all_users table join
+2003,heavy_query,postgresql,0.90,generate_series for heavy query
+2004,boolean_blind,mysql,0.80,elt() for boolean blind
+2005,boolean_blind,generic,0.80,AND comparison for blind
+2006,time_blind,generic,0.90,sleep() with rlike for time blind
+2007,time_blind,generic,0.90,sleep() with rlike for time blind
+2008,union_based,generic,0.85,UNION ALL for union-based
+2009,union_based,generic,0.85,UNION ALL for union-based

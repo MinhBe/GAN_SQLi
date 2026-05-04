@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30960,boolean_blind,oracle,0.9,Oracle XMLType
+30961,out_of_band,oracle,0.9,Oracle dbms_utility
+30962,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30963,out_of_band,oracle,0.9,Oracle ctxsys.drithsx
+30964,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30965,out_of_band,oracle,0.9,Oracle ctxsys.drithsx
+30966,auth_bypass,generic,0.85,Simple OR pattern
+30967,auth_bypass,generic,0.85,Hash comment + OR
+30968,boolean_blind,oracle,0.9,Oracle XMLType
+30969,out_of_band,oracle,0.9,Oracle dbms_utility
+30970,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30971,auth_bypass,generic,0.85,Simple OR pattern
+30972,boolean_blind,oracle,0.9,Oracle XMLType
+30973,boolean_blind,oracle,0.9,Oracle XMLType
+30974,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30975,boolean_blind,oracle,0.9,Oracle XMLType
+30976,boolean_blind,oracle,0.9,Oracle XMLType
+30977,out_of_band,oracle,0.9,Oracle ctxsys.drithsx
+30978,boolean_blind,oracle,0.9,Oracle XMLType
+30979,boolean_blind,oracle,0.9,Oracle XMLType
+30980,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30981,boolean_blind,oracle,0.9,Oracle XMLType
+30982,out_of_band,oracle,0.9,Oracle ctxsys.drithsx
+30983,boolean_blind,oracle,0.9,Oracle XMLType
+30984,boolean_blind,oracle,0.9,Oracle XMLType
+30985,boolean_blind,oracle,0.9,Oracle XMLType
+30986,boolean_blind,oracle,0.9,Oracle XMLType
+30987,boolean_blind,postgresql,0.9,char() IN pattern
+30988,boolean_blind,oracle,0.9,Oracle XMLType
+30989,boolean_blind,oracle,0.9,Oracle XMLType

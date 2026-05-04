@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+27690,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27691,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27692,benign,generic,1.0,Normal SELECT with NOT operator
+27693,benign,generic,1.0,Normal SELECT with AND/OR conditions
+27694,benign,generic,1.0,Normal SELECT with NOT AND conditions
+27695,benign,generic,1.0,Normal SELECT with ORDER BY
+27696,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+27697,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+27698,benign,generic,1.0,Normal SELECT with ORDER BY ASC/DESC
+27699,benign,generic,1.0,Normal INSERT statement
+27700,benign,generic,1.0,Normal INSERT statement
+27701,benign,generic,1.0,Normal SELECT with IS NULL
+27702,benign,generic,1.0,Normal SELECT with IS NOT NULL
+27703,benign,generic,1.0,Normal UPDATE statement
+27704,benign,generic,1.0,Normal UPDATE statement
+27705,benign,generic,1.0,Normal SELECT all rows
+27706,benign,generic,1.0,Normal DELETE with WHERE
+27707,benign,generic,1.0,Normal DELETE all rows
+27708,benign,generic,1.0,Invalid SQL syntax - not an attack
+27709,benign,generic,1.0,Normal SELECT subquery
+27710,benign,generic,1.0,Normal SELECT TOP query
+27711,benign,generic,1.0,Invalid SQL syntax - not an attack
+27712,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27713,benign,generic,1.0,Normal SELECT TOP PERCENT
+27714,benign,generic,1.0,Normal SELECT TOP with WHERE
+27715,benign,generic,1.0,Normal SELECT with LIMIT
+27716,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27717,benign,generic,1.0,Normal SELECT MIN aggregate
+27718,benign,generic,1.0,Normal SELECT MIN aggregate
+27719,benign,generic,1.0,Normal SELECT subquery

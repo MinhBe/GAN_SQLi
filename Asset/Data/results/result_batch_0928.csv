@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+27810,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27811,benign,generic,1.0,Normal SELECT TOP PERCENT
+27812,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27813,benign,generic,1.0,Normal SELECT TOP with WHERE
+27814,benign,generic,1.0,Normal SELECT with LIMIT
+27815,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27816,benign,generic,1.0,Normal SELECT MIN aggregate
+27817,benign,generic,1.0,Normal SELECT MIN aggregate
+27818,benign,generic,1.0,Normal SELECT subquery
+27819,benign,generic,1.0,Invalid SQL syntax - not an attack
+27820,benign,generic,1.0,Invalid SQL syntax - not an attack
+27821,benign,generic,1.0,Normal SELECT with multiple clauses
+27822,benign,generic,1.0,Normal SELECT with multiple clauses
+27823,benign,generic,1.0,Normal SELECT with multiple clauses
+27824,benign,generic,1.0,Normal SELECT TOP with WHERE
+27825,benign,generic,1.0,Normal SELECT with LIMIT
+27826,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27827,benign,generic,1.0,Normal SELECT AVG aggregate
+27828,benign,generic,1.0,Normal SELECT with NOT LIKE
+27829,benign,generic,1.0,Normal SELECT AVG aggregate
+27830,benign,generic,1.0,Normal SELECT AVG aggregate
+27831,benign,generic,1.0,Normal SELECT AVG aggregate
+27832,benign,generic,1.0,Normal SELECT COUNT aggregate
+27833,benign,generic,1.0,Normal SELECT COUNT aggregate
+27834,benign,generic,1.0,Normal SELECT AVG aggregate
+27835,benign,generic,1.0,Normal SELECT with NOT LIKE
+27836,benign,generic,1.0,Normal SELECT with LIKE
+27837,benign,generic,1.0,Normal SELECT with NOT LIKE
+27838,benign,generic,1.0,Normal SELECT with IN clause
+27839,benign,generic,1.0,Normal SELECT with NOT IN clause

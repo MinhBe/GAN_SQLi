@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+3240,boolean_blind,mysql,0.8,make_set() for boolean blind
+3241,union_based,generic,0.85,UNION ALL for union-based
+3242,union_based,generic,0.85,UNION ALL for union-based
+3243,heavy_query,sqlite,0.9,randomblob for heavy query
+3244,union_based,generic,0.85,UNION ALL for union-based
+3245,boolean_blind,mysql,0.8,make_set() for boolean blind
+3246,union_based,generic,0.85,UNION ALL for union-based
+3247,union_based,generic,0.85,UNION ALL for union-based
+3248,heavy_query,sqlite,0.9,randomblob for heavy query
+3249,heavy_query,sqlite,0.9,randomblob for heavy query
+3250,boolean_blind,generic,0.8,WHERE equality for blind
+3251,time_blind,postgresql,0.9,pg_sleep for PostgreSQL time blind
+3252,heavy_query,sqlite,0.9,randomblob for heavy query
+3253,heavy_query,firebird,0.85,Multiple rdb tables join
+3254,union_based,generic,0.85,UNION ALL for union-based
+3255,boolean_blind,generic,0.8,AND equality for blind
+3256,heavy_query,oracle,0.85,Multiple all_users table join
+3257,boolean_blind,mysql,0.8,elt() for boolean blind
+3258,boolean_blind,mssql,0.8,CHAR case when for blind
+3259,time_blind,generic,0.9,sleep() for time blind
+3260,boolean_blind,generic,0.8,AND equality for blind
+3261,boolean_blind,generic,0.8,OR equality for blind
+3262,time_blind,oracle,0.9,dbms_pipe for Oracle time blind
+3263,boolean_blind,generic,0.8,WHERE equality for blind
+3264,boolean_blind,generic,0.75,Multiplication for blind
+3265,union_based,generic,0.85,UNION ALL for union-based
+3266,time_blind,generic,0.9,sleep() for time blind
+3267,time_blind,mssql,0.9,waitfor delay MSSQL time blind
+3268,boolean_blind,mysql,0.8,elt() for boolean blind
+3269,boolean_blind,generic,0.8,AND equality for blind

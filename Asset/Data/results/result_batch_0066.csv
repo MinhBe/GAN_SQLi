@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1950,union_based,generic,0.85,UNION ALL for union-based
+1951,error_based,mysql,0.85,extractvalue() with procedure analyse
+1952,time_blind,postgresql,0.90,pg_sleep() for time blind
+1953,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1954,time_blind,sqlite,0.85,randomblob() for time blind
+1955,union_based,generic,0.85,UNION ALL for union-based
+1956,heavy_query,mysql,0.85,Multiple domain table join
+1957,time_blind,generic,0.90,sleep() with rlike for time blind
+1958,union_based,generic,0.85,UNION ALL for union-based
+1959,time_blind,generic,0.90,sleep() for time blind
+1960,error_based,oracle,0.90,utl_inaddr for Oracle error-based
+1961,boolean_blind,generic,0.80,OR equality for blind
+1962,heavy_query,mysql,0.85,Multiple domain table join
+1963,heavy_query,postgresql,0.90,generate_series for heavy query
+1964,boolean_blind,mysql,0.80,make_set() for boolean blind
+1965,time_blind,generic,0.90,sleep() for time blind
+1966,heavy_query,postgresql,0.90,generate_series for heavy query
+1967,unknown,generic,0.60,SELECT without clear type
+1968,heavy_query,db2,0.85,Multiple systables join
+1969,boolean_blind,mysql,0.80,elt() for boolean blind
+1970,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1971,boolean_blind,firebird,0.80,Case when for Firebird blind
+1972,boolean_blind,mssql,0.80,CONVERT for MSSQL blind
+1973,time_blind,generic,0.90,sleep() for time blind
+1974,boolean_blind,generic,0.80,CASE WHEN for boolean blind
+1975,error_based,mysql,0.85,CONCAT for error extraction
+1976,boolean_blind,generic,0.80,WHERE equality for blind
+1977,error_based,oracle,0.90,sqlid_to_sqlhash for error extraction
+1978,boolean_blind,postgresql,0.80,CAST for PostgreSQL blind
+1979,heavy_query,mssql,0.85,Multiple sysusers table join

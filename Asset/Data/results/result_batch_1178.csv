@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+35310,error_based,oracle,0.95,xmltype for Oracle error extraction
+35311,error_based,oracle,0.9,cast for PostgreSQL injection
+35312,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+35313,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+35314,error_based,oracle,0.9,cast for PostgreSQL injection
+35315,error_based,oracle,0.9,cast for PostgreSQL injection
+35316,auth_bypass,generic,0.6,wildcard injection
+35317,error_based,oracle,0.95,xmltype for Oracle error extraction
+35318,auth_bypass,generic,0.6,wildcard injection
+35319,auth_bypass,generic,0.6,wildcard injection
+35320,error_based,oracle,0.95,xmltype for Oracle error extraction
+35321,error_based,oracle,0.95,xmltype for Oracle error extraction
+35322,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+35323,error_based,oracle,0.95,xmltype for Oracle error extraction
+35324,error_based,oracle,0.95,xmltype for Oracle error extraction
+35325,error_based,oracle,0.95,xmltype for Oracle error extraction
+35326,error_based,oracle,0.95,xmltype for Oracle error extraction
+35327,auth_bypass,generic,0.6,wildcard injection
+35328,error_based,oracle,0.95,xmltype for Oracle error extraction
+35329,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+35330,error_based,oracle,0.95,xmltype for Oracle error extraction
+35331,error_based,mssql,0.8,char for MSSQL encoding
+35332,error_based,oracle,0.95,xmltype for Oracle error extraction
+35333,error_based,oracle,0.95,xmltype for Oracle error extraction
+35334,error_based,oracle,0.95,xmltype for Oracle error extraction
+35335,error_based,oracle,0.95,xmltype for Oracle error extraction
+35336,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+35337,error_based,oracle,0.9,cast for PostgreSQL injection
+35338,error_based,oracle,0.95,xmltype for Oracle error extraction
+35339,auth_bypass,generic,0.5,simple condition injection

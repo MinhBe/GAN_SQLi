@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+120,time_blind,postgresql,0.95,pg_sleep is a PostgreSQL specific time delay function
+121,union_based,mysql,0.9,version() and UNION SELECT with obfuscated columns
+122,stacked_queries,mssql,0.95,Hex encoded query execution via nvarchar and exec is typical of MSSQL
+123,boolean_blind,generic,0.8,Use of tautology 1=1 with obfuscated operators
+124,time_blind,mssql,0.95,Hex decode of waitfor delay executed via exec
+125,boolean_blind,generic,0.8,Tautology 1=1 with syntax obfuscation
+126,union_based,mssql,0.9,@@VERSION and UNION SELECT with noise characters
+127,auth_bypass,generic,0.9,Simple tautology used for authentication bypass
+128,error_based,mssql,0.9,Using IN with a subquery returning a string into an integer context
+129,benign,generic,0.6,Single keyword 'truncate' without SQL structure or context
+130,auth_bypass,generic,0.8,Tautology with non-printable characters
+131,union_based,oracle,0.95,v$version and rownum are specific to Oracle
+132,union_based,postgresql,0.85,<@ operator and version() function
+133,auth_bypass,generic,0.9,Classic tautology for auth bypass
+134,union_based,mysql,0.9,version() and # comment are common in MySQL
+135,heavy_query,mysql,0.95,benchmark() and MD5() are MySQL specific for heavy queries
+136,union_based,mysql,0.85,version() and UNION SELECT with numeric obfuscation
+137,error_based,oracle,0.95,utl_inaddr.get_host_address and DUAL are Oracle specific
+138,boolean_blind,generic,0.8,Tautology 1=1
+139,boolean_blind,generic,0.8,Tautology 1=1
+140,time_blind,mssql,0.95,waitfor delay and @@version with conditional logic
+141,time_blind,mysql,0.95,sleep() function and # comment are MySQL typical
+142,boolean_blind,generic,0.8,Tautology 1=1
+143,union_based,mysql,0.85,version() and ## comment style (MySQL)
+144,union_based,mssql,0.9,@@VERSION and UNION SELECT
+145,boolean_blind,generic,0.8,Tautology 1=1
+146,auth_bypass,generic,0.9,Simple boolean tautology
+147,stacked_queries,oracle,0.9,execute immediate and string concatenation || are Oracle features
+148,auth_bypass,generic,0.9,Classic tautology
+149,boolean_blind,generic,0.8,Tautology 1=1

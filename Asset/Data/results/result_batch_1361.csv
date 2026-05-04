@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+40800,error_based,oracle,0.95,upper xmltype error function
+40801,error_based,oracle,0.95,select from dual xmltype
+40802,error_based,generic,0.85,subquery injection pattern
+40803,error_based,oracle,0.95,select from dual xmltype error
+40804,error_based,oracle,0.95,select from dual xmltype error
+40805,error_based,generic,0.85,wildcard injection pattern
+40806,error_based,oracle,0.95,select from dual xmltype error
+40807,error_based,oracle,0.95,select from dual xmltype error
+40808,error_based,oracle,0.95,select from dual xmltype error
+40809,error_based,generic,0.85,number comparison pattern
+40810,error_based,oracle,0.95,select from dual xmltype error
+40811,error_based,postgresql,0.9,cast numeric postgresql
+40812,error_based,oracle,0.95,select from dual xmltype error
+40813,error_based,oracle,0.95,select from dual xmltype error
+40814,error_based,oracle,0.95,select from dual xmltype error
+40815,error_based,oracle,0.95,upper xmltype error function
+40816,error_based,oracle,0.95,ctxsys drithsx Oracle
+40817,error_based,oracle,0.95,select from dual xmltype error
+40818,error_based,oracle,0.95,select from dual xmltype
+40819,error_based,generic,0.85,subquery injection pattern
+40820,error_based,oracle,0.95,select from dual xmltype error
+40821,error_based,oracle,0.95,select from dual xmltype error
+40822,error_based,oracle,0.95,select from dual xmltype error
+40823,error_based,oracle,0.95,select from dual xmltype
+40824,error_based,postgresql,0.9,cast numeric postgresql
+40825,error_based,oracle,0.95,select from dual xmltype error
+40826,error_based,oracle,0.95,select from dual xmltype error
+40827,error_based,oracle,0.95,ctxsys drithsx Oracle error
+40828,error_based,oracle,0.95,select from dual xmltype error
+40829,error_based,oracle,0.95,select from dual xmltype error

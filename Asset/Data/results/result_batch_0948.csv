@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+28410,benign,generic,1.0,Normal SELECT with multiple clauses
+28411,benign,generic,1.0,Normal SELECT with multiple clauses
+28412,benign,generic,1.0,Normal SELECT TOP with WHERE
+28413,benign,generic,1.0,Normal SELECT with LIMIT
+28414,benign,generic,1.0,Normal SELECT with FETCH FIRST
+28415,benign,generic,1.0,Normal SELECT AVG aggregate
+28416,benign,generic,1.0,Normal SELECT with NOT LIKE
+28417,benign,generic,1.0,Normal SELECT AVG aggregate
+28418,benign,generic,1.0,Normal SELECT AVG aggregate
+28419,benign,generic,1.0,Normal SELECT AVG aggregate
+28420,benign,generic,1.0,Normal SELECT COUNT aggregate
+28421,benign,generic,1.0,Normal SELECT COUNT aggregate
+28422,benign,generic,1.0,Normal SELECT AVG aggregate
+28423,benign,generic,1.0,Normal SELECT with NOT LIKE
+28424,benign,generic,1.0,Normal SELECT with LIKE
+28425,benign,generic,1.0,Normal SELECT with NOT LIKE
+28426,benign,generic,1.0,Normal SELECT with IN clause
+28427,benign,generic,1.0,Normal SELECT with NOT IN clause
+28428,benign,generic,1.0,Normal SELECT with subquery
+28429,benign,generic,1.0,Normal SELECT with BETWEEN
+28430,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+28431,benign,generic,1.0,Normal SELECT with BETWEEN
+28432,benign,generic,1.0,Normal SELECT with BETWEEN
+28433,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+28434,benign,generic,1.0,Normal SELECT with BETWEEN
+28435,benign,generic,1.0,Normal SELECT with BETWEEN date range
+28436,benign,generic,1.0,Normal SELECT AVG aggregate
+28437,benign,generic,1.0,Normal SELECT COUNT aggregate
+28438,benign,generic,1.0,Normal SELECT COUNT aggregate
+28439,benign,generic,1.0,Normal SELECT AVG aggregate

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+27390,benign,generic,1.0,Normal SELECT with COUNT aggregate
+27391,benign,generic,1.0,Incomplete SELECT with subquery
+27392,benign,generic,1.0,Normal SELECT with WHERE clause
+27393,benign,generic,1.0,Normal SELECT with WHERE clause
+27394,benign,generic,1.0,Normal SELECT with WHERE clause
+27395,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27396,benign,generic,1.0,Normal SELECT with OR condition
+27397,benign,generic,1.0,Normal SELECT with OR condition
+27398,benign,generic,1.0,Normal SELECT with NOT operator
+27399,benign,generic,1.0,Normal SELECT with AND and OR
+27400,benign,generic,1.0,Normal SELECT with multiple NOT conditions
+27401,benign,generic,1.0,Normal SELECT with ORDER BY
+27402,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+27403,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+27404,benign,generic,1.0,Normal SELECT with ORDER BY ASC DESC
+27405,benign,generic,1.0,Normal INSERT statement
+27406,benign,generic,1.0,Normal INSERT statement
+27407,benign,generic,1.0,Normal SELECT with IS NULL
+27408,benign,generic,1.0,Normal SELECT with IS NOT NULL
+27409,benign,generic,1.0,Normal UPDATE statement
+27410,benign,generic,1.0,Normal UPDATE statement
+27411,benign,generic,1.0,Normal DELETE statement
+27412,benign,generic,1.0,Incomplete DELETE statement
+27413,benign,generic,1.0,Normal SELECT with function
+27414,benign,generic,1.0,Normal SELECT with subquery
+27415,benign,generic,1.0,Normal SELECT TOP from MSSQL
+27416,benign,generic,1.0,Incomplete SELECT statement
+27417,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27418,benign,generic,1.0,Normal SELECT TOP PERCENT from MSSQL
+27419,benign,generic,1.0,Normal SELECT with FETCH FIRST

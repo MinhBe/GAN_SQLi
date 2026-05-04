@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+2760,heavy_query,generic,0.85,Multiple table join
+2761,boolean_blind,generic,0.8,AND equality for blind
+2762,boolean_blind,firebird,0.8,CHAR case when for blind
+2763,boolean_blind,generic,0.8,OR equality for blind
+2764,boolean_blind,generic,0.8,WHERE equality for blind
+2765,union_based,generic,0.85,UNION ALL for union-based
+2766,time_blind,oracle,0.9,dbms_pipe for Oracle time blind
+2767,union_based,generic,0.85,UNION ALL for union-based
+2768,heavy_query,firebird,0.85,Multiple domain tables join
+2769,union_based,generic,0.85,UNION ALL for union-based
+2770,heavy_query,sqlite,0.9,randomblob for heavy query
+2771,heavy_query,sqlite,0.9,randomblob for heavy query
+2772,time_blind,generic,0.9,sleep() for time blind
+2773,time_blind,generic,0.9,sleep() for time blind
+2774,heavy_query,sqlite,0.9,randomblob for heavy query
+2775,heavy_query,sqlite,0.9,randomblob for heavy query
+2776,union_based,generic,0.85,UNION ALL for union-based
+2777,boolean_blind,mysql,0.8,make_set() for boolean blind
+2778,heavy_query,generic,0.85,Multiple table join
+2779,heavy_query,firebird,0.85,Multiple rdb tables join
+2780,boolean_blind,generic,0.8,RLIKE case when for blind
+2781,error_based,mysql,0.85,extractvalue for error extraction
+2782,boolean_blind,mysql,0.8,elt() for boolean blind
+2783,time_blind,generic,0.9,sleep() for time blind
+2784,boolean_blind,mysql,0.8,ELT IF for boolean blind
+2785,boolean_blind,mysql,0.8,group by concat for boolean blind
+2786,boolean_blind,generic,0.8,WHERE equality for blind
+2787,time_blind,mysql,0.9,elt() with sleep for time blind
+2788,time_blind,oracle,0.9,ctxsys.drithsx for Oracle time blind
+2789,time_blind,oracle,0.9,utl_inaddr for Oracle time blind

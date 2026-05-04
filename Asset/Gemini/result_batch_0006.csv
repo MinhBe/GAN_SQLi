@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+150,boolean_blind,generic,0.7,Keyword used for pattern matching in blind injection probes.
+151,boolean_blind,generic,0.9,Use of LIKE and CHAR for character-by-character extraction.
+152,time_blind,postgresql,0.95,Use of pg_sleep indicates time-based injection targeting PostgreSQL.
+153,boolean_blind,generic,0.9,Classic OR 1=1 pattern for boolean-based logical bypass.
+154,boolean_blind,generic,0.9,Simple tautology used to force a true condition.
+155,boolean_blind,generic,0.85,OR condition with a tautology for boolean probing.
+156,boolean_blind,generic,0.85,Complex OR condition used for boolean-based probing.
+157,stacked_queries,mssql,0.8,"Use of EXEC to execute a stored procedure, typical in MSSQL."
+158,union_based,mssql,0.9,UNION SELECT combined with MSSQL-specific @@VERSION.
+159,boolean_blind,generic,0.9,OR 1=1 pattern for boolean-based probing.
+160,union_based,mysql,0.9,UNION SELECT with MySQL-specific version() function.
+161,auth_bypass,generic,0.95,Classic admin' or 1=1 pattern for authentication bypass.
+162,time_blind,mssql,0.95,WAITFOR DELAY is a signature MSSQL time-based injection.
+163,union_based,mssql,0.9,UNION SELECT using NULL and @@VERSION for MSSQL data extraction.
+164,union_based,mysql,0.9,UNION SELECT with version() function for MySQL data extraction.
+165,boolean_blind,generic,0.8,Subquery used in a logical condition to probe for existence.
+166,boolean_blind,generic,0.85,Simple tautology for boolean condition probing.
+167,error_based,oracle,0.95,Oracle-specific utl_inaddr.get_host_address used for error-based data extraction.
+168,auth_bypass,generic,0.9,Simple tautology bypass using double quotes.
+169,boolean_blind,generic,0.85,Trailing true condition used for boolean-based probing.
+170,union_based,mssql,0.9,UNION SELECT with @@VERSION targeting MSSQL.
+171,boolean_blind,generic,0.85,Injected OR condition for boolean probing.
+172,time_blind,postgresql,0.95,Use of pg_sleep for time-based data extraction in PostgreSQL.
+173,boolean_blind,generic,0.85,Injected OR condition for boolean probing.
+174,time_blind,mysql,0.95,Use of SLEEP function for time-based data extraction in MySQL.
+175,boolean_blind,generic,0.85,OR 1=1 pattern for boolean-based probing.
+176,auth_bypass,generic,0.9,Tautology used for authentication bypass.
+177,union_based,mysql,0.9,UNION SELECT with version() targeting MySQL.
+178,stacked_queries,mssql,0.95,"Execution of xp_regread via stacked query, specific to MSSQL."
+179,union_based,mysql,0.9,UNION SELECT with version() targeting MySQL.

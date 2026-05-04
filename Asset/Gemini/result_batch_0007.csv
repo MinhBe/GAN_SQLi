@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+180,boolean_blind,generic,0.9,1=1 tautology used for bypass
+181,boolean_blind,generic,0.9,1=1 tautology used for bypass
+182,boolean_blind,generic,0.9,1=1 tautology used for bypass
+183,boolean_blind,generic,0.8,AND 1=1 tautology
+184,boolean_blind,generic,0.9,OR 0=0 tautology with comment
+185,union_based,generic,0.9,UNION SELECT with CHAR() function
+186,union_based,mysql,0.9,UNION SELECT with version() function
+187,auth_bypass,generic,0.9,'1'='1' tautology for bypass
+188,stacked_queries,generic,0.7,Semicolon followed by SELECT
+189,boolean_blind,generic,0.9,1=1 tautology
+190,boolean_blind,generic,0.8,Boolean condition with subquery
+191,union_based,generic,0.9,UNION SELECT with version()
+192,boolean_blind,generic,0.9,1=1 tautology
+193,union_based,oracle,0.95,Oracle specific v$version and rownum used in UNION
+194,time_blind,mysql,0.95,MySQL benchmark() function for time delay
+195,unknown,generic,0.3,Single keyword 'procedure' is ambiguous
+196,auth_bypass,generic,0.7,Incomplete OR tautology
+197,error_based,oracle,0.95,Oracle utl_inaddr.get_host_address for data extraction
+198,error_based,oracle,0.95,Oracle utl_inaddr for data extraction with subquery
+199,stacked_queries,generic,0.8,Semicolon with DESC command
+200,union_based,mysql,0.9,UNION SELECT with @@VERSION
+201,boolean_blind,generic,0.9,1=1 tautology
+202,unknown,generic,0.3,Obfuscated string with OR
+203,unknown,generic,0.2,Single dash in quotes
+204,union_based,generic,0.9,UNION SELECT with @@VERSION
+205,union_based,generic,0.9,UNION SELECT with version()
+206,union_based,generic,0.9,UNION SELECT with @@VERSION and obfuscation
+207,union_based,generic,0.9,UNION SELECT with version()
+208,boolean_blind,generic,0.9,1=1 tautology
+209,auth_bypass,generic,0.7,Comment start after admin'

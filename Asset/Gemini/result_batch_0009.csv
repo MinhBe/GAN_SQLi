@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+240,union_based,mysql,0.95,UNION SELECT with version() and MySQL-specific hash comment.
+241,auth_bypass,generic,0.9,Tautology OR 1=1 used for authentication bypass.
+242,boolean_blind,generic,0.7,Partial OR LIKE pattern often used in blind inference.
+243,auth_bypass,generic,0.85,Tautology OR 1=1 with bitwise/noise operator.
+244,union_based,mysql,0.9,UNION SELECT with version() and MySQL-style operator noise.
+245,auth_bypass,generic,0.95,Simple tautology OR 1=1 for authentication bypass.
+246,union_based,mssql,0.95,UNION SELECT with @@VERSION global variable typically found in MSSQL.
+247,auth_bypass,generic,0.9,Tautology OR 1=1 with character noise.
+248,auth_bypass,generic,0.9,Tautology OR 1=1 with wildcard noise.
+249,auth_bypass,generic,0.85,Tautology OR 1=1 with obfuscated expression noise.
+250,union_based,mssql,0.9,UNION SELECT with @@VERSION and escape character noise.
+251,auth_bypass,generic,0.95,Minimalist tautology OR 1=1.
+252,auth_bypass,generic,0.85,Tautology OR 1=1 with operator noise.
+253,auth_bypass,generic,0.9,Tautology used to bypass login via admin username.
+254,auth_bypass,generic,0.9,Tautology OR 1=1 with relational operator noise.
+255,auth_bypass,generic,0.9,Tautology OR 1=1 with placeholder noise.
+256,out_of_band,oracle,1.0,Uses utl_inaddr for Oracle DNS/HTTP exfiltration of user passwords.
+257,out_of_band,oracle,1.0,Uses utl_inaddr for Oracle DNS exfiltration of schema metadata.
+258,boolean_blind,generic,0.6,Partial OR payload with HTML entity encoding.
+259,benign,generic,0.7,Simple identifier without malicious SQL structure.
+260,auth_bypass,generic,0.85,Tautology OR 1=1 with character-based noise obfuscation.
+261,auth_bypass,generic,0.85,Tautology OR 1=1 with complex character noise.
+262,auth_bypass,generic,0.8,Quoted string manipulation for authentication bypass.
+263,auth_bypass,generic,0.9,Tautology OR 1=1 for bypassing string-based filters.
+264,union_based,oracle,1.0,UNION SELECT querying Oracle-specific v$version table.
+265,rce,mssql,1.0,Uses MSSQL xp_cmdshell for Remote Code Execution.
+266,union_based,oracle,1.0,UNION SELECT querying Oracle metadata with bitwise operator noise.
+267,union_based,mysql,0.9,UNION SELECT with version() and underscore noise.
+268,auth_bypass,generic,0.9,Tautology OR 1=1 with escaped character noise.
+269,unknown,mssql,0.6,Partial subquery with 'top' keyword indicative of MSSQL/Sybase.

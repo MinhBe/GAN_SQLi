@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+840,heavy_query,oracle,0.85,Multiple all_users table join for heavy query
+841,time_blind,postgresql,0.85,regexp_substring for time-based blind
+842,unknown,generic,0.60,Simple numeric comparison not clear attack
+843,heavy_query,postgresql,0.90,generate_series for heavy query DoS
+844,boolean_blind,postgresql,0.80,IN with char concatenation for blind
+845,boolean_blind,firebird,0.80,Case when for Firebird blind
+846,union_based,generic,0.85,UNION SELECT for union-based
+847,error_based,oracle,0.90,utl_inaddr for Oracle error-based
+848,time_blind,postgresql,0.90,pg_sleep() for time blind
+849,time_blind,mysql,0.90,benchmark() for time blind
+850,union_based,generic,0.85,UNION ALL for union-based
+851,time_blind,mysql,0.90,benchmark() for time blind
+852,boolean_blind,mysql,0.80,make_set() for boolean blind
+853,boolean_blind,generic,0.80,WHERE clause equality
+854,error_based,mysql,0.85,exp() with concat for error extraction
+855,stacked_queries,mysql,0.90,IF-select for conditional stacked queries
+856,time_blind,generic,0.90,sleep() for time blind
+857,unknown,generic,0.75,Cannot determine attack type
+858,union_based,generic,0.85,UNION ALL for union-based
+859,heavy_query,mssql,0.85,Multiple sysusers table join
+860,time_blind,sqlite,0.85,randomblob() for time blind
+861,time_blind,postgresql,0.90,pg_sleep() for time blind
+862,boolean_blind,generic,0.85,AND equality for boolean blind
+863,boolean_blind,generic,0.80,WHERE equality for blind
+864,boolean_blind,generic,0.80,WHERE equality for blind
+865,boolean_blind,postgresql,0.80,regexp_substring for PostgreSQL blind
+866,unknown,generic,0.60,Mixed operator not clear attack
+867,boolean_blind,firebird,0.80,Case when for Firebird blind
+868,time_blind,generic,0.85,elt() with sleep for time blind
+869,union_based,generic,0.85,UNION ALL for union-based

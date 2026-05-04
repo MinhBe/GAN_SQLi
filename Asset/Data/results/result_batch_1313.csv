@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+39360,error_based,oracle,0.95,Oracle XMLType error extraction
+39361,error_based,oracle,0.95,Oracle XMLType error extraction
+39362,error_based,oracle,0.95,Oracle XMLType + PostgreSQL cast
+39363,boolean_blind,generic,0.85,Equality check blind
+39364,error_based,oracle,0.95,Oracle XMLType error extraction
+39365,boolean_blind,generic,0.85,Equality check blind
+39366,error_based,oracle,0.95,Oracle XMLType error extraction
+39367,boolean_blind,generic,0.85,Equality check blind
+39368,boolean_blind,generic,0.85,Equality check blind
+39369,error_based,oracle,0.95,Oracle XMLType error extraction
+39370,error_based,oracle,0.95,Oracle XMLType error extraction
+39371,error_based,oracle,0.95,Oracle XMLType error extraction
+39372,error_based,oracle,0.95,Oracle XMLType error extraction
+39373,error_based,oracle,0.95,Oracle XMLType error extraction
+39374,error_based,oracle,0.95,Oracle XMLType error extraction
+39375,error_based,oracle,0.95,Oracle XMLType error extraction
+39376,error_based,oracle,0.95,Oracle ctxsys.drithsx error
+39377,error_based,oracle,0.95,Oracle XMLType error extraction
+39378,error_based,oracle,0.95,Oracle ctxsys.drithsx error
+39379,error_based,oracle,0.95,Oracle ctxsys.drithsx error
+39380,error_based,oracle,0.95,Oracle XMLType error extraction
+39381,error_based,oracle,0.95,Oracle XMLType error extraction
+39382,error_based,oracle,0.95,Oracle XMLType error extraction
+39383,boolean_blind,generic,0.85,Equality check blind
+39384,error_based,postgresql,0.9,PostgreSQL char() error-based
+39385,error_based,oracle,0.95,Oracle XMLType + ctxsys error
+39386,error_based,oracle,0.95,Oracle ctxsys.drithsx error
+39387,boolean_blind,generic,0.85,Equality check blind
+39388,error_based,oracle,0.95,Oracle XMLType error extraction
+39389,boolean_blind,generic,0.85,Equality check blind

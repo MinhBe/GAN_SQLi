@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+25440,benign,generic,1.0,Normal SELECT with IS NOT NULL
+25441,benign,generic,1.0,Normal UPDATE statement
+25442,benign,generic,1.0,Normal UPDATE statement
+25443,benign,generic,1.0,Normal SELECT from table
+25444,benign,generic,1.0,Normal DELETE statement
+25445,benign,generic,1.0,Incomplete DELETE statement
+25446,benign,generic,1.0,Normal SELECT with function
+25447,benign,generic,1.0,Normal SELECT with subquery
+25448,benign,generic,1.0,Normal SELECT TOP from MSSQL
+25449,benign,generic,1.0,Incomplete SELECT statement
+25450,benign,generic,1.0,Normal SELECT with FETCH FIRST
+25451,benign,generic,1.0,Normal SELECT TOP PERCENT from MSSQL
+25452,benign,generic,1.0,Normal SELECT with FETCH FIRST
+25453,benign,generic,1.0,Normal SELECT TOP with WHERE
+25454,benign,generic,1.0,Normal SELECT with LIMIT and WHERE
+25455,benign,generic,1.0,Normal SELECT with FETCH FIRST and WHERE
+25456,benign,generic,1.0,Normal SELECT with MIN aggregate
+25457,benign,generic,1.0,Normal SELECT with MIN aggregate
+25458,benign,generic,1.0,Normal SELECT with subquery
+25459,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+25460,benign,generic,1.0,Malformed SELECT with multiple SELECT statements
+25461,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+25462,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+25463,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+25464,benign,generic,1.0,Malformed SELECT with multiple SELECT statements
+25465,benign,generic,1.0,Normal SELECT with LIMIT and WHERE
+25466,benign,generic,1.0,Normal SELECT with FETCH FIRST and WHERE
+25467,benign,generic,1.0,Normal SELECT with AVG aggregate
+25468,benign,generic,1.0,Normal SELECT with NOT LIKE pattern
+25469,benign,generic,1.0,Normal SELECT with AVG and SUM aggregate

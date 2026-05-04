@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+39930,error_based,postgresql,0.90,PostgreSQL cast for injection
+39931,error_based,oracle,0.85,basic Oracle injection
+39932,error_based,postgresql,0.90,PostgreSQL cast for injection
+39933,error_based,oracle,0.90,Oracle with dual subquery
+39934,error_based,oracle,0.90,Oracle xmltype case statement
+39935,error_based,oracle,0.85,basic Oracle with LIKE
+39936,error_based,oracle,0.90,Oracle with case statement
+39937,error_based,oracle,0.90,Oracle ctxsys error technique
+39938,error_based,oracle,0.90,Oracle with || operator
+39939,error_based,oracle,0.90,Oracle with pogx alias
+39940,error_based,oracle,0.90,Oracle xmltype case-based
+39941,error_based,oracle,0.85,basic Oracle with LIKE
+39942,error_based,oracle,0.90,Oracle with nested query
+39943,error_based,postgresql,0.90,PostgreSQL cast for injection
+39944,error_based,postgresql,0.90,PostgreSQL cast for injection
+39945,error_based,postgresql,0.90,PostgreSQL cast for injection
+39946,error_based,oracle,0.90,Oracle with PostgreSQL cast
+39947,error_based,oracle,0.90,Oracle with case statement
+39948,error_based,oracle,0.90,Oracle xmltype case statement
+39949,error_based,oracle,0.85,basic Oracle injection
+39950,error_based,oracle,0.85,basic Oracle injection
+39951,error_based,oracle,0.90,Oracle with comment injection
+39952,error_based,oracle,0.90,Oracle with nested select
+39953,error_based,oracle,0.90,Oracle with PostgreSQL cast
+39954,error_based,oracle,0.85,basic Oracle with LIKE
+39955,error_based,oracle,0.90,Oracle with comment injection
+39956,error_based,oracle,0.90,Oracle with || operator
+39957,error_based,oracle,0.90,Oracle xmltype case-based
+39958,error_based,oracle,0.85,basic Oracle injection
+39959,error_based,oracle,0.85,basic Oracle with LIKE

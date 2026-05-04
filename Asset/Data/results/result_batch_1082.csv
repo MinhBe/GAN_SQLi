@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+32430,auth_bypass,generic,0.7,quote escaping for auth bypass
+32431,error_based,oracle,0.95,xmltype for Oracle error extraction
+32432,error_based,oracle,0.95,xmltype for Oracle error extraction
+32433,error_based,oracle,0.95,xmltype for Oracle error extraction
+32434,error_based,mssql,0.85,convert int for MSSQL extraction
+32435,error_based,mysql,0.8,elt and if for MySQL injection
+32436,error_based,oracle,0.9,cast for PostgreSQL injection
+32437,error_based,oracle,0.95,xmltype for Oracle error extraction
+32438,auth_bypass,generic,0.6,wildcard injection
+32439,auth_bypass,generic,0.6,simple OR condition
+32440,error_based,oracle,0.9,char for Oracle encoding
+32441,error_based,mssql,0.85,convert int for MSSQL extraction
+32442,error_based,oracle,0.9,char for Oracle encoding
+32443,error_based,oracle,0.95,xmltype for Oracle error extraction
+32444,error_based,oracle,0.9,char for Oracle encoding
+32445,error_based,oracle,0.95,xmltype for Oracle error extraction
+32446,error_based,oracle,0.95,xmltype for Oracle error extraction
+32447,error_based,oracle,0.95,xmltype for Oracle error extraction
+32448,error_based,oracle,0.95,xmltype for Oracle error extraction
+32449,out_of_band,oracle,0.8,utl_inaddr.get_host_address for OOB
+32450,auth_bypass,generic,0.6,simple quote for auth bypass
+32451,auth_bypass,generic,0.6,quote injection
+32452,error_based,postgresql,0.85,cast for PostgreSQL error extraction
+32453,auth_bypass,generic,0.6,simple OR condition
+32454,error_based,oracle,0.95,xmltype for Oracle error extraction
+32455,error_based,oracle,0.9,dbms_utility for Oracle injection
+32456,error_based,oracle,0.95,xmltype for Oracle error extraction
+32457,error_based,oracle,0.95,xmltype for Oracle error extraction
+32458,error_based,oracle,0.9,dbms_utility for Oracle injection
+32459,error_based,oracle,0.95,xmltype for Oracle error extraction

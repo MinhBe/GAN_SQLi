@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30570,auth_bypass,generic,0.9,Simple OR pattern
+30571,polyglot,oracle,0.85,Oracle XMLType sqlid
+30572,union_based,oracle,0.95,Oracle XMLType boolean
+30573,boolean_blind,mssql,0.85,MsSQL CHAR IN
+30574,union_based,oracle,0.95,Oracle XMLType
+30575,polyglot,oracle,0.85,PostgreSQL CAST Oracle XMLType
+30576,auth_bypass,generic,0.9,Simple OR pattern
+30577,polyglot,oracle,0.85,Oracle XMLType MsSQL CHAR
+30578,union_based,oracle,0.95,Oracle XMLType
+30579,out_of_band,oracle,0.9,Oracle CTXSYS
+30580,out_of_band,oracle,0.9,Oracle CTXSYS XMLType
+30581,out_of_band,oracle,0.9,Oracle sqlid_to_sqlhash
+30582,out_of_band,oracle,0.9,Oracle CTXSYS
+30583,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30584,out_of_band,oracle,0.9,Oracle sqlid_to_sqlhash
+30585,polyglot,oracle,0.85,PostgreSQL CAST Oracle XMLType
+30586,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30587,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30588,auth_bypass,generic,0.9,Simple OR pattern
+30589,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30590,union_based,oracle,0.95,Oracle XMLType
+30591,union_based,oracle,0.95,Oracle XMLType
+30592,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30593,polyglot,oracle,0.85,PostgreSQL CAST Oracle CTXSYS
+30594,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30595,union_based,oracle,0.95,Oracle XMLType
+30596,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30597,auth_bypass,generic,0.9,Simple OR pattern
+30598,out_of_band,oracle,0.9,Oracle sqlid_to_sqlhash
+30599,boolean_blind,mssql,0.85,MsSQL CHAR IN

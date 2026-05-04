@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+41040,error_based,oracle,0.95,select from dual xmltype error
+41041,generic,generic,0.85,wildcard pattern
+41042,error_based,oracle,0.95,select from dual xmltype error
+41043,error_based,oracle,0.95,select from dual xmltype error
+41044,error_based,oracle,0.95,select from dual xmltype error
+41045,error_based,oracle,0.95,select from dual xmltype error
+41046,error_based,oracle,0.95,select from dual xmltype error
+41047,error_based,oracle,0.95,select from dual xmltype error
+41048,error_based,oracle,0.95,select from dual xmltype error
+41049,error_based,generic,0.85,subquery pattern
+41050,error_based,postgresql,0.9,cast numeric conversion
+41051,error_based,oracle,0.95,select from dual xmltype error
+41052,error_based,postgresql,0.9,cast numeric conversion
+41053,error_based,postgresql,0.9,cast numeric postgresql
+41054,error_based,postgresql,0.9,cast numeric conversion
+41055,error_based,oracle,0.95,select from dual xmltype error
+41056,error_based,oracle,0.95,ctxsys drithsx Oracle error
+41057,error_based,generic,0.85,subquery pattern
+41058,error_based,oracle,0.95,select from dual xmltype error
+41059,error_based,oracle,0.95,select from dual xmltype error
+41060,error_based,generic,0.85,subquery pattern
+41061,error_based,oracle,0.95,select from dual xmltype error
+41062,generic,generic,0.85,subquery pattern
+41063,error_based,postgresql,0.9,cast numeric postgresql
+41064,generic,generic,0.85,subquery pattern
+41065,error_based,oracle,0.95,select from dual xmltype error
+41066,generic,generic,0.85,subquery pattern
+41067,error_based,oracle,0.95,select from dual xmltype error
+41068,error_based,oracle,0.95,select from dual xmltype error
+41069,error_based,oracle,0.95,select from dual xmltype error

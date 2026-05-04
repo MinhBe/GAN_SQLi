@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1320,heavy_query,postgresql,0.90,generate_series for heavy query
+1321,error_based,oracle,0.90,xmltype() for Oracle error-based
+1322,error_based,mysql,0.85,extractvalue() with procedure analyse
+1323,boolean_blind,generic,0.80,WHERE equality for blind
+1324,boolean_blind,generic,0.75,Multiplication for blind
+1325,time_blind,postgresql,0.90,pg_sleep() for time blind
+1326,error_based,generic,0.85,Row/concat for error extraction
+1327,boolean_blind,mssql,0.85,iif() for MSSQL boolean blind
+1328,boolean_blind,generic,0.80,WHERE equality for blind
+1329,union_based,generic,0.85,UNION ALL for union-based
+1330,union_based,generic,0.85,UNION ALL for union-based
+1331,time_blind,mssql,0.90,waitfor delay for MSSQL time blind
+1332,error_based,oracle,0.90,sqlid_to_sqlhash for error extraction
+1333,unknown,oracle,0.70,SELECT without clear type
+1334,error_based,mysql,0.85,CONCAT for error extraction
+1335,boolean_blind,generic,0.75,Multiplication for blind
+1336,unknown,oracle,0.70,SELECT ORDER BY without full context
+1337,error_based,oracle,0.90,ctxsys.drithsx for Oracle error-based
+1338,heavy_query,mssql,0.85,Multiple sysusers table join
+1339,time_blind,generic,0.90,sleep() for time blind
+1340,time_blind,generic,0.90,sleep() for time blind
+1341,error_based,oracle,0.90,utl_inaddr for Oracle error-based
+1342,boolean_blind,generic,0.80,WHERE equality for blind
+1343,time_blind,generic,0.90,sleep() with rlike for time blind
+1344,boolean_blind,mysql,0.80,make_set() for boolean blind
+1345,time_blind,sqlite,0.85,randomblob() for time blind
+1346,union_based,generic,0.85,UNION ALL for union-based
+1347,union_based,generic,0.85,UNION ALL for union-based
+1348,union_based,generic,0.85,UNION ALL for union-based
+1349,time_blind,generic,0.85,elt() with sleep for time blind

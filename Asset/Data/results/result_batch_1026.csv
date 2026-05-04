@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30750,polyglot,oracle,0.9,Oracle utl_inaddr + PostgreSQL cast
+30751,boolean_blind,postgresql,0.9,PostgreSQL CAST/chr
+30752,boolean_blind,postgresql,0.85,char() IN pattern
+30753,out_of_band,oracle,0.9,Oracle utl_inaddr.get_host_address
+30754,out_of_band,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+30755,boolean_blind,postgresql,0.9,char() IN pattern
+30756,error_based,oracle,0.9,Oracle XMLType
+30757,out_of_band,oracle,0.9,Oracle ctxsys + dbms_utility
+30758,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30759,boolean_blind,postgresql,0.85,PostgreSQL CAST
+30760,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30761,boolean_blind,oracle,0.9,Oracle XMLType extraction
+30762,boolean_blind,oracle,0.9,Oracle XMLType
+30763,boolean_blind,oracle,0.9,Oracle XMLType
+30764,boolean_blind,postgresql,0.85,PostgreSQL CAST
+30765,boolean_blind,postgresql,0.85,PostgreSQL CAST
+30766,auth_bypass,generic,0.85,Simple OR pattern
+30767,boolean_blind,postgresql,0.9,char() IN pattern
+30768,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30769,boolean_blind,postgresql,0.85,char() IN pattern
+30770,boolean_blind,postgresql,0.9,PostgreSQL CAST + generate_series
+30771,heavy_query,mysql,0.85,MySQL IF/concat
+30772,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30773,out_of_band,oracle,0.9,Oracle utl_inaddr
+30774,heavy_query,mysql,0.85,MySQL IF/concat
+30775,auth_bypass,generic,0.85,Simple OR pattern
+30776,auth_bypass,generic,0.85,Simple OR pattern
+30777,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30778,boolean_blind,mssql,0.85,MSSQL convert
+30779,boolean_blind,oracle,0.9,Oracle XMLType

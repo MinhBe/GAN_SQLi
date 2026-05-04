@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1530,time_blind,generic,0.90,sleep() with rlike for time blind
+1531,heavy_query,mssql,0.85,Multiple sysusers table join
+1532,unknown,generic,0.60,END keyword without context
+1533,boolean_blind,generic,0.80,CASE WHEN for boolean blind
+1534,union_based,generic,0.85,UNION ALL for union-based
+1535,boolean_blind,generic,0.80,rlike() for boolean blind
+1536,boolean_blind,postgresql,0.80,IN with char for blind
+1537,heavy_query,mysql,0.85,Multiple domain table join
+1538,time_blind,mysql,0.90,benchmark() for time blind
+1539,time_blind,generic,0.90,sleep() for time blind
+1540,error_based,mysql,0.90,extractvalue() for error extraction
+1541,heavy_query,mssql,0.85,Multiple sysusers table join
+1542,boolean_blind,postgresql,0.80,CAST for PostgreSQL blind
+1543,error_based,oracle,0.90,xmltype() for Oracle error-based
+1544,unknown,generic,0.70,WHERE clause without full query
+1545,unknown,generic,0.60,SELECT without clear type
+1546,time_blind,generic,0.90,sleep() for time blind
+1547,boolean_blind,mysql,0.80,make_set() for boolean blind
+1548,time_blind,mysql,0.90,benchmark() for time blind
+1549,union_based,generic,0.85,UNION ALL for union-based
+1550,boolean_blind,generic,0.80,WHERE equality for blind
+1551,stacked_queries,mysql,0.90,IF DROP for stacked queries
+1552,union_based,generic,0.85,UNION ALL for union-based
+1553,heavy_query,oracle,0.85,Multiple all_users table join
+1554,boolean_blind,mysql,0.80,CASE WHEN for boolean blind
+1555,heavy_query,mysql,0.85,Multiple domain table join
+1556,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1557,unknown,generic,0.70,SELECT ORDER BY without full context
+1558,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+1559,heavy_query,mysql,0.85,Multiple domain table join

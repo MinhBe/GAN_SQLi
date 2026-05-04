@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+22320,benign,generic,1.0,Normal SELECT with AVG and SUM
+22321,benign,generic,1.0,Normal SELECT with AVG and SUM
+22322,benign,generic,1.0,Normal SELECT with AVG and SUM
+22323,benign,generic,1.0,Normal SELECT with COUNT aggregate
+22324,benign,generic,1.0,Normal SELECT with COUNT aggregate
+22325,benign,generic,1.0,Normal SELECT with AVG aggregate
+22326,benign,generic,1.0,Normal SELECT with NOT LIKE
+22327,benign,generic,1.0,Normal SELECT with LIKE wildcard
+22328,benign,generic,1.0,Normal SELECT with NOT LIKE pattern
+22329,benign,generic,1.0,Normal SELECT with IN clause
+22330,benign,generic,1.0,Normal SELECT with NOT IN
+22331,benign,generic,1.0,Normal SELECT with IN subquery
+22332,benign,generic,1.0,Normal SELECT with BETWEEN
+22333,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+22334,benign,generic,1.0,Normal SELECT with BETWEEN string
+22335,benign,generic,1.0,Normal SELECT with BETWEEN string
+22336,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+22337,benign,generic,1.0,Malformed date range in BETWEEN
+22338,benign,generic,1.0,Normal SELECT with BETWEEN date
+22339,benign,generic,1.0,Normal SELECT with AVG and SUM
+22340,benign,generic,1.0,Normal SELECT with COUNT aggregate
+22341,benign,generic,1.0,Normal SELECT with COUNT aggregate
+22342,benign,generic,1.0,Normal SELECT with AVG aggregate
+22343,benign,generic,1.0,Normal SELECT with BETWEEN date
+22344,benign,generic,1.0,Normal SELECT with column alias
+22345,benign,generic,1.0,Normal SELECT with column alias
+22346,benign,generic,1.0,Normal SELECT with column alias
+22347,benign,generic,1.0,Normal SELECT with string concatenation
+22348,benign,generic,1.0,Normal SELECT with function and INNER JOIN
+22349,benign,generic,1.0,Normal SELECT with function and multiple JOINs

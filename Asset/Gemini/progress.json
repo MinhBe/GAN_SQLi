@@ -1,0 +1,23 @@
+{
+  "worker": "Gemini-CLI",
+  "auth_type": "Terminal Auth (Google Account)",
+  "completed_batches": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "last_completed": 9,
+  "last_updated": "2026-05-03T18:56:52.315258",
+  "rows_completed": 270,
+  "rows_total": 41459,
+  "request_count": 9,
+  "quota_limit": 1500,
+  "pct_done": 0.7,
+  "status": "in_progress"
+}

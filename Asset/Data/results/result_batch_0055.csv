@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1620,time_blind,postgresql,0.90,pg_sleep() for time blind
+1621,time_blind,oracle,0.90,dbms_lock.sleep for Oracle time blind
+1622,error_based,oracle,0.90,sqlid_to_sqlhash for error extraction
+1623,boolean_blind,mssql,0.80,CASE WHEN for MSSQL blind
+1624,heavy_query,mysql,0.85,Multiple domain table join
+1625,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+1626,heavy_query,firebird,0.85,Multiple table join for heavy query
+1627,time_blind,generic,0.90,sleep() with rlike for time blind
+1628,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+1629,boolean_blind,postgresql,0.80,generate_series for boolean blind
+1630,boolean_blind,mssql,0.85,iif() for MSSQL boolean blind
+1631,union_based,generic,0.85,UNION ALL for union-based
+1632,boolean_blind,generic,0.75,Multiplication for blind
+1633,time_blind,mysql,0.90,benchmark() for time blind
+1634,boolean_blind,mysql,0.80,elt() for boolean blind
+1635,union_based,generic,0.85,UNION ALL for union-based
+1636,error_based,mysql,0.90,extractvalue() for error extraction
+1637,unknown,oracle,0.70,SELECT without full context
+1638,error_based,mysql,0.85,exp() with concat for error extraction
+1639,error_based,mysql,0.90,updatexml() for error extraction
+1640,union_based,generic,0.85,UNION ALL for union-based
+1641,boolean_blind,postgresql,0.80,generate_series for boolean blind
+1642,time_blind,postgresql,0.90,pg_sleep() for time blind
+1643,unknown,generic,0.60,SELECT without clear type
+1644,time_blind,generic,0.90,sleep() with rlike for time blind
+1645,unknown,generic,0.70,ORDER BY without full query
+1646,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1647,time_blind,mssql,0.90,waitfor delay for MSSQL time blind
+1648,time_blind,mysql,0.90,benchmark() for time blind
+1649,union_based,generic,0.85,UNION ALL for union-based

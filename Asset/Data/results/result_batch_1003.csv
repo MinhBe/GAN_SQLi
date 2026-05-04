@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30060,benign,generic,1.0,Normal SQL SELECT LOCALTIMESTAMP add
+30061,benign,generic,1.0,Normal SQL SELECT MONTH
+30062,benign,generic,1.0,Normal SQL SELECT MONTHNAME
+30063,benign,generic,1.0,Normal SQL SELECT NOW
+30064,benign,generic,1.0,Normal SQL SELECT NOW add
+30065,benign,generic,1.0,Normal SQL SELECT QUARTER
+30066,benign,generic,1.0,Normal SQL SELECT SEC_TO_TIME
+30067,benign,generic,1.0,Normal SQL SELECT SEC_TO_TIME
+30068,benign,generic,1.0,Normal SQL SELECT SYSDATE
+30069,benign,generic,1.0,Normal SQL SELECT SYSDATE add
+30070,benign,generic,1.0,Normal SQL SELECT TIME NULL
+30071,benign,generic,1.0,Normal SQL SELECT WEEK
+30072,benign,generic,1.0,Normal SQL SELECT WEEKDAY
+30073,benign,generic,1.0,Normal SQL SELECT WEEKOFYEAR
+30074,benign,generic,1.0,Normal SQL SELECT YEAR
+30075,benign,generic,1.0,Normal SQL SELECT YEARWEEK
+30076,benign,generic,1.0,Normal SQL SELECT BIN
+30077,benign,generic,1.0,Normal SQL SELECT BIN
+30078,benign,generic,1.0,Normal SQL SELECT BIN
+30079,benign,generic,1.0,Normal SQL SELECT CAST
+30080,benign,generic,1.0,Normal SQL SELECT CAST
+30081,benign,generic,1.0,Normal SQL SELECT CONNECTION_ID
+30082,benign,generic,1.0,Normal SQL SELECT CURRENT_USER
+30083,benign,generic,1.0,Normal SQL SELECT DATABASE
+30084,benign,generic,1.0,Normal SQL SELECT ISNULL
+30085,benign,generic,1.0,Normal SQL SELECT ISNULL
+30086,benign,generic,1.0,Normal SQL SELECT LAST_INSERT_ID
+30087,benign,generic,1.0,Normal SQL SELECT SESSION_USER
+30088,benign,generic,1.0,Normal SQL SELECT SYSTEM_USER
+30089,benign,generic,1.0,Normal SQL SELECT USER

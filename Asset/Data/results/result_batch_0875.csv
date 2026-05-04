@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+26220,benign,generic,1.0,Normal SELECT with ORDER BY
+26221,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+26222,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+26223,benign,generic,1.0,Normal SELECT with ORDER BY ASC DESC
+26224,benign,generic,1.0,Normal INSERT statement
+26225,benign,generic,1.0,Normal INSERT statement
+26226,benign,generic,1.0,Normal SELECT with IS NULL
+26227,benign,generic,1.0,Normal SELECT with IS NOT NULL
+26228,benign,generic,1.0,Normal UPDATE statement
+26229,benign,generic,1.0,Normal UPDATE statement
+26230,benign,generic,1.0,Normal SELECT from table
+26231,benign,generic,1.0,Normal DELETE statement
+26232,benign,generic,1.0,Incomplete DELETE statement
+26233,benign,generic,1.0,Normal SELECT with function
+26234,benign,generic,1.0,Normal SELECT with subquery
+26235,benign,generic,1.0,Normal SELECT TOP from MSSQL
+26236,benign,generic,1.0,Incomplete SELECT statement
+26237,benign,generic,1.0,Normal SELECT with FETCH FIRST
+26238,benign,generic,1.0,Normal SELECT TOP PERCENT from MSSQL
+26239,benign,generic,1.0,Normal SELECT with FETCH FIRST
+26240,benign,generic,1.0,Normal SELECT TOP with WHERE
+26241,benign,generic,1.0,Normal SELECT with LIMIT and WHERE
+26242,benign,generic,1.0,Normal SELECT with FETCH FIRST and WHERE
+26243,benign,generic,1.0,Normal SELECT with MIN aggregate
+26244,benign,generic,1.0,Normal SELECT with MIN aggregate
+26245,benign,generic,1.0,Normal SELECT with subquery
+26246,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+26247,benign,generic,1.0,Malformed SELECT with multiple SELECT statements
+26248,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+26249,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH

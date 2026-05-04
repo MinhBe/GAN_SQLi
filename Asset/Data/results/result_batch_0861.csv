@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+25800,benign,generic,1.0,Normal SELECT with function and FROM
+25801,benign,generic,1.0,Normal SELECT with function and UNION
+25802,benign,generic,1.0,Normal SELECT with multiple functions
+25803,benign,generic,1.0,Normal SELECT with function and UNION ALL
+25804,benign,generic,1.0,Normal SELECT with multiple functions
+25805,benign,generic,1.0,Normal SELECT with UNION and ORDER BY
+25806,benign,generic,1.0,Normal SELECT with UNION ALL and ORDER BY
+25807,benign,generic,1.0,Normal SELECT with UNION and WHERE
+25808,benign,generic,1.0,Normal SELECT with aggregate and GROUP BY
+25809,benign,generic,1.0,Normal SELECT with aggregate and subquery JOIN
+25810,benign,generic,1.0,Incomplete SELECT statement
+25811,benign,generic,1.0,Normal SELECT from table
+25812,benign,generic,1.0,Normal SELECT from table
+25813,benign,generic,1.0,Normal SELECT DISTINCT
+25814,benign,generic,1.0,Normal SELECT with COUNT DISTINCT
+25815,benign,generic,1.0,Normal SELECT with COUNT aggregate
+25816,benign,generic,1.0,Incomplete SELECT with subquery
+25817,benign,generic,1.0,Normal SELECT with WHERE clause
+25818,benign,generic,1.0,Normal SELECT with WHERE clause
+25819,benign,generic,1.0,Normal SELECT with WHERE clause
+25820,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+25821,benign,generic,1.0,Normal SELECT with OR condition
+25822,benign,generic,1.0,Normal SELECT with OR condition
+25823,benign,generic,1.0,Normal SELECT with NOT operator
+25824,benign,generic,1.0,Normal SELECT with AND and OR
+25825,benign,generic,1.0,Normal SELECT with multiple NOT conditions
+25826,benign,generic,1.0,Normal SELECT with ORDER BY
+25827,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+25828,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+25829,benign,generic,1.0,Normal SELECT with ORDER BY ASC DESC

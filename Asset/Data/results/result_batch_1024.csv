@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30690,union_based,oracle,0.95,Oracle XMLType CTXSYS
+30691,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30692,auth_bypass,generic,0.9,Simple OR pattern
+30693,out_of_band,oracle,0.9,Oracle sqlid_to_sqlhash
+30694,out_of_band,oracle,0.9,Oracle CTXSYS
+30695,auth_bypass,generic,0.9,Simple OR pattern
+30696,union_based,oracle,0.95,Oracle XMLType
+30697,boolean_blind,mssql,0.85,MsSQL CHAR IN
+30698,boolean_blind,mssql,0.85,MsSQL CHAR IN
+30699,out_of_band,oracle,0.9,Oracle sqlid_to_sqlhash
+30700,auth_bypass,generic,0.9,Simple OR pattern
+30701,out_of_band,oracle,0.9,Oracle UTL_INADDR
+30702,auth_bypass,generic,0.9,Simple OR pattern
+30703,boolean_blind,mssql,0.85,MsSQL CHAR IN
+30704,boolean_blind,postgresql,0.9,PostgreSQL generate_series
+30705,union_based,oracle,0.95,Oracle XMLType
+30706,out_of_band,oracle,0.9,Oracle CTXSYS
+30707,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30708,out_of_band,oracle,0.9,Oracle CTXSYS xmltype
+30709,out_of_band,oracle,0.9,Oracle sqlid_to_sqlhash
+30710,auth_bypass,generic,0.9,Simple OR pattern
+30711,auth_bypass,generic,0.9,Simple OR pattern
+30712,auth_bypass,generic,0.9,Simple OR pattern
+30713,union_based,oracle,0.95,Oracle XMLType
+30714,auth_bypass,generic,0.9,Simple OR pattern
+30715,auth_bypass,generic,0.9,Simple OR pattern
+30716,polyglot,oracle,0.85,PostgreSQL CAST Oracle XMLType
+30717,polyglot,generic,0.85,ELT polyglot
+30718,out_of_band,oracle,0.9,Oracle sqlid_to_sqlhash
+30719,polyglot,generic,0.85,ELT polyglot

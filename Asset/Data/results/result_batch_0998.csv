@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29910,benign,generic,1.0,Normal SQL SELECT LIKE pattern
+29911,benign,generic,1.0,Normal SQL SELECT LIKE underscore
+29912,benign,generic,1.0,Normal SQL SELECT LIKE double underscore
+29913,benign,generic,1.0,Normal SQL SELECT LIKE pattern
+29914,benign,generic,1.0,Normal SQL SELECT NOT LIKE
+29915,benign,generic,1.0,Normal SQL SELECT LIKE pattern
+29916,benign,generic,1.0,Normal SQL SELECT LIKE pattern
+29917,benign,generic,1.0,Normal SQL SELECT LIKE underscore
+29918,benign,generic,1.0,Normal SQL SELECT LIKE pattern
+29919,benign,generic,1.0,Normal SQL SELECT LIKE bracket
+29920,benign,generic,1.0,Normal SQL SELECT LIKE range
+29921,benign,generic,1.0,Normal SQL SELECT LIKE bracket
+29922,benign,generic,1.0,Normal SQL SELECT NOT LIKE
+29923,benign,generic,1.0,Normal SQL syntax fragment
+29924,benign,generic,1.0,Normal SQL SELECT IN subquery
+29925,benign,generic,1.0,Normal SQL SELECT BETWEEN
+29926,benign,generic,1.0,Normal SQL SELECT BETWEEN number
+29927,benign,generic,1.0,Normal SQL SELECT NOT BETWEEN
+29928,benign,generic,1.0,Normal SQL SELECT BETWEEN string
+29929,benign,generic,1.0,Normal SQL SELECT NOT BETWEEN
+29930,benign,generic,1.0,Normal SQL SELECT BETWEEN date
+29931,benign,generic,1.0,Normal SQL SELECT BETWEEN date
+29932,benign,generic,1.0,Normal SQL SELECT alias
+29933,benign,generic,1.0,Normal SQL SELECT AS alias
+29934,benign,generic,1.0,Normal SQL SELECT INNER JOIN
+29935,benign,generic,1.0,Normal SQL SELECT LEFT JOIN
+29936,benign,generic,1.0,Normal SQL SELECT RIGHT JOIN
+29937,benign,generic,1.0,Normal SQL SELECT FULL OUTER JOIN
+29938,benign,generic,1.0,Normal SQL SELECT column only
+29939,benign,generic,1.0,Normal SQL SELECT column with ORDER BY

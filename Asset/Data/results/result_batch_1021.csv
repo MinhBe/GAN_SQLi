@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30600,union_based,oracle,0.95,Oracle XMLType boolean
+30601,auth_bypass,generic,0.9,Simple OR pattern
+30602,union_based,oracle,0.95,Oracle XMLType
+30603,boolean_blind,mssql,0.85,MsSQL CHAR IN
+30604,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30605,out_of_band,oracle,0.9,Oracle CTXSYS
+30606,out_of_band,oracle,0.9,Oracle xmltype
+30607,out_of_band,oracle,0.9,Oracle CTXSYS
+30608,union_based,oracle,0.95,Oracle XMLType
+30609,auth_bypass,generic,0.9,Simple OR pattern
+30610,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30611,auth_bypass,generic,0.9,Simple OR pattern
+30612,union_based,oracle,0.95,Oracle XMLType
+30613,auth_bypass,generic,0.9,Simple OR pattern
+30614,polyglot,oracle,0.85,Oracle XMLType PostgreSQL CAST
+30615,union_based,oracle,0.95,Oracle XMLType
+30616,auth_bypass,generic,0.9,Simple OR pattern
+30617,polyglot,oracle,0.85,Oracle CTXSYS XMLType
+30618,union_based,oracle,0.95,Oracle XMLType
+30619,union_based,oracle,0.95,Oracle XMLType
+30620,out_of_band,oracle,0.9,Oracle CTXSYS
+30621,out_of_band,oracle,0.9,Oracle sqlid_to_sqlhash
+30622,boolean_blind,mssql,0.85,MsSQL CHAR IN
+30623,auth_bypass,generic,0.9,Simple OR pattern
+30624,union_based,oracle,0.95,Oracle XMLType
+30625,auth_bypass,generic,0.9,Simple OR pattern
+30626,out_of_band,oracle,0.9,Oracle sqlid_to_sqlhash
+30627,union_based,oracle,0.95,Oracle XMLType
+30628,union_based,oracle,0.95,Oracle XMLType
+30629,auth_bypass,generic,0.9,Simple OR pattern

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+38970,boolean_blind,generic,0.85,Pattern matching blind
+38971,error_based,oracle,0.95,Oracle XMLType error extraction
+38972,error_based,oracle,0.95,Oracle XMLType + PostgreSQL cast
+38973,error_based,oracle,0.95,Oracle ctxsys drithsx error
+38974,error_based,oracle,0.95,Oracle XMLType error extraction
+38975,error_based,postgresql,0.9,PostgreSQL char() errors
+38976,boolean_blind,generic,0.85,LIKE operator blind
+38977,error_based,oracle,0.95,Oracle XMLType error extraction
+38978,error_based,oracle,0.95,Oracle XMLType error extraction
+38979,error_based,oracle,0.95,Oracle XMLType error extraction
+38980,error_based,oracle,0.95,Oracle XMLType error extraction
+38981,error_based,oracle,0.95,Oracle ctxsys error extraction
+38982,error_based,oracle,0.95,Oracle ctxsys + XMLType errors
+38983,error_based,oracle,0.95,Oracle ctxsys drithsx error
+38984,error_based,oracle,0.95,Oracle XMLType error extraction
+38985,boolean_blind,generic,0.85,Equality check blind
+38986,boolean_blind,generic,0.85,Equality check blind
+38987,error_based,oracle,0.95,Oracle XMLType + PostgreSQL cast
+38988,error_based,oracle,0.95,Oracle XMLType error extraction
+38989,error_based,oracle,0.95,Oracle XMLType error extraction
+38990,boolean_blind,generic,0.85,Pattern matching blind
+38991,error_based,oracle,0.95,Oracle XMLType + case when
+38992,error_based,oracle,0.95,Oracle XMLType error extraction
+38993,error_based,oracle,0.95,Oracle XMLType error extraction
+38994,error_based,oracle,0.95,Oracle XMLType + comment
+38995,error_based,oracle,0.95,Oracle XMLType error extraction
+38996,error_based,oracle,0.95,Oracle XMLType error extraction
+38997,error_based,oracle,0.95,Oracle XMLType error extraction
+38998,error_based,oracle,0.95,Oracle XMLType error extraction
+38999,error_based,oracle,0.95,Oracle dbms_utility error

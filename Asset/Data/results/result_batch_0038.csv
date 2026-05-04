@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1110,union_based,generic,0.85,UNION ALL for union-based
+1111,union_based,generic,0.85,UNION ALL for union-based
+1112,boolean_blind,mysql,0.80,CASE WHEN for boolean blind
+1113,boolean_blind,generic,0.75,Multiplication for blind
+1114,union_based,generic,0.85,UNION ALL for union-based
+1115,boolean_blind,generic,0.80,OR equality for blind
+1116,boolean_blind,postgresql,0.80,CAST for PostgreSQL blind
+1117,boolean_blind,generic,0.80,WHERE equality for blind
+1118,boolean_blind,postgresql,0.80,CAST for PostgreSQL blind
+1119,boolean_blind,mysql,0.80,elt() for boolean blind
+1120,boolean_blind,mysql,0.80,make_set() for boolean blind
+1121,boolean_blind,generic,0.80,OR comparison for blind
+1122,boolean_blind,firebird,0.80,Case when for Firebird blind
+1123,boolean_blind,mssql,0.80,CASE WHEN for MSSQL blind
+1124,boolean_blind,postgresql,0.80,CAST for PostgreSQL blind
+1125,boolean_blind,mysql,0.80,CASE WHEN for boolean blind
+1126,boolean_blind,generic,0.80,CASE WHEN for boolean blind
+1127,union_based,generic,0.85,UNION ALL for union-based
+1128,boolean_blind,mssql,0.85,iif() for MSSQL boolean blind
+1129,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1130,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1131,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1132,time_blind,mysql,0.90,benchmark() with procedure analyse
+1133,union_based,generic,0.85,UNION ALL for union-based
+1134,boolean_blind,firebird,0.80,Case when for Firebird blind
+1135,error_based,mysql,0.90,updatexml() for error extraction
+1136,union_based,generic,0.85,UNION ALL for union-based
+1137,error_based,oracle,0.90,utl_inaddr for Oracle error-based
+1138,heavy_query,postgresql,0.90,generate_series for heavy query
+1139,unknown,generic,0.60,END keyword without context

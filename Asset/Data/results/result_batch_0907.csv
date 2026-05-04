@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+27180,benign,generic,1.0,Normal SELECT with multiple functions
+27181,benign,generic,1.0,Normal SELECT with UNION and ORDER BY
+27182,benign,generic,1.0,Normal SELECT with UNION ALL and ORDER BY
+27183,benign,generic,1.0,Normal SELECT with UNION and WHERE
+27184,benign,generic,1.0,Normal SELECT with aggregate and GROUP BY
+27185,benign,generic,1.0,Normal SELECT with aggregate and subquery JOIN
+27186,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27187,benign,generic,1.0,Incomplete SELECT statement
+27188,benign,generic,1.0,Normal SELECT from table
+27189,benign,generic,1.0,Normal SELECT from table
+27190,benign,generic,1.0,Normal SELECT DISTINCT
+27191,benign,generic,1.0,Normal SELECT with COUNT DISTINCT
+27192,benign,generic,1.0,Normal SELECT with COUNT aggregate
+27193,benign,generic,1.0,Incomplete SELECT with subquery
+27194,benign,generic,1.0,Normal SELECT from table
+27195,benign,generic,1.0,Normal SELECT with WHERE clause
+27196,benign,generic,1.0,Normal SELECT with WHERE clause
+27197,benign,generic,1.0,Normal SELECT with WHERE clause
+27198,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27199,benign,generic,1.0,Normal SELECT with OR condition
+27200,benign,generic,1.0,Normal SELECT with OR condition
+27201,benign,generic,1.0,Normal SELECT with NOT operator
+27202,benign,generic,1.0,Normal SELECT with AND and OR
+27203,benign,generic,1.0,Normal SELECT with multiple NOT conditions
+27204,benign,generic,1.0,Normal SELECT with ORDER BY
+27205,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+27206,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+27207,benign,generic,1.0,Normal SELECT with ORDER BY ASC DESC
+27208,benign,generic,1.0,Normal INSERT statement
+27209,benign,generic,1.0,Normal INSERT statement

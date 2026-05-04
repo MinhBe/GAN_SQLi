@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+2040,error_based,mysql,0.85,GROUP BY concat for error extraction
+2041,heavy_query,mysql,0.85,Multiple domain table join
+2042,boolean_blind,generic,0.80,OR comparison for blind
+2043,boolean_blind,mssql,0.80,CASE WHEN for MSSQL blind
+2044,unknown,oracle,0.70,SELECT without full context
+2045,boolean_blind,generic,0.80,OR comparison for blind
+2046,union_based,generic,0.85,UNION ALL for union-based
+2047,boolean_blind,generic,0.80,OR equality for blind
+2048,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+2049,heavy_query,oracle,0.85,Multiple all_users table join
+2050,boolean_blind,generic,0.80,OR equality for blind
+2051,boolean_blind,mysql,0.80,make_set() for boolean blind
+2052,boolean_blind,generic,0.80,OR comparison for blind
+2053,union_based,generic,0.85,UNION ALL for union-based
+2054,heavy_query,mssql,0.85,Multiple sysusers table join
+2055,time_blind,generic,0.90,sleep() with rlike for time blind
+2056,time_blind,generic,0.90,sleep() for time blind
+2057,time_blind,generic,0.90,sleep() for time blind
+2058,boolean_blind,postgresql,0.80,IN with char for blind
+2059,error_based,mysql,0.90,updatexml() for error extraction
+2060,boolean_blind,generic,0.80,WHERE equality for blind
+2061,boolean_blind,generic,0.80,OR comparison for blind
+2062,heavy_query,mssql,0.85,Multiple sysusers table join
+2063,boolean_blind,mysql,0.80,elt() for boolean blind
+2064,union_based,generic,0.85,UNION ALL for union-based
+2065,heavy_query,mysql,0.85,Multiple domain table join
+2066,boolean_blind,generic,0.80,rlike() for boolean blind
+2067,heavy_query,db2,0.85,Multiple systables join
+2068,heavy_query,db2,0.85,Multiple systables join
+2069,unknown,oracle,0.70,SELECT ORDER BY without full context

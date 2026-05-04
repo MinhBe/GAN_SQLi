@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+27630,benign,generic,1.0,Normal SELECT with FETCH FIRST
+27631,benign,generic,1.0,Normal SELECT AVG aggregate
+27632,benign,generic,1.0,Normal SELECT with NOT LIKE
+27633,benign,generic,1.0,Normal SELECT AVG aggregate
+27634,benign,generic,1.0,Normal SELECT AVG aggregate
+27635,benign,generic,1.0,Normal SELECT AVG aggregate
+27636,benign,generic,1.0,Normal SELECT COUNT aggregate
+27637,benign,generic,1.0,Normal SELECT COUNT aggregate
+27638,benign,generic,1.0,Normal SELECT AVG aggregate
+27639,benign,generic,1.0,Normal SELECT with NOT LIKE
+27640,benign,generic,1.0,Normal SELECT with LIKE
+27641,benign,generic,1.0,Normal SELECT with NOT LIKE
+27642,benign,generic,1.0,Normal SELECT with IN clause
+27643,benign,generic,1.0,Normal SELECT with NOT IN clause
+27644,benign,generic,1.0,Normal SELECT with subquery
+27645,benign,generic,1.0,Normal SELECT with BETWEEN
+27646,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+27647,benign,generic,1.0,Normal SELECT with BETWEEN
+27648,benign,generic,1.0,Normal SELECT with BETWEEN
+27649,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+27650,benign,generic,1.0,Normal SELECT with BETWEEN
+27651,benign,generic,1.0,Normal SELECT with BETWEEN date range
+27652,benign,generic,1.0,Normal SELECT AVG aggregate
+27653,benign,generic,1.0,Normal SELECT COUNT aggregate
+27654,benign,generic,1.0,Normal SELECT COUNT aggregate
+27655,benign,generic,1.0,Normal SELECT AVG aggregate
+27656,benign,generic,1.0,Normal SELECT with BETWEEN date range
+27657,benign,generic,1.0,Normal SELECT with alias
+27658,benign,generic,1.0,Normal SELECT with alias
+27659,benign,generic,1.0,Normal SELECT with alias

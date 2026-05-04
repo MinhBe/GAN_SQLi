@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29880,benign,generic,1.0,Normal SQL SELECT multiple NOT
+29881,benign,generic,1.0,Normal SQL SELECT ORDER BY
+29882,benign,generic,1.0,Normal SQL SELECT ORDER BY DESC
+29883,benign,generic,1.0,Normal SQL SELECT IS NULL
+29884,benign,generic,1.0,Normal SQL SELECT IS NOT NULL
+29885,benign,generic,1.0,Normal SQL SELECT TOP PERCENT
+29886,benign,generic,1.0,Normal SQL SELECT LIMIT
+29887,benign,generic,1.0,Normal SQL SELECT FETCH
+29888,benign,generic,1.0,Normal SQL SELECT ROWNUM
+29889,benign,generic,1.0,Normal SQL SELECT ROWNUM subquery
+29890,benign,generic,1.0,Normal SQL SELECT TOP
+29891,benign,generic,1.0,Normal SQL SELECT LIMIT
+29892,benign,generic,1.0,Normal SQL SELECT FETCH
+29893,benign,generic,1.0,Normal SQL SELECT TOP PERCENT
+29894,benign,generic,1.0,Normal SQL SELECT FETCH PERCENT
+29895,benign,generic,1.0,Normal SQL SELECT TOP WHERE
+29896,benign,generic,1.0,Normal SQL SELECT LIMIT WHERE
+29897,benign,generic,1.0,Normal SQL SELECT FETCH WHERE
+29898,benign,generic,1.0,Normal SQL SELECT MIN aggregate
+29899,benign,generic,1.0,Normal SQL SELECT MAX aggregate
+29900,benign,generic,1.0,Normal SQL SELECT MIN AS alias
+29901,benign,generic,1.0,Normal SQL SELECT MAX AS alias
+29902,benign,generic,1.0,Normal SQL SELECT COUNT
+29903,benign,generic,1.0,Normal SQL SELECT AVG
+29904,benign,generic,1.0,Normal SQL SELECT SUM
+29905,benign,generic,1.0,Normal SQL SELECT COUNT
+29906,benign,generic,1.0,Normal SQL SELECT AVG
+29907,benign,generic,1.0,Normal SQL SELECT SUM
+29908,benign,generic,1.0,Normal SQL SELECT LIKE wildcard
+29909,benign,generic,1.0,Normal SQL SELECT LIKE wildcard

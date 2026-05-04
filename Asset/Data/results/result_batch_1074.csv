@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+32190,error_based,oracle,0.95,xmltype for Oracle error extraction
+32191,error_based,mysql,0.8,elt and if for MySQL injection
+32192,error_based,oracle,0.95,xmltype for Oracle error extraction
+32193,error_based,oracle,0.95,xmltype for Oracle error extraction
+32194,error_based,oracle,0.95,xmltype for Oracle error extraction
+32195,error_based,oracle,0.95,xmltype for Oracle error extraction
+32196,auth_bypass,generic,0.6,wildcard injection for bypass
+32197,error_based,oracle,0.95,xmltype for Oracle error extraction
+32198,error_based,oracle,0.95,xmltype for Oracle error extraction
+32199,error_based,oracle,0.95,xmltype for Oracle error extraction
+32200,auth_bypass,generic,0.6,simple quote for auth bypass
+32201,auth_bypass,generic,0.6,quote injection for auth bypass
+32202,error_based,postgresql,0.85,cast for PostgreSQL error extraction
+32203,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32204,error_based,oracle,0.95,xmltype for Oracle error extraction
+32205,error_based,oracle,0.95,xmltype for Oracle error extraction
+32206,error_based,oracle,0.95,xmltype for Oracle error extraction
+32207,error_based,oracle,0.9,dbms_utility for Oracle error extraction
+32208,error_based,oracle,0.95,xmltype for Oracle error extraction
+32209,error_based,oracle,0.95,xmltype for Oracle error extraction
+32210,error_based,oracle,0.95,xmltype for Oracle error extraction
+32211,auth_bypass,generic,0.7,wildcard injection for bypass
+32212,error_based,oracle,0.9,dbms_utility for Oracle error extraction
+32213,auth_bypass,generic,0.7,quote escaping for auth bypass
+32214,error_based,oracle,0.95,xmltype for Oracle error extraction
+32215,error_based,oracle,0.95,xmltype for Oracle error extraction
+32216,error_based,oracle,0.95,xmltype for Oracle error extraction
+32217,error_based,oracle,0.9,char for Oracle encoding
+32218,error_based,postgresql,0.85,generate_series for PostgreSQL injection
+32219,error_based,oracle,0.95,xmltype for Oracle error extraction

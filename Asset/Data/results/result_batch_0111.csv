@@ -1,0 +1,300 @@
+3300,heavy_query,sqlite,0.90,randomblob for heavy query
+3301,time_blind,generic,0.90,sleep() for time blind
+3302,boolean_blind,generic,0.75,Multiplication for blind
+3303,boolean_blind,generic,0.80,WHERE equality for blind
+3304,error_based,oracle,0.85,dbms_utility for error extraction
+3305,time_blind,generic,0.90,sleep() for time blind
+3306,boolean_blind,generic,0.80,OR equality for blind
+3307,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+3308,union_based,generic,0.85,UNION ALL for union-based
+3309,error_based,mysql,0.85,exp() for error extraction
+3310,boolean_blind,generic,0.80,OR equality for blind
+3311,union_based,generic,0.85,UNION ALL for union-based
+3312,time_blind,generic,0.90,sleep() for time blind
+3313,union_based,generic,0.85,UNION ALL for union-based
+3314,boolean_blind,mysql,0.80,ELT IF for boolean blind
+3315,heavy_query,oracle,0.85,Multiple all_users table join
+3316,union_based,generic,0.85,UNION ALL for union-based
+3317,boolean_blind,generic,0.80,SELECT CASE WHEN for blind
+3318,boolean_blind,mysql,0.80,make_set() for boolean blind
+3319,error_based,mysql,0.85,extractvalue for error extraction
+3320,heavy_query,db2,0.85,Multiple information_schema join
+3321,boolean_blind,generic,0.80,SELECT CASE WHEN for blind
+3322,time_blind,postgresql,0.90,pg_sleep for PostgreSQL time blind
+3323,error_based,mysql,0.85,extractvalue for error extraction
+3324,time_blind,oracle,0.90,utl_inaddr for Oracle time blind
+3325,union_based,generic,0.85,UNION ALL for union-based
+3326,heavy_query,sqlite,0.90,randomblob for heavy query
+3327,boolean_blind,mssql,0.85,iif() for MSSQL boolean blind
+3328,error_based,mysql,0.85,updatexml for error extraction
+3329,heavy_query,postgresql,0.90,generate_series for heavy query
+3330,boolean_blind,generic,0.80,WHERE equality for blind
+3331,heavy_query,generic,0.85,Multiple sysusers table join
+3332,heavy_query,sqlite,0.90,randomblob for heavy query
+3333,heavy_query,mssql,0.85,Multiple sysdatabases join
+3334,boolean_blind,generic,0.80,OR equality for blind
+3335,heavy_query,mysql,0.85,benchmark for heavy query
+3336,unknown,generic,0.50,ORDER BY only - no clear technique
+3337,time_blind,generic,0.90,sleep() for time blind
+3338,union_based,generic,0.85,UNION ALL for union-based
+3339,boolean_blind,generic,0.80,OR equality for blind
+3340,time_blind,generic,0.90,sleep() for time blind
+3341,union_based,generic,0.85,UNION ALL for union-based
+3342,boolean_blind,generic,0.80,RLIKE case when for blind
+3343,heavy_query,postgresql,0.90,generate_series for heavy query
+3344,heavy_query,postgresql,0.90,generate_series for heavy query
+3345,boolean_blind,mysql,0.80,elt() for boolean blind
+3346,boolean_blind,mysql,0.80,ELT IF for boolean blind
+3347,heavy_query,postgresql,0.90,generate_series for heavy query
+3348,boolean_blind,mysql,0.80,elt() for boolean blind
+3349,time_blind,generic,0.90,sleep() for time blind
+3350,boolean_blind,generic,0.80,SELECT CASE WHEN for blind
+3351,boolean_blind,mysql,0.80,group by concat for boolean blind
+3352,union_based,generic,0.85,UNION ALL for union-based
+3353,heavy_query,sqlite,0.90,randomblob for heavy query
+3354,error_based,mysql,0.85,updatexml for error extraction
+3355,boolean_blind,generic,0.80,WHERE equality for blind
+3356,boolean_blind,generic,0.80,WHERE equality for blind
+3357,boolean_blind,generic,0.80,WHERE equality for blind
+3358,union_based,generic,0.85,UNION ALL for union-based
+3359,union_based,generic,0.85,UNION ALL for union-based
+3360,heavy_query,db2,0.85,Multiple information_schema join
+3361,boolean_blind,generic,0.80,WHERE equality for blind
+3362,error_based,mysql,0.85,extractvalue for error extraction
+3363,unknown,generic,0.50,ORDER BY only - no clear technique
+3364,heavy_query,mysql,0.85,benchmark for heavy query
+3365,heavy_query,firebird,0.85,Multiple rdb tables join
+3366,heavy_query,firebird,0.85,Multiple rdb tables join
+3367,error_based,mysql,0.85,extractvalue for error extraction
+3368,boolean_blind,generic,0.80,OR equality for blind
+3369,heavy_query,oracle,0.85,Multiple all_users table join
+3370,time_blind,generic,0.90,sleep() for time blind
+3371,heavy_query,generic,0.85,Multiple sysusers table join
+3372,boolean_blind,generic,0.80,OR equality for blind
+3373,boolean_blind,generic,0.80,WHERE equality for blind
+3374,heavy_query,firebird,0.85,Multiple rdb tables join
+3375,time_blind,oracle,0.90,dbms_lock.sleep for Oracle time blind
+3376,time_blind,mysql,0.90,elt() with sleep for time blind
+3377,union_based,generic,0.85,UNION ALL for union-based
+3378,time_blind,generic,0.90,sleep() for time blind
+3379,heavy_query,oracle,0.85,Multiple all_users table join
+3380,time_blind,generic,0.90,sleep() for time blind
+3381,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+3382,union_based,generic,0.85,UNION ALL for union-based
+3383,heavy_query,oracle,0.85,Multiple all_users table join
+3384,error_based,oracle,0.85,utl_inaddr for error extraction
+3385,union_based,generic,0.85,UNION ALL for union-based
+3386,heavy_query,sqlite,0.90,randomblob for heavy query
+3387,boolean_blind,generic,0.80,AND equality for blind
+3388,heavy_query,sqlite,0.90,randomblob for heavy query
+3389,time_blind,generic,0.90,sleep() for time blind
+3390,error_based,mysql,0.85,extractvalue for error extraction
+3391,union_based,generic,0.85,UNION ALL for union-based
+3392,heavy_query,sqlite,0.90,randomblob for heavy query
+3393,heavy_query,sqlite,0.90,randomblob for heavy query
+3394,time_blind,mssql,0.90,waitfor delay MSSQL time blind
+3395,heavy_query,db2,0.85,Multiple systables join
+3396,boolean_blind,generic,0.80,WHERE equality for blind
+3397,boolean_blind,mssql,0.80,CHAR case when for blind
+3398,boolean_blind,generic,0.80,WHERE equality for blind
+3399,heavy_query,sqlite,0.90,randomblob for heavy query
+3400,union_based,generic,0.85,UNION ALL for union-based
+3401,time_blind,postgresql,0.90,pg_sleep for PostgreSQL time blind
+3402,heavy_query,firebird,0.85,Multiple rdb tables join
+3403,boolean_blind,mysql,0.80,make_set() for boolean blind
+3404,time_blind,generic,0.90,sleep() for time blind
+3405,boolean_blind,generic,0.80,SELECT CASE WHEN for blind
+3406,union_based,generic,0.85,UNION ALL for union-based
+3407,union_based,generic,0.85,UNION ALL for union-based
+3408,time_blind,generic,0.90,sleep() for time blind
+3409,boolean_blind,generic,0.80,RLIKE case when for blind
+3410,boolean_blind,firebird,0.80,CHAR case when for blind
+3411,boolean_blind,generic,0.80,WHERE equality for blind
+3412,time_blind,generic,0.90,sleep() for time blind
+3413,error_based,oracle,0.85,dbms_utility for error extraction
+3414,boolean_blind,mysql,0.80,ELT IF for boolean blind
+3415,union_based,generic,0.85,UNION ALL for union-based
+3416,boolean_blind,generic,0.80,AND equality for blind
+3417,heavy_query,firebird,0.85,Multiple domain tables join
+3418,time_blind,generic,0.90,sleep() for time blind
+3419,unknown,generic,0.50,ORDER BY only - no clear technique
+3420,union_based,generic,0.85,UNION ALL for union-based
+3421,boolean_blind,mysql,0.80,make_set() for boolean blind
+3422,union_based,generic,0.85,UNION ALL for union-based
+3423,boolean_blind,generic,0.80,WHERE equality for blind
+3424,stacked_queries,generic,0.85,IF DROP FUNCTION stacked query
+3425,boolean_blind,generic,0.80,AND equality for blind
+3426,boolean_blind,mysql,0.80,make_set() for boolean blind
+3427,union_based,generic,0.85,UNION ALL for union-based
+3428,error_based,mysql,0.85,updatexml for error extraction
+3429,heavy_query,db2,0.85,Multiple systables join
+3430,time_blind,mysql,0.90,elt() with sleep for time blind
+3431,error_based,mysql,0.85,extractvalue for error extraction
+3432,time_blind,generic,0.90,sleep() for time blind
+3433,boolean_blind,mysql,0.80,elt() for boolean blind
+3434,time_blind,generic,0.90,sleep() for time blind
+3435,error_based,oracle,0.85,dbms_utility for error extraction
+3436,time_blind,mssql,0.90,waitfor delay MSSQL time blind
+3437,union_based,generic,0.85,UNION ALL for union-based
+3438,boolean_blind,generic,0.80,WHERE equality for blind
+3439,union_based,generic,0.85,UNION ALL for union-based
+3440,error_based,mysql,0.85,extractvalue for error extraction
+3441,boolean_blind,firebird,0.80,CHAR case when for blind
+3442,heavy_query,firebird,0.85,Multiple domain tables join
+3443,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+3444,boolean_blind,mssql,0.80,CONVERT INT for blind
+3445,union_based,generic,0.85,UNION ALL for union-based
+3446,boolean_blind,generic,0.75,Multiplication for blind
+3447,union_based,generic,0.85,UNION ALL for union-based
+3448,union_based,generic,0.85,UNION ALL for union-based
+3449,union_based,generic,0.85,UNION ALL for union-based
+3450,heavy_query,postgresql,0.90,generate_series for heavy query
+3451,boolean_blind,generic,0.80,OR equality for blind
+3452,heavy_query,mysql,0.85,benchmark for heavy query
+3453,error_based,mysql,0.85,extractvalue for error extraction
+3454,union_based,generic,0.85,UNION ALL for union-based
+3455,union_based,generic,0.85,UNION ALL for union-based
+3456,unknown,generic,0.50,ORDER BY only - no clear technique
+3457,union_based,generic,0.85,UNION ALL for union-based
+3458,heavy_query,oracle,0.85,Multiple all_users table join
+3459,boolean_blind,generic,0.80,OR equality for blind
+3460,error_based,oracle,0.85,ctxsys.drithsx for error extraction
+3461,unknown,generic,0.50,Incomplete payload
+3462,boolean_blind,generic,0.80,OR equality for blind
+3463,union_based,generic,0.85,UNION ALL for union-based
+3464,boolean_blind,generic,0.80,OR equality for blind
+3465,heavy_query,generic,0.85,Multiple sysusers table join
+3466,heavy_query,mssql,0.85,Multiple sysdatabases join
+3467,heavy_query,oracle,0.85,Multiple all_users table join
+3468,unknown,generic,0.50,ORDER BY only - no clear technique
+3469,heavy_query,mysql,0.85,benchmark for heavy query
+3470,union_based,generic,0.85,UNION ALL for union-based
+3471,union_based,generic,0.85,UNION ALL for union-based
+3472,heavy_query,db2,0.85,Multiple systables join
+3473,boolean_blind,mysql,0.80,ELT IF for boolean blind
+3474,time_blind,mysql,0.90,elt() with sleep for time blind
+3475,time_blind,oracle,0.90,dbms_lock.sleep for Oracle time blind
+3476,time_blind,generic,0.90,sleep() for time blind
+3477,boolean_blind,generic,0.80,WHERE equality for blind
+3478,heavy_query,mysql,0.85,benchmark for heavy query
+3479,time_blind,oracle,0.90,utl_inaddr for Oracle time blind
+3480,boolean_blind,firebird,0.80,CHAR case when for blind
+3481,boolean_blind,mssql,0.80,CHAR case when for blind
+3482,boolean_blind,firebird,0.80,CAST for Firebird blind
+3483,union_based,generic,0.85,UNION ALL for union-based
+3484,boolean_blind,mysql,0.80,ELT IF for boolean blind
+3485,unknown,generic,0.50,ORDER BY only - no clear technique
+3486,error_based,oracle,0.85,xmltype for error extraction
+3487,union_based,generic,0.85,UNION ALL for union-based
+3488,heavy_query,sqlite,0.90,randomblob for heavy query
+3489,heavy_query,oracle,0.85,Multiple all_users table join
+3490,heavy_query,sqlite,0.90,randomblob for heavy query
+3491,heavy_query,oracle,0.85,Multiple all_users table join
+3492,union_based,generic,0.85,UNION ALL for union-based
+3493,union_based,generic,0.85,UNION ALL for union-based
+3494,time_blind,generic,0.90,sleep() for time blind
+3495,union_based,generic,0.85,UNION ALL for union-based
+3496,union_based,generic,0.85,UNION ALL for union-based
+3497,union_based,generic,0.85,UNION ALL for union-based
+3498,union_based,generic,0.85,UNION ALL for union-based
+3499,boolean_blind,generic,0.80,SELECT CASE WHEN for blind
+3500,time_blind,generic,0.90,sleep() for time blind
+3501,heavy_query,db2,0.85,Multiple systables join
+3502,error_based,oracle,0.85,ctxsys.drithsx for error extraction
+3503,boolean_blind,generic,0.80,WHERE equality for blind
+3504,boolean_blind,generic,0.80,OR equality for blind
+3505,heavy_query,generic,0.85,Multiple table join
+3506,heavy_query,firebird,0.85,Multiple domain tables join
+3507,boolean_blind,mysql,0.80,ELT IF for boolean blind
+3508,boolean_blind,generic,0.80,WHERE equality for blind
+3509,error_based,mysql,0.85,updatexml for error extraction
+3510,boolean_blind,generic,0.80,WHERE equality for blind
+3511,boolean_blind,generic,0.80,OR equality for blind
+3512,heavy_query,generic,0.85,Multiple sysusers table join
+3513,time_blind,generic,0.90,sleep() for time blind
+3514,boolean_blind,generic,0.80,AND equality for blind
+3515,error_based,mysql,0.85,exp() for error extraction
+3516,error_based,oracle,0.85,ctxsys.drithsx for error extraction
+3517,union_based,generic,0.85,UNION ALL for union-based
+3518,boolean_blind,generic,0.80,WHERE equality for blind
+3519,heavy_query,mysql,0.85,benchmark for heavy query
+3520,heavy_query,sqlite,0.90,randomblob for heavy query
+3521,time_blind,generic,0.90,sleep() for time blind
+3522,heavy_query,firebird,0.85,Multiple domain tables join
+3523,boolean_blind,generic,0.80,OR equality for blind
+3524,union_based,generic,0.85,UNION ALL for union-based
+3525,union_based,generic,0.85,UNION ALL for union-based
+3526,boolean_blind,generic,0.80,WHERE equality for blind
+3527,heavy_query,db2,0.85,Multiple systables join
+3528,union_based,generic,0.85,UNION ALL for union-based
+3529,boolean_blind,generic,0.80,WHERE equality for blind
+3530,boolean_blind,mssql,0.80,CHAR case when for blind
+3531,union_based,generic,0.85,UNION ALL for union-based
+3532,boolean_blind,generic,0.80,WHERE equality for blind
+3533,boolean_blind,generic,0.80,WHERE equality for blind
+3534,time_blind,postgresql,0.90,pg_sleep for PostgreSQL time blind
+3535,time_blind,mysql,0.90,elt() with sleep for time blind
+3536,boolean_blind,generic,0.80,WHERE equality for blind
+3537,heavy_query,firebird,0.85,Multiple rdb tables join
+3538,time_blind,generic,0.90,sleep() for time blind
+3539,union_based,generic,0.85,UNION ALL for union-based
+3540,union_based,generic,0.85,UNION ALL for union-based
+3541,time_blind,oracle,0.90,utl_inaddr for Oracle time blind
+3542,error_based,mysql,0.85,extractvalue for error extraction
+3543,boolean_blind,generic,0.80,and equality for blind
+3544,error_based,mysql,0.85,updatexml for error extraction
+3545,boolean_blind,generic,0.80,OR equality for blind
+3546,union_based,generic,0.85,UNION ALL for union-based
+3547,heavy_query,sqlite,0.90,randomblob for heavy query
+3548,union_based,generic,0.85,UNION ALL for union-based
+3549,boolean_blind,generic,0.80,and equality for blind
+3550,heavy_query,sqlite,0.90,randomblob for heavy query
+3551,boolean_blind,mysql,0.80,elt() for boolean blind
+3552,heavy_query,db2,0.85,Multiple systables join
+3553,time_blind,generic,0.90,sleep() for time blind
+3554,boolean_blind,mysql,0.80,make_set() for boolean blind
+3555,heavy_query,firebird,0.85,Multiple domain tables join
+3556,heavy_query,mysql,0.85,benchmark for heavy query
+3557,union_based,generic,0.85,UNION ALL for union-based
+3558,time_blind,generic,0.90,sleep() for time blind
+3559,heavy_query,db2,0.85,Multiple information_schema join
+3560,boolean_blind,generic,0.80,WHERE equality for blind
+3561,error_based,mysql,0.85,updatexml for error extraction
+3562,boolean_blind,generic,0.80,OR equality for blind
+3563,heavy_query,sqlite,0.90,randomblob for heavy query
+3564,heavy_query,oracle,0.85,Multiple all_users table join
+3565,union_based,generic,0.85,UNION ALL for union-based
+3566,union_based,generic,0.85,UNION ALL for union-based
+3567,time_blind,generic,0.90,sleep() for time blind
+3568,time_blind,generic,0.90,sleep() for time blind
+3569,heavy_query,sqlite,0.90,randomblob for heavy query
+3570,union_based,generic,0.85,UNION ALL for union-based
+3571,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+3572,union_based,generic,0.85,UNION ALL for union-based
+3573,boolean_blind,generic,0.80,RLIKE case when for blind
+3574,boolean_blind,generic,0.75,Multiplication for blind
+3575,boolean_blind,generic,0.80,OR equality for blind
+3576,error_based,mysql,0.85,exp() for error extraction
+3577,boolean_blind,firebird,0.80,CHAR case when for blind
+3578,error_based,oracle,0.85,ctxsys.drithsx for error extraction
+3579,union_based,generic,0.85,UNION ALL for union-based
+3580,boolean_blind,generic,0.80,and equality for blind
+3581,unknown,generic,0.50,ORDER BY only - no clear technique
+3582,boolean_blind,mssql,0.80,CONVERT INT for blind
+3583,error_based,oracle,0.85,xmltype for error extraction
+3584,heavy_query,firebird,0.85,Multiple rdb tables join
+3585,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+3586,boolean_blind,generic,0.80,RLIKE case when for blind
+3587,union_based,oracle,0.85,UNION ALL for union-based
+3588,error_based,oracle,0.85,ctxsys.drithsx for error extraction
+3589,boolean_blind,generic,0.80,WHERE equality for blind
+3590,time_blind,generic,0.90,sleep() for time blind
+3591,union_based,generic,0.85,UNION ALL for union-based
+3592,error_based,oracle,0.85,ctxsys.drithsx for error extraction
+3593,union_based,generic,0.85,UNION ALL for union-based
+3594,boolean_blind,mysql,0.80,ELT IF for boolean blind
+3595,union_based,generic,0.85,UNION ALL for union-based
+3596,stacked_queries,generic,0.85,IF DROP FUNCTION stacked query
+3597,boolean_blind,generic,0.80,WHERE equality for blind
+3598,boolean_blind,generic,0.80,OR equality for blind
+3599,boolean_blind,mysql,0.80,elt() for boolean blind

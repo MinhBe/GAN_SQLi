@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+32160,auth_bypass,generic,0.6,simple OR condition for auth bypass
+32161,auth_bypass,generic,0.6,simple quote for auth bypass
+32162,error_based,oracle,0.9,dbms_utility for Oracle error extraction
+32163,error_based,mysql,0.8,elt and if for MySQL injection
+32164,error_based,oracle,0.95,xmltype for Oracle error extraction
+32165,error_based,oracle,0.9,ctxsys.drithsx.sn for Oracle injection
+32166,error_based,oracle,0.95,xmltype for Oracle error extraction
+32167,error_based,oracle,0.95,xmltype for Oracle error extraction
+32168,error_based,postgresql,0.85,cast for PostgreSQL error extraction
+32169,auth_bypass,generic,0.6,quote injection for auth bypass
+32170,error_based,oracle,0.95,xmltype for Oracle error extraction
+32171,error_based,oracle,0.95,xmltype for Oracle error extraction
+32172,auth_bypass,generic,0.7,quote escaping for auth bypass
+32173,error_based,oracle,0.95,xmltype for Oracle error extraction
+32174,error_based,oracle,0.95,xmltype for Oracle error extraction
+32175,auth_bypass,generic,0.6,quote for auth bypass
+32176,error_based,oracle,0.95,xmltype for Oracle error extraction
+32177,error_based,mssql,0.85,convert for MSSQL error extraction
+32178,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32179,auth_bypass,generic,0.6,quote injection for auth bypass
+32180,error_based,postgresql,0.85,cast for PostgreSQL error extraction
+32181,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32182,error_based,oracle,0.95,xmltype for Oracle error extraction
+32183,error_based,oracle,0.95,xmltype for Oracle error extraction
+32184,error_based,oracle,0.95,xmltype for Oracle error extraction
+32185,out_of_band,oracle,0.8,utl_inaddr.get_host_address for OOB injection
+32186,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32187,auth_bypass,generic,0.7,quote escaping for auth bypass
+32188,auth_bypass,generic,0.6,simple quote for auth bypass
+32189,error_based,oracle,0.95,xmltype for Oracle error extraction

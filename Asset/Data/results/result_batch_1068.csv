@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+32010,boolean_blind,generic,0.5,Simple OR bypass no injection
+32011,boolean_blind,generic,0.5,Simple AND LIKE bypass
+32012,error_based,oracle,0.95,Oracle xmltype for error extraction
+32013,error_based,oracle,0.9,Oracle char for error extraction
+32014,error_based,oracle,0.9,Oracle char for error extraction
+32015,error_based,oracle,0.9,Oracle ctxsys cast combined
+32016,boolean_blind,generic,0.5,Simple wildcard bypass
+32017,boolean_blind,generic,0.5,Simple AND LIKE bypass
+32018,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function
+32019,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+32020,boolean_blind,generic,0.5,Simple OR bypass no injection
+32021,error_based,oracle,0.95,Oracle xmltype for error extraction
+32022,error_based,oracle,0.9,Oracle dbms_utility cast combined
+32023,error_based,oracle,0.95,Oracle xmltype for error extraction
+32024,error_based,oracle,0.9,Oracle char for error extraction
+32025,boolean_blind,generic,0.5,Simple AND LIKE bypass
+32026,error_based,oracle,0.95,Oracle xmltype for error extraction
+32027,error_based,oracle,0.95,Oracle xmltype for error extraction
+32028,error_based,oracle,0.95,Oracle xmltype for error extraction
+32029,error_based,oracle,0.95,Oracle xmltype for error extraction
+32030,error_based,oracle,0.95,Oracle xmltype for error extraction
+32031,error_based,oracle,0.9,Oracle cast xmltype combined
+32032,boolean_blind,generic,0.5,Simple AND LIKE bypass
+32033,boolean_blind,generic,0.5,Simple wildcard bypass
+32034,error_based,oracle,0.95,Oracle xmltype for error extraction
+32035,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function
+32036,out_of_band,oracle,0.85,Oracle utl_inaddr.get_host_address OOB
+32037,error_based,oracle,0.95,Oracle xmltype for error extraction
+32038,boolean_blind,generic,0.5,Simple OR bypass no injection
+32039,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function

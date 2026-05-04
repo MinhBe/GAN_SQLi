@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+32100,error_based,oracle,0.95,xmltype for Oracle error extraction
+32101,error_based,oracle,0.9,dbms_utility.sqlid_to_sqlhash Oracle specific
+32102,error_based,oracle,0.95,xmltype Oracle error-based technique
+32103,error_based,oracle,0.95,xmltype Oracle error-based extraction
+32104,error_based,oracle,0.9,dbms_utility for Oracle error extraction
+32105,error_based,postgresql,0.85,cast for PostgreSQL error-based
+32106,error_based,oracle,0.9,char function for Oracle encoding
+32107,error_based,oracle,0.9,char function for Oracle encoding
+32108,error_based,postgresql,0.85,generate_series for PostgreSQL injection
+32109,error_based,oracle,0.95,xmltype for Oracle error extraction
+32110,error_based,oracle,0.95,xmltype Oracle error-based technique
+32111,error_based,mysql,0.8,elt and if for MySQL injection
+32112,error_based,oracle,0.9,dbms_utility for Oracle error extraction
+32113,error_based,oracle,0.9,char for Oracle encoding
+32114,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32115,error_based,oracle,0.95,xmltype Oracle error-based technique
+32116,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32117,error_based,oracle,0.95,xmltype for Oracle error extraction
+32118,auth_bypass,generic,0.7,quote escaping for auth bypass
+32119,auth_bypass,generic,0.6,simple OR condition for auth bypass
+32120,error_based,oracle,0.9,char for Oracle encoding
+32121,error_based,oracle,0.9,ctxsys.drithsx.sn for Oracle injection
+32122,error_based,oracle,0.95,xmltype for Oracle error extraction
+32123,error_based,postgresql,0.85,cast for PostgreSQL error-based
+32124,error_based,oracle,0.95,xmltype Oracle error-based extraction
+32125,error_based,postgresql,0.85,cast for PostgreSQL error extraction
+32126,error_based,oracle,0.9,char for Oracle encoding
+32127,error_based,oracle,0.9,dbms_utility for Oracle injection
+32128,error_based,oracle,0.95,xmltype for Oracle error extraction
+32129,error_based,oracle,0.95,xmltype for Oracle error extraction

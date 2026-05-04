@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30120,union_based,oracle,0.95,Oracle XMLType nested injection
+30121,boolean_blind,postgresql,0.9,PostgreSQL CAST boolean blind
+30122,union_based,oracle,0.95,Oracle XMLType with comment bypass
+30123,boolean_blind,postgresql,0.9,PostgreSQL CAST boolean
+30124,auth_bypass,generic,0.9,Multiple AND logic bypass
+30125,out_of_band,oracle,0.85,Oracle DBMS_UTILITY hash
+30126,boolean_blind,mssql,0.85,MsSQL CONVERT int blind
+30127,union_based,oracle,0.95,Oracle XMLType with comment
+30128,out_of_band,oracle,0.9,Oracle CTXSYS DRITHSX
+30129,auth_bypass,generic,0.9,LIKE pattern bypass
+30130,union_based,oracle,0.95,Oracle XMLType complex
+30131,auth_bypass,generic,0.9,AND LIKE pattern bypass
+30132,out_of_band,oracle,0.85,Oracle DBMS_UTILITY hash
+30133,boolean_blind,postgresql,0.9,PostgreSQL nested CAST
+30134,boolean_blind,mssql,0.85,MsSQL CHAR IN boolean
+30135,boolean_blind,postgresql,0.9,PostgreSQL CAST with comment
+30136,boolean_blind,postgresql,0.9,PostgreSQL CAST in WHERE
+30137,union_based,oracle,0.95,Oracle XMLType extract
+30138,out_of_band,oracle,0.9,Oracle CTXSYS DRITHSX
+30139,union_based,oracle,0.95,Oracle XMLType nested
+30140,out_of_band,oracle,0.9,Oracle UTL_INADDR
+30141,boolean_blind,mssql,0.85,MsSQL CHAR boolean
+30142,boolean_blind,mssql,0.85,MsSQL nested CONVERT
+30143,boolean_blind,mssql,0.85,MsSQL CHAR IN blind
+30144,auth_bypass,generic,0.9,LIKE pattern inject
+30145,boolean_blind,mssql,0.85,MsSQL CHAR IN with OR
+30146,out_of_band,oracle,0.9,Oracle CTXSYS DRITHSX
+30147,union_based,oracle,0.95,Oracle XMLType injection
+30148,out_of_band,oracle,0.9,Multiple Oracle vectors
+30149,union_based,oracle,0.95,Oracle XMLType final

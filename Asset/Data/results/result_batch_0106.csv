@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+3150,boolean_blind,generic,0.8,RLIKE case when for blind
+3151,union_based,generic,0.85,UNION ALL for union-based
+3152,time_blind,generic,0.9,sleep() for time blind
+3153,union_based,generic,0.85,UNION ALL for union-based
+3154,heavy_query,postgresql,0.9,generate_series for heavy query
+3155,union_based,generic,0.85,UNION ALL for union-based
+3156,union_based,generic,0.85,UNION ALL for union-based
+3157,error_based,mysql,0.85,extractvalue for error extraction
+3158,heavy_query,sqlite,0.9,randomblob for heavy query
+3159,union_based,generic,0.85,UNION ALL for union-based
+3160,boolean_blind,generic,0.8,WHERE equality for blind
+3161,boolean_blind,generic,0.75,Multiplication for blind
+3162,boolean_blind,generic,0.8,SELECT CASE WHEN for blind
+3163,heavy_query,generic,0.85,Multiple table join
+3164,heavy_query,oracle,0.85,Multiple all_users table join
+3165,heavy_query,postgresql,0.9,generate_series for heavy query
+3166,heavy_query,oracle,0.85,Multiple all_users table join
+3167,union_based,generic,0.85,UNION ALL for union-based
+3168,heavy_query,oracle,0.85,Multiple all_users table join
+3169,union_based,generic,0.85,UNION ALL for union-based
+3170,time_blind,oracle,0.9,utl_inaddr for Oracle time blind
+3171,union_based,generic,0.85,UNION ALL for union-based
+3172,boolean_blind,mysql,0.8,make_set() for boolean blind
+3173,error_based,mysql,0.85,updatexml for error extraction
+3174,boolean_blind,generic,0.8,WHERE equality for blind
+3175,union_based,generic,0.85,UNION ALL for union-based
+3176,heavy_query,sqlite,0.9,randomblob for heavy query
+3177,boolean_blind,generic,0.75,Multiplication for blind
+3178,heavy_query,postgresql,0.9,generate_series for heavy query
+3179,heavy_query,sqlite,0.9,randomblob for heavy query

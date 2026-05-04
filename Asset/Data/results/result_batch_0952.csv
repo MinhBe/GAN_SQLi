@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+28530,benign,generic,1.0,Normal SELECT with BETWEEN
+28531,benign,generic,1.0,Normal SELECT with BETWEEN
+28532,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+28533,benign,generic,1.0,Normal SELECT with BETWEEN
+28534,benign,generic,1.0,Normal SELECT with BETWEEN date range
+28535,benign,generic,1.0,Normal SELECT AVG aggregate
+28536,benign,generic,1.0,Normal SELECT COUNT aggregate
+28537,benign,generic,1.0,Normal SELECT COUNT aggregate
+28538,benign,generic,1.0,Normal SELECT AVG aggregate
+28539,benign,generic,1.0,Normal SELECT with BETWEEN date range
+28540,benign,generic,1.0,Normal SELECT with alias
+28541,benign,generic,1.0,Normal SELECT with alias
+28542,benign,generic,1.0,Normal SELECT with alias
+28543,benign,generic,1.0,Normal SELECT with string concatenation
+28544,benign,generic,1.0,Normal SELECT function call
+28545,benign,generic,1.0,Invalid SQL syntax - not an attack
+28546,benign,generic,1.0,Normal SELECT function call
+28547,benign,generic,1.0,Normal SELECT with LEFT JOIN
+28548,benign,generic,1.0,Invalid SQL syntax - not an attack
+28549,benign,generic,1.0,Normal SELECT with RIGHT JOIN
+28550,benign,generic,1.0,Normal SELECT function call
+28551,benign,generic,1.0,Invalid SQL syntax - not an attack
+28552,benign,generic,1.0,Invalid SQL syntax - not an attack
+28553,benign,generic,1.0,Invalid SQL syntax - not an attack
+28554,benign,generic,1.0,Normal SELECT function call
+28555,benign,generic,1.0,Invalid SQL syntax - not an attack
+28556,benign,generic,1.0,Normal SELECT with UNION
+28557,benign,generic,1.0,Normal SELECT with UNION ALL
+28558,benign,generic,1.0,Normal SELECT with UNION
+28559,benign,generic,1.0,Invalid SQL syntax - not an attack

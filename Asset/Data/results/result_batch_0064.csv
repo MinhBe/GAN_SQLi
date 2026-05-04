@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1890,union_based,generic,0.85,UNION ALL for union-based
+1891,heavy_query,firebird,0.85,Multiple table join for heavy query
+1892,heavy_query,mysql,0.85,Multiple domain table join
+1893,heavy_query,postgresql,0.90,generate_series for heavy query
+1894,boolean_blind,generic,0.80,rlike() for boolean blind
+1895,union_based,generic,0.85,UNION ALL for union-based
+1896,boolean_blind,generic,0.80,AND equality for blind
+1897,time_blind,mysql,0.90,benchmark() with procedure analyse
+1898,error_based,oracle,0.90,ctxsys.drithsx for Oracle error-based
+1899,boolean_blind,generic,0.80,OR equality for blind
+1900,boolean_blind,firebird,0.80,Case when for Firebird blind
+1901,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1902,union_based,generic,0.85,UNION ALL for union-based
+1903,heavy_query,db2,0.85,Multiple systables join
+1904,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1905,error_based,oracle,0.90,ctxsys.drithsx for Oracle error-based
+1906,boolean_blind,generic,0.75,SELECT IF for boolean blind
+1907,unknown,generic,0.70,WHERE clause without full query
+1908,error_based,oracle,0.90,xmltype() for Oracle error-based
+1909,heavy_query,oracle,0.85,Multiple all_users table join
+1910,heavy_query,mysql,0.85,Multiple domain table join
+1911,unknown,generic,0.60,SELECT without clear type
+1912,union_based,generic,0.85,UNION ALL for union-based
+1913,boolean_blind,generic,0.80,WHERE equality for blind
+1914,heavy_query,mysql,0.85,Multiple domain table join
+1915,union_based,generic,0.85,UNION ALL for union-based
+1916,time_blind,mysql,0.90,benchmark() for time blind
+1917,boolean_blind,generic,0.75,Multiplication for blind
+1918,error_based,oracle,0.90,utl_inaddr for Oracle error-based
+1919,union_based,generic,0.85,UNION ALL for union-based

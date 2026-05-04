@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+270,auth_bypass,generic,0.9,Tautology OR 1=1 with high-bit character noise.
+271,auth_bypass,generic,0.7,Minimal quote and comment for basic injection.
+272,auth_bypass,generic,0.9,Tautology OR 1=1 with C-style comment.
+273,union_based,mysql,0.9,UNION SELECT with version() and hash comment noise.
+274,union_based,mssql,0.9,UNION SELECT with @@VERSION and noise.
+275,rce,mssql,1.0,MSSQL sp_addlogin stored procedure for privilege escalation.
+276,union_based,oracle,1.0,UNION SELECT querying Oracle v$version metadata.
+277,time_blind,mssql,1.0,MSSQL waitfor delay (hex encoded) for time-based inference.
+278,auth_bypass,generic,0.9,Tautology OR 1=1 with period and quote noise.
+279,union_based,mysql,0.9,UNION SELECT with version() and @ symbol noise.
+280,auth_bypass,generic,0.8,GROUP BY ... HAVING 1=1 for boolean inference.
+281,union_based,mssql,0.9,UNION SELECT with @@VERSION and backslash noise.
+282,auth_bypass,generic,0.9,Tautology OR 1=1 with multiplication noise.
+283,auth_bypass,generic,0.9,Tautology OR 1=1 with semicolon noise.
+284,auth_bypass,generic,0.9,Tautology OR 1=1 with smart quote character.
+285,union_based,mssql,0.9,UNION SELECT with @@VERSION and multiplication noise.
+286,auth_bypass,generic,0.9,Tautology OR 1=1 with modulo and parentheses noise.
+287,auth_bypass,generic,0.9,Simple tautology 'or a=a'.
+288,rce,mssql,0.9,MSSQL declare and variable assignment indicative of complex attack.
+289,union_based,mysql,0.8,UNION SELECT with version() and operator noise.
+290,union_based,mssql,0.9,UNION SELECT with @@VERSION and backslash/asterisk noise.
+291,union_based,mysql,0.9,UNION SELECT with multiple version() calls and hash noise.
+292,unknown,generic,0.5,SQL variable reference without clear malicious intent.
+293,rce,mssql,1.0,MSSQL xp_cmdshell for Remote Code Execution.
+294,auth_bypass,generic,0.9,Tautology OR 1=1 with parentheses noise.
+295,union_based,mysql,0.9,UNION SELECT with version() and @ symbol noise.
+296,union_based,mysql,0.9,UNION SELECT with version() and @ symbol/letter noise.
+297,union_based,mysql,0.9,UNION SELECT with version() and @ symbol/hash noise.
+298,union_based,mssql,0.9,UNION SELECT with @@VERSION and backslash noise.
+299,union_based,oracle,1.0,UNION SELECT querying Oracle v$version with noise.

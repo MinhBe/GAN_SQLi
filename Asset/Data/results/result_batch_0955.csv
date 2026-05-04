@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+28620,benign,generic,1.0,Normal SQL SELECT query
+28621,benign,generic,1.0,Normal SQL SELECT with LIKE
+28622,benign,generic,1.0,Normal SQL SELECT with NOT LIKE
+28623,benign,generic,1.0,Normal SQL SELECT with IN clause
+28624,benign,generic,1.0,Normal SQL SELECT with NOT IN
+28625,benign,generic,1.0,Normal SQL SELECT with subquery
+28626,benign,generic,1.0,Normal SQL SELECT with BETWEEN
+28627,benign,generic,1.0,Normal SQL SELECT with NOT BETWEEN
+28628,benign,generic,1.0,Normal SQL SELECT with BETWEEN string
+28629,benign,generic,1.0,Normal SQL SELECT with BETWEEN quoted strings
+28630,benign,generic,1.0,Normal SQL SELECT with NOT BETWEEN
+28631,benign,generic,1.0,Normal SQL SELECT with BETWEEN date-like
+28632,benign,generic,1.0,Normal SQL SELECT with BETWEEN date range
+28633,benign,generic,1.0,Normal SQL SELECT aggregate functions
+28634,benign,generic,1.0,Normal SQL SELECT COUNT
+28635,benign,generic,1.0,Normal SQL SELECT COUNT column
+28636,benign,generic,1.0,Normal SQL SELECT AVG aggregate
+28637,benign,generic,1.0,Normal SQL SELECT with BETWEEN date
+28638,benign,generic,1.0,Normal SQL SELECT with alias
+28639,benign,generic,1.0,Normal SQL SELECT with alias
+28640,benign,generic,1.0,Normal SQL SELECT with alias brackets
+28641,benign,generic,1.0,Normal SQL SELECT with string concatenation
+28642,benign,generic,1.0,Normal SQL SELECT with function call
+28643,benign,generic,1.0,Normal SQL SELECT with JOIN syntax
+28644,benign,generic,1.0,Normal SQL SELECT with LEFT JOIN
+28645,benign,generic,1.0,Normal SQL SELECT with LEFT JOIN
+28646,benign,generic,1.0,Normal SQL SELECT with RIGHT JOIN syntax error
+28647,benign,generic,1.0,Normal SQL SELECT with RIGHT JOIN
+28648,benign,generic,1.0,Normal SQL SELECT with FULL OUTER JOIN
+28649,benign,generic,1.0,Normal SQL SELECT function call syntax

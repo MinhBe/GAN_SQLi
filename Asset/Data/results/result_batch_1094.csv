@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+32790,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32791,error_based,oracle,0.9,char for Oracle encoding
+32792,error_based,oracle,0.95,xmltype for Oracle error extraction
+32793,error_based,oracle,0.9,cast for PostgreSQL injection
+32794,error_based,postgresql,0.85,cast for PostgreSQL error extraction
+32795,error_based,oracle,0.9,char for Oracle encoding
+32796,error_based,oracle,0.95,xmltype for Oracle error extraction
+32797,error_based,oracle,0.9,cast for PostgreSQL injection
+32798,error_based,oracle,0.95,xmltype for Oracle error extraction
+32799,auth_bypass,generic,0.6,wildcard injection
+32800,auth_bypass,generic,0.6,simple OR condition
+32801,error_based,oracle,0.9,cast for PostgreSQL injection
+32802,error_based,oracle,0.95,xmltype for Oracle error extraction
+32803,auth_bypass,generic,0.6,wildcard injection
+32804,error_based,oracle,0.95,xmltype for Oracle error extraction
+32805,error_based,postgresql,0.85,cast for PostgreSQL error extraction
+32806,error_based,oracle,0.95,xmltype for Oracle error extraction
+32807,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32808,error_based,oracle,0.9,char for Oracle encoding
+32809,error_based,oracle,0.9,char for Oracle encoding
+32810,error_based,oracle,0.95,xmltype for Oracle error extraction
+32811,error_based,oracle,0.9,char for Oracle encoding
+32812,error_based,mysql,0.8,elt and if for MySQL injection
+32813,error_based,mssql,0.85,convert int for MSSQL extraction
+32814,auth_bypass,generic,0.6,wildcard injection
+32815,error_based,oracle,0.95,xmltype for Oracle error extraction
+32816,error_based,oracle,0.9,char for Oracle encoding
+32817,error_based,oracle,0.95,xmltype for Oracle error extraction
+32818,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32819,error_based,oracle,0.95,xmltype for Oracle error extraction

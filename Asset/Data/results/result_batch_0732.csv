@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+21930,benign,generic,1.0,Normal SELECT with COUNT aggregate
+21931,benign,generic,1.0,Normal SELECT with COUNT aggregate
+21932,benign,generic,1.0,Normal SELECT with AVG aggregate
+21933,benign,generic,1.0,Normal SELECT with NOT LIKE
+21934,benign,generic,1.0,Normal SELECT with LIKE wildcard
+21935,benign,generic,1.0,Normal SELECT with NOT LIKE pattern
+21936,benign,generic,1.0,Normal SELECT with IN clause
+21937,benign,generic,1.0,Normal SELECT with NOT IN
+21938,benign,generic,1.0,Normal SELECT with IN subquery
+21939,benign,generic,1.0,Normal SELECT with BETWEEN
+21940,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+21941,benign,generic,1.0,Normal SELECT with BETWEEN string
+21942,benign,generic,1.0,Normal SELECT with BETWEEN string
+21943,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+21944,benign,generic,1.0,Malformed date range in BETWEEN
+21945,benign,generic,1.0,Normal SELECT with BETWEEN date
+21946,benign,generic,1.0,Normal SELECT with AVG and SUM
+21947,benign,generic,1.0,Normal SELECT with COUNT aggregate
+21948,benign,generic,1.0,Normal SELECT with COUNT aggregate
+21949,benign,generic,1.0,Normal SELECT with AVG aggregate
+21950,benign,generic,1.0,Normal SELECT with BETWEEN date
+21951,benign,generic,1.0,Normal SELECT with column alias
+21952,benign,generic,1.0,Normal SELECT with column alias
+21953,benign,generic,1.0,Normal SELECT with column alias
+21954,benign,generic,1.0,Normal SELECT with string concatenation
+21955,benign,generic,1.0,Normal SELECT with function and INNER JOIN
+21956,benign,generic,1.0,Normal SELECT with function and multiple JOINs
+21957,benign,generic,1.0,Normal SELECT with function and LEFT JOIN
+21958,benign,generic,1.0,Normal SELECT with LEFT JOIN
+21959,benign,generic,1.0,Incomplete SELECT with function

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+270,boolean_blind,generic,0.9,Tautology '1=1' used for boolean inference with obfuscated character
+271,boolean_blind,generic,0.9,Simple comment-based tautology for bypass or inference
+272,boolean_blind,generic,0.9,Tautology '1=1' with C-style comment
+273,union_based,mysql,0.95,UNION SELECT with version() function call
+274,union_based,mssql,0.95,UNION SELECT with @@VERSION global variable
+275,rce,mssql,1.0,Use of sp_addlogin for privilege escalation or backdoor creation
+276,union_based,oracle,1.0,UNION SELECT targeting v$version with rownum limit
+277,time_blind,mssql,1.0,Hex encoded WAITFOR DELAY for time-based exfiltration
+278,boolean_blind,generic,0.9,Complex tautology with multiple OR conditions
+279,union_based,generic,0.95,UNION SELECT with version() and bitwise noise
+280,boolean_blind,generic,0.85,GROUP BY ... HAVING tautology for inference
+281,union_based,mssql,0.95,UNION SELECT with @@VERSION and mathematical obfuscation
+282,boolean_blind,generic,0.9,Tautology with arithmetic multiplication
+283,boolean_blind,generic,0.9,Tautology with noise characters
+284,boolean_blind,generic,0.9,Tautology using smart quotes
+285,union_based,mssql,0.95,UNION SELECT with @@VERSION and escape characters
+286,boolean_blind,generic,0.9,Tautology using modulo operator and noise
+287,boolean_blind,generic,0.9,Simple string-based tautology
+288,stacked_queries,mssql,0.95,Variable declaration typical of multi-statement attacks
+289,union_based,generic,0.95,UNION SELECT with version() and comparison noise
+290,union_based,mssql,0.95,UNION SELECT with @@VERSION and complex math noise
+291,union_based,generic,0.95,UNION SELECT with multiple version() calls
+292,benign,unknown,0.8,Standalone @variable reference without clear malicious context
+293,rce,mssql,1.0,Execution of xp_cmdshell for operating system command execution
+294,boolean_blind,generic,0.9,Tautology with parenthesized arithmetic
+295,union_based,generic,0.95,UNION SELECT with version() and symbol noise
+296,union_based,generic,0.95,UNION SELECT with version() and alphanumeric noise
+297,union_based,generic,0.95,UNION SELECT with version() and special character noise
+298,union_based,mssql,0.95,UNION SELECT with @@VERSION and subquery noise
+299,union_based,oracle,1.0,UNION SELECT targeting v$version with rownum and string literals

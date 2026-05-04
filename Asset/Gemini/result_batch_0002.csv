@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30,auth_bypass,generic,0.9,Tautology with multiple OR conditions.
+31,auth_bypass,generic,1.0,Tautology with space obfuscation using comments.
+32,auth_bypass,generic,0.8,OR 1=1 tautology with unusual syntax.
+33,union_based,postgresql,0.9,UNION SELECT using PostgreSQL-specific operators.
+34,union_based,mssql,0.9,UNION SELECT using @@VERSION which is common in MSSQL.
+35,auth_bypass,generic,1.0,Tautology with a trailing comment.
+36,auth_bypass,generic,0.9,URL-encoded single quote followed by OR 1=1 tautology.
+37,union_based,mysql,0.8,UNION SELECT with bitwise operator obfuscation.
+38,union_based,mssql,0.9,UNION SELECT for version retrieval using MSSQL's @@VERSION.
+39,rce,mysql,1.0,Uses load_file() to read sensitive system files on MySQL.
+40,union_based,mssql,0.9,UNION SELECT with @@VERSION and minor syntax obfuscation.
+41,auth_bypass,generic,0.8,OR 1=1 tautology with backslash and dot obfuscation.
+42,union_based,mssql,0.9,UNION SELECT for version retrieval with character obfuscation.
+43,union_based,mysql,0.9,UNION SELECT with string concatenation or pipe operator.
+44,union_based,oracle,1.0,Queries Oracle's v$version table to extract banner information.
+45,auth_bypass,generic,0.8,Classic tautology with syntax noise.
+46,auth_bypass,generic,0.8,Tautology logic with brace and bracket noise.
+47,auth_bypass,generic,0.8,Tautology logic with dot and @ symbol noise.
+48,auth_bypass,generic,0.8,Tautology logic with $ and bracket noise.
+49,auth_bypass,generic,1.0,Short tautology OR 1 with comment and trailing quote.
+50,auth_bypass,generic,0.8,Tautology logic with comma and semicolon noise.
+51,auth_bypass,mysql,0.9,Authentication bypass using OR 1=1 and MySQL comment #.
+52,union_based,oracle,1.0,UNION SELECT targeting Oracle's v$version.
+53,union_based,generic,0.9,Hex-encoded single quote followed by UNION SELECT.
+54,unknown,generic,0.5,Single SQL keyword 'PRINT' without clear context.
+55,union_based,mssql,0.9,UNION SELECT targeting MSSQL version with unusual character sequence.
+56,auth_bypass,generic,1.0,Classic tautology with SQL comment.
+57,time_blind,postgresql,1.0,Time-based blind injection using PostgreSQL's pg_sleep.
+58,auth_bypass,generic,0.8,Tautology logic with comma and hash noise.
+59,auth_bypass,generic,1.0,Tautology with bracket closure and comment.

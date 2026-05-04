@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+2460,union_based,oracle,0.85,UNION ALL for union-based
+2461,boolean_blind,generic,0.8,WHERE equality for blind
+2462,union_based,generic,0.85,UNION ALL for union-based
+2463,boolean_blind,generic,0.8,OR equality for blind
+2464,time_blind,generic,0.9,sleep() for time blind
+2465,boolean_blind,generic,0.8,OR equality for blind
+2466,heavy_query,sqlite,0.9,randomblob for heavy query
+2467,union_based,generic,0.85,UNION ALL for union-based
+2468,heavy_query,mssql,0.85,Multiple sysdatabases join
+2469,union_based,generic,0.85,UNION ALL for union-based
+2470,union_based,generic,0.85,UNION ALL for union-based
+2471,boolean_blind,generic,0.8,AND equality for blind
+2472,heavy_query,db2,0.85,Multiple systables join
+2473,unknown,generic,0.5,ORDER BY only - no clear technique
+2474,union_based,generic,0.85,UNION ALL for union-based
+2475,union_based,generic,0.85,UNION ALL for union-based
+2476,boolean_blind,mssql,0.8,CHAR case when for blind
+2477,heavy_query,sqlite,0.9,randomblob for heavy query
+2478,boolean_blind,generic,0.8,OR equality for blind
+2479,heavy_query,mysql,0.85,benchmark for heavy query
+2480,union_based,generic,0.85,UNION ALL for union-based
+2481,heavy_query,mysql,0.85,benchmark for heavy query
+2482,heavy_query,oracle,0.85,Multiple all_users table join
+2483,heavy_query,firebird,0.85,Multiple domain tables join
+2484,heavy_query,firebird,0.85,Multiple rdb tables join
+2485,union_based,generic,0.85,UNION ALL for union-based
+2486,heavy_query,mysql,0.85,benchmark for heavy query
+2487,union_based,generic,0.85,UNION ALL for union-based
+2488,boolean_blind,generic,0.8,WHERE equality for blind
+2489,union_based,generic,0.85,UNION ALL for union-based

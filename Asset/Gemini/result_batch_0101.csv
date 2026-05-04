@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+270,boolean_blind,mssql,0.8,Uses TOP keyword which is specific to MSSQL/Sybase in subqueries.
+271,auth_bypass,generic,0.9,Classic OR 1=1 tautology for bypassing authentication.
+272,boolean_blind,generic,0.8,Simple single quote and comment for breaking query logic.
+273,auth_bypass,generic,0.9,OR 1=1 with block comment suffix for authentication bypass.
+274,union_based,mysql,0.9,Uses UNION SELECT and version() function with # comment (MySQL).
+275,union_based,mssql,0.9,Uses UNION SELECT and @@VERSION global variable (MSSQL).
+276,stacked_queries,mssql,0.9,Executes sp_addlogin stored procedure which is specific to MSSQL.
+277,union_based,oracle,0.9,Uses v$version and rownum which are specific to Oracle.
+278,time_blind,mssql,1.0,Hex encoded 'waitfor delay' command for time-based blind injection in MSSQL.
+279,auth_bypass,generic,0.8,Tautology OR 1=1 used for bypassing authentication.
+280,union_based,mysql,0.9,Uses UNION SELECT and version() function (MySQL).
+281,boolean_blind,generic,0.8,Use of HAVING clause with a tautology for blind testing.
+282,union_based,mssql,0.9,Uses UNION SELECT and @@VERSION global variable (MSSQL).
+283,boolean_blind,generic,0.8,Mathematical operation and OR 1=1 tautology.
+284,boolean_blind,generic,0.8,Tautology OR 1=1 for boolean-based testing.
+285,auth_bypass,generic,0.9,Classic OR 1=1 with stylized quote for authentication bypass.
+286,union_based,mssql,0.9,Uses UNION SELECT and @@VERSION global variable (MSSQL).
+287,boolean_blind,generic,0.8,Modulo operation and OR 1=1 tautology for blind testing.
+288,auth_bypass,generic,0.9,String comparison tautology for bypassing authentication.
+289,stacked_queries,mssql,0.9,"T-SQL variable declaration using DECLARE, specific to MSSQL."
+290,union_based,mysql,0.9,Uses UNION SELECT and version() function (MySQL).
+291,union_based,mssql,0.9,Uses UNION SELECT and @@VERSION global variable (MSSQL).
+292,union_based,mysql,0.9,Uses UNION SELECT with version() and # comment (MySQL).
+293,unknown,unknown,0.5,"Only a variable name provided, insufficient context for classification."
+294,rce,mssql,1.0,Uses xp_cmdshell for remote code execution on MSSQL.
+295,boolean_blind,generic,0.8,Addition in WHERE clause with OR 1=1 tautology.
+296,union_based,mysql,0.9,Uses UNION SELECT and version() function (MySQL).
+297,union_based,mysql,0.9,Uses UNION SELECT and version() function (MySQL).
+298,union_based,mysql,0.9,Uses UNION SELECT and version() function (MySQL).
+299,union_based,mssql,0.9,Uses UNION SELECT and @@VERSION global variable (MSSQL).

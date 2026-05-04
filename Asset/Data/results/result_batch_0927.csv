@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+27780,benign,generic,1.0,Normal SELECT COUNT DISTINCT
+27781,benign,generic,1.0,Normal SELECT COUNT aggregate
+27782,benign,generic,1.0,Invalid SQL syntax - not an attack
+27783,benign,generic,1.0,Normal SELECT all rows
+27784,benign,generic,1.0,Normal SELECT with WHERE clause
+27785,benign,generic,1.0,Normal SELECT with WHERE clause
+27786,benign,generic,1.0,Normal SELECT with WHERE clause
+27787,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27788,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27789,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+27790,benign,generic,1.0,Normal SELECT with NOT operator
+27791,benign,generic,1.0,Normal SELECT with AND/OR conditions
+27792,benign,generic,1.0,Normal SELECT with NOT AND conditions
+27793,benign,generic,1.0,Normal SELECT with ORDER BY
+27794,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+27795,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+27796,benign,generic,1.0,Normal SELECT with ORDER BY ASC/DESC
+27797,benign,generic,1.0,Normal INSERT statement
+27798,benign,generic,1.0,Normal INSERT statement
+27799,benign,generic,1.0,Normal SELECT with IS NULL
+27800,benign,generic,1.0,Normal SELECT with IS NOT NULL
+27801,benign,generic,1.0,Normal UPDATE statement
+27802,benign,generic,1.0,Normal UPDATE statement
+27803,benign,generic,1.0,Normal SELECT all rows
+27804,benign,generic,1.0,Normal DELETE with WHERE
+27805,benign,generic,1.0,Normal DELETE all rows
+27806,benign,generic,1.0,Invalid SQL syntax - not an attack
+27807,benign,generic,1.0,Normal SELECT subquery
+27808,benign,generic,1.0,Normal SELECT TOP query
+27809,benign,generic,1.0,Invalid SQL syntax - not an attack

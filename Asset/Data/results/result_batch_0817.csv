@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+24480,benign,generic,1.0,Normal SELECT with LIMIT and WHERE
+24481,benign,generic,1.0,Normal SELECT with FETCH FIRST and WHERE
+24482,benign,generic,1.0,Normal SELECT with AVG aggregate
+24483,benign,generic,1.0,Normal SELECT with NOT LIKE pattern
+24484,benign,generic,1.0,Normal SELECT with AVG and SUM
+24485,benign,generic,1.0,Normal SELECT with AVG and SUM
+24486,benign,generic,1.0,Normal SELECT with AVG and SUM
+24487,benign,generic,1.0,Normal SELECT with COUNT aggregate
+24488,benign,generic,1.0,Normal SELECT with COUNT aggregate
+24489,benign,generic,1.0,Normal SELECT with AVG aggregate
+24490,benign,generic,1.0,Normal SELECT with NOT LIKE
+24491,benign,generic,1.0,Normal SELECT with LIKE wildcard
+24492,benign,generic,1.0,Normal SELECT with NOT LIKE pattern
+24493,benign,generic,1.0,Normal SELECT with IN clause
+24494,benign,generic,1.0,Normal SELECT with NOT IN
+24495,benign,generic,1.0,Normal SELECT with IN subquery
+24496,benign,generic,1.0,Normal SELECT with BETWEEN
+24497,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+24498,benign,generic,1.0,Normal SELECT with BETWEEN string
+24499,benign,generic,1.0,Normal SELECT with BETWEEN string
+24500,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+24501,benign,generic,1.0,Malformed date range in BETWEEN
+24502,benign,generic,1.0,Normal SELECT with BETWEEN date
+24503,benign,generic,1.0,Normal SELECT with AVG and SUM
+24504,benign,generic,1.0,Normal SELECT with COUNT aggregate
+24505,benign,generic,1.0,Normal SELECT with COUNT aggregate
+24506,benign,generic,1.0,Normal SELECT with AVG aggregate
+24507,benign,generic,1.0,Normal SELECT with BETWEEN date
+24508,benign,generic,1.0,Normal SELECT with column alias
+24509,benign,generic,1.0,Normal SELECT with column alias

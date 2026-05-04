@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30180,out_of_band,oracle,0.9,Oracle CTXSYS complex nested
+30181,union_based,oracle,0.95,Oracle XMLType with SELECT
+30182,boolean_blind,postgresql,0.9,PostgreSQL CONCAT CAST
+30183,boolean_blind,postgresql,0.9,PostgreSQL generate_series
+30184,out_of_band,oracle,0.9,Oracle CTXSYS SN nested
+30185,auth_bypass,generic,0.9,Simple pattern mismatch
+30186,boolean_blind,mssql,0.85,MsSQL CHAR boolean IN
+30187,union_based,oracle,0.95,Oracle XMLType with alias
+30188,union_based,oracle,0.95,Oracle XMLType in WHERE
+30189,boolean_blind,mssql,0.85,MsSQL CHAR IN in WHERE
+30190,union_based,oracle,0.95,Oracle XMLType concat
+30191,union_based,oracle,0.95,Oracle XMLType direct
+30192,boolean_blind,mssql,0.85,MsSQL CHAR IN with pattern
+30193,auth_bypass,generic,0.9,LIKE pattern with OR
+30194,polyglot,generic,0.85,ELT function polyglot
+30195,auth_bypass,generic,0.9,Simple AND pattern
+30196,out_of_band,oracle,0.9,Oracle CTXSYS SN direct
+30197,union_based,oracle,0.95,Oracle XMLType complex
+30198,boolean_blind,postgresql,0.85,PostgreSQL in WHERE
+30199,union_based,oracle,0.95,Oracle XMLType convert
+30100,out_of_band,oracle,0.9,Oracle UTL_INADDR nested
+30101,boolean_blind,mssql,0.85,MsSQL CONVERT in WHERE
+30102,boolean_blind,mssql,0.85,MsSQL CONVERT simple
+30103,union_based,oracle,0.95,Oracle XMLType nested
+30104,boolean_blind,mssql,0.85,MsSQL CAST pattern
+30105,auth_bypass,generic,0.9,IN clause auth bypass
+30106,out_of_band,oracle,0.85,Oracle SQLID hash
+30107,union_based,oracle,0.95,Oracle XMLType with hash
+30108,boolean_blind,mssql,0.85,MsSQL nested IN
+30109,union_based,oracle,0.95,Oracle final XMLType

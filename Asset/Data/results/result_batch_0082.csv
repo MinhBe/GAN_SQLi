@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+2430,boolean_blind,generic,0.8,WHERE equality for blind
+2431,boolean_blind,mssql,0.8,CHAR case when for blind
+2432,unknown,generic,0.5,ORDER BY only - no clear technique
+2433,boolean_blind,generic,0.8,SELECT CASE WHEN for blind
+2434,boolean_blind,generic,0.75,Multiplication for blind
+2435,boolean_blind,mysql,0.8,make_set() for boolean blind
+2436,union_based,generic,0.85,UNION ALL for union-based
+2437,boolean_blind,generic,0.8,WHERE equality for blind
+2438,union_based,generic,0.85,UNION ALL for union-based
+2439,boolean_blind,mssql,0.8,CHAR case when for blind
+2440,boolean_blind,generic,0.8,WHERE equality for blind
+2441,boolean_blind,generic,0.8,RLIKE case when for blind
+2442,heavy_query,firebird,0.85,Multiple domain tables join
+2443,boolean_blind,mssql,0.8,CHAR case when for blind
+2444,time_blind,oracle,0.9,dbms_utility for Oracle time blind
+2445,boolean_blind,generic,0.8,SELECT CASE WHEN for blind
+2446,boolean_blind,generic,0.8,SELECT CASE WHEN for blind
+2447,union_based,generic,0.85,UNION ALL for union-based
+2448,union_based,generic,0.85,UNION ALL for union-based
+2449,boolean_blind,generic,0.75,Multiplication for blind
+2450,boolean_blind,mssql,0.8,CHAR case when for blind
+2451,time_blind,generic,0.9,sleep() for time blind
+2452,union_based,generic,0.85,UNION ALL for union-based
+2453,boolean_blind,generic,0.8,OR equality for blind
+2454,heavy_query,mssql,0.85,Multiple sysdatabases join
+2455,heavy_query,db2,0.85,Multiple information_schema join
+2456,boolean_blind,generic,0.8,WHERE equality for blind
+2457,boolean_blind,mysql,0.8,elt() for boolean blind
+2458,boolean_blind,generic,0.8,WHERE equality for blind
+2459,boolean_blind,generic,0.8,WHERE equality for blind
