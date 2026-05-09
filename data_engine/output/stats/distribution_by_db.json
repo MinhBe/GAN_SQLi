@@ -1,9 +1,0 @@
-{
-  "unknown": 52489,
-  "postgresql": 1196,
-  "oracle": 2373,
-  "mssql": 645,
-  "mysql": 2307,
-  "sqlite": 323,
-  "nosql": 44
-}
