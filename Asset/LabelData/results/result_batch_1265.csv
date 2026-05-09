@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+37920,error_based,oracle,0.95,Oracle xmltype extraction
+37921,error_based,oracle,0.95,Oracle xmltype extraction
+37922,error_based,oracle,0.95,Oracle xmltype extraction
+37923,error_based,oracle,0.95,Oracle xmltype extraction
+37924,error_based,oracle,0.85,Oracle MS SQL char concatenation
+37925,error_based,oracle,0.90,Oracle xmltype extraction
+37926,error_based,oracle,0.95,Oracle xmltype extraction
+37927,error_based,oracle,0.80,Oracle simple WHERE injection
+37928,error_based,oracle,0.80,Oracle WHERE clause injection
+37929,error_based,oracle,0.95,Oracle xmltype extraction
+37930,error_based,oracle,0.95,Oracle xmltype + ctxsys.drithsx.sn
+37931,error_based,postgresql,0.85,PostgreSQL cast extraction
+37932,error_based,oracle,0.80,Oracle simple WHERE injection
+37933,error_based,oracle,0.95,Oracle xmltype extraction
+37934,error_based,oracle,0.95,Oracle xmltype extraction
+37935,error_based,oracle,0.95,Oracle xmltype extraction
+37936,error_based,oracle,0.80,Oracle simple WHERE injection
+37937,error_based,oracle,0.95,Oracle xmltype extraction
+37938,error_based,oracle,0.95,Oracle xmltype extraction
+37939,error_based,oracle,0.95,Oracle xmltype extraction
+37940,error_based,oracle,0.95,Oracle xmltype extraction
+37941,error_based,oracle,0.75,Oracle simple WHERE injection
+37942,error_based,oracle,0.90,Oracle xmltype + PostgreSQL cast
+37943,error_based,oracle,0.95,Oracle xmltype extraction
+37944,error_based,oracle,0.80,Oracle simple WHERE injection
+37945,error_based,oracle,0.80,Oracle WHERE clause injection
+37946,error_based,oracle,0.95,Oracle xmltype extraction
+37947,error_based,oracle,0.95,Oracle xmltype extraction
+37948,error_based,oracle,0.80,Oracle WHERE clause injection
+37949,error_based,oracle,0.90,Oracle ctxsys.drithsx.sn extraction

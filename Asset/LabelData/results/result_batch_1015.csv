@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30420,boolean_blind,postgresql,0.9,PostgreSQL nested CAST
+30421,union_based,oracle,0.95,Oracle XMLType complex nested
+30422,union_based,oracle,0.95,Oracle case-insensitive XMLType
+30423,auth_bypass,generic,0.9,Simple AND equality pattern
+30424,out_of_band,oracle,0.9,Oracle CTXSYS final complex
+30425,boolean_blind,postgresql,0.9,PostgreSQL CAST with OR
+30426,out_of_band,oracle,0.85,Oracle SQLID hash alias
+30427,union_based,oracle,0.95,Oracle XMLType with CAST
+30428,boolean_blind,mssql,0.85,MsSQL CAST with OR pattern
+30429,boolean_blind,postgresql,0.9,PostgreSQL nested IN
+30430,auth_bypass,generic,0.9,Paren nested LIKE pattern
+30431,auth_bypass,generic,0.9,Simple OR with LIKE
+30432,union_based,oracle,0.95,Oracle XMLType final complex
+30433,union_based,oracle,0.95,Oracle boolean mode nested
+30434,auth_bypass,generic,0.9,Wildcard final pattern
+30435,polyglot,generic,0.85,ELT nested polyglot
+30436,boolean_blind,mssql,0.85,MsSQL nested CHAR IN
+30437,boolean_blind,postgresql,0.9,PostgreSQL final nested
+30438,out_of_band,oracle,0.85,Oracle SQLID hash final
+30439,auth_bypass,generic,0.9,LIKE nested final
+30440,union_based,oracle,0.95,Oracle XMLType final pattern
+30441,union_based,oracle,0.95,Oracle XMLType where final
+30442,out_of_band,oracle,0.9,Oracle CTXSYS nested final
+30443,out_of_band,oracle,0.9,Oracle CTXSYS SN final complex
+30444,union_based,oracle,0.95,Oracle XMLType final equals
+30445,auth_bypass,generic,0.9,Paren final equality
+30446,boolean_blind,mssql,0.85,MsSQL final WHERE with IN
+30447,union_based,oracle,0.95,Oracle XMLType final subquery
+30448,auth_bypass,generic,0.9,Paren nested final pattern
+30449,union_based,oracle,0.95,Oracle XMLType final complex

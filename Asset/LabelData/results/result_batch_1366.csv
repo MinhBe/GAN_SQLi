@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+40950,generic,generic,0.85,subquery injection pattern
+40951,error_based,generic,0.85,wildcard pattern
+40952,error_based,generic,0.85,subquery injection pattern
+40953,error_based,oracle,0.95,select from dual xmltype error
+40954,generic,generic,0.85,number comparison pattern
+40955,error_based,oracle,0.95,select from dual xmltype error
+40956,generic,generic,0.85,subquery pattern
+40957,error_based,oracle,0.95,ctxsys drithsx Oracle error
+40958,error_based,oracle,0.95,select from dual xmltype error
+40959,error_based,oracle,0.95,select from dual xmltype error
+40960,error_based,oracle,0.95,select from dual xmltype error
+40961,error_based,postgresql,0.9,cast numeric postgresql
+40962,error_based,oracle,0.95,dbms_utility Oracle function
+40963,error_based,oracle,0.95,select from dual xmltype error
+40964,error_based,oracle,0.95,select from dual xmltype error
+40965,error_based,oracle,0.95,select from dual xmltype error
+40966,error_based,oracle,0.95,select from dual xmltype error
+40967,error_based,mssql,0.85,char mssql injection
+40968,error_based,oracle,0.95,ctxsys drithsx Oracle
+40969,error_based,oracle,0.95,select from dual xmltype error
+40970,generic,generic,0.85,subquery pattern
+40971,error_based,postgresql,0.9,cast numeric postgresql
+40972,error_based,oracle,0.95,select from dual xmltype error
+40973,error_based,oracle,0.95,ctxsys drithsx Oracle error
+40974,error_based,oracle,0.95,select from dual xmltype error
+40975,error_based,postgresql,0.9,cast numeric conversion
+40976,error_based,postgresql,0.9,cast numeric conversion
+40977,error_based,oracle,0.95,select from dual xmltype error
+40978,error_based,oracle,0.95,select from dual xmltype error
+40979,error_based,oracle,0.95,select from dual xmltype error

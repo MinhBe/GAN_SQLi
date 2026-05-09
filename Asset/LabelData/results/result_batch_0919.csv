@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+27540,benign,generic,1.0,Normal SELECT with NOT LIKE
+27541,benign,generic,1.0,Normal SELECT with LIKE
+27542,benign,generic,1.0,Normal SELECT with NOT LIKE
+27543,benign,generic,1.0,Normal SELECT with IN clause
+27544,benign,generic,1.0,Normal SELECT with NOT IN clause
+27545,benign,generic,1.0,Normal SELECT with subquery
+27546,benign,generic,1.0,Normal SELECT with BETWEEN
+27547,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+27548,benign,generic,1.0,Normal SELECT with BETWEEN
+27549,benign,generic,1.0,Normal SELECT with BETWEEN
+27550,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+27551,benign,generic,1.0,Normal SELECT with BETWEEN
+27552,benign,generic,1.0,Normal SELECT with BETWEEN date range
+27553,benign,generic,1.0,Normal SELECT AVG aggregate
+27554,benign,generic,1.0,Normal SELECT COUNT aggregate
+27555,benign,generic,1.0,Normal SELECT COUNT aggregate
+27556,benign,generic,1.0,Normal SELECT AVG aggregate
+27557,benign,generic,1.0,Normal SELECT with BETWEEN date range
+27558,benign,generic,1.0,Normal SELECT with alias
+27559,benign,generic,1.0,Normal SELECT with alias
+27560,benign,generic,1.0,Normal SELECT with alias
+27561,benign,generic,1.0,Normal SELECT with string concatenation
+27562,benign,generic,1.0,Normal SELECT function call
+27563,benign,generic,1.0,Invalid SQL syntax - not an attack
+27564,benign,generic,1.0,Normal SELECT function call
+27565,benign,generic,1.0,Normal SELECT with LEFT JOIN
+27566,benign,generic,1.0,Invalid SQL syntax - not an attack
+27567,benign,generic,1.0,Normal SELECT with RIGHT JOIN
+27568,benign,generic,1.0,Normal SELECT function call
+27569,benign,generic,1.0,Invalid SQL syntax - not an attack

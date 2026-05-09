@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+40560,error_based,oracle,0.95,cast and xmltype Oracle error functions
+40561,error_based,oracle,0.95,upper xmltype Oracle error function
+40562,error_based,oracle,0.95,upper xmltype Oracle error extraction
+40563,error_based,postgresql,0.9,cast chr numeric conversion
+40564,error_based,oracle,0.95,select from dual xmltype
+40565,error_based,oracle,0.95,upper xmltype error extraction
+40566,error_based,oracle,0.9,dbms_utility sqlid_to_sqlhash Oracle
+40567,error_based,oracle,0.95,select from dual xmltype error
+40568,error_based,oracle,0.9,cast numeric Oracle error
+40569,error_based,oracle,0.95,upper xmltype Oracle error
+40570,error_based,oracle,0.95,upper xmltype Oracle extraction
+40571,error_based,oracle,0.95,select from dual xmltype extraction
+40572,error_based,oracle,0.95,upper xmltype error function
+40573,error_based,generic,0.85,SQL injection with numeric comparison
+40574,error_based,generic,0.85,SQL injection quote bypass
+40575,error_based,postgresql,0.9,cast numeric conversion
+40576,error_based,oracle,0.95,upper xmltype error function
+40577,error_based,generic,0.85,SQL injection subquery
+40578,error_based,generic,0.85,wildcard injection pattern
+40579,error_based,oracle,0.95,upper xmltype Oracle extraction
+40580,error_based,oracle,0.95,upper xmltype Oracle error
+40581,error_based,oracle,0.95,xmltype Oracle error function
+40582,error_based,oracle,0.95,upper xmltype error extraction
+40583,error_based,oracle,0.95,ctxsys drithsx Oracle error
+40584,error_based,oracle,0.95,upper xmltypeOracle extraction
+40585,error_based,oracle,0.95,upper xmltype error function
+40586,error_based,oracle,0.95,upper xmltypeOracle error
+40587,error_based,oracle,0.95,select upper xmltype error
+40588,error_based,oracle,0.95,ctxsys drithsx Oracle function
+40589,error_based,oracle,0.95,upper xmltype error function

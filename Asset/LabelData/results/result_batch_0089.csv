@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+2640,heavy_query,sqlite,0.9,randomblob for heavy query
+2641,boolean_blind,generic,0.8,WHERE equality for blind
+2642,union_based,generic,0.85,UNION ALL for union-based
+2643,heavy_query,postgresql,0.9,generate_series for heavy query
+2644,heavy_query,sqlite,0.9,randomblob for heavy query
+2645,heavy_query,firebird,0.85,Multiple domain tables join
+2646,boolean_blind,generic,0.8,WHERE equality for blind
+2647,boolean_blind,generic,0.8,AND equality for blind
+2648,time_blind,postgresql,0.9,pg_sleep for PostgreSQL time blind
+2649,heavy_query,postgresql,0.9,generate_series for heavy query
+2650,boolean_blind,mysql,0.8,group by concat for boolean blind
+2651,union_based,generic,0.85,UNION ALL for union-based
+2652,boolean_blind,generic,0.8,AND equality for blind
+2653,boolean_blind,generic,0.75,Multiplication for blind
+2654,boolean_blind,generic,0.8,WHERE equality for blind
+2655,time_blind,generic,0.9,sleep() for time blind
+2656,boolean_blind,mssql,0.8,CHAR case when for blind
+2657,union_based,generic,0.85,UNION ALL for union-based
+2658,boolean_blind,generic,0.75,Multiplication for blind
+2659,time_blind,generic,0.9,sleep() for time blind
+2660,union_based,generic,0.85,UNION ALL for union-based
+2661,heavy_query,db2,0.85,Multiple systables join
+2662,boolean_blind,mysql,0.8,elt() for boolean blind
+2663,heavy_query,firebird,0.85,Multiple rdb tables join
+2664,boolean_blind,generic,0.8,SELECT CASE WHEN for blind
+2665,boolean_blind,generic,0.8,SELECT CASE WHEN for blind
+2666,heavy_query,firebird,0.85,Multiple domain tables join
+2667,heavy_query,db2,0.85,Multiple systables join
+2668,boolean_blind,generic,0.8,AND equality for blind
+2669,heavy_query,sqlite,0.9,randomblob for heavy query

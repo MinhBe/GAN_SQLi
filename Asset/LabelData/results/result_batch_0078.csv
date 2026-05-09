@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+2310,union_based,generic,0.85,UNION ALL for union-based
+2311,time_blind,generic,0.90,sleep() for time blind
+2312,union_based,generic,0.85,UNION ALL for union-based
+2313,time_blind,postgresql,0.85,regexp_substring for time blind
+2314,time_blind,generic,0.90,sleep() for time blind
+2315,boolean_blind,generic,0.80,OR equality for blind
+2316,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+2317,boolean_blind,generic,0.80,OR comparison for blind
+2318,unknown,generic,0.70,ORDER BY without full query
+2319,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+2320,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+2321,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+2322,boolean_blind,generic,0.80,OR comparison for blind
+2323,boolean_blind,generic,0.80,WHERE equality for blind
+2324,boolean_blind,generic,0.80,OR equality for blind
+2325,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+2326,heavy_query,postgresql,0.90,generate_series for heavy query
+2327,boolean_blind,generic,0.80,OR comparison for blind
+2328,boolean_blind,generic,0.80,AND comparison for blind
+2329,boolean_blind,generic,0.80,OR equality for blind
+2330,time_blind,generic,0.90,sleep() for time blind
+2331,heavy_query,firebird,0.85,Multiple table join for heavy query
+2332,time_blind,mysql,0.90,benchmark() for time blind
+2333,time_blind,mysql,0.90,benchmark() for time blind
+2334,heavy_query,mysql,0.85,Multiple domain table join
+2335,union_based,generic,0.85,UNION ALL for union-based
+2336,time_blind,generic,0.85,elt() with sleep for time blind
+2337,time_blind,generic,0.85,elt() with sleep for time blind
+2338,boolean_blind,generic,0.80,WHERE equality for blind
+2339,union_based,generic,0.85,UNION ALL for union-based

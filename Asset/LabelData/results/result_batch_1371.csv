@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+41100,boolean_blind,mysql,0.9,EXTRACTVALUE MySQL function
+41101,boolean_blind,generic,0.9,CASE WHEN boolean blind
+41102,boolean_blind,generic,0.9,CASE WHEN boolean blind
+41103,boolean_blind,oracle,0.9,CTXSYS Oracle blind
+41104,boolean_blind,oracle,0.9,CTXSYS Oracle blind
+41105,boolean_blind,generic,0.9,CASE WHEN boolean blind
+41106,boolean_blind,generic,0.9,CASE WHEN boolean blind
+41107,boolean_blind,generic,0.9,UNION SELECT blind
+41108,boolean_blind,mysql,0.9,MAKE_SET MySQL
+41109,boolean_blind,mysql,0.9,MAKE_SET MySQL
+41110,boolean_blind,mysql,0.9,ELT MySQL function
+41111,boolean_blind,mysql,0.9,ELT MySQL function
+41112,boolean_blind,generic,0.9,multiplication blind
+41113,boolean_blind,generic,0.9,multiplication blind
+41114,boolean_blind,generic,0.9,division error blind
+41115,boolean_blind,generic,0.9,division error blind
+41116,boolean_blind,postgresql,0.9,GENERATE_SERIES PostgreSQL
+41117,boolean_blind,postgresql,0.9,GENERATE_SERIES PostgreSQL
+41118,boolean_blind,generic,0.9,UNION ALL blind
+41119,boolean_blind,generic,0.9,UNION ALL blind
+41120,boolean_blind,oracle,0.9,CAST divide Oracle
+41121,boolean_blind,oracle,0.9,CAST divide Oracle
+41122,boolean_blind,generic,0.9,division error blind
+41123,boolean_blind,generic,0.9,division blind
+41124,boolean_blind,mssql,0.9,IIF MSSQL function
+41125,boolean_blind,mssql,0.9,IIF MSSQL function
+41126,boolean_blind,generic,0.9,UNION SELECT blind
+41127,boolean_blind,generic,0.9,UNION SELECT blind
+41128,boolean_blind,generic,0.9,CASE WHEN blind
+41129,boolean_blind,generic,0.9,CASE WHEN blind

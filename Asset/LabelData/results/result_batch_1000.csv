@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29970,benign,generic,1.0,Normal SQL WHERE ANY subquery
+29971,benign,generic,1.0,Normal SQL WHERE ANY subquery
+29972,benign,generic,1.0,Normal SQL SELECT ORDER BY ASC
+29973,benign,generic,1.0,Normal SQL SELECT ORDER BY DESC
+29974,benign,generic,1.0,Normal SQL WHERE EXISTS subquery
+29975,benign,generic,1.0,Normal SQL WHERE EXISTS subquery
+29976,benign,generic,1.0,Normal SQL SELECT LIKE pattern
+29977,benign,generic,1.0,Normal SQL SELECT ROWNUM
+29978,benign,generic,1.0,Normal SQL SELECT ORDER BY
+29979,benign,generic,1.0,Normal SQL SELECT ASCII function
+29980,benign,generic,1.0,Normal SQL SELECT CHAR_LENGTH
+29981,benign,generic,1.0,Normal SQL SELECT CHARACTER_LENGTH
+29982,benign,generic,1.0,Normal SQL SELECT LCASE
+29983,benign,generic,1.0,Normal SQL SELECT LENGTH
+29984,benign,generic,1.0,Normal SQL SELECT LOWER
+29985,benign,generic,1.0,Normal SQL SELECT REVERSE
+29986,benign,generic,1.0,Normal SQL SELECT SPACE
+29987,benign,generic,1.0,Normal SQL SELECT TRIM
+29988,benign,generic,1.0,Normal SQL SELECT UCASE
+29989,benign,generic,1.0,Normal SQL SELECT UPPER
+29990,benign,generic,1.0,Normal SQL SELECT ABS
+29991,benign,generic,1.0,Normal SQL SELECT ACOS
+29992,benign,generic,1.0,Normal SQL SELECT ACOS
+29993,benign,generic,1.0,Normal SQL SELECT ASIN
+29994,benign,generic,1.0,Normal SQL SELECT ASIN
+29995,benign,generic,1.0,Normal SQL SELECT ATAN
+29996,benign,generic,1.0,Normal SQL SELECT AVG
+29997,benign,generic,1.0,Normal SQL SELECT CEIL
+29998,benign,generic,1.0,Normal SQL SELECT CEIL
+29999,benign,generic,1.0,Normal SQL SELECT CEILING

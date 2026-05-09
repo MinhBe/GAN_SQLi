@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+24510,benign,generic,1.0,Normal SELECT with column alias
+24511,benign,generic,1.0,Normal SELECT with string concatenation
+24512,benign,generic,1.0,Normal SELECT with function and INNER JOIN
+24513,benign,generic,1.0,Normal SELECT with function and multiple JOINs
+24514,benign,generic,1.0,Normal SELECT with function and LEFT JOIN
+24515,benign,generic,1.0,Normal SELECT with LEFT JOIN
+24516,benign,generic,1.0,Incomplete SELECT with function
+24517,benign,generic,1.0,Normal SELECT with RIGHT JOIN
+24518,benign,generic,1.0,Normal SELECT with function and FULL OUTER JOIN
+24519,benign,generic,1.0,Normal SELECT with function and FROM
+24520,benign,generic,1.0,Normal SELECT with function and UNION
+24521,benign,generic,1.0,Normal SELECT with multiple functions
+24522,benign,generic,1.0,Normal SELECT with function and UNION ALL
+24523,benign,generic,1.0,Normal SELECT with multiple functions
+24524,benign,generic,1.0,Normal SELECT with UNION and ORDER BY
+24525,benign,generic,1.0,Normal SELECT with UNION ALL and ORDER BY
+24526,benign,generic,1.0,Normal SELECT with UNION and WHERE
+24527,benign,generic,1.0,Normal SELECT with aggregate and ORDER BY
+24528,benign,generic,1.0,Normal SELECT with aggregate and subquery JOIN
+24529,benign,generic,1.0,Normal SELECT with FETCH FIRST
+24530,benign,generic,1.0,Incomplete SELECT statement
+24531,benign,generic,1.0,Normal SELECT from table
+24532,benign,generic,1.0,Normal SELECT from table
+24533,benign,generic,1.0,Normal SELECT DISTINCT
+24534,benign,generic,1.0,Normal SELECT with COUNT DISTINCT
+24535,benign,generic,1.0,Normal SELECT with COUNT aggregate
+24536,benign,generic,1.0,Incomplete SELECT with subquery
+24537,benign,generic,1.0,Normal SELECT with WHERE clause
+24538,benign,generic,1.0,Normal SELECT with WHERE clause
+24539,benign,generic,1.0,Normal SELECT with WHERE clause

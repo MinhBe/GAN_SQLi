@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30150,auth_bypass,generic,0.9,Multiple AND LIKE
+30151,polyglot,generic,0.85,Wildcard pattern injection
+30152,out_of_band,oracle,0.85,Oracle DBMS_UTILITY hash
+30153,out_of_band,oracle,0.85,Oracle DBMS_UTILITY nested
+30154,boolean_blind,postgresql,0.9,PostgreSQL CAST double
+30155,boolean_blind,postgresql,0.9,PostgreSQL nested blind
+30156,out_of_band,oracle,0.85,Oracle SQLID hash
+30157,union_based,generic,0.9,ELT function polyglot
+30158,boolean_blind,mssql,0.85,MsSQL CONVERT blind
+30159,polyglot,generic,0.85,ELT function nested
+30160,union_based,oracle,0.95,Oracle XMLType multi
+30161,auth_bypass,generic,0.9,LIKE pattern bypass
+30162,boolean_blind,postgresql,0.9,PostgreSQL CAST in WHERE
+30163,boolean_blind,postgresql,0.85,PostgreSQL CAST wildcard
+30164,out_of_band,oracle,0.85,Oracle DBMS_UTILITY hash
+30165,out_of_band,oracle,0.85,Oracle DBMS_UTILITY nested
+30166,out_of_band,oracle,0.9,Oracle UTL_INADDR nested
+30167,boolean_blind,mssql,0.85,MsSQL CHAR nested blind
+30168,boolean_blind,postgresql,0.9,PostgreSQL IN boolean
+30169,out_of_band,oracle,0.85,Oracle DBMS_UTILITY complex
+30170,boolean_blind,mssql,0.85,MsSQL CHAR IN nested
+30171,auth_bypass,generic,0.9,Wildcard pattern
+30172,out_of_band,oracle,0.9,Oracle CTXSYS nested
+30173,union_based,oracle,0.95,Oracle XMLType in WHERE
+30174,auth_bypass,generic,0.9,Wildcard pattern inject
+30175,auth_bypass,generic,0.85,Simple OR username
+30176,boolean_blind,mssql,0.85,MsSQL CONVERT blind
+30177,boolean_blind,postgresql,0.9,PostgreSQL CAST with alias
+30178,out_of_band,oracle,0.85,Oracle DBMS_UTILITY nested
+30179,boolean_blind,mssql,0.85,MsSQL CHAR IN nested

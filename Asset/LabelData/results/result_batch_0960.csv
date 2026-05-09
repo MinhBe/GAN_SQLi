@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+28770,benign,generic,1.0,Normal SQL SELECT NOT operator
+28771,benign,generic,1.0,Normal SQL SELECT AND OR condition
+28772,benign,generic,1.0,Normal SQL SELECT multiple NOT
+28773,benign,generic,1.0,Normal SQL SELECT ORDER BY
+28774,benign,generic,1.0,Normal SQL SELECT ORDER BY DESC
+28775,benign,generic,1.0,Normal SQL SELECT ORDER BY multiple
+28776,benign,generic,1.0,Normal SQL SELECT ORDER BY ASC DESC
+28777,benign,generic,1.0,Normal SQL INSERT with VALUES
+28778,benign,generic,1.0,Normal SQL INSERT
+28779,benign,generic,1.0,Normal SQL SELECT IS NULL
+28780,benign,generic,1.0,Normal SQL SELECT IS NOT NULL
+28781,benign,generic,1.0,Normal SQL UPDATE
+28782,benign,generic,1.0,Normal SQL UPDATE WHERE
+28783,benign,generic,1.0,Normal SQL SELECT all
+28784,benign,generic,1.0,Normal SQL DELETE WHERE
+28785,benign,generic,1.0,Normal SQL DELETE all
+28786,benign,generic,1.0,Normal SQL SELECT function
+28787,benign,generic,1.0,Normal SQL SELECT subquery
+28788,benign,generic,1.0,Normal SQL SELECT TOP
+28789,benign,generic,1.0,Normal SQL syntax error number
+28790,benign,generic,1.0,Normal SQL SELECT TOP PERCENT
+28791,benign,generic,1.0,Normal SQL SELECT FETCH
+28792,benign,generic,1.0,Normal SQL SELECT TOP WHERE
+28793,benign,generic,1.0,Normal SQL SELECT LIMIT
+28794,benign,generic,1.0,Normal SQL SELECT FETCH WHERE
+28795,benign,generic,1.0,Normal SQL SELECT MIN
+28796,benign,generic,1.0,Normal SQL SELECT MIN
+28797,benign,generic,1.0,Normal SQL SELECT subquery
+28798,benign,generic,1.0,Normal SQL multiple queries
+28799,benign,generic,1.0,Normal SQL syntax errors

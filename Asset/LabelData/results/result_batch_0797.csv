@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+23880,benign,generic,1.0,Normal SELECT with LIMIT and WHERE
+23881,benign,generic,1.0,Normal SELECT with FETCH FIRST and WHERE
+23882,benign,generic,1.0,Normal SELECT with MIN aggregate
+23883,benign,generic,1.0,Normal SELECT with MIN aggregate
+23884,benign,generic,1.0,Normal SELECT with subquery
+23885,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+23886,benign,generic,1.0,Incomplete SELECT statement
+23887,benign,generic,1.0,Malformed SELECT with multiple clauses
+23888,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+23889,benign,generic,1.0,Malformed SELECT with multiple clauses
+23890,benign,generic,1.0,Malformed SELECT with multiple SELECT
+23891,benign,generic,1.0,Normal SELECT with LIMIT and WHERE
+23892,benign,generic,1.0,Normal SELECT with FETCH FIRST and WHERE
+23893,benign,generic,1.0,Normal SELECT with AVG aggregate
+23894,benign,generic,1.0,Normal SELECT with NOT LIKE pattern
+23895,benign,generic,1.0,Normal SELECT with AVG and SUM
+23896,benign,generic,1.0,Normal SELECT with AVG and SUM
+23897,benign,generic,1.0,Normal SELECT with AVG and SUM
+23898,benign,generic,1.0,Normal SELECT with COUNT aggregate
+23899,benign,generic,1.0,Normal SELECT with COUNT aggregate
+23900,benign,generic,1.0,Normal SELECT with AVG aggregate
+23901,benign,generic,1.0,Normal SELECT with NOT LIKE
+23902,benign,generic,1.0,Normal SELECT with LIKE wildcard
+23903,benign,generic,1.0,Normal SELECT with NOT LIKE pattern
+23904,benign,generic,1.0,Normal SELECT with IN clause
+23905,benign,generic,1.0,Normal SELECT with NOT IN
+23906,benign,generic,1.0,Normal SELECT with IN subquery
+23907,benign,generic,1.0,Normal SELECT with BETWEEN
+23908,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+23909,benign,generic,1.0,Normal SELECT with BETWEEN string

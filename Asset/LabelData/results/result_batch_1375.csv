@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+41220,error_based,mysql,0.9,UPDATEXML error
+41221,error_based,mysql,0.9,ROW count error
+41222,error_based,postgresql,0.9,CAST text numeric
+41223,error_based,postgresql,0.9,GENERATE_SERIES error
+41224,error_based,mssql,0.9,CONVERT INT error
+41225,error_based,oracle,0.95,XMLType Oracle error
+41226,error_based,firebird,0.9,CASE Firebird
+41227,error_based,db2,0.9,RAISE_ERROR DB2
+41228,error_based,mssql,0.9,EXEC error
+41229,inline_query,mysql,0.85,CONCAT inline
+41230,inline_query,mysql,0.85,ELT inline
+41231,inline_query,postgresql,0.85,CONCAT inline
+41232,inline_query,mssql,0.85,CONCAT inline
+41233,inline_query,oracle,0.85,TO_NUMBER inline
+41234,inline_query,generic,0.85,string inline
+41235,inline_query,firebird,0.85,CASE inline
+41236,inline_query,generic,0.85,string inline
+41237,time_blind,mysql,0.9,SLEEP MySQL
+41238,time_blind,mysql,0.9,SLEEP conditional
+41239,time_blind,mysql,0.9,BENCHMARK time
+41240,time_blind,postgresql,0.9,PG_SLEEP time
+41241,time_blind,postgresql,0.9,GENERATE_SERIES time
+41242,time_blind,postgresql,0.9,CREATE FUNCTION time
+41243,time_blind,mssql,0.9,WAITFOR DELAY
+41244,time_blind,mssql,0.9,WAITFOR DELAY hex
+41245,time_blind,oracle,0.9,DBMS_PIPE time
+41246,time_blind,oracle,0.9,CARTESIAN time
+41247,time_blind,oracle,0.9,DBMS_LOCK time
+41248,time_blind,oracle,0.9,USER_LOCK time
+41249,time_blind,db2,0.9,TABLE join time

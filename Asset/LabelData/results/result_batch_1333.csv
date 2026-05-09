@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+39960,error_based,oracle,0.90,Oracle xmltype case-based
+39961,error_based,oracle,0.90,Oracle with % wildcard
+39962,error_based,oracle,0.85,basic Oracle with LIKE
+39963,error_based,oracle,0.90,Oracle with string concatenation
+39964,error_based,oracle,0.90,Oracle ctxsys.drithsx.sn error
+39965,error_based,oracle,0.90,Oracle with nested query
+39966,error_based,oracle,0.85,basic Oracle injection
+39967,error_based,oracle,0.90,Oracle with wpmv alias
+39968,error_based,oracle,0.90,Oracle with nested query
+39969,error_based,oracle,0.90,Oracle xmltype case statement
+39970,error_based,oracle,0.90,Oracle with nested query
+39971,error_based,oracle,0.90,Oracle with comment injection
+39972,error_based,oracle,0.90,Oracle with string concatenation
+39973,error_based,oracle,0.85,basic Oracle injection
+39974,error_based,oracle,0.90,Oracle with bgpp alias
+39975,error_based,oracle,0.90,Oracle xmltype case-based
+39976,error_based,postgresql,0.90,PostgreSQL cast for injection
+39977,error_based,oracle,0.90,Oracle with || operator
+39978,error_based,oracle,0.85,basic Oracle injection
+39979,error_based,oracle,0.90,Oracle with case statement
+39980,error_based,oracle,0.90,Oracle xmltype case statement
+39981,error_based,oracle,0.85,basic Oracle injection
+39982,error_based,oracle,0.90,Oracle with || operator
+39983,error_based,oracle,0.90,Oracle with case statement
+39984,error_based,oracle,0.90,Oracle xmltype case-based
+39985,error_based,oracle,0.85,basic Oracle injection
+39986,error_based,oracle,0.90,Oracle with nested query
+39987,error_based,oracle,0.90,Oracle with || operator
+39988,error_based,oracle,0.90,Oracle with PostgreSQL cast
+39989,error_based,oracle,0.90,Oracle xmltype case statement

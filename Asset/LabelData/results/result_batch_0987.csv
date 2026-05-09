@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29580,benign,generic,1.0,Normal SQL multiple queries
+29581,benign,generic,1.0,Normal SQL syntax errors
+29582,benign,generic,1.0,Normal SQL mixed dialects
+29583,benign,generic,1.0,Normal SQL mixed dialects
+29584,benign,generic,1.0,Normal SQL mixed dialects
+29585,benign,generic,1.0,Normal SQL SELECT TOP WHERE UNION
+29586,benign,generic,1.0,Normal SQL SELECT LIMIT WHERE
+29587,benign,generic,1.0,Normal SQL SELECT FETCH WHERE
+29588,benign,generic,1.0,Normal SQL SELECT AVG
+29589,benign,generic,1.0,Normal SQL SELECT NOT LIKE pattern
+29590,benign,generic,1.0,Normal SQL SELECT AVG SUM
+29591,benign,generic,1.0,Normal SQL SELECT AVG SUM
+29592,benign,generic,1.0,Normal SQL SELECT AVG SUM
+29593,benign,generic,1.0,Normal SQL SELECT COUNT
+29594,benign,generic,1.0,Normal SQL SELECT COUNT
+29595,benign,generic,1.0,Normal SQL SELECT AVG
+29596,benign,generic,1.0,Normal SQL SELECT NOT LIKE
+29597,benign,generic,1.0,Normal SQL SELECT LIKE
+29598,benign,generic,1.0,Normal SQL SELECT NOT LIKE pattern
+29599,benign,generic,1.0,Normal SQL SELECT IN list
+29600,benign,generic,1.0,Normal SQL SELECT NOT IN list
+29601,benign,generic,1.0,Normal SQL SELECT subquery IN
+29602,benign,generic,1.0,Normal SQL SELECT BETWEEN
+29603,benign,generic,1.0,Normal SQL SELECT NOT BETWEEN
+29604,benign,generic,1.0,Normal SQL SELECT BETWEEN string
+29605,benign,generic,1.0,Normal SQL SELECT BETWEEN quoted
+29606,benign,generic,1.0,Normal SQL SELECT NOT BETWEEN
+29607,benign,generic,1.0,Normal SQL SELECT BETWEEN date-like
+29608,benign,generic,1.0,Normal SQL SELECT BETWEEN date
+29609,benign,generic,1.0,Normal SQL SELECT AVG SUM

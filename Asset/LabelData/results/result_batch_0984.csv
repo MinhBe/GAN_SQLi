@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29490,benign,generic,1.0,Normal SQL SELECT FETCH WHERE
+29491,benign,generic,1.0,Normal SQL SELECT AVG
+29492,benign,generic,1.0,Normal SQL SELECT NOT LIKE pattern
+29493,benign,generic,1.0,Normal SQL SELECT AVG SUM
+29494,benign,generic,1.0,Normal SQL SELECT AVG SUM
+29495,benign,generic,1.0,Normal SQL SELECT AVG SUM
+29496,benign,generic,1.0,Normal SQL SELECT COUNT
+29497,benign,generic,1.0,Normal SQL SELECT COUNT
+29498,benign,generic,1.0,Normal SQL SELECT AVG
+29499,benign,generic,1.0,Normal SQL SELECT NOT LIKE
+29500,benign,generic,1.0,Normal SQL SELECT LIKE
+29501,benign,generic,1.0,Normal SQL SELECT NOT LIKE pattern
+29502,benign,generic,1.0,Normal SQL SELECT IN list
+29503,benign,generic,1.0,Normal SQL SELECT NOT IN list
+29504,benign,generic,1.0,Normal SQL SELECT subquery IN
+29505,benign,generic,1.0,Normal SQL SELECT BETWEEN
+29506,benign,generic,1.0,Normal SQL SELECT NOT BETWEEN
+29507,benign,generic,1.0,Normal SQL SELECT BETWEEN string
+29508,benign,generic,1.0,Normal SQL SELECT BETWEEN quoted
+29509,benign,generic,1.0,Normal SQL SELECT NOT BETWEEN
+29510,benign,generic,1.0,Normal SQL SELECT BETWEEN date-like
+29511,benign,generic,1.0,Normal SQL SELECT BETWEEN date
+29512,benign,generic,1.0,Normal SQL SELECT AVG SUM
+29513,benign,generic,1.0,Normal SQL SELECT COUNT
+29514,benign,generic,1.0,Normal SQL SELECT COUNT column
+29515,benign,generic,1.0,Normal SQL SELECT AVG
+29516,benign,generic,1.0,Normal SQL SELECT BETWEEN date
+29517,benign,generic,1.0,Normal SQL SELECT alias
+29518,benign,generic,1.0,Normal SQL SELECT alias
+29519,benign,generic,1.0,Normal SQL SELECT alias bracket

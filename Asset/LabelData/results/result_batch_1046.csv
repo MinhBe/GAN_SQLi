@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+31350,error_based,oracle,0.95,Oracle xmltype chr dual functions
+31351,error_based,oracle,0.95,Oracle cast chr PostgreSQL hybrid
+31352,error_based,oracle,0.9,Oracle char case when syntax
+31353,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31354,error_based,oracle,0.95,Oracle xmltype chr for error extraction
+31355,boolean_blind,generic,0.7,OR boolean injection no specific db
+31356,error_based,oracle,0.95,Oracle xmltype chr dual extraction
+31357,error_based,oracle,0.9,Oracle char case when error
+31358,boolean_blind,generic,0.6,Simple LIKE pattern bypass
+31359,error_based,oracle,0.95,Oracle cast chr for error extraction
+31360,error_based,oracle,0.95,Oracle xmltype XML error-based
+31361,boolean_blind,generic,0.6,Simple LIKE pattern generic
+31362,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31363,error_based,oracle,0.95,Oracle cast chr error extraction
+31364,error_based,mysql,0.9,MySQL if concat elt error-based
+31365,error_based,oracle,0.9,Oracle char function error
+31366,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn error
+31367,error_based,oracle,0.95,Oracle xmltype ctxsys combined
+31368,error_based,oracle,0.9,Oracle char MySQL if hybrid
+31369,error_based,oracle,0.95,Oracle xmltype error extraction
+31370,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function
+31371,error_based,oracle,0.95,Oracle cast chr error extraction
+31372,error_based,oracle,0.9,Oracle dbms_utility error extraction
+31373,error_based,oracle,0.95,Oracle xmltype XML error extraction
+31374,error_based,oracle,0.95,Oracle xmltype chr functions
+31375,error_based,oracle,0.9,Oracle dbms_utility error extraction
+31376,benign,generic,0.8,Simple username comparison no injection
+31377,error_based,oracle,0.95,Oracle xmltype error extraction
+31378,error_based,oracle,0.95,Oracle xmltype chr functions
+31379,error_based,oracle,0.95,Oracle xmltype XML error extraction

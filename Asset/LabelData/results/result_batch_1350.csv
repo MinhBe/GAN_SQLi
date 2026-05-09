@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+40470,error_based,oracle,0.90,Oracle xmltype case-based
+40471,error_based,oracle,0.90,Oracle xmltype case-based
+40472,error_based,oracle,0.80,basic nested query with %
+40473,error_based,oracle,0.90,ctxsys.drithsx.sn error
+40474,error_based,oracle,0.90,Oracle xmltype case-based
+40475,error_based,oracle,0.90,ctxsys.drithsx.sn error
+40476,error_based,oracle,0.90,Oracle xmltype case-based
+40477,error_based,oracle,0.80,basic nested query with %
+40478,error_based,oracle,0.90,Oracle xmltype case-based
+40479,error_based,oracle,0.90,Oracle xmltype case-based
+40480,error_based,oracle,0.90,Oracle xmltype case-based
+40481,error_based,oracle,0.80,basic nested query with %
+40482,error_based,oracle,0.85,char() + Oracle xmltype
+40483,error_based,oracle,0.90,Oracle xmltype case-based
+40484,error_based,oracle,0.85,basic nested query
+40485,error_based,oracle,0.90,Oracle xmltype case-based
+40486,error_based,oracle,0.90,Oracle xmltype case-based
+40487,error_based,oracle,0.90,Oracle xmltype case-based
+40488,error_based,oracle,0.90,Oracle xmltype case-based
+40489,error_based,oracle,0.90,Oracle xmltype case-based
+40490,error_based,oracle,0.90,Oracle xmltype case-based
+40491,error_based,oracle,0.90,ctxsys.drithsx.sn error
+40492,error_based,oracle,0.90,Oracle xmltype case-based
+40493,error_based,oracle,0.90,PostgreSQL cast + Oracle xmltype
+40494,error_based,postgresql,0.90,PostgreSQL cast numeric
+40495,error_based,postgresql,0.90,PostgreSQL cast numeric
+40496,error_based,oracle,0.90,Oracle xmltype case-based
+40497,error_based,oracle,0.90,Oracle xmltype case-based
+40498,error_based,oracle,0.90,Oracle xmltype case-based
+40499,error_based,oracle,0.90,Oracle xmltype case-based

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+31650,error_based,oracle,0.9,Oracle cast for error extraction
+31651,boolean_blind,generic,0.5,Simple OR bypass no injection
+31652,boolean_blind,generic,0.5,Simple wildcard bypass
+31653,error_based,oracle,0.9,Oracle xmltype cast combined
+31654,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31655,boolean_blind,generic,0.5,Simple AND pattern no injection
+31656,out_of_band,oracle,0.85,Oracle utl_inaddr.get_host_address OOB
+31657,error_based,oracle,0.9,Oracle cast for error extraction
+31658,error_based,mssql,0.85,MSSQL convert int char error
+31659,error_based,oracle,0.9,Oracle char xmltype combined
+31660,boolean_blind,generic,0.5,Simple AND LIKE bypass
+31661,error_based,mssql,0.85,MSSQL convert int char error
+31662,error_based,oracle,0.95,Oracle xmltype for error extraction
+31663,error_based,mssql,0.85,MSSQL convert int char error
+31664,error_based,oracle,0.9,Oracle cast for error extraction
+31665,error_based,oracle,0.95,Oracle xmltype for error extraction
+31666,error_based,oracle,0.9,Oracle char for error extraction
+31667,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31668,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31669,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31670,boolean_blind,generic,0.5,Simple AND pattern bypass
+31671,error_based,mssql,0.85,MSSQL convert int char error
+31672,error_based,oracle,0.95,Oracle xmltype for error extraction
+31673,error_based,oracle,0.95,Oracle xmltype for error extraction
+31674,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31675,error_based,oracle,0.95,Oracle xmltype for error extraction
+31676,error_based,oracle,0.9,Oracle cast ctxsys combined
+31677,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31678,error_based,oracle,0.95,Oracle xmltype for error extraction
+31679,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash

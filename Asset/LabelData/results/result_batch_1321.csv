@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+39600,error_based,oracle,0.90,Oracle with xmltype chr encoding
+39601,error_based,oracle,0.90,Oracle xmltype case-based
+39602,error_based,postgresql,0.90,PostgreSQL cast for injection
+39603,error_based,oracle,0.90,Oracle with dual subquery
+39604,error_based,oracle,0.90,Oracle xmltype error extraction
+39605,error_based,oracle,0.90,Oracle with dual subquery
+39606,error_based,oracle,0.85,basic Oracle injection
+39607,error_based,oracle,0.90,Oracle with comment-based injection
+39608,error_based,oracle,0.90,Oracle with xmltype case
+39609,error_based,oracle,0.85,basic Oracle with LIKE
+39610,error_based,oracle,0.90,Oracle xmltype chr encoding
+39611,error_based,oracle,0.85,basic Oracle injection
+39612,error_based,oracle,0.90,Oracle ctxsys.drithsx.sn technique
+39613,error_based,oracle,0.90,Oracle xmltype with chr concat
+39614,error_based,oracle,0.90,Oracle xmltype case statement
+39615,error_based,oracle,0.90,Oracle injection with case
+39616,error_based,oracle,0.90,Oracle with xmltype error
+39617,error_based,oracle,0.85,basic Oracle injection
+39618,error_based,oracle,0.90,Oracle with dual subquery
+39619,error_based,postgresql,0.85,PostgreSQL char() for injection
+39620,error_based,oracle,0.90,Oracle xmltype with chr encoding
+39621,error_based,oracle,0.90,Oracle with PostgreSQL cast
+39622,error_based,oracle,0.95,Oracle ctxsys error function
+39623,error_based,oracle,0.85,basic Oracle injection
+39624,error_based,oracle,0.90,Oracle xmltype case-based
+39625,error_based,oracle,0.90,Oracle with dual subquery
+39626,error_based,oracle,0.85,basic Oracle injection
+39627,error_based,oracle,0.90,Oracle xmltype error technique
+39628,error_based,oracle,0.90,Oracle with case statement
+39629,error_based,oracle,0.90,Oracle with nested query

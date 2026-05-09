@@ -1,0 +1,61 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+28650,benign,generic,1.0,Normal SQL SELECT with UNION syntax
+28651,benign,generic,1.0,Normal SQL SELECT function call
+28652,benign,generic,1.0,Normal SQL SELECT with UNION ALL
+28653,benign,generic,1.0,Normal SQL SELECT with UNION subquery
+28654,benign,generic,1.0,Normal SQL SELECT with UNION ORDER BY
+28655,benign,generic,1.0,Normal SQL SELECT UNION ALL ORDER BY
+28656,benign,generic,1.0,Normal SQL SELECT UNION with WHERE
+28657,benign,generic,1.0,Normal SQL SELECT aggregate syntax
+28658,benign,generic,1.0,Normal SQL SELECT with INNER JOIN subquery
+28659,benign,generic,1.0,Normal SQL SELECT column only
+28660,benign,generic,1.0,Normal SQL SELECT from table
+28661,benign,generic,1.0,Normal SQL SELECT column from table
+28662,benign,generic,1.0,Normal SQL SELECT DISTINCT
+28663,benign,generic,1.0,Normal SQL SELECT COUNT DISTINCT
+28664,benign,generic,1.0,Normal SQL SELECT Count with star
+28665,benign,generic,1.0,Normal SQL SELECT subquery syntax
+28666,benign,generic,1.0,Normal SQL SELECT with WHERE equals
+28667,benign,generic,1.0,Normal SQL SELECT with WHERE equals
+28668,benign,generic,1.0,Normal SQL SELECT with WHERE equals
+28669,benign,generic,1.0,Normal SQL SELECT with AND condition
+28670,benign,generic,1.0,Normal SQL SELECT with OR condition
+28671,benign,generic,1.0,Normal SQL SELECT with OR condition
+28672,benign,generic,1.0,Normal SQL SELECT with NOT operator
+28673,benign,generic,1.0,Normal SQL SELECT with AND multiple OR
+28674,benign,generic,1.0,Normal SQL SELECT with multiple NOT
+28675,benign,generic,1.0,Normal SQL SELECT ORDER BY column
+28676,benign,generic,1.0,Normal SQL SELECT ORDER BY DESC
+28677,benign,generic,1.0,Normal SQL SELECT ORDER BY multiple
+28678,benign,generic,1.0,Normal SQL SELECT ORDER BY ASC DESC
+28679,benign,generic,1.0,Normal SQL INSERT statement
+28680,benign,generic,1.0,Normal SQL INSERT with VALUES
+28681,benign,generic,1.0,Normal SQL SELECT with IS NULL
+28682,benign,generic,1.0,Normal SQL SELECT with IS NOT NULL
+28683,benign,generic,1.0,Normal SQL UPDATE statement
+28684,benign,generic,1.0,Normal SQL UPDATE with WHERE
+28685,benign,generic,1.0,Normal SQL SELECT all columns
+28686,benign,generic,1.0,Normal SQL DELETE with WHERE
+28687,benign,generic,1.0,Normal SQL DELETE all rows
+28688,benign,generic,1.0,Normal SQL SELECT function call
+28689,benign,generic,1.0,Normal SQL SELECT subquery
+28690,benign,generic,1.0,Normal SQL SELECT TOP syntax
+28691,benign,generic,1.0,Normal SQL SELECT with number syntax
+28692,benign,generic,1.0,Normal SQL SELECT FETCH FIRST
+28693,benign,generic,1.0,Normal SQL SELECT TOP PERCENT
+28694,benign,generic,1.0,Normal SQL SELECT FETCH PERCENT
+28695,benign,generic,1.0,Normal SQL SELECT TOP with WHERE
+28696,benign,generic,1.0,Normal SQL SELECT LIMIT
+28697,benign,generic,1.0,Normal SQL SELECT FETCH FIRST with WHERE
+28698,benign,generic,1.0,Normal SQL SELECT MIN aggregate
+28699,benign,generic,1.0,Normal SQL SELECT MIN aggregate
+28700,benign,generic,1.0,Normal SQL SELECT subquery
+28701,benign,generic,1.0,Normal SQL SELECT TOP multiple queries
+28702,benign,generic,1.0,Normal SQL SELECT syntax errors
+28703,benign,generic,1.0,Normal SQL SELECT multiple dialects mixed
+28704,benign,generic,1.0,Normal SQL SELECT mixed dialect queries
+28705,benign,generic,1.0,Normal SQL SELECT mixed dialects
+28706,benign,generic,1.0,Normal SQL SELECT TOP with WHERE UNION
+28707,benign,generic,1.0,Normal SQL SELECT LIMIT with WHERE
+28708,benign,generic,1.0,Normal SQL SELECT FETCH with WHERE
+28709,benign,generic,1.0,Normal SQL SELECT AVG aggregate

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29520,benign,generic,1.0,Normal SQL SELECT string concat
+29521,benign,generic,1.0,Normal SQL SELECT INNER JOIN
+29522,benign,generic,1.0,Normal SQL SELECT multiple JOINs
+29523,benign,generic,1.0,Normal SQL SELECT LEFT JOIN
+29524,benign,generic,1.0,Normal SQL SELECT LEFT JOIN ORDER BY
+29525,benign,generic,1.0,Normal SQL SELECT RIGHT JOIN syntax error
+29526,benign,generic,1.0,Normal SQL SELECT RIGHT JOIN ORDER BY
+29527,benign,generic,1.0,Normal SQL SELECT FULL OUTER JOIN
+29528,benign,generic,1.0,Normal SQL SELECT function syntax
+29529,benign,generic,1.0,Normal SQL SELECT UNION syntax
+29530,benign,generic,1.0,Normal SQL SELECT function call
+29531,benign,generic,1.0,Normal SQL SELECT UNION ALL
+29532,benign,generic,1.0,Normal SQL SELECT UNION function
+29533,benign,generic,1.0,Normal SQL SELECT UNION ORDER BY
+29534,benign,generic,1.0,Normal SQL UNION ALL ORDER BY
+29535,benign,generic,1.0,Normal SQL SELECT UNION WHERE
+29536,benign,generic,1.0,Normal SQL SELECT aggregate syntax
+29537,benign,generic,1.0,Normal SQL SELECT INNER JOIN subquery
+29538,benign,generic,1.0,Normal SQL SELECT FETCH PERCENT
+29539,benign,generic,1.0,Normal SQL SELECT column only
+29540,benign,generic,1.0,Normal SQL SELECT all columns
+29541,benign,generic,1.0,Normal SQL SELECT column
+29542,benign,generic,1.0,Normal SQL SELECT DISTINCT
+29543,benign,generic,1.0,Normal SQL SELECT COUNT DISTINCT
+29544,benign,generic,1.0,Normal SQL SELECT Count star
+29545,benign,generic,1.0,Normal SQL SELECT subquery
+29546,benign,generic,1.0,Normal SQL SELECT all
+29547,benign,generic,1.0,Normal SQL SELECT WHERE equals
+29548,benign,generic,1.0,Normal SQL SELECT WHERE equals
+29549,benign,generic,1.0,Normal SQL SELECT WHERE unquoted

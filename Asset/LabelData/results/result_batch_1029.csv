@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30840,out_of_band,oracle,0.9,dbms_utility + XMLType
+30841,auth_bypass,generic,0.85,Simple OR pattern
+30842,boolean_blind,oracle,0.9,Oracle XMLType
+30843,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30844,boolean_blind,mssql,0.85,MSSQL convert
+30845,out_of_band,oracle,0.9,Oracle dbms_utility
+30846,auth_bypass,generic,0.85,Simple OR pattern
+30847,boolean_blind,oracle,0.9,Oracle XMLType
+30848,auth_bypass,generic,0.85,Simple OR pattern
+30849,auth_bypass,generic,0.85,Simple OR pattern
+30850,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30851,boolean_blind,oracle,0.9,Oracle XMLType
+30852,boolean_blind,oracle,0.9,Oracle XMLType
+30853,boolean_blind,postgresql,0.9,char() IN pattern
+30854,boolean_blind,oracle,0.9,XMLType + ctxsys
+30855,boolean_blind,oracle,0.9,Oracle XMLType
+30856,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30857,boolean_blind,oracle,0.9,Oracle XMLType
+30858,boolean_blind,oracle,0.9,XMLType + CAST
+30859,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30860,auth_bypass,generic,0.85,Wildcard pattern
+30861,auth_bypass,generic,0.85,Simple OR pattern
+30862,out_of_band,oracle,0.9,Oracle ctxsys.drithsx
+30863,boolean_blind,oracle,0.9,char() IN + XMLType
+30864,boolean_blind,postgresql,0.9,PostgreSQL CAST
+30865,auth_bypass,generic,0.8,Incomplete payload
+30866,boolean_blind,postgresql,0.9,CAST + generate_series
+30867,auth_bypass,generic,0.85,Simple OR pattern
+30868,boolean_blind,oracle,0.9,Oracle XMLType
+30869,boolean_blind,postgresql,0.9,PostgreSQL CAST

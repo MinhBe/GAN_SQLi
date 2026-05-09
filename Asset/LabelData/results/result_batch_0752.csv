@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+22530,benign,generic,1.0,Normal SELECT with BETWEEN string
+22531,benign,generic,1.0,Normal SELECT with BETWEEN string
+22532,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+22533,benign,generic,1.0,Malformed date range in BETWEEN
+22534,benign,generic,1.0,Normal SELECT with BETWEEN date
+22535,benign,generic,1.0,Normal SELECT with AVG and SUM
+22536,benign,generic,1.0,Normal SELECT with COUNT aggregate
+22537,benign,generic,1.0,Normal SELECT with COUNT aggregate
+22538,benign,generic,1.0,Normal SELECT with AVG aggregate
+22539,benign,generic,1.0,Normal SELECT with BETWEEN date
+22540,benign,generic,1.0,Normal SELECT with column alias
+22541,benign,generic,1.0,Normal SELECT with column alias
+22542,benign,generic,1.0,Normal SELECT with column alias
+22543,benign,generic,1.0,Normal SELECT with string concatenation
+22544,benign,generic,1.0,Normal SELECT with function and INNER JOIN
+22545,benign,generic,1.0,Normal SELECT with function and multiple JOINs
+22546,benign,generic,1.0,Normal SELECT with function and LEFT JOIN
+22547,benign,generic,1.0,Normal SELECT with LEFT JOIN
+22548,benign,generic,1.0,Incomplete SELECT with function
+22549,benign,generic,1.0,Normal SELECT with RIGHT JOIN
+22550,benign,generic,1.0,Normal SELECT with function and FULL OUTER JOIN
+22551,benign,generic,1.0,Normal SELECT with function and FROM
+22552,benign,generic,1.0,Normal SELECT with function and UNION
+22553,benign,generic,1.0,Normal SELECT with multiple functions
+22554,benign,generic,1.0,Normal SELECT with function and UNION ALL
+22555,benign,generic,1.0,Normal SELECT with multiple functions
+22556,benign,generic,1.0,Normal SELECT with UNION and ORDER BY
+22557,benign,generic,1.0,Normal SELECT with UNION ALL and ORDER BY
+22558,benign,generic,1.0,Normal SELECT with UNION and WHERE
+22559,benign,generic,1.0,Normal SELECT with aggregate and ORDER BY

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30300,out_of_band,oracle,0.9,Oracle XMLType with CTXSYS
+30301,union_based,oracle,0.95,Oracle XMLType multiple
+30202,auth_bypass,generic,0.9,Paren LIKE bypass
+30203,out_of_band,oracle,0.9,Oracle UTL_INADDR nested
+30204,union_based,oracle,0.95,Oracle XMLType where clause
+30305,boolean_blind,postgresql,0.9,PostgreSQL generate_series blind
+30306,polyglot,generic,0.85,ELT nested polyglot
+30307,union_based,oracle,0.95,Oracle XMLType in boolean
+30208,auth_bypass,generic,0.9,Wildcard full match
+30209,out_of_band,oracle,0.9,Oracle UTL_INADDR pattern
+30210,union_based,oracle,0.95,Oracle XMLType with AND
+30211,union_based,oracle,0.95,Oracle XMLType select
+30312,out_of_band,oracle,0.9,Oracle CTXSYS SN in WHERE
+30213,union_based,oracle,0.95,Oracle XMLType with OR
+30214,boolean_blind,mssql,0.85,MsSQL IN boolean
+30215,boolean_blind,postgresql,0.9,PostgreSQL with alias
+30216,boolean_blind,mssql,0.85,MsSQL nested as alias
+30217,polyglot,generic,0.85,ELT with OR polyglot
+30318,out_of_band,oracle,0.9,Oracle UTL_INADDR with hash
+30219,out_of_band,oracle,0.9,Oracle CTXSYS in alias
+30220,auth_bypass,generic,0.9,Paren pattern direct
+30221,out_of_band,oracle,0.9,Oracle CTXSYS with WHERE
+30222,union_based,oracle,0.95,Oracle XMLType comment
+30223,boolean_blind,postgresql,0.9,PostgreSQL IN nested
+30224,boolean_blind,postgresql,0.9,PostgreSQL SELECT nested
+30325,boolean_blind,mssql,0.85,MsSQL nested CAST
+30226,auth_bypass,generic,0.9,Simple hash pattern
+30227,out_of_band,oracle,0.85,Oracle SQLID in WHERE
+30328,out_of_band,oracle,0.85,Oracle SQLID nested
+30229,union_based,oracle,0.95,Oracle XMLType final

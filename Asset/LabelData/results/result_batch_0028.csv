@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+810,boolean_blind,postgresql,0.80,char concatenation with regexp_substring for blind inference
+811,union_based,generic,0.90,UNION ALL for data extraction
+812,union_based,generic,0.85,UNION ALL with NULL values
+813,time_blind,mysql,0.90,benchmark() for time-based blind
+814,boolean_blind,generic,0.85,WHERE clause equality for blind
+815,error_based,mysql,0.90,extractvalue() for XML error-based
+816,boolean_blind,generic,0.80,WHERE equality for boolean blind
+817,boolean_blind,generic,0.75,AND equality comparison
+818,boolean_blind,generic,0.75,Boolean comparison for blind
+819,time_blind,sqlite,0.85,randomblob() for SQLite time-based blind
+820,time_blind,mysql,0.90,sleep() conditional for time blind
+821,boolean_blind,oracle,0.85,Oracle dual with char() for blind
+822,union_based,generic,0.85,UNION ALL for data extraction
+823,time_blind,postgresql,0.90,pg_sleep() for PostgreSQL time blind
+824,boolean_blind,generic,0.85,OR equality for boolean blind
+825,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+826,boolean_blind,generic,0.80,CASE WHEN for boolean blind
+827,boolean_blind,mysql,0.80,make_set() for MySQL boolean blind
+828,time_blind,mysql,0.90,benchmark() for time blind
+829,union_based,generic,0.85,UNION ALL for union-based
+830,heavy_query,oracle,0.85,Multiple table join for heavy query
+831,heavy_query,postgresql,0.90,generate_series for heavy query
+832,union_based,generic,0.85,UNION ALL for data extraction
+833,error_based,oracle,0.90,updatexml() for Oracle error-based
+834,boolean_blind,generic,0.80,WHERE equality for blind
+835,union_based,generic,0.85,UNION ALL for union-based
+836,error_based,mysql,0.85,exp() with XOR for error extraction
+837,boolean_blind,postgresql,0.80,regexp_substring for PostgreSQL blind
+838,error_based,oracle,0.90,Oracle text index for error-based
+839,heavy_query,db2,0.85,IBM DB2 systables for heavy query

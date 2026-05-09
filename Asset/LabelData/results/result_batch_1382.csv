@@ -1,0 +1,30 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+41430,stacked_queries,generic,0.95,SELECT users
+41431,out_of_band,mysql,0.95,LOAD_FILE OOB
+41432,out_of_band,mssql,0.95,xp_dirtree OOB
+41433,out_of_band,mysql,0.95,LOAD_FILE OOB
+41434,second_order,generic,0.95,admin comment
+41435,second_order,generic,0.95,quote second order
+41436,second_order,generic,0.95,SELECT second order
+41437,union_based,generic,0.9,UNION NULL enum
+41438,union_based,generic,0.9,UNION NULL enum
+41439,union_based,generic,0.9,UNION NULL enum
+41440,union_based,generic,0.9,UNION NULL enum
+41441,union_based,generic,0.9,UNION NULL enum
+41442,union_based,generic,0.9,UNION ALL NULL
+41443,union_based,generic,0.9,UNION version
+41444,union_based,generic,0.9,UNION user db
+41445,union_based,generic,0.9,UNION table enum
+41446,union_based,generic,0.9,UNION column enum
+41447,boolean_blind,generic,0.9,LENGTH boolean
+41448,boolean_blind,generic,0.9,SUBSTR boolean
+41449,boolean_blind,generic,0.9,COUNT boolean
+41450,boolean_blind,generic,0.9,ORD boolean
+41451,boolean_blind,generic,0.9,floor boolean
+41452,auth_bypass,generic,0.95,quote bypass
+41453,auth_bypass,generic,0.9,filter bypass
+41454,auth_bypass,generic,0.9,NULL bypass
+41455,error_based,generic,0.9,floor version error
+41456,error_based,generic,0.9,EXTRACTVALUE error
+41457,error_based,generic,0.9,NAME_CONST error
+41458,error_based,generic,0.9,PROCEDURE error

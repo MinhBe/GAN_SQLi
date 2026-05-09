@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+38220,error_based,oracle,0.95,Oracle xmltype extraction
+38221,error_based,oracle,0.80,Oracle simple WHERE injection
+38222,error_based,oracle,0.95,Oracle xmltype extraction
+38223,error_based,oracle,0.90,Oracle ctxsys.drithsx.sn extraction
+38224,error_based,oracle,0.90,Oracle xmltype + ctxsys.drithsx.sn
+38225,error_based,oracle,0.95,Oracle xmltype extraction
+38226,error_based,oracle,0.95,Oracle xmltype extraction
+38227,error_based,oracle,0.85,Oracle MS SQL char + xmltype
+38228,error_based,oracle,0.80,Oracle WHERE clause injection
+38229,error_based,oracle,0.90,Oracle ctxsys.drithsx.sn extraction
+38230,error_based,oracle,0.80,Oracle WHERE clause injection
+38231,error_based,oracle,0.95,Oracle xmltype extraction
+38232,error_based,oracle,0.95,Oracle xmltype extraction
+38233,error_based,oracle,0.95,Oracle xmltype extraction
+38234,error_based,oracle,0.95,Oracle xmltype extraction
+38235,error_based,oracle,0.95,Oracle xmltype extraction
+38236,error_based,oracle,0.95,Oracle xmltype extraction
+38237,error_based,oracle,0.95,Oracle xmltype extraction
+38238,error_based,oracle,0.95,Oracle xmltype extraction
+38239,error_based,oracle,0.95,Oracle xmltype extraction
+38240,error_based,oracle,0.80,Oracle WHERE clause injection
+38241,error_based,oracle,0.95,Oracle xmltype extraction
+38242,error_based,oracle,0.80,Oracle WHERE clause injection
+38243,error_based,oracle,0.95,Oracle xmltype extraction
+38244,error_based,oracle,0.80,Oracle WHERE clause injection
+38245,error_based,oracle,0.90,Oracle dbms_utility extraction
+38246,error_based,oracle,0.95,Oracle xmltype extraction
+38247,error_based,oracle,0.80,Oracle WHERE clause injection
+38248,error_based,oracle,0.80,Oracle simple WHERE injection
+38249,error_based,postgresql,0.85,PostgreSQL cast extraction

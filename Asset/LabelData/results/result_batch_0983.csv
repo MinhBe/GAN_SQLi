@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29460,benign,generic,1.0,Normal SQL SELECT ORDER BY ASC DESC
+29461,benign,generic,1.0,Normal SQL INSERT with VALUES
+29462,benign,generic,1.0,Normal SQL INSERT
+29463,benign,generic,1.0,Normal SQL SELECT IS NULL
+29464,benign,generic,1.0,Normal SQL SELECT IS NOT NULL
+29465,benign,generic,1.0,Normal SQL UPDATE
+29466,benign,generic,1.0,Normal SQL UPDATE WHERE
+29467,benign,generic,1.0,Normal SQL SELECT all
+29468,benign,generic,1.0,Normal SQL DELETE WHERE
+29469,benign,generic,1.0,Normal SQL DELETE all
+29470,benign,generic,1.0,Normal SQL SELECT function
+29471,benign,generic,1.0,Normal SQL SELECT subquery
+29472,benign,generic,1.0,Normal SQL SELECT TOP
+29473,benign,generic,1.0,Normal SQL syntax number
+29474,benign,generic,1.0,Normal SQL SELECT FETCH
+29475,benign,generic,1.0,Normal SQL SELECT TOP PERCENT
+29476,benign,generic,1.0,Normal SQL SELECT FETCH PERCENT
+29477,benign,generic,1.0,Normal SQL SELECT TOP WHERE
+29478,benign,generic,1.0,Normal SQL SELECT LIMIT WHERE
+29479,benign,generic,1.0,Normal SQL SELECT FETCH WHERE
+29480,benign,generic,1.0,Normal SQL SELECT MIN
+29481,benign,generic,1.0,Normal SQL SELECT MIN
+29482,benign,generic,1.0,Normal SQL SELECT subquery
+29483,benign,generic,1.0,Normal SQL multiple queries
+29484,benign,generic,1.0,Normal SQL syntax errors
+29485,benign,generic,1.0,Normal SQL mixed dialects
+29486,benign,generic,1.0,Normal SQL mixed dialects
+29487,benign,generic,1.0,Normal SQL mixed dialects
+29488,benign,generic,1.0,Normal SQL SELECT TOP WHERE UNION
+29489,benign,generic,1.0,Normal SQL SELECT LIMIT WHERE

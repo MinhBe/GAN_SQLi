@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+2520,heavy_query,sqlite,0.9,randomblob for heavy query
+2521,time_blind,postgresql,0.9,pg_sleep for PostgreSQL time blind
+2522,heavy_query,oracle,0.85,Multiple all_users table join
+2523,union_based,generic,0.85,UNION ALL for union-based
+2524,union_based,generic,0.85,UNION ALL for union-based
+2525,unknown,generic,0.5,ORDER BY only - no clear technique
+2526,heavy_query,sqlite,0.9,randomblob for heavy query
+2527,heavy_query,mysql,0.85,benchmark for heavy query
+2528,boolean_blind,generic,0.8,WHERE equality for blind
+2529,time_blind,mssql,0.9,waitfor delay MSSQL time blind
+2530,heavy_query,sqlite,0.9,randomblob for heavy query
+2531,error_based,mysql,0.85,updatexml for error extraction
+2532,time_blind,mysql,0.9,elt() with sleep for time blind
+2533,heavy_query,firebird,0.85,Multiple domain tables join
+2534,heavy_query,firebird,0.85,Multiple rdb tables join
+2535,unknown,generic,0.5,ORDER BY only - no clear technique
+2536,unknown,generic,0.5,Incomplete payload
+2537,time_blind,postgresql,0.9,pg_sleep for PostgreSQL time blind
+2538,heavy_query,mssql,0.85,Multiple sysdatabases join
+2539,union_based,generic,0.85,UNION ALL for union-based
+2540,time_blind,postgresql,0.9,pg_sleep for PostgreSQL time blind
+2541,heavy_query,generic,0.85,Multiple sysusers table join
+2542,heavy_query,firebird,0.85,Multiple rdb tables join
+2543,time_blind,mysql,0.9,elt() with sleep for time blind
+2544,error_based,mysql,0.85,exp() for error extraction
+2545,boolean_blind,mssql,0.85,iif() for MSSQL boolean blind
+2546,heavy_query,firebird,0.85,Multiple domain tables join
+2547,boolean_blind,generic,0.8,WHERE equality for blind
+2548,boolean_blind,generic,0.8,SELECT CASE WHEN for blind
+2549,boolean_blind,generic,0.8,WHERE equality for blind

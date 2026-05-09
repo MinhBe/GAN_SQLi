@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+28080,benign,generic,1.0,Normal SELECT with WHERE clause
+28081,benign,generic,1.0,Normal SELECT with WHERE clause
+28082,benign,generic,1.0,Normal SELECT with WHERE clause
+28083,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+28084,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+28085,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+28086,benign,generic,1.0,Normal SELECT with NOT operator
+28087,benign,generic,1.0,Normal SELECT with AND/OR conditions
+28088,benign,generic,1.0,Normal SELECT with NOT AND conditions
+28089,benign,generic,1.0,Normal SELECT with ORDER BY
+28090,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+28091,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+28092,benign,generic,1.0,Normal SELECT with ORDER BY ASC/DESC
+28093,benign,generic,1.0,Normal INSERT statement
+28094,benign,generic,1.0,Normal INSERT statement
+28095,benign,generic,1.0,Normal SELECT with IS NULL
+28096,benign,generic,1.0,Normal SELECT with IS NOT NULL
+28097,benign,generic,1.0,Normal UPDATE statement
+28098,benign,generic,1.0,Normal UPDATE statement
+28099,benign,generic,1.0,Normal SELECT all rows
+28100,benign,generic,1.0,Normal DELETE with WHERE
+28101,benign,generic,1.0,Normal DELETE all rows
+28102,benign,generic,1.0,Invalid SQL syntax - not an attack
+28103,benign,generic,1.0,Normal SELECT subquery
+28104,benign,generic,1.0,Normal SELECT TOP query
+28105,benign,generic,1.0,Invalid SQL syntax - not an attack
+28106,benign,generic,1.0,Normal SELECT with FETCH FIRST
+28107,benign,generic,1.0,Normal SELECT TOP PERCENT
+28108,benign,generic,1.0,Normal SELECT with FETCH FIRST
+28109,benign,generic,1.0,Normal SELECT TOP with WHERE

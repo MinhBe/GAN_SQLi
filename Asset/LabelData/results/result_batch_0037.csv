@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1080,time_blind,generic,0.90,sleep() for time blind
+1081,heavy_query,postgresql,0.90,generate_series for heavy query
+1082,error_based,mysql,0.90,extractvalue() for error extraction
+1083,error_based,mysql,0.85,exp() with concat for error extraction
+1084,error_based,oracle,0.90,sqlid_to_sqlhash for error extraction
+1085,time_blind,generic,0.85,elt() with sleep for time blind
+1086,boolean_blind,generic,0.80,OR comparison for blind
+1087,heavy_query,db2,0.85,Multiple systables join
+1088,union_based,generic,0.85,UNION ALL for union-based
+1089,union_based,generic,0.85,UNION ALL for union-based
+1090,boolean_blind,generic,0.80,OR equality for blind
+1091,union_based,generic,0.85,UNION ALL for union-based
+1092,error_based,mysql,0.85,GROUP BY concat for error extraction
+1093,unknown,generic,0.70,ORDER BY without context
+1094,boolean_blind,generic,0.80,WHERE equality for blind
+1095,boolean_blind,generic,0.80,OR comparison for blind
+1096,boolean_blind,generic,0.80,WHERE equality for blind
+1097,time_blind,generic,0.90,sleep() for time blind
+1098,boolean_blind,mysql,0.80,elt() for boolean blind
+1099,union_based,generic,0.85,UNION ALL for union-based
+1100,boolean_blind,generic,0.80,WHERE equality for blind
+1101,boolean_blind,mssql,0.80,CONVERT for MSSQL blind
+1102,heavy_query,postgresql,0.90,generate_series for heavy query
+1103,boolean_blind,mssql,0.80,CONVERT for MSSQL blind
+1104,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+1105,boolean_blind,generic,0.80,OR equality for blind
+1106,error_based,oracle,0.90,sqlid_to_sqlhash for error extraction
+1107,heavy_query,firebird,0.85,Multiple table join for heavy query
+1108,heavy_query,postgresql,0.90,generate_series for heavy query
+1109,boolean_blind,generic,0.80,OR comparison for blind

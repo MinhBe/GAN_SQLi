@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1200,time_blind,postgresql,0.90,pg_sleep() for time blind
+1201,boolean_blind,generic,0.80,CASE WHEN for boolean blind
+1202,error_based,mysql,0.90,updatexml() for error extraction
+1203,boolean_blind,generic,0.80,WHERE equality for blind
+1204,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+1205,heavy_query,mysql,0.85,Multiple domain table join
+1206,heavy_query,oracle,0.85,Multiple all_users table join
+1207,boolean_blind,mssql,0.80,CONVERT for MSSQL blind
+1208,time_blind,generic,0.85,elt() with sleep for time blind
+1209,heavy_query,postgresql,0.90,generate_series for heavy query
+1210,error_based,mysql,0.85,exp() with concat for error extraction
+1211,boolean_blind,generic,0.80,WHERE equality for blind
+1212,time_blind,generic,0.90,sleep() for time blind
+1213,boolean_blind,generic,0.75,SELECT IF for boolean blind
+1214,error_based,oracle,0.90,utl_inaddr for Oracle error-based
+1215,union_based,generic,0.85,UNION ALL for union-based
+1216,union_based,generic,0.85,UNION ALL for union-based
+1217,error_based,oracle,0.90,utl_inaddr for Oracle error-based
+1218,heavy_query,oracle,0.85,Multiple all_users table join
+1219,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1220,union_based,generic,0.85,UNION ALL for union-based
+1221,union_based,generic,0.85,UNION ALL for union-based
+1222,error_based,oracle,0.90,xmltype() for Oracle error-based
+1223,error_based,oracle,0.90,utl_inaddr for Oracle error-based
+1224,union_based,generic,0.85,UNION ALL for union-based
+1225,union_based,generic,0.85,UNION ALL for union-based
+1226,union_based,generic,0.85,UNION ALL for union-based
+1227,union_based,generic,0.85,UNION ALL for union-based
+1228,time_blind,generic,0.90,sleep() for time blind
+1229,union_based,generic,0.85,UNION ALL for union-based

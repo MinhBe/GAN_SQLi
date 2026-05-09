@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+26460,benign,generic,1.0,Normal SELECT with NOT LIKE pattern
+26461,benign,generic,1.0,Normal SELECT with IN clause
+26462,benign,generic,1.0,Normal SELECT with NOT IN
+26463,benign,generic,1.0,Normal SELECT with IN subquery
+26464,benign,generic,1.0,Normal SELECT with BETWEEN
+26465,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+26466,benign,generic,1.0,Normal SELECT with BETWEEN string
+26467,benign,generic,1.0,Normal SELECT with BETWEEN string
+26468,benign,generic,1.0,Normal SELECT with NOT BETWEEN
+26469,benign,generic,1.0,Malformed date range in BETWEEN
+26470,benign,generic,1.0,Normal SELECT with BETWEEN date
+26471,benign,generic,1.0,Normal SELECT with AVG and SUM aggregate
+26472,benign,generic,1.0,Normal SELECT with COUNT aggregate
+26473,benign,generic,1.0,Normal SELECT with COUNT aggregate
+26474,benign,generic,1.0,Normal SELECT with AVG aggregate
+26475,benign,generic,1.0,Normal SELECT with BETWEEN date
+26476,benign,generic,1.0,Normal SELECT with column alias
+26477,benign,generic,1.0,Normal SELECT with column alias
+26478,benign,generic,1.0,Normal SELECT with column alias
+26479,benign,generic,1.0,Normal SELECT with string concatenation
+26480,benign,generic,1.0,Normal SELECT with function and INNER JOIN
+26481,benign,generic,1.0,Normal SELECT with function and multiple JOINs
+26482,benign,generic,1.0,Normal SELECT with function and LEFT JOIN
+26483,benign,generic,1.0,Normal SELECT with LEFT JOIN and ORDER BY
+26484,benign,generic,1.0,Incomplete SELECT with function
+26485,benign,generic,1.0,Normal SELECT with RIGHT JOIN and ORDER BY
+26486,benign,generic,1.0,Normal SELECT with function and FULL OUTER JOIN
+26487,benign,generic,1.0,Normal SELECT with function and FROM
+26488,benign,generic,1.0,Normal SELECT with function and UNION
+26489,benign,generic,1.0,Normal SELECT with multiple functions

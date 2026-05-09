@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+41310,time_blind,mssql,0.9,DOMAIN time blind
+41311,time_blind,db2,0.9,SYSTABLES time blind
+41312,time_blind,generic,0.9,REGEXP time blind
+41313,time_blind,generic,0.9,REGEXP time blind
+41314,time_blind,generic,0.9,SYSPAGHDR time
+41315,time_blind,mysql,0.9,CASE SLEEP time
+41316,time_blind,mysql,0.9,BENCHMARK time
+41317,time_blind,postgresql,0.9,PG_SLEEP time
+41318,time_blind,postgresql,0.9,GENERATE time
+41319,time_blind,mssql,0.9,sysusers time
+41320,time_blind,oracle,0.9,DBMS_LOCK time
+41321,time_blind,oracle,0.9,DBMS_PIPE time
+41322,time_blind,oracle,0.9,ALL_USERS time
+41323,time_blind,generic,0.9,ASCII REGEXP time
+41324,time_blind,generic,0.9,ASCII REGEXP time
+41325,union_based,generic,0.95,UNION based
+41326,auth_bypass,generic,0.95,quote bypass
+41327,auth_bypass,generic,0.95,quote bypass
+41328,out_of_band,oracle,0.95,utl_http OOB
+41329,rce,generic,0.95,app adduser RCE
+41330,out_of_band,oracle,0.95,utl_inaddr OOB
+41331,out_of_band,oracle,0.95,utl_inaddr OOB
+41332,out_of_band,oracle,0.95,utl_inaddr OOB
+41333,out_of_band,oracle,0.95,utl_inaddr OOB
+41334,out_of_band,oracle,0.95,utl_inaddr OOB
+41335,out_of_band,oracle,0.95,utl_inaddr OOB
+41336,out_of_band,oracle,0.95,utl_inaddr OOB
+41337,out_of_band,oracle,0.95,utl_inaddr OOB
+41338,out_of_band,oracle,0.95,utl_inaddr OOB
+41339,out_of_band,oracle,0.95,utl_inaddr OOB

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+32220,error_based,oracle,0.95,xmltype for Oracle error extraction
+32221,error_based,oracle,0.95,xmltype for Oracle error extraction
+32222,error_based,oracle,0.95,xmltype for Oracle error extraction
+32223,auth_bypass,generic,0.7,quote escaping for auth bypass
+32224,auth_bypass,generic,0.7,quote escaping for auth bypass
+32225,out_of_band,oracle,0.8,utl_inaddr.get_host_address for OOB
+32226,error_based,postgresql,0.85,cast for PostgreSQL error extraction
+32227,auth_bypass,generic,0.6,simple OR for auth bypass
+32228,auth_bypass,generic,0.7,quote escaping for auth bypass
+32229,error_based,postgresql,0.85,cast for PostgreSQL error extraction
+32230,error_based,oracle,0.95,xmltype for Oracle error extraction
+32231,auth_bypass,generic,0.7,quote escaping for auth bypass
+32232,error_based,oracle,0.95,xmltype for Oracle error extraction
+32233,error_based,oracle,0.95,xmltype for Oracle error extraction
+32234,error_based,oracle,0.95,xmltype for Oracle error extraction
+32235,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32236,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+32237,error_based,oracle,0.95,xmltype for Oracle error extraction
+32238,error_based,oracle,0.9,char for Oracle encoding
+32239,error_based,oracle,0.9,char for Oracle encoding
+32240,error_based,oracle,0.95,xmltype for Oracle error extraction
+32241,error_based,oracle,0.95,xmltype for Oracle error extraction
+32242,error_based,oracle,0.9,dbms_utility for Oracle error extraction
+32243,error_based,oracle,0.95,xmltype for Oracle error extraction
+32244,error_based,oracle,0.95,xmltype for Oracle error extraction
+32245,auth_bypass,generic,0.6,simple OR for auth bypass
+32246,error_based,oracle,0.95,xmltype for Oracle error extraction
+32247,error_based,oracle,0.95,xmltype for Oracle error extraction
+32248,error_based,oracle,0.95,xmltype for Oracle error extraction
+32249,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+31470,error_based,oracle,0.95,Oracle xmltype for error extraction
+31471,error_based,oracle,0.95,Oracle xmltype dbms_utility combined
+31472,error_based,oracle,0.9,Oracle char for error extraction
+31473,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function
+31474,error_based,oracle,0.95,Oracle xmltype for error extraction
+31475,boolean_blind,generic,0.5,Simple wildcard pattern bypass
+31476,error_based,oracle,0.95,Oracle xmltype for error extraction
+31477,boolean_blind,generic,0.5,Simple AND pattern no technique
+31478,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31479,error_based,oracle,0.9,Oracle cast for error extraction
+31480,error_based,oracle,0.95,Oracle xmltype for error extraction
+31481,error_based,oracle,0.9,Oracle cast for error extraction
+31482,boolean_blind,generic,0.5,Simple LIKE bypass pattern
+31483,error_based,oracle,0.9,Oracle cast ctxsys combined
+31484,error_based,oracle,0.9,Oracle xmltype cast combined
+31485,error_based,oracle,0.95,Oracle xmltype for error extraction
+31486,error_based,oracle,0.95,Oracle xmltype for error extraction
+31487,boolean_blind,generic,0.5,Simple wildcard bypass
+31488,error_based,oracle,0.95,Oracle xmltype for error extraction
+31489,error_based,mysql,0.9,MySQL if concat for error-based
+31490,error_based,oracle,0.9,Oracle cast xmltype combined
+31491,boolean_blind,generic,0.5,Simple wildcard pattern
+31492,error_based,oracle,0.95,Oracle xmltype for error extraction
+31493,error_based,mssql,0.85,MSSQL convert int char error
+31494,error_based,oracle,0.9,Oracle cast for error extraction
+31495,error_based,oracle,0.95,Oracle xmltype for error extraction
+31496,error_based,oracle,0.9,Oracle char dbms_utility combined
+31497,error_based,oracle,0.9,Oracle ctxsys dbms_utility combined
+31498,boolean_blind,generic,0.5,Simple AND pattern no technique
+31499,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash

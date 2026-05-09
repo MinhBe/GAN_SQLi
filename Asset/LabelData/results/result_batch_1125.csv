@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+33720,auth_bypass,generic,0.6,quote injection
+33721,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+33722,error_based,oracle,0.9,cast for PostgreSQL injection
+33723,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+33724,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+33725,auth_bypass,generic,0.6,quote injection
+33726,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+33727,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+33728,error_based,oracle,0.9,cast for PostgreSQL injection
+33729,auth_bypass,generic,0.6,wildcard injection
+33730,error_based,oracle,0.95,xmltype for Oracle error extraction
+33731,auth_bypass,generic,0.6,wildcard injection
+33732,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+33733,error_based,oracle,0.95,xmltype for Oracle error extraction
+33734,auth_bypass,generic,0.6,wildcard injection
+33735,error_based,oracle,0.95,xmltype for Oracle error extraction
+33736,auth_bypass,generic,0.6,wildcard injection
+33737,error_based,oracle,0.9,cast for PostgreSQL injection
+33738,error_based,oracle,0.95,xmltype for Oracle error extraction
+33739,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+33740,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+33741,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+33742,error_based,mssql,0.8,char for MSSQL encoding
+33743,error_based,oracle,0.9,cast for PostgreSQL injection
+33744,error_based,oracle,0.9,cast for PostgreSQL injection
+33745,error_based,oracle,0.9,cast for PostgreSQL injection
+33746,error_based,oracle,0.9,cast for PostgreSQL injection
+33747,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+33748,error_based,oracle,0.95,xmltype for Oracle error extraction
+33749,error_based,mssql,0.8,char for MSSQL encoding

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+26400,benign,generic,1.0,Normal SELECT from table
+26401,benign,generic,1.0,Normal SELECT from table
+26402,benign,generic,1.0,Normal SELECT DISTINCT
+26403,benign,generic,1.0,Normal SELECT with COUNT DISTINCT
+26404,benign,generic,1.0,Normal SELECT with COUNT aggregate
+26405,benign,generic,1.0,Incomplete SELECT with subquery
+26406,benign,generic,1.0,Normal SELECT from table
+26407,benign,generic,1.0,Normal SELECT with WHERE clause
+26408,benign,generic,1.0,Normal SELECT with WHERE clause
+26409,benign,generic,1.0,Normal SELECT with WHERE clause
+26410,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+26411,benign,generic,1.0,Normal SELECT with OR condition
+26412,benign,generic,1.0,Normal SELECT with OR condition
+26413,benign,generic,1.0,Normal SELECT with NOT operator
+26414,benign,generic,1.0,Normal SELECT with AND and OR
+26415,benign,generic,1.0,Normal SELECT with multiple NOT conditions
+26416,benign,generic,1.0,Normal SELECT with ORDER BY
+26417,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+26418,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+26419,benign,generic,1.0,Normal SELECT with ORDER BY ASC DESC
+26420,benign,generic,1.0,Normal INSERT statement
+26421,benign,generic,1.0,Normal INSERT statement
+26422,benign,generic,1.0,Normal SELECT with IS NULL
+26423,benign,generic,1.0,Normal SELECT with IS NOT NULL
+26424,benign,generic,1.0,Normal UPDATE statement
+26425,benign,generic,1.0,Normal UPDATE statement
+26426,benign,generic,1.0,Normal SELECT from table
+26427,benign,generic,1.0,Normal DELETE statement
+26428,benign,generic,1.0,Incomplete DELETE statement
+26429,benign,generic,1.0,Normal SELECT with function

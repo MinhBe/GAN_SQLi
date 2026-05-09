@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+25320,benign,generic,1.0,Normal SELECT DISTINCT
+25321,benign,generic,1.0,Normal SELECT with COUNT DISTINCT
+25322,benign,generic,1.0,Normal SELECT with COUNT aggregate
+25323,benign,generic,1.0,Incomplete SELECT with subquery
+25324,benign,generic,1.0,Normal SELECT from table
+25325,benign,generic,1.0,Normal SELECT with WHERE clause
+25326,benign,generic,1.0,Normal SELECT with WHERE clause
+25327,benign,generic,1.0,Normal SELECT with WHERE clause
+25328,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+25329,benign,generic,1.0,Normal SELECT with OR condition
+25330,benign,generic,1.0,Normal SELECT with OR condition
+25331,benign,generic,1.0,Normal SELECT with NOT operator
+25332,benign,generic,1.0,Normal SELECT with AND and OR
+25333,benign,generic,1.0,Normal SELECT with multiple NOT conditions
+25334,benign,generic,1.0,Normal SELECT with ORDER BY
+25335,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+25336,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+25337,benign,generic,1.0,Normal SELECT with ORDER BY ASC DESC
+25338,benign,generic,1.0,Normal INSERT statement
+25339,benign,generic,1.0,Normal INSERT statement
+25340,benign,generic,1.0,Normal SELECT with IS NULL
+25341,benign,generic,1.0,Normal SELECT with IS NOT NULL
+25342,benign,generic,1.0,Normal UPDATE statement
+25343,benign,generic,1.0,Normal UPDATE statement
+25344,benign,generic,1.0,Normal SELECT from table
+25345,benign,generic,1.0,Normal DELETE statement
+25346,benign,generic,1.0,Incomplete DELETE statement
+25347,benign,generic,1.0,Normal SELECT with function
+25348,benign,generic,1.0,Normal SELECT with subquery
+25349,benign,generic,1.0,Normal SELECT TOP from MSSQL

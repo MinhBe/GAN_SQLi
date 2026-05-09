@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+900,time_blind,postgresql,0.90,pg_sleep() for time blind
+901,boolean_blind,generic,0.80,OR comparison for boolean blind
+902,union_based,generic,0.85,UNION ALL for union-based
+903,time_blind,generic,0.85,elt() with sleep for time blind
+904,union_based,generic,0.85,UNION ALL for union-based
+905,boolean_blind,generic,0.80,AND equality for boolean blind
+906,union_based,generic,0.85,UNION ALL for union-based
+907,union_based,generic,0.85,UNION ALL for union-based
+908,heavy_query,mysql,0.85,Multiple domain table join for heavy query
+909,heavy_query,mysql,0.85,Multiple domain table join with concat
+910,union_based,generic,0.85,UNION ALL for union-based
+911,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+912,error_based,generic,0.85,Floor/rand for error-based extraction
+913,union_based,generic,0.85,UNION ALL for union-based
+914,heavy_query,db2,0.85,Multiple systables join for heavy query
+915,time_blind,generic,0.85,elt() with sleep for time blind
+916,unknown,generic,0.70,ORDER BY without full query context
+917,boolean_blind,mysql,0.80,make_set() for boolean blind
+918,boolean_blind,postgresql,0.80,regexp_substring for PostgreSQL blind
+919,unknown,generic,0.60,END keyword without context
+920,heavy_query,db2,0.85,Multiple systables join for heavy query
+921,time_blind,generic,0.85,sleep() with rlike for time blind
+922,unknown,generic,0.70,ORDER BY without context
+923,boolean_blind,generic,0.80,OR equality for boolean blind
+924,boolean_blind,generic,0.80,OR equality for boolean blind
+925,error_based,oracle,0.90,sqlid_to_sqlhash for error extraction
+926,time_blind,postgresql,0.85,regexp_substring for time blind
+927,error_based,oracle,0.90,xmltype() for Oracle error-based
+928,time_blind,postgresql,0.90,pg_sleep() for time blind
+929,time_blind,postgresql,0.90,pg_sleep() for time blind

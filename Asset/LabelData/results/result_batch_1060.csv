@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+31770,error_based,oracle,0.9,Oracle ctxsys cast combined
+31771,error_based,oracle,0.95,Oracle xmltype for error extraction
+31772,error_based,oracle,0.95,Oracle xmltype for error extraction
+31773,error_based,oracle,0.95,Oracle xmltype for error extraction
+31774,error_based,oracle,0.95,Oracle xmltype for error extraction
+31775,error_based,postgresql,0.9,PostgreSQL cast generate_series
+31776,error_based,oracle,0.95,Oracle xmltype for error extraction
+31777,error_based,oracle,0.9,Oracle char for error extraction
+31778,error_based,oracle,0.95,Oracle xmltype for error extraction
+31779,error_based,oracle,0.9,Oracle char ctxsys combined
+31780,error_based,oracle,0.9,Oracle xmltype cast combined
+31781,error_based,oracle,0.9,Oracle dbms_utility.sqlid_to_sqlhash
+31782,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function
+31783,error_based,oracle,0.9,Oracle cast for error extraction
+31784,error_based,oracle,0.9,Oracle cast for error extraction
+31785,error_based,oracle,0.9,Oracle cast for error extraction
+31786,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function
+31787,error_based,mssql,0.85,MSSQL convert int char error
+31788,error_based,oracle,0.9,Oracle char for error extraction
+31789,error_based,oracle,0.95,Oracle xmltype for error extraction
+31790,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function
+31791,error_based,mysql,0.9,MySQL if concat for error-based
+31792,error_based,oracle,0.95,Oracle xmltype for error extraction
+31793,error_based,oracle,0.95,Oracle xmltype for error extraction
+31794,error_based,postgresql,0.9,PostgreSQL cast generate_series
+31795,error_based,oracle,0.9,Oracle cast for error extraction
+31796,error_based,oracle,0.9,Oracle char for error extraction
+31797,error_based,mssql,0.85,MSSQL convert int char error
+31798,error_based,oracle,0.95,Oracle xmltype for error extraction
+31799,error_based,oracle,0.95,Oracle xmltype for error extraction

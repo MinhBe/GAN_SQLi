@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+40440,error_based,oracle,0.90,Oracle xmltype case-based
+40441,error_based,oracle,0.90,Oracle xmltype case-based
+40442,error_based,oracle,0.90,Oracle xmltype case-based
+40443,error_based,postgresql,0.90,PostgreSQL cast numeric
+40444,error_based,oracle,0.90,Oracle xmltype case-based
+40445,error_based,oracle,0.90,Oracle xmltype case-based
+40446,error_based,oracle,0.80,basic nested query with %
+40447,error_based,oracle,0.85,basic nested query
+40448,error_based,oracle,0.90,Oracle xmltype case-based
+40449,error_based,oracle,0.90,Oracle xmltype case-based
+40450,error_based,oracle,0.85,char() function in in clause
+40451,error_based,postgresql,0.90,PostgreSQL cast numeric
+40452,error_based,postgresql,0.90,PostgreSQL cast numeric
+40453,error_based,oracle,0.85,basic nested query
+40454,error_based,oracle,0.90,Oracle xmltype case-based
+40455,error_based,oracle,0.85,basic nested query
+40456,error_based,oracle,0.90,ctxsys.drithsx.sn error
+40457,error_based,oracle,0.90,Oracle xmltype case-based
+40458,error_based,oracle,0.90,PostgreSQL cast + Oracle xmltype
+40459,error_based,oracle,0.80,basic nested query with %
+40460,error_based,oracle,0.90,Oracle xmltype case-based
+40461,error_based,oracle,0.90,Oracle xmltype case-based
+40462,error_based,oracle,0.85,basic nested query
+40463,error_based,oracle,0.90,Oracle xmltype case-based
+40464,error_based,oracle,0.85,basic nested query
+40465,error_based,oracle,0.90,Oracle xmltype case-based
+40466,error_based,oracle,0.90,Oracle xmltype case-based
+40467,error_based,oracle,0.85,basic nested query
+40468,error_based,oracle,0.85,basic nested query
+40469,error_based,oracle,0.85,basic nested query

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+2940,boolean_blind,generic,0.8,OR equality for blind
+2941,boolean_blind,generic,0.75,Multiplication for blind
+2942,error_based,oracle,0.85,xmltype for error extraction
+2943,boolean_blind,generic,0.75,Multiplication for blind
+2944,heavy_query,db2,0.85,Multiple systables join
+2945,error_based,mysql,0.85,extractvalue for error extraction
+2946,unknown,generic,0.5,ORDER BY only - no clear technique
+2947,boolean_blind,generic,0.75,Multiplication for blind
+2948,boolean_blind,generic,0.8,AND equality for blind
+2949,heavy_query,sqlite,0.9,randomblob for heavy query
+2950,unknown,generic,0.5,ORDER BY only - no clear technique
+2951,time_blind,oracle,0.9,utl_inaddr for Oracle time blind
+2952,heavy_query,firebird,0.85,Multiple domain tables join
+2953,heavy_query,firebird,0.85,Multiple domain tables join
+2954,heavy_query,generic,0.85,Multiple sysusers table join
+2955,union_based,generic,0.85,UNION ALL for union-based
+2956,time_blind,oracle,0.9,dbms_pipe for Oracle time blind
+2957,boolean_blind,generic,0.8,WHERE equality for blind
+2958,union_based,oracle,0.85,UNION ALL for union-based
+2959,union_based,generic,0.85,UNION ALL for union-based
+2960,heavy_query,firebird,0.85,Multiple rdb tables join
+2961,heavy_query,sqlite,0.9,randomblob for heavy query
+2962,heavy_query,postgresql,0.9,generate_series for heavy query
+2963,boolean_blind,generic,0.8,AND equality for blind
+2964,boolean_blind,generic,0.8,OR equality for blind
+2965,boolean_blind,generic,0.8,SELECT CASE WHEN for blind
+2966,unknown,generic,0.5,ORDER BY only - no clear technique
+2967,boolean_blind,generic,0.8,AND equality for blind
+2968,boolean_blind,generic,0.8,WHERE equality for blind
+2969,heavy_query,firebird,0.85,Multiple domain tables join

@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+31860,boolean_blind,generic,0.5,Simple LIKE pattern bypass
+31861,boolean_blind,generic,0.5,Simple wildcard bypass
+31862,error_based,oracle,0.95,Oracle xmltype for error extraction
+31863,error_based,oracle,0.95,Oracle xmltype for error extraction
+31864,error_based,oracle,0.95,Oracle xmltype for error extraction
+31865,boolean_blind,generic,0.5,Simple AND pattern bypass
+31866,error_based,oracle,0.9,Oracle cast for error extraction
+31867,boolean_blind,generic,0.5,Simple OR bypass no injection
+31868,error_based,oracle,0.95,Oracle xmltype for error extraction
+31869,error_based,oracle,0.95,Oracle xmltype for error extraction
+31870,error_based,oracle,0.9,Oracle dbms_utility char combined
+31871,error_based,oracle,0.9,Oracle char for error extraction
+31872,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function
+31873,error_based,oracle,0.95,Oracle xmltype for error extraction
+31874,boolean_blind,generic,0.5,Simple wildcard bypass
+31875,error_based,oracle,0.9,Oracle ctxsys.drithsx.sn function
+31876,error_based,oracle,0.9,Oracle cast for error extraction
+31877,error_based,oracle,0.95,Oracle xmltype for error extraction
+31878,error_based,oracle,0.9,Oracle cast for error extraction
+31879,error_based,oracle,0.9,Oracle char for error extraction
+31880,error_based,oracle,0.95,Oracle xmltype for error extraction
+31881,error_based,oracle,0.95,Oracle xmltype for error extraction
+31882,boolean_blind,generic,0.5,Simple AND pattern no injection
+31883,error_based,oracle,0.95,Oracle xmltype for error extraction
+31884,error_based,oracle,0.9,Oracle char for error extraction
+31885,error_based,oracle,0.9,Oracle cast for error extraction
+31886,error_based,oracle,0.9,Oracle cast for error extraction
+31887,error_based,oracle,0.95,Oracle xmltype for error extraction
+31888,error_based,oracle,0.9,Oracle char for error extraction
+31889,boolean_blind,generic,0.5,Simple AND pattern bypass

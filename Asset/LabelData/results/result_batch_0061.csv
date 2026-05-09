@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+1800,heavy_query,mysql,0.85,Multiple domain table join
+1801,union_based,generic,0.85,UNION ALL for union-based
+1802,boolean_blind,generic,0.80,WHERE equality for blind
+1803,time_blind,sqlite,0.85,randomblob() for time blind
+1804,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1805,error_based,mysql,0.85,CONCAT for error extraction
+1806,time_blind,postgresql,0.90,pg_sleep() for time blind
+1807,union_based,generic,0.85,UNION ALL for union-based
+1808,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1809,time_blind,sqlite,0.85,randomblob() for time blind
+1810,error_based,mysql,0.85,GROUP BY concat for error extraction
+1811,time_blind,sqlite,0.85,randomblob() for time blind
+1812,error_based,mysql,0.85,exp() with concat for error extraction
+1813,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1814,boolean_blind,generic,0.80,OR comparison for blind
+1815,error_based,mysql,0.90,updatexml() for error extraction
+1816,unknown,generic,0.60,END keyword without context
+1817,heavy_query,postgresql,0.90,generate_series for heavy query
+1818,union_based,generic,0.85,UNION ALL for union-based
+1819,error_based,mysql,0.90,updatexml() for error extraction
+1820,unknown,oracle,0.70,SELECT without full context
+1821,boolean_blind,generic,0.80,OR equality for blind
+1822,boolean_blind,mssql,0.80,CASE WHEN for MSSQL blind
+1823,boolean_blind,generic,0.75,SELECT IF for boolean blind
+1824,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+1825,time_blind,postgresql,0.90,pg_sleep() for time blind
+1826,boolean_blind,generic,0.75,Multiplication for blind
+1827,boolean_blind,mysql,0.80,elt() for boolean blind
+1828,heavy_query,postgresql,0.90,generate_series for heavy query
+1829,heavy_query,mysql,0.85,Multiple domain table join

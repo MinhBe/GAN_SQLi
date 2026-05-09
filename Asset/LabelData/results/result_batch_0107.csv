@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+3180,heavy_query,postgresql,0.9,generate_series for heavy query
+3181,boolean_blind,generic,0.8,WHERE equality for blind
+3182,boolean_blind,mysql,0.8,make_set() for boolean blind
+3183,boolean_blind,generic,0.8,OR equality for blind
+3184,error_based,oracle,0.85,ctxsys.drithsx for error extraction
+3185,heavy_query,sqlite,0.9,randomblob for heavy query
+3186,union_based,generic,0.85,UNION ALL for union-based
+3187,heavy_query,firebird,0.85,Multiple domain tables join
+3188,error_based,mysql,0.85,exp() for error extraction
+3189,heavy_query,firebird,0.85,Multiple rdb tables join
+3190,boolean_blind,generic,0.8,AND equality for blind
+3191,error_based,mysql,0.85,updatexml for error extraction
+3192,boolean_blind,generic,0.75,Multiplication for blind
+3193,heavy_query,sqlite,0.9,randomblob for heavy query
+3194,boolean_blind,generic,0.8,WHERE equality for blind
+3195,boolean_blind,mysql,0.8,group by concat for boolean blind
+3196,time_blind,oracle,0.9,dbms_pipe for Oracle time blind
+3197,boolean_blind,generic,0.75,Multiplication for blind
+3198,heavy_query,firebird,0.85,Multiple rdb tables join
+3199,time_blind,generic,0.9,sleep() for time blind
+3200,error_based,oracle,0.85,xmltype for error extraction
+3201,heavy_query,sqlite,0.9,randomblob for heavy query
+3202,union_based,generic,0.85,UNION ALL for union-based
+3203,heavy_query,oracle,0.85,Multiple all_users table join
+3204,union_based,generic,0.85,UNION ALL for union-based
+3205,union_based,generic,0.85,UNION ALL for union-based
+3206,boolean_blind,generic,0.75,Multiplication for blind
+3207,boolean_blind,generic,0.8,WHERE equality for blind
+3208,boolean_blind,generic,0.8,OR equality for blind
+3209,error_based,oracle,0.85,ctxsys.drithsx for error extraction

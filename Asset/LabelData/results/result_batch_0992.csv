@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29730,benign,generic,1.0,Normal SQL SELECT UNION WHERE
+29731,benign,generic,1.0,Normal SQL SELECT aggregate syntax
+29732,benign,generic,1.0,Normal SQL SELECT INNER JOIN subquery
+29733,benign,generic,1.0,Normal SQL SELECT column only
+29734,benign,generic,1.0,Normal SQL SELECT all columns
+29735,benign,generic,1.0,Normal SQL SELECT column
+29736,benign,generic,1.0,Normal SQL SELECT DISTINCT
+29737,benign,generic,1.0,Normal SQL SELECT COUNT DISTINCT
+29738,benign,generic,1.0,Normal SQL SELECT Count star
+29739,benign,generic,1.0,Normal SQL SELECT subquery
+29740,benign,generic,1.0,Normal SQL SELECT all
+29741,benign,generic,1.0,Normal SQL SELECT WHERE equals
+29742,benign,generic,1.0,Normal SQL SELECT WHERE equals
+29743,benign,generic,1.0,Normal SQL SELECT WHERE unquoted
+29744,benign,generic,1.0,Normal SQL SELECT AND condition
+29745,benign,generic,1.0,Normal SQL SELECT OR condition
+29746,benign,generic,1.0,Normal SQL SELECT OR condition
+29747,benign,generic,1.0,Normal SQL SELECT NOT operator
+29748,benign,generic,1.0,Normal SQL SELECT AND OR condition
+29749,benign,generic,1.0,Normal SQL SELECT multiple NOT
+29750,benign,generic,1.0,Normal SQL SELECT ORDER BY
+29751,benign,generic,1.0,Normal SQL SELECT ORDER BY DESC
+29752,benign,generic,1.0,Normal SQL SELECT ORDER BY multiple
+29753,benign,generic,1.0,Normal SQL SELECT ORDER BY ASC DESC
+29754,benign,generic,1.0,Normal SQL INSERT with VALUES
+29755,benign,generic,1.0,Normal SQL INSERT
+29756,benign,generic,1.0,Normal SQL SELECT IS NULL
+29757,benign,generic,1.0,Normal SQL SELECT IS NOT NULL
+29758,benign,generic,1.0,Normal SQL UPDATE
+29759,benign,generic,1.0,Normal SQL UPDATE WHERE

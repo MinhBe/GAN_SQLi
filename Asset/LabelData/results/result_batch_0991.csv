@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+29700,benign,generic,1.0,Normal SQL SELECT BETWEEN
+29701,benign,generic,1.0,Normal SQL SELECT NOT BETWEEN
+29702,benign,generic,1.0,Normal SQL SELECT BETWEEN string
+29703,benign,generic,1.0,Normal SQL SELECT BETWEEN quoted
+29704,benign,generic,1.0,Normal SQL SELECT NOT BETWEEN
+29705,benign,generic,1.0,Normal SQL SELECT BETWEEN date-like
+29706,benign,generic,1.0,Normal SQL SELECT BETWEEN date
+29707,benign,generic,1.0,Normal SQL SELECT AVG SUM
+29708,benign,generic,1.0,Normal SQL SELECT COUNT
+29709,benign,generic,1.0,Normal SQL SELECT COUNT column
+29710,benign,generic,1.0,Normal SQL SELECT AVG
+29711,benign,generic,1.0,Normal SQL SELECT BETWEEN date
+29712,benign,generic,1.0,Normal SQL SELECT alias
+29713,benign,generic,1.0,Normal SQL SELECT alias
+29714,benign,generic,1.0,Normal SQL SELECT alias bracket
+29715,benign,generic,1.0,Normal SQL SELECT string concat
+29716,benign,generic,1.0,Normal SQL SELECT INNER JOIN
+29717,benign,generic,1.0,Normal SQL SELECT multiple JOINs
+29718,benign,generic,1.0,Normal SQL SELECT LEFT JOIN
+29719,benign,generic,1.0,Normal SQL SELECT LEFT JOIN ORDER BY
+29720,benign,generic,1.0,Normal SQL SELECT RIGHT JOIN syntax error
+29721,benign,generic,1.0,Normal SQL SELECT RIGHT JOIN ORDER BY
+29722,benign,generic,1.0,Normal SQL SELECT FULL OUTER JOIN
+29723,benign,generic,1.0,Normal SQL SELECT function syntax
+29724,benign,generic,1.0,Normal SQL SELECT UNION syntax
+29725,benign,generic,1.0,Normal SQL SELECT function call
+29726,benign,generic,1.0,Normal SQL SELECT UNION ALL
+29727,benign,generic,1.0,Normal SQL SELECT UNION function
+29728,benign,generic,1.0,Normal SQL SELECT UNION ORDER BY
+29729,benign,generic,1.0,Normal SQL UNION ALL ORDER BY

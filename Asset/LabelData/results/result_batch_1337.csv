@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+40080,error_based,oracle,0.90,Oracle with case statement
+40081,error_based,oracle,0.90,Oracle xmltype case-based
+40082,error_based,postgresql,0.85,PostgreSQL char() injection
+40083,error_based,oracle,0.85,basic Oracle with LIKE
+40084,error_based,oracle,0.90,Oracle with nested query
+40085,error_based,oracle,0.85,basic Oracle with LIKE
+40086,error_based,oracle,0.90,Oracle with case statement
+40087,error_based,oracle,0.90,Oracle with nested query
+40088,error_based,oracle,0.90,Oracle xmltype case-based
+40089,error_based,oracle,0.90,Oracle with nested query
+40090,error_based,oracle,0.90,Oracle with case statement
+40091,error_based,oracle,0.90,Oracle with nested query
+40092,error_based,oracle,0.90,Oracle with comment injection
+40093,error_based,oracle,0.90,Oracle ctxsys error function
+40094,error_based,oracle,0.85,basic Oracle with LIKE
+40095,error_based,oracle,0.90,Oracle with LIKE pattern
+40096,error_based,oracle,0.90,Oracle with PostgreSQL cast
+40097,error_based,oracle,0.90,Oracle ctxsys.drithsx.sn error
+40098,error_based,oracle,0.90,Oracle with || operator
+40099,error_based,oracle,0.85,basic Oracle injection
+40100,error_based,postgresql,0.90,PostgreSQL cast for injection
+40101,error_based,oracle,0.85,basic Oracle with LIKE
+40102,error_based,oracle,0.90,Oracle with gvfo alias
+40103,error_based,postgresql,0.90,PostgreSQL cast for injection
+40104,error_based,oracle,0.90,Oracle with nested query
+40105,error_based,postgresql,0.90,PostgreSQL cast for injection
+40106,error_based,oracle,0.90,Oracle with PostgreSQL cast
+40107,error_based,oracle,0.85,basic Oracle injection
+40108,error_based,oracle,0.90,Oracle with case statement
+40109,error_based,oracle,0.85,basic Oracle with LIKE

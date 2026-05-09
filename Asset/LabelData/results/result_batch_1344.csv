@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+40290,error_based,oracle,0.90,Oracle xmltype case-based
+40291,error_based,oracle,0.90,Oracle xmltype case-based
+40292,error_based,oracle,0.85,basic nested query
+40293,error_based,oracle,0.85,basic nested query
+40294,error_based,oracle,0.85,basic nested query
+40295,error_based,oracle,0.90,Oracle xmltype case-based
+40296,error_based,oracle,0.90,Oracle xmltype case-based
+40297,error_based,oracle,0.90,Oracle xmltype case-based
+40298,error_based,oracle,0.90,Oracle xmltype case-based
+40299,error_based,oracle,0.90,Oracle xmltype case-based
+40300,error_based,oracle,0.90,Oracle xmltype case-based
+40301,error_based,oracle,0.90,PostgreSQL cast + Oracle xmltype
+40302,error_based,oracle,0.90,Oracle xmltype case-based
+40303,error_based,oracle,0.85,basic nested query
+40304,error_based,oracle,0.90,Oracle xmltype case-based
+40305,error_based,oracle,0.85,basic nested query
+40306,error_based,oracle,0.90,Oracle xmltype case-based
+40307,error_based,oracle,0.85,basic nested query
+40308,error_based,oracle,0.90,Oracle xmltype case-based
+40309,error_based,oracle,0.90,Oracle xmltype case-based
+40310,error_based,oracle,0.90,ctxsys.drithsx.sn error
+40311,error_based,oracle,0.90,Oracle xmltype case-based
+40312,error_based,oracle,0.85,basic nested query
+40313,error_based,oracle,0.90,Oracle xmltype case-based
+40314,error_based,oracle,0.90,Oracle xmltype case-based
+40315,error_based,oracle,0.85,basic nested query
+40316,error_based,oracle,0.90,Oracle xmltype case-based
+40317,error_based,oracle,0.90,Oracle xmltype case-based
+40318,error_based,oracle,0.90,ctxsys.drithsx.sn error
+40319,error_based,oracle,0.90,Oracle xmltype case-based

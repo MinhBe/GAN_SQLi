@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+30000,benign,generic,1.0,Normal SQL SELECT CEILING
+30001,benign,generic,1.0,Normal SQL SELECT COS
+30002,benign,generic,1.0,Normal SQL SELECT COS PI
+30003,benign,generic,1.0,Normal SQL SELECT COT
+30004,benign,generic,1.0,Normal SQL SELECT COT
+30005,benign,generic,1.0,Normal SQL SELECT COUNT
+30006,benign,generic,1.0,Normal SQL SELECT DEGREES
+30007,benign,generic,1.0,Normal SQL SELECT DEGREES
+30008,benign,generic,1.0,Normal SQL SELECT DIV
+30009,benign,generic,1.0,Normal SQL SELECT DIV
+30010,benign,generic,1.0,Normal SQL SELECT EXP
+30011,benign,generic,1.0,Normal SQL SELECT EXP
+30012,benign,generic,1.0,Normal SQL SELECT FLOOR
+30013,benign,generic,1.0,Normal SQL SELECT FLOOR
+30014,benign,generic,1.0,Normal SQL SELECT LN
+30015,benign,generic,1.0,Normal SQL SELECT LN
+30016,benign,generic,1.0,Normal SQL SELECT LOG
+30017,benign,generic,1.0,Normal SQL SELECT LOG10
+30018,benign,generic,1.0,Normal SQL SELECT LOG10
+30019,benign,generic,1.0,Normal SQL SELECT LOG2
+30020,benign,generic,1.0,Normal SQL SELECT LOG2
+30021,benign,generic,1.0,Normal SQL SELECT MOD
+30022,benign,generic,1.0,Normal SQL SELECT MOD
+30023,benign,generic,1.0,Normal SQL SELECT PI
+30024,benign,generic,1.0,Normal SQL SELECT RADIANS
+30025,benign,generic,1.0,Normal SQL SELECT RADIANS
+30026,benign,generic,1.0,Normal SQL SELECT RAND
+30027,benign,generic,1.0,Normal SQL SELECT RAND
+30028,benign,generic,1.0,Normal SQL SELECT RAND calculation
+30029,benign,generic,1.0,Normal SQL SELECT FLOOR RAND

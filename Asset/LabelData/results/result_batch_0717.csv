@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+21480,benign,generic,1.0,Normal SELECT with FETCH FIRST
+21481,benign,generic,1.0,Incomplete SELECT statement
+21482,benign,generic,1.0,Normal SELECT from table
+21483,benign,generic,1.0,Normal SELECT from table
+21484,benign,generic,1.0,Normal SELECT DISTINCT
+21485,benign,generic,1.0,Normal SELECT with COUNT DISTINCT
+21486,benign,generic,1.0,Normal SELECT with COUNT aggregate
+21487,benign,generic,1.0,Incomplete SELECT with subquery
+21488,benign,generic,1.0,Normal SELECT from table
+21489,benign,generic,1.0,Normal SELECT with WHERE clause
+21490,benign,generic,1.0,Normal SELECT with WHERE clause
+21491,benign,generic,1.0,Normal SELECT with WHERE clause
+21492,benign,generic,1.0,Normal SELECT with multiple WHERE conditions
+21493,benign,generic,1.0,Normal SELECT with OR condition
+21494,benign,generic,1.0,Normal SELECT with OR condition
+21495,benign,generic,1.0,Normal SELECT with NOT operator
+21496,benign,generic,1.0,Normal SELECT with AND and OR
+21497,benign,generic,1.0,Normal SELECT with multiple NOT conditions
+21498,benign,generic,1.0,Normal SELECT with ORDER BY
+21499,benign,generic,1.0,Normal SELECT with ORDER BY DESC
+21500,benign,generic,1.0,Normal SELECT with ORDER BY multiple columns
+21501,benign,generic,1.0,Normal SELECT with ORDER BY ASC DESC
+21502,benign,generic,1.0,Normal INSERT statement
+21503,benign,generic,1.0,Normal INSERT statement
+21504,benign,generic,1.0,Normal SELECT with IS NULL
+21505,benign,generic,1.0,Normal SELECT with IS NOT NULL
+21506,benign,generic,1.0,Normal UPDATE statement
+21507,benign,generic,1.0,Normal UPDATE statement
+21508,benign,generic,1.0,Normal SELECT from table
+21509,benign,generic,1.0,Normal DELETE statement

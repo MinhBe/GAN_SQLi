@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+2010,heavy_query,mssql,0.85,Multiple sysusers table join
+2011,heavy_query,db2,0.85,Multiple systables join
+2012,time_blind,generic,0.85,elt() with sleep for time blind
+2013,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+2014,error_based,mysql,0.90,extractvalue() for error extraction
+2015,time_blind,oracle,0.90,dbms_pipe for Oracle time blind
+2016,error_based,oracle,0.90,sqlid_to_sqlhash for error extraction
+2017,boolean_blind,generic,0.75,Multiplication for blind
+2018,error_based,generic,0.85,Row/concat for error extraction
+2019,union_based,generic,0.85,UNION ALL for union-based
+2020,boolean_blind,postgresql,0.80,regexp_substring for boolean blind
+2021,boolean_blind,generic,0.75,SELECT IF for boolean blind
+2022,error_based,oracle,0.90,ctxsys.drithsx for Oracle error-based
+2023,error_based,mysql,0.90,updatexml() for error extraction
+2024,union_based,generic,0.85,UNION ALL for union-based
+2025,heavy_query,mssql,0.85,Multiple sysusers table join
+2026,time_blind,generic,0.90,sleep() for time blind
+2027,time_blind,sqlite,0.85,randomblob() for time blind
+2028,union_based,generic,0.85,UNION ALL for union-based
+2029,union_based,generic,0.85,UNION ALL for union-based
+2030,union_based,generic,0.85,UNION ALL for union-based
+2031,time_blind,mssql,0.90,waitfor delay for time blind
+2032,boolean_blind,generic,0.80,rlike() for boolean blind
+2033,time_blind,postgresql,0.90,pg_sleep() for time blind
+2034,boolean_blind,generic,0.80,WHERE equality for blind
+2035,error_based,generic,0.85,Row/concat for error extraction
+2036,boolean_blind,generic,0.80,rlike() for boolean blind
+2037,boolean_blind,generic,0.75,SELECT IF for boolean blind
+2038,boolean_blind,mysql,0.80,CASE WHEN for boolean blind
+2039,boolean_blind,generic,0.80,OR equality for blind

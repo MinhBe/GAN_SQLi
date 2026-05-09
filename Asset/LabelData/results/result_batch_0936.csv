@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+28050,benign,generic,1.0,Normal SELECT with BETWEEN date range
+28051,benign,generic,1.0,Normal SELECT with alias
+28052,benign,generic,1.0,Normal SELECT with alias
+28053,benign,generic,1.0,Normal SELECT with alias
+28054,benign,generic,1.0,Normal SELECT with string concatenation
+28055,benign,generic,1.0,Normal SELECT function call
+28056,benign,generic,1.0,Invalid SQL syntax - not an attack
+28057,benign,generic,1.0,Normal SELECT function call
+28058,benign,generic,1.0,Normal SELECT with LEFT JOIN
+28059,benign,generic,1.0,Invalid SQL syntax - not an attack
+28060,benign,generic,1.0,Normal SELECT with RIGHT JOIN
+28061,benign,generic,1.0,Normal SELECT function call
+28062,benign,generic,1.0,Invalid SQL syntax - not an attack
+28063,benign,generic,1.0,Invalid SQL syntax - not an attack
+28064,benign,generic,1.0,Invalid SQL syntax - not an attack
+28065,benign,generic,1.0,Normal SELECT function call with UNION ALL
+28066,benign,generic,1.0,Invalid SQL syntax - not an attack
+28067,benign,generic,1.0,Normal SELECT with UNION
+28068,benign,generic,1.0,Normal SELECT with UNION ALL
+28069,benign,generic,1.0,Normal SELECT with UNION
+28070,benign,generic,1.0,Invalid SQL syntax - not an attack
+28071,benign,generic,1.0,Invalid SQL syntax - not an attack
+28072,benign,generic,1.0,Normal SELECT with FETCH FIRST
+28073,benign,generic,1.0,Invalid SQL - not a valid statement
+28074,benign,generic,1.0,Invalid SQL - not a valid statement
+28075,benign,generic,1.0,Normal SELECT DISTINCT
+28076,benign,generic,1.0,Normal SELECT COUNT DISTINCT
+28077,benign,generic,1.0,Normal SELECT COUNT
+28078,benign,generic,1.0,Invalid SQL syntax - not an attack
+28079,benign,generic,1.0,Normal SELECT all rows

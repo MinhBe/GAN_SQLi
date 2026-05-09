@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+36690,error_based,oracle,0.95,xmltype for Oracle error extraction
+36691,error_based,oracle,0.95,xmltype for Oracle error extraction
+36692,error_based,oracle,0.95,xmltype for Oracle error extraction
+36693,error_based,postgresql,0.9,cast for PostgreSQL injection
+36694,error_based,oracle,0.95,xmltype for Oracle error extraction
+36695,error_based,oracle,0.95,xmltype for Oracle error extraction
+36696,error_based,oracle,0.95,xmltype for Oracle error extraction
+36697,error_based,oracle,0.95,xmltype for Oracle error extraction
+36698,auth_bypass,generic,0.6,wildcard injection
+36699,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+36700,error_based,oracle,0.95,xmltype for Oracle error extraction
+36701,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+36702,error_based,oracle,0.95,xmltype for Oracle error extraction
+36703,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+36704,error_based,oracle,0.95,xmltype for Oracle error extraction
+36705,error_based,oracle,0.95,xmltype for Oracle error extraction
+36706,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+36707,error_based,oracle,0.95,xmltype for Oracle error extraction
+36708,error_based,oracle,0.95,xmltype for Oracle error extraction
+36709,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+36710,error_based,oracle,0.95,xmltype for Oracle error extraction
+36711,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+36712,error_based,oracle,0.95,xmltype for Oracle error extraction
+36713,error_based,oracle,0.95,xmltype for Oracle error extraction
+36714,error_based,oracle,0.95,xmltype for Oracle error extraction
+36715,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+36716,error_based,oracle,0.95,xmltype for Oracle error extraction
+36717,error_based,oracle,0.95,xmltype for Oracle error extraction
+36718,error_based,oracle,0.95,xmltype for Oracle error extraction
+36719,auth_bypass,generic,0.5,simple condition injection

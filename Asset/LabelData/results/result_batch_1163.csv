@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+34860,error_based,oracle,0.95,xmltype for Oracle error extraction
+34861,error_based,oracle,0.95,xmltype for Oracle error extraction
+34862,auth_bypass,generic,0.5,simple condition injection
+34863,error_based,oracle,0.9,cast for PostgreSQL injection
+34864,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind
+34865,auth_bypass,generic,0.6,wildcard injection
+34866,error_based,oracle,0.9,cast for PostgreSQL injection
+34867,auth_bypass,generic,0.6,wildcard injection
+34868,error_based,oracle,0.95,xmltype for Oracle error extraction
+34869,error_based,oracle,0.95,xmltype for Oracle error extraction
+34870,error_based,oracle,0.95,xmltype for Oracle error extraction
+34871,error_based,oracle,0.9,cast for PostgreSQL injection
+34872,error_based,oracle,0.95,xmltype for Oracle error extraction
+34873,error_based,oracle,0.9,cast for PostgreSQL injection
+34874,error_based,oracle,0.9,cast for PostgreSQL injection
+34875,error_based,oracle,0.95,xmltype for Oracle error extraction
+34876,error_based,oracle,0.95,xmltype for Oracle error extraction
+34877,error_based,oracle,0.95,xmltype for Oracle error extraction
+34878,error_based,oracle,0.95,xmltype for Oracle error extraction
+34879,auth_bypass,generic,0.6,wildcard injection
+34880,auth_bypass,generic,0.5,simple condition injection
+34881,error_based,oracle,0.95,xmltype for Oracle error extraction
+34882,error_based,oracle,0.95,xmltype for Oracle error extraction
+34883,error_based,oracle,0.95,xmltype for Oracle error extraction
+34884,auth_bypass,generic,0.6,wildcard injection
+34885,boolean_blind,oracle,0.8,dbms_utility.sqlid_to_sqlhash for blind
+34886,error_based,oracle,0.9,cast for PostgreSQL injection
+34887,error_based,oracle,0.95,xmltype for Oracle error extraction
+34888,error_based,oracle,0.95,xmltype for Oracle error extraction
+34889,boolean_blind,oracle,0.8,ctxsys.drithsx.sn for Oracle blind

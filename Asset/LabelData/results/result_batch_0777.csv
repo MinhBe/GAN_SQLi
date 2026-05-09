@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+23280,benign,generic,1.0,Normal DELETE statement
+23281,benign,generic,1.0,Normal SELECT with function
+23282,benign,generic,1.0,Normal SELECT with subquery
+23283,benign,generic,1.0,Normal SELECT TOP from MSSQL
+23284,benign,generic,1.0,Incomplete SELECT statement
+23285,benign,generic,1.0,Normal SELECT with FETCH FIRST
+23286,benign,generic,1.0,Normal SELECT TOP PERCENT from MSSQL
+23287,benign,generic,1.0,Normal SELECT with FETCH FIRST
+23288,benign,generic,1.0,Normal SELECT TOP with WHERE
+23289,benign,generic,1.0,Normal SELECT with LIMIT and WHERE
+23290,benign,generic,1.0,Normal SELECT with FETCH FIRST and WHERE
+23291,benign,generic,1.0,Normal SELECT with MIN aggregate
+23292,benign,generic,1.0,Normal SELECT with MIN aggregate
+23293,benign,generic,1.0,Normal SELECT with subquery
+23294,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+23295,benign,generic,1.0,Incomplete SELECT statement
+23296,benign,generic,1.0,Malformed SELECT with multiple clauses
+23297,benign,generic,1.0,Malformed SELECT with multiple TOP and FETCH
+23298,benign,generic,1.0,Malformed SELECT with multiple clauses
+23299,benign,generic,1.0,Malformed SELECT with multiple SELECT
+23300,benign,generic,1.0,Normal SELECT with LIMIT and WHERE
+23301,benign,generic,1.0,Normal SELECT with FETCH FIRST and WHERE
+23302,benign,generic,1.0,Normal SELECT with AVG aggregate
+23303,benign,generic,1.0,Normal SELECT with NOT LIKE pattern
+23304,benign,generic,1.0,Normal SELECT with AVG and SUM
+23305,benign,generic,1.0,Normal SELECT with AVG and SUM
+23306,benign,generic,1.0,Normal SELECT with AVG and SUM
+23307,benign,generic,1.0,Normal SELECT with COUNT aggregate
+23308,benign,generic,1.0,Normal SELECT with COUNT aggregate
+23309,benign,generic,1.0,Normal SELECT with AVG aggregate

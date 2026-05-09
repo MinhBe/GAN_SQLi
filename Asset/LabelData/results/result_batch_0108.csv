@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+3210,boolean_blind,generic,0.8,AND equality for blind
+3211,heavy_query,postgresql,0.9,generate_series for heavy query
+3212,boolean_blind,generic,0.75,Multiplication for blind
+3213,heavy_query,mysql,0.85,Multiple mysql db join
+3214,boolean_blind,generic,0.8,WHERE equality for blind
+3215,error_based,mysql,0.85,extractvalue for error extraction
+3216,heavy_query,postgresql,0.9,generate_series for heavy query
+3217,boolean_blind,generic,0.8,SELECT CASE WHEN for blind
+3218,union_based,generic,0.85,UNION ALL for union-based
+3219,boolean_blind,generic,0.8,OR equality for blind
+3220,heavy_query,sqlite,0.9,randomblob for heavy query
+3221,union_based,generic,0.85,UNION ALL for union-based
+3222,heavy_query,generic,0.85,Multiple table join
+3223,union_based,generic,0.85,UNION ALL for union-based
+3224,heavy_query,mysql,0.85,benchmark for heavy query
+3225,error_based,oracle,0.85,utl_inaddr for error extraction
+3226,heavy_query,postgresql,0.9,generate_series for heavy query
+3227,boolean_blind,generic,0.8,WHERE equality for blind
+3228,time_blind,mssql,0.9,waitfor delay MSSQL time blind
+3229,boolean_blind,mysql,0.8,elt() for boolean blind
+3230,union_based,generic,0.85,UNION ALL for union-based
+3231,heavy_query,db2,0.85,Multiple information_schema join
+3232,boolean_blind,generic,0.8,OR equality for blind
+3233,boolean_blind,mysql,0.8,make_set() for boolean blind
+3234,heavy_query,oracle,0.85,Multiple all_users table join
+3235,time_blind,mysql,0.9,elt() with sleep for time blind
+3236,boolean_blind,generic,0.8,OR equality for blind
+3237,boolean_blind,generic,0.8,WHERE equality for blind
+3238,unknown,generic,0.5,Incomplete payload
+3239,boolean_blind,generic,0.8,OR equality for blind

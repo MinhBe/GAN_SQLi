@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+3630,heavy_query,sqlite,0.9,randomblob for heavy query
+3631,time_blind,mssql,0.9,waitfor delay MSSQL time blind
+3632,error_based,mysql,0.85,extractvalue for error extraction
+3633,boolean_blind,mssql,0.8,CONVERT INT for blind
+3634,boolean_blind,generic,0.8,AND equality for blind
+3635,boolean_blind,generic,0.8,AND equality for blind
+3636,boolean_blind,generic,0.8,WHERE equality for blind
+3637,boolean_blind,generic,0.8,WHERE equality for blind
+3638,boolean_blind,mysql,0.8,make_set() for boolean blind
+3639,union_based,generic,0.85,UNION ALL for union-based
+3640,boolean_blind,generic,0.8,AND equality for blind
+3641,heavy_query,sqlite,0.9,randomblob for heavy query
+3642,boolean_blind,generic,0.8,WHERE equality for blind
+3643,time_blind,generic,0.9,sleep() for time blind
+3644,heavy_query,postgresql,0.9,generate_series for heavy query
+3645,heavy_query,postgresql,0.9,generate_series for heavy query
+3646,boolean_blind,mysql,0.8,elt() for boolean blind
+3647,boolean_blind,mysql,0.8,ELT IF for boolean blind
+3648,heavy_query,postgresql,0.9,generate_series for heavy query
+3649,boolean_blind,mysql,0.8,elt() for boolean blind
+3650,boolean_blind,generic,0.8,AND equality for blind
+3651,union_based,generic,0.85,UNION ALL for union-based
+3652,union_based,generic,0.85,UNION ALL for union-based
+3653,boolean_blind,mysql,0.8,elt() for boolean blind
+3654,boolean_blind,generic,0.8,AND equality for blind
+3655,boolean_blind,mysql,0.8,make_set() for boolean blind
+3656,heavy_query,postgresql,0.9,generate_series for heavy query
+3657,boolean_blind,mysql,0.8,ELT IF for boolean blind
+3658,union_based,generic,0.85,UNION ALL for union-based
+3659,union_based,generic,0.85,UNION ALL for union-based

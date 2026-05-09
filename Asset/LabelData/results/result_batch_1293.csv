@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+38760,error_based,oracle,0.95,Oracle XMLType error extraction with ctxsys
+38761,error_based,oracle,0.95,Oracle XMLType upper() function for error-based
+38762,error_based,postgresql,0.9,PostgreSQL char() concatenation for errors
+38763,error_based,oracle,0.95,Oracle ctxsys.drithsx.sn() for error extraction
+38764,boolean_blind,generic,0.85,Case when technique for boolean blind
+38765,boolean_blind,generic,0.85,Equality check for boolean blind
+38766,error_based,postgresql,0.9,PostgreSQL cast ::numeric for error-based
+38767,boolean_blind,generic,0.85,Case when technique for boolean blind
+38768,boolean_blind,generic,0.85,OR with boolean condition
+38769,error_based,postgresql,0.9,PostgreSQL cast for error extraction
+38770,error_based,oracle,0.95,Oracle XMLType upper() for error-based
+38771,boolean_blind,generic,0.85,LIKE operator for blind
+38772,error_based,oracle,0.95,Oracle XMLType + PostgreSQL cast mixed
+38773,error_based,oracle,0.95,Oracle XMLType upper() error extraction
+38774,error_based,oracle,0.95,Oracle XMLType for error-based extraction
+38775,boolean_blind,generic,0.85,Pattern matching for boolean blind
+38776,error_based,oracle,0.95,Oracle XMLType + case when for error
+38777,error_based,oracle,0.95,Oracle XMLType upper() for errors
+38778,error_based,postgresql,0.9,PostgreSQL cast for error extraction
+38779,boolean_blind,generic,0.85,Equality check for boolean blind
+38780,error_based,postgresql,0.9,PostgreSQL cast for error extraction
+38781,error_based,oracle,0.95,Oracle XMLType error extraction with case
+38782,error_based,oracle,0.95,Oracle XMLType upper() function
+38783,error_based,oracle,0.95,Oracle XMLType upper() function
+38784,error_based,oracle,0.95,Oracle XMLType + select for error-based
+38785,error_based,postgresql,0.9,PostgreSQL char() for error-based
+38786,error_based,oracle,0.95,Oracle XMLType upper() error extraction
+38787,boolean_blind,generic,0.85,OR condition for boolean blind
+38788,error_based,postgresql,0.9,PostgreSQL cast for errors
+38789,boolean_blind,generic,0.85,Equality check for blind

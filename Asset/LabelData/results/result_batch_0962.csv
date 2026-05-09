@@ -1,0 +1,31 @@
+row_index,sqli_type,db_engine,confidence,reasoning
+28830,benign,generic,1.0,Normal SQL SELECT BETWEEN date
+28831,benign,generic,1.0,Normal SQL SELECT alias
+28832,benign,generic,1.0,Normal SQL SELECT alias
+28833,benign,generic,1.0,Normal SQL SELECT alias bracket
+28834,benign,generic,1.0,Normal SQL SELECT string concat
+28835,benign,generic,1.0,Normal SQL SELECT INNER JOIN
+28836,benign,generic,1.0,Normal SQL SELECT multiple JOINs
+28837,benign,generic,1.0,Normal SQL SELECT LEFT JOIN
+28838,benign,generic,1.0,Normal SQL SELECT LEFT JOIN ORDER BY
+28839,benign,generic,1.0,Normal SQL SELECT RIGHT JOIN syntax error
+28840,benign,generic,1.0,Normal SQL SELECT RIGHT JOIN ORDER BY
+28841,benign,generic,1.0,Normal SQL SELECT FULL OUTER JOIN
+28842,benign,generic,1.0,Normal SQL SELECT function syntax
+28843,benign,generic,1.0,Normal SQL SELECT UNION syntax
+28844,benign,generic,1.0,Normal SQL SELECT function call
+28845,benign,generic,1.0,Normal SQL SELECT UNION ALL
+28846,benign,generic,1.0,Normal SQL SELECT UNION function
+28847,benign,generic,1.0,Normal SQL SELECT UNION ORDER BY
+28848,benign,generic,1.0,Normal SQL SELECT UNION ALL ORDER BY
+28849,benign,generic,1.0,Normal SQL SELECT UNION WHERE
+28850,benign,generic,1.0,Normal SQL SELECT aggregate syntax
+28851,benign,generic,1.0,Normal SQL SELECT INNER JOIN subquery
+28852,benign,generic,1.0,Normal SQL SELECT FETCH PERCENT
+28853,benign,generic,1.0,Normal SQL SELECT column only
+28854,benign,generic,1.0,Normal SQL SELECT all columns
+28855,benign,generic,1.0,Normal SQL SELECT column
+28856,benign,generic,1.0,Normal SQL SELECT DISTINCT
+28857,benign,generic,1.0,Normal SQL SELECT COUNT DISTINCT
+28858,benign,generic,1.0,Normal SQL SELECT Count star
+28859,benign,generic,1.0,Normal SQL SELECT subquery
