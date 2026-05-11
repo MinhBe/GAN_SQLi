@@ -1,0 +1,59 @@
+Split: train=28602 val=6130 test=6128
+
+Per-type distribution:
+
+  train:
+    benign: 13768
+    error_based: 6064
+    boolean_blind: 3172
+    time_blind: 1674
+    union_based: 1565
+    heavy_query: 907
+    auth_bypass: 835
+    out_of_band: 427
+    unknown: 87
+    polyglot: 36
+    stacked_queries: 30
+    generic: 13
+    rce: 7
+    comment_based: 7
+    inline_query: 6
+    second_order: 2
+    ldap_injection: 1
+    command_injection: 1
+
+  val:
+    benign: 2951
+    error_based: 1299
+    boolean_blind: 680
+    time_blind: 359
+    union_based: 335
+    heavy_query: 195
+    auth_bypass: 179
+    out_of_band: 91
+    unknown: 19
+    stacked_queries: 7
+    polyglot: 7
+    generic: 3
+    inline_query: 1
+    rce: 1
+    comment_based: 1
+    ldap_injection: 1
+    second_order: 1
+
+  test:
+    benign: 2950
+    error_based: 1300
+    boolean_blind: 679
+    time_blind: 358
+    union_based: 336
+    heavy_query: 194
+    auth_bypass: 179
+    out_of_band: 92
+    unknown: 18
+    polyglot: 8
+    stacked_queries: 6
+    generic: 3
+    comment_based: 2
+    rce: 2
+    inline_query: 1

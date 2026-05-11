@@ -1,0 +1,227 @@
+{
+  "total_rows": 40860,
+  "payload_col": "payload_norm",
+  "type_col": "sqli_type",
+  "source_diversity": null,
+  "skeleton_uniqueness": {
+    "unique": 40860,
+    "total": 40860,
+    "ratio": 1.0
+  },
+  "per_type": {
+    "auth_bypass": {
+      "count": 1193,
+      "unique_skeletons": 1193,
+      "ratio": 1.0
+    },
+    "benign": {
+      "count": 19669,
+      "unique_skeletons": 19669,
+      "ratio": 1.0
+    },
+    "boolean_blind": {
+      "count": 4531,
+      "unique_skeletons": 4531,
+      "ratio": 1.0
+    },
+    "command_injection": {
+      "count": 1,
+      "unique_skeletons": 1,
+      "ratio": 1.0
+    },
+    "comment_based": {
+      "count": 10,
+      "unique_skeletons": 10,
+      "ratio": 1.0
+    },
+    "error_based": {
+      "count": 8663,
+      "unique_skeletons": 8663,
+      "ratio": 1.0
+    },
+    "generic": {
+      "count": 19,
+      "unique_skeletons": 19,
+      "ratio": 1.0
+    },
+    "heavy_query": {
+      "count": 1296,
+      "unique_skeletons": 1296,
+      "ratio": 1.0
+    },
+    "inline_query": {
+      "count": 8,
+      "unique_skeletons": 8,
+      "ratio": 1.0
+    },
+    "ldap_injection": {
+      "count": 2,
+      "unique_skeletons": 2,
+      "ratio": 1.0
+    },
+    "out_of_band": {
+      "count": 610,
+      "unique_skeletons": 610,
+      "ratio": 1.0
+    },
+    "polyglot": {
+      "count": 51,
+      "unique_skeletons": 51,
+      "ratio": 1.0
+    },
+    "rce": {
+      "count": 10,
+      "unique_skeletons": 10,
+      "ratio": 1.0
+    },
+    "second_order": {
+      "count": 3,
+      "unique_skeletons": 3,
+      "ratio": 1.0
+    },
+    "stacked_queries": {
+      "count": 43,
+      "unique_skeletons": 43,
+      "ratio": 1.0
+    },
+    "time_blind": {
+      "count": 2391,
+      "unique_skeletons": 2391,
+      "ratio": 1.0
+    },
+    "union_based": {
+      "count": 2236,
+      "unique_skeletons": 2236,
+      "ratio": 1.0
+    },
+    "unknown": {
+      "count": 124,
+      "unique_skeletons": 124,
+      "ratio": 1.0
+    }
+  },
+  "top_tokens": [
+    {
+      "token": ")",
+      "count": 284407
+    },
+    {
+      "token": "(",
+      "count": 258683
+    },
+    {
+      "token": "||chr",
+      "count": 117792
+    },
+    {
+      "token": "=",
+      "count": 78806
+    },
+    {
+      "token": "113",
+      "count": 59623
+    },
+    {
+      "token": "select",
+      "count": 53329
+    },
+    {
+      "token": "from",
+      "count": 43251
+    },
+    {
+      "token": "where",
+      "count": 27058
+    },
+    {
+      "token": "username",
+      "count": 26897
+    },
+    {
+      "token": "and",
+      "count": 26733
+    },
+    {
+      "token": "122",
+      "count": 23851
+    },
+    {
+      "token": "*",
+      "count": 19876
+    },
+    {
+      "token": "or",
+      "count": 17058
+    },
+    {
+      "token": "dual",
+      "count": 16572
+    },
+    {
+      "token": "1",
+      "count": 14151
+    },
+    {
+      "token": "chr",
+      "count": 13207
+    },
+    {
+      "token": "else",
+      "count": 13018
+    },
+    {
+      "token": "then",
+      "count": 12978
+    },
+    {
+      "token": "when",
+      "count": 12967
+    },
+    {
+      "token": "end",
+      "count": 12816
+    }
+  ],
+  "top_target_tables": [
+    {
+      "table": "dual",
+      "count": 16681
+    },
+    {
+      "table": "users",
+      "count": 11157
+    },
+    {
+      "table": "generate_series",
+      "count": 348
+    },
+    {
+      "table": "rdb",
+      "count": 346
+    },
+    {
+      "table": "information_schema",
+      "count": 260
+    },
+    {
+      "table": "sysibm",
+      "count": 238
+    },
+    {
+      "table": "domain",
+      "count": 238
+    },
+    {
+      "table": "all_users",
+      "count": 233
+    },
+    {
+      "table": "customers",
+      "count": 204
+    },
+    {
+      "table": "pg_sleep",
+      "count": 195
+    }
+  ]
+}

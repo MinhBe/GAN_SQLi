@@ -1,0 +1,10 @@
+{
+  "__STR__": ["'admin'", "'test'", "'root'", "'user'", "'guest'"],
+  "__INT__": ["1", "0", "-1", "999", "10"],
+  "__HEX__": ["0x616263", "0x73797374656d", "0x61646d696e", "0x70617373", "0x726f6f74"],
+  "__TABLE__": ["users", "accounts", "admin", "sessions", "products"],
+  "__COL__": ["id", "username", "password", "email", "role"],
+  "__IDENT__": ["xmltype", "dbms_pipe", "ctxsys", "sys_context", "user_tables"],
+  "__TIME__": ["5", "10", "1", "2", "3"],
+  "__BIGINT__": ["9999", "100000", "1", "0", "65535"]
+}
