@@ -1,0 +1,862 @@
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 1
+Enhancing SQL Injection Detection and Prevention
+Using Generative Models
+Naga Sai Dasari Atta Badii Armin Moin Ahmed Ashlam
+Dept.of Computer Science, Dept.of Computer Science, Dept.of Computer Science, Dept.of Computer Science,
+University of Reading, UK University of Reading, UK University of Colorado University of Reading, UK
+nagasai.dasari@reading.ac.uk atta.badii@reading.ac.uk Colorodo Springs,CO, USA a.ashlam@pgr.reading.ac.uk
+amoin@uccs.edu
+Abstract—SQLInjection(SQLi)continuestoposeasignificant Several major challenges have made SQLi detection diffi-
+threat to the security of web applications, enabling attackers cult: the lack of data diversity, static detection systems, and
+to manipulate databases and access sensitive information with-
+the high error rates of existing solutions. These limitations
+out authorisation. Although advancements have been made in
+prevent traditional methods from adapting to the broad range detection techniques, traditional signature-based methods still
+struggle to identify sophisticated SQL injection attacks that ofSQLInjectionAttack(SQLIA)types,particularlythemore
+evade predefined patterns. As SQLi attacks evolve, the need for complex ones.
+more adaptive detection systems becomes crucial. This paper To address these limitations, this research introduces a
+introduces an innovative approach that leverages generative
+dynamic approach that combines synthetic data generation
+models to enhance SQLi detection and prevention mechanisms. with advanced deep learning models. Specifically, Variational
+By incorporating Variational Autoencoders (VAE), Conditional
+Wasserstein GAN with Gradient Penalty (CWGAN-GP), and U- Autoencoders (VAE), U-Net, and Conditional Wasserstein
+Net, synthetic SQL queries were generated to augment training GAN with Gradient Penalty (CWGAN-GP) are leveraged to
+datasets for machine learning models. The proposed method generate diverse synthetic SQL data. This enriched dataset
+demonstrated improved accuracy in SQLi detection systems
+helpsimprovegeneralisationandprovidesbetteridentification
+by reducing both false positives and false negatives. Extensive
+of both traditional and modern SQLi attacks [5], [6], [7].
+empirical testing further illustrated the ability of the system to
+adapt to evolving SQLi attack patterns, resulting in enhanced The aim of this research is to enhance SQLIA detection by
+precision and robustness. integrating synthetic data generation with advanced machine
+learning models to improve accuracy, adaptability, and overall
+Index Terms—SQL Injection, Machine Learning, Generative
+Models, Variational Autoencoder (VAE), U-Net, CWGAN-GP, system robustness. By preprocessing and embedding SQL
+Data Augmentation, Cybersecurity. queries and using synthetic data to diversify the training set,
+thestudyfocusesonoptimisingkeyperformancemetricssuch
+as accuracy, precision, recall, and F1-score. The remainder
+I. INTRODUCTION
+of this paper is organised as follows. Section II covers the
+SQL Injection (SQLi) remains one of the most critical literature review; Section III presents the implementation to
+security vulnerabilities affecting web applications today. As developtheSQLidetectionsolution.InSectionIV,resultsand
+cyber threats evolve, attackers continuously exploit input han- analysis are discussed, followed by the conclusion in Section
+dling weaknesses, injecting malicious SQL commands into V.Finally,SectionVIoutlinesthelimitationsandfuturescope
+legitimatequeries.Theseattacks,oftenlaunchedthroughinput of the work.
+fields such as login forms or URL parameters, enable unau-
+thorised access to sensitive data or, in severe cases, complete
+II. LITERATUREREVIEW
+control over the database.
+A. SQL Injection
+TheOpenWebApplicationSecurityProject(OWASP)con-
+tinues to rank SQLi among the top security risks, reinforcing Traditional SQL Injection (SQLi) prevention methods pri-
+itsprevalenceandseverityinthelandscapeofwebvulnerabil- marily focused on fundamental coding practices such as input
+ities [1]. The impact of SQLi attacks is often severe, leading validationandparameterisedqueries,whichaimedtomitigate
+to data breaches, financial loss, and reputational damage to attacksbysanitisinguserinputs.Althoughthesemethodswere
+affected organisations. effectiveforbasicattacks,moresophisticatedtechniques,such
+Traditional defence mechanisms, such as input validation astime-based,blind,andsecond-orderSQLinjections,enabled
+and signature-based detection systems, have been widely em- malicious inputs to bypass traditional validation mechanisms
+ployedtocombatSQLiattacks.However,thesemethodsoften and execute the payload at a later stage [2]. As SQLi threats
+fall short when confronting the evolving techniques used by evolved, signature-based detection systems were introduced,
+attackers.Signature-basedsystems,inparticular,strugglewith relying on known attack patterns to identify malicious queries
+false positives and false negatives, especially when attackers in real time. However, these systems encountered significant
+use obfuscation or innovative variations of SQLi that deviate difficultiesinhandlingnovelandobfuscatedattacksthatdevi-
+from known patterns [2], [3], [4]. ated from predefined patterns, resulting in high false-positive
+5202
+beF
+7
+]RC.sc[
+1v68740.2052:viXra
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 2
+and false-negative rates [3]. To address these challenges, rule- B. Text Data Synthesis
+based systems were developed to analyse query structures
+1) Rule-basedTextSynthesis: Textdatasynthesisiscrucial
+more deeply. Yet, they continued to experience high false-
+for enhancing the performance of machine learning models,
+positive rates and struggled to detect subtle attacks [4].
+offering a range of techniques to generate synthetic data.
+With the continuous advancement of SQLi techniques,
+Model-based techniques, such as those explored in the work
+behavioural detection systems were developed to identify
+of Panagiotis et al [13], generate diverse data by rephrasing
+anomalies in query behaviour. These systems aimed to detect
+content while preserving its meaning, though they are com-
+deviations from normal query patterns but often produced
+putationally demanding and can introduce semantic drift. On
+high false positives, particularly in dynamic environments
+theotherhand,rule-basedaugmentationmethods,suchassyn-
+[8]. Hybrid models that combined static code analysis with
+onymreplacement,randominsertion,andswapping[14],offer
+dynamic execution traces improved detection by analysing
+computational efficiency but often fail to maintain contextual
+both code structure and runtime behaviour. Nonetheless, their
+meaning, leading to distorted outputs. These limitations make
+dependency on labelled data reduced their effectiveness in
+rule-basedmethodsunsuitableforcomplextaskssuchasSQL
+real-world scenarios, where such datasets are often limited
+query augmentation.
+[9]. Heuristic-based systems, such as V1p3R, attempted to
+Feature-Space Augmentation, introduced in the work of
+overcome these issues by leveraging error message feedback
+Shorten et al [15], applies transformations to latent em-
+to adapt detection in real time, but complex and obfuscated
+beddings to improve generalisation by modifying intermedi-
+attacks remained difficult to detect [10].
+ate representations. Graph-Structured Augmentation preserves
+To overcome these persistent limitations, machine learning syntactic relationships by leveraging knowledge graphs or
+approaches have been increasingly applied to SQLi detection. syntax trees, while MixUp Augmentation blends text samples
+Early models, such as Na¨ıve Bayes combined with Role- and labels to expand decision boundaries and reduce overfit-
+Based Access Control (RBAC), improved detection accuracy ting. However, these methods can reduce interpretability and
+byclassifyingqueriesprobabilistically.However,thesemodels introduce inconsistencies, particularly in structured data such
+faced difficulties in handling obfuscated attacks and required as SQL queries, where maintaining syntactic and semantic
+manually crafted features, which limited their adaptability to relationships is critical. Minor changes in SQL queries can
+novel attack patterns [5]. Support Vector Machines (SVMs) disrupt the query logic, making rule-based approaches less
+offered further improvements by enhancing scalability and suitable for augmenting SQL data. Consequently, model-
+handling more complex SQLi patterns. Yet, their reliance on based synthesis provides a more context-aware and accurate
+manual feature engineering rendered them less effective in approach for SQL data augmentation.
+detecting rapidly evolving attacks [6]. Ensemble methods, in-
+2) Model-based Text Synthesis: Large Language Models
+cluding LightGBM and Gradient Boosting Machines (GBM),
+(LLMs), as highlighted in Lovelace et al [16], capture both
+achievedhighdetectionaccuracybycombiningmultipleweak
+short- and long-term dependencies, making them effective
+learners. Despite these advancements, their dependence on
+for tasks such as SQL query augmentation. However, LLMs
+hand-crafted features hindered their ability to generalise to
+requiresubstantialcomputationalresourcesandlargedatasets
+unseen queries [7].
+for training, which limits their utility in resource-constrained
+More recently, deep learning models, such as Convolu- environments. Labs [17] discusses the use of Variational
+tional Neural Networks (CNNs) and Multi-Layer Perceptrons Autoencoders (VAEs) and Generative Adversarial Networks
+(MLPs), have pushed SQLi detection forward by automati- (GANs), with VAEs providing flexibility by manipulating
+cally extracting complex patterns from SQL queries. These latent space and GANs excelling in generating realistic data
+models reduced false positives and enhanced the detection through adversarial training. However, GANs demand careful
+of obfuscated attacks. However, they required large, labelled tuning to prevent mode collapse, which can limit their appli-
+data sets and high computational resources, which limits their cation in certain scenarios.
+scalability in practical applications [11]. SQLNN, a deep Transformer-based models, such as BERT, T5, and BART,
+learning model that utilised TF-IDF for feature extraction, utilise attention mechanisms to capture long-range depen-
+demonstrated high accuracy but faced challenges in inter- dencies and are effective for tasks such as text generation
+pretability and struggled to detect highly obfuscated queries and translation. However, these models face scalability chal-
+[12]. lenges when deployed at scale. Recurrent Neural Networks
+Despite these advancements, several challenges remain. (RNNs), including LSTM and GRU, remain valuable for
+Adapting to evolving SQLi techniques, managing limited la- sequence modelling involving temporal dependencies but are
+belleddatasets,andaddressingthecomputationalcostsofdeep increasinglybeingreplacedbytransformersinmanyscenarios.
+learning models continue to present significant hurdles. Tra- Additionally, Diffusion Models, such as Denoising Diffusion
+ditional detection systems remain vulnerable to sophisticated Probabilistic Models (DDPM), introduced in the work of
+attacks, while machine learning models are still dependent on Labs [17], iteratively refine noisy data to improve sample
+manual feature engineering. These limitations have driven the quality and efficiency, though they also require significant
+exploration of adaptive solutions, such as the generation of computational resources. Seq-U-Net, introduced in the work
+synthetic data to augment limited datasets and improve model of Stoller et al [18], provides a more efficient alternative for
+generalisation. sequencemodelling.Byusingcausalconvolutions,Seq-U-Net
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 3
+handles sequence dependencies with reduced computational III. IMPLEMENTATION
+costs while preserving syntactic and semantic relationships,
+Thepipeline,asillustratedinFigure1,detailsthestructured
+making it particularly useful for structured tasks such as SQL
+stages of data processing and model implementation used
+query generation in resource-constrained environments.
+in this study. The process commences with data collection
+and preprocessing, followed by tokenisation, embedding,
+3) Algorithmic-based Text Synthesis: In addition to model-
+and encoding. Subsequent steps include the generation of
+basedmethods,algorithmicapproachessuchasSMOTE(Syn-
+synthetic data using models such as U-Net, and CWGAN-
+thetic Minority Oversampling Technique) [19] efficiently ad-
+GP.Thesesyntheticdatasetsarethenintegratedwithrealdata,
+dress class imbalances by generating synthetic minority class
+resultinginahybriddataset,whichisusedformodeltraining.
+samples through interpolation. Variants such as ADASYN
+The final model evaluation phase ensures that both real and
+(Adaptive Synthetic Sampling) focus on generating samples
+synthetic data contribute to the detection of SQL Injection
+for harder-to-learn instances, improving model performance
+(SQLi) attacks.
+in challenging cases [20]. TOMEK Links, often combined
+with SMOTE, refine synthetic data by removing overlapping
+points between majority and minority classes, enhancing clas-
+sification accuracy [21], [22]. These methods ensure balanced
+data representation, mitigating bias and improving model
+generalisation.
+Out of all the approaches discussed, model-based methods
+were selected due to their ability to maintain syntactic and
+semantic relationships, critical for SQL query augmentation.
+While SMOTE handles data imbalance, it falls short in pre-
+serving complex structures. Therefore, techniques such as
+VAEs, U-Net, and GANs were chosen for their precision and
+reliability for structured data.
+Variational Autoencoders (VAEs) have proven highly effec-
+tive in reducing dimensionality and extracting features by en-
+coding high-dimensional data into latent representations. This
+enablesmodelstofocusonessentialfeatureswhilediscarding
+noise, making them ideal for tasks such as SQL injection
+detection, where computational efficiency and preserving key
+information are critical [23]. Additionally, the VAE ability to
+handle semi-supervised learning enables efficient processing
+of both labelled and unlabelled data, enhancing their utility in
+scenarios with limited labelled datasets [24].
+U-Net,initiallydevelopedforbiomedicalsegmentation,has
+demonstrated its versatility in feature extraction and synthetic
+data generation. Its encoder-decoder architecture excels in
+capturing intricate features, even with minimal labelled data.
+This makes it particularly well-suited for generating synthetic
+SQL injection datasets, addressing the challenge of scarce
+labelled data while capturing evolving attack patterns [25],
+[26].
+GANs further improve text-based data augmentation by en-
+hancingthediversityandqualityofsyntheticdata.Techniques
+such as CWGAN-GP introduce class conditioning, generating
+text to balance underrepresented categories, which is crucial
+for handling class imbalances in SQL injection datasets [15].
+Fig.1. PipelineArchitecture
+Additionally,modelssuchasDP-GANandSentiGANpromote
+diversityinsynthetictextgeneration,preventingmodecollapse
+and enhancing generalisation for text-heavy tasks [27], [28]. A. Data Collection & Preprocessing
+In conclusion, model-based approaches such as VAEs, U- The initial datasets, sourced from Kaggle (‘sqli csv‘
+Net, and GANs offer advanced capabilities in generating and ‘Modified SQL Dataset.csv‘), underwent a rigorous data
+contextuallyaccurateandsemanticallyrichdata,makingthem cleaning process to resolve inconsistencies and remove re-
+more suitable for tasks such as SQL injection detection, dundant entries. These datasets were further enriched with
+despite their higher computational demands. advanced SQLi techniques such as error-based, time-based,
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 4
+and blind SQL injection attacks to ensure a comprehensive terisation trick was applied, as represented by the following
+representation of various SQLi attack types. This integration equation:
+aimed to improve the detection capabilities of the model for
+(cid:18) σ2(cid:19)
+a broader range of SQL injection patterns, including those
+z =µ+ϵ·exp , ϵ∼N(0,1)
+identified in the OWASP Top 10 A03:2021. 2
+The VAE’s loss function combines two key components:
+B. Tokenisation & Embedding 1. Reconstruction loss, which measures how accurately the
+A custom tokeniser was developed to convert SQL queries decoder reconstructs the original SQL queries:
+into structured tokens, ensuring the capture of essential syn-
+N
+1 (cid:88)
+tactic and semantic features. Various embedding methods, L = ∥x −f (z )∥2
+reconstruction N i dec i
+including FastText, Character-level embeddings, Byte Pair
+i=1
+Encoding(BPE),andBERT,wereevaluatedtodeterminethe
+2. Kullback-Leibler (KL) divergence, which regularises the
+optimal approach. As shown in Fig. 2, FastText emerged as
+latent space by ensuring the learned distribution is close to a
+the most efficient, offering a strong balance between accuracy
+unit Gaussian:
+and training time, making it the best option for transforming
+1(cid:88)
+SQL queries into vector representations for subsequent model L =− (1+log(σ2)−µ2−σ2)
+KL 2
+training.
+The total VAE loss is expressed as:
+L =L +β·L
+VAE reconstruction KL
+where β controls the trade-off between reconstruction quality
+and regularisation.
+Fig. 4 illustrates the convergence of training and validation
+losses during VAE training, demonstrating stable learning and
+model generalisation.
+Fig.2. AccuracyandTrainingTimebyEmbeddingMethod
+C. Feature Extraction & Data Encoding
+The Variational Autoencoder (VAE) was employed to en-
+code SQL queries into latent space representations, enabling
+effective feature extraction and dimensionality reduction. As
+shown in Fig. 3, the VAE consists of an encoder, which
+compressestheinputSQLqueriesintolatentvariablescharac-
+terised by mean (µ) and variance (σ2) vectors, and a decoder,
+which reconstructs the input data from this latent space. The
+initial dataset, comprising FastText embeddings with a shape
+Fig.4. TrainingandValidationLossduringVAETraining
+of(32,336,100,50),wastransformedintoalower-dimensional
+representation of shape (32,336, 448) after VAE encoding. The VAE was evaluated using several metrics, including
+Mean Squared Error (MSE), R² score, and explained
+variance,ensuringthatthemodelefficientlyencodedtheSQL
+queries while minimising reconstruction errors.
+The latent representations generated by the VAE were then
+used as input for advanced generative models U-Net, and
+CWGAN-GPtogeneratesyntheticSQLqueries.Additionally,
+the VAE-encoded data was used to train several machine
+learning models, including Logistic Regression, SVM, Ran-
+dom Forest (RF), and XGBoost. Each model was rigorously
+evaluated based on accuracy, precision, recall, and F1-score
+to identify the best-performing baseline model. Among these,
+XGBoost emerged as the most effective, demonstrating su-
+Fig.3. VAEArchitectureforSQLQueryEncoding perior performance in terms of classification accuracy and
+robustness. This baseline model was subsequently used as
+To enable efficient sampling from the latent space while a reference to evaluate the quality of the synthetic data as
+maintaining differentiability during training, the reparame- generated by the advanced generative models.
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 5
+D. Synthetic Data Generation conducted using the Optuna framework. The Optuna Tree-
+To enhance the diversity of the dataset, two generative structured Parzen Estimator (TPE) was used to explore the
+models U-Net, and CWGAN-GP were utilised to generate hyperparameter space. The optimisation aimed to minimise
+synthetic SQL queries that closely mimic real-world SQL the Mean Squared Error (MSE) between the original and re-
+injectionpatterns.Thefollowingsubsectionswilldiscusseach constructed SQL queries. The key hyperparameters optimised
+modelindetail,outliningtheirarchitectureandadaptationsfor were:
+SQL query data generation. • Base Filters: Ranging from 32 to 128 filters.
+1) U-Net Model: In this study, the U-Net architecture was • Learning Rate: 1e−5 to 1e−2.
+adapted for generating synthetic SQL queries to augment the • Dropout Rate: 0.1 to 0.5.
+dataset used for SQL injection detection. The U-Net model • Depth: 3 to 5 layers.
+was chosen due to its ability to capture both local and global The best configuration included a base filter size of 704, a
+dependencies,whichisessentialforpreservingthehierarchical learning rate of 4.61e−5, and a dropout rate of 0.03. These
+structure of SQL queries. hyperparameters ensured a balance between model capacity
+Model Architecture: The U-Net model retained its core and generalisation, minimising overfitting.
+encoder-decoder architecture, but was adapted for 1D se- Training Process: The U-Net model was trained using
+quential data, as shown in Fig. 5. The encoder consists of the Adam optimiser, with a learning rate decay schedule
+convolutional layers followed by batch normalisation, ReLU that gradually reduced the learning rate. Early stopping was
+activation, and max-pooling to capture abstract features and employed to prevent overfitting. The final loss function was
+reduce dimensionality. The decoder mirrors the encoder but defined as:
+performs up-sampling, restoring the original sequence struc- N
+ture of the SQL queries while retaining critical low-level L = 1 (cid:88) (x −f (f (x )))2
+U−Net N i dec enc i
+details through skip connections. i=1
+Where x represents the input SQL query, and f and f
+i enc dec
+are the encoder and decoder functions, respectively.
+Fig.6. TrainingandValidationLossesofU-NetModel
+Evaluation Metrics: The performance of the U-Net model
+wasevaluatedusingmultiplemetrics,includingMeanSquared
+Fig.5. U-NetModelArchitectureforSQLQueryGeneration Error (MSE), R² Score, Explained Variance Score (EVS),
+BLEU Score, Cosine Similarity, Lowenstein Distance, and
+The mathematical operation for the encoder can be ex- Mean and Variance Differences. Additionally, Principal Com-
+pressed as: ponentAnalysis(PCA)wasconductedtovisuallycomparethe
+realandsyntheticdatadistributions.Thesemetricscollectively
+f (x)=MaxPool(ReLU(BN(Conv1D(x))))
+enc confirm the effectiveness of U-Net in generating high-quality
+Where x is the input SQL query, BN denotes batch normali- synthetic SQL queries.
+sation, and Conv1D is the 1D convolutional layer. 2) CWGAN-GPModel: TheConditionalWassersteinGen-
+The decoder reconstructs the input data via: erativeAdversarialNetworkwithGradientPenalty(CWGAN-
+GP) was utilised to generate synthetic SQL queries in this
+f (x)=Conv1DTranspose(Concat(x,skip))
+dec study. This model was chosen due to its capability to address
+Here, Conv1DTranspose is used for up-sampling, and Concat the vanishing gradient problem and mode collapse, issues
+represents the skip connections from corresponding encoder that are often encountered when training traditional GANs on
+layers. complex, structured data such as SQL queries. The CWGAN-
+Hyperparameter Optimisation with Optuna:Toimprove GP not only stabilises the training process but also allows the
+the performance of the U-Net, hyperparameter tuning was generationofSQLqueriesconditionedonspecificlabels,such
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 6
+as benign or malicious queries. By incorporating a gradient Loss Functions: The CWGAN-GP uses the Wasserstein
+penalty, the model enforces Lipschitz continuity, ensuring losswithgradientpenaltyforboththegeneratorandthecritic:
+smoother training and more realistic query generation. • Critic loss:
+Model Architecture: The CWGAN-GP architecture con-
+sists of two primary components, the generator and the L Critic =E[D(x real )]−E[D(x fake )]+λE(cid:0) (∥∇ xˆ D(xˆ)∥ 2 −1)2(cid:1)
+critic (discriminator), as illustrated in Figure 7. The generator
+Thecriticmaximisesthedifferencebetweenitsevaluation
+producessyntheticSQLqueriesbycombiningarandomnoise
+of real queries x and generated queries x , while
+real fake
+vector z with a one-hot encoded label y, which is used to
+minimising the gradient penalty term to enforce stability.
+condition the output. The critic, on the other hand, evaluates
+• Generator loss:
+both real and synthetic SQL queries, using the Wasserstein
+distance to distinguish between real and fake data, while L =−E[D(x )]
+Generator fake
+a gradient penalty regularises the critic to ensure Lipschitz
+The generator minimises this loss to create synthetic
+continuity.
+queries that the critic struggles to differentiate from real
+queries.
+Fig.7. CWGAN-GPArchitecturalDesignforSQLDataGeneration
+Mathematical Formulation:
+The generator G(z,y) takes a noise vector z sampled
+Fig.8. CWGAN-GPGeneratorandCriticLosseswithGradientPenalty
+from a normal distribution and a one-hot encoded label y.
+Theseinputsareconcatenatedandpassedthroughseveralfully TrainingandOptimisation:Thetrainingprocessalternates
+connected layers, which use ReLU activations to generate between updating the critic and the generator:
+synthetic SQL queries. The generator can be mathematically
+• Critic update: The critic is updated using real and fake
+formulated as [29]:
+SQLqueries,withthegradientpenaltyappliedtoenforce
+Lipschitzcontinuity.Foreachgeneratorupdate,thecritic
+G(z,y)=Dense k (ReLU(Concat(z,y)))→...→Output Layer is trained multiple times (in this case, n critic = 2) to
+ensure stability.
+where z is the latent noise vector and y is the label. The
+• Generatorupdate:Thegeneratorisupdatedtominimise
+output layer produces a vector of the same dimensionality as
+the score of the critic on the generated SQL queries.
+the original SQL queries.
+To fine-tune the CWGAN-GP model, two approaches were
+The critic D(x,y) receives real or generated SQL queries
+employed:
+and their corresponding labels. The critic uses dense layers
+with ReLU activations to estimate the Wasserstein distance, • Bayesian Optimisation: Initially, Bayesian Optimisation
+a real-valued score that differentiates between real and fake was used to explore the hyperparameter space, resulting
+queries. The critic is defined as Atienza [29]: in minimal reconstruction loss. Hyperparameters such as
+the number of layers, dropout rates, and learning rate
+were tuned.
+D(x,y)=Dense (ReLU(Concat(x,y)))→...→Output Layer
+k • Optuna Fine-Tuning: After the Bayesian phase, Optuna
+where x is either the real or the generated SQL query. was used to further fine-tune the model, exploring a
+To ensure the critic satisfies the Lipschitz constraint, a narrowerandhigher-potentialsearchspace.Thedynamic
+gradient penalty term is added to the loss function. The exploration as provided by Optuna, combined with its
+gradient penalty is computed as follows: pruningmechanism,enabledefficientfine-tuningbyhalt-
+ing underperforming trials early.
+L
+=λE(cid:0)
+(∥∇ D(xˆ)∥
+−1)2(cid:1)
+GP xˆ 2 Evaluation Metrics: The performance of the CWGAN-
+where xˆ is an interpolation between real and fake data, and GP model was evaluated using various metrics, including
+λ is a regularisation parameter controlling the contribution of Mean Squared Error (MSE), R² score, BLEU score, Cosine
+the gradient penalty. similarity, and Lowenstein distance. These metrics were used
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 7
+to assess how closely the generated SQL queries resembled synthetic data as generated by U-Net and CWGAN-GP mod-
+realSQLqueries.Furthermore,PrincipalComponentAnalysis els. The following steps were performed to evaluate the
+(PCA)wasemployedtovisualisetheoverlapbetweenrealand performance of the model:
+synthetic data, confirming the CWGAN-GP model’s ability to Hybrid Dataset Composition: The combined dataset
+generate realistic, high-quality SQL queries. D was created by mixing real data with synthetic data
+combined
+The results demonstrated that the CWGAN-GP model sig- from U-Net and CWGAN-GP in different proportions. The
+nificantly improved the diversity and quality of the synthetic combined dataset is formulated as follows:
+SQL queries, providing a robust solution for SQL injection
+detection systems.
+D =D ∪(D ×p )∪(D ×p )
+combined real U-Net 1 CWGAN-GP 2
+where D represents the real dataset, D and
+E. Pseudo-Labelling of Synthetic Data real U-Net
+D are the synthetic datasets generated by U-Net and
+CWGAN-GP
+TorefinethesyntheticSQLdataasgeneratedbyU-Netand CWGAN-GP, and p and p are the proportions of synthetic
+1 2
+CWGAN-GP, pseudo-labelling was employed. This method datafromeachmodel.Byadjustingp andp ,differenthybrid
+1 2
+involved reducing the dimensionality of the high-dimensional dataset compositions were tested to optimise the training data
+datausingPrincipalComponentAnalysis(PCA)andapplying balance between real and synthetic data.
+KMeans clustering to assign pseudo-labels. Cross-Validation of Dataset Combinations: Stratified K-
+PCA for Dimensionality Reduction:PrincipalComponent Fold Cross-Validation was employed to evaluate different
+Analysis (PCA) was applied to reduce the dimensions of combinationsofrealandsyntheticdatawhilepreservingclass
+the synthetic data to two principal components for better distribution across all folds. This method ensured that the
+visualrepresentationandeasierclustering.Mathematically,the performance of the model was evaluated consistently across
+transformation can be described as: various splits of the data. The performance was measured
+using two key metrics:
+Z =XW
+True Positives+True Negatives
+Accuracy=
+where X represents the original high-dimensional data and Total Samples
+W istheprojectionmatrixconsistingofthetoptwoeigenvec-
+tors of the covariance matrix of the data. This transformation True Positives
+Sensitivity=
+enabledaclearseparationofthedataintoclusters,facilitating True Positives+False Negatives
+the next step of clustering and pseudo-labelling.
+These metrics providedinsight into the ability ofthe model
+KMeans Clustering for Pseudo-Labelling: Once the data
+tocorrectlyclassifySQLiattackswhileminimisingfalsenega-
+was reduced to two dimensions, KMeans clustering was per-
+tives. The cross-validation process helped identify the optimal
+formed to assign pseudo-labels. The KMeans algorithm min-
+proportion of real and synthetic data for maximising model
+imised the Within-Cluster Sum of Squares (WCSS), defined
+performance,ensuringarobustbalancebetweenprecisionand
+as:
+recall.
+k
+(cid:88) (cid:88)
+WCSS = ∥x−µ ∥2 G. Final Model Evaluation
+i
+i=1x∈Ci Afteridentifyingthebestdatasetcombination,theXGBoost
+classifier was trained on the combined dataset. XGBoost was
+where k is the number of clusters (in this case, k = 2),
+selected for its high efficiency and scalability, especially in
+C represents the set of points assigned to cluster i, µ is
+i i
+dealing with structured data such as SQL queries. The final
+the centroid of cluster i, and x is each data point. The
+model used logistic loss as the objective function, defined as:
+KMeans algorithm assigned pseudo-labels corresponding to
+benign (Class 0) and malicious (Class 1) SQL queries. The
+labelling was based on the spread of the data: benign queries 1 (cid:88) N
+L =− [y logyˆ +(1−y )log(1−yˆ)]
+exhibited a lower spread, while malicious queries displayed XGBoost N i i i i
+a higher spread in the feature space. This distinction in the i=1
+datadistributionenabledtheclusteringalgorithmtoeffectively whereN isthetotalnumberofsamples,y i isthetruelabel
+separate benign from malicious queries. By leveraging these for sample i, and yˆ i is the predicted probability for sample
+differences in data spread, the KMeans algorithm enabled i. This loss function optimises the classification model by
+the accurate classification of synthetic data into the relevant minimising the error in predicting the correct labels for both
+categories, facilitating its use for training machine learning benign and malicious queries.
+models. The trained XGBoost model was evaluated on the test
+set using multiple metrics, including accuracy, sensitivity,
+precision, recall, and F1-score.
+F. Evaluation of Models on Hybrid Data
+The results demonstrated that the combination of real and
+To further enhance model performance, a hybrid dataset pseudo-labelled synthetic data improved the ability of the
+wascreatedbycombiningrealSQLdatawithpseudo-labelled model to generalise to new, unseen SQL queries. The final
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 8
+XGBoost model achieved high accuracy, sensitivity, and pre- As depicted in Figure 9, XGBoost achieved the highest
+cision, indicating its effectiveness in SQL injection detection accuracy, outperforming other models with an impressive
+across diverse attack types. score of 99.40%. LightGBM followed closely with 99.35%,
+whileRandomForestandKNNachieved99.15%and98.65%,
+respectively. Neural Networks, while often strong performers
+IV. RESULTSANDANALYSIS
+in complex tasks, registered 95.39% in this specific SQLIA
+Inthissection,theperformanceofseveralmachinelearning
+detection task. Logistic Regression, Support Vector Classifier
+models trained on VAE-encoded SQL data is evaluated for
+(SVC), and Naive Bayes were outperformed by the others,
+detecting SQL Injection Attacks (SQLIA). The models tested
+with Naive Bayes being the least accurate at 72.82%.
+include XGBoost, LightGBM, Random Forest, K-Nearest
+The results underscore the suitability of XGBoost for
+Neighbors (KNN), Neural Networks, Logistic Regression,
+SQLIA detection tasks, making it the preferred choice for
+SupportVectorClassifier(SVC),andNaiveBayes.Theevalu-
+further experiments. Its balance of speed, precision, and han-
+ationfocusesonmetricssuchasaccuracy,precision,recall,F1-
+dling of imbalanced data makes it ideal for this application,
+score, and sensitivity for both benign (Class 0) and malicious
+particularly when combined with synthetic data generation
+(Class 1) queries.
+techniques such as those explored in this study.
+A. Classification Metrics
+B. Synthetic Data Quality Evaluation Metrics
+Several standard classification metrics were used to thor-
+To assess the quality of the synthetic SQL query data as
+oughly assess the performance of the models. These metrics
+generated by U-Net and CWGAN-GP, several key metrics
+providevaluableinsightsintohoweachmodelpredictsbenign
+were utilised. These metrics are essential for ensuring the
+(Class 0) and malicious (Class 1) SQL queries. The following
+synthetic data closely aligns with real SQL queries in both
+metrics were calculated for each model:
+structural and statistical dimensions, which is critical for SQL
+injection detection models.
+TABLEI
+CLASSIFICATIONMETRICSANDFORMULAS • Mean Squared Error (MSE): MSE calculates the av-
+erage squared difference between the real and synthetic
+Metric Formula Description
+data. A lower MSE value indicates that the generated
+Accuracy TP+TN Proportion of correct predic-
+TP+TN+FP+FN tionsoutofallpredictions data closely mimics the real data, reducing the risk of
+Precision TP Proportion of positive predic- discrepancies in model training [30].
+TP+FP
+tionsthatwerecorrect • R² Score: This metric quantifies the amount of variance
+Recall TP Proportion of actual positives
+TP+FN in the real data that is captured by the synthetic data.
+correctlypredicted(Sensitivity
+forClass1) A high R² score ensures that the generated SQL queries
+F1-Score 2× Precision×Recall Harmonic mean of precision retainsufficientdiversity,supportingbettergeneralisation
+Precision+Recall
+andrecall in machine learning models.
+Sensitivity TPCla T ss P 1+ Cla F ss N 1 Class1 S ca e l n l s f i o ti r vi C ty la i s s s e 1 quivalent to re- • Explained Variance Score (EVS): EVS measures the
+proportion of variance in the real dataset captured by
+the synthetic data. High EVS indicates that the synthetic
+The performance of various machine learning algorithms
+queries adequately cover the behaviours and patterns
+was evaluated based on their ability to detect SQL Injection
+observed in real-world SQL injection attacks [30].
+Attacks (SQLIA).
+• BLEU Score: BLEU measures the token-level similarity
+betweenrealandsyntheticqueries.AhigherBLEUscore
+reflects greater structural alignment, which is critical for
+maintainingthefunctionalsemanticsofSQLqueries[30].
+• Cosine Similarity: This metric calculates the angular
+similarity between vectorised representations of real and
+syntheticdata.InSQLquerygeneration,cosinesimilarity
+ensures that the overall semantic meaning of the queries
+is preserved.
+• LowensteinDistance:Thiscomputesthenumberofedits
+required to transform synthetic queries into real ones. A
+lower distance signifies a closer match between the real
+and synthetic data, which is vital for maintaining query
+integrity.
+• MeanandVarianceDifferences:Thesemetricscompare
+the statistical distributions of real and synthetic data
+by evaluating their means and variances. In SQL data
+Fig. 9. Comparison of Machine Learning Algorithms based on Accuracy. generation,thisensuresthatthestatisticalproperties,such
+XGBoostoutperformsothersinSQLIAdetectionaccuracy. asquerypatternsandstructures,arepreserved,improving
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 9
+the reliability of the generated data for SQL injection 1.4565 supports the high similarity between the datasets,
+detection. requiring minimal changes for alignment.
+Other Metrics and Justifications The Principal Component Analysis (PCA) results in Figure
+Several other metrics commonly used in text generation, 11 further validate the consistency of the U-Net model in
+suchasperplexityandcompressionratio,wereconsideredbut generating synthetic queries that align closely with the real
+deemed unsuitable for this structured dataset: SQL data. Minimal distributional differences, as indicated by
+• Perplexity: This metric is typically used in language the Mean Difference of 0.0062 and Variance Difference of
+modelling to measure uncertainty in word predictions. 0.0045,emphasisethestronggeneralisationcapabilitiesofthe
+However, because SQL queries are deterministic and do model in mimicking real-world query structures.
+not involve probabilistic word choices, perplexity is not
+applicable in this context [30].
+• Compression Ratio: Commonly used to evaluate text
+summarisation,thismetricmeasuresthereductionintext
+length. In SQL query generation, the goal is to preserve
+accuracyandcompletenessratherthanconciseness,mak-
+ing this metric inappropriate for the task.
+By selecting the metrics most relevant to structured SQL
+data, this evaluation ensures that the synthetic queries gen-
+erated are reliable and useful for training machine learning
+models to detect SQL injection attacks.
+In addition, Principal Component Analysis (PCA) and K-
+Means Clustering were used to visually inspect the alignment
+betweenrealandsyntheticdatadistributions.Thesetechniques
+provide additional insights into the structural similarities of
+both datasets. The combination of these metrics ensures a
+robust evaluation of the synthetic data’s quality, supporting its Fig.11. PCAofRealvsSyntheticDataforU-NetModel
+use in training models for SQL Injection detection systems.
+2) CWGAN-GP Results and Discussion: Similar to the
+C. Evaluation of Synthetic Data U-Net model, the synthetic data generated by CWGAN-GP
+was evaluated using key performance metrics to assess its
+1) U-NetModel:ResultsandDiscussion: Theperformance
+effectiveness.
+of the U-Net model in generating synthetic SQL queries was
+evaluated using the above key metrics.
+Fig.12. PerformanceMetricsforCWGAN-GPModel
+Fig.10. PerformanceMetricsforU-NetModel
+As illustrated in Figure 12, the CWGAN-GP model
+As shown in Figure 10, the U-Net model performed ex- achieved a Mean Squared Error (MSE) of 0.0108, indicating
+ceptionally well, achieving a low Mean Squared Error (MSE) somevariancebetweentherealandsyntheticdatasets.TheR²
+of 0.0005, indicating a strong match between the real and score of -1.7253 and the Explained Variance Score of -1.6020
+synthetic SQL data. The model’s R² score of 0.8159 of the further reflect deviations from real data patterns.
+model confirms its effectiveness in capturing variance within Despite these deviations, the model produced a BLEU
+the real dataset. Score of 0.9759 and a Cosine Similarity of 0.9952, showing
+Other key metrics include a BLEU Score of 0.9919 and strongstructuralalignmentbetweentherealandsyntheticSQL
+a Cosine Similarity of 0.9996, which highlight the close queries. The Lowenstein Distance of 5.1057, though higher,
+structural and semantic resemblance between the generated suggests moderate similarity in sequence structure between
+and real queries. Furthermore, the Lowenstein Distance of the generated and real data.
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 10
+Figure 13 shows the Principal Component Analysis (PCA), E. XGBoost Performance on Various Data Combinations
+where the real and synthetic data exhibit partial overlap, with
+the synthetic data displaying greater dispersion. This suggests In this section, the performance of the XGBoost model
+that while CWGAN-GP effectively captures overall patterns, trained on a combination of original data and synthetic data
+there remains some variability. as generated by U-Net and CWGAN-GP models is analysed.
+Insummary,theCWGAN-GPmodeldemonstrateseffective Figure15illustratesthecomparativeresultsofXGBoostacross
+token-levelandvector-basedsimilaritieswithrealdata,though various evaluation metrics.
+with some structural deviations, as evidenced by the PCA and
+higher Lowenstein Distance.
+Fig.15. XGBoostPerformanceonVariousDataCombinations
+The XGBoost model exhibited a consistently strong per-
+formance across most metrics when trained on original
+Fig.13. PCAofRealvsSyntheticDataforCWGAN-GPModel data. However, incorporating synthetic data from U-Net and
+CWGAN-GP introduced some performance variations, partic-
+ularly in precision, recall, and F1-score across benign (Class
+D. Pseudo-Labelling and Clustering Results
+0) and malicious (Class 1) queries.
+Following the generation of synthetic SQL data, pseudo-
+The inclusion of U-Net-generated synthetic data improved
+labelling was employed to categorise the data into distinct
+the precision and recall of the model, particularly in identify-
+classes.Pseudo-labelswereassignedusingKMeansclustering,
+ingSQLinjectionattacks(Class1).Meanwhile,syntheticdata
+which organised the data based on feature similarities. The
+asgeneratedbyCWGAN-GPprovidedcompetitiveresultsbut
+spread of the data was used to determine the labels: benign
+showed a slight reduction in sensitivity, indicating marginal
+queries (Class 0) exhibited a lower spread, while malicious
+difficulty in correctly identifying all malicious queries.
+queries (Class 1) displayed a higher spread.
+F. Hybrid Data Proportions for XGBoost Training
+A dataset pool optimisation method was implemented by
+combining synthetic data from U-Net and CWGAN-GP mod-
+els with real datasets in proportions to create hybrid datasets,
+with the goal of identifying the best balance for improving
+keymetrics.StratifiedK-FoldCross-Validationwasappliedto
+ensure reliability in the evaluation process.
+Fig.14. KMeansClusteringofU-NetandCWGAN-GPSyntheticDatawith
+PseudoLabels.U-NetresultsontheleftandCWGAN-GPontheright.
+As illustrated in Figure 14, the clustering results for both
+U-Net and CWGAN-GP reveal a clear separation of synthetic
+data into Class 0 and Class 1. This process of assigning
+pseudo-labels enhances the practical utility of the synthetic
+data when integrated with real labelled datasets. By utilising
+these pseudo-labels, machine learning models trained on hy-
+brid datasets, which include both real and synthetic samples,
+can achieve improved performance. Fig.16. PerformanceMetrics:Class0
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 11
+Fig.17. PerformanceMetrics:Class1
+Among the 100 tested configurations, several exhibited a
+strong performance across all metrics. The top five combina-
+tions, as shown in Figures 16 and 17, achieved high accuracy,
+precision, recall, and F1-scores. The best-performing model,
+utilising 80% U-Net and 70% CWGAN-GP synthetic data,
+Fig.19. BaselineModelConfusionMatrix
+reachedanaccuracyof99.984%,providingbalanceddetection
+forbothbenign(Class0)andmalicious(Class1)SQLqueries.
+While all top combinations showed promising results, U-Net
+datagenerallyimprovedrecallforClass1,whereasCWGAN- To further illustrate the distribution of true positives, false
+GP data enhanced precision for Class 0. Ultimately, the 80% positives, false negatives, and true negatives for both classes,
+U-Netand70%CWGAN-GPcombinationwasselectedforits the confusion matrix in Figure 19 highlights the classification
+overall balanced performance and deemed optimal for further performance in terms of correctly and incorrectly classified
+testing and validation. instances:
+While the overall performance was strong, a minor imbal-
+ance in recall for benign queries suggests potential areas for
+G. Final XGBoost Model Performance
+further improvement in optimising benign query detection.
+With the optimal hybrid configuration established, the next
+2) Final Model: The final model was developed by lever-
+step was to evaluate the final performance of the XGBoost
+aging the optimal data proportions of 80% U-Net and 70%
+model against the baseline model, ensuring improvements
+CWGAN-GP synthetic data, as identified during the hybrid
+brought by synthetic data integration were robust and con-
+data synthesis process. This model was fine-tuned using hy-
+sistent across different datasets.
+perparameteroptimisation,enhancingitsabilitytodetectSQL
+1) Baseline Model Performance (Validation Results): The
+Injection Attacks (SQLIA) with high accuracy and generali-
+baselinemodel,trainedsolelyontheoriginaldataset,achieved
+sation capability. The hyperparameters were optimised using
+an overall accuracy of 0.9817 on the validation set. As shown
+Stratified K-Fold Cross-Validation, resulting in the following
+inFigure18,theprecisionandrecallvaluesarewell-balanced
+parameters:
+across both benign (Class 0) and malicious (Class 1) queries:
+• Best Parameters: {subsample : 1.0,n estimators :
+500,min child weight : 1,max depth : 3,learning rate :
+0.3,gamma:0,colsample bytree:0.8}
+The final performance of the model on the validation set is
+depicted in Figure 20, where it achieved an accuracy of 0.98.
+Precision, recall, and F1-scores for both Class 0 and Class 1
+werewell-balanced,demonstratingtheefficiencyofthemodel
+in detecting both benign and malicious queries.
+Fig.18. BaselineModelClassificationReport
+The model exhibited slightly higher precision for Class 1
+(malicious queries) at 0.99, while Class 0 (benign queries)
+showed a higher recall at 0.99. This indicates that the model
+was particularly effective in minimising false positives for
+malicious queries but showed a slight reduction in detecting
+all benign queries. Fig.20. ClassificationReportforFinalModelonValidationData
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 12
+malicious queries. The integration of synthetic data, gener-
+ated through U-Net and CWGAN-GP models, significantly
+enhancedthegeneralisationabilityofthemodel.Hyperparam-
+eter tuning further optimised the performance of the model,
+resulting in a highly accurate and reliable solution for detect-
+ing SQLIA in real-world scenarios. This study successfully
+demonstrated that combining synthetic data with real data
+and using advanced machine learning techniques can provide
+an effective and robust solution for modern cybersecurity
+challenges.
+VI. LIMITATIONSANDFUTURESCOPE
+While the final model demonstrated significant improve-
+ments, several limitations were identified. The CWGAN-GP
+model, although effective, struggled to capture the complete
+Fig.21. ConfusionMatrixforFinalModel
+diversity of SQL query patterns, leading to underrepresen-
+The confusion matrix in Figure 21 highlights the reliable tation of complex or rare SQL Injection Attack (SQLIA)
+classification of the model with minimal false positives and types. Furthermore, the computational cost associated with
+falsenegatives.Itcorrectlyclassified162benignqueries(Class generating synthetic data was high, making real-time deploy-
+0) and 158 malicious queries (Class 1), showcasing the effec- mentchallenging,particularlyinresource-constrainedenviron-
+tiveness of hyperparameter tuning in reducing classification ments. Another limitation was the challenge of maintaining a
+errors. balancedratioofbenignandmaliciousqueriesinthesynthetic
+a) Comparison with Baseline Model: When compared dataset, which was critical to avoid model overfitting.
+FutureworkcouldfocusonrefiningtheCWGAN-GPmodel
+to the baseline model, the final model exhibited a substantial
+tobettercapturediverseSQLpatternsandimprovescalability.
+improvement, particularly in the recall for Class 1 (malicious
+ExploringotherGANvariants(e.g.,CatGAN,SentiGAN)and
+queries), which is critical for SQLIA detection. The baseline
+hybrid models with Variational Autoencoders (VAEs) could
+model, trained solely on real data, had a lower recall for
+further enhance the quality of synthetic data. Additionally,
+Class 1, leading to more false negatives. By incorporating
+real-time detection through online learning and optimising
+synthetic data and applying hyperparameter tuning, the final
+computational efficiency using distributed systems would en-
+model significantly reduced these errors, providing better de-
+able broader applications of this approach. Developing a self-
+tection of malicious SQL queries while maintaining balanced
+learning detection system that autonomously adapts to new
+performance for benign queries (Class 0).
+b) Cross-Validation Performance: Cross-validation re- SQLIA types would also improve the resilience of the model
+to emerging threats.
+sults demonstrated the robustness of the final model, as
+depicted in the box plot (Figure 22). Minimal variance was
+observed across accuracy, precision, recall, F1-score, and REFERENCES
+sensitivity metrics, further reinforcing the reliability of the [1] OWASP, “Owasp top ten,” 2021, accessed: 2024-09-29. [Online].
+model for SQL Injection detection in real-world scenarios. Available:https://owasp.org/www-project-top-ten/
+[2] C.Anley,“Advancedsqlinjectioninsqlserverapplications,”Advanced
+SQLinjectioninSQLserverapplications,2002.
+[3] A.Sadeghian,M.Zamani,andS.Ibrahim,“Sqlinjectionisstillalive:
+a study on sql injection signature evasion techniques,” in 2013 Inter-
+national Conference on Informatics and Creative Multimedia. IEEE,
+2013,pp.265–268.
+[4] W.G.Halfond,J.Viegas,A.Orsoetal.,“Aclassificationofsqlinjection
+attacksandcountermeasures.”inISSSE,2006.
+[5] A.JoshiandV.Geetha,“Sqlinjectiondetectionusingmachinelearning,”
+in2014internationalconferenceoncontrol,instrumentation,communi-
+cation and computational technologies (ICCICCT). IEEE, 2014, pp.
+1111–1115.
+[6] S.O.Uwagbole,W.J.Buchanan,andL.Fan,“Appliedmachinelearning
+predictive analytics to sql injection attack detection and prevention,”
+in 2017 IFIP/IEEE Symposium on Integrated Network and Service
+Management(IM). IEEE,2017,pp.1087–1090.
+[7] U.Farooq,“Ensemblemachinelearningapproachesfordetectionofsql
+injectionattack,”Tehnicˇkiglasnik,vol.15,no.1,pp.112–120,2021.
+[8] M. Kiani, A. Clark, and G. Mohay, “Evaluation of anomaly based
+Fig.22. Cross-ValidationBoxPlotforFinalModelPerformanceMetrics character distribution models in the detection of sql injection attacks,”
+in2008ThirdInternationalConferenceonAvailability,Reliabilityand
+Security. IEEE,2008,pp.47–55.
+V. CONCLUSION [9] L.K.Shar,H.B.K.Tan,andL.C.Briand,“Miningsqlinjectionand
+cross site scripting vulnerabilities using hybrid program analysis,” in
+Overall,thefinalXGBoostmodeloutperformedthebaseline
+2013 35th International Conference on Software Engineering (ICSE).
+model, particularly in terms of recall and sensitivity for IEEE,2013,pp.642–651.
+JOURNALOFCYBERSECURITYANDDATASCIENCE,JANUARY2025 13
+[10] A. Ciampa, C. A. Visaggio, and M. Di Penta, “A heuristic-based
+approachfordetectingsql-injectionvulnerabilitiesinwebapplications,”
+in Proceedings of the 2010 ICSE Workshop on Software Engineering
+forSecureSystems,2010,pp.43–49.
+[11] M. Hasan, Z. Balbahaith, and M. Tarique, “Detection of sql injection
+attacks:amachinelearningapproach,”in2019InternationalConference
+onElectricalandComputingTechnologiesandApplications(ICECTA).
+IEEE,2019,pp.1–6.
+[12] D. Chen, Q. Yan, C. Wu, and J. Zhao, “Sql injection attack detection
+andpreventiontechniquesusingdeeplearning,”inJournalofPhysics:
+ConferenceSeries,vol.1757,no.1. IOPPublishing,2021,p.012055.
+[13] P. Skondras, P. Zervas, and G. Tzimas, “Generating synthetic resume
+data with large language models for enhanced job description classifi-
+cation,”FutureInternet,vol.15,no.11,p.363,2023.
+[14] A. A. Awan, “A complete guide to data augmentation,”
+Nov. 2022. [Online]. Available: https://www.datacamp.com/tutorial/
+complete-guide-data-augmentation
+[15] C.Shorten,T.M.Khoshgoftaar,andB.Furht,“Textdataaugmentation
+fordeeplearning,”JournalofbigData,vol.8,no.1,p.101,2021.
+[16] J. Lovelace, S. Ray, K. Kim, K. Q. Weinberger, and F. Wu,
+“Sample-efficientdiffusionfortext-to-speechsynthesis,”arXivpreprint
+arXiv:2409.03717,2024.
+[17] V. Labs, “What is synthetic data in machine learning and how to
+generate it,” 2022. [Online]. Available: https://www.v7labs.com/blog/
+synthetic-data-guide
+[18] D. Stoller, M. Tian, S. Ewert, and S. Dixon, “Seq-u-net: A one-
+dimensional causal u-net for efficient sequence modelling,” arXiv
+preprintarXiv:1911.06393,2019.
+[19] N.V.Chawla,K.W.Bowyer,L.O.Hall,andW.P.Kegelmeyer,“Smote:
+syntheticminorityover-samplingtechnique,”Journalofartificialintel-
+ligenceresearch,vol.16,pp.321–357,2002.
+[20] ResidentMario, “Oversampling with smote and adasyn,”
+2022. [Online]. Available: https://www.kaggle.com/code/residentmario/
+oversampling-with-smote-and-adasyn
+[21] J. Brandt and E. Lanze´n, “A comparative review of smote and adasyn
+in imbalanced data classification,” Comparative review of SMOTE and
+ADASYN,2021.
+[22] M.Zeng,B.Zou,F.Wei,X.Liu,andL.Wang,“Effectivepredictionof
+threecommondiseasesbycombiningsmotewithtomeklinkstechnique
+for imbalanced medical data,” in 2016 IEEE International Conference
+ofOnlineAnalysisandComputingScience(ICOACS). IEEE,2016,pp.
+225–228.
+[23] W. Zhang, Y. Li, X. Li, M. Shao, Y. Mi, H. Zhang, and G. Zhi,
+“Deep neural network-based sql injection detection method,” Security
+andCommunicationNetworks,vol.2022,no.1,p.4836289,2022.
+[24] G. San Martin, E. Lo´pez Droguett, V. Meruane, and M. das Cha-
+gas Moura, “Deep variational auto-encoders: A promising tool for
+dimensionality reduction and ball bearing elements fault diagnosis,”
+StructuralHealthMonitoring,vol.18,no.4,pp.1092–1128,2019.
+[25] O.Ronneberger,P.Fischer,andT.Brox,“U-net:Convolutionalnetworks
+for biomedicalimage segmentation,” in Medical imagecomputing and
+computer-assisted intervention–MICCAI 2015: 18th international con-
+ference,Munich,Germany,October5-9,2015,proceedings,partIII18.
+Springer,2015,pp.234–241.
+[26] M.Zheng,T.Li,R.Zhu,Y.Tang,M.Tang,L.Lin,andZ.Ma,“Condi-
+tionalwassersteingenerativeadversarialnetwork-gradientpenalty-based
+approach to alleviating imbalanced data classification,” Information
+Sciences,vol.512,pp.1009–1023,2020.
+[27] J. Xu, X. Ren, J. Lin, and X. Sun, “Diversity-promoting gan: A
+cross-entropy based generative adversarial network for diversified text
+generation,”inProceedingsofthe2018conferenceonempiricalmethods
+innaturallanguageprocessing,2018,pp.3940–3949.
+[28] A. S. Imran, R. Yang, Z. Kastrati, S. M. Daudpota, and S. Shaikh,
+“The impact of synthetic text generation for sentiment analysis using
+gan based models,” Egyptian Informatics Journal, vol. 23, no. 3, pp.
+547–557,2022.
+[29] R.Atienza,AdvancedDeepLearningwithKeras:Applydeeplearning
+techniques, autoencoders, GANs, variational autoencoders, deep rein-
+forcementlearning,policygradients,andmore. PacktPublishingLtd,
+2018.
+[30] J.Goldstein,M.Kantrowitz,V.Mittal,andJ.Carbonell,“Summarizing
+text documents: Sentence selection and evaluation metrics,” in Pro-
+ceedings of the 22nd annual international ACM SIGIR conference on
+Researchanddevelopmentininformationretrieval,1999,pp.121–128.

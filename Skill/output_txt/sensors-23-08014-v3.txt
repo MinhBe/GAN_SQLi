@@ -1,0 +1,894 @@
+sensors
+Article
+Generative Adversarial Network (GAN)-Based Autonomous
+Penetration Testing for Web Applications
+AnkurChowdhary1,2,*,† ,KritshekharJha2,*,† andMingZhao2
+1 6senseInsightsInc.,SanFrancisco,CA94105,USA
+2 SchoolofComputingandAugmentedIntelligence,ArizonaStateUniversity,Tempe,AZ85281,USA;
+mingzhao@asu.edu
+* Correspondence:achaud16@asu.edu(A.C.);kjha9@asu.edu(K.J.)
+† Theseauthorscontributedequallytothiswork.
+Abstract: Thewebapplicationmarkethasshownrapidgrowthinrecentyears. Theexpansionof
+Wireless Sensor Networks (WSNs) and the Internet of Things (IoT) has created new web-based
+communicationandsensingframeworks. Currentsecurityresearchutilizessourcecodeanalysis
+andmanualexploitationofwebapplications,toidentifysecurityvulnerabilities,suchasCross-Site
+Scripting(XSS)andSQLInjection,intheseemergingfields.Theattacksamplesgeneratedaspartof
+webapplicationpenetrationtestingonsensornetworkscanbeeasilyblocked,usingWebApplication
+Firewalls(WAFs).Inthisresearchwork,weproposeanautonomouspenetrationtestingframework
+that utilizes Generative Adversarial Networks (GANs). We overcome the limitations of vanilla
+GANsbyusingconditionalsequencegeneration.Thistechniquehelpsinidentifyingkeyfeaturesfor
+XSSattacks. Wetrainedagenerativemodelbasedonattacklabelsandattackfeatures. Theattack
+featureswereidentifiedusingsemantictokenization,andtheattackpayloadsweregeneratedusing
+conditionalsequenceGAN.Thegeneratedattacksamplescanbeusedtotargetwebapplications
+protectedbyWAFsinanautomatedmanner.Thismodelscaleswellonalarge-scalewebapplication
+platform,anditsavesthesignificanteffortinvestedinmanualpenetrationtesting.
+Keywords: autonomous pentesting; Wireless Sensor Network (WSN); Internet of Things (IoT);
+GenerativeAdversarialNetwork(GAN);reinforcementlearning;WebApplicationFirewall(WAF)
+Citation:Chowdhary,A.;Jha,K.;
+Zhao,M.GenerativeAdversarial
+1. Introduction
+Network(GAN)-BasedAutonomous
+PenetrationTestingforWeb Penetrationtestingisamethodofevaluatingthesecuritypostureofanetwork,by
+Applications.Sensors2023,23,8014. launchingcontrolledattacksagainstcrucialnetworkservicesandusers. Thegoalistoiden-
+https://doi.org/10.3390/s23188014 tifyandpatchthesecurityholesbeforeanattackerdiscoversthem.Anattacktypicallystarts
+bytargetingedgesensordevices,andtheattackertriestoexploittheknownorunknown
+AcademicEditor:HaiDong
+vulnerabilitiespresentinthenetworkservices. Theattackercanexploitavulnerability,to
+Received:23August2023 obtainsensitiveinformationorelevatedprivilegesonamachine. Themetricformeasuring
+Revised:15September2023 successfulattacksisthenumberofvulnerabilitiesexploitedandthecumulativeimpacton
+Accepted:19September2023 thenetwork’sConfidentiality,Integrity,orAvailability(CIA)asadirectresultofsuccessful
+Published:21September2023
+exploitation[1]. Theattackprogressiondependsonthenetworksetup. Theattackercan
+targetindividualvulnerabilitiesinisolationifthevulnerabilitiesarenotdependentonone
+other,i.e.,theneedtoexploitonevulnerabilitybeforeanother. Ifthenetworkismulti-hop
+andfollowsfine-grainedaccesscontrolprinciples,thepenetrationtestermustcompromise
+Copyright: © 2023 by the authors.
+multiplevulnerabilitiesthataredependentononeother.
+Licensee MDPI, Basel, Switzerland.
+In the past few years, we have observed a rapid surge in web application tools,
+This article is an open access article
+technologies,andlibraries,likeNodeJS,React,AngularJS,andRubyonRails[2],being
+distributed under the terms and
+deployedonedgedevices,e.g.,theuserinterfaceofasmartcamera. Naturally,witheach
+conditionsoftheCreativeCommons
+Attribution(CCBY)license(https:// webapplicationframework,inherentsecurityvulnerabilitiesarereportedeveryyear[3].
+creativecommons.org/licenses/by/ Whilesecurityresearchersinvestmuchtimeidentifyingandreportingthesevulnerabilities,
+4.0/). theyneedhelptokeepupwithwebapplicationvulnerabilitydiscoveriesmanually[4].
+Sensors2023,23,8014.https://doi.org/10.3390/s23188014 https://www.mdpi.com/journal/sensors
+Sensors2023,23,8014 2of18
+Attackershavealsoinvestedinusingdeceptivemeansformasqueradingoriginalattacks[5].
+Moreover,theemergenceofsophisticatedattacks,suchasAdvancedPersistentThreats
+(APTs)[6],hasincreasedtheneedfortheidentificationofattackpatternsbeyondtraditional
+signature-basedattackdetection.
+ThepenetrationtestingmarketisexpectedtogrowfromUSD1718Min2020toUSD
+4598Mbytheyear2025,acompoundannualgrowthrate(CAGR)of21.8%[7],toaddress
+thecontinuouslyescalatingsecuritychallenges. Thewebapplicationmarketisexpected
+toreachUSD10.44Bby2027. Surveys,suchasMITTechnologyReview,havereporteda
+3.5Mcybersecurityworkforceshortagein2021[8]. Thereisasignificantdemandtouse
+artificial intelligence (AI)-enabled pentesting techniques to automate and continuously
+improvepentestingoutcomes,whichusedtobehandledbyskilledpentesters,whocould
+investigatevulnerabilitiesinamulti-stageapproach. AnAI-baseddetectionmechanism
+for detecting deception attacks has been discussed by Pang et al. [5]. This is similar to
+theAPTattacksthatusealternatevariationsofknownattackpatternstodeceivetheweb
+applicationfirewalls(WAFs). Asaresult,anAI-enabledpenetrationtestintherealworld
+issimilartoaddressinganAIplanningproblem. Therewardmodelaimstoobtainthe
+highestpossiblerewardforexploitedvulnerabilities,bypassingthesecuritymechanismto
+defendagainsttheattackvariants,e.g.,hlWAFsandIntrusionDetectionSystems(IDSs).
+Thecomputationalandstoragecapacitiesofsensornetworks,whichtypicallystrug-
+glewithresourceconstraints,havebeensignificantlyimprovedbytherecentmergerof
+cloudcomputingwithWSNs[9]. IncorporationoftheIoTinWSNshasevenincreased
+the attacks’ surface manifolds. Sensing devices in WSNs normally collect sensor data
+andtransmitthem,withoutmuchprocessing,directlytothesinknode;however,inIoT
+networks,sensingdevicesaremoreintelligentthanWSNnodes[10]. Inbothscenarios,
+theyeventuallyleveragethedistributededgenetwork,tostoredataonthecloudservers.
+Hence,thisexposesanotherattacksurfaceonthecloud-baseddatabasesinWSNsandIoT
+communicationcontexts. TheCross-SiteScripting(XSS)attack,Cross-SiteRequestForgery
+(CSRF),andinjection-basedattacksareafewexamples[10–12].
+Smart manufacturing integrates various technologies, like sensors, the Industrial
+InternetofThings(IIoT),andSupervisoryControlandDataAcquisition(SCADA)produc-
+tion[13]. Thelatestindustrystandardsdrivethis—yet,duetotheadventofdifferentweb
+technologies,theyareexposedtoweb-basedattacks,likeXSS.Thethree-layeredstructure
+oftheIoT,i.e.,theperceptionlayer,thenetworklayer,andtheapplicationlayer,introduces
+securityissuesatmultiplelayers[14]. Accessibilitytodataisoverabroadspectrumof
+devicesandplatforms. Similartotraditionalnetworks,theapplicationlayer’svulnerability
+toattacks,whichvariesbasedontheparticularIoTscenario,istheprimarysecurityconcern,
+eveninsensornetworks;hence,thereisaneedtodevelopadaptivedefensestrategiesto
+countertheseattacks[12].
+GenerativeAdversarialNetwork(GAN)-basedapproacheshavebeensuccessfully
+appliedtonetworkIDSsinrecentyears. IDSGAN[15]generatesadversarialmalicious
+traffictoattackIDSs,bydeceivingandevadingdetection. Theresearchutilizedfunctional
+andnon-functionalfeaturesfromtheNSL-KDDdataset[16],totrainaGANmodeltofool
+a BlackBox IDS. The generator was able to fool different detection algorithms, such as
+SupportVectorMachine(SVM)[17],Naive-Bayesclassifier[18],Multi-LayerPerceptron
+(MLP)[19],andDecisionTree(DT)[20],bygeneratingvariationsofnetworkandhost-based
+attacks,suchasUsertoRoot(U2R),RemotetoUser(R2U),andDDoSattack. TheGAN
+modelusedbyIDSGANisslowtotrain. Whilegeneratingvalidsamplesforfoolingan
+IDSworkswell,thismaynotscalewellforawebapplicationframeworkprotectedbya
+WAF.Theunconditionalgenerativemodelhasnocontroloverthemodeofdatageneration.
+Modelconditioningusingadditionalinformationallowsmoretargeteddatageneration[21].
+Theconditioningisbasedontheclasslabelsor someofthedata. ThegeneratorGand
+discriminatorD,twobuildingblocksofaGAN,areconditionedonsomeextrainformation,
+suchasaclasslabelyordatamodality.
+Sensors2023,23,8014 3of18
+GANshaveproventobeaneffectiveapproachtogeneratingcontinuousdata,suchas
+images[22]. However,usingGANsforgeneratingdiscretedataorattacksequences,such
+asXSSandSQLIattackpayloads,ischallenging. Thereasonforthisinherentlimitation
+isthatgenerationstartswithrandomsampling,followedbyadeterministictransformon
+themodelparameters. ThegradientlossofDisusedtoguideGtochangethegenerated
+valueandmakeitmorerealistic. Inthecaseofdiscretetokengeneration,theslightchange
+approachmakeslimitedsense,becausetheremightbenotokeninthelimiteddictionaryof
+thegenerator. Recentworksonsequencegeneration,suchasSeqGAN[23],overcomethis
+limitationbymodelingdatagenerationasastochasticpolicyinaReinforcementLearning
+(RL)setting.
+Weconsideredtheproblemofgeneratingattackpayloadsthatcanbypassthesignature-
+basedwebdefensemechanism. TheGANisprovidedwithconditionalinformationon
+theattacklabels. Thishelpsingeneratinghigh-qualityattacksamples. Therearesome
+researchworksthatinvolvetheuseoffuzzylogicforgeneratingattacksamples. TheFuzzy
+LogicSystem(FLS),introducedbyShahriaretal.[24],utilizesinputfromdifferentattack
+types,describedastopthreatsinOpenWorldwideApplicationSecurityProject(OWASP)
+web attacks, and risk assessment models, to generate attack payloads. These payloads
+canbetestedagainstPHP-basedapplications,tocheckthesecurityrisklevelofdifferent
+applications. Thetokensusedinfuzzylogicareoftenatindividualcharacterlevel. Our
+frameworkusessemantictokenizationandaBytePairEncoding(BPE)[25]algorithm,to
+createbettertokens,soastogeneratelogicallycorrectattacksequences.
+Moreover,thefuzzylogicscalespoorlyastheinputsizeincreases. Thenumberof
+variationsofdiscretetokenscanbeexponential,intermsoftokenspace. Inoursemantic
+tokenizationapproach,thetokenscanmaptoaconstantsetofclasses,suchastags,script
+parameters,functionbody,hyperlinks,etc. Thismakesthespacecomplexityofthetoken
+generation method polynomial, in terms of the maximum length of sequence and the
+numberofattacktokens. Thus,conditionalsequencingscaleswellwithanincreaseininput
+size,comparedtoafuzzy-logic-basedapproach.
+Inthisresearch,weutilizedconditionalsequencegeneration,totargetwebapplication
+firewallsprotectingwebapplicationsagainstapplicationlayerattacks,suchasXSS,SQL
+Injection,andDirectoryTraversal. Thesemanticknowledgefromsecurityexpertsencoded
+the data modality required for the attacks. The sequence generation process utilized
+thisinformationforgeneratingtargetedattackpayloads. Wetestedthegeneratedattack
+payloadsagainstopen-sourceModSecurityWAFs[26]andAWSWAFs[27]. Thepayloads
+generated by the conditional sequencing were able to bypass ModSecurity WAFs and
+AWSWAFs.
+ThesepayloadscanhelpimprovetheattacksignaturesintheWAFruleset. Thekey
+contributionsofthisworkareasfollows:
+• Conditionalsequencegeneration,byunderstandingthesemanticstructureofweb
+attack payloads. The technique helps in improving the training efficiency of the
+generatorandingeneratingvalidattacksignaturesthatcanfoolthediscriminator.
+• Evaluationofgeneratedattacksamplesonproduction-gradeWAFs. WeusedMod-
+Security and AWS WAFs to test the quality of generated web attack samples. We
+observedthat8.0%oftheattacksamplestargetingAWSWAFallowedlistingandthat
+upto44%ofthesamplestargetingAWSWAFblocklistingwereabletobypassthe
+rulesinplaceforblockingwebattacks.
+• GeneratingaGAN-basedsyntheticattackdataset,bytrainingaGANmodelonreal
+andfakeattacksamples. Thissyntheticdatacanhelptotrainwebapplicationlayer
+defensivedevices,suchWAFs,againstsophisticatedattacks,likeAPT.
+2. RelatedWork
+Webattacks, suchasXSS,canleadtodisruptionofconfidentialityandavailability
+in a Cyber–Physical System (CPS). Duo et al. [1] modeled a CPS based on time-driven
+andevent-drivencyberattacks. Penetrationtestingcanbeconsideredasanevent-driven
+Sensors2023,23,8014 4of18
+attacksimulation,todetectvulnerabilitiesinaCPS.Alsaffaretal.[28]conductedastudy
+ofdifferenttypesofXSSattacks,andtheyproposedagreedyalgorithmforthedetectionof
+XSSvulnerabilitiesinwebapplications. Theprogramonlyconsideredastaticsetofrules
+fordetectingXSSattacks. Anautomatedmechanismtoconductpentestinginacontrolled
+manner is challenging. Several approaches have been used, to formulate pentesting as
+a planning problem. Lucangeli et al. [29] used Partially Descriptive Domain Modeling
+(PDDL)-based attack modeling. This approach was limited, since it assumed complete
+informationabouttheattackstatesandactions. Attackplanninghasbeenmodeledasa
+PartiallyObservableMarkovDecisionProcess(POMDP)problembySarrauteetal.[30].
+Thishelpsinincorporatinguncertainty,suchasnon-deterministicactions. ThePOMDP
+modelingusedinthisworkhasbeenexaminedinlimitedexperimentalsettings. Asthe
+environment becomes more complex (an increased number of exploits and machines),
+theruntimeofthePOMDPsolverincreasessignificantly. Areinforcementlearning(RL)-
+basedapproachtoautomatedpentestinghasbeenconsideredinresearchworks[31,32].
+Schwartzetal.[31]formulatedtheproblemusingMarkovDecisionProcess(MDP)model-
+ing. TheauthorsnotedthatanRLapproachwasscalableonlyinsmall-scaleenvironments.
+Schwartz et al. [33] improved on their earlier work, by using a modified version of the
+POMDP.Theauthorsincorporatedthedefender’sbehavioraspartoftheresponsetopen-
+testingactivitieswithinthemodelofautonomouspentesting. Ghanemetal.[32]usedthe
+POMDPmodelingapproach. Naturally,thetimeconsumedtoconductpentestingonsmall-
+scalenetworksusingthisapproachisofanorderofhours. Tranetal.[34]usedmulti-agent
+RLfordecomposingactionspaceintosmallersubsets,tohelpconductpentestingatscale.
+Zhou et al. [35] used an improved Deep Q-Network (DQN) for addressing issues with
+sparserewards,byimprovingtheexplorationabilityoftheneuralnetwork. Someother
+approaches thathavebeenused forautonomouspentestingincludeusing contingency
+planningtomodeltheproblem. Empiricalevaluationwasconductedinasimulatedsetting
+withknownvulnerabilities.
+Adversarialexampleshavebeenusedforgeneratingfakeimageswithsuccess. Ad-
+versarial networks, such as GANs, use the generative network to generate counterfeit
+images/samplesthatfoolthediscriminatemodelwithaknowledgebaseofrealdatasam-
+ples. GAN-basedmodelshavebeenusedincybersecurityoperations,suchaspassword
+cracking,intrusiondetection,andXSSattackpayloadvalidation. PassGAN[36]usesadeep
+learningapproachforpasswordguessing. PassGANusestrainingon9.9millionunique
+leakedpasswords,andusingaGAN-basedpasswordcrackingapproachproducedbetter
+passwordguessesthanwell-knowntools,suchasJohntheRipperandHashCat. IDSGAN
+generates malicious traffic records, to attack IDSs by evading detection. The IDSGAN
+designclassifiestrafficintofunctionalandnon-functionalfeatures. Theauthorsalteredthe
+non-functionalfeatures,togenerateadversarialexamplesfordifferentattackcategories,
+e.g.,retainingintrinsic(session-based)andtime-basedfeaturesforaDDoSattack,andmod-
+ifyingcontentandhost-basedfeatures. Anempiricalevaluationshowedalowdetection
+rateagainstattackclassificationalgorithmsfortheNSL-KDDdataset. DeepConvoluted
+GAN(DCGAN)hasbeenusedbyYangetal.[37],todealwithunbalancednetworkintru-
+siondata. Zhangetal.[38]usedaMonteCarloTreeSearch(MCTS)-basedalgorithm,to
+generateadversarialXSSattacksamples.Theresearchrestrictedattacksamplemodification
+usingpredefinedrulesandusedaGANtooptimizethedetectorandtoimprovetheattack
+detectionrate.
+There is a lack of robust attack datasets that can help detect sophisticated attacks,
+suchasAPTs [6,39]. Theuseofdeception-basedattacksforsomerecentdatasets,suchas
+DAPT2020[40]andUnraveled[41],targetedageneralclassofAPTattacks,bysimulating
+thethreatvectorsusedinAPTattacks. Asthescaleofwebinfrastructureandwebtech-
+nologiesexpands,itwillbecomedifficultforsecurityresearcherstogeneraterealattack
+samplesbyusingattacksimulations. Thisresearchproposescomplementingdatasetssuch
+as DAPT2020 [40], and Unraveled [41], by generating fake attack data from real attack
+samples. GANscancreateadversarialexamplesthatmimicsophisticatedattacktechniques,
+Sensors2023,23,8014 5of18
+aswehavedemonstratedinthisresearch. ByincorporatingtheseexamplesintotheWAF
+trainingdata,itispossibletobolsteraWAF’sresilienceagainstevasionattemptsandto
+improveitseffectivenessagainstmoreadvancedattacks.
+3. Background
+Theprocessofpenetrationtestinginvolvesinformationgatheringaboutthetarget,
+suchasopenports,serviceversion,OperatingSystem(OS),andusingtheinformationto
+mounttargetedattacksagainstaservice. Severaltoolsandtechniqueshelpinconducting
+penetrationtesting. Onekeyissueinusingtoolsisthattheknownvulnerabilitieslimit
+them. MostofthesevulnerabilitieshaveanassociatedCommonVulnerabilityEnumeration
+Identifier(CVE-ID)storedinaCommonVulnerabilityScoringSystem(CVSS)[42]. Some
+vulnerabilitiesareleftunidentifiedduringthedevelopmentlife-cycleofaproduct. These
+vulnerabilitiesareknownaszero-dayattacks[43].
+3.1. WebApplicationAttacks
+Thereareseveralpartsofawebapplicationthatcanbetargetedbywebapplication
+attacks. A typical web application includes a web application protocol, e.g., HTTP/S,
+server-sidefunctionality,theuseofscriptsorcodetogeneratedynamiccontent,application
+design flaws, authentication, and a data storage mechanism used by the application.
+Somewell-knownwebvulnerabilitiesincludesessionhijacking,bypassingauthentication,
+SQL injection attacks, and XSS [44]. The XSS attacks involve using some aspect of the
+application’sbehavior,tocarryoutmaliciousactionsagainstusers. Theseactionsinclude
+logginguserkeystrokes,andmasqueradinguserprivileges,tocarryoutunintendedactions.
+An example of how an attacker can capture the session token of an authenticated
+user has been provided in Figure 1. An authenticated user who logs into an applica-
+tionisissuedacookie—step1. TheattackersuppliesacraftedURLtotheuser—step2.
+TheuserrequeststheURL—step3,andexecutesthemaliciousJavaScriptreturnedbythe
+attacker—steps4and5. The malicious script requests the server owned by the attacker,
+withtheuser’ssessiontoken. Ineffect,theuser’scapturedtokenissuppliedtothedomain
+controlledbytheattacker,andtheuser’ssessionishijacked—steps6and7. Thepayloads
+forsuchweb-basedattackscanalsocausewebsitedefacementandotheruseractions,such
+asaddinganewuserwithadminprivilege(iftheadmin’ssessionhasbeenhijacked).
+Figure1. Cross-SiteScripting(XSS)vulnerabilitypresentinanapplicationexploitedbyaremote
+attacker.
+Sensors2023,23,8014 6of18
+DefenseMechanismsagainstWebAttacks
+Modernserversandapplicationsuseseveralprotectionmechanismstopreventweb-
+based attacks. These techniques include (a) blocking the attacker’s input, based on an
+attacksignaturematch,(b)inputsanitationorencoding,and(c)truncatingattackstrings
+toafixedlength,topreventattackersfrominjectingmaliciousscripts. Webapplications
+exposedtothepublicinternetmakeuseofWAFs [45]withthesedefensemechanisms,to
+filterandmonitorapplicationlayertraffic. Theattackershavealsoadaptedtothedefensive
+techniquesemployedbyWAFs.
+Figure2showsexpressionsblockedbyWAFs. Thefirstattackvectorusesscripttags
+toinserttheXSSpayload. ModernWAFscanblockexpressionsbysignaturematching,
+butacraftyattackercanuseadynamicexpressiontobypassthefilters. Theattackercan
+alternativelyleverageotherscriptingplatformsthattheapplicationserverprovides,such
+as Visual Basic (VB), to create a script that can pass through undetected firewall filters.
+TheattackerusesNULLbytesinthesecondattackvector,tobypasstheWAFfilter. Other
+techniques used include event handlers, like onclick and onmouseover, which bypass
+signature-basedWAFfilters. SomeWAFslimitthescriptlengththatcanbeinsertedas
+payload. Thelengthlimitscanalsobebypassedbyusingascriptbeingloadedfromare-
+motesource,e.g.,<script src=http://remote-server/malicious.js></script>. Next,
+wedescribehowthisprocessofblockingandbypassingwebattackscanbeformulatedas
+atwo-playerzero-sumgameandmodeledasaGAN.
+Blocked Expression: <script>alert(1)</script>
+Bypass using dynamic expression: <x style=
+x:expression(alert(1))>
+Bypass using VBScript: <script language=vbs>
+MsgBox 1</script>
+Blocked Expression: <img onerror=alert(1) src=a>
+Bypass using NULL bytes: <[\%00]img
+onerror=alert(1) src=a>
+Figure2.ExpressionsblockedbyWAFsandcorrespondingbypasstechniques.
+3.2. GenerativeAdversarialNetworks(GANs)
+A GAN defines two neural networks: generator G and discriminator D [46]. In a
+traditionaladversarialnetwork,thedatadistributionofthegeneratorisdefinedas p over
+g
+datax. Apriorinput p (z)isusedasaninputnoisevariable. Themappingoftheinput
+g
+noisetothedataspaceisrepresentedasG(z;θ ). ThegeneratorGisadifferentialfunction
+g
+representedbyanMLPwithparameter θ . ThesecondMLPusedinthismodel,called
+g
+thediscriminator,isrepresentedasD(x;θ ),whichoutputsascalar. D(x)representsthe
+g
+probabilitythatxcamefromdataratherthanfromnoise p .
+g
+Thevariable p (x)referstotheoriginaldatadistribution. E istheexpecta-
+data x∼pdata (x)
+tionvaluefunction: itmeansthattheexpectedvalueofxisassumedtobedistributedover
+p (x). ThevaluefunctionV(G,D)representsamin–maxgamebetweenthegenerator
+data
+andthediscriminator. Thediscriminatoristrainedtomaximize(max )theprobabilityof
+D
+assigningthecorrectlabeltothetrainingexamplelogD(x). Simultaneously,thegenerator
+istrainedtominimize(min )thefunctionlog(1−D(G(z)). Insummary,amin–maxgame
+G
+withvaluefunctionV(G,D)isdefinedas
+min max V(D,G) = E [logD(x)]+E . (1)
+G D x∼pdata (x) z∼pz (z)[log(1−D(G(z)))]
+TheinitialsamplesgeneratedbyGarenotoptimalenoughtobypassthedetection
+criterionofD,andarerejectedbythediscriminator. Thegeneratorkeepsgeneratingthe
+adversarial samples and updating the parameters for the subsequent samples, and the
+generatorlearnsabetterevasiontechnique,tofoolthediscriminator.
+Sensors2023,23,8014 7of18
+3.3. GANsforGeneratingWebAttacks
+3.3.1. MotivatingExample
+GANscanbeusedtogeneratesimulatedattackdata,suchasmaliciousinputpayloads
+forinjectionattacks(e.g.,SQLinjection,XSS)orevasiontechniquesforbypassingsecurity
+filters. Thesesimulatedattackscanbeemployedtoevaluatetheeffectivenessofsecurity
+mechanisms and to identify potential vulnerabilities. In this work, we improved the
+structureofGANmodeling,byusingconditionalsequencing. Weconsideredconditional
+sequencegenerationasaprocessofidentifyingstochasticreinforcementlearningpolicy.
+Thepolicyrewardsarejudgedonthecompletesequenceoftheattackpayloadandare
+passedtointermediatestate-actionpairs,usingtheMonteCarlo(MC)searchprocess.
+ConsiderFigure3. Weassumethattheprovideddatasethasknownpayloadsusedfor
+XSSattacks. Weuseaprocessknownassemantictokenization,whichwillbeelaborated
+inSection4.1,toobtaintokensfromtheinitialdataset,whichrepresentsdifferentfeature
+values for XSS attacks, e.g., <script> is a tag attribute, while alert(1); is a function body
+attribute. Itisdifficulttolabelallsuchattributes,soweclassifytheattributeswithnosuch
+classificationbyusingtheotherlabel. Moreover,wealsoknowthatattacksprovidedbya
+datasetcanbereplayedagainstamaliciouswebapplication,tocheckthevalidityofthe
+attack. Weobtaindifferentresultswhenwereplaytheseattacksagainstknownvulnerable
+applications,suchasDVWA,Gruyere,andOWASPvulnerablewebapplications. Ifthe
+attackpayloadgeneratesastored,reflected,ordomain-basedXSSattack,weaddthelabel
+ok. Ifthereisanerrorwhenthepayloadisreplayedagainstthewebapplication,weadd
+thelabelerror. Ifnothinghappenswhenthepayloadisreplayedonthevulnerableweb
+page,weaddthelabelfail.
+Figure3.Exampleofconditionalsequencesgeneratedfromsemantictokens.
+These labels and tokens are passed to the generator, G. Generating conditional se-
+manticsequencesstartsbygeneratingarandominitialstate,e.g.,s =<script>. Thenext
+0
+Sensors2023,23,8014 8of18
+state,s ,isselectedfromthelistofavailabletokens,e.g.,theactionselectstokenalert(1);
+1
+andthemodeltransitionstostate s . Thestatetransitionisdeterministic, basedonthe
+1
+actionselected,s ×a (cid:55)→ s . Inthisexample,a=alert(1);ands =<script>alert(1);. Theen-
+0 1 2
+tire sequence {s ,s ,...,s } is evaluated by the discriminator, to check if the generated
+1 2 N
+sequenceisavalidattack. Thediscriminatorisalsopre-trainedonbothvalidandinvalid
+attacksequences,sincepre-traininghelpsimprovethegenerator’sefficiency. Considerthe
+generatedsequence<script>alert(1);<script>: themodelachievesahigherrewardfromthe
+discriminator,becausethissequencepassesthefitnessfunctiontestforavalidattack. In
+casethegeneratedattacksequenceisnotvalid,themodelutilizespolicygradientanda
+MonteCarlosearchbasedontheexpectedrewardfromthediscriminatormodel.
+3.3.2. GANforBypassingaWebApplicationFirewall
+Figure4providesaGANframeworkforawebapplicationpentest. Thegenerator
+modelusesthewebapplicationattacksamplesfromadistributionofattacksamplestried
+andtestedaspayloads. AsshowninFigure4a,thegeneratorpassestheattackpayload
+tothediscriminator. Theattacksampleisvalidatedagainstawebapplication,tocheckif
+itgeneratesanexploitagainstthewebapplication. Thediscriminatormodelusesknown
+attacksamplesthathaveworkedontheapplication,tocheckifthesampleprovidedby
+thegeneratorwillworkonthewebapplication. Theclassificationresultisusedtoclassify
+theattacksampleasvalid/invalid. Themodelofthegeneratorandtheattacksignature
+databaseareupdated,basedontheresult.
+Web Application
+Attack Samples
+Modify
+attack payload
+Generator Attack
+Payload
+Model Generative
+Web App with Model
+WAF Protection
+Generated Attack
+Attack Payload Signature DB WAF
+Signature
+Match ? Update
+Model
+No (Benign Yes (Malicious
+Update Discriminator Update Payload) Payload)
+model Model model
+Classification
+Real/Fake
+(b) GAN Data Flow for Web Application
+(a) GAN Implementation for Web Application
+protected by Web Application Firewall (WAF)
+Pentest
+Figure4.GAN-basedapproachforgeneratingattackpayloadsthatbypasswebapplicationfirewall
+(WAF)filters.
+InordertounderstandthesemanticmeaningofusingaGANagainstawebapplication
+andtoshowcasethepracticalapplicationofGAN-generatedpayloads,considerFigure4b,
+whereanattackpayloadfromageneratorisreplayedagainstawebapplicationprotected
+byaWAF.TheWAFsignaturematchisusedasacriteriontoclassifyanattackasmalicious
+orbenign. TheattackpayloadsaretriedagainsttheWAF,tocheckiftheyareidentifiedas
+maliciousandareblocked. UsingaGAN-basedattackpayloadgenerationandvalidation
+mechanism, we can generate payloads that trigger web application vulnerabilities but
+are not classified by the WAF as malicious. During the subsequent rounds of training
+fortheGAN,thegenerativemodelcanbeupdatedwithimprovedversionsoftheattack
+payloads. Thisapproachwillbebeneficialforgeneratingvalidattackpayloadsforalarge-
+scalewebapplicationplatformthatisdifficulttotestbyusingknownattackpayloadsor
+amanualpentestingapproach. OnechallengetothedirectuseofaGANfornon-image
+datasets,suchascyber-intrusiondetectionsystems,isthatfeaturespresentinthesedatasets
+Sensors2023,23,8014 9of18
+arediscrete. Thus,numeric0-1featuresandnon-numericfeaturesarerepresentedusing
+One-HotEncodingorDummyEncoding. Thedimensionexpansionusedtoaccountfor
+this encoding leads to the problem of vanishing gradient [47]. Chen et al. [48] used a
+Wasserstein-Distance-based modified training goal to deal with the vanishing gradient
+problem. TheresearchworkusedanadditionalvariableEncoder(E)totrainthemodified
+GANnetwork. AnotherproblemwiththedirectuseofaGANforgeneratingsequential
+datathatrepresentanattacksuchasXSSisthataGANisdesignedforgeneratingreal-
+valued,continuousdata. However,usingaGANtogenerateasequenceofdiscretetokens
+ischallenging. TheGANcangivethescore/lossfortheentiresequencewhenithasbeen
+generated; the measure of fitness for the partially generated sequence is quite difficult.
+SeqGAN [23] considered sequence generation as a sequential decision making process,
+and the generative model was treated as an RL agent. The state was generated tokens
+so far, and the action was the next token in the sequence. The authors used the policy
+gradientmethodandemployedanMCsearchtoapproximatestate-actionvalue.Inthenext
+section,weexplainhowweusedaSeqGANframeworkwithconditionaltokenencoding
+fortrainingaGANnetworkandgeneratingvalidattackpayloads.
+4. ConditionalAttackSequenceGeneration
+4.1. AttackPayloadTokenization
+Tokenizationistheprocessofbreakingrawtextintosmallchunks. Thetokenscan
+begroupsofcharacters, words, orsentences. Thetokenshelpinterpretthemeaningof
+thetext,byanalyzingthesequenceofwords(tokens). Intexttokenization,thepartsof
+the text that do not add any special meaning to the sentence, such as stop words, are
+removed. Removingthesewordsfromthedictionaryreducesthenoiseanddimensionof
+thefeatureset. Therearedifferentwaystoperformtokenization. Somepopulartechniques
+includewhite-space,dictionary-based,rule-based,regularexpression(regex)-basedand
+subword-basedtokengeneration. Mostofthesemethodssufferfrominherentlimitations,
+e.g.,limitationsonvocabularysizeandhandlingwordsthatareabsentinthevocabulary.
+TechniquessuchasBPEareusedtodealwiththeOut-Of-Vocabulary(OOV)sequences. It
+segmentsOOVassubwordsandrepresentsthewordsintermsofthosesubwords.
+The tokenization method that identifies meaningful attack payload tokens can be
+appliedtoadatasetofattackinputs,suchasXSS,toidentifyrelevantsub-sequencesthat
+can be combined to target the vulnerable web application. Semantic tokenization uses
+markers(suchastags<>,<script),parameternames(suchashref=),functionbody(suchas
+alert(),commonwords(suchasjavascript,VBScript),andspecialencoding(suchasu003c),
+http/httpslinks. Oncethesemanticmeaninghasbeenassignedtothetokens,theBPE [25],
+avariantofHuffmanEncoding,isappliedtothesemanticallylabeledtokens. Itusesmore
+embeddingorsymbolsforrepresentinglessfrequenttermsinthecorpus.
+ThesemantictokenizationprocesstakestheXSSdatasetasinput,asshowninFigure5.
+Theinputtextissplit,basedonmatchingconditionsforthemarkers,suchastags,encoding,
+functionbody,andparametername. Theinputcorpus(XSSdataset)isparsedlinebyline,
+andthedataareconvertedtotheHTML-renderedformat. Therendereddatafromeach
+arereplayedagainstvulnerableapplications. WeutilizedBurpsuite[49]toreplaytheinitial
+attack data D and to label each attack payload, based on the result of the HTML code
+replayedagainstthewebapplication(ok,note,warn,fail,error). Thelabelswereusedas
+inputfortheconditionalsequentialGAN.Thetokensfromeachlinewereannotatedand
+groupedintofrequentlyoccurringsymbols,usingaBPEalgorithm. Thesewereaddedto
+thevocabularyoftheknowntokens. Theprocesswasrepeateduntilnonewcombination
+ofsymbolswaspresent. Thevocabularyanddatalabelswerepassedtothegenerator,G.
+Sensors2023,23,8014 10of18
+Figure5. ConditionalAttackSequenceGenerationbysemantictokenizationandattackpayload
+validation.
+4.2. ConditionalSequencing
+The architecture for conditional attack sequence generation has been described in
+Figure5. WeusetheinputdatafromtheXSSdatasetD . Thedataarepreprocessed,toex-
+a
+tractthesemantictokens. TheXSSdataarealsolabeledwiththeresultsofattacksequences
+thatarereplayedonavulnerablewebapplication. Thelabelinformation pandtokensY
+1:T
+arepassedtothegenerator,G (Y ). Thediscriminatorisassumedtohaveinputsfromthe
+θ 1:T
+originaldatasetχ andfromsomefakedatageneratedfrominputsequencesthatfailed
+1:N
+togeneratevalidalertsonvulnerablewebapplications. ThediscriminatorD (Y ,p)uti-
+φ 1:T
+lizesthepolicygradientortheMaximumLikelihoodEstimate(MLE)forlearningoptimal
+policiesforthegenerationofattacksequences, Q
+Gθ.
+Theattackpayloadsarevalidated
+Dφ
+againstvulnerablewebapplications,andthepayloadsthatpassthevalidationphaseare
+addedtotheoriginalXSSdatasetD .
+a
+Weconsiderthedatasetχ andthelabelinginformationpastheinitialinputtothe
+1:N
+sequencegenerationprocess. Thegenerativemodelis θ-parameterized, andthemodel
+parameters can be determined by the data distribution based on labels p. The goal of
+generator G is to produce a sequence Y = {y ,y ,...,y }, such that y ∈ Y, where
+θ 1:T 1 2 T t
+Y is the vocabulary of the candidate tokens extracted from χ . This process can be
+1:N
+consideredanRLpolicygenerationproblem. Thepolicygenerationprocessisamodified
+versionofsequencegeneration,asdiscussedinSeqGAN[23],withsemantictokenization
+andconditionallabeling. ThepolicymodelforconditionalsequencingG θ (y t |Y 1:t−1 ,p)is
+stochastic. Thetransitionbetweenstatesisdeterministic,i.e.,δ s a ,s(cid:48) = 1,wheres = Y 1:t−1 ,
+s(cid:48) =Y ,a = y ,and,forallotherstates,s (cid:48)(cid:48) .ThediscriminatormodelD isφ-parameterized
+1:t t φ
+forimprovingthegenerator,G . ThemodelD (Y |p)isaproblemindicatinghowlikely
+θ φ 1:T
+thesequenceis,fromtherealattackdatasetD . Thediscriminatoristrainedbyproviding
+a
+positiveexamplesfromtheattackdataset D andnegativeexamplesfromthesynthetic
+a
+Sensors2023,23,8014 11of18
+dataset. ThenegativeexamplesaremalformedattackpayloadsthatfailtheXSSattacktest
+onvulnerablewebapplications.
+ConditionalSequence-BasedAttackGeneration
+TheobjectiveofthegeneratormodelG θ (y t |Y 1:t−1 ,p)istogenerateasequencefromthe
+startstates ,themodelparametersθ,andtheattacklabels p. Asanexample,thestartstate
+0
+couldbeoneofthesemanticallylabeledtokens,e.g.,s =</scrip</script>t>. Thegoalof
+0
+themodelistomaximizetheexpectedrewardR forthegenerationofacompleteattack
+T
+sequence,describedbyEquation(2). ThefunctionE[R |s ,θ,p]representstheexpected
+T 0
+reward,giventhelabels,startstate,andmodelparameters:
+J(θ) = E[R |s ,θ,p] = ∑ G (y |s ,p).Q Gθ(s ,y ). (2)
+T 0 θ 1 0 Dφ 0 1
+y∈Y
+The Q
+Gθ(s,a)
+is the action value function fora sequence, i.e., the expected reward
+Dφ
+accumulated by starting with the initial state s, taking the action a, and following the
+conditional sequence G parameterized by the attack labels. The objective function for
+θ
+the sequence starts from the initial states. It follows the policy to generate a sequence
+of tokens Y = {y ,..,y ,..y } that can be considered real attacks when evaluated on
+1:T 1 t T
+the vulnerableweb application—Figure 5. The action-value function REINFORCE [50]
+isusedbythediscriminator D (Yn )forestimatingthereward. Therewardcalculated
+φ 1:T
+bythediscriminatorisforthefinishedattacksequence. Themodelcapturesthefitness
+oftheprevioustokensintheattacksequence(prefix)andtheresultingfutureoutcomes.
+ThemodelutilizesanMCsearchwiththeroll-outpolicy G ,tosample T−tunknown
+β
+tokens. TheN-timeMCsearchprocedureisrepresentedbyEquation(3)below:
+{Y1 ,...,YN } = MCGβ(Y ;N|p). (3)
+1:T 1:T 1:t
+ThetokensareYn = (y ,...,y ),andYn issampled,basedontheroll-outpolicy
+1:t 1 t t+1:T
+G and the current state. The roll-out policy is started from the current state, and run
+β
+forNtimes,toobtainthebatchoutputoftheattacksamples. Theroll-outpolicyforthe
+conditionalsequencestartsfromthecurrentstateandrunstilltheendofthesequence,for
+Ntimes,toobtainabatchofoutputsamples. AsdescribedinEquation(4),thisprocess
+reducesthevarianceandobtainsamoreaccurateassessmentoftheactionvalue:
+Q G D θ φ (s =Y 1:t−1 ,a = y t |p) = N 1 ∑ N D φ (Y 1 n :T |p),
+n=1
+Yn ∈ MCGβ(Y ;N|p) for t < T
+1:T 1:t
+Q G D θ φ (s =Y 1:t−1 ,a = y t |p) = D φ (Y 1:t |p) for t = T (4)
+Theprocessdoesnotprovideintermediaterewards;instead,thefunctioniteratively
+updatesandimprovesthegenerativemodel, startingfrom s(cid:48) = Y . Thediscriminator
+1:t
+isretrainedwhenmorerealisticattackpayloadsaregeneratedfromthemodel. Inturn,
+the new discriminator model is used to retrain the generator. The policy-based model
+optimizestheparameterizedpolicy,tomaximizelong-termrewardsdirectly.
+We describe conditional sequence generation and XSS attack test procedures in
+Figure6, and we also provide the detailed Algorithm 1, for the same. The generator
+G ,parameterizedbyattacklabelsp,ispre-trainedonS,usingtheMLEalgorithm. Thesu-
+θ
+pervisedsignalfromthepre-traineddiscriminatorhelpsimprovethegenerator’sefficiency.
+The generator is conditioned on the attack labels p and trained for g-steps, to generate
+thesequenceY (line6). TheQ-functionQ
+Gθ
+iscalculatedforeachstepofthegenerator
+1:T Dφ
+(line7). Ifthecurrentstateisrepresentedbys = Y 1:t−1 andtheactionisa = y t ,thenext
+state is calculated by using the action-value function. The generator is updated, using
+Sensors2023,23,8014 12of18
+thepolicygradientapproachdescribedearlier. Thediscriminatorneedstobere-trained
+periodically,toimproveitsperformance. Thepositiveexamplesareprovidedfromtraining
+setS,andthenegativeexamplesareprovidedfromthefailedattacksequencesfromthe
+generator. Thenumberofpositiveandnegativeexamplesisthesameforeachd-stepin
+thealgorithm. ThetrainedgeneratorisusedforXSSattackvalidation,byreplayingthe
+sequencesagainstvulnerablewebapplicationlines18–24. Thevalidattacksareaddedto
+thebaseinitialtrainingsetχ ,toimprovethevariabilityofthetrainingdata.
+1:N
+Figure6.ConditionalAttackSequenceGeneration.
+Algorithm1ConditionalSequenceGeneration
+1: procedureCONDITIONALSEQUENCEGENERATION(X 1:N ,p)
+2: InitializeG θ ,D φ ,p,β ← θ
+3: G θ pre-trainedusingMLEonS,p
+4: TrainD φ frompositive,negativeG θ samples
+5: Pre-trainD φ tominimizecrossentropy
+6: forg-stepsdoGenerateY 1:T = (y 1 ,..,y T |p) ∼ G θ
+7: fort∈{1:T}do
+8: CalculateQ-functionQ(a = y t ;s =Y 1:t−1 |p)
+9: endfor
+10: Updategeneratorusingpolicygradient
+11: endfor
+12: ford-stepsdo
+13: Generatetruealerts,falsealertsusingG θ ,S
+14: TrainD φ fork-epochs
+15: endfor
+16: endprocedure
+17: procedureXSSATTACKTEST(G θ ,S,χ 1:N )
+18: fors∈S,G θ do
+19: s←html_render(s)
+20: ifxss_eval(s)then
+21: assign_label(s)
+22: updateχ 1:N ,adds
+23: endif
+24: endfor
+25: endprocedure
+Sensors2023,23,8014 13of18
+5. ExperimentalEvaluation
+WeusedtheXSSdataset[51]collectedfrommultipleXSSscanningtoolscontaining
+thepayloaddatacoveringdifferentXSSattacks. Thedatasetcoversdifferentfeaturesof
+XSSattacks,suchastags,functionbody,URL,andencoding.
+5.1. EvaluationofLossforConditionalGANs
+WeutilizedthesamplepayloadsfromtheXSSdataset[51]totrainourGANmodel.
+Thediscriminatorlossconsistedoftwoparts,i.e.,d_loss1andd_loss2. Thefirstlossvalue
+detectedrealattacksamplesasreal,andthesecondlossdetectedfakeattacksamplesas
+fake. Ontheotherhand,thegeneratorlosstriedtogenerateattacksamplesthatwerehard
+fordiscriminatorstodetectasrealattacks.Thegeneratoranddiscriminatorsweretrainedto
+improvelossfunctionstillconvergencewasachieved. Weobservedthatourdiscriminator
+lossfunctionsdecreasedasthenumberoftrainingsamplesincreased,convergingtoastable
+value∼1.1×10−2(seeFigure7). Thismeantthatourdiscriminatorwasmoreaccurateat
+distinguishingbetweenrealandfakeattacksamples. Thevalueofthelossfunctionfor
+thegeneratoralsodecreasedwithtime,reachingaminimumvalueof∼250epochs. We
+observedthattherewasnofurtherimprovementinthelossfunctionofthediscriminator.
+Thissignifiedanimprovementinthequalityofgeneratingattacksamplesthatcouldfool
+the discriminator’s ability to detect attack payloads. In summary, the attack samples
+generated at around 250epochs could be utilized to test the web application firewall’s
+effectivenessindetectingattacks.
+·10−2
+2.5
+2
+1.5
+0 50 100 150 200 250
+NumberofEpochs
+rotanimircsiDdna,rotareneGrofssoL
+d_loss1
+d_loss2
+g_loss
+Figure7.TheresultofGANtraininglossfor250epochs.
+5.2. WebApplicationFirewallBypass
+5.2.1. ModSecurityWAFTesting
+WeutilizedtheModSecurityWAFtochecktheattackpayloadsgeneratedbydiffer-
+ent variants of the GAN network. The attacks were first verified over vulnerable web
+applicationsandwerethenreplayedagainsttheWAF,tocheckhowmanyattackswere
+detectedbytherulesoftheWAF.ModSecurityconsistsofmodules,suchasPhantomJS(a
+headlessWebKitwithJavaScriptAPI).ThemoduleusesWebKit’sbrowserenvironment
+todetectreflectedXSSattacksaccurately. Forinstance, XSSattackpayloadsusepartial
+non-alphanumericobfuscation. Thecode
+<script>eval("aler"+(!![]+[])[+[]])("xss")</script>
+canbeusedtobypassnormalXSSdetectionfilters. ThePhantomJSconductsexecution
+timeanalysiswithinthebrowserDocumentObjectModel(DOM)afterde-obfuscation,to
+Sensors2023,23,8014 14of18
+validatetheattackpayload. Othermodules,suchasLuaAPI,allowthesecurityteamto
+hookinexternalprogramsthatextractHTTPdataandpassittoPhantomJSfordetection.
+WeevaluatedtheeffectivenessofavanillaGANandaconditionalGAN(CGAN)ona
+vulnerablewebapplicationprotectedbyaModSecurityWAF.ForeachtrialruninTable1,
+werandomlyselectedpayloadsfromtheXSSdataset. Thetestsetconsistedofpayloads
+generatedbythevanillaGANandtheCGAN.Thepercentagesrepresentthesuccessrate
+foreachversionoftheGANs,i.e.,thenumberofvalidattacksamplesthatweregenerated
+afterthetrainingoftheGANwasfinished.Thesepayloadswereabletosuccessfullybypass
+theWAF.Duringtheexperiment,wefoundthat10.37%ofthevanillaGANpayloadscould
+bypasstheModSecurityWAFfiltersinthefirstbatch,whereasfortheCGANonly7.66%of
+thegeneratedpayloadscouldbypasstheWAF.Forthesecondbatch,theCGANperformed
+slightlybetterthanthevanillaGAN(seeTable1). Weobservedgoodperformanceforthe
+CGANinthefourthbatch,i.e.,only0.08%ofthevanillaGANpayloadswereabletobypass
+theWAF,whereas12%oftheCGANpayloadswereabletobypasstheWAF.Thismeant
+thattheCGANwasmoreconsistentinprovidingvalidpayloadsacrossallthetrialruns.
+ThiswasbecausetheCGANutilizedsemantictokenizationtounderstandthestructure
+of the XSS payloads and mimicked the valid payloads closely. In effect, the quality of
+generatedattacksampleswasbetterfortheCGAN.
+Table1.NumberofsuccessfulWAFbypasses,usingseveralvariantsofGAN.
+Run# VanillaGAN CGAN
+1 10.37% 7.66%
+2 7.69% 8.04%
+3 17.64% 9.08%
+4 0.08% 12%
+5 16.19% 8.28%
+5.2.2. AWSWAFTesting
+WeenabledtheAWSWAFtoprotectacommercial-gradewebapplication. Thein-
+frastructureinAWSrequiresthecreationofanapplicationloadbalancer(ALB)oranAPI
+gateway. WeutilizedanALBforoursetup[52]. Wecreatedacustomruleset,including
+AWSpre-setrules,todetectandpreventattacks,likeURIpathinclusion,SQLI,anonymous
+IPaddress,anddifferentvariantsofXSSattacks. ThecommercialrulesfromAWSmarket-
+placevendorslikeFortinetandF5werealsousedasapartoftheAWSaccesscontrollist
+(ACL).TheACLwasattachedtothecreatedALB.Intotal,theWAFcomprised3000rules.
+TheattackpayloadsgeneratedusingtheconditionalGANwerereplayedagainsttheAWS
+WAF,andtheresultswereobservedintheAWSWAFmanagementdashboard.
+The % Attack Match means the percentage of valid payloads. We observed that
+8% of the GAN-generated payloads were able to bypass the rulesets of the AWS WAF
+(Table2). ThismeansthatthesuccessratefortheCGANoncommercialfirewallsisquite
+low. Thiswasexpected,becausecommercialfirewallsutilizeabroadersetofsignatures
+to detect web attacks. We observed that 44.9% of attack payloads were detected under
+AWS-managedXSSrules,whereas44%ofpayloadsweredetectedusingFortinet-based
+commercialrulesdownloadedfromtheAWSmarketplace. TheWAFmisclassified3.1%of
+theattackpayloadsasSQLIattacks. Thisindicatesthatattacksignaturesfromcommercial
+WAFsarepronetominorerrors. WhilethebypassratewasquitelowfortheAWSWAF,a
+maliciousattackgrouponlyrequiresafewvalidsignaturestobypassaWAF;thus,security
+teamscanutilizethevalidattacksignaturestoupdatetheWAFrulesets.
+/?saivs.js%20%20/%3E%3Cvideo%3E%3Csource%20%20/%3E
+/?%3Ca/src=/%20%3C/img%3E%3Cinput%20’
+/?%5Cu0061lert%60%60;
+Sensors2023,23,8014 15of18
+AnexampleofattackpayloadsthatsuccessfullybypassedtheAWSWAFcanbeseen
+above. ThecaveatthatattackersusetobypassXSSfiltersincludesremovingdifferentparts
+oftheattackstringandcheckingiftheinputisstillblocked. Othermethodsincludeusing
+alternate means of introducing scripts, such as img tags, event handlers, script pseudo-
+protocols(suchasjavascript),anddynamicallyevaluatedstyles. Thediscriminatorin
+a GAN learns these variations after being trained on attack payloads, and, hence, the
+discriminatorcangenerateattacksequenceswithnomatchingattacksignatures.
+Table2.GAN-generatedXSSattackpayloadsagainstAWSWAF.
+MatchingRule %AttackMatch AWSWAFAction
+WAFBypass 8.0% ALLOW
+AWS-managedXSS 44.9% BLOCK
+FortinetXSSRule 44.0% BLOCK
+Misclassified 3.1% BLOCK
+5.3. ComparativeAnalysiswithExistingResearch
+Ourresearchprovidesauniquemechanismforlearningthesignaturesconfigured
+inagivenWAFandnewdatathatcanbeusedforimprovingattackdetectionsystems.
+Weidentifiedseveralgapsintheexistingresearchonautonomouswebapppentesting.
+Weidentifiedthat,exceptforthePOMDP+modelproposedbySchwartzetal.[33],most
+researchfailstoincorporatethedefender’sperspectivewhenmodelingautonomouspen-
+testing. OurGANmodelcapturestheattacker’sandthedefender’sperspectivethrough
+generatoranddiscriminatormodels. Someotherlimitationsoftheexistingresearchinclude
+theuseofstaticconfigurations[28],lackofpracticalevaluation[34],andshowinglimited
+scalabilityonanextensivenetwork[35]. WecomparedtheconvergencerateofaCGAN
+networktothePOMDPmodelproposedbySchwartz,etal.[31]. Theauthorsconducted
+trainingonsingleandmulti-sitenetworks,andconvergencetook∼1000episodes,which
+was4×thatoftheconvergenceachievedbyconditionalGANnetworkintheproposed
+solution. Thisisduetoabetterunderstandingofattacksemanticsinourmodel.
+6. Discussion
+WediscussedthechallengesposedbyintegratingcloudcomputingwithWSNsand
+incorporatingtheIoTinthesenetworks. Althoughtherearedefensemechanisms,such
+ascommercialWAFs,toidentifythesesecurityissues,thesophisticationoftheseattacks
+keepsincreasing,includingdeceptivemeansusedbyattackerstomasqueradeasgenuine
+traffic. AttackssuchasAPTsrequiretheidentificationofattackpatternsbeyondtraditional
+signature-baseddetection. Penetrationtestingplaysacrucialroleinidentifyingsecurity
+issues and risks related to the IoT, sensor networks, smart solutions, and web-based
+vulnerabilities. Asignificantshortageofcybersecurityprofessionalshasledtoademand
+forAI-enabledpenetrationtestingtechniques.
+GANprovidesamechanismtomimicapentesterandanetworkdefenderinatwo-
+playerzero-sumgame. UsingGANstogeneratediscretedataorattacksequences,such
+as XSS and SQL Injection payloads, is challenging. The generation process can suffer
+frominherentlimitations,suchaspoorinputquality,lackofdiversity,andmodecollapse,
+asdiscussedinSentiGAN[53]. Weproposeaconditionalsequencegenerationmechanism
+thatutilizesthepentester’ssemanticknowledgeinthegenerativemodelforperforming
+autonomouspentestingagainstcommercialWAFs,suchasModSecurityandAWSWAF.
+Thepracticalityoftheproposedapproachwashighlightedbylearningthesuccess
+rateofvalidattackpayloadsonWAFs. Ourmodelachievedfastconvergence,duetothe
+semanticencodingofattacktokens.Moreover,thesyntheticdatageneratedbythegenerator
+uponconvergencecanhelptoimprovethesignaturedatabaseoftheWAFs. Althoughwe
+achievedsomevalidpayloads,thesequenceGANframeworkusedinourworksuffered
+Sensors2023,23,8014 16of18
+fromtheinherentlimitationofcapturinglong-termdependenciesbetweensequences—
+hence, performing poorly on an AWS WAF. Category-aware generative networks with
+hierarchicallearningmodels[54]couldhelpovercomesomeofthelimitationspresentin
+sequenceGANs.
+7. ConclusionsandFutureWork
+WeproposeaGAN-basedsolutionformodelingwebapplicationattacksandconduct-
+ingautonomouspentestingonapplicationsprotectedbycommercialWAFs. Ourmodel
+utilizesconditionalsequencegeneration,tolearnthestructureofattackpayloadsthatcan
+bypassWAFs. ExperimentalevaluationconductedonaModSecurityWAFandanAWS
+WAFgeneratedseveralvalidpayloads. Ourproposedsolutionteststherulestructureof
+WAFs,bygeneratingnewpayloadsthatarehardtodetect,usingexistingWAFrules. These
+payloads can, in turn, be utilized to improve the robustness of WAFs and to deal with
+sophisticatedattacks. Alimitationofourworkisthelowbypassrateoncommercial-grade
+WAFs,suchastheAWSWAF.WeplantoexplorealternateGANversions,tobettermodel
+thelong-termsequencesofvalidattackpayloads. Thisapproachcouldhelptoimprove
+ourmodel’sperformanceoncommercialWAFs. Wealsoplantoexpandourexperimental
+sectionattacks,suchasCSRF,SQLI,anddirectorytraversalattacks.
+Author Contributions: Conceptualization, A.C. and K.J.; Validation, M.Z.; Investigation, A.C.
+and K.J.; Writing—original draft, A.C. and K.J.; Writing—review & editing, M.Z.; Supervision,
+M.Z.; Projectadministration,M.Z.Allauthorshavereadandagreedtothepublishedversionof
+themanuscript.
+Funding:ThisresearchwasfundedbyNationalScienceFoundationaward#OAC-2126291.
+InstitutionalReviewBoardStatement: Notapplicable.
+InformedConsentStatement:Notapplicable.
+DataAvailabilityStatement:DataavailableinapubliclyaccessiblerepositorythatdoesnotissueDOIs
+Publiclyavailabledatasetswereanalyzedinthisstudy.Thisdatacanbefoundhere:https://github.com/
+payloadbox/xss-payload-list.
+ConflictsofInterest:Theauthorsdeclarenoconflictofinterest.
+References
+1. Duo, W.; Zhou, M.; Abusorrah, A. Asurveyofcyber attacksoncyber physicalsystems: Recent advancesandchallenges.
+IEEE/CAAJ.Autom.Sin.2022,9,784–800.[CrossRef]
+2. MilosTimotic. 9WebTechnologiesEveryWebDeveloperMustKnowin2021.Availableonline:https://tms-outsource.com/
+blog/posts/web-technologies/(accessedon2October2021).
+3. Disawal,S.;Suman,U. AnAnalysisandClassificationofVulnerabilitiesinWeb-BasedApplicationDevelopment. InProceedings
+ofthe20218thInternationalConferenceonComputingforSustainableGlobalDevelopment(INDIACom),NewDelhi,India,
+17–19March2021;pp.782–785.
+4. Chowdhary,A.;Huang,D.;Mahendran,J.S.;Romo,D.;Deng,Y.;Sabur,A. Autonomoussecurityanalysisandpenetrationtesting.
+InProceedingsofthe202016thInternationalConferenceonMobility,SensingandNetworking(MSN),Tokyo,Japan,17–19
+December2020;pp.508–515.
+5. Pang,Z.H.;Fan,L.Z.;Guo,H.;Shi,Y.;Chai,R.;Sun,J.;Liu,G.P. Securityofnetworkedcontrolsystemssubjecttodeception
+attacks:Asurvey. Int.J.Syst.Sci.2022,53,3577–3598.[CrossRef]
+6. Alshamrani, A.; Myneni, S.; Chowdhary, A.; Huang, D. A survey on advanced persistent threats: Techniques, solutions,
+challenges,andresearchopportunities. IEEECommun.Surv.Tutor.2019,21,1851–1877.[CrossRef]
+7. GlobeNewsWire. GlobalPenetrationTestingMarket2020–2025.Availableonline:https://www.globenewswire.com/en/news-
+release/2020/07/10/2060450/28124/en/Global-Penetration-Testing-Market-2020-2025-Increased-Adoption-of-Cloud-based-
+Penetration-Testing-Presents-Opportunities.html(accessedon2May2021).
+8. CybersecurityVentures. CybersecurityTalentCrunch.Availableonline:https://cybersecurityventures.com/jobs/(accessedon
+2July2021).
+9. Alturki,R.;Alyamani,H.J.;Ikram,M.A.;Rahman,M.A.;Alshehri,M.D.;Khan,F.;Haleem,M. Sensor-cloudarchitecture: A
+taxonomyofsecurityissuesincloud-assistedsensornetworks. IEEEAccess2021,9,89344–89359.[CrossRef]
+10. Pundir,S.;Wazid,M.;Singh,D.P.;Das,A.K.;Rodrigues,J.J.;Park,Y. Intrusiondetectionprotocolsinwirelesssensornetworks
+integratedtoInternetofThingsdeployment:Surveyandfuturechallenges. IEEEAccess2019,8,3343–3363.[CrossRef]
+Sensors2023,23,8014 17of18
+11. Medeiros,I.;Beatriz,M.;Neves,N.;Correia,M. SEPTIC:DetectinginjectionattacksandvulnerabilitiesinsidetheDBMS. IEEE
+Trans.Reliab.2019,68,1168–1188.[CrossRef]
+12. Mitropoulos,D.;Louridas,P.;Polychronakis,M.;Keromytis,A.D. Defendingagainstwebapplicationattacks: Approaches,
+challengesandimplications. IEEETrans.DependableSecur.Comput.2017,16,188–203.[CrossRef]
+13. Mrabet,H.;Alhomoud,A.;Jemai,A.;Trentesaux,D. AsecuredindustrialInternet-of-thingsarchitecturebasedonblockchain
+technologyandmachinelearningforsensoraccesscontrolsystemsinsmartmanufacturing. Appl.Sci.2022,12,4641.[CrossRef]
+14. Chu, G.; Lisitsa, A. Penetration Testing for Internet of Things and Its Automation. In Proceedings of the 2018 IEEE 20th
+InternationalConferenceonHighPerformanceComputingandCommunications,IEEE16thInternationalConferenceonSmart
+City,IEEE4thInternationalConferenceonDataScienceandSystems(HPCC/SmartCity/DSS),Exeter,UK,28–30June2018;
+pp.1479–1484.
+15. Lin,Z.;Shi,Y.;Xue,Z. Idsgan:Generativeadversarialnetworksforattackgenerationagainstintrusiondetection.arXiv2018,
+arXiv:1809.02077.
+16. Revathi, S.; Malathi, A. AdetailedanalysisonNSL-KDDdatasetusingvariousmachinelearningtechniquesforintrusion
+detection. Int.J.Eng.Res.Technol.(IJERT)2013,2,1848–1853.
+17. Jakkula,V.TutorialonSupportVectorMachine(SVM);SchoolofEECS,WashingtonStateUniversity:Pullman,WA,USA,2006;
+Volume37.
+18. Rish,I.AnempiricalstudyofthenaiveBayesclassifier. InProceedingsoftheIJCAI2001WorkshoponEmpiricalMethodsin
+ArtificialIntelligence,Seattle,WA,USA,4–6August2001;Volume3,pp.41–46.
+19. Noriega,L.MultilayerPerceptronTutorial;SchoolofComputing,StaffordshireUniversity:Staffordshire,UK,2005.
+20. Myles,A.J.;Feudale,R.N.;Liu,Y.;Woody,N.A.;Brown,S.D. Anintroductiontodecisiontreemodeling. J.Chemom.AJ.Chemom.
+Soc.2004,18,275–285.[CrossRef]
+21. Dai,B.;Fidler,S.;Urtasun,R.;Lin,D. Towardsdiverseandnaturalimagedescriptionsviaaconditionalgan. InProceedingsof
+theIEEEInternationalConferenceonComputerVision,Venice,Italy,22–29October2017;pp.2970–2979.
+22. Marra, F.; Gragnaniello, D.; Cozzolino, D.; Verdoliva, L. Detectionofgan-generatedfakeimagesoversocialnetworks. In
+Proceedingsofthe2018IEEEConferenceonMultimediaInformationProcessingandRetrieval(MIPR),Miami,FL,USA,10–12
+April2018;pp.384–389.
+23. Yu,L.;Zhang,W.;Wang,J.;Yu,Y. Seqgan: Sequencegenerativeadversarialnetswithpolicygradient. InProceedingsofthe
+AAAIConferenceonArtificialIntelligence,SanFrancisco,CA,USA,4–9February2017;Volume31.
+24. Shahriar,H.;Haddad,H. Riskassessmentofcodeinjectionvulnerabilitiesusingfuzzylogic-basedsystem. InProceedingsofthe
+29thAnnualACMSymposiumonAppliedComputing,SanFrancisco,CA,USA,4–9February2014;pp.1164–1170.
+25. Shibata,Y.;Kida,T.;Fukamachi,S.;Takeda,M.;Shinohara,A.;Shinohara,T.;Arikawa,S.BytePairEncoding:ATextCompression
+SchemethatAcceleratesPatternMatching;KyushuUniversity:Fukuoka,Japan,1999.
+26. Singh,J.J.;Samuel,H.;Zavarsky,P. Impactofparanoialevelsontheeffectivenessofthemodsecuritywebapplicationfirewall. In
+Proceedingsofthe20181stInternationalConferenceonDataIntelligenceandSecurity(ICDIS),SouthPadreIsland,TX,USA,
+8–10April2018;pp.141–144.
+27. Singh,H. SecurityinAmazonWebServices.InPracticalMachineLearningwithAWS;Springer:Berlin/Heidelberg,Germany,2021;
+pp.45–62.
+28. Alsaffar,M.;Aljaloud,S.;Mohammed,B.A.;Al-Mekhlafi,Z.G.;Almurayziq,T.S.;Alshammari,G.;Alshammari,A. Detectionof
+WebCross-SiteScripting(XSS)Attacks. Electronics2022,11,2212.[CrossRef]
+29. Obes,J.L.;Sarraute,C.;Richarte,G. Attackplanningintherealworld.arXiv2013,arXiv:1306.4044.
+30. Sarraute,C.;Buffet,O.;Hoffmann,J. Penetrationtesting==pomdpsolving? arXiv2013,arXiv:1306.4714.
+31. Schwartz,J.;Kurniawati,H. Autonomouspenetrationtestingusingreinforcementlearning. arXiv2019,arXiv:1905.05965.
+32. Ghanem,M.C.;Chen,T.M. Reinforcementlearningforefficientnetworkpenetrationtesting. Information2020,11,6.[CrossRef]
+33. Schwartz,J.;Kurniawati,H.;El-Mahassni,E. Pomdp+information-decay:Incorporatingdefender’sbehaviourinautonomous
+penetrationtesting. InProceedingsoftheInternationalConferenceonAutomatedPlanningandScheduling,Nancy,France,
+14–19June2020;Volume30,pp.235–243.
+34. Tran,K.;Standen,M.;Kim,J.;Bowman,D.;Richer,T.;Akella,A.;Lin,C.T. Cascadedreinforcementlearningagentsforlarge
+actionspacesinautonomouspenetrationtesting. Appl.Sci.2022,12,11265.[CrossRef]
+35. Zhou,S.;Liu,J.;Hou,D.;Zhong,X.;Zhang,Y. Autonomouspenetrationtestingbasedonimproveddeepq-network. Appl.Sci.
+2021,11,8823.[CrossRef]
+36. Hitaj,B.;Gasti,P.;Ateniese,G.;Perez-Cruz,F. Passgan:Adeeplearningapproachforpasswordguessing. InProceedingsofthe
+InternationalConferenceonAppliedCryptographyandNetworkSecurity,Bogota,Colombia,5–7June2019;Springer:Cham,
+Switzerland,2019;pp.217–237.
+37. Yang,J.;Li,T.;Liang,G.;He,W.;Zhao,Y. AsimplerecurrentunitmodelbasedintrusiondetectionsystemwithDCGAN. IEEE
+Access2019,7,83286–83296.[CrossRef]
+38. Zhang,X.;Zhou,Y.;Pei,S.;Zhuge,J.;Chen,J. AdversarialexamplesdetectionforXSSattacksbasedongenerativeadversarial
+networks. IEEEAccess2020,8,10989–10996.[CrossRef]
+Sensors2023,23,8014 18of18
+39. Sengupta,S.;Chowdhary,A.;Huang,D.;Kambhampati,S. Generalsummarkovgamesforstrategicdetectionofadvanced
+persistentthreatsusingmovingtargetdefenseincloudnetworks. InProceedingsoftheDecisionandGameTheoryforSecurity:
+10thInternationalConference,GameSec2019,Stockholm,Sweden,30October–1November2019;Proceedings10;Springer:
+Cham,Switzerland,2019;pp.492–512.
+40. Myneni,S.;Chowdhary,A.;Sabur,A.;Sengupta,S.;Agrawal,G.;Huang,D.;Kang,M. DAPT2020-constructingabenchmark
+dataset for advanced persistent threats. In Proceedings of the Deployable Machine Learning for Security Defense: First
+InternationalWorkshop,MLHat2020,SanDiego,CA,USA,24August2020;Proceedings1;Springer:Cham,Switzerland,2020;
+pp.138–163.
+41. Myneni,S.; Jha,K.; Sabur,A.; Agrawal,G.; Deng,Y.; Chowdhary,A.; Huang,D. Unraveled—Asemi-syntheticdatasetfor
+AdvancedPersistentThreats. Comput.Netw.2023,227,109688.[CrossRef]
+42. Scarfone,K.;Mell,P.AnanalysisofCVSSversion2vulnerabilityscoring. InProceedingsofthe20093rdInternationalSymposium
+onEmpiricalSoftwareEngineeringandMeasurement,LakeBuenaVista,FL,USA,15–16October2009;pp.516–525.
+43. Bilge,L.;Dumitras¸,T. Beforeweknewit:Anempiricalstudyofzero-dayattacksintherealworld. InProceedingsofthe2012
+ACMConferenceonComputerandCommunicationsSecurity,Raleigh,NC,USA,16–18October2012;pp.833–844.
+44. Stuttard,D.;Pinto,M. TheWebApplicationHacker’sHandbook:FindingandExploitingSecurityFlaws;JohnWiley&Sons:Hoboken,
+NJ,USA,2011.
+45. Prandl, S.; Lazarescu, M.; Pham, D.S. A study of web application firewall solutions. In Proceedings of the International
+ConferenceonInformationSystemsSecurity,Kolkata,India,December16–202015;pp.501–510.
+46. SecurityIntelligence. GenerativeAdversarialNetworksandCybersecurity.Availableonline:https://securityintelligence.com/
+generative-adversarial-networks-and-cybersecurity-part-1/(accessedon2July2021).
+47. Hochreiter,S. Thevanishinggradientproblemduringlearningrecurrentneuralnetsandproblemsolutions. Int.J.Uncertain.
+FuzzinessKnowl.BasedSyst.1998,6,107–116.[CrossRef]
+48. Chen,H.;Jiang,L. EfficientGAN-basedmethodforcyber-intrusiondetection. arXiv2019,arXiv:1904.02426.
+49. Mahajan,A. BurpSuiteEssentials;PacktPublishingLtd.:Birmingham,UK,2014.
+50. Williams,R.J. Simplestatisticalgradient-followingalgorithmsforconnectionistreinforcementlearning. Mach. Learn. 1992,
+8,229–256.[CrossRef]
+51. IsmailTasdelen. PayloadBox.Availableonline:https://github.com/payloadbox/xss-payload-list(accessedon8October2021).
+52. AWS. AWSWAF–WebApplicationFirewall.Availableonline:https://aws.amazon.com/waf/(accessedon8November2021).
+53. Wang,K.;Wan,X. SentiGAN:GeneratingSentimentalTextsviaMixtureAdversarialNetworks. InProceedingsoftheIJCAI,
+Stockholm,Sweden,13–19July2018;pp.4446–4452.
+54. Liu,Z.;Wang,J.;Liang,Z. Catgan:Category-awaregenerativeadversarialnetworkswithhierarchicalevolutionarylearningfor
+categorytextgeneration. InProceedingsoftheAAAIConferenceonArtificialIntelligence,NewYork,NY,USA,7–12February
+2020;Volume34,pp.8425–8432.
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s)andcontributor(s)andnotofMDPIand/ortheeditor(s).MDPIand/ortheeditor(s)disclaimresponsibilityforanyinjuryto
+peopleorpropertyresultingfromanyideas,methods,instructionsorproductsreferredtointhecontent.

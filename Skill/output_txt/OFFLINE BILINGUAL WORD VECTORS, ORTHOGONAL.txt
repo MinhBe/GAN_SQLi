@@ -1,0 +1,560 @@
+UnderreviewasaconferencepaperatICLR2017
+OFFLINE BILINGUAL WORD VECTORS, ORTHOGONAL
+TRANSFORMATIONS AND THE INVERTED SOFTMAX
+SamuelL.Smith,DavidH.P.Turban,StevenHamblin&NilsY.Hammerla
+babylonhealth
+London,UK
+{samuel.smith, steven.hamblin, nils.hammerla}@babylonhealth.com
+dt382@cam.ac.uk
+ABSTRACT
+Usually bilingual word vectors are trained “online”. Mikolov et al. (2013a)
+showed they can also be found “offline”; whereby two pre-trained embeddings
+arealignedwithalineartransformation,usingdictionariescompiledfromexpert
+knowledge. In this work, we prove that the linear transformation between two
+spacesshouldbeorthogonal.Thistransformationcanbeobtainedusingthesingu-
+larvaluedecomposition. Weintroduceanovel“invertedsoftmax”foridentifying
+translationpairs,withwhichweimprovetheprecision@1ofMikolov’soriginal
+mappingfrom34%to43%,whentranslatingatestsetcomposedofbothcommon
+andrareEnglishwordsintoItalian. Orthogonaltransformationsaremorerobust
+to noise, enabling us to learn the transformation without expert bilingual signal
+byconstructinga“pseudo-dictionary”fromtheidenticalcharacterstringswhich
+appearinbothlanguages, achieving40%precisiononthesametestset. Finally,
+weextendourmethodtoretrievethetruetranslationsofEnglishsentencesfroma
+corpusof200kItaliansentenceswithaprecision@1of68%.
+1 INTRODUCTION
+Monolingualwordvectorsembedlanguageinahigh-dimensionalvectorspace,suchthatthesimi-
+larityoftwowordsisdefinedbytheirproximityinthisspace(Mikolovetal.,2013b). Theyenable
+ustotrainsophisticatedclassifierstointerpretfreeflowingtext(Kim,2014),buttheyrequireinde-
+pendent models to be trained for each language. Crucially, training text obtained in one language
+cannotimprovetheperformanceofclassifierstrainedinanother,unlessthetextisexplicitlytrans-
+lated. Increasinginterestisnowfocusedonbilingualvectors, inwhichwordsarealignedbytheir
+meaning,irrespectiveofthelanguageoforigin. Suchvectorsmaydriveimprovementsinmachine
+translation(Zouetal.,2013),andenablelanguage-agnostictextclassifiers(Klementievetal.,2012).
+Theycanalsobehigherqualitythanmonolingualvectors(Faruqui&Dyer,2014).
+Bilingual vectors are normally trained “online”, whereby both languages are learnt together in a
+sharedspace(Chandaretal.,2014;Hermann&Blunsom,2013). Typicallythesealgorithmsexploit
+two sources of monolingual text alongside a smaller bilingual corpus of aligned sentences. This
+bilingualsignalprovidesaregularisationterm,whichpenalisestheembeddingsifsimilarwordsin
+thetwolanguagesdonotlienearbyinthevectorspace.HoweverMikolovetal.(2013a)showedthat
+bilingualwordvectorscanalsobeobtained“offline”.Twosetsofwordvectorsindifferentlanguages
+were first obtained independently, and then a linear matrix W was trained using a dictionary to
+mapwordvectorsfromthe“source”languageintothe“target”language. Remarkably,thissimple
+procedurewasabletotranslateatestsetofEnglishwordsintoSpanishwith33%precision.
+Todevelopanintuitionforthesetwoapproaches,wenotethatthesimilarityoftwowordvectorsis
+definedbytheircosinesimilarity,cos(θ )=yTx /|y ||x |. Thevectorshavenointrinsicmeaning,
+ij i j i j
+it is only the angles between vectors which are meaningful. This is closely analogous to asking a
+cartographer to draw a map of England with no compass. The map will be correct, but she does
+not know which direction is north, so the angle of rotation will be random. Two maps drawn by
+twosuchcartographerswillbeidentical,exceptthatonewillberotatedbyanunknownanglewith
+respecttotheother. Therearetwowaysthecartographerscouldaligntheirmaps. Theycoulddraw
+1
+7102
+beF
+31
+]LC.sc[
+1v95830.2071:viXra
+UnderreviewasaconferencepaperatICLR2017
+Figure1: A2DplanethroughanEnglish-Italiansemanticspace,beforeandafterapplyingtheSVD
+on the word vectors discussed below, using a training dictionary of 5000 translation pairs. The
+examplesabovewerenotusedduringtraining,buttheSVDalignsthetranslationsremarkablywell.
+themapstogether,thusensuringthatlandmarksareplacednearbyonbothmapsduring“training”.
+Or they could draw their maps independently, and then compare the two afterwards; rotating one
+map with respect to the other until the major cities are aligned. We note that the more similar the
+intrinsicgeometryofthetwomaps,themoreaccuratelythisrotationwillalignthespace.
+Themaincontributionofthisworkistoprovidetheoreticalinsightswhichunifyandenhanceexist-
+ingapproachesintheliterature.Weprovethataself-consistentlineartransformationbetweenvector
+spacesshouldbeorthogonal. Intuitively, thetransformationisarotation, anditisfoundusingthe
+singularvaluedecomposition(SVD).ThesharedsemanticspaceobtainedbytheSVDisillustrated
+infigure1. WebuildontheworkofDinuetal.(2014),byintroducinganovel“invertedsoftmax”to
+combatthehubnessproblem. Usingthesamewordvectors,trainingdictionaryandtestsetprovided
+byDinu,weimprovetheprecisionofMikolov’smethodfrom34%to43%,whentranslatingfrom
+EnglishtoItalian,andfrom25%to37%whentranslatingfromItaliantoEnglish. Wealsopresent
+threeremarkablenewresults.Firstweexploitthesuperiorrobustnessoforthogonaltransformations,
+bydiscardingthetrainingdictionaryandformingapseudo-dictionaryfromtheidenticalcharacter
+strings which appear in both languages. While Mikolov’s method achieves translation precisions
+of just 1% and 3% respectively with this pseudo-dictionary, our approach achieves precisions of
+40% and 34%. This is a striking result, achieved without any expert bilingual signal. Next, we
+formsimplesentencevectorsbysummingandnormalisingoverwordvectors,andweobtainbilin-
+gualsentencevectorsbyapplyingtheSVDtoaphrasedictionaryformedfromabilingualcorpusof
+alignedtext.Thetransformationobtainedalignstheunderlyingwordvectors,achievingatranslation
+precisionof43%and38%,en-parwiththeexpertworddictionaryabove. Finally,weshowthatwe
+canalsouseourbilingualwordvectorstoretrievesentencetranslations;identifyingthetranslation
+ofanEnglishsentencefromabagof200kItaliancandidatesentenceswith68%precision.
+2 OFFLINE BILINGUAL LANGUAGE VECTORS
+2.1 PREVIOUSWORK
+OfflinebilingualwordvectorswerefirstproposedbyMikolovetal.(2013a). Theyobtainedasmall
+dictionaryofpairedwordsfromGoogleTranslate,whosewordvectorswedenote{y ,x }n .Next,
+i i i=1
+theyappliedalineartransformationW tothesourcelanguageandusedstochasticgradientdescent
+tominimisethesquaredreconstructionerror,
+n
+(cid:88)
+min ||y −Wx ||2. (1)
+i i
+W
+i=1
+After training, any word vector in the source language can be mapped to the target by calculating
+y =Wx. Thesimilaritybetweenasourcevectorxandatargetvectory canthenbeevaluatedby
+e t
+thecosinesimilaritycos(θ ) = yTy /|y ||y |. Astonishingly,thissimpleprocedureachieved33%
+te t e t e
+accuracy when translating unseen words from English into Spanish, using a training dictionary of
+2
+UnderreviewasaconferencepaperatICLR2017
+5kcommonEnglishwordsandtheirSpanishtranslations,andwordvectorstrainedusingword2vec
+ontheWMT11textdatasets. Translationswerefoundbyasimplenearestneighbourprocedure.
+Wenotethatthecostfunctionaboveissolvedbythemethodofleastsquares, asrealisedbyDinu
+etal.(2014). Theydidnotmodifythiscostfunction,butproposedanadaptedmethodofretrieving
+translationpairswhichwasmoreaccuratewhentranslatingwordsfromEnglishtoItalian.Faruqui&
+Dyer(2014)obtainedbilingualwordvectorsusingCCA.Theydidnotattemptanytranslationtasks,
+butshowedthatthecombinationofCCAanddimensionalityreductionimprovedtheperformance
+ofmonolingualvectorsonstandardevaluationtasks. CCAhadpreviouslybeenusedtoiteratively
+extracttranslationpairsdirectlyfrommonolingualcorpora(Haghighietal.,2008). Morerecently,
+Xing et al. (2015) argued that Mikolov’s linear matrix should be orthogonal, and introduced an
+approximateprocedurecomposedofgradientdescentupdatesandrepeatedapplicationsoftheSVD.
+CCAhasbeenextendedtomap59languagesintoasinglesharedspace(Ammaretal.,2016),and
+non-linear “deep CCA” has been introduced (Lu et al., 2015). A theoretical analysis of bilingual
+wordvectorssimilartothispaperwasrecentlypublishedbyArtetxeetal.(2016).
+2.2 THESIMILARITYMATRIXANDTHEORTHOGONALTRANSFORM
+Toprovethataself-consistentlinearmappingbetweensemanticspacesmustbeorthogonal,weform
+thesimilaritymatrix,S =YWXT. X andY arewordvectormatricesforeachlanguage,inwhich
+eachrowcontainsasinglewordvector,denotedbylowercasexandy. Thematrixelement,
+S = yTWx (2)
+ij i j
+= y ·(Wx ), (3)
+i j
+evaluatesthesimilaritybetweenthejth sourcewordandtheith targetword. ThematrixW maps
+thesourcelanguageintothetargetlanguage. Thelargestvalueinacolumnofthesimilaritymatrix
+givesthemostsimilartargetwordtoaparticularsourceword,whilethelargestvalueinarowgives
+themostsimilarsourcewordtoagiventargetword.Howeverwecouldalsoformasecondsimilarity
+matrixS(cid:48) =XQYT,suchthatthematrixQmapsthetargetlanguagebackintothesource.
+S(cid:48) = xTQy (4)
+ji j i
+= x ·(Qy ), (5)
+j i
+alsoevaluatesthesimilaritybetweenthejth sourcewordandtheith targetword. Tobeselfconsis-
+tent, we require S(cid:48) = ST. However ST = XWTYT, and therefore the matrix Q = WT. If W
+mapsthesourcelanguageintothetarget,thenWT mapsthetargetlanguagebackintothesource.
+When we map a source word into the target language, we should be able to map it back into the
+sourcelanguageandobtaintheoriginalvector. x∼WTyandy ∼Wxandthusx∼WTWx.This
+expressionshouldholdforanywordvectorxandthusweconcludethatthetransformationW should
+beanorthogonalmatrixO satisfyingOTO = I, whereI denotestheidentitymatrix. Orthogonal
+transformationspreservevectornorms,soifwenormaliseX andY,thenthematrixelementS =
+ij
+|y ||Ox |cos(θ ) = cos(θ ). The similarity matrix S = YOXT computes the cosine similarity
+i j ij ij
+betweenallpossiblepairsofsourceandtargetwordsundertheorthogonaltransformationO.
+WenowinfertheorthogonaltransformationOfromadictionary{y ,x }n ofpairedwords. Since
+i i i=1
+wepredictthesimilarityoftwovectorsbyevaluatingS = cos(θ ),weoughttolearnthetrans-
+ij ij
+formationbymaximisingthecosinesimilarityoftranslationpairsinthedictionary,
+n
+(cid:88)
+max yTOx ,subjecttoOTO =I. (6)
+i i
+O
+i=1
+Thesolutionproceedsasfollows. WeformtwoorderedmatricesX andY fromthedictionary,
+D D
+such that the ith row of {X ,Y } corresponds to the source and target language word vectors of
+D D
+theith pairinthedictionary. WethencomputetheSVDofM = YTX = UΣVT. Thisstepis
+D D
+highly efficient, since M is a square matrix with the same dimensionality as the word vectors. U
+and V are composed of columns of orthonormal vectors, while Σ is a diagonal matrix containing
+thesingularvalues. OurcostfunctionisminimisedbyO =UVT. Theoptimisedsimilaritymatrix,
+S = YUVTXT. (7)
+S = yTUVTx (8)
+ij i j
+= (UTy )·(VTx ). (9)
+i j
+3
+UnderreviewasaconferencepaperatICLR2017
+Thus,wemapbothlanguagesintoasinglespace,byapplyingthetransformationVT tothesource
+language and UT to the target language. We prove that this procedure maximises equation 6 in
+the appendix. It was recently independently proposed by Artetxe et al. (2016), and provides a
+numericallyexactsolutiontothecostfunctionproposedbyXingetal.(2015),justasthemethodof
+leastsquaresprovidesanumericallyexactsolutiontothecostfunctionofMikolovetal.(2013a).
+OurproceduredidnotusethesingularvaluesΣ,butthesevaluesdocarryrelevantinformation. All
+of the singular values are positive, and each singular value s is uniquely associated to a pair of
+i
+normalised vectors u and v from the matrices U and V. Standard implementations of the SVD
+i i
+return the singular values in descending order. The larger the singular value, the more rapidly the
+meancosinesimilarityofthedictionarydecreasesifthecorrespondingvectorsaredistorted.Wecan
+performdimensionality reductionbyneglecting thevectors {u ,v } whicharise fromthesmallest
+i i
+singularvalues. ThisistrivialtoimplementbysimplydroppingthefinalfewrowsofUT andVT,
+andwewillshowbelowthatitleadstoasmallimprovementinthetranslationperformance.
+2.3 THESVDANDCCA
+OurmethodisverysimilartotheCCAprocedureproposedbyFaruqui&Dyer(2014),whichcan
+alsobeobtainedusingtheSVD(Press,2011). WefirstobtainthesourcedictionarymatrixX and
+D
+subtractthemeanfromeachcolumnofthismatrixtoobtainX(cid:48) . WethenperformourfirstSVDto
+D
+obtainX(cid:48) =Q Σ VT.WeperformthesametwooperationsonthetargetdictionaryY toobtain
+D D X X D
+Y(cid:48) =W Σ VT,andthenperformanotherSVDontheproductM(cid:48) =QTW =U(cid:48)Σ(cid:48)V(cid:48)T. This
+D D Y Y D D
+laststepisidenticaltothealignmentprocedureweintroducedabove.FinallyweobtainX(cid:48)andY(cid:48)by
+subtractingthemeanvalueofeachcolumninX andY ,beforecomputinganewpairofaligned
+D D
+representations of the full vocabulary, Q = X(cid:48)V Σ−1U(cid:48), and W = Y(cid:48)V Σ−1V(cid:48).
+aligned X X aligned Y Y
+Onceagain,weperformdimensionalityreductionbyneglectingthefinalfewcolumnsofU(cid:48)andV(cid:48).
+Effectively,CCAiscomposedoftwostages. Inthefirststage,wereplaceourwordvectormatrices
+X andY bytwonewvectorrepresentationsQ = X(cid:48)V Σ−1 andW = Y(cid:48)V Σ−1. Inthesecond
+X X Y Y
+stage,weapplytheorthogonaltransformations{U(cid:48),V(cid:48)}toalign{Q,W}inasinglesharedspace.
+To the authors, the first stage appears redundant. If we have already learned high-quality word
+vectors {X,Y}, there seems little reason to learn new representations {Q,W}. Additionally, it is
+unclearwhythetransformationsV Σ−1andV Σ−1areobtainedusingonlythedictionarymatrices
+X X Y Y
+{X ,Y },ratherthanusingthefullvocabularies{X,Y}.
+D D
+2.4 THEINVERTEDSOFTMAX
+Mikolov et al. (2013a) predicted the translation of a source word x by finding the target word y
+j i
+closesttoWx . Inourformalism,thiscorrespondstofindingthelargestentryinthejth columnof
+j
+thesimilaritymatrix. Toestimateourconfidenceinthisprediction,wecouldformthesoftmax,
+eβSij
+P = . (10)
+j→i (cid:80) eβSmj
+m
+Tolearnthe“inversetemperature”β,wemaximisethelogprobabilityoverthetrainingdictionary,
+(cid:88)
+max ln(P ). (11)
+j→i
+β
+pairsij
+This sum should be performed only over valid translation pairs. Dinu et al. (2014) demonstrated
+that nearest neighbour retrieval is flawed, since it suffers from the presence of “hubs”. Hubs are
+wordswhichappearasthenearestneighbourtargetwordtomanydifferentsourcewords,reducing
+the translation performance. We propose that the hubness problem is mitigated by inverting the
+softmax,andnormalisingtheprobabilityoversourcewordsratherthantargetwords.
+eβSij
+P = . (12)
+j→i α
+j
+(cid:80)
+n
+eβSin
+Intuitively, rather than asking whether the source word translates to the candidate target word, we
+assesstheprobabilitythatthecandidatetargetwordtranslatesbackintothesourceword. Wethen
+select the target word which maximises this probability. If the ith target word is a hub, then the
+4
+UnderreviewasaconferencepaperatICLR2017
+denominator in equation 12 will be large, preventing this target word from being selected. The
+vectorαensuresnormalisation. Thesumovernshouldrunoverallsourcewordsinthevocabulary.
+Howevertoreducethecomputationalcost,weonlyperformthissumovern samplewords,chosen
+s
+randomlyfromthevocabulary. Unlessexplicitlystated,n =1500.
+s
+2.5 PSEUDODICTIONARIES
+2.5.1 IDENTICALCHARACTERSTRINGS
+Our method requires a training dictionary of paired vectors, which is used to infer the orthogonal
+mapOandtheinversetemperatureβ,andalsoasavalidationsetduringdimensionalityreduction.
+Typically this dictionary is obtained by translating common source words into the target language
+using Google Translate, which was constructed using expert human knowledge. However most
+Europeanlanguagessharealargenumberofwordscomposedofidenticalcharacterstrings. Words
+like “London”, “DNA” and “Tortilla”. It is probable that identical strings across two languages
+share similar meanings. We can extract these strings and form a “pseudo-dictionary”, compiled
+withoutanyexpertbilingualknowledge. Belowweshowthatthispseudodictionaryissufficientto
+successfullytranslatebetweenEnglishandItalianwithhighprecision.
+2.5.2 ALIGNEDSENTENCES
+TheEuroparlcorpusiscomposedofalignedsentencesinanumberofEuropeanlanguages(Koehn,
+2005). Chandar et al. (2014) showed that such corpora can be used alongside monolingual text
+sources to learn online bilingual vectors, but to date, offline bilingual vectors have only been ob-
+tainedfromdictionaries. Tolearntheorthogonaltransformationfromalignedsentences,wedefine
+the vector q of a source language sentence by a normalised sum over the word vectors present,
+(cid:80) (cid:80)
+q = x /| x |. The vector w of a target language sentence is defined by a normalised sum
+i i i i
+ofwordvectorsy . Weviewthealignedcorpusasadictionaryofpairedsentences{w ,q }, from
+i i i
+whichweformtwodictionarymatricesW andQ . WeobtainthetransformationOfromanSVD
+D D
+onthematrixM =WTQ ,andusethistransformationtotranslateindividualwordsinthetestset.
+D D
+Thissimpleprocedureembedswordsandsentencesinthesamevectorspace. Thesentenceembed-
+ding can be thought of as the “average word” that the sentence conveys. Intuitively, each aligned
+sentencepairgivesusweakinformationaboutapossiblewordpairinthedictionary. Bycombining
+a large number of such sentence pairs, we obtain sufficient information to align the vector spaces
+andinferthetranslationsofindividualwords. However,wewillgoontoshowthatthisorthogonal
+transformation can be used, not only to retrieve the translations of words between languages, but
+alsotoretrievethetranslationsofsentencesbetweenlanguageswithremarkablyhighaccuracy.
+3 EXPERIMENTS
+We perform our experiments using the same word vectors, training dictionary and test dictionary
+providedbyDinuetal.(2014)1. Thewordvectorsweretrainedusingword2vec,andthenthe200k
+mostcommonwordsinboththeEnglishandItaliancorporawereextracted. TheEnglishwordvec-
+torsweretrainedontheWackyPedia/ukWaCandBNCcorpora,whiletheItalianwordvectorswere
+trained on the WackyPedia/itWaC corpus. The training dictionary comprises 5k common English
+wordsandtheirItaliantranslations,whilethetestsetiscomposedof1500Englishwordsandtheir
+Italian translations. This test set is split into five sets of 300. The first 300 words arise from the
+mostcommon5kwordsintheEnglishcorpus,thenext300fromthe5k-20kmostcommonwords,
+followedbybinsforthe20k-50k,50k-100k,and100k-200kmostcommonwords. Thisenablesus
+toevaluatehowwordfrequencyaffectsthetranslationperformance. SomeoftheItalianwordshave
+bothmaleandfemaleforms,andwefollowDinuinconsideringeitherformavalidtranslation.
+Wereportresultsusingourownprocedure,aswellasthemethodsproposedbyMikolov,Faruqui,
+andDinu. WecomputeresultsforMikolov’smethodbyapplyingthemethodofleastsquares,and
+results for Faruqui’s method using Scikit-learn’s implementation of CCA with default parameters.
+Inbothcases,wepredicttranslationsbynearestneighbourretrieval.Wedonotapplydimensionality
+1Theseareavailableathttp://clic.cimec.unitn.it/~georgiana.dinu/down/
+5
+UnderreviewasaconferencepaperatICLR2017
+Table1: Translationperformanceusingtheexperttrainingdictionary,EnglishintoItalian.
+Mikolov Dinu +inverted +dimensionality
+Precision CCA SVD
+etal. etal. softmax reduction
+@1 0.338 0.385 0.361 0.369 0.417 0.431
+@5 0.483 0.564 0.527 0.527 0.587 0.607
+@10 0.539 0.639 0.581 0.579 0.655 0.664
+Table2: Translationperformanceusingtheexperttrainingdictionary,ItalianintoEnglish.
+Mikolov Dinu +inverted +dimensionality
+Precision CCA SVD
+etal. etal. softmax reduction
+@1 0.249 0.246 0.310 0.322 0.373 0.380
+@5 0.410 0.454 0.499 0.496 0.577 0.585
+@10 0.474 0.541 0.570 0.557 0.631 0.636
+reductionfollowingCCA,toenableafaircomparisonwithourSVDprocedure.Wecomputeresults
+for Dinu’s method using the source code they provided alongside their manuscript. Their method
+uses10ksourcewordsas“pivots”;5kfromthetestsetand5kchosenatrandomfromthevocabulary.
+Bycontrast,theinvertedsoftmaxdoesnotknowwhichsourcewordsoccurinthetestset.
+3.1 EXPERIMENTSUSINGTHEEXPERTTRAININGDICTIONARY
+In tables 1 and 2 we present the translation performance of our methods when translating the test
+setbetweenEnglishandItalian,usingtheexperttrainingdictionaryprovidedbyDinu. Weevaluate
+MikolovandDinu’smethodsforcomparison,aswellasCCA-proposedbyFaruqui&Dyer(2014).
+All the methods are more accurate when translating from English to Italian. This is unsurprising
+given that some English words in the test set can translate to either the male or female form of
+the Italian word. In the fourth column we evaluate the performance of our SVD procedure with
+nearest neighbour retrieval. This already provides a marked improvement on Mikolov’s mapping,
+especiallywhentranslatingfromItalianintoEnglish. Asanticipated,theperformanceoftheSVD
+isverysimilartoCCA.Inthefollowingtwocolumnsweapplyfirsttheinvertedsoftmax,andthen
+dimensionalityreductiontothealignedvectorspaceobtainedbytheSVD.Thehyper-parametersof
+these procedures were optimised on the training dictionary. Combining both procedures improves
+the precision @1 to 43% and 38% when translating from English to Italian, or Italian to English
+respectively. These results are a significant improvement on previous work. In table 3 we present
+the dependence of precision @1 on word frequency. We achieve remarkably high precision when
+translatingcommonwords. Thisperformancedropsoffforrarewords; presumablyeitherbecause
+thereisinsufficientmonolingualdatatolearnhighqualityrarewordvectors,orbecausethelinguistic
+similaritiesbetweenrarewordsacrosslanguagesarelesspronounced.
+Table3: Translationprecision@1fromEnglishtoItalianusingtheexperttrainingdictionary. We
+achieve69%precisionontestcasesselectedfromthe5kmostcommonEnglishwordsintheukWaC,
+WikipediaandBNCcorpora. Theprecisionfallsforlesscommonwords.
+Wordranking Mikolov Dinu +inverted +dimensionality
+CCA SVD
+byfrequency etal. etal. softmax reduction
+0-5k 0.607 0.650 0.633 0.637 0.690 0.690
+5-20k 0.463 0.540 0.477 0.510 0.580 0.610
+20-50k 0.280 0.350 0.343 0.323 0.380 0.403
+50-100k 0.193 0.217 0.190 0.200 0.230 0.253
+100-200k 0.147 0.163 0.163 0.173 0.203 0.200
+6
+UnderreviewasaconferencepaperatICLR2017
+Table4: Translationperformanceusingthepseudodictionaryofidenticalcharacterstrings.
+EnglishtoItalian: ItaliantoEnglish:
+Precision
+Mikolov Dinu This Mikolov Dinu This
+CCA CCA
+etal. etal. work etal. etal. work
+@1 0.010 0.060 0.291 0.399 0.025 0.115 0.270 0.343
+@5 0.028 0.263 0.464 0.576 0.064 0.0317 0.470 0.566
+@10 0.039 0.391 0.530 0.631 0.091 0.431 0.523 0.624
+3.2 EXPERIMENTSUSINGIDENTICALCHARACTERSTRINGS
+Intheprecedingsection,wereportedourperformanceusinganorthogonaltransformationlearned
+onanexperttrainingdictionaryof5kcommonEnglishandItalianwords. Wenowreportourper-
+formancewhenwedonotusethisdictionary,andinsteadconstructapseudodictionaryfromthelist
+ofwordswhichappearinboththeEnglishandItalianvocabularies,composedofexactlythesame
+character string. Remarkably, 47074 such identical character strings appear in both vocabularies.
+Therewouldbefeweridenticalentriesformorediverselanguagepairs,butourmaingoalhereisto
+demonstratethesuperiorrobustnessoforthogonaltransformationstolowqualitydictionaries.
+Weexhibitourresultsintable4,whereweevaluateourmethod(SVD+invertedsoftmax+dimen-
+sionalityreduction),whentranslatingeitherfromEnglishtoItalianorfromItaliantoEnglish. Even
+when using this pseudo dictionary prepared with no expert bilingual knowledge, we still achieve
+a mean translation performance @1 of 40% from English to Italian on our test set. By contrast,
+Mikolov and Dinu’s methods achieve precisions of just 1% and 6% respectively. CCA also per-
+formswell,althoughitbecamesignificantlymorecomputationallyexpensivewhenthevocabulary
+size increased. Previously translation pairs have been extracted from monolingual corpora using
+CCAbybootstrappingasmallseedlexicon(Haghighietal.,2008).
+3.3 EXPERIMENTSONTHEEUROPARLCORPUSOFALIGNEDSENTENCES
+The English-Italian Europarl corpus comprises 2 million English sentences and their Italian trans-
+lations,takenfromtheproceedingsoftheEuropeanparliament(Koehn,2005). Asoutlinedearlier,
+wecanformsimplesentencevectorsinthewordvectorspacebysummingandnormalisingoverthe
+wordscontainedinasentence. Thesesentencevectorscanbeusedintwodifferenttasks. First,we
+canusetheEuroparlcorpusasatrainingdictionary,wherebythematricesX andY areformed
+D D
+fromthesentencevectorsoftranslationpairs. ByapplyingtheSVDtothefirst500ksentencesin
+this“phrasedictionary”,weobtainasetofbilingualwordvectorsfromwhichwecanretrievetrans-
+lationsofindividualwords. Weexhibitthetranslationperformanceofthisapproachintable5. We
+achieve42.8%precision@1whentranslatingfromEnglishintoItalianand37.5%precisionwhen
+translatingfromItalianintoEnglish,comparabletotheaccuracyachievedusingtheexpertworddic-
+tionaryonthesametestset.Itisdifficulttocomparethetwoapproaches,sincetheyrequiredifferent
+training data. However our performance appears competitive with Bilbowa, a leading method for
+learning bilingualvectors online from monolingualcorpora and aligned text(Gouws et al., 2015).
+WedonotincluderesultsforCCAduetothecomputationalcomplexityonadictionaryofthissize.
+Second,wecanapplyourorthogonaltransformationtoretrievetheItaliantranslationofanEnglish
+sentence,orviceversa. Toachievethis,weholdbackthefinal200kEnglishandItaliansentences
+from our 500k sample of Europarl, and attempt to retrieve the true translation of a given sentence
+in this test set. We obtain the orthogonal transformation by performing the SVD on either the
+expert word dictionary provided by Dinu, or on a phrase dictionary formed from the first 300k
+Table5: Translationperformance,usingtheEuroparlcorpusasaphrasedictionary.
+EnglishtoItalian: ItaliantoEnglish:
+Precision
+Mikolovetal. Dinuetal. Thiswork Mikolovetal. Dinuetal. Thiswork
+@1 0.234 0.313 0.428 0.19 0.224 0.375
+@5 0.368 0.531 0.589 0.331 0.419 0.563
+@10 0.433 0.594 0.647 0.39 0.508 0.620
+7
+UnderreviewasaconferencepaperatICLR2017
+Table 6: “Translation” precision @1, when seeking to retrieve the true translation of an English
+sentence from a bag of 200k Italian sentences, or vice versa, averaged over 5k samples. We first
+obtainbilingualwordvectors,usingeithertheworddictionaryprovidedbyDinu,orbyconstructing
+aphrasedictionaryfromEuroparl. Wesetn =12800intheinvertedsoftmax.
+s
+EnglishtoItalian: ItaliantoEnglish:
+Worddictionary Phrasedictionary Worddictionary Phrasedictionary
+Mikolovetal. 0.105 0.166 0.120 0.206
+Dinuetal. 0.453 0.406 0.489 0.459
+SVD 0.268 0.431 0.473 0.656
++invertedsoftmax 0.546 0.678 0.429 0.486
+sentencesfromEuroparl. Forsimplicity,wedonotapplydimensionalityreductionhere. Ourresults
+are provided in table 6. For precision @1, most approaches favour the phrase dictionary, while
+Dinu’s method favours the word dictionary. We show in the appendix that all methods favour the
+phrasedictionaryforprecision@5and@10.Remarkably,givennoinformationexceptthesentence
+vectors,weareabletoretrievethecorrecttranslationofanEnglishsentencewith67.8%precision.
+This is particularly surprising, since we are using the simplest possible sentence vectors, which
+havenoinformationaboutwordorderorsentencelength. Itislikelythatwecouldimproveonthese
+resultsifweusedhigherqualitysentencevectors(Le&Mikolov,2014;Kirosetal.,2015),although
+wemightlosetheabilitytosimultaneouslyaligntheunderlyingwordvectorspace.
+Whentrainingtheinvertedsoftmax, theinversetemperatureβ diverged, andthe“translation”per-
+formance from English to Italian significantly exceeded the performance from Italian to English.
+This suggested that sentence retrieval from Italian to English might be achieved better by nearest
+neighbours, so we also evaluated the performance of nearest neighbour retrieval on the same or-
+thogonaltransformation,asshowninthethirdrowoftable6. Thisimprovedtheperformancefrom
+ItaliantoEnglishfrom48.6%to65.6%, whichsuggeststhattheoptimalretrievalapproachwould
+beabletotunecontinuouslybetweentheconventionalsoftmaxandtheinvertedsoftmax.
+4 SUMMARY
+Weprovedthattheoptimallineartransformationbetweenwordvectorspacesshouldbeorthogonal,
+andcanbeobtainedbyasingleapplicationoftheSVDonadictionaryoftranslationpairs,aspro-
+posed independently by Artetxe et al. (2016). We used the SVD to obtain bilingual word vectors,
+fromwhichwecanpredictthetranslationsofpreviouslyunseenwords. Weintroducedanovel“in-
+vertedsoftmax”whichsignificantlyincreasedtheaccuracyofourpredictedtranslations.Combining
+theSVDwiththeinvertedsoftmaxanddimensionalityreduction,weimprovedthetranslationpre-
+cisionofMikolov’soriginallinearmappingfrom34%to43%,whentranslatingatestsetcomposed
+ofbothcommonandrareEnglishwordsintoItalian. Thiswasachievedusingatrainingdictionary
+of5kEnglishwordsandtheirItaliantranslations. Replacingthistrainingdictionarywithapseudo-
+dictionary acquired from the identical word strings that appear in both languages, we showed that
+westillachieved40%precision, demonstratingthatitispossibletoobtainbilingualvectorspaces
+withoutanexpertbilingualsignal. Mikolov’smethodachievesjust1%precisionhere,emphasising
+thesuperiorrobustnessoforthogonaltransformations. Therearecurrentlyanumberofapproaches
+toobtainingofflinebilingualwordvectorsintheliterature. Ourworkshowstheycanallbeunified.
+Finally, we defined simple sentence vectors to obtain offline bilingual word vectors without a dic-
+tionary using the Europarl corpus. We achieved 43% precision when translating our test set from
+EnglishintoItalianunderthisapproach,comparabletoourresultsabove,andcompetitivewithon-
+line approaches which use aligned text as the bilingual signal. We demonstrated that we can also
+useoursentencevectorstoretrievethetruetranslationofanEnglishsentencefromabagof200k
+Italiancandidatesentenceswith68%precision,astrikingresultworthyoffurtherinvestigation.
+ACKNOWLEDGMENTS
+We thank Dinu et al. for providing their source code, pre-trained word vectors, and a training and
+testdictionaryofEnglishandItalianwords,andPhilippKoehnforcompilingtheEuroparlcorpus.
+8
+UnderreviewasaconferencepaperatICLR2017
+REFERENCES
+Waleed Ammar, George Mulcaire, Yulia Tsvetkov, Guillaume Lample, Chris Dyer, and Noah A
+Smith. Massivelymultilingualwordembeddings. arXiv:1602.01925,2016.
+MArtetxe,GLabaka,andEAgirre. Learningprincipledbilingualmappingsofwordembeddings
+while preserving monolingual invariance. Proceedings of the 2016 Conference on Empirical
+MethodsinNaturalLanguageProcessing,pp.2289–2294,2016.
+SarathChandar,StanislasLauly,HugoLarochelle,MiteshKhapra,BalaramanRavindran,VikasC
+Raykar, andAmritaSaha. Anautoencoderapproachtolearningbilingualwordrepresentations.
+InAdvancesinNeuralInformationProcessingSystems,pp.1853–1861,2014.
+GeorgianaDinu,AngelikiLazaridou,andMarcoBaroni.Improvingzero-shotlearningbymitigating
+thehubnessproblem. arXiv:1412.6568,2014.
+Manaal Faruqui and Chris Dyer. Improving vector space word representations using multilingual
+correlation. InProceedingsofthe2014conferenceoftheAssociationforComputationalLinguis-
+tics.AssociationforComputationalLinguistics,2014.
+StephanGouws,YoshuaBengio,andGregCorrado. Bilbowa: Fastbilingualdistributedrepresenta-
+tionswithoutwordalignments.InProceedingsofThe32ndInternationalConferenceonMachine
+Learning,pp.748–756,2015.
+AriaHaghighi,PercyLiang,TaylorBerg-Kirkpatrick,andDanKlein. Learningbilinguallexicons
+frommonolingualcorpora. InACL,volume2008,pp.771–779,2008.
+Karl Moritz Hermann and Phil Blunsom. Multilingual distributed representations without word
+alignment. arXivpreprintarXiv:1312.6173,2013.
+YoonKim. Convolutionalneuralnetworksforsentenceclassification. arXiv:1408.5882,2014.
+Ryan Kiros, Yukun Zhu, Ruslan R Salakhutdinov, Richard Zemel, Raquel Urtasun, Antonio Tor-
+ralba, and Sanja Fidler. Skip-thought vectors. In Advances in neural information processing
+systems,pp.3294–3302,2015.
+AlexandreKlementiev,IvanTitov,andBinodBhattarai. Inducingcrosslingualdistributedrepresen-
+tationsofwords. 2012.
+Philipp Koehn. Europarl: A parallel corpus for statistical machine translation. In MT summit,
+volume5,pp.79–86,2005.
+QuocVLeandTomasMikolov. Distributedrepresentationsofsentencesanddocuments. InICML,
+volume14,pp.1188–1196,2014.
+AngLu,WeiranWang,MohitBansal,KevinGimpel,andKarenLivescu. Deepmultilingualcorre-
+lationforimprovedwordembeddings. InProceedingsofNAACL,2015.
+TomasMikolov, QuocVLe, andIlyaSutskever. Exploitingsimilaritiesamonglanguagesforma-
+chinetranslation. arXiv:1309.4168,2013a.
+Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeff Dean. Distributed represen-
+tationsofwordsandphrasesandtheircompositionality. InAdvancesinneuralinformationpro-
+cessingsystems,pp.3111–3119,2013b.
+WilliamHPress. Canonicalcorrelationclarifiedbysingularvaluedecomposition. 2011.
+PeterHScho¨nemann. Ageneralizedsolutionoftheorthogonalprocrustesproblem. Psychometrika,
+31(1),1966.
+Chao Xing, Dong Wang, Chao Liu, and Yiye Lin. Normalized word embedding and orthogonal
+transform for bilingual word translation. In Proceedings of the 2015 Conference of the North
+American Chapter of the Association for Computational Linguistics: Human Language Tech-
+nologies,pp.1006–1011,2015.
+Will Y Zou, Richard Socher, Daniel M Cer, and Christopher D Manning. Bilingual word embed-
+dingsforphrase-basedmachinetranslation. InEMNLP,pp.1393–1398,2013.
+9
+UnderreviewasaconferencepaperatICLR2017
+A THE ORTHOGONAL PROCRUSTES PROBLEM
+Thereisnotanintuitiveanalyticsolutiontothecostfunctioninequation6,butananalyticsolution
+does exist to the closely related “orthogonal Procrustes problem”, which minimises the squared
+reconstructionerrorsubjecttoanorthogonalconstraint(Scho¨nemann,1966),
+n
+(cid:88)
+min ||y −Ox ||2,subjecttoOTO =I. (13)
+i i
+O
+i=1
+HoweverbothX andY arenormalised,whileOpreservesthevectornorm. Wenotethat,
+||y −Ox ||2 = |y |2+|x |2−2yTOx (14)
+i i i i i i
+∝ A− yTOx . (15)
+i i
+Aisaconstant,andsothecostfunctionsgiveninequations6and13areequivalent. Wepresented
+thesolutionoftheorthogonalProcrustesprobleminthemaintext.
+B ADDITIONAL EXPERIMENTS
+Intables7and8,weprovideresultsatprecisions@5and@10,forthesameexperimentsshown@1
+intable6ofthemaintext.Onceagain,theinvertedsoftmaxperformswellwhenretrievingtheItalian
+translations of English sentences, but is less effective translating Italian sentences into English.
+However, the performance of Dinu’s method appears to rise more rapidly than other methods as
+wetransitionfromprecision@1to@5to@10. Additionally,whileDinu’smethodperformsbetter
+whenusingtheworddictionary@1,itprefersthephrasedictionary@5and@10.
+Table 7: “Translation” precision @5, when seeking to retrieve the true translation of an English
+sentence from a bag of 200k Italian sentences, or vice versa, averaged over 5k samples. We first
+obtainbilingualwordvectors,usingeithertheworddictionaryprovidedbyDinu,orbyconstructing
+aphrasedictionaryfromEuroparl. Wesetn =12800intheinvertedsoftmax.
+s
+EnglishtoItalian: ItaliantoEnglish:
+Worddictionary Phrasedictionary Worddictionary Phrasedictionary
+Mikolovetal. 0.187 0.272 0.221 0.326
+Dinuetal. 0.724 0.732 0.713 0.765
+SVD 0.394 0.546 0.619 0.774
++invertedsoftmax 0.727 0.825 0.622 0.679
+Table 8: “Translation” precision @10, when seeking to retrieve the true translation of an English
+sentence from a bag of 200k Italian sentences, or vice versa, averaged over 5k samples. We first
+obtainbilingualwordvectors,usingeithertheworddictionaryprovidedbyDinu,orbyconstructing
+aphrasedictionaryfromEuroparl. Wesetn =12800intheinvertedsoftmax.
+s
+EnglishtoItalian: ItaliantoEnglish:
+Worddictionary Phrasedictionary Worddictionary Phrasedictionary
+Mikolovetal. 0.228 0.316 0.267 0.386
+Dinuetal. 0.807 0.832 0.783 0.849
+SVD 0.441 0.595 0.663 0.807
++invertedsoftmax 0.782 0.862 0.692 0.745
+10
