@@ -1,0 +1,54 @@
+# seqgan_fast.yaml — Cấu hình thực tế cho dev mode (không có Docker WAF)
+# Khác seqgan_default.yaml:
+#   - lambda_d = 0.0  (WGAN score unbounded → loại khỏi reward, train D riêng)
+#   - lambda_bypass = 0.7, lambda_syntax = 0.3  (chỉ dùng 2 signal bounded)
+#   - total_steps = 5000  (vs 50k — đủ convergence với vocab=134)
+#   - d_steps_per_g = 2   (vs 5 — vẫn ổn định, tiết kiệm 60% compute D)
+#   - fake sequences được generate 1 lần/step, reuse cho tất cả D-updates
+
+model:
+  embed_dim: 128
+  hidden_dim: 512
+  num_layers: 3
+  dropout: 0.2
+  max_len: 80
+
+discriminator:
+  embed_dim: 128
+  kernel_sizes: [3, 4, 5]
+  num_filters: 128
+
+pretrain:
+  epochs: 10
+  lr: 1.0e-3
+  batch_size: 64
+  expert_weight: 3.0
+  scheduled_sampling_steps: 5000
+  grad_clip: 1.0
+  patience: 3
+  seed: 42
+
+adversarial:
+  total_steps: 5000
+  lr_g: 1.0e-4
+  lr_d: 2.0e-4
+  batch_size: 64
+  mc_rollout_k: 16
+  d_steps_per_g: 2          # 2 thay vì 5 — nhanh hơn, vẫn ổn
+  gp_lambda: 10.0
+  baseline_ema_decay: 0.95
+  grad_clip: 1.0
+  seed: 42
+  log_every: 50
+  eval_every: 500
+  save_every: 1000
+  syntax_check_step: 1000
+  syntax_rate_threshold: 0.5
+  lambda_syntax_boosted: 0.5
+  entropy_coef: 0.05        # entropy bonus: khuyến khich phan phoi token da dang
+
+reward:
+  lambda_d: 0.0         # WGAN score không giới hạn → KHÔNG dùng trong reward
+  lambda_bypass: 0.7    # Tín hiệu chính: proxy WAF bypass (bounded 0-0.5)
+  lambda_syntax: 0.3    # Tín hiệu phụ: SQL parser (bounded 0-1)
+  length_penalty_coef: 0.005

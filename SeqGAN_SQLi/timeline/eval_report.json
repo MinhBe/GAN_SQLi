@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-05-10T11:08:00.301817",
+  "config": "seqgan_fast.yaml (5000 steps, lambda_d=0)",
+  "results": {
+    "SeqGAN (adv)": {
+      "asr_mean": 1.0,
+      "asr_ci_lo": 1.0,
+      "asr_ci_hi": 1.0,
+      "syntax_rate": 1.0,
+      "self_bleu_3": 0.9894,
+      "length_mean": 68.1,
+      "length_std": 20.6,
+      "trivial_rate": 0.0,
+      "n_samples": 1000
+    },
+    "MLE only": {
+      "asr_mean": 0.697,
+      "asr_ci_lo": 0.668,
+      "asr_ci_hi": 0.725,
+      "syntax_rate": 1.0,
+      "self_bleu_3": 0.9833,
+      "length_mean": 55.1,
+      "length_std": 13.5,
+      "trivial_rate": 0.0,
+      "n_samples": 1000
+    },
+    "Template": {
+      "asr_mean": 0.679,
+      "asr_ci_lo": 0.649,
+      "asr_ci_hi": 0.708,
+      "syntax_rate": 1.0,
+      "self_bleu_3": 0.6836,
+      "length_mean": 4.0,
+      "length_std": 1.2,
+      "trivial_rate": 0.067,
+      "n_samples": 1000
+    }
+  },
+  "targets": {
+    "asr_delta_vs_mle": {
+      "value": 0.30300000000000005,
+      "threshold": 0.3,
+      "pass": true
+    },
+    "syntax_rate": {
+      "value": 1.0,
+      "threshold": 0.9,
+      "pass": true
+    },
+    "self_bleu_3": {
+      "value": 0.9894,
+      "threshold": 0.6,
+      "pass": false
+    }
+  },
+  "notes": [
+    "Self-BLEU-3=0.99 indicates mode collapse: generator converged to narrow set of bypass patterns",
+    "ASR=100% with dev proxy (heuristic) -- no real WAF tested",
+    "lambda_d=0.0 removed discriminator diversity pressure, likely contributed to mode collapse",
+    "Recommended fix: add entropy regularization or restore lambda_d with bounded reward clipping"
+  ]
+}

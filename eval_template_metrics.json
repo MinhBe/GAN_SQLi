@@ -1,0 +1,11 @@
+{
+  "n_samples": 1000,
+  "syntax_rate": 1.0,
+  "asr_mean": 0.679,
+  "asr_ci_low": 0.649,
+  "asr_ci_high": 0.708,
+  "self_bleu_3": 0.6836431067764126,
+  "length_mean": 3.984,
+  "length_std": 1.2048833968480106,
+  "trivial_rate": 0.067
+}
