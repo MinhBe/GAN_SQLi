@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12270,itter,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12271,canut escriba,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12272,registrar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12273,43061609c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12274,algemes,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12275,4or3554e0a,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12276,correnta,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12277,jarandilla de la vera,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12278,7s0av07rido,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12279,miriamne,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12280,canal saracho,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12281,75590487k,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12282,4.10842E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12283,23991331p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12284,ostapchuk casal,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12285,tu6e3a5a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12286,rosngela,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12287,armintario,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12288,seto,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12289,to85lo372,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12290,vidrioso,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12291,36914497a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12292,ajona valenzuela,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12293,armenteros,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12294,aylmar6,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12295,claudio iturrieta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12296,j0ctar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12297,5.44972E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12298,6.60819E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12299,newtell@theroxyblue.ir,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

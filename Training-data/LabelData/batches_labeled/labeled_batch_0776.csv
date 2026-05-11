@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23250,SELECT * FROM arrangement FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23251,SELECT character,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23252,SELECT * FROM studied,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23253,SELECT length FROM funny,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23254,SELECT DISTINCT spoken FROM tribe,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23255,SELECT COUNT ( DISTINCT park ) FROM someone,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23256,SELECT Count ( * ) AS doctor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23257,FROM ( SELECT DISTINCT slipped FROM sink ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23258,SELECT * FROM mill,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23259,SELECT * FROM whale WHERE job = 'loose',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23260,SELECT * FROM do WHERE moment = 'beneath',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23261,SELECT * FROM mirror WHERE cost = fire,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23262,SELECT * FROM toward WHERE valuable = 'health' AND City = 'knowledge',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23263,SELECT * FROM public WHERE hung = 'return' OR had = 'oldest',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23264,SELECT * FROM thirty WHERE shine = 'remove' OR official = 'pure',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23265,SELECT * FROM drop WHERE NOT offer = 'conversation',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23266,SELECT * FROM drew WHERE food = 'nearly' AND ( principle = 'year' OR good = 'subject' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23267,SELECT * FROM join WHERE NOT attached = 'wrong' AND NOT remove = 'teach',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23268,SELECT * FROM typical ORDER BY struggle,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23269,SELECT * FROM use ORDER BY crew DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23270,"SELECT * FROM vapor ORDER BY adjective, consider",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23271,"SELECT * FROM minute ORDER BY alike ASC, push DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23272,"INSERT INTO daughter ( star, star, attached, water, thing, press ) VALUES ( 'brown', 'lovely'. breath', 'throat', 'planet', 'drink', 'fourth' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23273,"INSERT INTO page ( flew, reach, printed ) VALUES ( 'baby', 'bush', 'unhappy' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23274,"SELECT behavior, torn, coat FROM man WHERE studied IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23275,"SELECT red, rhythm, cookFROM from WHERE mine IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23276,"UPDATE success SET without = 'question', City = 'raw' WHERE swept = further",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23277,UPDATE there SET wire = 'smell'WHERE left = 'man',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23278,SELECT * FROM chance,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23279,DELETE FROM species WHERE monkey = 'somewhere',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

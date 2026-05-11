@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19530,SELECT * FROM solid,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19531,DELETE FROM deal WHERE behavior = 'white',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19532,DELETE FROM sail,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19533,SELECT shade ( s ) FROM yard,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19534,SELECT * FROM ( SELECT minute FROM lake ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19535,SELECT TOP 3 * FROM home,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19536,SELECT * FROM allow 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19537,SELECT * FROM inch FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19538,SELECT TOP 50 PERCENT * FROM influence,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19539,SELECT * FROM kept FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19540,SELECT TOP 3 * FROM might WHERE hit = 'common',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19541,SELECT * FROM arrow WHERE nodded = 'night' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19542,SELECT * FROM bowl WHERE reader = 'riding' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19543,SELECT MIN ( right ) AS different FROM factor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19544,SELECT MIN ( around ) AS major FROM found,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19545,SELECT * FROM ( SELECT list FROM difference ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19546,SELECT TOP 3 * FROM caught SELECT * FROM pretty 3SELECT * FROM beneath,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19547,SELECT * FROM anyone 3 SELECT * FROM base,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19548,SELECT * FROM voyage FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM wheel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19549,SELECT TOP 50 PERCENT * FROM wait SELECT * FROM gather FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM grown,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19550,SELECT * FROM history FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM seldom,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19551,SELECT TOP 3 * FROM influence WHERE rear = 'straight' SELECT * FROM specific,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19552,SELECT * FROM child WHERE today = 'depth' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19553,SELECT * FROM flag WHERE worse = 'make' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19554,SELECT AVG ( rice ) FROM car,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19555,SELECT * FROM language WHERE circus NOT LIKE '[declared]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+19556,SELECT AVG ( development ) FROM organized SELECT SUM ( mostly ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19557,SELECT AVG ( impossible ) FROM pilot SELECT SUM ( by ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19558,SELECT AVG ( from ) FROM farmer SELECT SUM ( thirty ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19559,SELECT COUNT ( opposite ) FROM it,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19110,"SELECT CAST ( ""2017-08-29"" AS DATE ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19111,SELECT CAST ( 150 AS CHAR ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19112,"SELECT CAST ( ""14:06:10"" AS TIME ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19113,SELECT CAST ( 5-10 AS SIGNED ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19114,"SELECT COALESCE ( NULL, NULL, NULL, 'W3Schools.com', NULL, 'Example.com' ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19115,"SELECT COALESCE ( NULL, 1, 2, 'W3Schools.com' ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19116,SELECT CONNECTION_ID ( ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19117,"SELECT CONV ( 15, 10, 2 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19118,"SELECT CONV ( 1111, 2, 10 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19119,"SELECT CONV ( 88, 10, 16 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19120,"SELECT CONVERT ( ""2017-08-29"", DATE ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19121,"SELECT CONVERT ( 150, CHAR ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19122,"SELECT CONVERT ( ""14:06:10"", TIME ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19123,"SELECT CONVERT ( ""W3Schools.com"" USING latin1 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19124,SELECT CURRENT_USER ( ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19125,SELECT DATABASE ( ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19126,"SELECT IF ( 500<1000, ""YES"", ""NO"" ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19127,"SELECT IF ( 500<1000, 5, 10 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19128,"SELECT IF ( STRCMP ( ""hello"",""bye"" ) = 0, ""YES"", ""NO"" ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19129,"SELECT OrderID, Quantity, IF ( Quantity>10, ""MORE"", ""LESS"" ) FROM OrderDetails;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19130,"SELECT IFNULL ( NULL, ""W3Schools.com"" ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19131,"SELECT IFNULL ( ""Hello"", ""W3Schools.com"" ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19132,"SELECT IFNULL ( NULL, 500 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19133,SELECT ISNULL ( NULL ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19134,"SELECT ISNULL ( """" ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19135,SELECT ISNULL ( 350 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19136,"SELECT ISNULL ( ""Hello world!"" ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19137,SELECT LAST_INSERT_ID ( ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19138,"SELECT NULLIF ( 25, 25 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19139,"SELECT NULLIF ( 25, ""Hello"" ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

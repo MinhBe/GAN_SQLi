@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+30060,SELECT LOCALTIMESTAMP ( ) + 1,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30061,SELECT MONTH ( CURDATE ( ) ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30062,SELECT MONTHNAME ( CURDATE ( ) ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30063,SELECT NOW ( ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30064,SELECT NOW ( ) + 1,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30065,SELECT QUARTER ( CURDATE ( ) ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30066,SELECT SEC_TO_TIME ( 1 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30067,SELECT SEC_TO_TIME ( -6897 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30068,SELECT SYSDATE ( ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30069,SELECT SYSDATE ( ) + 1,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30070,SELECT TIME ( NULL ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30071,SELECT WEEK ( CURDATE ( ) ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30072,SELECT WEEKDAY ( CURDATE ( ) ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30073,SELECT WEEKOFYEAR ( CURDATE ( ) ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30074,SELECT YEAR ( CURDATE ( ) ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30075,SELECT YEARWEEK ( CURDATE ( ) ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30076,SELECT BIN ( 15 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30077,SELECT BIN ( 111 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30078,SELECT BIN ( 8 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30079,SELECT CAST ( 150 AS CHAR ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30080,SELECT CAST ( 5-10 AS SIGNED ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30081,SELECT CONNECTION_ID ( ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30082,SELECT CURRENT_USER ( ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30083,SELECT DATABASE ( ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30084,SELECT ISNULL ( NULL ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30085,SELECT ISNULL ( 350 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30086,SELECT LAST_INSERT_ID ( ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30087,SELECT SESSION_USER ( ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30088,SELECT SYSTEM_USER ( ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+30089,SELECT USER ( ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

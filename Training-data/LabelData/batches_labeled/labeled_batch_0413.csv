@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12360,25793872q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12361,hau,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12362,halbert,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12363,satoh,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12364,matthiew,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12365,aristofnico,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12366,ozselcuk,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12367,yasna,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12368,chi-keun,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12369,9ig7a2i4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12370,stimson_holbrook@cementosanfranq.ly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12371,cangrenarse,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12372,9.18E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12373,solonitsin3@neotelecom.fi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12374,s3borrea,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12375,paseo arco del ladrillo 48 10?h,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12376,93310194e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12377,glyn7,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12378,nufrago,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12379,4or6un0,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12380,cos6rio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12381,venfica,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12382,rist,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12383,carmelo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12384,4.86024E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12385,beal,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12386,imokoude@transportesvegasl.et,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12387,63171354z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12388,9usta4ui6,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12389,august,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

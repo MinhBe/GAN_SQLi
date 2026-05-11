@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27900,"UPDATE everywhere SET volume = 'moment', City = 'place' WHERE several = labor",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27901,UPDATE by SET rather = 'adjective'WHERE too = 'interest',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27902,SELECT * FROM living,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27903,DELETE FROM near WHERE concerned = 'music',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27904,DELETE FROM slowly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27905,SELECT nearby ( s ) FROM hay,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27906,SELECT * FROM ( SELECT ancient FROM determine ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27907,SELECT TOP 3 * FROM said,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27908,SELECT * FROM lost 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27909,SELECT * FROM job FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27910,SELECT TOP 50 PERCENT * FROM eventually,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27911,SELECT * FROM brush FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27912,SELECT TOP 3 * FROM replied WHERE fill = 'ordinary',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27913,SELECT * FROM explore WHERE turn = 'general' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27914,SELECT * FROM depth WHERE mountain = 'women' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27915,SELECT MIN ( held ) AS gentle FROM fifty,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27916,SELECT MIN ( wish ) AS wolf FROM ear,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27917,SELECT * FROM ( SELECT beginning FROM gold ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27918,SELECT TOP 3 * FROM wave SELECT * FROM tribe 3SELECT * FROM football,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27919,SELECT * FROM easy 3 SELECT * FROM look,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27920,SELECT * FROM across FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM reason,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27921,SELECT TOP 50 PERCENT * FROM college SELECT * FROM alone FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM jet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27922,SELECT * FROM club FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM rocket,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27923,SELECT TOP 3 * FROM jungle WHERE plan = 'stiff' SELECT * FROM positive,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27924,SELECT * FROM fighting WHERE worth = 'rock' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27925,SELECT * FROM science WHERE heading = 'diameter' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27926,SELECT AVG ( public ) FROM gasoline,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27927,SELECT * FROM fell WHERE engineer NOT LIKE '[basket]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27928,SELECT AVG ( accident ) FROM center SELECT SUM ( can ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27929,SELECT AVG ( excited ) FROM industry SELECT SUM ( mouse ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

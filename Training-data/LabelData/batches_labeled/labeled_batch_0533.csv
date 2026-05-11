@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15960,yaci,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15961,"infantes de carrion, 122",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15962,nacer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15963,boes@cumbareback.kz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15964,"c/ padre ignacio ellaguria, 117 6-e",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15965,"faus 195,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15966,llanes,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15967,alfardilla,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15968,"c/ secretario guedes aleman s/n,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15969,tiramollar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15970,pembrooke_coates@stainless.gd,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15971,8.32E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15972,marylin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15973,grea,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15974,dan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15975,03770036z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15976,"toril, 171 5h",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15977,63947168s,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15978,terland-bartha5@informatica2009.ck,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15979,12370442f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15980,selwart@studentrooms.zr,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15981,olmeda de la cuesta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15982,"c/ fernandez shaw, 177 1-e",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15983,kuzz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15984,"arrasate 130,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15985,"c/ jose belso castao, s/n,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15986,"calle tajo, 182,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15987,cunillera penades,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15988,bossa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15989,kirland-lincovsky@la-sexta-f1.fo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

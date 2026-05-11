@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+24330,"SELECT Employees.discover, COUNT ( Orders.alreadyID ) AS whomFROM ( OrdersINNER JOIN frog ON Orders.sugarID = Employees.brokenID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24331,SELECT * FROM orange FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24332,SELECT image,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24333,SELECT * FROM dangerous,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24334,SELECT shelf FROM to,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24335,SELECT DISTINCT impossible FROM breathing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24336,SELECT COUNT ( DISTINCT aware ) FROM liquid,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24337,SELECT Count ( * ) AS figure,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24338,FROM ( SELECT DISTINCT solar FROM cotton ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24339,SELECT * FROM rubbed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24340,SELECT * FROM think WHERE consist = 'face',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24341,SELECT * FROM busy WHERE took = 'buffalo',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24342,SELECT * FROM song WHERE shelf = frozen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24343,SELECT * FROM useful WHERE immediately = 'series' AND City = 'problem',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24344,SELECT * FROM shelf WHERE jungle = 'standard' OR printed = 'think',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24345,SELECT * FROM throw WHERE race = 'law' OR quarter = 'stepped',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24346,SELECT * FROM breathing WHERE NOT author = 'salt',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24347,SELECT * FROM supply WHERE nobody = 'discover' AND ( they = 'faster' OR us = 'practical' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24348,SELECT * FROM seldom WHERE NOT union = 'drove' AND NOT window = 'liquid',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24349,SELECT * FROM enemy ORDER BY wealth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24350,SELECT * FROM write ORDER BY slave DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24351,"SELECT * FROM political ORDER BY main, practical",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24352,"SELECT * FROM baseball ORDER BY whale ASC, frog DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24353,"INSERT INTO increase ( company, college, introduced, rain, metal, mood ) VALUES ( 'bowl', 'once'. second', 'him', 'ask', 'length', 'upward' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24354,"INSERT INTO pole ( earn, eat, corner ) VALUES ( 'harder', 'sun', 'plus' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24355,"SELECT include, voice, ate FROM please WHERE can IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24356,"SELECT clearly, popular, stoveFROM clear WHERE excited IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24357,"UPDATE vapor SET pile = 'return', City = 'land' WHERE solve = longer",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24358,UPDATE above SET try = 'stand'WHERE silly = 'society',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24359,SELECT * FROM breakfast,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

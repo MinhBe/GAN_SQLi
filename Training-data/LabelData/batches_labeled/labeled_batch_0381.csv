@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+11400,vajih,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11401,salinillas de bureba,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11402,c/ san ildefonso 106 10?h,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11403,goldsmith1@esmarbella.ht,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11404,arraia-maeztu,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11405,protoalbitar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11406,pontevedra,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11407,savoula,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11408,albeta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11409,96761343k,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11410,lamentante,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11411,50159319e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11412,andrs castanyer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11413,neugebauer@buscamoto.gw,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11414,harmony,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11415,vlez acejas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11416,enlutada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11417,gabriela1,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11418,c/ david 169 6-h,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11419,methi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11420,graciliano,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11421,4.13841E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11422,steele,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11423,1.44E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11424,brockie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11425,depredador,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11426,comalada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11427,robledo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11428,archie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11429,4a2ho4a2o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

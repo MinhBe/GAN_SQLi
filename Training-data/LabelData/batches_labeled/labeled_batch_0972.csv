@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29130,"SELECT gone,lunch,rush,repeat,cup ( ( colony JOIN spend ON quickly.sink = cup.relationship ) INNER JOIN properON Orders.instrument = hurt.speechID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29131,SELECT hair ( s ) FROM attempt LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29132,"SELECT development,mountain,dirty FROM at LEFT JOIN Orders ON exchange.wonID = kill.cover ORDER BY between.clothing",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29133,SELECT correctly ( s FROM cow RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29134,"SELECT Orders.ninerID, Employees.teach, Employees.canal FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.straightID ORDER BY Orders.compoundID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29135,SELECT potatoes ( s ) FROM exact FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29136,"SELECT column_name ( s ) FROM realize,needed",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29137,SELECT ten ( s ) FROM stop UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29138,SELECT select ( s ) FROM instead SELECT occur ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29139,SELECT early ( s ) FROM population UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29140,SELECT market ( s ) FROM putting SELECT save FROM present,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29141,SELECT swimming FROM explore UNION SELECT therefore FROM hungry ORDER BY base,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+29142,SELECT religious FROM vegetable UNION ALL SELECT again FROM paper ORDER BY dark,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+29143,"SELECT felt,seen FROM away WHERE fur = 'lie' UNION SELECT enemy, charge FROM become",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+29144,"SELECT COUNT ( slide ) , question FROM limited BY airplane",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29145,"SELECT Employees.toward, COUNT ( Orders.onID ) AS swimmingFROM ( OrdersINNER JOIN flow ON Orders.sisterID = Employees.courtID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29146,SELECT * FROM cell FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29147,SELECT rope,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29148,SELECT * FROM create,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29149,SELECT space FROM garden,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29150,SELECT DISTINCT citizen FROM everywhere,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29151,SELECT COUNT ( DISTINCT corner ) FROM finish,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29152,SELECT Count ( * ) AS education,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29153,FROM ( SELECT DISTINCT tool FROM try ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29154,SELECT * FROM heard,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29155,SELECT * FROM bicycle WHERE ten = 'road',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29156,SELECT * FROM whistle WHERE some = 'door',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29157,SELECT * FROM riding WHERE jungle = zoo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29158,SELECT * FROM seldom WHERE led = 'every' AND City = 'fourth',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29159,SELECT * FROM balance WHERE return = 'atomic' OR neck = 'plant',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

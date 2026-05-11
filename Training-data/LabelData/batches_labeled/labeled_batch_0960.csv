@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+28770,SELECT * FROM same WHERE NOT simply = 'south',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28771,SELECT * FROM love WHERE surface = 'desk' AND ( women = 'chief' OR definition = 'birds' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28772,SELECT * FROM gift WHERE NOT moment = 'apart' AND NOT which = 'path',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28773,SELECT * FROM satellites ORDER BY concerned,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28774,SELECT * FROM program ORDER BY slipped DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28775,"SELECT * FROM swept ORDER BY beginning, including",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28776,"SELECT * FROM once ORDER BY bee ASC, allow DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28777,"INSERT INTO thirty ( stems, prepare, sure, lovely, surface, food ) VALUES ( 'cap', 'view'. official', 'learn', 'buffalo', 'giant', 'fish' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28778,"INSERT INTO trip ( slight, organized, duck ) VALUES ( 'made', 'previous', 'gather' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28779,"SELECT slipped, sister, street FROM exactly WHERE blood IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28780,"SELECT flame, shaking, gulfFROM buried WHERE realize IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28781,"UPDATE bent SET compare = 'arrive', City = 'provide' WHERE chart = spin",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28782,UPDATE everybody SET wise = 'rapidly'WHERE discover = 'pattern',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28783,SELECT * FROM production,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28784,DELETE FROM cloud WHERE young = 'country',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28785,DELETE FROM label,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28786,SELECT balloon ( s ) FROM correctly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28787,SELECT * FROM ( SELECT night FROM stick ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28788,SELECT TOP 3 * FROM perfectly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28789,SELECT * FROM nature 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28790,SELECT TOP 50 PERCENT * FROM widely,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28791,SELECT * FROM forest FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28792,SELECT TOP 3 * FROM function WHERE sink = 'wait',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28793,SELECT * FROM ourselves WHERE sad = 'select' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28794,SELECT * FROM bit WHERE voice = 'golden' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28795,SELECT MIN ( deeply ) AS speak FROM lion,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28796,SELECT MIN ( wooden ) AS sight FROM valuable,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28797,SELECT * FROM ( SELECT locate FROM root ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28798,SELECT TOP 3 * FROM sharp SELECT * FROM quarter 3SELECT * FROM football,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28799,SELECT * FROM least 3 SELECT * FROM love,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15720,thuong,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15721,drier@hotelesymas.cl,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15722,timmons,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15723,"plaa mig de can clos, 122",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15724,desans totohuetotzint,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15725,3.72946E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15726,exigidad,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15727,thiel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15728,igzquiza,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15729,anz1@hiperbilbao.fj,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15730,3.09031E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15731,negredo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15732,"c/ el columpio 13,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15733,ado,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15734,malacopterigio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15735,6.83781E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15736,"once septiembre, 95",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15737,montorns de segarra,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15738,"c/ bellavista, 70 10h",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15739,6.34191E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15740,morlanes funosa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15741,laguna del marquesado,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15742,marcanti,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15743,pozal de gallinas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15744,animador!a,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15745,8.32456E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15746,"calle andres mellado, 83, 12-d",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15747,inamulla,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15748,walliw,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15749,92283149l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

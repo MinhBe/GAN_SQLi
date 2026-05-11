@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19500,"SELECT COUNT ( printed ) , zoo FROM struggle BY dish",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19501,"SELECT Employees.fact, COUNT ( Orders.studyingID ) AS ponyFROM ( OrdersINNER JOIN studied ON Orders.resultID = Employees.vastID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19502,SELECT * FROM earlier FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19503,SELECT we,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19504,SELECT * FROM bottom,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19505,SELECT adventure FROM farm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19506,SELECT DISTINCT shape FROM carbon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19507,SELECT COUNT ( DISTINCT beautiful ) FROM lying,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19508,SELECT Count ( * ) AS year,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19509,FROM ( SELECT DISTINCT ocean FROM teacher ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19510,SELECT * FROM tape,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19511,SELECT * FROM off WHERE motion = 'no',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19512,SELECT * FROM buy WHERE successful = 'cup',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19513,SELECT * FROM yourself WHERE planet = buy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19514,SELECT * FROM low WHERE eleven = 'properly' AND City = 'ice',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19515,SELECT * FROM only WHERE try = 'title' OR made = 'type',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19516,SELECT * FROM clear WHERE slipped = 'building' OR aware = 'colony',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19517,SELECT * FROM taken WHERE NOT yesterday = 'saddle',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19518,SELECT * FROM graph WHERE tower = 'actual' AND ( gas = 'these' OR yard = 'eat' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19519,SELECT * FROM spin WHERE NOT system = 'allow' AND NOT law = 'current',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19520,SELECT * FROM camp ORDER BY ants,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19521,SELECT * FROM husband ORDER BY example DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19522,"SELECT * FROM held ORDER BY today, mistake",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19523,"SELECT * FROM refused ORDER BY function ASC, stiff DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19524,"INSERT INTO parts ( shake, mouse, crew, birthday, surrounded, bark ) VALUES ( 'length', 'enemy'. kept', 'truth', 'smoke', 'could', 'about' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19525,"INSERT INTO silly ( respect, receive, circle ) VALUES ( 'nodded', 'statement', 'beauty' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19526,"SELECT speech, somewhere, forget FROM putting WHERE on IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19527,"SELECT few, idea, coolFROM hour WHERE adjective IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19528,"UPDATE keep SET rice = 'pine', City = 'tower' WHERE birds = split",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19529,UPDATE atmosphere SET quiet = 'chart'WHERE movie = 'speech',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

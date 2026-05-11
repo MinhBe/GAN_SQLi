@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26100,"SELECT separate,this FROM gone WHERE island = 'zero' UNION SELECT promised, block FROM disappear",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+26101,"SELECT COUNT ( body ) , drop FROM doll BY stopped",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26102,"SELECT Employees.safe, COUNT ( Orders.keptID ) AS quietFROM ( OrdersINNER JOIN model ON Orders.landID = Employees.babyID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26103,SELECT * FROM even FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26104,SELECT heading,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26105,SELECT * FROM shelter,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26106,SELECT camp FROM off,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26107,SELECT DISTINCT unless FROM door,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26108,SELECT COUNT ( DISTINCT closer ) FROM pipe,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26109,SELECT Count ( * ) AS what,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26110,FROM ( SELECT DISTINCT pitch FROM exciting ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26111,SELECT * FROM express,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26112,SELECT * FROM dot WHERE hungry = 'threw',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26113,SELECT * FROM matter WHERE begun = 'age',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26114,SELECT * FROM straw WHERE exciting = halfway,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26115,SELECT * FROM south WHERE distance = 'temperature' AND City = 'rope',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26116,SELECT * FROM wore WHERE weak = 'gas' OR additional = 'wherever',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26117,SELECT * FROM machinery WHERE wooden = 'completely' OR sides = 'talk',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26118,SELECT * FROM local WHERE NOT winter = 'region',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26119,SELECT * FROM quiet WHERE arm = 'detail' AND ( fellow = 'service' OR cloud = 'flew' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26120,SELECT * FROM wild WHERE NOT sleep = 'halfway' AND NOT union = 'create',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26121,SELECT * FROM ago ORDER BY box,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26122,SELECT * FROM current ORDER BY blind DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26123,"SELECT * FROM discovery ORDER BY hollow, guess",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26124,"SELECT * FROM brother ORDER BY spring ASC, laid DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26125,"INSERT INTO vote ( flat, trap, card, score, correctly, law ) VALUES ( 'market', 'chose'. zero', 'within', 'gas', 'waste', 'screen' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26126,"INSERT INTO exist ( syllable, strength, behavior ) VALUES ( 'specific', 'greater', 'vast' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26127,"SELECT lovely, section, not FROM thou WHERE amount IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26128,"SELECT pour, maybe, balloonFROM halfway WHERE month IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26129,"UPDATE gas SET memory = 'condition', City = 'start' WHERE line = speak",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12240,ducaux@muchachina.tk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12241,3ist423o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12242,cab,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12243,antih sacido,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12244,desailly_bosworth@coworkers.gov,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12245,"vallbona, 72 3?b",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12246,bette,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12247,21468433a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12248,39152269j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12249,velero@softwaresaas.ec,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12250,barreras de la bandera,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12251,4.78072E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12252,"c/ antonia lancha, 38, 1?h",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12253,anatoly,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12254,kin-yee,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12255,armelle,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12256,*ayustar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12257,a06b6,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12258,07383536f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12259,mantencin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12260,39395797v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12261,salicilato,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12262,anamary,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12263,72ic5oid4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12264,l655a2uta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12265,atl-sale,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12266,leyton@intg.tk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12267,4.27735E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12268,"c/ las chumberas, 38,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12269,klaudt,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

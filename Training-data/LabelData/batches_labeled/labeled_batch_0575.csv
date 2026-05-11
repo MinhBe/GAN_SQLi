@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17220,fulivio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17221,lacalle jambrina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17222,wenzel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17223,den21o9a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17224,sadegh,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17225,remiendo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17226,2.89989E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17227,10302390t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17228,keehn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17229,48435837e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17230,lazlo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17231,casado vallcorba,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17232,severiano,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17233,cerinza,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17234,leocricia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17235,calvin@espaciodelpintor.by,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17236,4.86728E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17237,maren-bufford4@fruteriacartaya.yu,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17238,12186635q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17239,seymour@evelin.gn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17240,"paseo rey, 167 8-f",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17241,rougerie@cincocolores.sd,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17242,calle federico mompou 144 11-d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17243,orejana,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17244,"calle conjunto avenida, 116",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17245,bechara,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17246,nagel ordoes,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17247,xixia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17248,kouhi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17249,arpe*nde,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

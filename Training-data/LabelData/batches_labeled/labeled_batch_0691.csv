@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+20700,SELECT * FROM if WHERE cage = military,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20701,SELECT * FROM greatest WHERE tank = 'grow' AND City = 'upper',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20702,SELECT * FROM energy WHERE alive = 'arm' OR cross = 'track',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20703,SELECT * FROM forget WHERE compass = 'roof' OR put = 'mother',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20704,SELECT * FROM hungry WHERE NOT volume = 'run',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20705,SELECT * FROM iron WHERE supply = 'least' AND ( advice = 'lot' OR party = 'potatoes' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20706,SELECT * FROM laid WHERE NOT further = 'accident' AND NOT perhaps = 'cup',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20707,SELECT * FROM art ORDER BY perfectly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20708,SELECT * FROM front ORDER BY pattern DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20709,"SELECT * FROM gold ORDER BY bicycle, nation",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20710,"SELECT * FROM around ORDER BY popular ASC, than DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20711,"INSERT INTO baseball ( wrote, shall, your, half, rabbit, party ) VALUES ( 'meal', 'ranch'. dead', 'engineer', 'steep', 'unusual', 'service' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20712,"INSERT INTO we ( parts, held, gasoline ) VALUES ( 'diameter', 'police', 'doll' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20713,"SELECT music, noun, where FROM she WHERE rather IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20714,"SELECT moon, wave, behaviorFROM religious WHERE table IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20715,"UPDATE camp SET right = 'forest', City = 'young' WHERE main = ring",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20716,UPDATE replace SET smooth = 'instrument'WHERE rapidly = 'cream',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20717,SELECT * FROM mighty,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20718,DELETE FROM express WHERE adult = 'spin',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20719,DELETE FROM friend,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20720,SELECT city ( s ) FROM secret,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20721,SELECT * FROM ( SELECT prove FROM individual ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20722,SELECT TOP 3 * FROM knife,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20723,SELECT * FROM said 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20724,SELECT * FROM thy FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20725,SELECT TOP 50 PERCENT * FROM oxygen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20726,SELECT * FROM told FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20727,SELECT TOP 3 * FROM fewer WHERE spend = 'library',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20728,SELECT * FROM with WHERE dress = 'band' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20729,SELECT * FROM plane WHERE band = 'gold' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

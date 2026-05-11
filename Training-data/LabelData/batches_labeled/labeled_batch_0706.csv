@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+21150,SELECT * FROM cave WHERE doing IN ( SELECT ice FROM principle ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21151,SELECT * FROM symbol WHERE audience BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21152,SELECT * FROM move WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21153,SELECT * FROM flight WHERE becoming BETWEEN 'copper' AND 'yard',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21154,"SELECT * FROM mountain WHERE recently BETWEEN ""tower"" AND ""sat""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21155,SELECT * FROM check WHERE locate NOT BETWEEN 'increase' AND 'experience',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21156,SELECT * FROM naturally WHERE nearby BETWEEN provide09/01/1996trail AND symbol15/31/1996voyage,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21157,SELECT * FROM sure WHERE rhythm BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21158,SELECT AVG ( guide ) FROM sentence SELECT SUM ( region ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21159,SELECT COUNT ( pack ) FROM someone,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21160,SELECT COUNT ( businessID ) FROM distant,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21161,SELECT * FROM population WHERE ground BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21162,"SELECT consistID AS ID, orange AS volume FROM example",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21163,"SELECT surfaceID AS ID, should AS immediately FROM afternoon",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21164,"SELECT stairs AS cool, arrangement AS [truth] FROM forget",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21165,"SELECT hello, prove+ ', ' + listen+ ' ' + complete+ ', ' + calm AS consider FROM bare",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21166,SELECT volume ( s ) FROM field INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21167,"SELECT fifth,spirit,travel,color,running ( ( finger JOIN command ON mouse.bone = house.entirely ) INNER JOIN lakeON Orders.go = mysterious.consistID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21168,SELECT case ( s ) FROM whom LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21169,"SELECT laid,funny,once FROM lead LEFT JOIN Orders ON ready.pitchID = tree.rise ORDER BY sure.came",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21170,SELECT worry ( s FROM balloon RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21171,"SELECT Orders.bearrID, Employees.climb, Employees.because FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.summerID ORDER BY Orders.runningID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21172,SELECT work ( s ) FROM when FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21173,"SELECT column_name ( s ) FROM fresh,road",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21174,SELECT tribe ( s ) FROM necessary UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21175,SELECT captain ( s ) FROM blanket SELECT factory ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21176,SELECT last ( s ) FROM bank UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21177,SELECT whispered ( s ) FROM idea SELECT evening FROM beginning,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21178,SELECT largest FROM those UNION SELECT per FROM result ORDER BY pretty,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+21179,SELECT accident FROM alive UNION ALL SELECT become FROM tool ORDER BY long,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based

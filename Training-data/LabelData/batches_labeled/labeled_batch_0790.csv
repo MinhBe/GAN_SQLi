@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23670,"UPDATE football SET offer = 'tomorrow', City = 'due' WHERE after = exchange",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23671,UPDATE single SET view = 'at'WHERE huge = 'made',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23672,SELECT * FROM ourselves,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23673,DELETE FROM breeze WHERE magic = 'money',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23674,DELETE FROM customs,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23675,SELECT slide ( s ) FROM see,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23676,SELECT * FROM ( SELECT gradually FROM sharp ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23677,SELECT TOP 3 * FROM whale,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23678,SELECT * FROM night 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23679,SELECT * FROM type FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23680,SELECT TOP 50 PERCENT * FROM thy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23681,SELECT * FROM town FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23682,SELECT TOP 3 * FROM hurried WHERE table = 'cow',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23683,SELECT * FROM list WHERE operation = 'search' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23684,SELECT * FROM peace WHERE outline = 'scared' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23685,SELECT MIN ( symbol ) AS while FROM hurried,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23686,SELECT MIN ( recent ) AS bring FROM sense,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23687,SELECT * FROM ( SELECT quiet FROM perfect ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23688,SELECT TOP 3 * FROM heavy SELECT * FROM hide 3SELECT * FROM are,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23689,SELECT * FROM simple 3 SELECT * FROM outer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23690,SELECT * FROM chart FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM should,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23691,SELECT TOP 50 PERCENT * FROM decide SELECT * FROM unhappy FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM about,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23692,SELECT * FROM daughter FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM younger,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23693,SELECT TOP 3 * FROM list WHERE build = 'pilot' SELECT * FROM native,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23694,SELECT * FROM does WHERE four = 'understanding' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23695,SELECT * FROM related WHERE older = 'per' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23696,SELECT AVG ( truck ) FROM space,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23697,SELECT * FROM program WHERE tower NOT LIKE '[second]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23698,SELECT AVG ( necessary ) FROM fat SELECT SUM ( appropriate ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23699,SELECT AVG ( whom ) FROM having SELECT SUM ( sweet ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

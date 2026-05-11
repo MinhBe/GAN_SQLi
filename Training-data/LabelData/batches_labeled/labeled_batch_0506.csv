@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15150,foguear,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15151,c/ torre de romo s/n 1f,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15152,fermentadora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15153,dobrescu_brizzard@enigmatico.so,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15154,"calle sant pau, 117,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15155,selj@ebaz.travel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15156,1zu67rado,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15157,"passeig de monjo 102, 11?a",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15158,omen@meneamex.sh,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15159,weddle@teamspanish.bz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15160,raab,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15161,19187311k,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15162,ayca mols,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15163,5.33828E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15164,34859412z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15165,despacio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15166,querbico,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15167,novelador,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15168,del ngel kercad,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15169,fregaci5n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15170,pechur@spainbareback.fm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15171,86274990n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15172,6.20274E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15173,cabrillas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15174,gonzaga ripalda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15175,cabal urrupan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15176,bateman@alojesuweb.in,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15177,ulf,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15178,65904927z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15179,pataki-grifties@hiteurope.by,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

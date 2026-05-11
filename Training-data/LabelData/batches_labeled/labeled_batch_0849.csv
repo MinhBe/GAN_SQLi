@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+25440,"SELECT vast, human, sweetFROM kitchen WHERE sitting IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25441,"UPDATE daughter SET doubt = 'door', City = 'told' WHERE factor = outline",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25442,UPDATE block SET village = 'pleasure'WHERE knowledge = 'during',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25443,SELECT * FROM art,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25444,DELETE FROM thumb WHERE rise = 'review',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25445,DELETE FROM park,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25446,SELECT floor ( s ) FROM sugar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25447,SELECT * FROM ( SELECT tie FROM leather ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25448,SELECT TOP 3 * FROM command,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25449,SELECT * FROM although 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25450,SELECT * FROM anyone FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25451,SELECT TOP 50 PERCENT * FROM bone,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25452,SELECT * FROM lost FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25453,SELECT TOP 3 * FROM opposite WHERE place = 'beside',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25454,SELECT * FROM system WHERE from = 'machine' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25455,SELECT * FROM hide WHERE secret = 'careful' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25456,SELECT MIN ( plant ) AS effort FROM empty,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25457,SELECT MIN ( planning ) AS wear FROM space,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25458,SELECT * FROM ( SELECT swing FROM paper ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25459,SELECT TOP 3 * FROM buried SELECT * FROM waste 3SELECT * FROM railroad,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25460,SELECT * FROM themselves 3 SELECT * FROM card,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25461,SELECT * FROM story FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM monkey,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25462,SELECT TOP 50 PERCENT * FROM vote SELECT * FROM simplest FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM test,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25463,SELECT * FROM gate FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM six,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25464,SELECT TOP 3 * FROM community WHERE might = 'electricity' SELECT * FROM same,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25465,SELECT * FROM order WHERE but = 'piano' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25466,SELECT * FROM threw WHERE sentence = 'football' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25467,SELECT AVG ( caught ) FROM clean,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25468,SELECT * FROM organized WHERE book NOT LIKE '[announced]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25469,SELECT AVG ( writing ) FROM tales SELECT SUM ( shake ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

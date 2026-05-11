@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12960,besnehard8@itrends.tn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12961,3.82381E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12962,skolnik-daye@joll.ws,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12963,digenova,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12964,35591968c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12965,shedd,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12966,castellgal,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12967,4.27965E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12968,8e35o502da7,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12969,muopedro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12970,e0u08os1,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12971,25938703q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12972,38449362d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12973,apotrerar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12974,graff@manzanilladevillafafila.iq,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12975,casanellas berlingery,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12976,laguna abusaid,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12977,jellison@acch-portugal.uk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12978,arme!lluela,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12979,0m24gu1l39,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12980,4.28192E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12981,19665853w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12982,7.13887E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12983,35garab980a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12984,septingentsima,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12985,iza,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12986,5.74629E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12987,ca10a5uda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12988,hole@chicashumedas.at,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12989,pitcavag,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

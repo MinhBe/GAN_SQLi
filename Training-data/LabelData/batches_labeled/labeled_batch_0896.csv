@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26850,SELECT COUNT ( forget ) FROM husband,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26851,SELECT AVG ( instance ) FROM spite,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26852,SELECT * FROM blind WHERE order NOT LIKE 'century%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26853,SELECT * FROM model WHERE find LIKE '%cloth%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26854,SELECT * FROM practical WHERE front NOT LIKE '[exact]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26855,"SELECT * FROM planning WHERE loud IN ( 'under', 'way', 'imagine' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26856,"SELECT * FROM rhyme WHERE duck NOT IN ( 'damage', 'hurried', 'further' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26857,SELECT * FROM accept WHERE condition IN ( SELECT nearby FROM gift ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26858,SELECT * FROM policeman WHERE property BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26859,SELECT * FROM path WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26860,SELECT * FROM myself WHERE effort BETWEEN 'yet' AND 'diagram',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26861,"SELECT * FROM highest WHERE locate BETWEEN ""house"" AND ""onto""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26862,SELECT * FROM gulf WHERE salmon NOT BETWEEN 'town' AND 'curve',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26863,SELECT * FROM rod WHERE official BETWEEN piano09/01/1996real AND minerals15/31/1996widely,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26864,SELECT * FROM review WHERE known BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26865,SELECT AVG ( sweet ) FROM tired SELECT SUM ( purple ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26866,SELECT COUNT ( production ) FROM since,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26867,SELECT COUNT ( publicID ) FROM youth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26868,SELECT AVG ( Price ) FROM who,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26869,SELECT * FROM voice WHERE production BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26870,"SELECT breadID AS ID, ahead AS feed FROM unhappy",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26871,"SELECT seedID AS ID, facing AS claws FROM lack",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26872,"SELECT product AS wonder, connected AS [herd] FROM lunch",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26873,"SELECT here, organized+ ', ' + claws+ ' ' + teacher+ ', ' + respect AS count FROM leaf",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26874,SELECT blank ( s ) FROM yard INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26875,"SELECT laid,primitive,pass,education,above ( ( select JOIN cross ON roll.indicate = notice.region ) INNER JOIN typicalON Orders.pound = aid.filmID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26876,SELECT hot ( s ) FROM division LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26877,"SELECT touch,distant,gun FROM into LEFT JOIN Orders ON hardly.termID = apart.view ORDER BY forward.discussion",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26878,SELECT cross ( s FROM nation RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26879,"SELECT Orders.expectrID, Employees.about, Employees.zipper FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.determineID ORDER BY Orders.unitID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

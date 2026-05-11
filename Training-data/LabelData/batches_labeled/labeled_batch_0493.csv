@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14760,"calle tampa 108, 7-g",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14761,e298r4jina715,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14762,sar2384g0,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14763,2.46691E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14764,cocina_r,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14765,curi piccech,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14766,millot_power@guejos.sv,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14767,1riot_0115a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14768,50835477a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14769,"paseo pinos, 147",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14770,madrigal del monte,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14771,"carretera nacional 139, 9?a",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14772,6.05258E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14773,83178933p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14774,"c/ otumba, 132,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14775,taboada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14776,"avda. de pablo iglesias, s/n 2?g",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14777,"camino elorrieta, 193, 2a",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14778,"c/ paterna, s/n, 11h",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14779,villanueva de huerva,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14780,emetrio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14781,8i4trib7ti5a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14782,quint,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14783,diana,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14784,mozek,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14785,plza. taboada chivite 32 5?b,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14786,6.70192E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14787,3748ny,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14788,c/ rivera de los limonetes 98,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14789,pizani@unanuevavisionenortodoncia.tg,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

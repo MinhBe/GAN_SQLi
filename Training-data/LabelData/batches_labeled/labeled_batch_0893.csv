@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26760,SELECT * FROM garage WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26761,SELECT * FROM printed WHERE halfway BETWEEN 'degree' AND 'blew',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26762,"SELECT * FROM dig WHERE kept BETWEEN ""stick"" AND ""youth""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26763,SELECT * FROM finger WHERE magnet NOT BETWEEN 'common' AND 'lucky',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26764,SELECT * FROM manufacturing WHERE inside BETWEEN studied09/01/1996kept AND entirely15/31/1996damage,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26765,SELECT * FROM talk WHERE sugar BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26766,SELECT AVG ( property ) FROM flame SELECT SUM ( melted ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26767,SELECT COUNT ( rain ) FROM question,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26768,SELECT COUNT ( flowID ) FROM vapor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26769,SELECT AVG ( Price ) FROM produce,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26770,SELECT * FROM story WHERE table BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26771,"SELECT softlyID AS ID, understanding AS discussion FROM type",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26772,"SELECT awayID AS ID, mysterious AS easy FROM opportunity",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26773,"SELECT giant AS rhyme, copper AS [particular] FROM loose",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26774,"SELECT plates, factor+ ', ' + won+ ' ' + bush+ ', ' + drive AS would FROM central",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26775,SELECT whom ( s ) FROM subject INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26776,"SELECT pond,minerals,vowel,became,blew ( ( usual JOIN note ON important.dollar = around.problem ) INNER JOIN shareON Orders.point = however.motherID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26777,SELECT ready ( s ) FROM tight LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26778,"SELECT joy,hunter,plastic FROM mission LEFT JOIN Orders ON child.finallyID = corner.empty ORDER BY library.after",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26779,SELECT pressure ( s FROM long RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26780,"SELECT Orders.probablyrID, Employees.place, Employees.there FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.rodID ORDER BY Orders.physicalID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26781,SELECT statement ( s ) FROM nine FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26782,"SELECT column_name ( s ) FROM magnet,cannot",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26783,SELECT golden ( s ) FROM citizen UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26784,SELECT hearing ( s ) FROM changing SELECT reach ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26785,SELECT apple ( s ) FROM egg UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26786,SELECT shot ( s ) FROM height SELECT noun FROM zero,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26787,SELECT comfortable FROM zoo UNION SELECT allow FROM life ORDER BY fed,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+26788,SELECT church FROM field UNION ALL SELECT model FROM watch ORDER BY joy,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+26789,"SELECT arrangement,worse FROM soft WHERE wrong = 'wet' UNION SELECT rubbed, appearance FROM through",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based

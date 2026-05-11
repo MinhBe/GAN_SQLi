@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29550,SELECT * FROM stuck WHERE related = 'serious' AND City = 'former',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29551,SELECT * FROM develop WHERE force = 'sink' OR magnet = 'hole',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29552,SELECT * FROM highway WHERE lucky = 'felt' OR necessary = 'classroom',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29553,SELECT * FROM short WHERE NOT want = 'twelve',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29554,SELECT * FROM salt WHERE report = 'occur' AND ( could = 'teeth' OR equal = 'choice' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29555,SELECT * FROM length WHERE NOT pen = 'none' AND NOT case = 'powerful',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29556,SELECT * FROM difficult ORDER BY neighbor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29557,SELECT * FROM skill ORDER BY product DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29558,"SELECT * FROM eat ORDER BY copper, dot",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29559,"SELECT * FROM being ORDER BY said ASC, coal DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29560,"INSERT INTO large ( paid, ride, clothes, success, minute, porch ) VALUES ( 'word', 'had'. nose', 'cold', 'way', 'pencil', 'coat' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29561,"INSERT INTO six ( solid, automobile, wore ) VALUES ( 'hope', 'leather', 'smallest' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29562,"SELECT bad, us, flame FROM putting WHERE string IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29563,"SELECT balance, order, roadFROM hospital WHERE muscle IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29564,"UPDATE shorter SET am = 'forgot', City = 'mysterious' WHERE height = away",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29565,UPDATE now SET kind = 'avoid'WHERE lot = 'his',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29566,DELETE FROM shallow WHERE develop = 'listen',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29567,DELETE FROM how,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29568,SELECT face ( s ) FROM hurried,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29569,SELECT * FROM ( SELECT troops FROM farm ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29570,SELECT TOP 3 * FROM round,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29571,SELECT * FROM traffic 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29572,SELECT * FROM solid FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29573,SELECT TOP 50 PERCENT * FROM remember,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29574,SELECT TOP 3 * FROM wire WHERE theory = 'become',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29575,SELECT * FROM keep WHERE wheel = 'sharp' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29576,SELECT * FROM prepare WHERE two = 'paper' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29577,SELECT MIN ( stiff ) AS salt FROM plane,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29578,SELECT MIN ( low ) AS plate FROM teeth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29579,SELECT * FROM ( SELECT far FROM handle ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

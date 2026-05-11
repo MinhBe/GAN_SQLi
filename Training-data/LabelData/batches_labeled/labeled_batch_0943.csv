@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+28260,SELECT stuck ( s ) FROM development SELECT though FROM upon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28261,SELECT being FROM call UNION SELECT himself FROM taken ORDER BY income,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+28262,SELECT opinion FROM difficult UNION ALL SELECT see FROM court ORDER BY realize,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+28263,"SELECT pet,buried FROM ride WHERE anyone = 'wonder' UNION SELECT leaf, interest FROM bridge",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+28264,"SELECT COUNT ( especially ) , crew FROM soldier BY height",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28265,"SELECT Employees.dirt, COUNT ( Orders.folksID ) AS rangeFROM ( OrdersINNER JOIN sunlight ON Orders.quicklyID = Employees.universeID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28266,SELECT * FROM studied FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28267,SELECT drop,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28268,SELECT * FROM edge,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28269,SELECT these FROM change,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28270,SELECT DISTINCT however FROM instead,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28271,SELECT COUNT ( DISTINCT guess ) FROM stiff,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28272,SELECT Count ( * ) AS sugar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28273,FROM ( SELECT DISTINCT mile FROM introduced ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28274,SELECT * FROM point,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28275,SELECT * FROM nest WHERE attack = 'paper',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28276,SELECT * FROM color WHERE also = 'parallel',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28277,SELECT * FROM glass WHERE sat = blanket,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28278,SELECT * FROM either WHERE they = 'cat' AND City = 'ahead',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28279,SELECT * FROM edge WHERE electric = 'flies' OR saw = 'shaking',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28280,SELECT * FROM hurried WHERE lead = 'began' OR dark = 'green',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28281,SELECT * FROM by WHERE NOT giant = 'school',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28282,SELECT * FROM hung WHERE already = 'greatest' AND ( sun = 'ahead' OR characteristic = 'one' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28283,SELECT * FROM anywhere WHERE NOT mountain = 'aboard' AND NOT motion = 'moment',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28284,SELECT * FROM cave ORDER BY whale,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28285,SELECT * FROM baseball ORDER BY giving DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28286,"SELECT * FROM family ORDER BY south, angle",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28287,"SELECT * FROM buffalo ORDER BY lost ASC, if DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28288,"INSERT INTO title ( somehow, gentle, anywhere, sight, wheel, street ) VALUES ( 'house', 'organization'. pencil', 'stepped', 'iron', 'including', 'supply' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28289,"INSERT INTO lips ( good, jump, around ) VALUES ( 'silk', 'income', 'throughout' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

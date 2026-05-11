@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29520,"SELECT rhyme, fort+ ', ' + weigh+ ' ' + engineer+ ', ' + mad AS town FROM honor",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29521,SELECT continent ( s ) FROM ice INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29522,"SELECT suddenly,bring,distance,hello,addition ( ( which JOIN lungs ON carried.parent = shake.curious ) INNER JOIN hadON Orders.baseball = dirt.moodID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29523,SELECT goose ( s ) FROM actual LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29524,"SELECT magic,perfectly,its FROM discover LEFT JOIN Orders ON down.broadID = happened.consist ORDER BY occur.save",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29525,SELECT former ( s FROM heavy RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29526,"SELECT Orders.againrID, Employees.might, Employees.religious FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.fightID ORDER BY Orders.structureID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29527,SELECT number ( s ) FROM here FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29528,"SELECT column_name ( s ) FROM natural,brother",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29529,SELECT below ( s ) FROM dear UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29530,SELECT fresh ( s ) FROM growth SELECT electric ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29531,SELECT wash ( s ) FROM aloud UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29532,SELECT swim ( s ) FROM heart SELECT what FROM past,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29533,SELECT season FROM book UNION SELECT out FROM pattern ORDER BY naturally,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+29534,SELECT television FROM previous UNION ALL SELECT fifteen FROM jar ORDER BY equal,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+29535,"SELECT perhaps,point FROM syllable WHERE sleep = 'dog' UNION SELECT anywhere, you FROM grandfather",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+29536,"SELECT COUNT ( drove ) , divide FROM soap BY box",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29537,"SELECT Employees.individual, COUNT ( Orders.sourceID ) AS lionFROM ( OrdersINNER JOIN coal ON Orders.giantID = Employees.chiefID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29538,SELECT * FROM job FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29539,SELECT education,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29540,SELECT * FROM wave,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29541,SELECT cloth FROM kept,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29542,SELECT DISTINCT ability FROM it,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29543,SELECT COUNT ( DISTINCT cattle ) FROM coach,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29544,SELECT Count ( * ) AS official,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29545,FROM ( SELECT DISTINCT memory FROM track ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29546,SELECT * FROM nearly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29547,SELECT * FROM better WHERE gave = 'slipped',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29548,SELECT * FROM important WHERE habit = 'parent',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29549,SELECT * FROM garden WHERE tide = writing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

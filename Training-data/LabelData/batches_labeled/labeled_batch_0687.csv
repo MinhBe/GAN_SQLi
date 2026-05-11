@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+20580,"SELECT column_name ( s ) FROM vapor,name",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20581,SELECT closer ( s ) FROM numeral UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20582,SELECT shells ( s ) FROM people SELECT he ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20583,SELECT orange ( s ) FROM wing UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20584,SELECT enemy ( s ) FROM five SELECT wrong FROM wind,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20585,SELECT picture FROM vowel UNION SELECT plus FROM necessary ORDER BY coming,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+20586,SELECT about FROM tell UNION ALL SELECT nose FROM bad ORDER BY safety,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+20587,"SELECT machinery,add FROM army WHERE wife = 'brown' UNION SELECT information, ready FROM one",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+20588,"SELECT COUNT ( run ) , conversation FROM open BY shoe",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20589,"SELECT Employees.aboard, COUNT ( Orders.crackID ) AS mudFROM ( OrdersINNER JOIN them ON Orders.judgeID = Employees.quietID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20590,SELECT * FROM else FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20591,SELECT half,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20592,SELECT * FROM principle,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20593,SELECT connected FROM flat,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20594,SELECT DISTINCT positive FROM fallen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20595,SELECT COUNT ( DISTINCT missing ) FROM future,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20596,SELECT Count ( * ) AS completely,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20597,FROM ( SELECT DISTINCT bare FROM although ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20598,SELECT * FROM inch,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20599,SELECT * FROM principal WHERE case = 'poor',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20600,SELECT * FROM sing WHERE shot = 'build',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20601,SELECT * FROM heat WHERE slight = activity,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20602,SELECT * FROM appearance WHERE away = 'beyond' AND City = 'saddle',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20603,SELECT * FROM stairs WHERE slow = 'real' OR shadow = 'cry',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20604,SELECT * FROM surface WHERE lot = 'beside' OR involved = 'common',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20605,SELECT * FROM double WHERE NOT wheel = 'knew',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20606,SELECT * FROM art WHERE duty = 'glass' AND ( my = 'nervous' OR least = 'in' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20607,SELECT * FROM bone WHERE NOT west = 'pain' AND NOT shake = 'around',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20608,SELECT * FROM adventure ORDER BY unhappy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20609,SELECT * FROM flies ORDER BY voice DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

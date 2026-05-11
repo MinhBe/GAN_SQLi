@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17460,78739097t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17461,nrez muriscot,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17462,08466616v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17463,14399392n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17464,l-e3a06l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17465,aborr-ascarse,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17466,muenpasitiwet@magritte.gov,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17467,terhune@multireform.tn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17468,calzada rebassa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17469,marlsela,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17470,55964057c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17471,calle pintor el greco 102 1-g,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17472,puente la reina/gares,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17473,5.12155E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17474,alhama de murcia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17475,marling,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17476,moharra jodra,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17477,rozaln del monte,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17478,biurrun-olcoz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17479,16574331w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17480,camio canexa 161 11?g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17481,pola,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17482,santibez el bajo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17483,c/ moriles 91,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17484,saint-simon-vondis@paremoselalzheimer.dj,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17485,hattar4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17486,nandor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17487,1.38067E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17488,gelis,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17489,butkus@cpanelhost.com.uz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29850,9.35728E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29851,1.64936E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29852,2.79635E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29853,3.5822E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29854,9.16169E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29855,9.74327E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29856,4.26048E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29857,9.03287E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29858,9.83415E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29859,9.95219E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29860,3.33213E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29861,4.43193E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29862,4.19037E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29863,9.56114E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29864,9.57318E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29865,9.90463E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29866,grant connect to name,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29867,3.1E+017,1,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29868,SELECT * FROM table_name,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29869,SELECT Country FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29870,SELECT DISTINCT Country FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29871,SELECT COUNT ( DISTINCT Country ) FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29872,FROM ( SELECT DISTINCT Country FROM Customers ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29873,SELECT * FROM Customers WHERE Country = 'Mexico',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29874,SELECT * FROM Customers WHERE CustomerID = 1,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29875,SELECT * FROM Customers WHERE Country = 'Germany' AND City = 'Berlin',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29876,SELECT * FROM Customers WHERE City = 'Berlin' OR City = 'München',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29877,SELECT * FROM Customers WHERE Country = 'Germany' OR Country = 'Spain',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29878,SELECT * FROM Customers WHERE NOT Country = 'Germany',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29879,SELECT * FROM Customers WHERE Country = 'Germany' AND ( City = 'Berlin' OR City = 'München' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

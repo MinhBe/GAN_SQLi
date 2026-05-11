@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17790,"c/ plza. 18, 6-e",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17791,ateniesa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17792,"c/ juan de rihuerga, 0,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17793,9i3a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17794,gall20o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17795,chalanera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17796,"c/ berruguete 23,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17797,65651817l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17798,b82r8l23o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17799,matney,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17800,san vicente del raspeig/sant vicent del raspeig,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17801,5.68541E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17802,calle puerto de alcolea 185 9-e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17803,velasque9,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17804,34361279s,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17805,lyden@.mv,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17806,ramaprak,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17807,ubraco,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17808,cosmo@vilainstal.sv,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17809,credenciales incorrectas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17810,cordelado,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17811,beland,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17812,conejo mota,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17813,tennant4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17814,darns cabrianes,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17815,torrente zaldvar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17816,miramon@logiteclines.rs,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17817,tice,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17818,oate fijo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17819,66339533n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

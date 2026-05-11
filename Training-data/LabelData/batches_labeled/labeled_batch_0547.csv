@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16380,8.25977E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16381,letha,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16382,pente@maxitienda.ms,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16383,"calle juan de uceda, 180,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16384,6ncanta33n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16385,adaiana,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16386,jehovah,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16387,muriel de la fuente,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16388,aranguren de jaime,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16389,delmo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16390,kofoed@serviconlevante.mr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16391,rurick5,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16392,56359685w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16393,natver,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16394,cresta-da,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16395,general ricardos 187,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16396,vispy,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16397,navarra,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16398,cobo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16399,"c/ madre castisima, s/n",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16400,calle jeremias 14 7b,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16401,arena@productosgarantizados.uy,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16402,gunner@piaceredelivery.kw,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16403,cholewin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16404,benalup-casas viejas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16405,mclendon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16406,fonterosa vjar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16407,cervantes,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16408,"plaza de el salvador 91,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16409,banderizar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

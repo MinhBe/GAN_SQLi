@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29640,SELECT COUNT ( DISTINCT appropriate ) FROM completely,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29641,SELECT Count ( * ) AS army,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29642,FROM ( SELECT DISTINCT strange FROM area ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29643,SELECT * FROM friend,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29644,SELECT * FROM load WHERE very = 'secret',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29645,SELECT * FROM die WHERE ball = 'edge',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29646,SELECT * FROM variety WHERE law = cross,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29647,SELECT * FROM pen WHERE complex = 'satisfied' AND City = 'soldier',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29648,SELECT * FROM burst WHERE voyage = 'period' OR sign = 'poetry',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29649,SELECT * FROM call WHERE behind = 'gulf' OR refer = 'hot',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29650,SELECT * FROM thin WHERE NOT object = 'reason',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29651,SELECT * FROM tonight WHERE potatoes = 'ride' AND ( shadow = 'play' OR cage = 'toward' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29652,SELECT * FROM weather WHERE NOT stay = 'just' AND NOT concerned = 'respect',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29653,SELECT * FROM invented ORDER BY finger,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29654,SELECT * FROM base ORDER BY symbol DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29655,"SELECT * FROM combination ORDER BY dark, pile",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29656,"SELECT * FROM everywhere ORDER BY imagine ASC, nodded DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29657,"INSERT INTO youth ( give, freedom, chosen, heavy, buried, how ) VALUES ( 'blanket', 'satisfied'. whatever', 'half', 'yellow', 'exciting', 'signal' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29658,"INSERT INTO watch ( help, gas, excellent ) VALUES ( 'among', 'than', 'skill' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29659,"SELECT mouth, swimming, herself FROM dangerous WHERE leaving IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29660,"SELECT bat, inch, biggerFROM opinion WHERE show IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29661,"UPDATE to SET born = 'lion', City = 'belt' WHERE range = rising",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29662,UPDATE wave SET load = 'speak'WHERE carry = 'probably',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29663,SELECT * FROM exchange,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29664,DELETE FROM hill WHERE aboard = 'opposite',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29665,DELETE FROM swept,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29666,SELECT grabbed ( s ) FROM moon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29667,SELECT * FROM ( SELECT life FROM probably ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29668,SELECT TOP 3 * FROM believed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29669,SELECT * FROM honor 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

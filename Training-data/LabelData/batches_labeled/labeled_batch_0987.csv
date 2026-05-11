@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29580,SELECT TOP 3 * FROM curious SELECT * FROM halfway 3SELECT * FROM telephone,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29581,SELECT * FROM heart 3 SELECT * FROM college,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29582,SELECT * FROM gate FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM direct,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29583,SELECT TOP 50 PERCENT * FROM area SELECT * FROM wise FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM throat,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29584,SELECT * FROM attention FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM hay,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29585,SELECT TOP 3 * FROM serve WHERE instant = 'slow' SELECT * FROM applied,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29586,SELECT * FROM sharp WHERE cool = 'start' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29587,SELECT * FROM arm WHERE canal = 'wagon' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29588,SELECT AVG ( similar ) FROM cutting,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29589,SELECT * FROM early WHERE kept NOT LIKE '[satellites]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29590,SELECT AVG ( half ) FROM balance SELECT SUM ( break ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29591,SELECT AVG ( task ) FROM medicine SELECT SUM ( shut ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29592,SELECT AVG ( police ) FROM sang SELECT SUM ( known ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29593,SELECT COUNT ( pick ) FROM guard,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29594,SELECT COUNT ( forest ) FROM visit,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29595,SELECT AVG ( fresh ) FROM child,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29596,SELECT * FROM tears WHERE difference NOT LIKE 'track%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29597,SELECT * FROM walk WHERE sudden LIKE '%serious%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29598,SELECT * FROM club WHERE planning NOT LIKE '[pocket]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29599,"SELECT * FROM table WHERE obtain IN ( 'became', 'vowel', 'completely' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29600,"SELECT * FROM across WHERE desk NOT IN ( 'window', 'laid', 'eat' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29601,SELECT * FROM whatever WHERE writer IN ( SELECT noise FROM damage ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29602,SELECT * FROM greatly WHERE tropical BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29603,SELECT * FROM gate WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29604,SELECT * FROM amount WHERE part BETWEEN 'grandmother' AND 'card',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29605,"SELECT * FROM laugh WHERE themselves BETWEEN ""herself"" AND ""operation""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29606,SELECT * FROM chapter WHERE wrapped NOT BETWEEN 'completely' AND 'single',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29607,SELECT * FROM serve WHERE tea BETWEEN move09/01/1996flies AND deer15/31/1996zoo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29608,SELECT * FROM add WHERE wealth BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29609,SELECT AVG ( for ) FROM putting SELECT SUM ( season ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

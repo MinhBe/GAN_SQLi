@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+21690,SELECT * FROM door WHERE slowly = 'bright' OR best = 'season',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21691,SELECT * FROM without WHERE managed = 'higher' OR stick = 'biggest',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21692,SELECT * FROM repeat WHERE NOT hang = 'remove',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21693,SELECT * FROM property WHERE congress = 'additional' AND ( during = 'dark' OR street = 'stick' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21694,SELECT * FROM gas WHERE NOT attention = 'hollow' AND NOT cell = 'search',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21695,SELECT * FROM storm ORDER BY fifty,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21696,SELECT * FROM face ORDER BY attack DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21697,"SELECT * FROM egg ORDER BY clothing, cheese",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21698,"SELECT * FROM gift ORDER BY cool ASC, waste DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21699,"INSERT INTO piano ( later, separate, teach, appropriate, idea, dish ) VALUES ( 'experience', 'use'. return', 'doctor', 'audience', 'examine', 'opinion' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21700,"INSERT INTO shade ( fire, contrast, mouse ) VALUES ( 'skill', 'sudden', 'dish' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21701,"SELECT temperature, which, leaving FROM correctly WHERE mysterious IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21702,"SELECT mistake, clock, neededFROM burst WHERE play IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21703,"UPDATE fun SET park = 'any', City = 'birth' WHERE twice = sudden",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21704,UPDATE basic SET proper = 'bag'WHERE high = 'did',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21705,SELECT * FROM seed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21706,DELETE FROM explain WHERE development = 'is',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21707,DELETE FROM wooden,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21708,SELECT needle ( s ) FROM catch,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21709,SELECT * FROM ( SELECT minute FROM excitement ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21710,SELECT TOP 3 * FROM trail,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21711,SELECT * FROM taken 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21712,SELECT * FROM herself FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21713,SELECT TOP 50 PERCENT * FROM whole,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21714,SELECT * FROM island FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21715,SELECT TOP 3 * FROM shot WHERE dry = 'welcome',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21716,SELECT * FROM than WHERE peace = 'care' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21717,SELECT * FROM popular WHERE broke = 'thou' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21718,SELECT MIN ( stream ) AS dance FROM three,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21719,SELECT MIN ( interest ) AS flat FROM planet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29190,SELECT * FROM difference 3 SELECT * FROM snow,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29191,SELECT * FROM fox FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM bread,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29192,SELECT TOP 50 PERCENT * FROM travel SELECT * FROM usual FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM stop,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29193,SELECT * FROM daily FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM exercise,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29194,SELECT TOP 3 * FROM plus WHERE next = 'aside' SELECT * FROM create,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29195,SELECT * FROM chamber WHERE discovery = 'short' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29196,SELECT * FROM read WHERE slightly = 'remember' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29197,SELECT AVG ( different ) FROM that,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29198,SELECT * FROM package WHERE weight NOT LIKE '[six]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29199,SELECT AVG ( pile ) FROM official SELECT SUM ( eager ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29200,SELECT AVG ( sort ) FROM term SELECT SUM ( signal ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29201,SELECT AVG ( except ) FROM speak SELECT SUM ( sang ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29202,SELECT COUNT ( wise ) FROM draw,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29203,SELECT COUNT ( today ) FROM atomic,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29204,SELECT AVG ( pie ) FROM value,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29205,SELECT * FROM pet WHERE piece NOT LIKE 'purpose%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29206,SELECT * FROM father WHERE situation LIKE '�long%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29207,SELECT * FROM copy WHERE year NOT LIKE '[forget]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29208,"SELECT * FROM shop WHERE greatest IN ( 'tomorrow', 'stay', 'plane' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29209,"SELECT * FROM bone WHERE ever NOT IN ( 'planning', 'watch', 'label' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29210,SELECT * FROM positive WHERE shinning IN ( SELECT position FROM bill ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29211,SELECT * FROM bear WHERE standard BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29212,SELECT * FROM sure WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29213,SELECT * FROM cowboy WHERE adjective BETWEEN 'nuts' AND 'sink',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29214,"SELECT * FROM duty WHERE topic BETWEEN ""card"" AND ""equipment""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29215,SELECT * FROM dress WHERE memory NOT BETWEEN 'knowledge' AND 'broke',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29216,SELECT * FROM along WHERE shoulder BETWEEN strange09/01/1996strength AND cream15/31/1996hide,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29217,SELECT * FROM hurry WHERE scientific BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29218,SELECT AVG ( ants ) FROM nothing SELECT SUM ( human ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29219,SELECT COUNT ( muscle ) FROM pupil,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

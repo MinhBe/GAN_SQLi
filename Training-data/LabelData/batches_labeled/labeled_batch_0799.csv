@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23940,SELECT * FROM higher FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23941,SELECT dangerous,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23942,SELECT * FROM essential,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23943,SELECT mood FROM power,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23944,SELECT DISTINCT occasionally FROM wonder,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23945,SELECT COUNT ( DISTINCT swim ) FROM anything,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23946,SELECT Count ( * ) AS settle,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23947,FROM ( SELECT DISTINCT tool FROM coffee ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23948,SELECT * FROM planned,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23949,SELECT * FROM hay WHERE gold = 'writing',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23950,SELECT * FROM may WHERE try = 'finest',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23951,SELECT * FROM select WHERE to = current,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23952,SELECT * FROM nothing WHERE indeed = 'mass' AND City = 'life',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23953,SELECT * FROM state WHERE dream = 'plates' OR as = 'element',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23954,SELECT * FROM news WHERE globe = 'month' OR needed = 'throat',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23955,SELECT * FROM party WHERE NOT factory = 'torn',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23956,SELECT * FROM below WHERE tonight = 'sick' AND ( year = 'labor' OR she = 'too' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23957,SELECT * FROM stiff WHERE NOT spin = 'can' AND NOT clean = 'meant',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23958,SELECT * FROM age ORDER BY thumb,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23959,SELECT * FROM close ORDER BY grow DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23960,"SELECT * FROM stand ORDER BY equipment, from",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23961,"SELECT * FROM represent ORDER BY thirty ASC, they DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23962,"INSERT INTO highest ( opinion, heavy, paragraph, party, ball, chance ) VALUES ( 'feed', 'inside'. process', 'rough', 'got', 'power', 'base' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23963,"INSERT INTO lying ( border, vast, tune ) VALUES ( 'longer', 'movement', 'dirt' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23964,"SELECT can, instead, term FROM official WHERE map IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23965,"SELECT valuable, dozen, importanceFROM curve WHERE statement IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23966,"UPDATE complex SET cover = 'union', City = 'catch' WHERE more = see",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23967,UPDATE rise SET screen = 'vote'WHERE powerful = 'coat',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23968,SELECT * FROM neck,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23969,DELETE FROM mood WHERE folks = 'record',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

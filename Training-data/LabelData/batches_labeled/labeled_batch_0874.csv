@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26190,"SELECT Orders.memoryrID, Employees.slightly, Employees.rain FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.westernID ORDER BY Orders.medicineID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26191,SELECT plant ( s ) FROM where FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26192,"SELECT column_name ( s ) FROM show,solve",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26193,SELECT town ( s ) FROM whom UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26194,SELECT string ( s ) FROM possible SELECT knew ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26195,SELECT blood ( s ) FROM ate UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26196,SELECT studied ( s ) FROM cat SELECT oil FROM composed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26197,SELECT wait FROM choose UNION SELECT correct FROM available ORDER BY opposite,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+26198,SELECT flew FROM couple UNION ALL SELECT wrapped FROM turn ORDER BY yesterday,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+26199,"SELECT ready,original FROM roof WHERE atmosphere = 'green' UNION SELECT chose, younger FROM finish",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+26200,"SELECT COUNT ( increase ) , stand FROM led BY power",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26201,"SELECT Employees.white, COUNT ( Orders.beforeID ) AS lakeFROM ( OrdersINNER JOIN herd ON Orders.whistleID = Employees.climbID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26202,SELECT * FROM president FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26203,SELECT silk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26204,SELECT * FROM give,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26205,SELECT pot FROM promised,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26206,SELECT DISTINCT roof FROM trail,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26207,SELECT COUNT ( DISTINCT rich ) FROM him,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26208,SELECT Count ( * ) AS applied,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26209,FROM ( SELECT DISTINCT volume FROM try ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26210,SELECT * FROM popular,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26211,SELECT * FROM adult WHERE major = 'pure',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26212,SELECT * FROM differ WHERE blanket = 'bet',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26213,SELECT * FROM depend WHERE escape = mice,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26214,SELECT * FROM mass WHERE ocean = 'syllable' AND City = 'characteristic',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26215,SELECT * FROM second WHERE star = 'island' OR river = 'beside',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26216,SELECT * FROM secret WHERE expression = 'facing' OR such = 'warn',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26217,SELECT * FROM arrange WHERE NOT surprise = 'company',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26218,SELECT * FROM cake WHERE skill = 'bottom' AND ( strike = 'interior' OR aloud = 'couple' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26219,SELECT * FROM more WHERE NOT height = 'bite' AND NOT expression = 'aside',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

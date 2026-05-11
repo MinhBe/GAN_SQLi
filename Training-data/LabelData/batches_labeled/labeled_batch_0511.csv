@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15300,rollie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15301,"terque 135, 7-c",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15302,telma,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15303,lauther,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15304,pello melo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15305,ponferrada 65 10-c,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15306,marlet esparraguera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15307,ataz crehuet,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15308,ezri,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15309,65472744r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15310,"estrecho de ormuz 62, 7-g",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15311,subhashi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15312,amoeiro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15313,carminante,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15314,nealson,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15315,bardischewski9@sexotelefono.rw,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15316,carr3e0,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15317,87053274e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15318,opaline,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15319,veit,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15320,s4g51r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15321,"carretera aeropuerto, 42,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15322,wingfiel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15323,maurino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15324,edilio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15325,listeza,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15326,moneder-a,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15327,rosendal,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15328,alicanto,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15329,tuset mendel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

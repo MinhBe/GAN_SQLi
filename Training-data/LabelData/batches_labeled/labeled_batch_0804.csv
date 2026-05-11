@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+24090,SELECT * FROM swim WHERE ship NOT LIKE '[suppose]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24091,SELECT AVG ( spend ) FROM turn SELECT SUM ( widely ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24092,SELECT AVG ( consonant ) FROM music SELECT SUM ( dinner ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24093,SELECT AVG ( closely ) FROM thank SELECT SUM ( knowledge ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24094,SELECT COUNT ( out ) FROM port,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24095,SELECT COUNT ( opinion ) FROM pig,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24096,SELECT AVG ( gradually ) FROM teeth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24097,SELECT * FROM until WHERE birds NOT LIKE 'push%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24098,SELECT * FROM again WHERE worth LIKE '%practice%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24099,SELECT * FROM bank WHERE riding NOT LIKE '[chair]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24100,"SELECT * FROM let WHERE plural IN ( 'oil', 'hang', 'fifty' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24101,"SELECT * FROM plan WHERE almost NOT IN ( 'am', 'alike', 'particularly' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24102,SELECT * FROM clothes WHERE local IN ( SELECT fresh FROM heavy ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24103,SELECT * FROM couple WHERE herself BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24104,SELECT * FROM alive WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24105,SELECT * FROM simplest WHERE amount BETWEEN 'notice' AND 'five',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24106,"SELECT * FROM change WHERE as BETWEEN ""straw"" AND ""two""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24107,SELECT * FROM liquid WHERE sick NOT BETWEEN 'easy' AND 'next',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24108,SELECT * FROM tears WHERE which BETWEEN stiff09/01/1996report AND pride15/31/1996bare,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24109,SELECT * FROM cup WHERE care BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24110,SELECT AVG ( buried ) FROM golden SELECT SUM ( flies ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24111,SELECT COUNT ( simply ) FROM standard,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24112,SELECT COUNT ( whenID ) FROM rubbed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24113,SELECT AVG ( Price ) FROM which,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24114,SELECT * FROM ship WHERE sea BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24115,"SELECT shotID AS ID, same AS fuel FROM finger",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24116,"SELECT bowID AS ID, wheat AS flower FROM park",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24117,"SELECT situation AS evidence, customs AS [policeman] FROM fight",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24118,"SELECT private, saw+ ', ' + slept+ ' ' + stared+ ', ' + rhythm AS national FROM piano",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24119,SELECT sheet ( s ) FROM loss INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

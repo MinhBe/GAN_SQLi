@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29460,"SELECT * FROM mirror ORDER BY too ASC, particularly DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29461,"INSERT INTO usually ( living, everything, story, opinion, tape, scientific ) VALUES ( 'chain', 'journey'. deer', 'frozen', 'shallow', 'shake', 'age' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29462,"INSERT INTO total ( replied, job, settlers ) VALUES ( 'fastened', 'scale', 'pond' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29463,"SELECT mouse, desk, bat FROM apartment WHERE late IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29464,"SELECT specific, matter, dailyFROM customs WHERE wave IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29465,"UPDATE fair SET those = 'wore', City = 'ship' WHERE weak = possibly",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29466,UPDATE adult SET honor = 'gain'WHERE chicken = 'paragraph',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29467,SELECT * FROM driver,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29468,DELETE FROM window WHERE gas = 'tube',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29469,DELETE FROM win,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29470,SELECT consonant ( s ) FROM firm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29471,SELECT * FROM ( SELECT bit FROM bet ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29472,SELECT TOP 3 * FROM crew,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29473,SELECT * FROM tongue 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29474,SELECT * FROM search FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29475,SELECT TOP 50 PERCENT * FROM receive,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29476,SELECT * FROM sweet FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29477,SELECT TOP 3 * FROM closer WHERE rather = 'log',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29478,SELECT * FROM operation WHERE greatest = 'strip' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29479,SELECT * FROM these WHERE due = 'one' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29480,SELECT MIN ( sunlight ) AS region FROM four,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29481,SELECT MIN ( ready ) AS pleasant FROM state,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29482,SELECT * FROM ( SELECT fuel FROM citizen ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29483,SELECT TOP 3 * FROM forty SELECT * FROM movie 3SELECT * FROM like,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29484,SELECT * FROM birthday 3 SELECT * FROM impossible,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29485,SELECT * FROM stepped FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM support,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29486,SELECT TOP 50 PERCENT * FROM went SELECT * FROM that FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM ear,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29487,SELECT * FROM case FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM number,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29488,SELECT TOP 3 * FROM send WHERE birth = 'hollow' SELECT * FROM liquid,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29489,SELECT * FROM divide WHERE went = 'selection' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

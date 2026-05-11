@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15240,grajear,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15241,bowman pinela,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15242,a3rovechada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15243,"calle olivos de pea nevada, 124,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15244,espineta astorquiza,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15245,pecelln,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15246,grueneic,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15247,desnudez,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15248,lemin@11horas.mz,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15249,cuarter8da,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15250,antoine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15251,17005940q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15252,3.786E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15253,19846981m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15254,berghof@esbien.bt,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15255,refrigerativo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15256,"plaa adria 152,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15257,oman,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15258,catchot bacard,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15259,rattray@elgrancolisionadordehadrones.gl,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15260,geldres pittaluga,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15261,cutillas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15262,c/ txapin ene 162,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15263,ferris,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15264,229i9967te,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15265,brewer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15266,55341505d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15267,5.60169E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15268,37576555y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15269,cristaldo marchan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26550,SELECT AVG ( classroom ) FROM reach SELECT SUM ( due ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26551,SELECT AVG ( begun ) FROM band SELECT SUM ( chosen ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26552,SELECT AVG ( across ) FROM day SELECT SUM ( modern ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26553,SELECT COUNT ( report ) FROM memory,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26554,SELECT COUNT ( practice ) FROM believed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26555,SELECT AVG ( model ) FROM stick,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26556,SELECT * FROM load WHERE proper NOT LIKE 'line%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26557,SELECT * FROM major WHERE city LIKE '%hour%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26558,SELECT * FROM needs WHERE dangerous NOT LIKE '[occasionally]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26559,"SELECT * FROM very WHERE found IN ( 'wash', 'struck', 'powerful' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26560,"SELECT * FROM cotton WHERE bar NOT IN ( 'addition', 'off', 'page' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26561,SELECT * FROM bean WHERE morning IN ( SELECT find FROM selection ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26562,SELECT * FROM different WHERE herd BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26563,SELECT * FROM pair WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26564,SELECT * FROM chose WHERE shut BETWEEN 'unknown' AND 'leaf',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26565,"SELECT * FROM announced WHERE lesson BETWEEN ""sometime"" AND ""habit""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26566,SELECT * FROM straw WHERE shore NOT BETWEEN 'meat' AND 'port',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26567,SELECT * FROM key WHERE hole BETWEEN upward09/01/1996body AND remain15/31/1996stopped,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26568,SELECT * FROM dog WHERE gulf BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26569,SELECT AVG ( lucky ) FROM everyone SELECT SUM ( composition ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26570,SELECT COUNT ( beside ) FROM lungs,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26571,SELECT COUNT ( chickenID ) FROM mile,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26572,SELECT AVG ( Price ) FROM settlers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26573,SELECT * FROM watch WHERE out BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26574,"SELECT showID AS ID, immediately AS brave FROM warn",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26575,"SELECT twoID AS ID, fell AS wherever FROM party",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26576,"SELECT grow AS chair, film AS [fly] FROM breakfast",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26577,"SELECT list, mine+ ', ' + coming+ ' ' + closer+ ', ' + fence AS happy FROM tales",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26578,SELECT setting ( s ) FROM what INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26579,"SELECT shine,further,well,decide,older ( ( curious JOIN dried ON definition.product = during.mice ) INNER JOIN motherON Orders.east = slabs.jarID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

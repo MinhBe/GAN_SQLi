@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29340,"SELECT COUNT ( paid ) , cent FROM musical BY my",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29341,"SELECT Employees.eat, COUNT ( Orders.fairlyID ) AS interiorFROM ( OrdersINNER JOIN imagine ON Orders.fearID = Employees.thingID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29342,SELECT * FROM public FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29343,SELECT pile,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29344,SELECT * FROM doubt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29345,SELECT buffalo FROM reach,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29346,SELECT DISTINCT chicken FROM traffic,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29347,SELECT COUNT ( DISTINCT dry ) FROM sister,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29348,SELECT Count ( * ) AS bite,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29349,FROM ( SELECT DISTINCT taught FROM roof ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29350,SELECT * FROM forgotten WHERE would = 'month',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29351,SELECT * FROM fast WHERE up = 'simply',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29352,SELECT * FROM discover WHERE every = married,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29353,SELECT * FROM cause WHERE family = 'wise' AND City = 'lovely',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29354,SELECT * FROM prize WHERE west = 'source' OR usually = 'riding',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29355,SELECT * FROM slip WHERE husband = 'free' OR alive = 'did',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29356,SELECT * FROM engineer WHERE NOT slowly = 'canal',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29357,SELECT * FROM anybody WHERE full = 'buffalo' AND ( conversation = 'rhythm' OR cost = 'merely' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29358,SELECT * FROM salt WHERE NOT stage = 'examine' AND NOT day = 'alphabet',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29359,SELECT * FROM something ORDER BY earth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29360,SELECT * FROM bent ORDER BY length DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29361,"SELECT * FROM lonely ORDER BY correctly, meal",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29362,"SELECT * FROM farm ORDER BY spoken ASC, home DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29363,"INSERT INTO remove ( scale, facing, troops, select, he, grabbed ) VALUES ( 'press', 'wind'. space', 'slow', 'alone', 'throughout', 'visit' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29364,"INSERT INTO careful ( dropped, extra, thirty ) VALUES ( 'length', 'were', 'been' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29365,"SELECT cap, meal, hungry FROM captured WHERE pony IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29366,"SELECT local, needed, ratherFROM law WHERE doctor IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29367,"UPDATE location SET couple = 'line', City = 'key' WHERE belt = village",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29368,UPDATE salt SET did = 'garden'WHERE orange = 'exclaimed',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29369,SELECT * FROM plane,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

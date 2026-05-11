@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17040,calle clavel 30 11?b,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17041,zlotnick,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17042,jochen,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17043,retallac,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17044,levitin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17045,pablo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17046,calle bertran de castellet 28 6e,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17047,8.12979E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17048,"calle jose espejo, 130, 12?a",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17049,naca39,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17050,3.63611E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17051,liliana,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17052,parmenia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17053,calle nieto 41,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17054,doron@beljos.ch,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17055,7.69444E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17056,fl5ct499t1,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17057,grace,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17058,ianace,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17059,"poblado de regulares 180, 1d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17060,c6he5era,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17061,elido,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17062,8.17915E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17063,sauleda fidalgo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17064,"c/ clarin, 117",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17065,montesano_wontner@pcvirus.tm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17066,"aldebaran 84,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17067,"cabaeros, 131",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17068,delvalle llers,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17069,otowa@ebuy.com.ci,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+25050,DELETE FROM possible WHERE kitchen = 'largest',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25051,DELETE FROM solution,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25052,SELECT introduced ( s ) FROM agree,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25053,SELECT * FROM ( SELECT right FROM world ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25054,SELECT TOP 3 * FROM century,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25055,SELECT * FROM joined 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25056,SELECT * FROM route FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25057,SELECT TOP 50 PERCENT * FROM aware,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25058,SELECT * FROM central FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25059,SELECT TOP 3 * FROM clearly WHERE enjoy = 'capital',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25060,SELECT * FROM tank WHERE house = 'secret' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25061,SELECT * FROM common WHERE equipment = 'sleep' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25062,SELECT MIN ( carefully ) AS dull FROM remarkable,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25063,SELECT MIN ( handsome ) AS gray FROM food,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25064,SELECT * FROM ( SELECT discuss FROM quietly ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25065,SELECT TOP 3 * FROM split SELECT * FROM explore 3SELECT * FROM tie,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25066,SELECT * FROM rush 3 SELECT * FROM anyway,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25067,SELECT * FROM truth FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM hall,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25068,SELECT TOP 50 PERCENT * FROM flight SELECT * FROM notice FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM wild,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25069,SELECT * FROM immediately FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM together,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25070,SELECT TOP 3 * FROM consonant WHERE funny = 'common' SELECT * FROM spoken,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25071,SELECT * FROM without WHERE lake = 'rough' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25072,SELECT * FROM forgotten WHERE write = 'pain' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25073,SELECT AVG ( handsome ) FROM hunter,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25074,SELECT * FROM smoke WHERE chief NOT LIKE '[ought]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25075,SELECT AVG ( production ) FROM list SELECT SUM ( wooden ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25076,SELECT AVG ( past ) FROM hall SELECT SUM ( property ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25077,SELECT AVG ( grain ) FROM label SELECT SUM ( available ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25078,SELECT COUNT ( rope ) FROM total,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25079,SELECT COUNT ( him ) FROM doing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

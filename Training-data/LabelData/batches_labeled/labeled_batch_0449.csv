@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13440,canute,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13441,?malgastador,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13442,"estao, 92 4?c",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13443,mastelero,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13444,"c/ amador de los rios, 131, 1?g",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13445,loudiadi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13446,cervera del ro alhama,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13447,freiwald1,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13448,braa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13449,"plaa tarent, 117, 2-h",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13450,a8ique0r4r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13451,gumersindo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13452,42093532j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13453,2.75401E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13454,3.60204E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13455,trespalacios latorre,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13456,vaquer gorigoitia,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13457,goble,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13458,"quevedo y quintana s/n, 4-h",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13459,5.5584E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13460,williams9,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13461,das,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13462,en9r195d9,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13463,93128213v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13464,terrill,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13465,molet,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13466,47901295t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13467,garmasin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13468,69663934q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13469,9.49221E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

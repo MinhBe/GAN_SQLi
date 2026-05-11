@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13410,daya basulto,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13411,royett pratseva,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13412,18121520g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13413,sinesio,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13414,n2ga1,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13415,61089913g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13416,1g5ota323,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13417,fonz,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13418,emblanquimiento,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13419,silas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13420,cendejas de la torre,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13421,chimillas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13422,cruz iparraguirre,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13423,estic o'neil,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13424,gibezzi scampini,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13425,rocky,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13426,ciudad real,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13427,"pl. poeta badenes, 48, 11-c",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13428,desfacedora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13429,querando,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13430,doortje,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13431,larribea,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13432,agujer4e2o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13433,santa eullia de ronana,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13434,"tebete, s/n, 8?d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13435,zarra,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13436,7.84027E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13437,rinaldi albiol,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13438,44392621e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13439,robledollano,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

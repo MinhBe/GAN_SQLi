@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27690,SELECT * FROM two WHERE library = 'keep' OR ants = 'closely',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27691,SELECT * FROM lead WHERE grandmother = 'zipper' OR brought = 'having',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27692,SELECT * FROM spider WHERE NOT vessels = 'oxygen',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27693,SELECT * FROM progress WHERE pilot = 'chain' AND ( mountain = 'involved' OR meal = 'went' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27694,SELECT * FROM unhappy WHERE NOT hung = 'element' AND NOT bell = 'universe',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27695,SELECT * FROM street ORDER BY suddenly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27696,SELECT * FROM movement ORDER BY cold DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27697,"SELECT * FROM cup ORDER BY tobacco, several",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27698,"SELECT * FROM glass ORDER BY rabbit ASC, lay DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27699,"INSERT INTO prize ( low, opinion, action, division, though, taken ) VALUES ( 'order', 'spider'. dust', 'fort', 'view', 'factor', 'bigger' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27700,"INSERT INTO angry ( memory, built, riding ) VALUES ( 'tried', 'seeing', 'finest' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27701,"SELECT jet, tide, weak FROM park WHERE short IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27702,"SELECT married, dug, zeroFROM work WHERE dollar IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27703,"UPDATE newspaper SET wherever = 'unit', City = 'captured' WHERE went = slight",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27704,UPDATE thread SET tool = 'surprise'WHERE fighting = 'clothes',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27705,SELECT * FROM actually,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27706,DELETE FROM lead WHERE thus = 'trouble',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27707,DELETE FROM satellites,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27708,SELECT scared ( s ) FROM power,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27709,SELECT * FROM ( SELECT light FROM dried ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27710,SELECT TOP 3 * FROM mighty,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27711,SELECT * FROM modern 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27712,SELECT * FROM manufacturing FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27713,SELECT TOP 50 PERCENT * FROM engineer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27714,SELECT TOP 3 * FROM belong WHERE feed = 'real',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27715,SELECT * FROM mark WHERE pony = 'led' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27716,SELECT * FROM anywhere WHERE hurt = 'under' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27717,SELECT MIN ( am ) AS television FROM can,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27718,SELECT MIN ( iron ) AS mysterious FROM thick,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27719,SELECT * FROM ( SELECT unit FROM driving ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+24750,"SELECT rhythm, nearly, certain FROM shape WHERE world IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24751,"SELECT nearby, surrounded, snakeFROM development WHERE hand IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24752,"UPDATE kitchen SET product = 'wait', City = 'favorite' WHERE bat = everything",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24753,UPDATE particular SET melted = 'hunter'WHERE example = 'satellites',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24754,SELECT * FROM foreign,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24755,DELETE FROM attached WHERE friendly = 'level',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24756,DELETE FROM string,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24757,SELECT news ( s ) FROM seven,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24758,SELECT * FROM ( SELECT bag FROM until ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24759,SELECT TOP 3 * FROM material,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24760,SELECT * FROM ordinary 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24761,SELECT * FROM primitive FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24762,SELECT TOP 50 PERCENT * FROM position,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24763,SELECT * FROM enough FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24764,SELECT TOP 3 * FROM song WHERE shout = 'young',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24765,SELECT * FROM quite WHERE few = 'tobacco' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24766,SELECT * FROM property WHERE unknown = 'outer' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24767,SELECT MIN ( air ) AS refer FROM refused,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24768,SELECT MIN ( sea ) AS hurt FROM silence,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24769,SELECT * FROM ( SELECT serious FROM salt ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24770,SELECT TOP 3 * FROM including SELECT * FROM ancient 3SELECT * FROM thousand,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24771,SELECT * FROM touch 3 SELECT * FROM military,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24772,SELECT * FROM angry FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM spoken,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24773,SELECT TOP 50 PERCENT * FROM sort SELECT * FROM wind FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM chief,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24774,SELECT * FROM seed FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM particular,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24775,SELECT TOP 3 * FROM tape WHERE earlier = 'told' SELECT * FROM behind,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24776,SELECT * FROM wing WHERE captain = 'man' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24777,SELECT * FROM silent WHERE society = 'failed' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24778,SELECT AVG ( printed ) FROM single,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24779,SELECT * FROM stop WHERE chart NOT LIKE '[cutting]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based

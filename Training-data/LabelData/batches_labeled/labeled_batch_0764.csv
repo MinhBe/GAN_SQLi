@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22890,SELECT * FROM truck 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22891,SELECT * FROM thick FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22892,SELECT TOP 50 PERCENT * FROM choice,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22893,SELECT * FROM eight FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22894,SELECT TOP 3 * FROM worth WHERE feathers = 'rubbed',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22895,SELECT * FROM bigger WHERE anyway = 'directly' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22896,SELECT * FROM minerals WHERE tried = 'dangerous' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22897,SELECT MIN ( taste ) AS involved FROM eight,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22898,SELECT MIN ( ran ) AS beneath FROM wing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22899,SELECT * FROM ( SELECT oxygen FROM shells ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22900,SELECT TOP 3 * FROM stood SELECT * FROM brick 3SELECT * FROM crack,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22901,SELECT * FROM lack 3 SELECT * FROM my,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22902,SELECT * FROM gulf FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM riding,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22903,SELECT TOP 50 PERCENT * FROM sometime SELECT * FROM herd FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM log,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22904,SELECT * FROM pencil FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM secret,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22905,SELECT TOP 3 * FROM package WHERE surface = 'mistake' SELECT * FROM learn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22906,SELECT * FROM cow WHERE root = 'every' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22907,SELECT * FROM meal WHERE thus = 'development' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22908,SELECT AVG ( is ) FROM happy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22909,SELECT * FROM applied WHERE light NOT LIKE '[slowly]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22910,SELECT AVG ( gave ) FROM state SELECT SUM ( but ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22911,SELECT AVG ( flower ) FROM five SELECT SUM ( direction ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22912,SELECT AVG ( driver ) FROM duck SELECT SUM ( reader ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22913,SELECT COUNT ( perfect ) FROM captain,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22914,SELECT COUNT ( officer ) FROM suddenly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22915,SELECT AVG ( setting ) FROM than,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22916,SELECT * FROM equally WHERE fur NOT LIKE 'were%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22917,SELECT * FROM arm WHERE choose LIKE '%follow%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22918,SELECT * FROM basket WHERE joy NOT LIKE '[blow]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22919,"SELECT * FROM above WHERE lips IN ( 'adult', 'decide', 'our' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

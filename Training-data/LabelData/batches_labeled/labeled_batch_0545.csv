@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16320,vicente,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16321,7aria22,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16322,juglandea,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16323,"c/ madrid, 53 5-f",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16324,0nsu2iso,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16325,orce,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16326,tris2,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16327,petruck,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16328,36677303p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16329,swaden,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16330,arine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16331,33371147x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16332,cooksey,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16333,cuarentona,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16334,hiplita,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16335,graupere trabucco,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16336,rebes huasequi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16337,tosigoso,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16338,"calle rio piguea, 5,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16339,cohn.of@evasor.ch,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16340,99431698f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16341,gurica4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16342,saiz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16343,bacio bonnin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16344,vir7eino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16345,gavald,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16346,"calle salvador de madariaga s/n,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16347,martn miguel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16348,29283698y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16349,84996241v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

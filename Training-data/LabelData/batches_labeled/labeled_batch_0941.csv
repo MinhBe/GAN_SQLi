@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+28200,SELECT * FROM ( SELECT hollow FROM track ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28201,SELECT TOP 3 * FROM on,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28202,SELECT * FROM sick FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28203,SELECT TOP 50 PERCENT * FROM wind,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28204,SELECT * FROM camera FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28205,SELECT TOP 3 * FROM house WHERE naturally = 'area',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28206,SELECT * FROM island WHERE green = 'secret' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28207,SELECT * FROM press WHERE break = 'map' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28208,SELECT MIN ( making ) AS minerals FROM plural,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28209,SELECT MIN ( walk ) AS exactly FROM substance,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28210,SELECT * FROM ( SELECT gently FROM experiment ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28211,SELECT TOP 3 * FROM strength SELECT * FROM mathematics 3SELECT * FROM gulf,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28212,SELECT * FROM sound 3 SELECT * FROM river,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28213,SELECT * FROM base FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM limited,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28214,SELECT TOP 50 PERCENT * FROM pretty SELECT * FROM football FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM airplane,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28215,SELECT * FROM character FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM planet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28216,SELECT TOP 3 * FROM particular WHERE except = 'ranch' SELECT * FROM double,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28217,SELECT * FROM bottom WHERE clear = 'underline' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28218,SELECT * FROM building WHERE shallow = 'aloud' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28219,SELECT AVG ( specific ) FROM elephant,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28220,SELECT * FROM rope WHERE grandmother NOT LIKE '[four]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+28221,SELECT AVG ( hurt ) FROM diagram SELECT SUM ( blood ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28222,SELECT AVG ( victory ) FROM teeth SELECT SUM ( cloud ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28223,SELECT AVG ( prize ) FROM bad SELECT SUM ( quarter ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28224,SELECT COUNT ( something ) FROM driving,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28225,SELECT COUNT ( smoke ) FROM enter,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28226,SELECT AVG ( silk ) FROM edge,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28227,SELECT * FROM pile WHERE idea NOT LIKE 'most%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+28228,SELECT * FROM ever WHERE setting LIKE '%clean%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+28229,SELECT * FROM term WHERE driving NOT LIKE '[atmosphere]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based

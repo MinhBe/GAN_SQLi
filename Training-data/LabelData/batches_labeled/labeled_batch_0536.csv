@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16050,dalleto poroma,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16051,7.95304E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16052,93640511j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16053,p870en538r7,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16054,grin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16055,closa ortell,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16056,beiza ivanco,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16057,8.99357E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16058,disney,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16059,63eb2ya,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16060,denice,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16061,1.26952E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16062,7.11566E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16063,18653468p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16064,haenning@maxitienda.be,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16065,"calle ladera, 147 10-e",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16066,58007817t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16067,"carretera de vista-rica s/n,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16068,quintina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16069,maggee,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16070,artenio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16071,vries,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16072,calle capitan palacios 71,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16073,roze,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16074,"calle juana ibarborou 134,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16075,3.71442E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16076,ciro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16077,bularros,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16078,laga_rtijo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16079,acre,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

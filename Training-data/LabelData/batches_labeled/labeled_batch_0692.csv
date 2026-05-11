@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+20730,SELECT MIN ( bag ) AS engineer FROM jump,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20731,SELECT MIN ( handsome ) AS lay FROM mad,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20732,SELECT * FROM ( SELECT someone FROM nor ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20733,SELECT TOP 3 * FROM higher SELECT * FROM ourselves 3SELECT * FROM worse,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20734,SELECT * FROM excitement 3 SELECT * FROM railroad,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20735,SELECT * FROM her FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM driving,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20736,SELECT TOP 50 PERCENT * FROM became SELECT * FROM road FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM salt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20737,SELECT * FROM signal FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM kitchen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20738,SELECT TOP 3 * FROM own WHERE individual = 'worse' SELECT * FROM from,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20739,SELECT * FROM spider WHERE folks = 'character' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20740,SELECT * FROM dangerous WHERE tears = 'sure' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20741,SELECT AVG ( weigh ) FROM pay,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20742,SELECT * FROM not WHERE warn NOT LIKE '[tin]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+20743,SELECT AVG ( pour ) FROM choose SELECT SUM ( within ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20744,SELECT AVG ( together ) FROM idea SELECT SUM ( bowl ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20745,SELECT AVG ( later ) FROM gray SELECT SUM ( salmon ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20746,SELECT COUNT ( equal ) FROM suppose,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20747,SELECT COUNT ( saved ) FROM wherever,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20748,SELECT AVG ( bat ) FROM earn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20749,SELECT * FROM degree WHERE troops NOT LIKE 'long%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+20750,SELECT * FROM bell WHERE piano LIKE '%took%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+20751,SELECT * FROM traffic WHERE deal NOT LIKE '[over]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+20752,"SELECT * FROM rhythm WHERE limited IN ( 'wolf', 'hill', 'himself' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20753,"SELECT * FROM bite WHERE weigh NOT IN ( 'drive', 'avoid', 'free' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20754,SELECT * FROM slight WHERE indeed IN ( SELECT hard FROM describe ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20755,SELECT * FROM statement WHERE bell BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20756,SELECT * FROM women WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20757,SELECT * FROM zebra WHERE gulf BETWEEN 'represent' AND 'additional',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20758,"SELECT * FROM gas WHERE dollar BETWEEN ""giant"" AND ""graph""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20759,SELECT * FROM deeply WHERE negative NOT BETWEEN 'usual' AND 'plastic',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+24900,SELECT COUNT ( softID ) FROM top,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24901,SELECT AVG ( Price ) FROM fair,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24902,SELECT * FROM laid WHERE pilot BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24903,"SELECT grandfatherID AS ID, friend AS edge FROM fact",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24904,"SELECT mindID AS ID, burst AS grade FROM stock",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24905,"SELECT back AS himself, sand AS [clay] FROM shelter",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24906,"SELECT jet, city+ ', ' + soil+ ' ' + growth+ ', ' + entire AS wrote FROM play",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24907,SELECT roof ( s ) FROM diameter INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24908,"SELECT which,graph,size,our,opportunity ( ( birth JOIN stronger ON moon.indeed = fighting.opposite ) INNER JOIN crewON Orders.attack = pair.myselfID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24909,SELECT order ( s ) FROM continued LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24910,"SELECT pleasant,excited,spend FROM arm LEFT JOIN Orders ON get.winID = rice.there ORDER BY community.work",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24911,SELECT drive ( s FROM laid RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24912,"SELECT Orders.rootrID, Employees.symbol, Employees.fewer FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.contrastID ORDER BY Orders.shallID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24913,SELECT far ( s ) FROM fierce FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24914,"SELECT column_name ( s ) FROM stretch,fall",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24915,SELECT leaf ( s ) FROM to UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24916,SELECT building ( s ) FROM eaten SELECT write ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24917,SELECT extra ( s ) FROM have UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24918,SELECT cowboy ( s ) FROM hundred SELECT pair FROM taught,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24919,SELECT rose FROM muscle UNION SELECT tiny FROM our ORDER BY helpful,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+24920,SELECT measure FROM chain UNION ALL SELECT proud FROM wheat ORDER BY powder,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+24921,"SELECT thrown,buy FROM already WHERE disappear = 'orange' UNION SELECT hot, goose FROM men",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+24922,"SELECT COUNT ( favorite ) , automobile FROM blow BY bring",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24923,"SELECT Employees.wide, COUNT ( Orders.alreadyID ) AS spiteFROM ( OrdersINNER JOIN away ON Orders.wireID = Employees.contrastID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24924,SELECT * FROM itself FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24925,SELECT strike,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24926,SELECT * FROM married,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24927,SELECT planet FROM result,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24928,SELECT DISTINCT claws FROM gentle,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24929,SELECT COUNT ( DISTINCT flat ) FROM exclaimed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

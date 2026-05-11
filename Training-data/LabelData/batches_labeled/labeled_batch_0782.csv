@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23430,"SELECT instrument, month+ ', ' + brought+ ' ' + rest+ ', ' + yourself AS slipped FROM nodded",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23431,SELECT next ( s ) FROM cattle INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23432,"SELECT lower,cool,suggest,area,whenever ( ( salmon JOIN tried ON factor.smooth = army.definition ) INNER JOIN dishON Orders.girl = depth.shelterID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23433,SELECT minerals ( s ) FROM folks LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23434,"SELECT scientist,film,experiment FROM bone LEFT JOIN Orders ON stretch.mailID = least.brass ORDER BY shoot.hurried",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23435,SELECT stomach ( s FROM football RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23436,"SELECT Orders.letterrID, Employees.silence, Employees.dinner FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.everyID ORDER BY Orders.trackID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23437,SELECT say ( s ) FROM pretty FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23438,"SELECT column_name ( s ) FROM scene,office",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23439,SELECT hay ( s ) FROM congress UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23440,SELECT baseball ( s ) FROM limited SELECT safe ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23441,SELECT managed ( s ) FROM pupil UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23442,SELECT dirty ( s ) FROM search SELECT who FROM think,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23443,SELECT mostly FROM met UNION SELECT present FROM above ORDER BY found,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23444,SELECT map FROM will UNION ALL SELECT accurate FROM wrapped ORDER BY grew,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+23445,"SELECT quickly,quiet FROM butter WHERE realize = 'source' UNION SELECT same, shinning FROM shelf",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23446,"SELECT COUNT ( fought ) , sweet FROM factor BY stage",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23447,"SELECT Employees.can, COUNT ( Orders.afterID ) AS meanFROM ( OrdersINNER JOIN husband ON Orders.longID = Employees.copyID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23448,SELECT * FROM cost FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23449,SELECT * FROM for,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23450,SELECT pool FROM particles,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23451,SELECT DISTINCT wire FROM impossible,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23452,SELECT COUNT ( DISTINCT stick ) FROM swimming,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23453,SELECT Count ( * ) AS pleasure,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23454,FROM ( SELECT DISTINCT real FROM soon ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23455,SELECT * FROM slowly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23456,SELECT * FROM planning WHERE meal = 'property',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23457,SELECT * FROM general WHERE four = 'explanation',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23458,SELECT * FROM upon WHERE pool = excitement,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23459,SELECT * FROM universe WHERE fifty = 'better' AND City = 'belt',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17760,baladora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17761,95944263q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17762,derbarn henriquez,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17763,5.37737E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17764,97573176t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17765,pertusa boladera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17766,faustino cavadas 162 6-a,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17767,lanae,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17768,"maestro de burgos, 199",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17769,donadio_honig@donkr.zr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17770,"pl. los oficios, 181 12?d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17771,kussauer_brereton@showcarsmadrid.com.kp,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17772,78260205z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17773,qu1s3da,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17774,antonio juez 67 3?a,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17775,empel6tarse,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17776,pancracia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17777,fullum6,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17778,"c/ arago 194,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17779,"calle poligono quintos, 37,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17780,alcarrs,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17781,1.93371E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17782,retiendas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17783,tomi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17784,louladak,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17785,lavada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17786,23291292c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17787,castell-platja d'aro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17788,stankova@carrillo-de-albornoz.pt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17789,le8ru41,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

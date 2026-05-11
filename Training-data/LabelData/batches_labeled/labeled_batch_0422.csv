@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12630,desnuda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12631,egner,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12632,vahid,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12633,ferrs gortrez,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12634,derbyshi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12635,candelario,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12636,7.73869E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12637,belonne santaella,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12638,ren,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12639,ardurn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12640,gattas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12641,"pasaje pedrosa 115, 6f",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12642,"passatge credit, 93, 13-c",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12643,4.23439E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12644,sellees,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12645,teruyuki,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12646,metyn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12647,per8ebimie0to,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12648,2.4082E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12649,sirola@professionalhost.cc,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12650,pfeilsch,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12651,alg59za,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12652,villacastn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12653,valdivieso,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12654,quintanilla del coco,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12655,mayworth@sms24h.tr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12656,duplan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12657,lahnstein agundis,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12658,1.86E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12659,"portugal 87,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

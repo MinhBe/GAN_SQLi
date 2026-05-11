@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22350,SELECT did ( s ) FROM dear LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22351,"SELECT serious,season,value FROM horn LEFT JOIN Orders ON huge.studiedID = bigger.die ORDER BY exclaimed.for",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22352,SELECT gave ( s FROM lady RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22353,"SELECT Orders.particlesrID, Employees.definition, Employees.only FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.containID ORDER BY Orders.railroadID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22354,SELECT everybody ( s ) FROM spell FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22355,"SELECT column_name ( s ) FROM our,swept",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22356,SELECT tower ( s ) FROM sometime UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22357,SELECT path ( s ) FROM handsome SELECT chapter ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22358,SELECT flight ( s ) FROM means UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22359,SELECT zero ( s ) FROM rabbit SELECT travel FROM industry,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22360,SELECT eager FROM has UNION SELECT were FROM gas ORDER BY around,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+22361,SELECT knowledge FROM fog UNION ALL SELECT column FROM bowl ORDER BY wing,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+22362,"SELECT pole,longer FROM putting WHERE goose = 'sweet' UNION SELECT improve, stomach FROM stems",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+22363,"SELECT COUNT ( bicycle ) , dangerous FROM afternoon BY fog",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22364,"SELECT Employees.thirty, COUNT ( Orders.mightyID ) AS peopleFROM ( OrdersINNER JOIN plus ON Orders.receiveID = Employees.mainID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22365,SELECT heart,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22366,SELECT * FROM gray,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22367,SELECT plane FROM require,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22368,SELECT DISTINCT shadow FROM dog,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22369,SELECT COUNT ( DISTINCT electricity ) FROM design,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22370,SELECT Count ( * ) AS partly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22371,FROM ( SELECT DISTINCT serious FROM involved ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22372,SELECT * FROM laugh,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22373,SELECT * FROM up WHERE influence = 'another',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22374,SELECT * FROM coach WHERE rose = 'wooden',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22375,SELECT * FROM fog WHERE separate = able,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22376,SELECT * FROM announced WHERE stop = 'tired' AND City = 'oldest',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22377,SELECT * FROM was WHERE movement = 'ate' OR asleep = 'waste',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22378,SELECT * FROM water WHERE dear = 'street' OR bite = 'are',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22379,SELECT * FROM hill WHERE NOT beyond = 'great',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

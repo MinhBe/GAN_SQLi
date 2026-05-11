@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29760,SELECT * FROM rest,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29761,DELETE FROM door WHERE grow = 'small',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29762,DELETE FROM tomorrow,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29763,SELECT wide ( s ) FROM west,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29764,SELECT * FROM ( SELECT slide FROM breath ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29765,SELECT TOP 3 * FROM race,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29766,create user name identified by pass123 temporary tablespace temp default tablespace users,1,,stacked_queries,generic,0.95,create user detected — stacked_queries injection (priority 3) on generic,rule-based
+29767,hi' or 'x' = 'x',1,,boolean_blind,generic,0.95,"or 'x' = 'x', or 'x' = 'x' detected — boolean_blind injection (priority 8) on generic",rule-based
+29768,or username like char ( 37 ),1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29769,x' and 1 = ( select count ( * ) from tabname ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29770,&apos,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29771,) union select * from information_schema.tables,1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+29772,x' AND userid IS NULL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29773,x' and members.email is NULL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29774,) ),0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29775,1' and 1 = ( select count ( * ) from tablenames ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29776,x' AND email IS NULL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29777,a' or 1 = 1,0,,boolean_blind,generic,0.85,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+29778,3.4008E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29779,9.48E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29780,1.76488E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29781,9.84215E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29782,4.13841E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29783,9.26768E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29784,4.46813E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29785,1.89129E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29786,9.5286E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29787,9.0515E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29788,9.12244E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+29789,4.10842E+015,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

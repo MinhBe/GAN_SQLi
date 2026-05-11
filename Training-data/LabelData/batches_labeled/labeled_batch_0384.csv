@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+11490,bellaguarda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11491,"cuesta sagrado corazon, 155 5?a",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11492,pike@multasdetransito.gf,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11493,veneranda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11494,torre de arcas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11495,darrieu@redstarz.sv,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11496,sntoma,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11497,niu,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11498,eduviges,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11499,42010181z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11500,minera dauns,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11501,8.96125E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11502,arima@hormigon-impreso.nu,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11503,aguinaga achutegui,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11504,6.90524E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11505,bradney4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11506,shanir,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11507,34855320q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11508,wun,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11509,stanger-kitabayashi7@gestionsoftware.th,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11510,calle soria 154 2a,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11511,humfrey,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11512,poncin@todobetis.mil,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11513,inglis@baltasarsantos.vu,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11514,tindall-bourne@pintandomucho.cg,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11515,es518l132n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11516,rajadell,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11517,ramblizo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11518,d060u2ar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11519,brunton9,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

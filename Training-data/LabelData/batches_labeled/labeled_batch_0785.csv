@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23520,SELECT COUNT ( occur ) FROM trap,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23521,SELECT COUNT ( gladID ) FROM pair,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23522,SELECT AVG ( Price ) FROM whale,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23523,SELECT * FROM dollar WHERE political BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23524,"SELECT shallID AS ID, pipe AS prove FROM sweet",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23525,"SELECT tableID AS ID, upper AS yesterday FROM future",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23526,"SELECT quick AS impossible, chance AS [ability] FROM breakfast",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23527,"SELECT tail, compass+ ', ' + farther+ ' ' + ago+ ', ' + victory AS involved FROM frog",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23528,SELECT negative ( s ) FROM bend INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23529,"SELECT piece,lunch,rush,information,part ( ( definition JOIN value ON bad.silver = plant.vegetable ) INNER JOIN sidesON Orders.wall = vote.baseID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23530,SELECT potatoes ( s ) FROM search LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23531,"SELECT held,cow,plenty FROM may LEFT JOIN Orders ON stop.courseID = deeply.machine ORDER BY about.sit",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23532,SELECT team ( s FROM though RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23533,"SELECT Orders.welcomerID, Employees.uncle, Employees.somebody FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.directlyID ORDER BY Orders.wifeID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23534,SELECT natural ( s ) FROM speed FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23535,"SELECT column_name ( s ) FROM sad,wonderful",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23536,SELECT riding ( s ) FROM whispered UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23537,SELECT ring ( s ) FROM represent SELECT doctor ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23538,SELECT space ( s ) FROM recently UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23539,SELECT take ( s ) FROM helpful SELECT airplane FROM nest,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23540,SELECT jump FROM mark UNION SELECT corner FROM coal ORDER BY over,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23541,SELECT government FROM term UNION ALL SELECT story FROM powerful ORDER BY feathers,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+23542,"SELECT fireplace,familiar FROM surrounded WHERE report = 'equal' UNION SELECT bent, upward FROM bear",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23543,"SELECT COUNT ( motor ) , brick FROM press BY outline",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23544,"SELECT Employees.sick, COUNT ( Orders.liftID ) AS coupleFROM ( OrdersINNER JOIN kind ON Orders.factID = Employees.courseID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23545,SELECT * FROM clay FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23546,SELECT sunlight,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23547,SELECT * FROM salt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23548,SELECT ring FROM adult,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23549,SELECT DISTINCT hang FROM sudden,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

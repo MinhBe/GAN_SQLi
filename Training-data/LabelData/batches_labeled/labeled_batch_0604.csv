@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+18090,villaseca de uceda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18091,palter@biosoftware.in,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18092,09352334m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18093,legrandv,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18094,"andador carlos lapetra 191, 5c",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18095,demoniaca,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18096,colas@ozlon.rs,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18097,clooney,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18098,2.42593E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18099,"c/ encajeras, 40 4?f",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18100,6.8388E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18101,6.45831E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18102,d_eslechar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18103,80937614q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18104,sotalugo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18105,1.85884E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18106,aguazo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18107,veronese@prestigecars.tv,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18108,abordonar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18109,rad0oelctrico,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18110,joyan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18111,"calle hemingway, s/n",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18112,c09so18,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18113,cluet higuerue,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18114,moriego,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18115,e50land5cer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18116,hotson,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18117,2u27lad9r4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18118,buckman,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18119,09718670c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

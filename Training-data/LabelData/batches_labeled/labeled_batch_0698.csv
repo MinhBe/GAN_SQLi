@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+20910,"INSERT INTO to ( daughter, seldom, being ) VALUES ( 'forward', 'charge', 'next' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20911,"SELECT fur, electric, person FROM felt WHERE president IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20912,"SELECT couple, moment, veryFROM bean WHERE outside IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20913,"UPDATE bare SET bigger = 'six', City = 'plus' WHERE common = wind",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20914,UPDATE win SET affect = 'zero'WHERE must = 'slave',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20915,SELECT * FROM cream,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20916,DELETE FROM would WHERE officer = 'lying',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20917,DELETE FROM nearest,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20918,SELECT foreign ( s ) FROM expect,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20919,SELECT * FROM ( SELECT slide FROM shout ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20920,SELECT TOP 3 * FROM loud,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20921,SELECT * FROM brother 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20922,SELECT * FROM continent FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20923,SELECT TOP 50 PERCENT * FROM one,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20924,SELECT * FROM native FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20925,SELECT TOP 3 * FROM source WHERE held = 'hard',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20926,SELECT * FROM transportation WHERE raise = 'unusual' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20927,SELECT * FROM amount WHERE but = 'greater' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20928,SELECT MIN ( cent ) AS just FROM just,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20929,SELECT MIN ( biggest ) AS mind FROM calm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20930,SELECT * FROM ( SELECT attack FROM nearby ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20931,SELECT TOP 3 * FROM against SELECT * FROM game 3SELECT * FROM popular,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20932,SELECT * FROM being 3 SELECT * FROM closer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20933,SELECT * FROM kill FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM smooth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20934,SELECT TOP 50 PERCENT * FROM terrible SELECT * FROM film FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM view,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20935,SELECT * FROM bat FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM telephone,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20936,SELECT TOP 3 * FROM airplane WHERE president = 'hollow' SELECT * FROM tube,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20937,SELECT * FROM silent WHERE layers = 'wide' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20938,SELECT * FROM length WHERE flow = 'review' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20939,SELECT AVG ( white ) FROM tight,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

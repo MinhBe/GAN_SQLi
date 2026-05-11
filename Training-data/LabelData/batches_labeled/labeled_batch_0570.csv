@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17070,"c/ peru, 85, 10?h",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17071,39699852n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17072,"calle ginebra, 138",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17073,alcoy/alcoi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17074,4.65441E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17075,thompson,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17076,"calle gibraltar, 88",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17077,komai@ofertachina.ir,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17078,ars yermo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17079,ad0inist1ador9,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17080,12064316b,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17081,21302211w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17082,fady,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17083,3.74288E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17084,83677248m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17085,skylar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17086,valcourt,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17087,etchieso,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17088,agobiar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17089,23456317c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17090,arrebatarse,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17091,dowson@sehimaco.eg,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17092,fuente el saz de jarama,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17093,c/ doctores lasso simarro 30,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17094,nodonk@locuraporno.ar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17095,"c/ zamora, 151, 1-b",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17096,celka,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17097,73488403e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17098,benasque,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17099,36930027p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

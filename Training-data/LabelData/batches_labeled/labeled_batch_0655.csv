@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19620,SELECT * FROM within ORDER BY came DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19621,"SELECT * FROM certain ORDER BY judge, dinner",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19622,"SELECT * FROM carry ORDER BY long ASC, mathematics DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19623,"INSERT INTO chicken ( belt, bad, guess, perhaps, girl, part ) VALUES ( 'feature', 'hidden'. surprise', 'shown', 'wind', 'minute', 'bet' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19624,"INSERT INTO brass ( eight, current, pull ) VALUES ( 'mostly', 'held', 'without' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19625,"SELECT pleasant, affect, even FROM zoo WHERE meet IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19626,"SELECT melted, safe, tuneFROM around WHERE ready IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19627,"UPDATE explore SET section = 'lot', City = 'forgot' WHERE equator = eaten",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19628,UPDATE new SET silver = 'slabs'WHERE headed = 'shoe',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19629,SELECT * FROM stream,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19630,DELETE FROM clothes WHERE string = 'sail',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19631,DELETE FROM colony,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19632,SELECT darkness ( s ) FROM bottom,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19633,SELECT * FROM ( SELECT bear FROM walk ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19634,SELECT TOP 3 * FROM truth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19635,SELECT * FROM worse 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19636,SELECT * FROM pool FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19637,SELECT TOP 50 PERCENT * FROM angry,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19638,SELECT * FROM solid FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19639,SELECT TOP 3 * FROM page WHERE chest = 'author',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19640,SELECT * FROM hollow WHERE tonight = 'couple' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19641,SELECT * FROM judge WHERE energy = 'toy' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19642,SELECT MIN ( explain ) AS wrote FROM eight,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19643,SELECT MIN ( brush ) AS unknown FROM meat,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19644,SELECT * FROM ( SELECT almost FROM rabbit ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19645,SELECT TOP 3 * FROM rhythm SELECT * FROM purpose 3SELECT * FROM supply,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19646,SELECT * FROM large 3 SELECT * FROM stone,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19647,SELECT * FROM triangle FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM anybody,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19648,SELECT TOP 50 PERCENT * FROM deal SELECT * FROM himself FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM feed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19649,SELECT * FROM serve FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM honor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

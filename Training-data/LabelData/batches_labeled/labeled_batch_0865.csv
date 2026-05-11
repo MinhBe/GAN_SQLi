@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+25920,SELECT * FROM butter WHERE spent = 'want' OR court = 'very',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25921,SELECT * FROM protection WHERE NOT everybody = 'able',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25922,SELECT * FROM family WHERE national = 'finish' AND ( thousand = 'how' OR shout = 'pan' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25923,SELECT * FROM inside WHERE NOT fall = 'book' AND NOT fell = 'year',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25924,SELECT * FROM composition ORDER BY enough,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25925,SELECT * FROM row ORDER BY change DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25926,"SELECT * FROM blank ORDER BY death, what",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25927,"SELECT * FROM he ORDER BY usually ASC, rapidly DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25928,"INSERT INTO help ( grandfather, lungs, trail, time, closer, tongue ) VALUES ( 'mistake', 'means'. surprise', 'outer', 'porch', 'beside', 'captain' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25929,"INSERT INTO prize ( vapor, indeed, also ) VALUES ( 'law', 'break', 'lesson' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25930,"SELECT longer, rocky, sweet FROM metal WHERE someone IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25931,"SELECT grade, letter, caveFROM being WHERE arrange IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25932,"UPDATE operation SET bat = 'below', City = 'ice' WHERE president = fell",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25933,UPDATE grew SET tax = 'bus'WHERE throughout = 'pictured',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25934,SELECT * FROM hello,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25935,DELETE FROM agree WHERE burn = 'raise',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25936,DELETE FROM dust,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25937,SELECT pattern ( s ) FROM whom,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25938,SELECT * FROM ( SELECT machinery FROM fog ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25939,SELECT TOP 3 * FROM activity,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25940,SELECT * FROM occur 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25941,SELECT * FROM across FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25942,SELECT TOP 50 PERCENT * FROM wealth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25943,SELECT * FROM entire FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25944,SELECT TOP 3 * FROM begun WHERE future = 'way',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25945,SELECT * FROM cookies WHERE pack = 'share' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25946,SELECT * FROM measure WHERE too = 'beginning' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25947,SELECT MIN ( according ) AS brain FROM eager,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25948,SELECT MIN ( variety ) AS walk FROM eat,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25949,SELECT * FROM ( SELECT operation FROM win ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

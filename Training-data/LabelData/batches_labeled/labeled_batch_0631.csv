@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+18900,SELECT CEIL ( 25 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18901,SELECT CEILING ( 25.75 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18902,SELECT CEILING ( 25 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18903,SELECT COS ( 2 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18904,SELECT COS ( PI ( ) ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18905,SELECT COT ( 6 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18906,SELECT COT ( -2 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18907,SELECT COUNT ( ProductID ) AS NumberOfProducts FROM Products;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18908,SELECT DEGREES ( 1.5 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18909,SELECT DEGREES ( PI ( ) *2 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18910,SELECT 10 DIV 5;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18911,SELECT 8 DIV 3;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18912,SELECT EXP ( 1 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18913,SELECT EXP ( 2 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18914,SELECT FLOOR ( 25.75 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18915,SELECT FLOOR ( 25 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18916,"SELECT GREATEST ( 3, 12, 34, 8, 25 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18917,"SELECT GREATEST ( ""w3Schools.com"", ""microsoft.com"", ""apple.com"" ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18918,"SELECT LEAST ( 3, 12, 34, 8, 25 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18919,"SELECT LEAST ( ""w3Schools.com"", ""microsoft.com"", ""apple.com"" ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18920,SELECT LN ( 2 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18921,SELECT LN ( 1 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18922,SELECT LOG ( 2 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18923,"SELECT LOG ( 2, 4 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18924,SELECT LOG10 ( 2 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18925,SELECT LOG10 ( 4.5 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18926,SELECT LOG2 ( 6 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18927,SELECT LOG2 ( 64 ) ;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18928,"SELECT MOD ( 18, 4 ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18929,SELECT 18 MOD 4;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

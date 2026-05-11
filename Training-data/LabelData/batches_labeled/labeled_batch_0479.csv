@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14340,brooking-doolittle@encuentrodominios.lv,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14341,cervera de la caada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14342,wenner@rpdkorea.nr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14343,argeo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14344,jochim@ajuntamentdebarcelona2-0.qa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14345,enardecedora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14346,ga27393,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14347,"guadalajara, 101 4-e",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14348,49439340n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14349,"mesas, las",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14350,verdusco,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14351,francisco jorquera s/n 1?d,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14352,95843081b,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14353,pesado,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14354,capers@innovaris.fr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14355,tejeda y segoyuela,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14356,"c/ el jacinto, 132,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14357,amaja,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14358,benzo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14359,cosbey@ocymafa.py,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14360,gallinero de cameros,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14361,77714009e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14362,mcbrayne,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14363,"c/ veinat de cerdanyola, 3 6e",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14364,de la cerda gassol,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14365,poblacin de arroyo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14366,1.94093E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14367,escocia 197,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14368,jara escobedo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14369,vital,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

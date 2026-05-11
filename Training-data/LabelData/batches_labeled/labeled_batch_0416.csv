@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12450,4.42213E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12451,giertych,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12452,navas de jorquera,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12453,lab2a8o4i0,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12454,r3i8a83nt1,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12455,loktev@theroxyblue.aero,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12456,tharsis s/n 11?c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12457,"c/ hortensia 48,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12458,"cami son colam 153, 3-c",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12459,humphrie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12460,5.25793E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12461,ajuagas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12462,ornella,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12463,astor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12464,livermore-kozlowski@hiteurope.ws,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12465,extremosa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12466,1.94E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12467,lar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12468,spnola ballado,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12469,4.47104E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12470,committe,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12471,0a1q45tu9rt8,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12472,entwistle_ruetting@comonuevo.ro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12473,reconfortante,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12474,charlebois3@nanotecnologo.np,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12475,castell sargatal,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12476,pr99o9a9,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12477,6.3087E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12478,sin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12479,"patio susi 120,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

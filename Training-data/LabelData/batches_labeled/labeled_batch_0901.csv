@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27000,SELECT * FROM clear WHERE continued = how,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27001,SELECT * FROM layers WHERE chair = 'empty' AND City = 'eleven',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27002,SELECT * FROM half WHERE push = 'eventually' OR fill = 'onto',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27003,SELECT * FROM split WHERE letter = 'fur' OR applied = 'most',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27004,SELECT * FROM blood WHERE NOT have = 'clearly',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27005,SELECT * FROM under WHERE bicycle = 'escape' AND ( stove = 'sides' OR hung = 'telephone' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27006,SELECT * FROM nearer WHERE NOT useful = 'sold' AND NOT example = 'circle',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27007,SELECT * FROM negative ORDER BY lost,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27008,SELECT * FROM sound ORDER BY mission DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27009,"SELECT * FROM putting ORDER BY thought, nice",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27010,"SELECT * FROM tonight ORDER BY paint ASC, mass DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27011,"INSERT INTO ran ( instrument, wrong, oldest, few, wore, body ) VALUES ( 'swept', 'dropped'. repeat', 'cookies', 'bark', 'carbon', 'tonight' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27012,"INSERT INTO production ( trouble, personal, dish ) VALUES ( 'short', 'table', 'trunk' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27013,"SELECT tank, power, down FROM hour WHERE secret IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27014,"SELECT pocket, birds, moneyFROM observe WHERE smoke IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27015,"UPDATE kitchen SET wrote = 'ants', City = 'satellites' WHERE we = range",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27016,UPDATE close SET toy = 'anyone'WHERE sail = 'hill',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27017,SELECT * FROM constantly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27018,DELETE FROM because WHERE deeply = 'quickly',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27019,DELETE FROM men,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27020,SELECT adjective ( s ) FROM short,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27021,SELECT * FROM ( SELECT basic FROM ever ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27022,SELECT TOP 3 * FROM same,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27023,SELECT * FROM general 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27024,SELECT * FROM will FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27025,SELECT TOP 50 PERCENT * FROM crack,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27026,SELECT * FROM require FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27027,SELECT TOP 3 * FROM oxygen WHERE writer = 'pan',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27028,SELECT * FROM book WHERE what = 'egg' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27029,SELECT * FROM carbon WHERE indicate = 'paragraph' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

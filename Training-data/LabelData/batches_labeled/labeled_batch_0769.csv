@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23040,SELECT they ( s FROM somewhere RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23041,"SELECT Orders.strugglerID, Employees.truck, Employees.therefore FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.freedomID ORDER BY Orders.dearID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23042,SELECT baseball ( s ) FROM consist FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23043,"SELECT column_name ( s ) FROM saw,powder",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23044,SELECT nearby ( s ) FROM thumb UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23045,SELECT ill ( s ) FROM cost SELECT leader ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23046,SELECT evening ( s ) FROM choice UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23047,SELECT kill ( s ) FROM lamp SELECT am FROM lay,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23048,SELECT amount FROM equipment UNION SELECT sides FROM whose ORDER BY advice,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23049,SELECT metal FROM certain UNION ALL SELECT twenty FROM seat ORDER BY probably,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+23050,"SELECT shape,bet FROM milk WHERE grabbed = 'everyone' UNION SELECT mathematics, voyage FROM torn",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23051,"SELECT COUNT ( open ) , battle FROM several BY direct",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23052,"SELECT Employees.accident, COUNT ( Orders.rhythmID ) AS meantFROM ( OrdersINNER JOIN division ON Orders.stripID = Employees.takenID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23053,SELECT * FROM standard FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23054,SELECT wood,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23055,SELECT * FROM but,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23056,SELECT paper FROM corn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23057,SELECT DISTINCT too FROM thirty,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23058,SELECT COUNT ( DISTINCT grown ) FROM until,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23059,SELECT Count ( * ) AS practice,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23060,FROM ( SELECT DISTINCT since FROM went ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23061,SELECT * FROM feathers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23062,SELECT * FROM front WHERE wise = 'earn',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23063,SELECT * FROM sink WHERE create = 'important',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23064,SELECT * FROM mice WHERE problem = onto,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23065,SELECT * FROM bank WHERE speech = 'class' AND City = 'value',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23066,SELECT * FROM nobody WHERE idea = 'chamber' OR noun = 'four',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23067,SELECT * FROM glad WHERE source = 'fairly' OR widely = 'image',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23068,SELECT * FROM highway WHERE NOT exact = 'percent',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23069,SELECT * FROM crop WHERE at = 'suggest' AND ( wrote = 'small' OR them = 'dance' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

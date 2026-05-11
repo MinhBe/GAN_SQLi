@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+18000,oruna,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18001,nihei_donat@multaspendientes.cu,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18002,dybenko,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18003,veronese vitte,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18004,fontanarejo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18005,1.34688E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18006,darby,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18007,corera,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18008,"aaiun, 122 12?f",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18009,rascel-byatt@discotecateatre.ug,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18010,bogarde4@tiendasyofertas.museum,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18011,"madrid, 27",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18012,pryor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18013,horgan,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18014,2.82171E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18015,narrillos del lamo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18016,terrassa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18017,"c/ la estrella, 182",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18018,basta@24htranslations.edu,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18019,symen,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18020,jia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18021,"sierra santos, 71, 6?g",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18022,pillo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18023,descostill3r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18024,dennen_christlein@tantra-gay.sn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18025,naut aran,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18026,vachiran,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18027,marquand@eneltajo.bn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18028,villargordo del cabriel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18029,1.83452E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

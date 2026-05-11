@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+11610,3.18663E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11611,"san petersburgo, 165",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11612,71648159p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11613,gift@distritoeste.no,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11614,16601924h,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11615,segura reygadas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11616,"passeig gaudi 77, 3-e",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11617,llasera,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11618,ca5r7211a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11619,cantoria,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11620,hallaran@manjarr.cd,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11621,haker-durango@mirallesmoscardo.ro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11622,22010612a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11623,trastabilln,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11624,rocco-misaki@soybueno.nz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11625,leonel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11626,micr6pil8,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11627,"calle puebla de los infantes, 145",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11628,bscones de ojeda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11629,ares,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11630,"marcelino suarez 39,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11631,adalgisa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11632,88253687l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11633,decour raichs,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11634,cusanelli@wdsl.ao,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11635,perpi izurrieta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11636,robin@comerciosdeaspe.info,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11637,"barcelona 149, 5-e",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11638,66718383y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11639,incom1a5abl8mente,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

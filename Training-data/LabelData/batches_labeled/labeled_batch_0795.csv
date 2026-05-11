@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23820,SELECT * FROM expression WHERE accurate BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23821,"SELECT waveID AS ID, locate AS section FROM place",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23822,"SELECT pleasureID AS ID, color AS shelf FROM date",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23823,"SELECT track AS be, increase AS [task] FROM on",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23824,"SELECT breakfast, proud+ ', ' + label+ ' ' + got+ ', ' + some AS neck FROM bark",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23825,SELECT national ( s ) FROM dug INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23826,"SELECT brave,package,these,raw,result ( ( large JOIN also ON way.collect = wall.difficult ) INNER JOIN proudON Orders.farm = pipe.certainlyID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23827,SELECT poet ( s ) FROM written LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23828,"SELECT discuss,heart,leaf FROM quickly LEFT JOIN Orders ON map.somehowID = unless.finish ORDER BY very.create",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23829,SELECT throw ( s FROM son RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23830,"SELECT Orders.halfwayrID, Employees.sale, Employees.good FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.woolID ORDER BY Orders.governmentID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23831,SELECT certainly ( s ) FROM compare FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23832,"SELECT column_name ( s ) FROM pour,break",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23833,SELECT chemical ( s ) FROM coat UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23834,SELECT man ( s ) FROM lunch SELECT breathe ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23835,SELECT dig ( s ) FROM raise UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23836,SELECT fine ( s ) FROM secret SELECT sea FROM nails,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23837,SELECT tip FROM leather UNION SELECT evening FROM task ORDER BY coat,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23838,SELECT political FROM kitchen UNION ALL SELECT fighting FROM ancient ORDER BY center,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+23839,"SELECT refer,grown FROM built WHERE bark = 'star' UNION SELECT create, remember FROM except",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23840,"SELECT COUNT ( average ) , sport FROM slipped BY cowboy",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23841,"SELECT Employees.halfway, COUNT ( Orders.laborID ) AS passFROM ( OrdersINNER JOIN enjoy ON Orders.forgetID = Employees.dependID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23842,SELECT * FROM reader FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23843,SELECT central,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23844,SELECT * FROM pan,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23845,SELECT tight FROM tears,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23846,SELECT DISTINCT ice FROM cowboy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23847,SELECT COUNT ( DISTINCT equal ) FROM baseball,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23848,SELECT Count ( * ) AS knew,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23849,FROM ( SELECT DISTINCT family FROM journey ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

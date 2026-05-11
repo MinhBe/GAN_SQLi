@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12090,"plaa verdum 144,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12091,"c/ jara 9,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12092,00916150z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12093,eccles@aspirantes.gh,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12094,andreu agraso,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12095,esquilero,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12096,santa cruz de tenerife,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12097,indiligencia,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12098,misio+nal,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12099,moyes,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12100,pelland,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12101,car52lit7,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12102,srinivas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12103,25g0a00,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12104,86953454e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12105,7.09479E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12106,5urgui8a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12107,gupton,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12108,cabot camaran,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12109,mccaffria_malanowicz@fbi-criminal-network.com.mr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12110,78370849m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12111,51620770f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12112,38673697w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12113,"c/ maestro faus, 77, 13?f",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12114,62128531b,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12115,"c/ de pedro vidal s/n, 11d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12116,ugartechea oviol,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12117,leafloor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12118,calle nicolas funes 116,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12119,bakkum,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

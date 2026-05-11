@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+25470,SELECT AVG ( he ) FROM author SELECT SUM ( pitch ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25471,SELECT AVG ( let ) FROM continent SELECT SUM ( magic ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25472,SELECT COUNT ( mind ) FROM dog,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25473,SELECT COUNT ( everyone ) FROM color,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25474,SELECT AVG ( waste ) FROM expect,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25475,SELECT * FROM depth WHERE being NOT LIKE 'himself%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25476,SELECT * FROM coach WHERE wonder LIKE '%know%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25477,SELECT * FROM chamber WHERE think NOT LIKE '[add]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25478,"SELECT * FROM setting WHERE struck IN ( 'drink', 'giving', 'temperature' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25479,"SELECT * FROM local WHERE coffee NOT IN ( 'moving', 'gold', 'directly' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25480,SELECT * FROM becoming WHERE hunter IN ( SELECT thin FROM guess ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25481,SELECT * FROM officer WHERE taught BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25482,SELECT * FROM married WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25483,SELECT * FROM why WHERE quiet BETWEEN 'individual' AND 'at',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25484,"SELECT * FROM ordinary WHERE whom BETWEEN ""rabbit"" AND ""afternoon""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25485,SELECT * FROM shade WHERE heading NOT BETWEEN 'straight' AND 'written',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25486,SELECT * FROM happy WHERE establish BETWEEN complete09/01/1996basic AND within15/31/1996wish,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25487,SELECT * FROM threw WHERE appropriate BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25488,SELECT AVG ( distant ) FROM area SELECT SUM ( show ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25489,SELECT COUNT ( bone ) FROM power,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25490,SELECT COUNT ( dawnID ) FROM block,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25491,SELECT AVG ( Price ) FROM until,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25492,SELECT * FROM us WHERE zoo BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25493,"SELECT cheeseID AS ID, obtain AS fed FROM stay",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25494,"SELECT dinnerID AS ID, stranger AS language FROM heavy",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25495,"SELECT oxygen AS along, fence AS [instead] FROM food",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25496,"SELECT transportation, older+ ', ' + traffic+ ' ' + surprise+ ', ' + simple AS quietly FROM full",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25497,SELECT gently ( s ) FROM inside INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25498,"SELECT breakfast,golden,spider,ship,magnet ( ( clothes JOIN mind ON may.while = neighbor.writing ) INNER JOIN bareON Orders.definition = phrase.principalID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25499,SELECT cap ( s ) FROM few LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13830,"c/ gaspar reyes, 172 8?f",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13831,9.11358E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13832,cartaa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13833,porter,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13834,getulio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13835,lonnie,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13836,03621656f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13837,5.82525E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13838,fernald,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13839,1.57143E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13840,mortensen@look2fly.nr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13841,atiy,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13842,86943454g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13843,dasya4,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13844,duthie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13845,5.27381E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13846,pacn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13847,mirambell donet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13848,i2cit6d4r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13849,4.62514E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13850,ruano barril,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13851,arqu rocas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13852,hani,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13853,frerichs@underdog.as,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13854,equilibrio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13855,07441681p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13856,ve4t4nal,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13857,boreo@creacionesdolcevita.mo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13858,55235483v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13859,song@eyewear.nom.aw,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

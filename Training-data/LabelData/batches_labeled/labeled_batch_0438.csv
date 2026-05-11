@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13110,basset ramos,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13111,nakanishi@mariposasentudia.ec,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13112,telsfora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13113,bees3,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13114,cargu9,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13115,olmos de esgueva,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13116,"linares, 42",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13117,valle de yerri/deierri,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13118,lap-pun2@streaptease.hk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13119,juli,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13120,ranez@sandrasummer.bi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13121,bello.sandor@hipergipuzkoa.to,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13122,"alcalde baeza medina, s/n,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13123,6.14206E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13124,isolina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13125,mcallum,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13126,50422961s,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13127,garcilln,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13128,abaeto sanchon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13129,cicek0,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13130,shirleen,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13131,"c/ dau 100, 10-a",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13132,kellard@todobetis.gf,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13133,"calle mariano garcia, s/n",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13134,nanni-prucnal@fighting-machines.gf,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13135,fisgar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13136,pittner,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13137,eby@miplat.nl,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13138,norton@lesionesmusculares.uz,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13139,83607535m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

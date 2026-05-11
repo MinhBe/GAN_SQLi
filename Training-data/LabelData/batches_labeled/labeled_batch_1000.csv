@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29970,WHERE ProductID = ANY ( SELECT ProductID FROM OrderDetails WHERE Quantity = 10 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29971,WHERE ProductID = ANY ( SELECT ProductID FROM OrderDetails WHERE Quantity > 99 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29972,SELECT * FROM Customers ORDER BY CustomerName ASC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29973,SELECT * FROM Customers ORDER BY CustomerName DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29974,WHERE EXISTS ( SELECT ProductName FROM Products WHERE SupplierId = Suppliers.supplierId AND Price < 20 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29975,WHERE EXISTS ( SELECT ProductName FROM Products WHERE SupplierId = Suppliers.supplierId AND Price = 22 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29976,SELECT * FROM Customers WHERE CustomerName LIKE 'a_%_%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29977,SELECT * FROM Customers WHERE ROWNUM < = 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29978,SELECT * FROM Customers ORDER BY CustomerName,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29979,SELECT ASCII ( CustomerName ) AS NumCodeOfFirstChar FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29980,SELECT CHAR_LENGTH ( CustomerName ) AS LengthOfName FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29981,SELECT CHARACTER_LENGTH ( CustomerName ) AS LengthOfName FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29982,SELECT LCASE ( CustomerName ) AS LowercaseCustomerName FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29983,SELECT LENGTH ( CustomerName ) AS LengthOfName FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29984,SELECT LOWER ( CustomerName ) AS LowercaseCustomerName FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29985,SELECT REVERSE ( CustomerName ) FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29986,SELECT SPACE ( 10 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29987,SELECT TRIM ( ' SQL Tutorial ' ) AS TrimmedString,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29988,SELECT UCASE ( CustomerName ) AS UppercaseCustomerName FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29989,SELECT UPPER ( CustomerName ) AS UppercaseCustomerName FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29990,SELECT ABS ( -243.5 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29991,SELECT ACOS ( 0.25 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29992,SELECT ACOS ( -0.8 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29993,SELECT ASIN ( 0.25 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29994,SELECT ASIN ( -0.8 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29995,SELECT ATAN ( 2.5 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29996,SELECT AVG ( Price ) AS AveragePrice FROM Products,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29997,SELECT CEIL ( 25.75 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29998,SELECT CEIL ( 25 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29999,SELECT CEILING ( 25.75 ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

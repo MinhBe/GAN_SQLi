@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13260,benegiles,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13261,enrique,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13262,fuente de piedra,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13263,angeliek,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13264,chicon merlo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13265,obolensky@etnics.hr,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13266,me73ga,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13267,16650765f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13268,membrilla,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13269,novalbos illarraga,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13270,c1lab8,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13271,aguilar de cods,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13272,"lealtad, 78, 6-h",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13273,petrie3@menorca.com.kp,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13274,5i852469,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13275,27597488h,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13276,av. bayona 127 1?c,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13277,cotner,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13278,gourtchenko@cirujanaplastica.nl,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13279,cabada ferrus,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13280,chinaphan@viajesdacapalla.eh,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13281,yu-chian,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13282,"rua bamio, 190 11?h",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13283,7.67E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13284,p81i4uer3o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13285,"calle archidona 27, 11?a",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13286,fasti-dio,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13287,brittani,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13288,marcos esculta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13289,03344221k,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

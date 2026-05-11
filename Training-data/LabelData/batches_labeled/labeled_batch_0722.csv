@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+21630,SELECT AVG ( map ) FROM still,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21631,SELECT * FROM friend WHERE were NOT LIKE '[seed]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21632,SELECT AVG ( composition ) FROM join SELECT SUM ( will ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21633,SELECT AVG ( check ) FROM gold SELECT SUM ( plural ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21634,SELECT AVG ( heat ) FROM on SELECT SUM ( ancient ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21635,SELECT COUNT ( news ) FROM lamp,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21636,SELECT COUNT ( remain ) FROM height,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21637,SELECT AVG ( courage ) FROM daughter,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21638,SELECT * FROM natural WHERE piece NOT LIKE 'roar%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21639,SELECT * FROM handsome WHERE stairs LIKE '%consonant%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21640,SELECT * FROM shot WHERE break NOT LIKE '[plenty]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21641,"SELECT * FROM with WHERE paragraph IN ( 'explanation', 'couple', 'nor' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21642,"SELECT * FROM hang WHERE fifteen NOT IN ( 'three', 'speech', 'furniture' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21643,SELECT * FROM noon WHERE combine IN ( SELECT satellites FROM whom ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21644,SELECT * FROM forty WHERE across BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21645,SELECT * FROM tired WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21646,SELECT * FROM leave WHERE count BETWEEN 'yourself' AND 'group',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21647,"SELECT * FROM struggle WHERE himself BETWEEN ""sound"" AND ""pass""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21648,SELECT * FROM could WHERE corner NOT BETWEEN 'certainly' AND 'oxygen',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21649,SELECT * FROM save WHERE spread BETWEEN potatoes09/01/1996we AND salmon15/31/1996baseball,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21650,SELECT * FROM is WHERE perfectly BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21651,SELECT AVG ( fastened ) FROM fighting SELECT SUM ( hay ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21652,SELECT COUNT ( he ) FROM clothing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21653,SELECT COUNT ( furnitureID ) FROM carry,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21654,SELECT AVG ( Price ) FROM friend,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21655,SELECT * FROM cast WHERE aside BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21656,"SELECT islandID AS ID, skin AS because FROM thousand",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21657,"SELECT actualID AS ID, gasoline AS wrote FROM stand",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21658,"SELECT fox AS north, ahead AS [each] FROM office",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21659,"SELECT south, president+ ', ' + heat+ ' ' + fact+ ', ' + finger AS which FROM leader",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

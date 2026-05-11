@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23010,SELECT AVG ( heard ) FROM position SELECT SUM ( thing ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23011,SELECT COUNT ( wrong ) FROM work,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23012,SELECT COUNT ( slept ) FROM visit,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23013,SELECT AVG ( train ) FROM park,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23014,SELECT * FROM right WHERE industrial NOT LIKE 'fifth%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23015,SELECT * FROM central WHERE lesson LIKE '%am%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23016,SELECT * FROM glass WHERE sometime NOT LIKE '[temperature]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23017,"SELECT * FROM club WHERE cabin IN ( 'chart', 'thread', 'carried' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23018,"SELECT * FROM cut WHERE interior NOT IN ( 'rays', 'yes', 'worker' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23019,SELECT * FROM struggle WHERE until IN ( SELECT hot FROM happen ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23020,SELECT * FROM sign WHERE dance BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23021,SELECT * FROM spring WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23022,SELECT * FROM science WHERE matter BETWEEN 'season' AND 'sides',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23023,"SELECT * FROM route WHERE south BETWEEN ""couple"" AND ""forward""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23024,SELECT * FROM food WHERE lips NOT BETWEEN 'ordinary' AND 'mix',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23025,SELECT * FROM invented WHERE raise BETWEEN band09/01/1996small AND people15/31/1996cross,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23026,SELECT * FROM kids WHERE avoid BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23027,SELECT AVG ( motor ) FROM silence SELECT SUM ( fix ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23028,SELECT COUNT ( men ) FROM certainly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23029,SELECT COUNT ( completeID ) FROM ill,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23030,SELECT AVG ( Price ) FROM hand,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23031,SELECT * FROM solve WHERE combination BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23032,"SELECT nutsID AS ID, scientist AS orbit FROM quick",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23033,"SELECT weighID AS ID, repeat AS thought FROM office",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23034,"SELECT bicycle AS lion, mood AS [toward] FROM naturally",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23035,"SELECT empty, wagon+ ', ' + or+ ' ' + dropped+ ', ' + smooth AS did FROM crowd",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23036,SELECT surprise ( s ) FROM examine INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23037,"SELECT tree,food,thumb,shine,nobody ( ( everyone JOIN ate ON completely.but = divide.fact ) INNER JOIN bornON Orders.create = gas.directionID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23038,SELECT loose ( s ) FROM golden LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23039,"SELECT repeat,such,divide FROM stood LEFT JOIN Orders ON outer.pairID = method.strength ORDER BY race.voice",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

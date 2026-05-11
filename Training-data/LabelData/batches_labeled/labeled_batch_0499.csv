@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14940,81208495a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14941,alide,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14942,calle oxigeno 197,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14943,thorndik9,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14944,venialbo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14945,65782684q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14946,inistola,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14947,mongo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14948,wieth@camiones-hibridos.md,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14949,urrupan moger,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14950,segura de los baos,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14951,dotty,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14952,30736152x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14953,96305711l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14954,"concordia, 102,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14955,moncada,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14956,lohr@show.nom.ad,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14957,villaturiel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14958,07194416q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14959,valladolid,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14960,puigdevanol regi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14961,priaranza del bierzo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14962,"vendrell, el",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14963,61371247w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14964,chapurrar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14965,c/ comercio 51,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14966,1.22216E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14967,86704903d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14968,"calle juan de mena, 133",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14969,9ara,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

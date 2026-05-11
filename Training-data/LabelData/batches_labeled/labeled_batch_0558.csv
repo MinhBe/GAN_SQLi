@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16710,empece9ora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16711,dra2atizar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16712,3.36323E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16713,otumba 24 13e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16714,crosby,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16715,vannuchhi_ecoffery@hotelesjerez.vc,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16716,handy.leleu@chevrolet-volt.gob,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16717,braddell@cincocolores.cat,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16718,pifiar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16719,23715739w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16720,72484997z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16721,7.64748E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16722,57879425v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16723,ballista@kpincentives.sa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16724,84826588n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16725,leopolda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16726,6onc+hesta,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16727,del cid labastie,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16728,3.15402E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16729,miner@zing.lk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16730,4.79764E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16731,6h11a3rud9,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16732,paterna del campo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16733,2.93801E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16734,8.73E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16735,14li6l4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16736,irado,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16737,jarad,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16738,hormilla,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16739,cuatriduana,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

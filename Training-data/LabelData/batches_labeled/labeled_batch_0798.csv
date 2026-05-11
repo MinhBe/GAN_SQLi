@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23910,"SELECT * FROM practice WHERE face BETWEEN ""according"" AND ""manner""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23911,SELECT * FROM science WHERE blood NOT BETWEEN 'raise' AND 'shaking',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23912,SELECT * FROM did WHERE wood BETWEEN west09/01/1996stomach AND doing15/31/1996manner,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23913,SELECT * FROM identity WHERE burn BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23914,SELECT AVG ( join ) FROM silent SELECT SUM ( garage ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23915,SELECT COUNT ( sail ) FROM traffic,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23916,SELECT COUNT ( placeID ) FROM right,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23917,SELECT AVG ( Price ) FROM pure,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23918,SELECT * FROM price WHERE stems BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23919,"SELECT roomID AS ID, modern AS total FROM statement",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23920,"SELECT sillyID AS ID, darkness AS depend FROM basis",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23921,"SELECT adult AS blue, having AS [chose] FROM off",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23922,"SELECT include, doctor+ ', ' + beneath+ ' ' + foot+ ', ' + success AS pain FROM parent",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23923,SELECT stay ( s ) FROM product INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23924,"SELECT city,four,spirit,temperature,jump ( ( occur JOIN stepped ON occasionally.over = till.compare ) INNER JOIN oppositeON Orders.manner = disappear.afternoonID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23925,SELECT personal ( s ) FROM single LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23926,"SELECT coffee,report,worried FROM combine LEFT JOIN Orders ON motion.armyID = instance.driven ORDER BY last.composition",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23927,SELECT around ( s FROM former RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23928,"SELECT Orders.nearlyrID, Employees.suppose, Employees.balance FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.provideID ORDER BY Orders.tapeID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23929,SELECT body ( s ) FROM statement FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23930,"SELECT column_name ( s ) FROM greatly,compare",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23931,SELECT bound ( s ) FROM teeth UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23932,SELECT help ( s ) FROM bat SELECT cap ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23933,SELECT doctor ( s ) FROM able UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23934,SELECT garage ( s ) FROM inside SELECT research FROM secret,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23935,SELECT straight FROM locate UNION SELECT grow FROM drop ORDER BY house,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23936,SELECT tobacco FROM newspaper UNION ALL SELECT numeral FROM stared ORDER BY substance,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+23937,"SELECT occasionally,younger FROM mass WHERE thou = 'trip' UNION SELECT stretch, engineer FROM certain",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23938,"SELECT COUNT ( sea ) , gasoline FROM fine BY kept",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23939,"SELECT Employees.smaller, COUNT ( Orders.noneID ) AS everybodyFROM ( OrdersINNER JOIN house ON Orders.degreeID = Employees.warnID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

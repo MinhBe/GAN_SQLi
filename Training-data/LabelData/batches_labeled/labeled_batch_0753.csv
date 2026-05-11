@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22560,"SELECT Employees.mistake, COUNT ( Orders.worseID ) AS oughtFROM ( OrdersINNER JOIN storm ON Orders.diameterID = Employees.bothID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22561,SELECT saved,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22562,SELECT * FROM list,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22563,SELECT time FROM flies,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22564,SELECT DISTINCT trick FROM rain,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22565,SELECT COUNT ( DISTINCT golden ) FROM poetry,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22566,SELECT Count ( * ) AS just,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22567,FROM ( SELECT DISTINCT magnet FROM stone ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22568,SELECT * FROM society,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22569,SELECT * FROM rice WHERE forget = 'shout',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22570,SELECT * FROM dirt WHERE leg = 'sight',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22571,SELECT * FROM suit WHERE brush = travel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22572,SELECT * FROM frozen WHERE fog = 'raw' AND City = 'soap',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22573,SELECT * FROM provide WHERE parallel = 'wore' OR cowboy = 'leaving',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22574,SELECT * FROM support WHERE race = 'needle' OR important = 'produce',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22575,SELECT * FROM still WHERE NOT particular = 'sometime',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22576,SELECT * FROM he WHERE deep = 'dug' AND ( connected = 'picture' OR place = 'now' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22577,SELECT * FROM mass WHERE NOT little = 'harder' AND NOT share = 'automobile',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22578,SELECT * FROM compass ORDER BY available,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22579,SELECT * FROM anywhere ORDER BY cage DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22580,"SELECT * FROM rays ORDER BY parallel, milk",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22581,"SELECT * FROM state ORDER BY basis ASC, trouble DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22582,"INSERT INTO lead ( hair, spend, nature, quiet, while, great ) VALUES ( 'took', 'route'. zulu', 'rhythm', 'rule', 'blue', 'during' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22583,"INSERT INTO harbor ( worth, bone, married ) VALUES ( 'basic', 'negative', 'spell' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22584,"SELECT strength, fox, pencil FROM trace WHERE hit IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22585,"SELECT rear, hurry, whereFROM surprise WHERE as IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22586,"UPDATE nice SET surprise = 'rope', City = 'beginning' WHERE later = image",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22587,UPDATE slipped SET field = 'pleasant'WHERE ocean = 'hungry',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22588,SELECT * FROM those,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22589,DELETE FROM recall WHERE lake = 'society',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

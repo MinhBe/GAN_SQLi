@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26010,SELECT COUNT ( DISTINCT cost ) FROM underline,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26011,SELECT Count ( * ) AS fix,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26012,FROM ( SELECT DISTINCT built FROM calm ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26013,SELECT * FROM buffalo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26014,SELECT * FROM day WHERE out = 'function',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26015,SELECT * FROM team WHERE saved = 'unless',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26016,SELECT * FROM industrial WHERE safe = correctly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26017,SELECT * FROM earth WHERE duty = 'sign' AND City = 'loose',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26018,SELECT * FROM sport WHERE cover = 'fair' OR field = 'cow',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26019,SELECT * FROM train WHERE sometime = 'flag' OR circle = 'battle',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26020,SELECT * FROM fifth WHERE NOT north = 'furniture',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26021,SELECT * FROM station WHERE trace = 'stiff' AND ( egg = 'whole' OR which = 'air' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26022,SELECT * FROM wind WHERE NOT basis = 'soon' AND NOT land = 'front',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26023,SELECT * FROM local ORDER BY pet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26024,SELECT * FROM bread ORDER BY temperature DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26025,"SELECT * FROM track ORDER BY mix, discuss",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26026,"SELECT * FROM change ORDER BY labor ASC, especially DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26027,"INSERT INTO with ( leaf, trip, today, life, view, afraid ) VALUES ( 'been', 'round'. suit', 'replied', 'year', 'help', 'save' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26028,"INSERT INTO got ( buried, human, plural ) VALUES ( 'steam', 'likely', 'third' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26029,"SELECT business, energy, threw FROM harbor WHERE do IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26030,"SELECT road, favorite, badFROM victory WHERE cause IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26031,"UPDATE hunter SET directly = 'from', City = 'rocky' WHERE any = general",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26032,UPDATE stared SET canal = 'drove'WHERE pale = 'store',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26033,SELECT * FROM above,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26034,DELETE FROM pole WHERE making = 'most',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26035,DELETE FROM ice,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26036,SELECT dirt ( s ) FROM safe,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26037,SELECT * FROM ( SELECT hand FROM situation ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26038,SELECT TOP 3 * FROM flies,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26039,SELECT * FROM take 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

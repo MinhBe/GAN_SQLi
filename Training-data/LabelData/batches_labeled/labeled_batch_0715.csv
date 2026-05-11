@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+21420,SELECT * FROM else WHERE entirely = 'tonight' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21421,SELECT * FROM climate WHERE done = 'boat' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21422,SELECT MIN ( piano ) AS voyage FROM experiment,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21423,SELECT MIN ( sunlight ) AS shoot FROM quietly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21424,SELECT * FROM ( SELECT porch FROM studied ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21425,SELECT TOP 3 * FROM printed SELECT * FROM watch 3SELECT * FROM believed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21426,SELECT * FROM heat 3 SELECT * FROM whenever,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21427,SELECT * FROM master FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM beauty,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21428,SELECT TOP 50 PERCENT * FROM officer SELECT * FROM single FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM move,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21429,SELECT * FROM oldest FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM field,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21430,SELECT TOP 3 * FROM careful WHERE interest = 'beyond' SELECT * FROM fence,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21431,SELECT * FROM team WHERE corn = 'lose' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21432,SELECT * FROM because WHERE happily = 'hunt' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21433,SELECT AVG ( chemical ) FROM ants,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21434,SELECT * FROM yourself WHERE favorite NOT LIKE '[farmer]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21435,SELECT AVG ( indicate ) FROM composed SELECT SUM ( forty ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21436,SELECT AVG ( mile ) FROM outer SELECT SUM ( fight ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21437,SELECT AVG ( threw ) FROM thing SELECT SUM ( fair ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21438,SELECT COUNT ( major ) FROM sets,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21439,SELECT COUNT ( flow ) FROM mouse,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21440,SELECT AVG ( mighty ) FROM company,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21441,SELECT * FROM plus WHERE several NOT LIKE 'mother%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21442,SELECT * FROM price WHERE choice LIKE '%wrapped%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21443,SELECT * FROM wore WHERE beyond NOT LIKE '[beneath]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21444,"SELECT * FROM find WHERE barn IN ( 'put', 'war', 'opinion' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21445,"SELECT * FROM friend WHERE castle NOT IN ( 'recall', 'post', 'four' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21446,SELECT * FROM ship WHERE giant IN ( SELECT softly FROM first ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21447,SELECT * FROM color WHERE rush BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21448,SELECT * FROM vapor WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21449,SELECT * FROM ever WHERE voyage BETWEEN 'ground' AND 'shelf',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

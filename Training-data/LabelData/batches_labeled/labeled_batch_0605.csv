@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+18120,benzoico,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18121,o.donnel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18122,c/ manresa 56 2-e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18123,manguita,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18124,albacete,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18125,e7ato,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18126,correa cachopo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18127,intercesoriamente,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18128,oskar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18129,margaux,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18130,6.74367E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18131,dorice,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18132,"calle pintor picasso, 182 5?d",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18133,buisn andres,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18134,quiles,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18135,sols galcera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18136,7.01035E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18137,pins turrubiartes,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18138,pagny@cpanelweb.yu,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18139,spradlin@pcvirus.dz,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18140,celadas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18141,"c/ afrodita 160, 5?b",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18142,3.79662E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18143,5.41816E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18144,iraola rudi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18145,winningt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18146,kellogg@viajesinternacionales.ne,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18147,duran manero,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18148,1.21588E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+18149,96277205x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

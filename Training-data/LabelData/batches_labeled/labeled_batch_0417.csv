@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12480,boix machiavelli,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12481,1o92r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12482,malh5jo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12483,villalobar de rioja,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12484,reig jallo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12485,"gredos, 114 12?g",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12486,elsen@whitehat.td,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12487,"c/ montereria, 146 4d",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12488,rudie@deuxmanagement.jo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12489,cosme,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12490,elvian,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12491,febrer pedrouzo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12492,anda matamalas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12493,av. del mar cantabrico 176 6-d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12494,log9era,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12495,liesemer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12496,ralf,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12497,montoro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12498,tomono@esteticadayda.az,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12499,magalia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12500,$amarulencia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12501,racette,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12502,38656027l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12503,ansorger,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12504,5.38547E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12505,bizantina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12506,bryson2@casablancabeach.kp,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12507,ridgely.loyat@cbgerindote.sk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12508,jose cadalso s/n 7d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12509,00033926r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15990,d308ada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15991,iruraiz-gauna,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15992,"carrer mestre albages 61,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15993,"calle santa apolonia, 47,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15994,8e6a74aer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15995,villarejo del valle,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15996,9.45394E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15997,pl9t1r4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15998,prdena del rincn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15999,15423399j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16000,3o7za732,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16001,audadora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16002,alfa71ta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16003,68689912k,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16004,estalell,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16005,octagonal,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16006,beasain,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16007,thuswald,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16008,vitacco,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16009,rothamel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16010,norring-fujikawa@autoconstruccion.au,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16011,mald,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16012,p5li8e5i2,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16013,robledillo de la jara,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16014,81717068t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16015,93698052p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16016,d2s7sp79ro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16017,mullin@gopersonaltrainers.nr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16018,1.76476E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16019,45025499d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

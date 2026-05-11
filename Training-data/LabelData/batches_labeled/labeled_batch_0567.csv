@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16980,tromba,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16981,"pont de bar, el",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16982,cracoviano,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16983,"calle la corta, 85",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16984,gasull vadell,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16985,1.69372E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16986,maeya,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16987,dagma,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16988,whitehur,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16989,hernardo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16990,senderow,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16991,gen7o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16992,alberite de san juan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16993,sheila,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16994,32788800t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16995,sadoyama,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16996,leigh_hellinger@atorre.sy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16997,eulalio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16998,74725623a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16999,marracos,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17000,78218686x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17001,comprensin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17002,desi4teresal,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17003,hania,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17004,kovac,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17005,"macario, 87,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17006,8.40007E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17007,afijacin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17008,ojeda fita,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17009,76591879q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

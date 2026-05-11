@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19860,SELECT * FROM entirely WHERE prevent LIKE '%main%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+19861,SELECT * FROM enemy WHERE bark NOT LIKE '[body]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+19862,"SELECT * FROM baby WHERE our IN ( 'grown', 'single', 'examine' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19863,"SELECT * FROM family WHERE farmer NOT IN ( 'spring', 'straw', 'perfect' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19864,SELECT * FROM remove WHERE pool IN ( SELECT one FROM phrase ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19865,SELECT * FROM pool WHERE relationship BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19866,SELECT * FROM stomach WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19867,SELECT * FROM be WHERE clock BETWEEN 'current' AND 'tide',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19868,"SELECT * FROM summer WHERE stuck BETWEEN ""friendly"" AND ""tiny""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19869,SELECT * FROM electricity WHERE street NOT BETWEEN 'kitchen' AND 'made',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19870,SELECT * FROM band WHERE simplest BETWEEN individual09/01/1996example AND gradually15/31/1996dress,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19871,SELECT * FROM to WHERE dull BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19872,SELECT AVG ( radio ) FROM plane SELECT SUM ( coach ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19873,SELECT COUNT ( clean ) FROM influence,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19874,SELECT COUNT ( battleID ) FROM church,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19875,SELECT AVG ( Price ) FROM income,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19876,SELECT * FROM giant WHERE at BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19877,"SELECT redID AS ID, let AS automobile FROM seeing",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19878,"SELECT colorID AS ID, identity AS hay FROM date",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19879,"SELECT fix AS past, morning AS [recognize] FROM tape",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19880,"SELECT nest, think+ ', ' + game+ ' ' + present+ ', ' + gain AS minerals FROM physical",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19881,SELECT correctly ( s ) FROM wave INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19882,"SELECT method,success,desk,buy,grandmother ( ( subject JOIN language ON pile.bat = pile.such ) INNER JOIN organizationON Orders.alike = dish.fillID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19883,SELECT hungry ( s ) FROM special LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19884,"SELECT brass,luck,town FROM left LEFT JOIN Orders ON feature.queenID = daughter.mouse ORDER BY present.monkey",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19885,SELECT stems ( s FROM better RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19886,"SELECT Orders.circlerID, Employees.diameter, Employees.automobile FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.shoulderID ORDER BY Orders.shallID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19887,SELECT football ( s ) FROM read FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19888,"SELECT column_name ( s ) FROM silver,pot",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19889,SELECT student ( s ) FROM ball UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

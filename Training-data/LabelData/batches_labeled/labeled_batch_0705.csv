@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+21120,SELECT * FROM hay FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21121,SELECT TOP 50 PERCENT * FROM finger,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21122,SELECT * FROM sides FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21123,SELECT TOP 3 * FROM through WHERE anyone = 'turn',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21124,SELECT * FROM guide WHERE group = 'most' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21125,SELECT * FROM popular WHERE grandfather = 'after' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21126,SELECT MIN ( fighting ) AS send FROM automobile,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21127,SELECT MIN ( power ) AS sum FROM sun,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21128,SELECT * FROM ( SELECT moon FROM human ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21129,SELECT TOP 3 * FROM everybody SELECT * FROM treated 3SELECT * FROM river,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21130,SELECT * FROM machinery 3 SELECT * FROM southern,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21131,SELECT * FROM charge FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM plural,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21132,SELECT TOP 50 PERCENT * FROM instrument SELECT * FROM news FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM electric,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21133,SELECT * FROM hope FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM recall,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21134,SELECT TOP 3 * FROM receive WHERE follow = 'riding' SELECT * FROM point,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21135,SELECT * FROM rope WHERE making = 'spring' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21136,SELECT * FROM made WHERE group = 'crop' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21137,SELECT AVG ( roof ) FROM burn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21138,SELECT * FROM method WHERE thought NOT LIKE '[police]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21139,SELECT AVG ( musical ) FROM dead SELECT SUM ( road ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21140,SELECT AVG ( step ) FROM say SELECT SUM ( wife ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21141,SELECT AVG ( hunter ) FROM bee SELECT SUM ( general ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21142,SELECT COUNT ( pick ) FROM stop,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21143,SELECT COUNT ( cake ) FROM porch,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21144,SELECT AVG ( agree ) FROM within,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21145,SELECT * FROM molecular WHERE porch NOT LIKE 'local%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21146,SELECT * FROM help WHERE fought LIKE '%poor%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21147,SELECT * FROM grandmother WHERE fourth NOT LIKE '[previous]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+21148,"SELECT * FROM transportation WHERE failed IN ( 'fish', 'record', 'happy' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21149,"SELECT * FROM pressure WHERE cowboy NOT IN ( 'apple', 'remain', 'month' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

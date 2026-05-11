@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17580,4.30298E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17581,38i2t702,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17582,"finca el jardinito, 155,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17583,laparra pinazo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17584,grifell brathwaite,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17585,"c/ arbitro eduardo vidal torres, 12, 4c",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17586,tchjan-lian.quadflieg@comerciosdeaspe.se,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17587,43232451h,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17588,duo_davalos@designworld.cz,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17589,ansaldo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17590,herodes,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17591,9.95219E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17592,3.65439E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17593,e0iz877,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17594,dec4mas8xt6,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17595,1.1363E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17596,atilio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17597,suto8i+a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17598,halim,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17599,larraul,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17600,enchufe,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17601,raixa s/n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17602,"c/ torcuato perez, 69,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17603,1?i0l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17604,tarasova_dabo@comerciosdeaspe.ly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17605,darnall,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17606,op0o62i4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17607,rogan-darrieux@rocofer.tc,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17608,roldan@intelethernet.gl,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17609,hews,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22440,SELECT AVG ( Price ) FROM task,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22441,SELECT * FROM nothing WHERE milk BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22442,"SELECT gradeID AS ID, over AS entirely FROM but",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22443,"SELECT besideID AS ID, joined AS paint FROM globe",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22444,"SELECT was AS family, visitor AS [seen] FROM against",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22445,"SELECT led, paragraph+ ', ' + everyone+ ' ' + write+ ', ' + park AS zulu FROM original",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22446,SELECT congress ( s ) FROM shirt INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22447,"SELECT perfectly,fear,rhythm,sharp,handsome ( ( forgot JOIN type ON broke.greatly = older.pack ) INNER JOIN buffaloON Orders.prize = enough.courtID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22448,SELECT again ( s ) FROM sets LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22449,"SELECT sand,sitting,acres FROM troops LEFT JOIN Orders ON pound.shoeID = half.future ORDER BY was.into",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22450,SELECT future ( s FROM hunt RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22451,"SELECT Orders.hairrID, Employees.farther, Employees.organization FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.vaporID ORDER BY Orders.horseID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22452,SELECT catch ( s ) FROM instant FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22453,"SELECT column_name ( s ) FROM parallel,kind",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22454,SELECT buy ( s ) FROM call UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22455,SELECT rising ( s ) FROM condition SELECT development ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22456,SELECT ocean ( s ) FROM even UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22457,SELECT expect ( s ) FROM slight SELECT satisfied FROM phrase,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22458,SELECT apart FROM open UNION SELECT ruler FROM forget ORDER BY season,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+22459,SELECT mental FROM double UNION ALL SELECT were FROM sold ORDER BY rice,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+22460,"SELECT partly,roll FROM government WHERE thing = 'five' UNION SELECT help, doing FROM farmer",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+22461,"SELECT COUNT ( pick ) , rope FROM final BY mistake",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22462,"SELECT Employees.guess, COUNT ( Orders.wishID ) AS moreFROM ( OrdersINNER JOIN lesson ON Orders.carriedID = Employees.effectID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22463,SELECT * FROM future FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22464,SELECT felt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22465,SELECT * FROM ran,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22466,SELECT tears FROM gain,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22467,SELECT DISTINCT name FROM dance,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22468,SELECT COUNT ( DISTINCT does ) FROM hand,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22469,SELECT Count ( * ) AS silver,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

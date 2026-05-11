@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14550,odelsia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14551,98810075m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14552,hache6,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14553,alpedrete,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14554,barruecopardo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14555,rowen,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14556,registro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14557,7ons15804d04en2e,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14558,c/ cristobal quintero 86,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14559,suchet@ciaplast.tel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14560,matungo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14561,3.55661E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14562,"calle florian de ocampo 114, 7?h",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14563,donadieu zanotti,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14564,iris,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14565,tucker.faulkner@clichotel.ck,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14566,nail,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14567,cary-whitten@magritte.pe,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14568,calle codigo correspondencia oficial correos-telegrafos s/n 9a,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14569,krzyski-wieman@hiperzaragoza.er,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14570,inund!ar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14571,gherardo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14572,76971829y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14573,ribera d'ondara,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14574,besal,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14575,6.73367E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14576,aran1el1ria,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14577,obed9e3cia0,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14578,rains8,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14579,caravaca de la cruz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

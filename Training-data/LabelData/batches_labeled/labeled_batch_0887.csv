@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26580,SELECT thing ( s ) FROM exact LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26581,"SELECT expect,thou,great FROM winter LEFT JOIN Orders ON forget.blockID = gold.paid ORDER BY television.across",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26582,SELECT atmosphere ( s FROM thread RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26583,"SELECT Orders.containrID, Employees.offer, Employees.work FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.viewID ORDER BY Orders.bushID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26584,SELECT great ( s ) FROM slow FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26585,"SELECT column_name ( s ) FROM goes,differ",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26586,SELECT division ( s ) FROM satisfied UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26587,SELECT middle ( s ) FROM promised SELECT tribe ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26588,SELECT once ( s ) FROM afraid UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26589,SELECT spent ( s ) FROM chief SELECT long FROM sum,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26590,SELECT hearing FROM local UNION SELECT short FROM film ORDER BY show,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+26591,SELECT tower FROM four UNION ALL SELECT stop FROM allow ORDER BY memory,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+26592,"SELECT bad,raw FROM spread WHERE current = 'thank' UNION SELECT subject, grow FROM parts",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+26593,"SELECT COUNT ( useful ) , express FROM merely BY tobacco",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26594,"SELECT Employees.level, COUNT ( Orders.additionID ) AS circusFROM ( OrdersINNER JOIN service ON Orders.southID = Employees.stairsID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26595,SELECT * FROM positive FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26596,SELECT familiar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26597,SELECT * FROM trade,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26598,SELECT frequently FROM may,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26599,SELECT DISTINCT middle FROM medicine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26600,SELECT COUNT ( DISTINCT fuel ) FROM history,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26601,SELECT Count ( * ) AS word,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26602,FROM ( SELECT DISTINCT live FROM mainly ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26603,SELECT * FROM gate,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26604,SELECT * FROM population WHERE question = 'certain',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26605,SELECT * FROM completely WHERE naturally = 'zoo',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26606,SELECT * FROM raw WHERE glass = sentence,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26607,SELECT * FROM hill WHERE mother = 'firm' AND City = 'ate',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26608,SELECT * FROM harder WHERE atom = 'voyage' OR transportation = 'those',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26609,SELECT * FROM met WHERE even = 'certainly' OR property = 'consonant',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

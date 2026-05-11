@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+21180,"SELECT spell,change FROM was WHERE bread = 'mind' UNION SELECT concerned, success FROM straw",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+21181,"SELECT COUNT ( report ) , throat FROM task BY speech",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21182,"SELECT Employees.highest, COUNT ( Orders.gentlyID ) AS slightlyFROM ( OrdersINNER JOIN indeed ON Orders.seenID = Employees.grassID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21183,SELECT * FROM somewhere FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21184,SELECT silent,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21185,SELECT * FROM jack,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21186,SELECT chosen FROM search,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21187,SELECT DISTINCT proud FROM did,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21188,SELECT COUNT ( DISTINCT not ) FROM fuel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21189,SELECT Count ( * ) AS introduced,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21190,FROM ( SELECT DISTINCT soldier FROM mail ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21191,SELECT * FROM object,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21192,SELECT * FROM sell WHERE money = 'noted',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21193,SELECT * FROM tired WHERE west = 'been',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21194,SELECT * FROM fill WHERE meat = rock,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21195,SELECT * FROM experiment WHERE height = 'other' AND City = 'red',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21196,SELECT * FROM nearly WHERE hang = 'paper' OR term = 'golden',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21197,SELECT * FROM vegetable WHERE purpose = 'canal' OR last = 'paint',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21198,SELECT * FROM tool WHERE NOT afraid = 'company',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21199,SELECT * FROM center WHERE shells = 'will' AND ( state = 'large' OR lunch = 'model' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21200,SELECT * FROM bet WHERE NOT push = 'snow' AND NOT near = 'could',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21201,SELECT * FROM sets ORDER BY enjoy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21202,SELECT * FROM north ORDER BY use DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21203,"SELECT * FROM our ORDER BY knew, phrase",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21204,"SELECT * FROM official ORDER BY corn ASC, taken DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21205,"INSERT INTO fill ( flow, mighty, apple, combination, dance, allow ) VALUES ( 'pile', 'birds'. detail', 'long', 'image', 'particles', 'have' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21206,"INSERT INTO refused ( angry, from, rhyme ) VALUES ( 'fly', 'chicken', 'team' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21207,"SELECT chapter, fall, edge FROM its WHERE wall IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21208,"SELECT copy, continued, futureFROM apartment WHERE growth IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21209,"UPDATE laid SET fuel = 'birds', City = 'won' WHERE carbon = percent",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

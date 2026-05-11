@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27510,DELETE FROM beauty,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27511,SELECT clock ( s ) FROM nearly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27512,SELECT * FROM ( SELECT religious FROM coast ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27513,SELECT TOP 3 * FROM alive,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27514,SELECT * FROM each 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27515,SELECT * FROM deep FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27516,SELECT TOP 50 PERCENT * FROM temperature,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27517,SELECT * FROM pull FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27518,SELECT TOP 3 * FROM news WHERE form = 'upon',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27519,SELECT * FROM chain WHERE education = 'continued' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27520,SELECT * FROM hurry WHERE proper = 'below' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27521,SELECT MIN ( book ) AS noted FROM person,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27522,SELECT MIN ( right ) AS wool FROM if,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27523,SELECT * FROM ( SELECT minerals FROM hand ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27524,SELECT TOP 3 * FROM to SELECT * FROM famous 3SELECT * FROM fellow,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27525,SELECT * FROM pull 3 SELECT * FROM topic,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27526,SELECT * FROM sit FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM apart,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27527,SELECT TOP 50 PERCENT * FROM measure SELECT * FROM stiff FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM paint,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27528,SELECT * FROM see FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM our,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27529,SELECT TOP 3 * FROM attack WHERE doctor = 'coat' SELECT * FROM smaller,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27530,SELECT * FROM put WHERE storm = 'silver' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27531,SELECT * FROM bound WHERE magnet = 'nearly' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27532,SELECT AVG ( outline ) FROM garage,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27533,SELECT * FROM news WHERE gently NOT LIKE '[paper]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27534,SELECT AVG ( next ) FROM both SELECT SUM ( vertical ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27535,SELECT AVG ( object ) FROM beginning SELECT SUM ( pick ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27536,SELECT AVG ( prevent ) FROM becoming SELECT SUM ( listen ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27537,SELECT COUNT ( memory ) FROM organization,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27538,SELECT COUNT ( regular ) FROM clean,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27539,SELECT AVG ( oil ) FROM happen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

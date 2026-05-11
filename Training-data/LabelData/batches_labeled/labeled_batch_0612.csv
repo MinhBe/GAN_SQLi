@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+18330,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28553 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18331,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 367845 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18332,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 367676 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18333,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 29420 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18334,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11451 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18335,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11507 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18336,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 290914 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18337,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 185 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18338,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 3823 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18339,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 189 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18340,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 187 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18341,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 193 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18342,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 191 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18343,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 4286 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18344,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 262312 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18345,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 53815 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18346,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 53820 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18347,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 8671 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18348,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 8679 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18349,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 9347 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18350,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 13610 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18351,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 13641 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18352,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 7074 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18353,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 12389 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18354,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 8767 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18355,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 13506 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18356,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 7064 ) ORDER BY meta_id ASC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18357,"SELECT ID, post_title, post_name FROM wp_posts WHERE post_type = 'wpcf7_contact_form'",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18358,SELECT option_value FROM wp_options WHERE option_name = 'kc_active_extensions' LIMIT 1,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18359,SELECT option_value FROM wp_options WHERE option_name = 'can_compress_scripts' LIMIT 1,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

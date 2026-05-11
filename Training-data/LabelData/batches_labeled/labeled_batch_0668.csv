@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+20010,SELECT * FROM army WHERE animal = 'cutting' OR cover = 'effort',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20011,SELECT * FROM fact WHERE four = 'pound' OR darkness = 'remember',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20012,SELECT * FROM cent WHERE NOT bound = 'memory',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20013,SELECT * FROM spider WHERE express = 'improve' AND ( wonderful = 'battle' OR gradually = 'west' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20014,SELECT * FROM return WHERE NOT song = 'construction' AND NOT willing = 'cap',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20015,SELECT * FROM sudden ORDER BY useful,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20016,SELECT * FROM outline ORDER BY given DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20017,"SELECT * FROM art ORDER BY carried, herself",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20018,"SELECT * FROM root ORDER BY electric ASC, remarkable DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20019,"INSERT INTO command ( trap, equal, classroom, solution, mirror, know ) VALUES ( 'border', 'wave'. share', 'tropical', 'soap', 'first', 'country' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20020,"INSERT INTO son ( observe, leaving, powder ) VALUES ( 'greatest', 'apart', 'sure' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20021,"SELECT pick, thumb, vessels FROM horn WHERE wooden IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20022,"SELECT dog, angry, whetherFROM swam WHERE chart IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20023,"UPDATE call SET member = 'fifteen', City = 'roar' WHERE first = spend",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20024,UPDATE doing SET die = 'damage'WHERE harbor = 'heat',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20025,SELECT * FROM writer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20026,DELETE FROM discuss WHERE cook = 'basic',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20027,DELETE FROM silence,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20028,SELECT become ( s ) FROM imagine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20029,SELECT * FROM ( SELECT youth FROM few ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20030,SELECT TOP 3 * FROM individual,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20031,SELECT * FROM thus 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20032,SELECT * FROM country FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20033,SELECT TOP 50 PERCENT * FROM wagon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20034,SELECT * FROM gather FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20035,SELECT TOP 3 * FROM popular WHERE blow = 'scared',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20036,SELECT * FROM blue WHERE free = 'officer' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20037,SELECT * FROM equator WHERE quickly = 'cloth' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20038,SELECT MIN ( deal ) AS has FROM instrument,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20039,SELECT MIN ( fire ) AS finish FROM longer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

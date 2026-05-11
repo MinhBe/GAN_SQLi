@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22650,SELECT spider ( s ) FROM settlers UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22651,SELECT nose ( s ) FROM muscle SELECT musical ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22652,SELECT you ( s ) FROM own UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22653,SELECT citizen ( s ) FROM news SELECT distant FROM hall,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22654,SELECT instrument FROM way UNION SELECT vast FROM sport ORDER BY rubber,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+22655,SELECT something FROM completely UNION ALL SELECT broken FROM welcome ORDER BY lamp,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+22656,"SELECT fastened,fall FROM wash WHERE enter = 'play' UNION SELECT seven, block FROM certainly",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+22657,"SELECT COUNT ( using ) , instrument FROM breeze BY widely",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22658,"SELECT Employees.oldest, COUNT ( Orders.wholeID ) AS raceFROM ( OrdersINNER JOIN close ON Orders.chanceID = Employees.scaleID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22659,SELECT * FROM done FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22660,SELECT phrase,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22661,SELECT * FROM hidden,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22662,SELECT high FROM sweet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22663,SELECT DISTINCT day FROM one,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22664,SELECT COUNT ( DISTINCT environment ) FROM metal,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22665,SELECT Count ( * ) AS column,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22666,FROM ( SELECT DISTINCT include FROM high ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22667,SELECT * FROM trap,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22668,SELECT * FROM level WHERE held = 'total',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22669,SELECT * FROM material WHERE poem = 'married',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22670,SELECT * FROM balloon WHERE roll = supper,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22671,SELECT * FROM board WHERE cloth = 'selection' AND City = 'add',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22672,SELECT * FROM couple WHERE previous = 'tone' OR street = 'everyone',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22673,SELECT * FROM glad WHERE doll = 'already' OR huge = 'fight',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22674,SELECT * FROM proper WHERE NOT built = 'well',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22675,SELECT * FROM report WHERE machinery = 'entirely' AND ( average = 'spend' OR bar = 'tight' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22676,SELECT * FROM sister WHERE NOT themselves = 'hurried' AND NOT control = 'stay',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22677,SELECT * FROM typical ORDER BY official,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22678,SELECT * FROM can ORDER BY most DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22679,"SELECT * FROM hollow ORDER BY room, does",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

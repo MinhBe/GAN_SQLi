@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14700,econmicamente,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14701,bancalero,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14702,4.47673E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14703,11615910j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14704,a4go37a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14705,manducatoria,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14706,86a7o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14707,7.20777E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14708,"aldea de san nicols, la",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14709,fuente el olmo de scar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14710,idt,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14711,matie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14712,chaurett,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14713,1.52494E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14714,1.97346E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14715,alcoholado sabaters,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14716,5a09la,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14717,juneho,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14718,"purpurania, 79 3?b",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14719,3.09015E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14720,haiti 27 1?g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14721,6.25525E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14722,96174245k,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14723,"plza. leire, 1, 6?a",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14724,jed,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14725,stavro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14726,marlow@botilleria.com.ec,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14727,printers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14728,ridgeley_fechner@beesmer.ye,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14729,burns40,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

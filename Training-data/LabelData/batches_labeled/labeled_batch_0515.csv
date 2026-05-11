@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15420,congostrina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15421,oesterlein@connect.pw,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15422,"calle arenys de mar, 113,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15423,levert_lightfoot@laschinas.tm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15424,mendie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15425,7.68627E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15426,carricar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15427,2.96781E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15428,koontz,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15429,tacita,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15430,4la3ue95,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15431,jauregui cortines,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15432,20e28u6r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15433,13g0e7at42a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15434,21392437e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15435,berba.andreguy4@campanasextractoras.sh,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15436,d2s32bearse,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15437,reinazgo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15438,medel pujolriu,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15439,6.12137E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15440,cruey,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15441,77711232m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15442,"segura 30,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15443,soule terraza,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15444,pas63a0a,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15445,pred6.finir,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15446,serret@sierradealcaraz.dj,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15447,fraccionario,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15448,hungkang,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15449,"callejon sur, 93 13-c",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

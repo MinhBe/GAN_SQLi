@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19320,SELECT * FROM did WHERE body = 'pound' AND ( pour = 'original' OR tank = 'course' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19321,SELECT * FROM frozen WHERE NOT crowd = 'forward' AND NOT nor = 'soil',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19322,SELECT * FROM surrounded ORDER BY ear,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19323,SELECT * FROM against ORDER BY sky DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19324,"SELECT * FROM managed ORDER BY official, air",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19325,"SELECT * FROM smell ORDER BY grow ASC, religious DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19326,"INSERT INTO nobody ( trade, happen, amount, usual, interest, pony ) VALUES ( 'supply', 'folks'. lonely', 'moving', 'contain', 'weight', 'opinion' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19327,"INSERT INTO shelter ( third, disease, dance ) VALUES ( 'cause', 'wrote', 'eight' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19328,"SELECT handsome, brain, breakfast FROM port WHERE rule IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19329,"SELECT rod, create, seldomFROM happily WHERE idea IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19330,"UPDATE putting SET charge = 'went', City = 'dozen' WHERE signal = rate",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19331,UPDATE practical SET hang = 'fellow'WHERE carried = 'mark',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19332,SELECT * FROM chosen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19333,DELETE FROM behavior WHERE brain = 'unhappy',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19334,DELETE FROM half,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19335,SELECT color ( s ) FROM mixture,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19336,SELECT * FROM ( SELECT development FROM traffic ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19337,SELECT TOP 3 * FROM pet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19338,SELECT * FROM explore 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19339,SELECT * FROM anybody FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19340,SELECT TOP 50 PERCENT * FROM flies,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19341,SELECT * FROM everything FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19342,SELECT TOP 3 * FROM search WHERE weak = 'rate',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19343,SELECT * FROM yourself WHERE degree = 'nest' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19344,SELECT * FROM grabbed WHERE mass = 'pictured' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19345,SELECT MIN ( that ) AS declared FROM future,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19346,SELECT MIN ( else ) AS force FROM engineer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19347,SELECT * FROM ( SELECT excited FROM principle ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19348,SELECT TOP 3 * FROM tune SELECT * FROM feel 3SELECT * FROM statement,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19349,SELECT * FROM wealth 3 SELECT * FROM mail,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

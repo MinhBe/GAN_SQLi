@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14610,geli febo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14611,hamzeh,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14612,c/ francia-urb.s.nicolas 171,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14613,miremont@barnicesuv.th,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14614,yoon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14615,wilmont,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14616,reele.cto,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14617,02124892z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14618,genestar llufriu,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14619,milmarcos,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14620,teruel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14621,ezio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14622,falicov,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14623,3.79218E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14624,kokosopo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14625,47965007w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14626,salustio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14627,dobbing3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14628,1.99057E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14629,"pasaje lucero 147,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14630,perene,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14631,vazkn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14632,torrecilla del monte,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14633,2.96618E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14634,ingelber,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14635,3.86932E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14636,gunther@nik.com.tn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14637,alcalde gregorio espino 165,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14638,ratnam,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14639,re9a3io,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

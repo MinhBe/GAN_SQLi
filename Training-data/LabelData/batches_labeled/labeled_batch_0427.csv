@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12780,laurencia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12781,68318279e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12782,vladimirov@saludyfitness.br,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12783,bayliss,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12784,barcones,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12785,89c3via,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12786,2.94331E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12787,nuez de balboa 131 2-f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12788,59bi8ari7o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12789,aventada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12790,pilocarpina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12791,"cami son anglada, s/n",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12792,37655511a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12793,diffring9@discon.cv,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12794,zemanek,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12795,entrala,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12796,7.81237E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12797,6.80379E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12798,charlot@ringringrent.rw,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12799,yamasaki@multaspendientes.eg,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12800,cmitre,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12801,navarredonda de la rinconada,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12802,piggott@firstchoicecoffee.gq,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12803,confirmar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12804,shangtia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12805,mucientes,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12806,2.88508E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12807,6.4255E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12808,gater9,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12809,"reinosa 98, 13-e",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

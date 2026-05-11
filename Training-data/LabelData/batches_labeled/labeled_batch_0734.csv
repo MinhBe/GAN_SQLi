@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+21990,SELECT * FROM said ORDER BY subject,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21991,SELECT * FROM larger ORDER BY involved DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21992,"SELECT * FROM usual ORDER BY willing, lift",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21993,"SELECT * FROM tales ORDER BY how ASC, break DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21994,"INSERT INTO wool ( vapor, frog, ranch, nodded, war, angry ) VALUES ( 'mother', 'yourself'. thy', 'call', 'depend', 'thou', 'particles' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21995,"INSERT INTO cool ( mile, thank, leaf ) VALUES ( 'row', 'tribe', 'rope' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21996,"SELECT this, union, throat FROM hope WHERE replied IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21997,"SELECT change, dance, toyFROM value WHERE came IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21998,"UPDATE him SET belt = 'pleasant', City = 'particular' WHERE account = above",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21999,UPDATE deeply SET dance = 'trace'WHERE truth = 'bar',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22000,SELECT * FROM shore,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22001,DELETE FROM raise WHERE value = 'clock',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22002,DELETE FROM mud,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22003,SELECT pie ( s ) FROM constantly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22004,SELECT * FROM ( SELECT herself FROM population ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22005,SELECT TOP 3 * FROM world,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22006,SELECT * FROM master 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22007,SELECT * FROM sell FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22008,SELECT TOP 50 PERCENT * FROM difficult,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22009,SELECT * FROM field FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22010,SELECT TOP 3 * FROM activity WHERE complete = 'welcome',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22011,SELECT * FROM canal WHERE world = 'vast' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22012,SELECT * FROM softly WHERE ride = 'different' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22013,SELECT MIN ( industry ) AS just FROM deep,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22014,SELECT MIN ( deep ) AS visitor FROM early,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22015,SELECT * FROM ( SELECT mass FROM deep ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22016,SELECT TOP 3 * FROM bigger SELECT * FROM could 3SELECT * FROM wooden,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22017,SELECT * FROM donkey 3 SELECT * FROM shut,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22018,SELECT * FROM certain FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM system,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22019,SELECT TOP 50 PERCENT * FROM definition SELECT * FROM practice FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM cook,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

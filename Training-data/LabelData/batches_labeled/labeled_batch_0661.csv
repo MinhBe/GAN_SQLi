@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19800,SELECT but,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19801,SELECT * FROM front,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19802,SELECT trail FROM tie,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19803,SELECT DISTINCT ride FROM bag,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19804,SELECT COUNT ( DISTINCT play ) FROM ate,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19805,SELECT Count ( * ) AS cutting,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19806,FROM ( SELECT DISTINCT massage FROM fact ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19807,SELECT * FROM coming,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19808,SELECT * FROM solve WHERE habit = 'situation',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19809,SELECT * FROM nervous WHERE sign = 'shade',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19810,SELECT * FROM ago WHERE noon = blank,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19811,SELECT * FROM tone WHERE swimming = 'rapidly' AND City = 'huge',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19812,SELECT * FROM success WHERE former = 'easier' OR citizen = 'usually',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19813,SELECT * FROM origin WHERE sudden = 'least' OR least = 'solid',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19814,SELECT * FROM yellow WHERE NOT now = 'bend',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19815,SELECT * FROM office WHERE pure = 'throw' AND ( flag = 'pilot' OR rest = 'character' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19816,SELECT * FROM mouse WHERE NOT family = 'parts' AND NOT did = 'planning',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19817,SELECT * FROM black ORDER BY seven,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19818,SELECT * FROM shadow ORDER BY present DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19819,"SELECT * FROM recent ORDER BY swept, play",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19820,"SELECT * FROM laugh ORDER BY until ASC, grandmother DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19821,"INSERT INTO younger ( improve, darkness, being, anywhere, rather, lie ) VALUES ( 'can', 'percent'. cattle', 'necessary', 'position', 'escape', 'check' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19822,"INSERT INTO life ( base, complex, wore ) VALUES ( 'silk', 'success', 'diameter' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19823,"SELECT diagram, early, curious FROM chemical WHERE huge IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19824,"SELECT fellow, tank, discussFROM throw WHERE position IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19825,"UPDATE tomorrow SET plant = 'or', City = 'nearer' WHERE garden = pipe",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19826,UPDATE broken SET may = 'universe'WHERE managed = 'dress',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19827,SELECT * FROM single,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19828,DELETE FROM coal WHERE dozen = 'widely',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19829,DELETE FROM organization,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

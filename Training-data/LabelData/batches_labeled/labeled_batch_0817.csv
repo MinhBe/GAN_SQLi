@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+24480,SELECT * FROM rocket WHERE pool = 'would' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24481,SELECT * FROM acres WHERE began = 'who' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24482,SELECT AVG ( easier ) FROM story,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24483,SELECT * FROM completely WHERE we NOT LIKE '[carry]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24484,SELECT AVG ( yesterday ) FROM pool SELECT SUM ( father ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24485,SELECT AVG ( fort ) FROM his SELECT SUM ( honor ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24486,SELECT AVG ( start ) FROM compass SELECT SUM ( traffic ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24487,SELECT COUNT ( escape ) FROM offer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24488,SELECT COUNT ( both ) FROM divide,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24489,SELECT AVG ( greatest ) FROM seen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24490,SELECT * FROM neighbor WHERE green NOT LIKE 'important%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24491,SELECT * FROM lack WHERE dark LIKE '�fort%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24492,SELECT * FROM chain WHERE alive NOT LIKE '[recent]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24493,"SELECT * FROM mark WHERE citizen IN ( 'strip', 'prepare', 'pencil' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24494,"SELECT * FROM out WHERE equator NOT IN ( 'pictured', 'visit', 'by' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24495,SELECT * FROM bean WHERE raw IN ( SELECT engineer FROM deer ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24496,SELECT * FROM mass WHERE rubbed BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24497,SELECT * FROM after WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24498,SELECT * FROM than WHERE slipped BETWEEN 'frighten' AND 'keep',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24499,"SELECT * FROM engineer WHERE sharp BETWEEN ""stomach"" AND ""loss""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24500,SELECT * FROM arm WHERE tired NOT BETWEEN 'hold' AND 'twice',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24501,SELECT * FROM mountain WHERE block BETWEEN modern09/01/1996dollar AND come15/31/1996love,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24502,SELECT * FROM something WHERE characteristic BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24503,SELECT AVG ( clothing ) FROM sign SELECT SUM ( known ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24504,SELECT COUNT ( second ) FROM inside,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24505,SELECT COUNT ( couldID ) FROM rocket,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24506,SELECT AVG ( Price ) FROM chapter,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24507,SELECT * FROM dig WHERE proud BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24508,"SELECT wealthID AS ID, particularly AS brown FROM break",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24509,"SELECT weightID AS ID, think AS window FROM plane",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

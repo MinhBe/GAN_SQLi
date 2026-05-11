@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23280,DELETE FROM take,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23281,SELECT two ( s ) FROM toward,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23282,SELECT * FROM ( SELECT clock FROM chest ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23283,SELECT TOP 3 * FROM determine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23284,SELECT * FROM street 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23285,SELECT * FROM promised FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23286,SELECT TOP 50 PERCENT * FROM anything,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23287,SELECT * FROM castle FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23288,SELECT TOP 3 * FROM wait WHERE electric = 'southern',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23289,SELECT * FROM adjective WHERE largest = 'vowel' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23290,SELECT * FROM loose WHERE depth = 'attention' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23291,SELECT MIN ( rule ) AS with FROM event,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23292,SELECT MIN ( food ) AS source FROM both,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23293,SELECT * FROM ( SELECT plant FROM breakfast ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23294,SELECT TOP 3 * FROM question SELECT * FROM gate 3SELECT * FROM goose,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23295,SELECT * FROM bag 3 SELECT * FROM except,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23296,SELECT * FROM standard FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM seeing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23297,SELECT TOP 50 PERCENT * FROM remarkable SELECT * FROM ten FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM those,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23298,SELECT * FROM serious FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM few,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23299,SELECT TOP 3 * FROM city WHERE shoot = 'ground' SELECT * FROM flow,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23300,SELECT * FROM completely WHERE bean = 'harder' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23301,SELECT * FROM raw WHERE term = 'entirely' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23302,SELECT AVG ( effect ) FROM last,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23303,SELECT * FROM giving WHERE car NOT LIKE '[ran]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23304,SELECT AVG ( wish ) FROM pile SELECT SUM ( duty ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23305,SELECT AVG ( involved ) FROM so SELECT SUM ( deer ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23306,SELECT AVG ( yard ) FROM was SELECT SUM ( factor ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23307,SELECT COUNT ( primitive ) FROM especially,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23308,SELECT COUNT ( bill ) FROM national,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23309,SELECT AVG ( out ) FROM colony,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

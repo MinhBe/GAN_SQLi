@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12990,62573420b,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12991,gaviota 13,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12992,verani@viajesdacapalla.gq,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12993,erill,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12994,arnaldo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12995,conmi5u52,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12996,naguib,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12997,"calle poeta guillen colom, 34, 4?d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12998,salerno.harmer@nexuspark.li,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12999,chinarro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13000,reencar!nacin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13001,7.63602E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13002,0a3ramplar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13003,m+ar8ca4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13004,baily,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13005,leda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13006,9.7668E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13007,garner3,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13008,caball,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13009,adelina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13010,ulls,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13011,ayoroa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13012,monopolizador,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13013,75u1al3e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13014,56597686e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13015,bride,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13016,martinez,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13017,langellotti,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13018,mercado 188,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13019,manda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

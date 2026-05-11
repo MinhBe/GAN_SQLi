@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17430,"c/ murillo, 106 5c",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17431,reith,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17432,2l04a8,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17433,81784894e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17434,jelisic@sevach.pf,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17435,tahull garola,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17436,agres,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17437,oktar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17438,hillerman.gallo@muebetuweb.ki,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17439,vai@sexplorador.mk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17440,hanlon@importaproductosespaoles.cs,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17441,lauriaul,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17442,"plza. gazteluzarra, 105 7?b",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17443,6.1643E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17444,isidoro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17445,abieldar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17446,6.36091E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17447,a2o2e5,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17448,cella,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17449,94987112x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17450,yunquera de henares,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17451,chaddie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17452,9.16169E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17453,1.8461E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17454,jaki,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17455,"carlos arniches 78,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17456,acu7ntiar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17457,nalbach0@softwaremasservicio.aero,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17458,"ametlla de mar, l'",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17459,5.861E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15330,4.46658E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15331,"doctor diego madrazo, 180",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15332,hoefer.tabuyo@gopersonalfitness.nz,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15333,giuliani casabella,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15334,9.61016E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15335,brait_burbridge@fichajes.nom.ic,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15336,nemesio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15337,rosenblatt@hormigon-impreso.az,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15338,7.20E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15339,8.65216E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15340,carstens,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15341,"c/ gustavo adolfo becquer 91,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15342,san miguel del pino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15343,ward@fortelingenieria.si,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15344,anjali,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15345,c/ pirucha s/n 4-e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15346,"c/ juan carlos onetti 4, 1?d",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15347,68252027x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15348,brion6,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15349,leuco vilca,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15350,"calle barrio carmelo 21,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15351,zigoitia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15352,navratil@sindns.as,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15353,carlina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15354,carceln,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15355,daochuan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15356,nhat,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15357,07951538r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15358,burguillos de toledo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15359,"paratge lila 30, 10?c",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

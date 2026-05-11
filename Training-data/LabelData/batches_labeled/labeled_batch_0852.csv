@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+25530,SELECT * FROM poem WHERE NOT donkey = 'heading' AND NOT salmon = 'everywhere',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25531,SELECT * FROM strength ORDER BY difference,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25532,SELECT * FROM go ORDER BY sharp DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25533,"SELECT * FROM equipment ORDER BY rhythm, least",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25534,"SELECT * FROM correct ORDER BY hand ASC, church DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25535,"INSERT INTO death ( guide, hit, without, pleasure, table, found ) VALUES ( 'move', 'bite'. tree', 'brass', 'led', 'corner', 'substance' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25536,"INSERT INTO curve ( pictured, guide, snow ) VALUES ( 'price', 'saddle', 'market' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25537,"SELECT swept, day, chain FROM nothing WHERE happily IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25538,"SELECT becoming, atomic, researchFROM carbon WHERE modern IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25539,"UPDATE sale SET jar = 'shorter', City = 'chain' WHERE occur = ordinary",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25540,UPDATE tiny SET follow = 'tight'WHERE return = 'rocky',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25541,SELECT * FROM also,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25542,DELETE FROM catch WHERE could = 'win',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25543,DELETE FROM weigh,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25544,SELECT catch ( s ) FROM field,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25545,SELECT * FROM ( SELECT somehow FROM rain ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25546,SELECT TOP 3 * FROM disappear,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25547,SELECT * FROM money 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25548,SELECT * FROM we FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25549,SELECT TOP 50 PERCENT * FROM gravity,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25550,SELECT * FROM anybody FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25551,SELECT TOP 3 * FROM hall WHERE difficulty = 'outer',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25552,SELECT * FROM poem WHERE stage = 'happen' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25553,SELECT * FROM fear WHERE church = 'dream' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25554,SELECT MIN ( damage ) AS won FROM sea,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25555,SELECT MIN ( twelve ) AS printed FROM automobile,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25556,SELECT * FROM ( SELECT interior FROM unusual ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25557,SELECT TOP 3 * FROM aloud SELECT * FROM invented 3SELECT * FROM visitor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25558,SELECT * FROM just 3 SELECT * FROM there,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25559,SELECT * FROM heart FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM jar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19470,SELECT * FROM bar WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19471,SELECT * FROM invented WHERE remember BETWEEN 'nearer' AND 'rose',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19472,"SELECT * FROM pencil WHERE stop BETWEEN ""frighten"" AND ""whale""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19473,SELECT * FROM whatever WHERE health NOT BETWEEN 'into' AND 'managed',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19474,SELECT * FROM think WHERE property BETWEEN kill09/01/1996flag AND yourself15/31/1996love,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19475,SELECT * FROM strange WHERE rabbit BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19476,SELECT AVG ( official ) FROM flame SELECT SUM ( mental ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19477,SELECT COUNT ( relationship ) FROM value,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19478,SELECT COUNT ( roomID ) FROM tobacco,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19479,SELECT AVG ( Price ) FROM compare,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19480,SELECT * FROM have WHERE unless BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19481,"SELECT planetID AS ID, grew AS knew FROM ranch",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19482,"SELECT goID AS ID, making AS opposite FROM function",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19483,"SELECT gave AS add, welcome AS [river] FROM officer",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19484,"SELECT measure, they+ ', ' + declared+ ' ' + repeat+ ', ' + entire AS catch FROM hospital",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19485,SELECT slight ( s ) FROM transportation INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19486,"SELECT troops,thousand,someone,energy,took ( ( handle JOIN hello ON union.fish = little.natural ) INNER JOIN keepON Orders.sides = police.morningID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19487,SELECT depend ( s ) FROM larger LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19488,"SELECT standard,factory,lying FROM receive LEFT JOIN Orders ON dangerous.circusID = guess.sand ORDER BY us.stems",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19489,SELECT writer ( s FROM black RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19490,"SELECT Orders.strongerrID, Employees.usual, Employees.tobacco FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.metID ORDER BY Orders.taskID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19491,SELECT headed ( s ) FROM threw FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19492,"SELECT column_name ( s ) FROM ago,alike",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19493,SELECT apple ( s ) FROM rice UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19494,SELECT conversation ( s ) FROM sit SELECT involved ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19495,SELECT yesterday ( s ) FROM trip UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19496,SELECT therefore ( s ) FROM weak SELECT pleasant FROM radio,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19497,SELECT agree FROM sink UNION SELECT brown FROM ill ORDER BY describe,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+19498,SELECT wonderful FROM effort UNION ALL SELECT former FROM so ORDER BY center,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+19499,"SELECT occur,clothes FROM oil WHERE remain = 'quarter' UNION SELECT plane, zipper FROM zoo",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based

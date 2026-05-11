@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+25590,SELECT * FROM noise WHERE gray BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25591,"SELECT personalID AS ID, tape AS couple FROM happy",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25592,"SELECT fightingID AS ID, fire AS constantly FROM come",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25593,"SELECT world AS hide, youth AS [flat] FROM brave",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25594,"SELECT nest, leave+ ', ' + wool+ ' ' + coffee+ ', ' + top AS greater FROM rod",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25595,SELECT low ( s ) FROM money INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25596,"SELECT clock,bare,fruit,mile,tree ( ( bottom JOIN hurried ON planning.state = society.chair ) INNER JOIN weON Orders.bar = child.sheepID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25597,SELECT small ( s ) FROM force LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25598,"SELECT coat,fought,cost FROM avoid LEFT JOIN Orders ON men.marriedID = exchange.were ORDER BY finest.recognize",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25599,SELECT sail ( s FROM little RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25600,"SELECT Orders.collectrID, Employees.current, Employees.kind FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.settingID ORDER BY Orders.fourID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25601,SELECT camp ( s ) FROM situation FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25602,"SELECT column_name ( s ) FROM herd,scientist",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25603,SELECT next ( s ) FROM post UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25604,SELECT boy ( s ) FROM card SELECT carry ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25605,SELECT flight ( s ) FROM basis UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25606,SELECT minute ( s ) FROM activity SELECT straw FROM collect,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25607,SELECT string FROM boy UNION SELECT bit FROM occur ORDER BY theory,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+25608,SELECT roll FROM exclaimed UNION ALL SELECT rabbit FROM struggle ORDER BY office,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+25609,"SELECT deal,college FROM everybody WHERE active = 'mirror' UNION SELECT cloth, scared FROM indicate",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+25610,"SELECT COUNT ( guess ) , shall FROM measure BY tobacco",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25611,"SELECT Employees.warm, COUNT ( Orders.twoID ) AS diagramFROM ( OrdersINNER JOIN shadow ON Orders.pondID = Employees.norID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25612,SELECT * FROM meant FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25613,SELECT window,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25614,SELECT * FROM prove,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25615,SELECT surprise FROM purpose,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25616,SELECT DISTINCT noise FROM pony,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25617,SELECT COUNT ( DISTINCT sound ) FROM serious,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25618,SELECT Count ( * ) AS kill,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25619,FROM ( SELECT DISTINCT terrible FROM roar ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14580,"almendro, 28 6?c",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14581,"camino del caliero, 75",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14582,"calle del derecho 17,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14583,mattos@velazquezlarraaga.dd,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14584,t08a26,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14585,wanda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14586,blakley@asyra.ao,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14587,1pa5364e3a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14588,ab_ogadora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14589,8.83352E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14590,macoosh3,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14591,bertra canamasa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14592,intuitivo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14593,ivey,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14594,crip3gama,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14595,79856305y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14596,steinar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14597,conciliador,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14598,"c/ violetas 43, 3-a",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14599,junmeng,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14600,byoung,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14601,velov@expozaragozafloral2014.ac,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14602,6.25668E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14603,"c/ codigo correspondencia oficial correos-telegrafos 71, 10d",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14604,palera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14605,baumgarten bagudanc,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14606,"c/ aulencia, 84",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14607,leiro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14608,sobrecejo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14609,geria,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29280,SELECT * FROM express FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29281,SELECT TOP 3 * FROM chart WHERE can = 'west',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29282,SELECT * FROM gone WHERE around = 'bear' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29283,SELECT * FROM alike WHERE broke = 'satellites' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29284,SELECT MIN ( tales ) AS equally FROM program,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29285,SELECT MIN ( piano ) AS across FROM copper,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29286,SELECT * FROM ( SELECT view FROM shallow ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29287,SELECT TOP 3 * FROM useful SELECT * FROM fast 3SELECT * FROM relationship,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29288,SELECT * FROM recently 3 SELECT * FROM excellent,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29289,SELECT * FROM nation FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM basket,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29290,SELECT TOP 50 PERCENT * FROM instant SELECT * FROM managed FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM nine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29291,SELECT * FROM policeman FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM half,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29292,SELECT TOP 3 * FROM between WHERE flame = 'what' SELECT * FROM newspaper,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29293,SELECT * FROM welcome WHERE atom = 'load' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29294,SELECT * FROM than WHERE modern = 'favorite' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29295,SELECT AVG ( television ) FROM thrown,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29296,SELECT * FROM give WHERE ability NOT LIKE '[dropped]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29297,SELECT AVG ( greatest ) FROM doctor SELECT SUM ( route ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29298,SELECT AVG ( floor ) FROM safe SELECT SUM ( desk ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29299,SELECT AVG ( quickly ) FROM master SELECT SUM ( vowel ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29300,SELECT COUNT ( go ) FROM throat,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29301,SELECT COUNT ( rapidly ) FROM together,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29302,SELECT AVG ( slightly ) FROM vertical,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29303,SELECT * FROM never WHERE settle NOT LIKE 'organized%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29304,SELECT * FROM room WHERE uncle LIKE '%pond%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29305,SELECT * FROM more WHERE exactly NOT LIKE '[teach]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29306,"SELECT * FROM doctor WHERE adventure IN ( 'stuck', 'pull', 'title' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29307,"SELECT * FROM higher WHERE available NOT IN ( 'work', 'turn', 'plan' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29308,SELECT * FROM teacher WHERE half IN ( SELECT balance FROM prepare ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29309,SELECT * FROM student WHERE replace BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15750,gilden@gopersonalfitness.ua,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15751,c/ cardenal benilloch 171 12?h,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15752,doa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15753,prucha@comerciosaspe.ps,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15754,toledo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15755,"c/ juan rabadan 27, 6?a",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15756,aisha,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15757,villasandino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15758,zoldou@stainless.tw,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15759,92540376z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15760,patenaud,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15761,adria,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15762,1.42319E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15763,warhol@programagestionerp.ai,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15764,renny,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15765,wamba,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15766,puntagorda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15767,3ule1s,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15768,hierros 161 10f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15769,perfeccin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15770,brana@housemovie.id,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15771,terry@mtos.ar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15772,mera alccer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15773,c742na79,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15774,vada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15775,39654869v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15776,9.42955E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15777,nydia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15778,silcula,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15779,savino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

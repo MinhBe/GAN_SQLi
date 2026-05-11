@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16230,hedda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16231,"calle prat de la riba, 73",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16232,weldon@latiendadecolchones.ec,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16233,9.31575E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16234,bond@tomorrow.com.hk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16235,91436910l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16236,princep muntadas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16237,7.05723E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16238,malleson_varney@tomorrow.com.cz,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16239,alcalde manuel de la pinta s/n 13?f,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16240,229669a3a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16241,qunola,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16242,fuentes claras,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16243,saturnina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16244,roncha,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16245,heintje0@alpesfranceses.com.ro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16246,e41t8r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16247,69634179t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16248,schoelen.boswell@phd-photodecor.ca,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16249,graciano,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16250,d9str7par,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16251,mundy,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16252,8.23106E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16253,oretana,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16254,al9ol,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16255,3.07402E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16256,mosegui bofill,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16257,mohar@ropadegolf.gg,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16258,28614822q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16259,martens@ajuntamentbarcelona2-0.tl,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

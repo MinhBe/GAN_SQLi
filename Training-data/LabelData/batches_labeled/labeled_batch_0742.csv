@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22230,SELECT * FROM attached WHERE story LIKE '%signal%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22231,SELECT * FROM form WHERE apple NOT LIKE '[additional]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22232,"SELECT * FROM nobody WHERE vertical IN ( 'neighborhood', 'spent', 'opportunity' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22233,"SELECT * FROM figure WHERE worker NOT IN ( 'how', 'eye', 'familiar' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22234,SELECT * FROM composed WHERE machine IN ( SELECT thou FROM beautiful ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22235,SELECT * FROM safe WHERE introduced BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22236,SELECT * FROM film WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22237,SELECT * FROM press WHERE brief BETWEEN 'neighborhood' AND 'bent',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22238,"SELECT * FROM parts WHERE storm BETWEEN ""part"" AND ""tears""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22239,SELECT * FROM tea WHERE captain NOT BETWEEN 'just' AND 'park',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22240,SELECT * FROM body WHERE canal BETWEEN useful09/01/1996mind AND mountain15/31/1996thing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22241,SELECT * FROM column WHERE aloud BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22242,SELECT AVG ( practical ) FROM brother SELECT SUM ( yes ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22243,SELECT COUNT ( tightly ) FROM eleven,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22244,SELECT COUNT ( fliesID ) FROM grandfather,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22245,SELECT * FROM clothing WHERE laugh BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22246,"SELECT duckID AS ID, gulf AS shelter FROM slept",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22247,"SELECT fallenID AS ID, certain AS stay FROM supply",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22248,"SELECT important AS add, particular AS [into] FROM dull",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22249,"SELECT excitement, open+ ', ' + fair+ ' ' + valley+ ', ' + winter AS like FROM very",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22250,SELECT nation ( s ) FROM spend INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22251,"SELECT girl,horn,round,honor,like ( ( course JOIN he ON slight.arrow = general.motor ) INNER JOIN frogON Orders.cause = somebody.ridingID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22252,SELECT speed ( s ) FROM former LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22253,"SELECT alike,tell,pile FROM usually LEFT JOIN Orders ON yesterday.silkID = feet.zero ORDER BY steady.hill",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22254,SELECT rising ( s FROM turn RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22255,"SELECT Orders.relationshiprID, Employees.press, Employees.natural FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.planningID ORDER BY Orders.dogID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22256,SELECT where ( s ) FROM subject FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22257,"SELECT column_name ( s ) FROM please,lucky",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22258,SELECT frighten ( s ) FROM test UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22259,SELECT sentence ( s ) FROM good SELECT play ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12900,"calle las artes, 90,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12901,vilalba sasserra,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12902,58439631n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12903,senen,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12904,sylvia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12905,calle petunias 34 1-e,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12906,2.77767E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12907,angeles jarama,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12908,edlene,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12909,almansa ingls,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12910,jaworsky,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12911,lug5r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12912,yessica,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12913,13791863m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12914,5.49426E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12915,cecchini_polonsky@iurispretor.info,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12916,ptok@aou.com.th,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12917,fit irizibar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12918,escenogrfica,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12919,debicki@prestoesesto.hr,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12920,pari073l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12921,5.97528E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12922,almendros,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12923,3.37557E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12924,"robert graves, 101",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12925,5.04811E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12926,8.88987E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12927,descrieres@enibiza.com.ac,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12928,mbrose,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12929,biosca,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

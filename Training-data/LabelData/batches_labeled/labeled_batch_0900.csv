@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26970,"SELECT water AS dug, composition AS [situation] FROM nodded",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26971,"SELECT boy, sky+ ', ' + send+ ' ' + label+ ', ' + speed AS image FROM birthday",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26972,SELECT alive ( s ) FROM gulf INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26973,"SELECT land,flower,shop,alike,list ( ( stone JOIN gold ON column.solution = heading.football ) INNER JOIN eastON Orders.has = shirt.probablyID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26974,SELECT magic ( s ) FROM oxygen LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26975,"SELECT four,stronger,yourself FROM quick LEFT JOIN Orders ON almost.shortID = stems.once ORDER BY bend.tide",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26976,SELECT differ ( s FROM unit RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26977,"SELECT Orders.automobilerID, Employees.pure, Employees.just FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.fastID ORDER BY Orders.richID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26978,SELECT cotton ( s ) FROM column FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26979,"SELECT column_name ( s ) FROM chapter,west",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26980,SELECT distant ( s ) FROM establish UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26981,SELECT pen ( s ) FROM scientist SELECT bank ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26982,SELECT easily ( s ) FROM earn UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26983,SELECT noon ( s ) FROM wait SELECT cup FROM open,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26984,SELECT then FROM upper UNION SELECT double FROM army ORDER BY strong,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+26985,SELECT quietly FROM where UNION ALL SELECT short FROM went ORDER BY caught,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+26986,"SELECT more,wide FROM trade WHERE kids = 'begun' UNION SELECT along, grown FROM roll",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+26987,"SELECT COUNT ( hold ) , near FROM influence BY ground",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26988,"SELECT Employees.house, COUNT ( Orders.picturedID ) AS nationalFROM ( OrdersINNER JOIN series ON Orders.deeplyID = Employees.positionID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26989,SELECT * FROM cause FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26990,SELECT difference,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26991,SELECT * FROM separate,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26992,SELECT useful FROM warn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26993,SELECT DISTINCT visit FROM creature,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26994,SELECT COUNT ( DISTINCT date ) FROM ground,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26995,SELECT Count ( * ) AS mission,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26996,FROM ( SELECT DISTINCT fellow FROM recent ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26997,SELECT * FROM strip,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26998,SELECT * FROM repeat WHERE your = 'medicine',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26999,SELECT * FROM lucky WHERE stream = 'seems',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22680,"SELECT * FROM zulu ORDER BY height ASC, remove DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22681,"INSERT INTO desk ( hidden, atomic, lift, subject, noon, second ) VALUES ( 'fed', 'badly'. sure', 'word', 'alive', 'first', 'yesterday' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22682,"INSERT INTO what ( who, score, separate ) VALUES ( 'duty', 'dirty', 'turn' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22683,"SELECT sides, sort, rose FROM came WHERE eye IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22684,"SELECT top, cause, happilyFROM chicken WHERE ordinary IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22685,"UPDATE tribe SET support = 'wire', City = 'flat' WHERE duty = him",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22686,UPDATE gently SET widely = 'president'WHERE manufacturing = 'grew',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22687,SELECT * FROM chest,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22688,DELETE FROM married WHERE suppose = 'local',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22689,DELETE FROM prize,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22690,SELECT tone ( s ) FROM frog,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22691,SELECT * FROM ( SELECT bet FROM orange ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22692,SELECT TOP 3 * FROM program,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22693,SELECT * FROM had 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22694,SELECT * FROM yard FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22695,SELECT TOP 50 PERCENT * FROM aside,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22696,SELECT * FROM imagine FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22697,SELECT TOP 3 * FROM wrong WHERE bar = 'afraid',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22698,SELECT * FROM circus WHERE house = 'island' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22699,SELECT * FROM brave WHERE thread = 'fully' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22700,SELECT MIN ( just ) AS second FROM solar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22701,SELECT MIN ( choice ) AS play FROM extra,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22702,SELECT * FROM ( SELECT writing FROM in ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22703,SELECT TOP 3 * FROM believed SELECT * FROM lift 3SELECT * FROM meet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22704,SELECT * FROM huge 3 SELECT * FROM mine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22705,SELECT * FROM nor FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM improve,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22706,SELECT TOP 50 PERCENT * FROM butter SELECT * FROM tribe FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM please,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22707,SELECT * FROM offer FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM dawn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22708,SELECT TOP 3 * FROM several WHERE stomach = 'letter' SELECT * FROM any,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22709,SELECT * FROM repeat WHERE game = 'field' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

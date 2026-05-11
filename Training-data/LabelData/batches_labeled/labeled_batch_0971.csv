@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29100,SELECT AVG ( perfectly ) FROM band,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29101,SELECT * FROM square WHERE aside NOT LIKE '[strange]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29102,SELECT AVG ( circus ) FROM instead SELECT SUM ( secret ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29103,SELECT AVG ( except ) FROM slight SELECT SUM ( fog ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29104,SELECT AVG ( mistake ) FROM principal SELECT SUM ( opinion ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29105,SELECT COUNT ( funny ) FROM damage,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29106,SELECT COUNT ( even ) FROM storm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29107,SELECT AVG ( comfortable ) FROM health,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29108,SELECT * FROM correctly WHERE serve NOT LIKE 'inside%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29109,SELECT * FROM enter WHERE shorter LIKE '%my%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29110,SELECT * FROM case WHERE finest NOT LIKE '[location]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29111,"SELECT * FROM cannot WHERE soft IN ( 'toward', 'harbor', 'cloth' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29112,"SELECT * FROM was WHERE element NOT IN ( 'per', 'include', 'planning' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29113,SELECT * FROM voyage WHERE atom IN ( SELECT notice FROM my ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29114,SELECT * FROM while WHERE dream BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29115,SELECT * FROM dirty WHERE listen BETWEEN 'trick' AND 'ordinary',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29116,"SELECT * FROM needs WHERE pleasant BETWEEN ""fewer"" AND ""blood""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29117,SELECT * FROM perfect WHERE cloth NOT BETWEEN 'gold' AND 'along',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29118,SELECT * FROM lamp WHERE contrast BETWEEN camp09/01/1996blue AND per15/31/1996paragraph,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29119,SELECT * FROM nothing WHERE treated BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29120,SELECT AVG ( range ) FROM position SELECT SUM ( silver ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29121,SELECT COUNT ( value ) FROM tea,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29122,SELECT COUNT ( tightID ) FROM noted,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29123,SELECT AVG ( Price ) FROM skill,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29124,SELECT * FROM shallow WHERE wheel BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29125,"SELECT slightID AS ID, angle AS daughter FROM saved",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29126,"SELECT islandID AS ID, aware AS badly FROM farther",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29127,"SELECT pony AS vessels, dig AS [matter] FROM anyway",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29128,"SELECT simple, let+ ', ' + occasionally+ ' ' + break+ ', ' + shelf AS customs FROM ship",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29129,SELECT heading ( s ) FROM between INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

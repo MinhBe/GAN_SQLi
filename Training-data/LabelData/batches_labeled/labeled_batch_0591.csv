@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17700,5.72741E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17701,3.64462E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17702,rushmann@clubforex.jm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17703,"jana, la",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17704,de4f1g6raci4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17705,jaraba villa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17706,10155328t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17707,3.68572E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17708,96804276j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17709,infante juan manuel s/n 5?a,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17710,rombeek,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17711,chicle,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17712,71579092x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17713,sobrecogimiento,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17714,06314426y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17715,kinsman,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17716,alcojor larenas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17717,3.33213E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17718,3.6585E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17719,schucrenberg-oheaney3@testdevelcidad.info,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17720,c96reveidil5,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17721,esplendoroso,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17722,laurance@familiamarino.td,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17723,92793320g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17724,7o14c0o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17725,"calle sierra del quintanar, 199 9-b",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17726,nelia3,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17727,1.06099E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17728,lucas fiallega,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17729,4.43193E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26610,SELECT * FROM individual WHERE NOT post = 'horn',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26611,SELECT * FROM corner WHERE happy = 'orbit' AND ( essential = 'draw' OR special = 'brother' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26612,SELECT * FROM divide WHERE NOT beyond = 'invented' AND NOT handle = 'fellow',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26613,SELECT * FROM worse ORDER BY its,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26614,SELECT * FROM person ORDER BY necessary DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26615,"SELECT * FROM gravity ORDER BY arrive, strange",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26616,"SELECT * FROM fourth ORDER BY dust ASC, talk DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26617,"INSERT INTO automobile ( cry, strange, cost, though, wise, original ) VALUES ( 'nobody', 'price'. zero', 'table', 'fully', 'tool', 'loose' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26618,"INSERT INTO steady ( kitchen, far, source ) VALUES ( 'bear', 'ride', 'provide' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26619,"SELECT aboard, cookies, feathers FROM instant WHERE wrote IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26620,"SELECT remove, per, handFROM consist WHERE twenty IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26621,"UPDATE group SET tongue = 'bus', City = 'directly' WHERE we = seen",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26622,UPDATE saw SET clay = 'perhaps'WHERE second = 'plenty',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26623,SELECT * FROM they,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26624,DELETE FROM roof WHERE heat = 'mine',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26625,DELETE FROM tail,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26626,SELECT store ( s ) FROM mail,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26627,SELECT * FROM ( SELECT gift FROM behind ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26628,SELECT TOP 3 * FROM habit,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26629,SELECT * FROM moon 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26630,SELECT * FROM goes FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26631,SELECT TOP 50 PERCENT * FROM compound,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26632,SELECT * FROM fellow FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26633,SELECT TOP 3 * FROM load WHERE several = 'film',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26634,SELECT * FROM detail WHERE building = 'sum' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26635,SELECT * FROM usually WHERE least = 'addition' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26636,SELECT MIN ( mile ) AS class FROM careful,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26637,SELECT MIN ( truck ) AS me FROM west,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26638,SELECT * FROM ( SELECT dance FROM grain ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26639,SELECT TOP 3 * FROM mark SELECT * FROM raw 3SELECT * FROM bill,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

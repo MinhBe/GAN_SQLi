@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12840,claudino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12841,halliwil,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12842,moskuna@sitcpla.ye,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12843,adelaide,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12844,alpar-ornstein@rockefeller.nu,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12845,48415614q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12846,"calle ribadeo 78,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12847,reiner,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12848,8.72E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12849,knio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12850,6.71271E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12851,savitsky@tetdevelocidad.sj,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12852,barby,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12853,enconadura,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12854,zaca27,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12855,pijahumeda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12856,hays_adiarte@lingotes.com.je,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12857,riguier_waits3@copiar.com.gl,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12858,palau-saverdera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12859,dziawa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12860,barrenechea sadurn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12861,regla casiano,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12862,torre-pacheco,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12863,bollullos par del condado,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12864,onofre,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12865,rabanal morante,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12866,diccico_pastor@ao09.io,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12867,41724359j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12868,ohala,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12869,mamakos@palodegolf.com.rw,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

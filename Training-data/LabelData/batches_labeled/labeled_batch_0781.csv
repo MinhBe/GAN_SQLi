@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23400,SELECT * FROM which WHERE glass = 'saw' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23401,SELECT AVG ( slowly ) FROM addition,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23402,SELECT * FROM function WHERE society NOT LIKE '[bad]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23403,SELECT AVG ( lead ) FROM figure SELECT SUM ( applied ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23404,SELECT AVG ( railroad ) FROM suppose SELECT SUM ( dawn ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23405,SELECT AVG ( key ) FROM trip SELECT SUM ( orange ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23406,SELECT COUNT ( government ) FROM powder,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23407,SELECT COUNT ( against ) FROM hang,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23408,SELECT AVG ( however ) FROM nothing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23409,SELECT * FROM southern WHERE should NOT LIKE 'ourselves%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23410,SELECT * FROM indicate WHERE blind LIKE '�te%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23411,SELECT * FROM ship WHERE dinner NOT LIKE '[sentence]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23412,"SELECT * FROM giant WHERE obtain IN ( 'truck', 'percent', 'dish' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23413,"SELECT * FROM claws WHERE pour NOT IN ( 'mountain', 'began', 'prove' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23414,SELECT * FROM hide WHERE bent IN ( SELECT freedom FROM nest ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23415,SELECT * FROM ride WHERE exclaimed BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23416,SELECT * FROM triangle WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23417,SELECT * FROM enjoy WHERE shirt BETWEEN 'stranger' AND 'most',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23418,"SELECT * FROM cook WHERE adjective BETWEEN ""season"" AND ""separate""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23419,SELECT * FROM soldier WHERE smoke NOT BETWEEN 'slept' AND 'current',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23420,SELECT * FROM scientific WHERE acres BETWEEN fireplace09/01/1996escape AND something15/31/1996stems,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23421,SELECT * FROM pour WHERE stand BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23422,SELECT AVG ( though ) FROM making SELECT SUM ( cowboy ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23423,SELECT COUNT ( excellent ) FROM dropped,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23424,SELECT COUNT ( betweenID ) FROM active,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23425,SELECT AVG ( Price ) FROM spread,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23426,SELECT * FROM collect WHERE newspaper BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23427,"SELECT lipsID AS ID, deeply AS remember FROM scientific",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23428,"SELECT nextID AS ID, among AS wore FROM sit",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23429,"SELECT waste AS her, like AS [popular] FROM shore",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

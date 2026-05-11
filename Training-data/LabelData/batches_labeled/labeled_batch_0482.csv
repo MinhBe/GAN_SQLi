@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14430,coppin@sexl.no,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14431,hernani,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14432,h2lmi0to,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14433,netty9,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14434,horalek,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14435,consalve,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14436,cowper,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14437,destullecer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14438,levi@coivoco.gr,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14439,wilson@autoconstruccion.fi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14440,brendel@esposo.com.lk,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14441,bubnjar cangalaya,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14442,manganear,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14443,villanueva del rosario,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14444,guilas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14445,capa0r980,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14446,marcos,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14447,cauthen3,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14448,su0r6s09,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14449,43736952z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14450,valverde de alcal,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14451,"escultor bauls, 96,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14452,"c/ virgen de la almudena, 61 12?c",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14453,nela,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14454,garzon6@mtos.ro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14455,costello_browallius@autoconstruccion.bt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14456,reich.puffy@g-audi.pe,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14457,ambiental,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14458,evarist arnus 5 11-d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14459,lecompte,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

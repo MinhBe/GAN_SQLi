@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29910,SELECT * FROM Customers WHERE CustomerName LIKE '%or%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29911,SELECT * FROM Customers WHERE CustomerName LIKE '_r%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29912,SELECT * FROM Customers WHERE CustomerName LIKE 'a__%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29913,SELECT * FROM Customers WHERE ContactName LIKE 'a%o',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29914,SELECT * FROM Customers WHERE CustomerName NOT LIKE 'a%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29915,SELECT * FROM Customers WHERE City LIKE 'ber%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29916,SELECT * FROM Customers WHERE City LIKE '%es%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29917,SELECT * FROM Customers WHERE City LIKE '_ondon',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29918,SELECT * FROM Customers WHERE City LIKE 'L_n_on',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29919,SELECT * FROM Customers WHERE City LIKE '[bsp]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29920,SELECT * FROM Customers WHERE City LIKE '[a-c]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29921,SELECT * FROM Customers WHERE City LIKE '[!bsp]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29922,SELECT * FROM Customers WHERE City NOT LIKE '[bsp]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29923,SELECT STATEMENT ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29924,WHERE Country IN ( SELECT Country FROM Suppliers ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29925,SELECT column_name FROM table_name WHERE column_name BETWEEN value1 AND value2,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29926,SELECT * FROM Products WHERE Price BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29927,SELECT * FROM Products WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29928,SELECT * FROM Products WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni' ORDER BY ProductName,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29929,SELECT * FROM Products WHERE ProductName NOT BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni' ORDER BY ProductName,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29930,SELECT * FROM Orders WHERE OrderDate BETWEEN #07/01/1996# AND #07/31/1996#,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29931,SELECT * FROM Orders WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29932,SELECT column_name AS alias_name FROM table_name,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29933,SELECT column_name FROM table_name AS alias_name,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29934,SELECT column_name FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29935,SELECT column_name FROM table1 LEFT JOIN table2 ON table1.column_name = table2.column_name,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29936,SELECT column_name FROM table1 RIGHT JOIN table2 ON table1.column_name = table2.column_name,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29937,SELECT column_name FROM table1 FULL OUTER JOIN table2 ON table1.column_name = table2.column_name WHERE condition,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29938,SELECT column_name FROM table2,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29939,SELECT City FROM Suppliers ORDER BY City,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

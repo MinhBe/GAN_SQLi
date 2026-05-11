@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15870,santa maria de corc,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15871,jamaal,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15872,3.61612E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15873,mccowen@esencialser.mn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15874,rastrilladora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15875,macinnes,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15876,kit,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15877,cr48e24n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15878,keer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15879,crespo bullones,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15880,corazones 168,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15881,vaillant altimir,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15882,"calle mayor, s/n 11h",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15883,18995930t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15884,pegler,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15885,lerumeur@phd-photodecor.sj,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15886,monsalve almada,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15887,"fernandez latorre 14,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15888,c4nt0rn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15889,zein,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15890,termmetro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15891,"c/ ereta, 104,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15892,6.91307E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15893,sitiwet-chagas@creacionesacampada.travel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15894,"romana, la",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15895,alysia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15896,pelle1@906.com.aq,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15897,1.76964E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15898,calle juan agui 97 9-e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15899,26562587w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

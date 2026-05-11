@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17250,mola guell,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17251,1.89443E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17252,lilien@aprendeaestudiar.lt,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17253,clarucha,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17254,forslund,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17255,frankos,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17256,suplementero,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17257,olaf,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17258,lorain-ligero@mareventsprotocolosocial.tn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17259,malanquilla,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17260,cantbrico,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17261,pleiteador,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17262,valdemaluque,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17263,41217479f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17264,a9tr8pfag4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17265,6.81924E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17266,2.81517E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17267,envaronar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17268,1.58112E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17269,raspar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17270,quest@palmatraducciones.pw,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17271,"av. vicente mortes, 78, 8?f",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17272,calle panaderas de san cecilio 168,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17273,nalia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17274,nogueira de ramun,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17275,callos,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17276,nikolia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17277,3.5822E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17278,f5o9a8en9e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17279,vladamir,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14220,7stambrar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14221,vallart casabella,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14222,vish,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14223,"calle mercurio, 19,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14224,mairozio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14225,15365381r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14226,rec,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14227,mendracaveitia torreyas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14228,mccauley@autobuses-hibridos.ph,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14229,totino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14230,4.80991E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14231,53424203x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14232,"calle miquel santandreu 66,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14233,clariana de cardener,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14234,73732702s,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14235,miscelnea,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14236,r4a8e3a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14237,alcacil,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14238,russo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14239,healy,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14240,38348614r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14241,gargajienta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14242,"calle maria marin, 196,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14243,"pobla tornesa, la",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14244,sparksma,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14245,8.58629E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14246,ana,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14247,basilia,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14248,99783130e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14249,guciz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

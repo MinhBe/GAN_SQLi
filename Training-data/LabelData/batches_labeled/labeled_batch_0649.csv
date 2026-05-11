@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19440,SELECT * FROM planned FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19441,SELECT TOP 3 * FROM through WHERE thousand = 'slow',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19442,SELECT * FROM loose WHERE section = 'border' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19443,SELECT * FROM line WHERE map = 'connected' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19444,SELECT MIN ( religious ) AS bottom FROM situation,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19445,SELECT MIN ( wood ) AS union FROM disease,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19446,SELECT * FROM ( SELECT problem FROM exercise ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19447,SELECT TOP 3 * FROM round SELECT * FROM pig 3SELECT * FROM pan,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19448,SELECT * FROM congress 3 SELECT * FROM page,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19449,SELECT * FROM real FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM traffic,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19450,SELECT TOP 50 PERCENT * FROM wait SELECT * FROM eight FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM present,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19451,SELECT * FROM open FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM brass,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19452,SELECT TOP 3 * FROM hay WHERE religious = 'battle' SELECT * FROM slip,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19453,SELECT * FROM close WHERE found = 'pool' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19454,SELECT * FROM with WHERE loose = 'have' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19455,SELECT AVG ( hospital ) FROM crop,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19456,SELECT * FROM came WHERE already NOT LIKE '[matter]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+19457,SELECT AVG ( ourselves ) FROM bottle SELECT SUM ( back ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19458,SELECT AVG ( phrase ) FROM ahead SELECT SUM ( related ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19459,SELECT AVG ( mixture ) FROM raw SELECT SUM ( pattern ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19460,SELECT COUNT ( money ) FROM center,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19461,SELECT COUNT ( top ) FROM broken,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19462,SELECT AVG ( but ) FROM coming,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19463,SELECT * FROM composition WHERE cookies NOT LIKE 'useful%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+19464,SELECT * FROM mean WHERE market LIKE '%explore%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+19465,SELECT * FROM column WHERE star NOT LIKE '[drawn]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+19466,"SELECT * FROM anyway WHERE sheep IN ( 'gulf', 'silly', 'fill' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19467,"SELECT * FROM pressure WHERE affect NOT IN ( 'hair', 'shop', 'labor' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19468,SELECT * FROM building WHERE saw IN ( SELECT general FROM lift ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19469,SELECT * FROM dirty WHERE fellow BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

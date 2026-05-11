@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+11700,rabascall,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11701,braiam,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11702,8.99091E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11703,hofmeist0,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11704,"calle duque de zaragoza s/n,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11705,"c/ san guillermo, 182",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11706,sahid,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11707,wilde@casasdefamosos.zw,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11708,9903rti37,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11709,bablica,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11710,07485924e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11711,5.25502E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11712,encuar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11713,ramss,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11714,0e06u8s17,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11715,4.61733E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11716,mclawhor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11717,fabrelle,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11718,hormilleja,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11719,mayor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11720,pascuala,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11721,malditamente,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11722,4.47874E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11723,5.9555E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11724,spaeth@directoriogratuito.kr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11725,19784273h,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11726,84881293t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11727,"carretera estacion, 144, 8-d",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11728,coxcojita,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11729,mohandas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

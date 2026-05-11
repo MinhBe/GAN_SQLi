@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22800,SELECT * FROM ( SELECT laugh FROM situation ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22801,SELECT TOP 3 * FROM citizen SELECT * FROM saw 3SELECT * FROM jungle,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22802,SELECT * FROM read 3 SELECT * FROM because,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22803,SELECT * FROM herd FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM supply,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22804,SELECT TOP 50 PERCENT * FROM leaf SELECT * FROM store FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM wife,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22805,SELECT * FROM desk FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM essential,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22806,SELECT TOP 3 * FROM people WHERE sheep = 'tube' SELECT * FROM enemy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22807,SELECT * FROM figure WHERE moving = 'view' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22808,SELECT * FROM nervous WHERE broke = 'repeat' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22809,SELECT AVG ( breath ) FROM protection,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22810,SELECT * FROM down WHERE child NOT LIKE '[question]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22811,SELECT AVG ( what ) FROM molecular SELECT SUM ( write ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22812,SELECT AVG ( screen ) FROM labor SELECT SUM ( sound ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22813,SELECT AVG ( struggle ) FROM wave SELECT SUM ( each ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22814,SELECT COUNT ( high ) FROM pond,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22815,SELECT COUNT ( birds ) FROM wish,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22816,SELECT AVG ( nose ) FROM lower,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22817,SELECT * FROM family WHERE progress NOT LIKE 'try%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22818,SELECT * FROM want WHERE field LIKE '�rther%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22819,SELECT * FROM nearby WHERE raw NOT LIKE '[depth]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22820,"SELECT * FROM direct WHERE afternoon IN ( 'grew', 'number', 'habit' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22821,"SELECT * FROM simply WHERE rush NOT IN ( 'pride', 'general', 'hold' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22822,SELECT * FROM clay WHERE usual IN ( SELECT circle FROM various ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22823,SELECT * FROM younger WHERE cabin BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22824,SELECT * FROM understanding WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22825,SELECT * FROM bear WHERE magic BETWEEN 'fort' AND 'typical',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22826,"SELECT * FROM tonight WHERE came BETWEEN ""zoo"" AND ""symbol""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22827,SELECT * FROM yes WHERE strength NOT BETWEEN 'country' AND 'tie',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22828,SELECT * FROM jump WHERE garden BETWEEN third09/01/1996boat AND east15/31/1996plan,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22829,SELECT * FROM door WHERE one BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

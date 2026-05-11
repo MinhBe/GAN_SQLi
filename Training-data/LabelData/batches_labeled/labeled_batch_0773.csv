@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23160,SELECT * FROM fell WHERE adjective = 'several',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23161,SELECT * FROM effort WHERE scared = 'these',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23162,SELECT * FROM dress WHERE fat = excited,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23163,SELECT * FROM beside WHERE wise = 'frog' AND City = 'sets',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23164,SELECT * FROM couple WHERE try = 'pupil' OR body = 'orbit',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23165,SELECT * FROM physical WHERE hearing = 'shirt' OR opinion = 'breath',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23166,SELECT * FROM entire WHERE NOT sat = 'air',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23167,SELECT * FROM page WHERE rising = 'taken' AND ( thank = 'beside' OR bare = 'increase' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23168,SELECT * FROM entire WHERE NOT quiet = 'stone' AND NOT airplane = 'automobile',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23169,SELECT * FROM bottom ORDER BY thou,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23170,SELECT * FROM noise ORDER BY president DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23171,"SELECT * FROM usually ORDER BY game, nest",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23172,"SELECT * FROM coming ORDER BY curve ASC, bigger DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23173,"INSERT INTO simple ( darkness, ice, joy, loose, instead, settle ) VALUES ( 'scale', 'clean'. therefore', 'necessary', 'want', 'loss', 'earn' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23174,"INSERT INTO come ( rabbit, separate, full ) VALUES ( 'government', 'using', 'hard' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23175,"SELECT zulu, wise, poor FROM poor WHERE with IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23176,"SELECT behind, excitement, cardFROM exact WHERE disease IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23177,"UPDATE very SET anywhere = 'pressure', City = 'couple' WHERE pay = but",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23178,UPDATE sugar SET please = 'first'WHERE mass = 'shirt',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23179,SELECT * FROM naturally,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23180,DELETE FROM drew WHERE change = 'determine',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23181,DELETE FROM necessary,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23182,SELECT safe ( s ) FROM stranger,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23183,SELECT * FROM ( SELECT shallow FROM drive ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23184,SELECT TOP 3 * FROM hot,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23185,SELECT * FROM keep 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23186,SELECT * FROM zero FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23187,SELECT TOP 50 PERCENT * FROM bean,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23188,SELECT * FROM sitting FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23189,SELECT TOP 3 * FROM wall WHERE organized = 'willing',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27240,SELECT AVG ( but ) FROM improve SELECT SUM ( cross ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27241,SELECT AVG ( thought ) FROM forget SELECT SUM ( cutting ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27242,SELECT AVG ( community ) FROM supper SELECT SUM ( spring ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27243,SELECT COUNT ( cloud ) FROM already,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27244,SELECT COUNT ( grain ) FROM kept,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27245,SELECT AVG ( black ) FROM problem,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27246,SELECT * FROM particular WHERE past NOT LIKE 'shout%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27247,SELECT * FROM short WHERE feel LIKE '%plain%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27248,SELECT * FROM salmon WHERE principal NOT LIKE '[his]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27249,"SELECT * FROM exactly WHERE there IN ( 'individual', 'neighbor', 'report' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27250,"SELECT * FROM missing WHERE fairly NOT IN ( 'father', 'industry', 'travel' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27251,SELECT * FROM doll WHERE paragraph IN ( SELECT seems FROM like ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27252,SELECT * FROM farm WHERE herself BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27253,SELECT * FROM adjective WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27254,SELECT * FROM rate WHERE same BETWEEN 'two' AND 'congress',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27255,"SELECT * FROM rule WHERE balance BETWEEN ""plastic"" AND ""whatever""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27256,SELECT * FROM brief WHERE lesson NOT BETWEEN 'chose' AND 'sent',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27257,SELECT * FROM who WHERE pure BETWEEN round09/01/1996believed AND four15/31/1996build,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27258,SELECT * FROM accurate WHERE camp BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27259,SELECT AVG ( buy ) FROM equally SELECT SUM ( interior ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27260,SELECT COUNT ( hardly ) FROM changing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27261,SELECT COUNT ( movieID ) FROM each,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27262,SELECT AVG ( Price ) FROM detail,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27263,SELECT * FROM student WHERE wash BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27264,"SELECT journeyID AS ID, circle AS tall FROM clock",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27265,"SELECT spiderID AS ID, late AS also FROM win",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27266,"SELECT children AS character, leg AS [coach] FROM some",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27267,"SELECT thick, doctor+ ', ' + creature+ ' ' + these+ ', ' + balance AS list FROM wool",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27268,SELECT ancient ( s ) FROM driving INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27269,"SELECT automobile,balance,younger,substance,blank ( ( material JOIN leader ON president.clock = strike.captured ) INNER JOIN olderON Orders.horn = meal.graphID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

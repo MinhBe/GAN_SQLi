@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+28950,SELECT * FROM morning FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28951,SELECT tightly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28952,SELECT * FROM place,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28953,SELECT cover FROM building,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28954,SELECT DISTINCT art FROM if,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28955,SELECT COUNT ( DISTINCT kitchen ) FROM tired,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28956,SELECT Count ( * ) AS shells,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28957,FROM ( SELECT DISTINCT airplane FROM flow ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28958,SELECT * FROM atmosphere,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28959,SELECT * FROM swing WHERE cross = 'straight',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28960,SELECT * FROM forward WHERE bark = 'express',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28961,SELECT * FROM spread WHERE curious = slow,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28962,SELECT * FROM rhythm WHERE strength = 'widely' AND City = 'supply',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28963,SELECT * FROM immediately WHERE face = 'home' OR death = 'class',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28964,SELECT * FROM pan WHERE thumb = 'fair' OR nature = 'pole',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28965,SELECT * FROM outline WHERE NOT division = 'loose',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28966,SELECT * FROM something WHERE stock = 'let' AND ( take = 'hearing' OR engine = 'ants' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28967,SELECT * FROM day WHERE NOT powerful = 'married' AND NOT stepped = 'plan',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28968,SELECT * FROM danger ORDER BY wealth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28969,SELECT * FROM putting ORDER BY south DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28970,"SELECT * FROM alone ORDER BY mind, two",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28971,"SELECT * FROM doctor ORDER BY public ASC, mirror DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28972,"INSERT INTO nice ( plan, soft, paint, continent, appearance, handsome ) VALUES ( 'sink', 'win'. ask', 'twice', 'importance', 'foreign', 'in' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28973,"INSERT INTO bee ( related, return, either ) VALUES ( 'wear', 'matter', 'blue' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28974,"SELECT share, spider, plates FROM easy WHERE making IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28975,"SELECT identity, applied, laidFROM strip WHERE mathematics IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28976,"UPDATE brought SET again = 'center', City = 'father' WHERE tongue = grown",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28977,UPDATE alphabet SET colony = 'cutting'WHERE taken = 'stems',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28978,SELECT * FROM material,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28979,DELETE FROM coming WHERE stronger = 'excited',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

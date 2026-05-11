@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12330,kovacs,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12331,toba,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12332,2.78171E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12333,kiam,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12334,45518730m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12335,harvison,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12336,gaylor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12337,me93a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12338,el-hawar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12339,2.53246E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12340,masegosa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12341,herminia,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12342,kiri,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12343,boggs@cocteleria.dz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12344,forfoleda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12345,cerpa oitavn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12346,moloney@imarbella.travel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12347,arajol lo cascio,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12348,3.99279E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12349,adahuesca,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12350,planthar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12351,walborn@19horas.cat,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12352,kingslan,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12353,roccardi.betten@carrillo-de-albornoz.mil,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12354,rigente,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12355,cambiazo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12356,02906029w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12357,otilio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12358,"carrera 55,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12359,hennon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

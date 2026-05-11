@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26220,SELECT * FROM pipe ORDER BY safe,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26221,SELECT * FROM down ORDER BY all DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26222,"SELECT * FROM correct ORDER BY clothing, leader",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26223,"SELECT * FROM design ORDER BY famous ASC, breathing DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26224,"INSERT INTO base ( baseball, hunter, freedom, physical, top, corner ) VALUES ( 'mass', 'tide'. that', 'meat', 'food', 'maybe', 'seed' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26225,"INSERT INTO difficult ( explanation, complete, someone ) VALUES ( 'nervous', 'wear', 'spite' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26226,"SELECT itself, happen, breathe FROM first WHERE thing IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26227,"SELECT exist, average, presentFROM certain WHERE person IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26228,"UPDATE bag SET bottom = 'pie', City = 'yet' WHERE mixture = heading",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26229,UPDATE stretch SET learn = 'sink'WHERE stared = 'temperature',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26230,SELECT * FROM area,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26231,DELETE FROM slight WHERE central = 'produce',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26232,DELETE FROM greatest,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26233,SELECT those ( s ) FROM suppose,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26234,SELECT * FROM ( SELECT treated FROM naturally ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26235,SELECT TOP 3 * FROM worse,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26236,SELECT * FROM end 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26237,SELECT * FROM road FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26238,SELECT TOP 50 PERCENT * FROM cook,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26239,SELECT * FROM dirt FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26240,SELECT TOP 3 * FROM solve WHERE snow = 'possible',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26241,SELECT * FROM quick WHERE essential = 'grabbed' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26242,SELECT * FROM rain WHERE movement = 'garden' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26243,SELECT MIN ( whose ) AS whenever FROM sunlight,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26244,SELECT MIN ( smell ) AS party FROM medicine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26245,SELECT * FROM ( SELECT running FROM these ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26246,SELECT TOP 3 * FROM track SELECT * FROM pour 3SELECT * FROM lips,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26247,SELECT * FROM short 3 SELECT * FROM courage,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26248,SELECT * FROM slave FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM useful,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26249,SELECT TOP 50 PERCENT * FROM instance SELECT * FROM widely FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM pack,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

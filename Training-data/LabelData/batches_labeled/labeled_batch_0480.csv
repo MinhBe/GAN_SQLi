@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14370,92251391r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14371,vizcaya,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14372,bartlett@waterflyesp.eh,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14373,danisa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14374,7.87131E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14375,4ntra6a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14376,15495714q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14377,forsyne@velaconsultores.mx,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14378,rebolledo de la torre,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14379,1pergamin0da,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14380,jorquera,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14381,55912738z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14382,4ibari8a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14383,collazo fonts,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14384,55265136t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14385,fortuny goyenaga,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14386,almagrar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14387,fergus,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14388,larixa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14389,mahl iglesia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14390,marven,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14391,p7g2na,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14392,jaazael,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14393,grifeo@lalectura.af,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14394,lacasse,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14395,23763353y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14396,"glorieta valle de oro, 9 10a",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14397,walberg@ytv.com.gn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14398,alhama de granada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14399,6.8623E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

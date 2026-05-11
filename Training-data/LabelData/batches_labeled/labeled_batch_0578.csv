@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17310,peda2te1ca,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17311,sagunto/sagunt,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17312,98011650w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17313,4.8004E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17314,celio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17315,6ab48t1r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17316,aseguir,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17317,4e6qu5r5r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17318,nataln,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17319,galligan@bijoubijoudiferente.vg,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17320,leandro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17321,esc2n3alosa5e4te,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17322,84446214n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17323,tapioles,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17324,escogido francesc,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17325,breceda perdig,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17326,asensio kuschel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17327,carlosmara,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17328,stetson,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17329,1.72E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17330,milton,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17331,filpica,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17332,joya,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17333,"seca, la",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17334,trenaman_bourbault@sms24h.ar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17335,48263928s,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17336,borrachero muros,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17337,jasmann,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17338,lacoste,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17339,niwinska@estudiodeyoga.td,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

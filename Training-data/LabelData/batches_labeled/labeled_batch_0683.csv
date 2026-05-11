@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+20460,SELECT * FROM standard WHERE parts BETWEEN 'bark' AND 'beauty',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20461,"SELECT * FROM laid WHERE none BETWEEN ""cat"" AND ""ship""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20462,SELECT * FROM column WHERE captain NOT BETWEEN 'dear' AND 'variety',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20463,SELECT * FROM book WHERE engineer BETWEEN heart09/01/1996want AND girl15/31/1996family,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20464,SELECT * FROM price WHERE frame BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20465,SELECT AVG ( layers ) FROM lady SELECT SUM ( writing ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20466,SELECT COUNT ( those ) FROM mission,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20467,SELECT COUNT ( earID ) FROM leave,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20468,SELECT AVG ( Price ) FROM tried,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20469,SELECT * FROM roll WHERE outline BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20470,"SELECT screenID AS ID, tiny AS swimming FROM become",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20471,"SELECT taughtID AS ID, discovery AS steady FROM mainly",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20472,"SELECT creature AS mighty, adult AS [serious] FROM hair",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20473,"SELECT pick, current+ ', ' + compare+ ' ' + screen+ ', ' + smallest AS pride FROM child",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20474,SELECT clock ( s ) FROM animal INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20475,"SELECT pile,track,he,climate,dropped ( ( might JOIN us ON sheep.trace = explain.number ) INNER JOIN hairON Orders.bridge = due.mouthID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20476,SELECT worried ( s ) FROM essential LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20477,"SELECT circle,father,us FROM avoid LEFT JOIN Orders ON different.representID = spoken.putting ORDER BY chance.rice",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20478,SELECT shelf ( s FROM attached RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20479,"SELECT Orders.gunrID, Employees.driven, Employees.voice FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.dozenID ORDER BY Orders.establishID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20480,SELECT away ( s ) FROM clothing FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20481,"SELECT column_name ( s ) FROM chosen,eleven",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20482,SELECT attached ( s ) FROM particles UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20483,SELECT pot ( s ) FROM hang SELECT know ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20484,SELECT rush ( s ) FROM force UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20485,SELECT feet ( s ) FROM contain SELECT swimming FROM topic,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20486,SELECT owner FROM flies UNION SELECT circus FROM onto ORDER BY collect,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+20487,SELECT gone FROM simplest UNION ALL SELECT store FROM walk ORDER BY evening,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+20488,"SELECT trap,problem FROM high WHERE tie = 'danger' UNION SELECT attempt, inside FROM hunter",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+20489,"SELECT COUNT ( by ) , trap FROM somebody BY community",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

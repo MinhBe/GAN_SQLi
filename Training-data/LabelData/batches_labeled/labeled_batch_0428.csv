@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12810,arcediano,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12811,arroldo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12812,8.60573E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12813,pangborne@europop.mw,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12814,horcajo de montemayor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12815,ddimo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12816,98918059g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12817,mairena,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12818,crovetto roger,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12819,yescas feal,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12820,60210107v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12821,guadiana 149 6f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12822,alabiada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12823,plza. almudaina s/n,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12824,gwenda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12825,850il1ta045n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12826,"calle tiberiades, 90, 8-f",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12827,"c/ leopoldo alas ""clarin"" 4, 6?b",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12828,"calle goya 46, 10?g",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12829,26987451x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12830,ensminge,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12831,aguilar de bureba,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12832,clodettes_pierson@repretexbcn.ml,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12833,amarjit,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12834,congregation@saludyfitness.pm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12835,ch61c795,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12836,espinosa@chicashumedas.net,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12837,knippenberg@soyriojano.cf,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12838,triantap,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12839,baqu,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

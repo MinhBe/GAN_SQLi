@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+28050,SELECT * FROM garage WHERE pie BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28051,"SELECT wentID AS ID, again AS lose FROM pair",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28052,"SELECT angryID AS ID, hurried AS across FROM copy",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28053,"SELECT thank AS crew, smooth AS [plan] FROM met",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28054,"SELECT joined, boat+ ', ' + its+ ' ' + label+ ', ' + broken AS club FROM joy",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28055,SELECT blanket ( s ) FROM standard INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28056,"SELECT value,section,touch,aware,air ( ( wise JOIN fully ON box.exchange = careful.respect ) INNER JOIN noneON Orders.brick = paper.richID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28057,SELECT thus ( s ) FROM earth LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28058,"SELECT degree,forward,train FROM health LEFT JOIN Orders ON string.colorID = pole.difficult ORDER BY dog.farm",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28059,SELECT diagram ( s FROM actual RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28060,"SELECT Orders.musicalrID, Employees.figure, Employees.between FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.forgetID ORDER BY Orders.circusID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28061,SELECT war ( s ) FROM daughter FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28062,"SELECT column_name ( s ) FROM share,sound",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28063,SELECT stood ( s ) FROM pipe UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28064,SELECT these ( s ) FROM clear SELECT strange ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28065,SELECT social ( s ) FROM principal UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28066,SELECT somebody ( s ) FROM private SELECT future FROM state,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28067,SELECT farm FROM back UNION SELECT were FROM band ORDER BY ran,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+28068,SELECT try FROM ball UNION ALL SELECT anyway FROM stock ORDER BY yourself,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+28069,"SELECT somebody,sell FROM smaller WHERE ride = 'want' UNION SELECT held, during FROM gather",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+28070,"SELECT COUNT ( negative ) , mad FROM bend BY story",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28071,"SELECT Employees.drawn, COUNT ( Orders.drivingID ) AS beenFROM ( OrdersINNER JOIN with ON Orders.brainID = Employees.communityID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28072,SELECT * FROM week FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28073,SELECT turn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28074,SELECT missing FROM dot,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28075,SELECT DISTINCT free FROM them,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28076,SELECT COUNT ( DISTINCT certainly ) FROM environment,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28077,SELECT Count ( * ) AS clean,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28078,FROM ( SELECT DISTINCT car FROM process ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28079,SELECT * FROM cut,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

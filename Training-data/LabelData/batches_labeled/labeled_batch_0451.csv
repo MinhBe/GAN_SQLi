@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13500,urko,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13501,brines grimalda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13502,matilla la seca,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13503,paolo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13504,uriz carmona,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13505,alternat,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13506,aulakh,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13507,delfina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13508,lorletha,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13509,fililberto,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13510,32893899n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13511,95642019s,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13512,15821726a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13513,j804n86o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13514,ngoc,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13515,hiromi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13516,henrikson@hojainformativas.int,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13517,96399738e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13518,montamarta,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13519,alfeo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13520,antirreglamentaria,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13521,2.4571E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13522,39672063f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13523,a3ui11d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13524,"calle pea 49, 9?b",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13525,chao-pin2,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13526,toi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13527,amn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13528,vento8eda4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13529,abagail,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

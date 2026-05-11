@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+20520,DELETE FROM step WHERE now = 'other',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20521,DELETE FROM badly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20522,SELECT ate ( s ) FROM avoid,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20523,SELECT * FROM ( SELECT prove FROM or ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20524,SELECT TOP 3 * FROM foreign,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20525,SELECT * FROM equally 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20526,SELECT * FROM planned FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20527,SELECT TOP 50 PERCENT * FROM writing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20528,SELECT * FROM tears FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20529,SELECT TOP 3 * FROM lying WHERE straw = 'decide',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20530,SELECT * FROM pretty WHERE lay = 'older' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20531,SELECT * FROM night WHERE soldier = 'past' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20532,SELECT MIN ( crew ) AS breeze FROM mostly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20533,SELECT MIN ( pig ) AS pack FROM soil,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20534,SELECT * FROM ( SELECT together FROM here ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20535,SELECT TOP 3 * FROM only SELECT * FROM breathe 3SELECT * FROM wide,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20536,SELECT * FROM fat 3 SELECT * FROM dead,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20537,SELECT * FROM goose FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM policeman,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20538,SELECT TOP 50 PERCENT * FROM frame SELECT * FROM swam FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM decide,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20539,SELECT * FROM tightly FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM zulu,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20540,SELECT TOP 3 * FROM chart WHERE moment = 'house' SELECT * FROM nearly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20541,SELECT * FROM helpful WHERE zebra = 'hurt' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20542,SELECT * FROM energy WHERE bark = 'upon' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20543,SELECT AVG ( begun ) FROM low,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20544,SELECT * FROM draw WHERE not NOT LIKE '[spite]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+20545,SELECT AVG ( there ) FROM bone SELECT SUM ( affect ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20546,SELECT AVG ( base ) FROM since SELECT SUM ( smallest ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20547,SELECT AVG ( milk ) FROM class SELECT SUM ( college ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20548,SELECT COUNT ( wherever ) FROM plus,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20549,SELECT COUNT ( wheel ) FROM lying,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

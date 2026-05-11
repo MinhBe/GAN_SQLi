@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12510,9.17344E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12511,millares,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12512,jefferson-kuznezov@productosgarantizados.bb,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12513,ceciley,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12514,valentik,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12515,volkmann_parfrey1@sigloventidos.be,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12516,37246742j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12517,"calle sobrerroca 96, 7?f",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12518,491vi06a5,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12519,81180031j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12520,lombardo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12521,08490721h,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12522,undus de lerda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12523,donaldo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12524,asimismo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12525,63298862x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12526,2.47397E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12527,protectorio,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12528,pavlow@permutatucasa.fm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12529,31819774x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12530,linas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12531,mario caraball,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12532,soubier.roudenko@mtos.is,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12533,potroso,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12534,"plaa font, 179",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12535,cardiel de los montes,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12536,koock@aridossanchez.mt,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12537,rolleck@soybueno.mm,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12538,"calle hernandez iglesias, 160,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12539,"travesia uruguay, 172,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

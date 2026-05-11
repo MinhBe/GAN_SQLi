@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12000,22115972t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12001,dierkop@hayunmundoahifuera.id,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12002,a6ordab07,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12003,6.18738E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12004,c/ javea 57,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12005,haddon@hiperbarcelona.tl,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12006,3.19291E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12007,machar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12008,pl. heroes de espaa 20 11?g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12009,ductilidad,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12010,campe6n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12011,rattanap,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12012,garabana belart,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12013,jagdish,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12014,06363808f,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12015,9.5286E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12016,valdebenito garabana,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12017,hwei-lin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12018,mcavoy-zabczynski@discotecateatre.gt,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12019,atolera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12020,alexiana,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12021,lnguida/longida,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12022,matacandelas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12023,"azorin, 167",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12024,57584234p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12025,suen,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12026,natala,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12027,pap@evelin.com.ly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12028,paisaje,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12029,0utaperc09,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

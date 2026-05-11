@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22410,SELECT * FROM stepped FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM speak,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22411,SELECT TOP 50 PERCENT * FROM read SELECT * FROM kept FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM beyond,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22412,SELECT * FROM pool FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM peace,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22413,SELECT TOP 3 * FROM discuss WHERE enjoy = 'needle' SELECT * FROM still,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22414,SELECT * FROM monkey WHERE basket = 'corn' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22415,SELECT * FROM stop WHERE to = 'congress' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22416,SELECT AVG ( they ) FROM bone,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22417,SELECT * FROM bite WHERE dish NOT LIKE '[policeman]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22418,SELECT AVG ( thee ) FROM language SELECT SUM ( friend ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22419,SELECT AVG ( brief ) FROM forget SELECT SUM ( fast ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22420,SELECT AVG ( increase ) FROM president SELECT SUM ( today ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22421,SELECT COUNT ( ill ) FROM thing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22422,SELECT COUNT ( author ) FROM bear,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22423,SELECT AVG ( describe ) FROM cat,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22424,SELECT * FROM stepped WHERE tip NOT LIKE 'add%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22425,SELECT * FROM chief WHERE morning LIKE '%force%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22426,SELECT * FROM silver WHERE date NOT LIKE '[probably]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22427,"SELECT * FROM rhyme WHERE meal IN ( 'tail', 'smooth', 'month' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22428,"SELECT * FROM brush WHERE surrounded NOT IN ( 'log', 'form', 'every' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22429,SELECT * FROM fewer WHERE care IN ( SELECT thank FROM were ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22430,SELECT * FROM alive WHERE brief BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22431,SELECT * FROM clock WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22432,SELECT * FROM region WHERE leg BETWEEN 'dance' AND 'such',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22433,"SELECT * FROM night WHERE pitch BETWEEN ""doing"" AND ""no""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22434,SELECT * FROM since WHERE roar NOT BETWEEN 'biggest' AND 'control',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22435,SELECT * FROM itself WHERE century BETWEEN dirty09/01/1996more AND load15/31/1996case,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22436,SELECT * FROM wet WHERE recent BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22437,SELECT AVG ( army ) FROM build SELECT SUM ( running ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22438,SELECT COUNT ( six ) FROM here,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22439,SELECT COUNT ( worryID ) FROM dog,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14100,"subida san diego 8, 13?c",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14101,fuente el saz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14102,80igm94016,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14103,newport,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14104,96to3a38,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14105,70679983v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14106,hammong4@asyra.st,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14107,huesca,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14108,3.58067E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14109,almarza de cameros,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14110,3m6noja4,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14111,"pl. quintero baez, 137",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14112,kangning,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14113,6.79504E+13,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14114,amalio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14115,tesisteco avi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14116,meredith,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14117,"calle morse, 17",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14118,"c/ cardenal rossell, 85,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14119,82768054r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14120,brewton,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14121,4.46161E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14122,buchel-alymer@gemas.org.bu,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14123,5.26636E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14124,eddier,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14125,crcova valentini,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14126,9.3269E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14127,huertas acosa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14128,vencilln,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14129,blotta azagra,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

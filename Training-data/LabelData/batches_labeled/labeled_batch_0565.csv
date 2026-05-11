@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16920,9.30174E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16921,34964894h,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16922,esdrs,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16923,09831514a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16924,aprea@ingenelec.es,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16925,taspatch,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16926,benito@mayoriasilenciosa.mu,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16927,71196230y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16928,tomolillo@velazquezlarranaga.et,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16929,pearce,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16930,carr97t8,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16931,uriah,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16932,kai-larsen-picchio6@multasdetransito.net,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16933,"calle francisco de leiva, 131,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16934,wardle,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16935,willie51,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16936,llompart maydana,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16937,95001516q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16938,7.78503E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16939,milton@diagnosticoradiologico.asia,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16940,svenn-er,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16941,ru5runears2,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16942,mazursky@mundo-deportivo.mx,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16943,clunes7@palodegolf.com.coop,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16944,1.82575E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16945,511amasa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16946,spinnell@cpanelweb.com.ao,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16947,"logroo, 98, 5-d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16948,miguel leon gracia 174,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16949,sauprobo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

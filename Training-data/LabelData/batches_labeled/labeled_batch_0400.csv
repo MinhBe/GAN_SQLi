@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+11970,c/ nicolas salmeron 73,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11971,2ovi4in,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11972,"campello, el",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11973,1.91636E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11974,huaranga chicon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11975,valeika@italianmotorvillagesevilla.gd,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11976,aleandro-hayman@tecnoindomo.nr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11977,dangers9@paremoselalzheimer.az,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11978,"calle toronja, 157",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11979,eoin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11980,1.89129E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11981,parra,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11982,jordi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11983,morande,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11984,"ignacio aldecoa, 30, 6h",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11985,"c/jon de las moscas, 72",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11986,vilma,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11987,pasivamente,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11988,somisett,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11989,travolta@professionalhost.com.cn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11990,narita@deportechino.an,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11991,corulln,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11992,ulldecona,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11993,hi9dra,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11994,supersticin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11995,"jardines, 110",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11996,tierga,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11997,"rio nervion, 177",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11998,koczian@decoaching.is,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11999,srdida.me3te,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

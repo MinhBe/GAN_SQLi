@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12420,delujan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12421,backer@showcars.com.co,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12422,eliseo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12423,jaspe ochoa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12424,13082383y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12425,kaz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12426,alconchel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12427,46343482t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12428,urea bernat,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12429,pladeval berganciano,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12430,albuminmetro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12431,1.52349E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12432,werling,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12433,48c09a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12434,mauer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12435,viena@redesmilitantes.pg,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12436,bolvir,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12437,rosalia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12438,persson_mcclanahan@deseoun.km,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12439,61877469v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12440,coe,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12441,ananas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12442,brihuega,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12443,s16nio5o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12444,winstanley@waterflyesp.hn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12445,philip7,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12446,salvi figuls,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12447,09899393d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12448,wilbur,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12449,"c/ cardenal cisneros 70, 12?d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13020,merriell,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13021,duchement tenza,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13022,brias,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13023,2.38947E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13024,777t1c4rio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13025,furet@sanchezquesada.lc,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13026,mallat paiva,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13027,reis,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13028,nanjar viejo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13029,87811832v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13030,3u23pe,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13031,pammie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13032,scorziel,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13033,"calle robregordo, 171 10-c",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13034,5a4a84e8a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13035,xi629d02,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13036,bancroft@lawn.mc,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13037,romer@pisossantcugat.iq,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13038,blascosancho,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13039,desparpajo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13040,"c/ lorenzo solano tendero, s/n 8b",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13041,"c/ santisimo cristo del amor, 186,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13042,eial,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13043,cha$9i74r0,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13044,peso de la harina 174,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13045,9.4488E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13046,"c/ venus 91, 1e",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13047,casasola de arin,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13048,sobrado,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13049,vilafams,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

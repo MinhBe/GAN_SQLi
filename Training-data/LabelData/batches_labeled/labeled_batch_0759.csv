@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22740,"SELECT contrast, men+ ', ' + family+ ' ' + ourselves+ ', ' + thy AS applied FROM chest",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22741,SELECT complete ( s ) FROM type INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22742,"SELECT cause,may,yesterday,cookies,fill ( ( upper JOIN common ON tide.facing = brain.object ) INNER JOIN blowON Orders.notice = inch.sangID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22743,SELECT lunch ( s ) FROM date LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22744,"SELECT general,ourselves,farther FROM vowel LEFT JOIN Orders ON lift.continuedID = cattle.trip ORDER BY bent.respect",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22745,SELECT trick ( s FROM tall RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22746,"SELECT Orders.enginerID, Employees.necessary, Employees.mountain FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.cameID ORDER BY Orders.everyoneID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22747,SELECT adult ( s ) FROM neck FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22748,"SELECT column_name ( s ) FROM tea,child",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22749,SELECT task ( s ) FROM adult UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22750,SELECT dream ( s ) FROM folks SELECT fewer ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22751,SELECT rod ( s ) FROM this UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22752,SELECT stretch ( s ) FROM twelve SELECT grass FROM aid,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22753,SELECT chain FROM service UNION SELECT square FROM breathing ORDER BY inside,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+22754,SELECT mostly FROM expect UNION ALL SELECT related FROM finish ORDER BY pipe,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+22755,"SELECT taken,satisfied FROM this WHERE teach = 'dear' UNION SELECT jar, step FROM scene",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+22756,"SELECT COUNT ( for ) , you FROM lady BY especially",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22757,"SELECT Employees.religious, COUNT ( Orders.formerID ) AS fullyFROM ( OrdersINNER JOIN sport ON Orders.dawnID = Employees.handleID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22758,SELECT * FROM gate FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22759,SELECT equator,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22760,SELECT * FROM stand,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22761,SELECT shall FROM better,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22762,SELECT DISTINCT extra FROM terrible,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22763,SELECT COUNT ( DISTINCT judge ) FROM month,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22764,SELECT Count ( * ) AS problem,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22765,FROM ( SELECT DISTINCT mysterious FROM rod ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22766,SELECT * FROM near,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22767,SELECT * FROM above WHERE simple = 'research',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22768,SELECT * FROM lunch WHERE discovery = 'uncle',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22769,SELECT * FROM compound WHERE regular = if,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

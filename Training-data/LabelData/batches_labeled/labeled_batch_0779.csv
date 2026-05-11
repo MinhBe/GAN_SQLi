@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23340,SELECT visit ( s ) FROM service UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23341,SELECT steep ( s ) FROM nervous SELECT sat ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23342,SELECT creature ( s ) FROM where UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23343,SELECT indicate ( s ) FROM how SELECT equally FROM stretch,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23344,SELECT government FROM regular UNION SELECT exist FROM rope ORDER BY bite,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23345,SELECT quietly FROM stage UNION ALL SELECT afraid FROM again ORDER BY plate,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+23346,"SELECT after,instance FROM cheese WHERE wise = 'wall' UNION SELECT consonant, cave FROM plane",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23347,"SELECT COUNT ( basis ) , mysterious FROM dirt BY cent",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23348,"SELECT Employees.stretch, COUNT ( Orders.reviewID ) AS springFROM ( OrdersINNER JOIN took ON Orders.improveID = Employees.hurtID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23349,SELECT * FROM production FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23350,SELECT main,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23351,SELECT * FROM roar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23352,SELECT vote FROM strange,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23353,SELECT DISTINCT pipe FROM brief,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23354,SELECT COUNT ( DISTINCT third ) FROM passage,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23355,SELECT Count ( * ) AS climate,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23356,FROM ( SELECT DISTINCT low FROM wish ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23357,SELECT * FROM jungle,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23358,SELECT * FROM then WHERE fell = 'eat',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23359,SELECT * FROM improve WHERE steel = 'official',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23360,SELECT * FROM person WHERE feathers = solid,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23361,SELECT * FROM stuck WHERE think = 'solid' AND City = 'tears',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23362,SELECT * FROM shoot WHERE anyone = 'signal' OR count = 'rear',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23363,SELECT * FROM complex WHERE struck = 'chosen' OR measure = 'blood',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23364,SELECT * FROM nearby WHERE NOT toward = 'letter',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23365,SELECT * FROM car WHERE five = 'person' AND ( recently = 'yet' OR adult = 'second' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23366,SELECT * FROM tax WHERE NOT move = 'probably' AND NOT neck = 'strange',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23367,SELECT * FROM kids ORDER BY circle,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23368,SELECT * FROM valuable ORDER BY yellow DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23369,"SELECT * FROM student ORDER BY party, golden",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

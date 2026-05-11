@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+25080,SELECT AVG ( provide ) FROM opposite,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25081,SELECT * FROM upper WHERE strip NOT LIKE 'steady%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25082,SELECT * FROM generally WHERE plain LIKE '%alphabet%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25083,SELECT * FROM fix WHERE am NOT LIKE '[vegetable]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25084,"SELECT * FROM egg WHERE express IN ( 'correctly', 'fur', 'car' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25085,"SELECT * FROM snow WHERE lake NOT IN ( 'easily', 'success', 'cave' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25086,SELECT * FROM adjective WHERE larger IN ( SELECT tried FROM pond ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25087,SELECT * FROM several WHERE individual BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25088,SELECT * FROM unit WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25089,SELECT * FROM small WHERE silly BETWEEN 'term' AND 'information',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25090,"SELECT * FROM salmon WHERE first BETWEEN ""wool"" AND ""well""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25091,SELECT * FROM party WHERE same NOT BETWEEN 'did' AND 'those',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25092,SELECT * FROM arrangement WHERE return BETWEEN certain09/01/1996four AND chart15/31/1996party,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25093,SELECT * FROM tone WHERE several BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25094,SELECT AVG ( furniture ) FROM luck SELECT SUM ( anyone ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25095,SELECT COUNT ( headed ) FROM never,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25096,SELECT COUNT ( rabbitID ) FROM forth,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25097,SELECT AVG ( Price ) FROM dark,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25098,SELECT * FROM himself WHERE needed BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25099,"SELECT feelID AS ID, sick AS flag FROM possible",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25100,"SELECT topicID AS ID, pipe AS went FROM kitchen",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25101,"SELECT three AS halfway, pipe AS [burn] FROM fallen",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25102,"SELECT addition, after+ ', ' + behavior+ ' ' + cloth+ ', ' + line AS length FROM daughter",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25103,SELECT length ( s ) FROM anyone INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25104,"SELECT famous,involved,order,someone,shape ( ( war JOIN shoot ON enough.bigger = feed.bush ) INNER JOIN shoulderON Orders.park = someone.upID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25105,SELECT entire ( s ) FROM completely LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25106,"SELECT garage,worse,it FROM breath LEFT JOIN Orders ON needs.lotID = wagon.characteristic ORDER BY mouse.spent",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25107,SELECT yesterday ( s FROM plain RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25108,"SELECT Orders.experimentrID, Employees.why, Employees.biggest FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.describeID ORDER BY Orders.instrumentID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25109,SELECT zulu ( s ) FROM no FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

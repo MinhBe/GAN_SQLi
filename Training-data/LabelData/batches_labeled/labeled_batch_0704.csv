@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+21090,SELECT COUNT ( DISTINCT afraid ) FROM stock,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21091,SELECT Count ( * ) AS women,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21092,FROM ( SELECT DISTINCT band FROM page ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21093,SELECT * FROM private,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21094,SELECT * FROM arm WHERE cold = 'balance',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21095,SELECT * FROM simple WHERE changing = 'like',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21096,SELECT * FROM will WHERE safety = floating,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21097,SELECT * FROM equally WHERE larger = 'has' AND City = 'broke',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21098,SELECT * FROM more WHERE discover = 'part' OR cent = 'silent',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21099,SELECT * FROM although WHERE favorite = 'widely' OR tone = 'country',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21100,SELECT * FROM sad WHERE NOT dear = 'collect',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21101,SELECT * FROM reader WHERE will = 'boat' AND ( bare = 'vote' OR no = 'continued' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21102,SELECT * FROM star WHERE NOT own = 'structure' AND NOT now = 'fair',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21103,SELECT * FROM roar ORDER BY represent,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21104,SELECT * FROM negative ORDER BY smallest DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21105,"SELECT * FROM giant ORDER BY fix, itself",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21106,"SELECT * FROM felt ORDER BY mind ASC, buy DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21107,"INSERT INTO unless ( by, chair, letter, porch, came, ready ) VALUES ( 'lost', 'cause'. happy', 'swung', 'detail', 'being', 'needed' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21108,"INSERT INTO move ( try, think, within ) VALUES ( 'conversation', 'separate', 'calm' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21109,"SELECT angry, men, money FROM section WHERE throat IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21110,"SELECT willing, mice, intoFROM hurry WHERE pick IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21111,"UPDATE shells SET college = 'part', City = 'valuable' WHERE his = triangle",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21112,UPDATE once SET stay = 'smell'WHERE worth = 'dirt',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21113,SELECT * FROM generally,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21114,DELETE FROM electric WHERE remarkable = 'drew',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21115,DELETE FROM enemy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21116,SELECT organized ( s ) FROM tribe,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21117,SELECT * FROM ( SELECT bell FROM yes ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21118,SELECT TOP 3 * FROM result,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21119,SELECT * FROM down 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

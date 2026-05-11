@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+25350,SELECT * FROM complete 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25351,SELECT * FROM donkey FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25352,SELECT TOP 50 PERCENT * FROM perfect,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25353,SELECT * FROM noted FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25354,SELECT TOP 3 * FROM brief WHERE monkey = 'changing',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25355,SELECT * FROM broke WHERE choice = 'touch' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25356,SELECT * FROM sun WHERE swimming = 'material' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25357,SELECT MIN ( buried ) AS clothing FROM call,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25358,SELECT MIN ( buy ) AS forty FROM whom,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25359,SELECT * FROM ( SELECT baseball FROM soon ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25360,SELECT TOP 3 * FROM supply SELECT * FROM dangerous 3SELECT * FROM lady,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25361,SELECT * FROM mirror 3 SELECT * FROM pen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25362,SELECT * FROM language FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM are,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25363,SELECT TOP 50 PERCENT * FROM bottle SELECT * FROM addition FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM son,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25364,SELECT * FROM keep FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM garden,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25365,SELECT TOP 3 * FROM lift WHERE sound = 'shoulder' SELECT * FROM fur,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25366,SELECT * FROM breathe WHERE map = 'success' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25367,SELECT * FROM harbor WHERE up = 'rise' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25368,SELECT AVG ( outside ) FROM combine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25369,SELECT * FROM glass WHERE slightly NOT LIKE '[cause]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25370,SELECT AVG ( customs ) FROM sit SELECT SUM ( red ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25371,SELECT AVG ( pony ) FROM lips SELECT SUM ( older ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25372,SELECT AVG ( alphabet ) FROM image SELECT SUM ( company ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25373,SELECT COUNT ( instead ) FROM down,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25374,SELECT COUNT ( secret ) FROM beside,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25375,SELECT AVG ( apartment ) FROM thy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25376,SELECT * FROM end WHERE foot NOT LIKE 'zipper%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25377,SELECT * FROM water WHERE author LIKE '%pour%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25378,SELECT * FROM passage WHERE by NOT LIKE '[laid]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25379,"SELECT * FROM potatoes WHERE loose IN ( 'dull', 'sides', 'tea' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

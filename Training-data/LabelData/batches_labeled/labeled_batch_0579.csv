@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17340,2epullo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17341,d6ntrotr566,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17342,"calle grevol, 123 6?a",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17343,niembro urkiaga,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17344,granfiel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17345,7.68E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17346,pesantez,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17347,se0am536e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17348,mascarino.marenghi@cocheacoche.lv,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17349,98946031p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17350,91494736t,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17351,velichcanich pairot,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17352,carew1@koinup.ni,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17353,22496795n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17354,killan@923.fr,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17355,desmedro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17356,rashmi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17357,3nmo08v16a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17358,"virgen del valle, 40",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17359,7.75E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17360,ikediek torrades,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17361,manica,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17362,carilyn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17363,valdemoro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17364,proftica,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17365,barsky,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17366,retuerta fong,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17367,5.12832E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17368,rubau,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17369,magdiel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

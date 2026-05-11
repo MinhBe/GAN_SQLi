@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26700,FROM ( SELECT DISTINCT any FROM ability ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26701,SELECT * FROM press,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26702,SELECT * FROM likely WHERE equally = 'is',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26703,SELECT * FROM they WHERE got = 'private',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26704,SELECT * FROM rod WHERE appearance = conversation,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26705,SELECT * FROM leaf WHERE second = 'suddenly' AND City = 'suit',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26706,SELECT * FROM connected WHERE game = 'breeze' OR barn = 'clothes',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26707,SELECT * FROM either WHERE shinning = 'up' OR ear = 'metal',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26708,SELECT * FROM lower WHERE NOT thou = 'teach',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26709,SELECT * FROM potatoes WHERE simplest = 'felt' AND ( alphabet = 'skin' OR group = 'pilot' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26710,SELECT * FROM prepare WHERE NOT solar = 'fighting' AND NOT garden = 'well',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26711,SELECT * FROM wing ORDER BY control,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26712,SELECT * FROM beauty ORDER BY course DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26713,"SELECT * FROM exactly ORDER BY part, gray",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26714,"SELECT * FROM who ORDER BY suppose ASC, correctly DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26715,"INSERT INTO double ( visitor, sure, donkey, nuts, soldier, press ) VALUES ( 'handle', 'off'. horn', 'brave', 'thirty', 'square', 'stove' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26716,"INSERT INTO lips ( smaller, solve, musical ) VALUES ( 'gate', 'doll', 'baseball' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26717,"SELECT promised, additional, learn FROM value WHERE order IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26718,"SELECT strong, planned, massFROM trip WHERE paper IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26719,"UPDATE worry SET seven = 'man', City = 'easily' WHERE hope = action",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26720,UPDATE toy SET breath = 'consider'WHERE color = 'handsome',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26721,SELECT * FROM breathing,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26722,DELETE FROM bush WHERE deal = 'inside',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26723,DELETE FROM basic,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26724,SELECT forty ( s ) FROM grow,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26725,SELECT * FROM ( SELECT tape FROM practice ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26726,SELECT TOP 3 * FROM instant,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26727,SELECT * FROM service 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26728,SELECT * FROM snake FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26729,SELECT TOP 50 PERCENT * FROM after,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

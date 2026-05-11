@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16890,rancar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16891,"calle palmito, s/n, 12?g",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16892,62776679l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16893,rechinido,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16894,calle de joan miro s/n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16895,79039106c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16896,51975226x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16897,"c/ cangrexeiras, 164, 4e",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16898,batllori budi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16899,itero del castillo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16900,lovejoy,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16901,hoste ustrell,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16902,b4rl942r7,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16903,agenor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16904,"plaza del yunque, 4,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16905,"calle can bordoi, 148",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16906,"calle camino getafe, 157,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16907,caterina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16908,37425321c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16909,488u7ra,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16910,ariel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16911,ajaraca,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16912,70136564l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16913,5.18985E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16914,bly7,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16915,guasch xifr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16916,69364169x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16917,blasinda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16918,73361115q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16919,cretas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

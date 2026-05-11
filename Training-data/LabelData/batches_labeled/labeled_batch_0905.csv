@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27120,SELECT TOP 3 * FROM amount,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27121,SELECT * FROM recently 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27122,SELECT * FROM customs FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27123,SELECT TOP 50 PERCENT * FROM am,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27124,SELECT * FROM wing FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27125,SELECT TOP 3 * FROM opportunity WHERE finest = 'dawn',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27126,SELECT * FROM something WHERE scared = 'whispered' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27127,SELECT * FROM upward WHERE pale = 'structure' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27128,SELECT MIN ( anywhere ) AS huge FROM in,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27129,SELECT MIN ( over ) AS rate FROM finger,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27130,SELECT * FROM ( SELECT indeed FROM noise ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27131,SELECT TOP 3 * FROM push SELECT * FROM quick 3SELECT * FROM series,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27132,SELECT * FROM notice 3 SELECT * FROM wish,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27133,SELECT * FROM made FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM letter,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27134,SELECT TOP 50 PERCENT * FROM substance SELECT * FROM result FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM blow,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27135,SELECT * FROM port FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM forgotten,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27136,SELECT TOP 3 * FROM ask WHERE body = 'clearly' SELECT * FROM donkey,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27137,SELECT * FROM planet WHERE nest = 'steam' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27138,SELECT * FROM birthday WHERE continued = 'slowly' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27139,SELECT AVG ( official ) FROM body,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27140,SELECT * FROM troops WHERE equal NOT LIKE '[bright]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27141,SELECT AVG ( dull ) FROM view SELECT SUM ( unhappy ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27142,SELECT AVG ( been ) FROM mine SELECT SUM ( cookies ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27143,SELECT AVG ( done ) FROM ordinary SELECT SUM ( closely ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27144,SELECT COUNT ( park ) FROM title,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27145,SELECT COUNT ( because ) FROM exact,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27146,SELECT AVG ( without ) FROM because,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27147,SELECT * FROM represent WHERE exactly NOT LIKE 'toy%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27148,SELECT * FROM increase WHERE discovery LIKE '%make%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27149,SELECT * FROM type WHERE cow NOT LIKE '[rocky]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based

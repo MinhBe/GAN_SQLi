@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22110,SELECT * FROM gone WHERE automobile = 'smaller' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22111,SELECT * FROM baby WHERE smaller = 'treated' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22112,SELECT MIN ( saw ) AS instance FROM either,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22113,SELECT MIN ( ground ) AS ship FROM sheep,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22114,SELECT * FROM ( SELECT pay FROM could ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22115,SELECT TOP 3 * FROM alive SELECT * FROM black 3SELECT * FROM completely,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22116,SELECT * FROM suit 3 SELECT * FROM blue,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22117,SELECT * FROM off FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM guard,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22118,SELECT TOP 50 PERCENT * FROM glass SELECT * FROM camp FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM sleep,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22119,SELECT * FROM putting FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM human,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22120,SELECT TOP 3 * FROM equipment WHERE stream = 'guide' SELECT * FROM particular,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22121,SELECT * FROM eaten WHERE left = 'construction' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22122,SELECT * FROM throughout WHERE history = 'seems' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22123,SELECT AVG ( laugh ) FROM onto,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22124,SELECT * FROM manufacturing WHERE wooden NOT LIKE '[difference]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22125,SELECT AVG ( great ) FROM product SELECT SUM ( cool ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22126,SELECT AVG ( collect ) FROM leather SELECT SUM ( forgot ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22127,SELECT AVG ( student ) FROM cabin SELECT SUM ( led ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22128,SELECT COUNT ( wonder ) FROM use,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22129,SELECT COUNT ( swam ) FROM this,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22130,SELECT AVG ( suddenly ) FROM start,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22131,SELECT * FROM realize WHERE successful NOT LIKE 'when%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22132,SELECT * FROM also WHERE test LIKE '�rm%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22133,SELECT * FROM recognize WHERE sure NOT LIKE '[court]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+22134,"SELECT * FROM position WHERE broke IN ( 'valuable', 'dinner', 'record' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22135,"SELECT * FROM actually WHERE supply NOT IN ( 'influence', 'happy', 'stems' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22136,SELECT * FROM wife WHERE split IN ( SELECT rise FROM good ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22137,SELECT * FROM club WHERE with BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22138,SELECT * FROM compare WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22139,SELECT * FROM copy WHERE solution BETWEEN 'like' AND 'speak',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

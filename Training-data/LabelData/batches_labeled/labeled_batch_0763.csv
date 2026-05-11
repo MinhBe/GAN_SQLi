@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+22860,SELECT DISTINCT discover FROM author,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22861,SELECT COUNT ( DISTINCT kept ) FROM canal,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22862,SELECT Count ( * ) AS foreign,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22863,FROM ( SELECT DISTINCT sum FROM science ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22864,SELECT * FROM plant,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22865,SELECT * FROM largest WHERE rhythm = 'breathe',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22866,SELECT * FROM anyone WHERE tired = 'fairly',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22867,SELECT * FROM function WHERE object = end,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22868,SELECT * FROM sort WHERE riding = 'discover' AND City = 'life',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22869,SELECT * FROM room WHERE tide = 'mighty' OR plenty = 'of',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22870,SELECT * FROM label WHERE fox = 'else' OR five = 'pleasure',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22871,SELECT * FROM society WHERE NOT entire = 'mouth',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22872,SELECT * FROM discussion WHERE brass = 'stage' AND ( plural = 'men' OR gray = 'purple' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22873,SELECT * FROM eat WHERE NOT hope = 'sugar' AND NOT bone = 'grass',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22874,SELECT * FROM produce ORDER BY jet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22875,SELECT * FROM lunch ORDER BY policeman DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22876,"SELECT * FROM have ORDER BY careful, send",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22877,"SELECT * FROM though ORDER BY good ASC, lips DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22878,"INSERT INTO amount ( border, slide, north, egg, draw, stock ) VALUES ( 'atomic', 'heart'. language', 'baseball', 'weak', 'harbor', 'support' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22879,"INSERT INTO loose ( exercise, struck, chosen ) VALUES ( 'yet', 'importance', 'tomorrow' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22880,"SELECT busy, invented, chief FROM view WHERE tool IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22881,"SELECT supper, finger, entireFROM slope WHERE here IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22882,"UPDATE dried SET swim = 'north', City = 'huge' WHERE flight = saved",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22883,UPDATE brick SET may = 'taste'WHERE score = 'key',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22884,SELECT * FROM nice,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22885,DELETE FROM cloud WHERE happy = 'wash',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22886,DELETE FROM mile,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22887,SELECT accident ( s ) FROM dull,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22888,SELECT * FROM ( SELECT fill FROM sail ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+22889,SELECT TOP 3 * FROM they,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13080,3.00245E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13081,scardetta huerta,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13082,t0na5t44la,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13083,vislumbrar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13084,tapies ximenis,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13085,palmer manzano,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13086,bilal,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13087,mong-tse,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13088,8.08498E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13089,"font d'en canyelles 21, 1-b",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13090,5.11164E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13091,jerusaln,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13092,pusit@marketingmunicipal.ro,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13093,contrapalanqun,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13094,viana de jadraque,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13095,"barranc de la torrentera, 56, 13?c",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13096,"torremacana, 107 7e",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13097,yegorova@onlinegratis.aq,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13098,santa mara de la vega,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13099,claudine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13100,82839528z,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13101,donet acst,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13102,sel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13103,gatliff.charlton@eco-pro.jm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13104,"juan de salcedo, 158 5?f",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13105,guinea hinojar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13106,sacudir,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13107,86800649y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13108,zobelda,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13109,sunderla,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

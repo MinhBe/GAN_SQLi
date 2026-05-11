@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23640,SELECT already FROM heat UNION ALL SELECT hundred FROM again ORDER BY root,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+23641,"SELECT strong,molecular FROM coat WHERE coach = 'industrial' UNION SELECT frighten, moving FROM usual",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+23642,"SELECT COUNT ( underline ) , flow FROM will BY spirit",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23643,"SELECT Employees.show, COUNT ( Orders.copperID ) AS forgetFROM ( OrdersINNER JOIN slept ON Orders.learnID = Employees.filmID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23644,SELECT * FROM river FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23645,SELECT paint,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23646,SELECT * FROM report,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23647,SELECT passage FROM wooden,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23648,SELECT DISTINCT typical FROM discover,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23649,SELECT COUNT ( DISTINCT breathe ) FROM myself,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23650,SELECT Count ( * ) AS mine,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23651,FROM ( SELECT DISTINCT roll FROM independent ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23652,SELECT * FROM theory,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23653,SELECT * FROM together WHERE somehow = 'previous',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23654,SELECT * FROM actually WHERE movie = 'paint',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23655,SELECT * FROM of WHERE unknown = shout,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23656,SELECT * FROM college WHERE thing = 'lake' AND City = 'spider',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23657,SELECT * FROM cool WHERE ready = 'eye' OR regular = 'alive',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23658,SELECT * FROM five WHERE my = 'glad' OR many = 'mouth',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23659,SELECT * FROM essential WHERE NOT enemy = 'gravity',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23660,SELECT * FROM bottom WHERE smoke = 'mainly' AND ( breathe = 'darkness' OR store = 'forty' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23661,SELECT * FROM wrapped WHERE NOT ability = 'brick' AND NOT thing = 'doll',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23662,SELECT * FROM pitch ORDER BY row,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23663,SELECT * FROM crew ORDER BY group DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23664,"SELECT * FROM suggest ORDER BY bark, branch",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23665,"SELECT * FROM police ORDER BY forward ASC, than DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23666,"INSERT INTO nervous ( eye, figure, in, bark, bone, equipment ) VALUES ( 'itself', 'taken'. similar', 'sent', 'talk', 'worse', 'dangerous' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23667,"INSERT INTO stay ( caught, mainly, find ) VALUES ( 'model', 'mean', 'giving' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23668,"SELECT class, fast, offer FROM beside WHERE arrive IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23669,"SELECT tip, half, drivingFROM physical WHERE usual IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

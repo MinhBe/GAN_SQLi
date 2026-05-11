@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+28110,SELECT * FROM market WHERE road = 'long' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28111,SELECT * FROM wagon WHERE fog = 'leather' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28112,SELECT MIN ( tide ) AS thumb FROM straight,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28113,SELECT MIN ( stared ) AS substance FROM easier,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28114,SELECT * FROM ( SELECT while FROM kids ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28115,SELECT TOP 3 * FROM creature SELECT * FROM except 3SELECT * FROM only,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28116,SELECT * FROM born 3 SELECT * FROM us,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28117,SELECT * FROM hand FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM identity,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28118,SELECT TOP 50 PERCENT * FROM settle SELECT * FROM blank FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM somehow,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28119,SELECT * FROM writing FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM according,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28120,SELECT TOP 3 * FROM greatest WHERE western = 'brave' SELECT * FROM record,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28121,SELECT * FROM happy WHERE road = 'operation' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28122,SELECT * FROM read WHERE breathe = 'thus' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28123,SELECT AVG ( funny ) FROM around,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28124,SELECT * FROM tribe WHERE reach NOT LIKE '[owner]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+28125,SELECT AVG ( everywhere ) FROM acres SELECT SUM ( mistake ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28126,SELECT AVG ( last ) FROM tonight SELECT SUM ( make ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28127,SELECT AVG ( policeman ) FROM memory SELECT SUM ( clothes ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28128,SELECT COUNT ( result ) FROM gentle,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28129,SELECT COUNT ( son ) FROM remarkable,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28130,SELECT AVG ( favorite ) FROM softly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28131,SELECT * FROM go WHERE riding NOT LIKE 'mill%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+28132,SELECT * FROM chain WHERE butter LIKE '%way%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+28133,SELECT * FROM came WHERE sun NOT LIKE '[column]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+28134,"SELECT * FROM broad WHERE orange IN ( 'coach', 'breakfast', 'respect' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28135,"SELECT * FROM limited WHERE to NOT IN ( 'struck', 'long', 'machine' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28136,SELECT * FROM those WHERE pine IN ( SELECT passage FROM verb ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28137,SELECT * FROM vapor WHERE breathe BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28138,SELECT * FROM hair WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28139,SELECT * FROM everywhere WHERE color BETWEEN 'vapor' AND 'silent',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

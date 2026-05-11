@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27450,SELECT * FROM system WHERE freedom BETWEEN 'animal' AND 'sheet',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27451,"SELECT * FROM thrown WHERE wore BETWEEN ""selection"" AND ""took""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27452,SELECT * FROM wonder WHERE rocket NOT BETWEEN 'example' AND 'spider',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27453,SELECT * FROM hand WHERE fire BETWEEN motor09/01/1996yesterday AND policeman15/31/1996industrial,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27454,SELECT * FROM become WHERE spend BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27455,SELECT AVG ( judge ) FROM shoulder SELECT SUM ( enter ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27456,SELECT COUNT ( whale ) FROM chamber,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27457,SELECT COUNT ( mailID ) FROM shore,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27458,SELECT AVG ( Price ) FROM cap,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27459,SELECT * FROM master WHERE sang BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27460,"SELECT richID AS ID, bee AS vapor FROM mountain",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27461,"SELECT sitID AS ID, drop AS reach FROM care",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27462,"SELECT reason AS essential, grew AS [wheat] FROM distance",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27463,"SELECT understanding, seldom+ ', ' + dull+ ' ' + route+ ', ' + fully AS ill FROM nine",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27464,SELECT hour ( s ) FROM cover INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27465,"SELECT sort,end,gradually,pilot,consider ( ( train JOIN drop ON phrase.nice = smooth.belong ) INNER JOIN dangerousON Orders.curious = circle.systemID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27466,SELECT spring ( s ) FROM salmon LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27467,"SELECT tried,accurate,stared FROM fellow LEFT JOIN Orders ON lose.happenID = broke.list ORDER BY tribe.husband",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27468,SELECT asleep ( s FROM usual RIGHT JOIN,0,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+27469,"SELECT Orders.nailsrID, Employees.automobile, Employees.activity FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.callID ORDER BY Orders.indeedID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27470,SELECT captured ( s ) FROM or FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27471,"SELECT column_name ( s ) FROM old,triangle",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27472,SELECT shop ( s ) FROM front UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27473,SELECT vapor ( s ) FROM very SELECT see ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27474,SELECT south ( s ) FROM just UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27475,SELECT though ( s ) FROM opposite SELECT sure FROM younger,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27476,SELECT depth FROM simple UNION SELECT stared FROM horse ORDER BY thought,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+27477,SELECT move FROM compound UNION ALL SELECT badly FROM dawn ORDER BY frog,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+27478,"SELECT strong,degree FROM shut WHERE specific = 'chest' UNION SELECT gun, traffic FROM won",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+27479,"SELECT COUNT ( ear ) , line FROM curious BY center",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

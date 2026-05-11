@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+15690,magaz de pisuerga,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15691,2.58973E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15692,cea,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15693,uvalle urpina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15694,8.7027E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15695,5he1un,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15696,egido s/n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15697,04607227m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15698,9.15202E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15699,"calle ducado de neopatria 63, 12-h",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15700,baer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15701,gauchaje,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15702,5.11823E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15703,calle constanti s/n 5?h,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15704,tinajas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15705,charley,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15706,bret3,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15707,"espartero, 103, 5-f",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15708,miera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15709,7.69984E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15710,antero,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15711,"camio adelfas, 148, 5?g",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15712,2isp3n?3io43,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15713,ricard,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15714,88356550a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15715,wostrikoff@hojainformativas.gi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15716,urchins@waikilu.mg,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+15717,3.88988E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15718,coca de alba,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+15719,"paseo alameda de osuna 10,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

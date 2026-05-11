@@ -1,0 +1,121 @@
+import re
+
+DB_SIGNATURES = {
+    "mysql":      [re.compile(r"@@version", re.I), re.compile(r"sleep\s*\(", re.I),
+                   re.compile(r"load_file\s*\(", re.I), re.compile(r"information_schema", re.I)],
+    "mssql":      [re.compile(r"waitfor\s+delay", re.I), re.compile(r"sysobjects", re.I),
+                   re.compile(r"xp_cmdshell", re.I), re.compile(r"@@servername", re.I)],
+    "oracle":     [re.compile(r"utl_inaddr", re.I), re.compile(r"ctxsys", re.I),
+                   re.compile(r"\bdual\b", re.I), re.compile(r"all_tables", re.I),
+                   re.compile(r"rownum", re.I)],
+    "postgresql": [re.compile(r"pg_sleep\s*\(", re.I), re.compile(r"::\s*(text|integer|varchar)", re.I),
+                   re.compile(r"pg_catalog", re.I)],
+    "sqlite":     [re.compile(r"randomblob\s*\(", re.I), re.compile(r"sqlite_master", re.I)],
+    "firebird":   [re.compile(r"rdb\$", re.I)],
+    "db2":        [re.compile(r"sysibm\.systables", re.I)],
+}
+
+SIGNAL_PATTERNS = {
+    "rce":             [re.compile(r"xp_cmdshell", re.I), re.compile(r"certutil", re.I),
+                        re.compile(r"powershell\s+-(e|enc|command)", re.I),
+                        re.compile(r"/bin/bash", re.I), re.compile(r"/bin/sh", re.I),
+                        re.compile(r"cmd\s*/c", re.I), re.compile(r"cmd\.exe", re.I),
+                        re.compile(r"0x[0-9a-f]{8,}", re.I),
+                        re.compile(r"declare\s+@\w+\s+varchar", re.I),
+                        re.compile(r"sp_", re.I),
+                        re.compile(r"exec\s+master", re.I)],
+    "out_of_band":     [re.compile(r"load_file\s*\(", re.I), re.compile(r"utl_http", re.I),
+                        re.compile(r"utl_inaddr", re.I),
+                        re.compile(r"xp_dirtree", re.I), re.compile(r"xp_fileexist", re.I),
+                        re.compile(r"openrowset", re.I),
+                        re.compile(r"dns\s*\(", re.I)],
+    "stacked_queries": [re.compile(r";\s*(create|drop|insert|exec|update|delete|select|alter|truncate|rename)\s", re.I),
+                        re.compile(r"create\s+(user|table|database|function|procedure)", re.I),
+                        re.compile(r"drop\s+(user|table|database|function|procedure|index)", re.I)],
+    "error_based":     [re.compile(r"extractvalue\s*\(", re.I), re.compile(r"updatexml\s*\(", re.I),
+                        re.compile(r"utl_inaddr\.get_host_address", re.I), re.compile(r"ctxsys", re.I),
+                        re.compile(r"exp\s*\(\s*~", re.I),
+                        re.compile(r"geometrycollection\s*\(", re.I),
+                        re.compile(r"multipoint\s*\(", re.I), re.compile(r"polygon\s*\(", re.I),
+                        re.compile(r"multipolygon\s*\(", re.I), re.compile(r"linestring\s*\(", re.I),
+                        re.compile(r"convert\s*\(\s*int", re.I),
+                        re.compile(r"dbms_utility", re.I),
+                        re.compile(r"xmltype\s*\(", re.I),
+                        re.compile(r"floor\s*\(\s*rand", re.I),
+                        re.compile(r"group\s+by.*concat.*floor", re.I),
+                        re.compile(r"count\s*\(\s*\*\s*\)\s*,\s*concat", re.I)],
+    "time_blind":      [re.compile(r"sleep\s*\(", re.I), re.compile(r"pg_sleep\s*\(", re.I),
+                        re.compile(r"waitfor\s+delay", re.I), re.compile(r"benchmark\s*\(", re.I),
+                        re.compile(r"randomblob\s*\(", re.I),
+                        re.compile(r"sleep\s+\d+", re.I),
+                        re.compile(r"if\s*\(.*sleep", re.I),
+                        re.compile(r"or\s+sleep", re.I),
+                        re.compile(r"and\s+sleep", re.I)],
+    "heavy_query":     [re.compile(r"count\s*\(\s*\*\s*\)\s*from\s+\w+\s*,\s+\w+", re.I),
+                        re.compile(r"generate_series\s*\(", re.I),
+                        re.compile(r"count\s*\(\s*\*\s*\)\s*from\s+\w+\s+as\s+\w+\s*,\s+\w+", re.I),
+                        re.compile(r"select\s+count\s*\(\s*\*\s*\)\s*from.*,\s*\w+", re.I)],
+    "union_based":     [re.compile(r"union\s+(all\s+)?select", re.I),
+                        re.compile(r"union\s*\(\s*select", re.I),
+                        re.compile(r"union\s+all\s+select", re.I),
+                        re.compile(r"@.*select", re.I),
+                        re.compile(r"char\s*@", re.I)],
+    "boolean_blind":   [re.compile(r"(and|or)\s+['\"]?1['\"]?\s*=\s*['\"]?[012]['\"]?", re.I),
+                        re.compile(r"(and|or)\s+['\"][a-zA-Z]['\"]\s*=\s*['\"][a-zA-Z]['\"]", re.I),
+                        re.compile(r"\)\s+or\s+\(", re.I),
+                        re.compile(r"\)\s+and\s+\(", re.I),
+                        re.compile(r"or\s+['\"]?[a-zA-Z]['\"]?\s*=\s*['\"]?[a-zA-Z]['\"]?", re.I),
+                        re.compile(r"and\s+['\"]?[a-zA-Z]['\"]?\s*=\s*['\"]?[a-zA-Z]['\"]?", re.I),
+                        re.compile(r"\d+\s*=\s*\d+\s+and", re.I),
+                        re.compile(r"\d+\s*=\s*\d+\s+or", re.I),
+                        re.compile(r"like\s+['\"]", re.I),
+                        re.compile(r"rlike\s+", re.I),
+                        re.compile(r"regexp\s+", re.I)],
+    "auth_bypass":     [re.compile(r"admin\s*['\"]?\s+(or|and|--|#)", re.I),
+                        re.compile(r"admin\s*['\"]?\s*\)", re.I),
+                        re.compile(r"['\"]\s+or\s+['\"]\d['\"]\s*=\s*['\"]\d['\"]", re.I),
+                        re.compile(r"or\s+['\"]\d['\"]\s*=\s*['\"]\d['\"]", re.I),
+                        re.compile(r"admin\s*['\"]\s*--", re.I),
+                        re.compile(r"admin\s*['\"]\s*#", re.I)],
+}
+
+GENERIC_REASONING = {"sql_injection", "not_sql_injection", "boolean", "time based",
+                     "benign", "bypass", "injection", "no", "yes", "maybe", "unknown",
+                     "sql", "injection", "normal", "none", "n/a", "null", "-"}
+
+ATTACK_KEYWORDS = [
+    "union", "sleep", "waitfor", "benchmark", "extractvalue", "updatexml",
+    "xp_cmdshell", "load_file", "utl_inaddr", "ctxsys", "admin'", "or 1=1",
+    "and 1=1", "or '1'='1", "pg_sleep", "randomblob", "information_schema",
+    "xp_dirtree", "utl_http", "openrowset", "certutil", "powershell",
+    "char(", "concat(", "0x", "exec ", "drop ", "insert ", "--",
+]
+
+HISTORICAL_FINGERPRINTS = {
+    "error_based_mysql": [
+        re.compile(r"extractvalue\s*\(.*concat.*0x7e", re.I),
+        re.compile(r"updatexml\s*\(.*concat.*0x7e", re.I),
+        re.compile(r"geometrycollection\s*\(", re.I),
+    ],
+    "time_blind_mssql": [
+        re.compile(r"waitfor\s+delay\s+['\"]\d:\d:\d['\"]", re.I),
+    ],
+    "time_blind_postgresql": [
+        re.compile(r"pg_sleep\s*\(", re.I),
+    ],
+    "rce_mssql": [
+        re.compile(r"xp_cmdshell", re.I),
+    ],
+    "polyglot_known": [
+        re.compile(r"/\*\*/or/\*\*/1=1", re.I),
+        re.compile(r"'/\*\*/or/\*\*/1=1--", re.I),
+    ],
+}
+
+DB_EXCLUSIVE_FUNCTIONS = {
+    "pg_sleep": "postgresql",
+    "waitfor delay": "mssql",
+    "randomblob": "sqlite",
+    "rdb$": "firebird",
+    "sysibm.systables": "db2",
+}

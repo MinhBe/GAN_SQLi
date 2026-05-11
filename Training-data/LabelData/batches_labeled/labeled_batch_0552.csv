@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16530,58743816e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16531,c/ marquesa de vilallonga 53 5f,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16532,callosar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16533,1.27984E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16534,"c/ valtravieso s/n,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16535,sarmiento,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16536,wahlberg8@am-si.np,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16537,vinaixa calleiros,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16538,cadek,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16539,38948590e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16540,murad@magadan.org.pe,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16541,ferrandez cabaas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16542,2.01871E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16543,acr7m6nia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16544,kaycee,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16545,knight_freihart@tresbrujas.qa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16546,"cami terminal s/n,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16547,8.83838E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16548,massimo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16549,vies canales,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16550,kenta1,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16551,4.29127E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16552,"c/ juan de bustamante, 30, 10b",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16553,metrics,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16554,guango,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16555,"pl. limeo 22, 5?e",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16556,canje,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16557,garladora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16558,paterson,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16559,51285362p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

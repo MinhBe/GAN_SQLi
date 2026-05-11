@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+14670,herminda,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14671,alkin@lesionesmusculares.pf,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14672,caudete,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14673,abdel-az,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14674,8n66ies4a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14675,corey,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14676,"c/ bascuana 52, 5-e",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14677,callie,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14678,ibdes,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14679,heldabrand5@chevrolet-volt.bg,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14680,molledo basagaa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14681,"c/ boabdil, 91",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14682,gomska.hopper@ebuy.com.bi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14683,cuz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14684,tyler,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14685,7.84149E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14686,fontanal callarisa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14687,tsoucas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14688,indamira,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14689,palacio@eldeseodepecar.kn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14690,at89a7218,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14691,33245427p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14692,"callejon giron 124,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14693,nolen@enmenorca.com.th,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14694,budd9,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14695,7.40029E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14696,trobos 39 4e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14697,goring@quadernideilgarda.pl,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+14698,28782647x,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+14699,valdeganga,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

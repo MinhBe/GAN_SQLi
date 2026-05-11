@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+11940,slezak@ballerpoker.kn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11941,"pasaje santo angel, 190,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11942,ferreries,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11943,20048048y,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11944,rei1@rtce.au,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11945,"c/ mijancas, 154 3?c",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11946,casaubn de rosa,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11947,olite,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11948,excusana,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11949,tabaquera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11950,vargueo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11951,dyck,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11952,zarrapastrosamente,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11953,efran,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11954,"calle llorente, 73,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11955,paula,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11956,"c/ pozo seco 37, 6-d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11957,kjer@multibuscador.com.ph,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11958,ermina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11959,47eg0,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11960,follosas,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11961,tait@ibizasounds.ir,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11962,siseo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11963,nicole-meyer@creacionesdolcevita.us,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11964,gussack.reinecke@eddydaniele.pt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11965,04146926a,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11966,4.89E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11967,parola@zonamodelos.pl,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11968,schnirer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11969,whiteside.seyfferrtitz@cohel.uk,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

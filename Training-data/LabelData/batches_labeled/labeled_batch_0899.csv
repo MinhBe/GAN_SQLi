@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+26940,SELECT * FROM neck WHERE properly = 'struck' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26941,SELECT * FROM behavior WHERE oxygen = 'saw' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26942,SELECT AVG ( relationship ) FROM fox,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26943,SELECT * FROM getting WHERE tide NOT LIKE '[shop]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26944,SELECT AVG ( simply ) FROM order SELECT SUM ( piece ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26945,SELECT AVG ( himself ) FROM tip SELECT SUM ( finger ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26946,SELECT AVG ( met ) FROM cap SELECT SUM ( final ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26947,SELECT COUNT ( than ) FROM bring,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26948,SELECT COUNT ( nuts ) FROM count,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26949,SELECT AVG ( plan ) FROM aboard,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26950,SELECT * FROM rich WHERE seven NOT LIKE 'theory%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26951,SELECT * FROM join WHERE took LIKE '%close%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26952,SELECT * FROM sun WHERE me NOT LIKE '[mental]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+26953,"SELECT * FROM shaking WHERE them IN ( 'prevent', 'coach', 'writer' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26954,"SELECT * FROM independent WHERE forty NOT IN ( 'rays', 'bone', 'swung' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26955,SELECT * FROM clay WHERE shallow IN ( SELECT enough FROM flag ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26956,SELECT * FROM brain WHERE forty BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26957,SELECT * FROM port WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26958,SELECT * FROM mean WHERE gentle BETWEEN 'thy' AND 'green',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26959,"SELECT * FROM edge WHERE silver BETWEEN ""heard"" AND ""tube""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26960,SELECT * FROM sum WHERE crack NOT BETWEEN 'pond' AND 'mountain',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26961,SELECT * FROM mysterious WHERE silver BETWEEN part09/01/1996water AND build15/31/1996once,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26962,SELECT * FROM nine WHERE split BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26963,SELECT AVG ( split ) FROM try SELECT SUM ( knife ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26964,SELECT COUNT ( team ) FROM expect,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26965,SELECT COUNT ( villageID ) FROM as,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26966,SELECT AVG ( Price ) FROM available,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26967,SELECT * FROM entire WHERE soldier BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26968,"SELECT pilotID AS ID, duty AS middle FROM concerned",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+26969,"SELECT poolID AS ID, constantly AS airplane FROM hunt",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

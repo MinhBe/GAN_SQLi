@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13530,dennis,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13531,suspen3edo7,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13532,godall,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13533,abia de la obispala,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13534,7.46688E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13535,mendiz espn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13536,69557398q,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13537,8.02525E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13538,7.67474E+13,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13539,ribadumia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13540,64446970g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13541,46881104c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13542,5ictoriosamente,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13543,avellano,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13544,7.91264E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13545,hervs,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13546,gema,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13547,brayam,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13548,torre-cardela,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13549,62258107m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13550,"plaa del mercat, 198 7-c",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13551,8.04302E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13552,domingo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13553,09069193v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13554,"rua picouto, 14,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13555,1.19007E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13556,8.2886E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13557,alvarez 35,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13558,31519125v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13559,mackenna.papac@interpretacion-diccionario-y-significado-de-los-s,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

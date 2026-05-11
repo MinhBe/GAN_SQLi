@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+17520,"c/ aira de villaescusa 199, 1f",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17521,"alonso de mendoza, 31 3b",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17522,lladurs,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17523,6rce8o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17524,"c/ bailen 8,",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17525,9.03287E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17526,dasonmica,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17527,nelber,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17528,desacertadamente,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17529,"paseo los gofiones, 62,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17530,gina,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17531,mula,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17532,simeon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17533,laicismo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17534,0ehusa2,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17535,52031263l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17536,c5fra98,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17537,"alcdia de crespins, l'",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17538,9.83415E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17539,brenn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17540,gibert mallorqun,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17541,holness,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17542,denia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17543,band@casadedurcal.bi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+17544,sa89gn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17545,karem,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17546,22618043g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17547,chabrat,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17548,54011879j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+17549,pearroya-pueblonuevo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

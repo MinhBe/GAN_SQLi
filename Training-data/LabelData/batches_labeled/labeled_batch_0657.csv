@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19680,"SELECT factID AS ID, manufacturing AS weak FROM round",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19681,"SELECT kill AS football, supply AS [drove] FROM saved",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19682,"SELECT establish, instead+ ', ' + general+ ' ' + ants+ ', ' + slipped AS stood FROM person",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19683,SELECT box ( s ) FROM poor INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19684,"SELECT morning,sets,basket,iron,hang ( ( wagon JOIN forest ON congress.after = little.characteristic ) INNER JOIN slowON Orders.ourselves = brief.holdID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19685,SELECT particularly ( s ) FROM expect LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19686,"SELECT women,mass,conversation FROM blind LEFT JOIN Orders ON reason.lunchID = instant.corn ORDER BY out.thus",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19687,SELECT end ( s FROM stream RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19688,"SELECT Orders.clearrID, Employees.dull, Employees.corn FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.locateID ORDER BY Orders.jumpID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19689,SELECT lost ( s ) FROM obtain FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19690,"SELECT column_name ( s ) FROM give,two",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19691,SELECT valuable ( s ) FROM package UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19692,SELECT lay ( s ) FROM shine SELECT victory ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19693,SELECT coffee ( s ) FROM neighborhood UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19694,SELECT effort ( s ) FROM congress SELECT doll FROM say,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19695,SELECT thumb FROM captured UNION SELECT shoot FROM red ORDER BY current,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+19696,SELECT shadow FROM ring UNION ALL SELECT shells FROM foreign ORDER BY night,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+19697,"SELECT ourselves,lack FROM lose WHERE history = 'asleep' UNION SELECT bill, stood FROM terrible",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+19698,"SELECT COUNT ( spring ) , use FROM hour BY wonder",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19699,"SELECT Employees.tape, COUNT ( Orders.vegetableID ) AS weekFROM ( OrdersINNER JOIN volume ON Orders.effectID = Employees.numberID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19700,SELECT * FROM market FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19701,SELECT just,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19702,SELECT * FROM beautiful,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19703,SELECT smile FROM river,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19704,SELECT DISTINCT sat FROM properly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19705,SELECT COUNT ( DISTINCT waste ) FROM got,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19706,SELECT Count ( * ) AS whether,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19707,FROM ( SELECT DISTINCT scared FROM respect ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19708,SELECT * FROM break,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19709,SELECT * FROM safe WHERE increase = 'engine',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

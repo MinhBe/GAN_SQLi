@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+20190,SELECT sudden FROM cause UNION SELECT hospital FROM straw ORDER BY pleasure,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+20191,SELECT shorter FROM long UNION ALL SELECT move FROM easily ORDER BY party,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+20192,"SELECT root,nice FROM fourth WHERE both = 'very' UNION SELECT habit, war FROM fast",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+20193,"SELECT COUNT ( near ) , light FROM whose BY person",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20194,"SELECT Employees.examine, COUNT ( Orders.tailID ) AS cellFROM ( OrdersINNER JOIN teeth ON Orders.fenceID = Employees.cageID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20195,SELECT * FROM congress FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20196,SELECT chamber,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20197,SELECT * FROM order,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20198,SELECT chart FROM empty,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20199,SELECT DISTINCT statement FROM swam,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20200,SELECT COUNT ( DISTINCT father ) FROM castle,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20201,SELECT Count ( * ) AS wish,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20202,FROM ( SELECT DISTINCT famous FROM there ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20203,SELECT * FROM pupil,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20204,SELECT * FROM welcome WHERE quarter = 'zebra',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20205,SELECT * FROM design WHERE every = 'line',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20206,SELECT * FROM lunch WHERE him = joy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20207,SELECT * FROM brass WHERE activity = 'closely' AND City = 'willing',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20208,SELECT * FROM rather WHERE date = 'passage' OR physical = 'jet',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20209,SELECT * FROM gravity WHERE breathe = 'however' OR identity = 'hungry',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20210,SELECT * FROM live WHERE NOT pilot = 'cake',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20211,SELECT * FROM port WHERE sent = 'root' AND ( laid = 'rays' OR point = 'against' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20212,SELECT * FROM farther WHERE NOT determine = 'began' AND NOT sink = 'fully',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20213,SELECT * FROM beside ORDER BY yesterday,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20214,SELECT * FROM population ORDER BY development DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20215,"SELECT * FROM extra ORDER BY outside, hospital",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20216,"SELECT * FROM heart ORDER BY lucky ASC, comfortable DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20217,"INSERT INTO surrounded ( blood, basic, shot, between, cent, gulf ) VALUES ( 'hidden', 'escape'. few', 'globe', 'job', 'choose', 'lady' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20218,"INSERT INTO actually ( sides, year, recognize ) VALUES ( 'gravity', 'use', 'thumb' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20219,"SELECT up, afraid, jungle FROM basic WHERE build IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

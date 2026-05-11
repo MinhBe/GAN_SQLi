@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+25770,SELECT AVG ( cow ) FROM born,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25771,SELECT * FROM ear WHERE through NOT LIKE 'sky%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25772,SELECT * FROM turn WHERE central LIKE '%who%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25773,SELECT * FROM fur WHERE nature NOT LIKE '[four]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+25774,"SELECT * FROM harbor WHERE butter IN ( 'correct', 'gain', 'load' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25775,"SELECT * FROM classroom WHERE simplest NOT IN ( 'pleasant', 'stems', 'summer' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25776,SELECT * FROM continent WHERE before IN ( SELECT struck FROM name ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25777,SELECT * FROM arrangement WHERE earlier BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25778,SELECT * FROM ran WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25779,SELECT * FROM product WHERE water BETWEEN 'case' AND 'mail',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25780,"SELECT * FROM signal WHERE fifteen BETWEEN ""fuel"" AND ""mother""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25781,SELECT * FROM shade WHERE depend NOT BETWEEN 'milk' AND 'possibly',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25782,SELECT * FROM be WHERE yourself BETWEEN forest09/01/1996clearly AND similar15/31/1996think,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25783,SELECT * FROM equally WHERE crew BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25784,SELECT AVG ( stomach ) FROM another SELECT SUM ( layers ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25785,SELECT COUNT ( wise ) FROM dozen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25786,SELECT COUNT ( sillyID ) FROM tide,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25787,SELECT AVG ( Price ) FROM motion,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25788,SELECT * FROM chest WHERE knew BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25789,"SELECT seeID AS ID, clock AS yesterday FROM grew",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25790,"SELECT catID AS ID, football AS held FROM plates",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25791,"SELECT box AS equally, train AS [weather] FROM cotton",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25792,"SELECT warn, reach+ ', ' + firm+ ' ' + powerful+ ', ' + friendly AS ago FROM attack",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25793,SELECT table ( s ) FROM minute INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25794,"SELECT powder,new,best,such,live ( ( wrapped JOIN being ON only.tiny = copy.noise ) INNER JOIN shownON Orders.perfectly = satisfied.streetID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25795,SELECT slabs ( s ) FROM pencil LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25796,"SELECT gray,vessels,eventually FROM effect LEFT JOIN Orders ON create.duckID = itself.instead ORDER BY tales.degree",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25797,SELECT sugar ( s FROM opportunity RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25798,"SELECT Orders.knownrID, Employees.whale, Employees.instead FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.settlersID ORDER BY Orders.houseID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+25799,SELECT city ( s ) FROM involved FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

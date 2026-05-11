@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+19920,"INSERT INTO earlier ( military, highest, anyone, house, almost, quite ) VALUES ( 'jet', 'division'. one', 'film', 'shot', 'ago', 'clearly' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19921,"INSERT INTO product ( instant, spent, pig ) VALUES ( 'sick', 'plates', 'anybody' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19922,"SELECT molecular, queen, fought FROM blanket WHERE felt IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19923,"SELECT opportunity, ear, potFROM fat WHERE four IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19924,"UPDATE paper SET became = 'grabbed', City = 'anybody' WHERE possible = climate",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19925,UPDATE rain SET correctly = 'deal'WHERE dry = 'herself',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19926,SELECT * FROM beginning,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19927,DELETE FROM weak WHERE increase = 'surprise',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19928,DELETE FROM pink,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19929,SELECT shelf ( s ) FROM kill,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19930,SELECT * FROM ( SELECT mood FROM fairly ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19931,SELECT TOP 3 * FROM badly,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19932,SELECT * FROM personal 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19933,SELECT * FROM excellent FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19934,SELECT TOP 50 PERCENT * FROM brother,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19935,SELECT * FROM social FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19936,SELECT TOP 3 * FROM throat WHERE jar = 'son',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19937,SELECT * FROM carry WHERE walk = 'body' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19938,SELECT * FROM label WHERE whether = 'uncle' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19939,SELECT MIN ( most ) AS shot FROM safe,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19940,SELECT MIN ( compound ) AS underline FROM crowd,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19941,SELECT * FROM ( SELECT mistake FROM addition ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19942,SELECT TOP 3 * FROM lesson SELECT * FROM wire 3SELECT * FROM pupil,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19943,SELECT * FROM purple 3 SELECT * FROM likely,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19944,SELECT * FROM shorter FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM cast,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19945,SELECT TOP 50 PERCENT * FROM shown SELECT * FROM stay FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM plates,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19946,SELECT * FROM children FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM ship,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19947,SELECT TOP 3 * FROM pony WHERE getting = 'life' SELECT * FROM ate,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19948,SELECT * FROM felt WHERE cloud = 'tower' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+19949,SELECT * FROM thrown WHERE judge = 'oil' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

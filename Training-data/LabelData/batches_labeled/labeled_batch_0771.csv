@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+23100,SELECT TOP 50 PERCENT * FROM stop SELECT * FROM thousand FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM alphabet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23101,SELECT * FROM silence FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM engineer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23102,SELECT TOP 3 * FROM arrangement WHERE blow = 'watch' SELECT * FROM longer,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23103,SELECT * FROM late WHERE board = 'hurry' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23104,SELECT * FROM position WHERE rich = 'balance' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23105,SELECT AVG ( milk ) FROM written,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23106,SELECT * FROM born WHERE broken NOT LIKE '[therefore]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23107,SELECT AVG ( experiment ) FROM remain SELECT SUM ( apartment ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23108,SELECT AVG ( week ) FROM against SELECT SUM ( mouse ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23109,SELECT AVG ( trip ) FROM relationship SELECT SUM ( wild ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23110,SELECT COUNT ( material ) FROM bottom,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23111,SELECT COUNT ( whom ) FROM inside,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23112,SELECT AVG ( push ) FROM write,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23113,SELECT * FROM oil WHERE somehow NOT LIKE 'disappear%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23114,SELECT * FROM research WHERE pupil LIKE '%work%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23115,SELECT * FROM feature WHERE it NOT LIKE '[our]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+23116,"SELECT * FROM half WHERE excitement IN ( 'neighbor', 'blanket', 'meant' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23117,"SELECT * FROM went WHERE musical NOT IN ( 'jack', 'settle', 'eaten' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23118,SELECT * FROM whistle WHERE strong IN ( SELECT who FROM mysterious ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23119,SELECT * FROM search WHERE command BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23120,SELECT * FROM find WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23121,SELECT * FROM consist WHERE add BETWEEN 'example' AND 'birthday',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23122,"SELECT * FROM right WHERE meant BETWEEN ""cotton"" AND ""sort""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23123,SELECT * FROM universe WHERE within NOT BETWEEN 'using' AND 'public',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23124,SELECT * FROM particularly WHERE field BETWEEN up09/01/1996eat AND interest15/31/1996branch,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23125,SELECT * FROM storm WHERE teach BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23126,SELECT AVG ( inch ) FROM wood SELECT SUM ( silly ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23127,SELECT COUNT ( success ) FROM till,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23128,SELECT COUNT ( threeID ) FROM foreign,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+23129,SELECT AVG ( Price ) FROM recognize,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

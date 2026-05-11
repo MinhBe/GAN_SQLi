@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27030,SELECT MIN ( produce ) AS boy FROM donkey,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27031,SELECT MIN ( box ) AS film FROM tie,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27032,SELECT * FROM ( SELECT atomic FROM slipped ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27033,SELECT TOP 3 * FROM afternoon SELECT * FROM bark 3SELECT * FROM light,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27034,SELECT * FROM syllable 3 SELECT * FROM crowd,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27035,SELECT * FROM zipper FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM jar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27036,SELECT TOP 50 PERCENT * FROM strip SELECT * FROM fifteen FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM early,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27037,SELECT * FROM cannot FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM itself,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27038,SELECT TOP 3 * FROM crop WHERE further = 'minerals' SELECT * FROM involved,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27039,SELECT * FROM explore WHERE with = 'affect' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27040,SELECT * FROM young WHERE highest = 'folks' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27041,SELECT AVG ( flight ) FROM individual,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27042,SELECT * FROM member WHERE final NOT LIKE '[indicate]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27043,SELECT AVG ( sit ) FROM terrible SELECT SUM ( mass ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27044,SELECT AVG ( gradually ) FROM such SELECT SUM ( meat ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27045,SELECT AVG ( writing ) FROM bad SELECT SUM ( shout ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27046,SELECT COUNT ( cage ) FROM football,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27047,SELECT COUNT ( several ) FROM stems,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27048,SELECT AVG ( direct ) FROM scared,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27049,SELECT * FROM breathing WHERE dropped NOT LIKE 'bottom%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27050,SELECT * FROM torn WHERE addition LIKE '%hide%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27051,SELECT * FROM gently WHERE relationship NOT LIKE '[steep]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+27052,"SELECT * FROM vertical WHERE model IN ( 'thing', 'because', 'satisfied' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27053,"SELECT * FROM here WHERE seven NOT IN ( 'mine', 'origin', 'future' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27054,SELECT * FROM perfect WHERE consider IN ( SELECT cast FROM bat ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27055,SELECT * FROM ruler WHERE shells BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27056,SELECT * FROM cold WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27057,SELECT * FROM teacher WHERE calm BETWEEN 'accept' AND 'offer',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27058,"SELECT * FROM visit WHERE toward BETWEEN ""flame"" AND ""sheet""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27059,SELECT * FROM evidence WHERE inch NOT BETWEEN 'her' AND 'low',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

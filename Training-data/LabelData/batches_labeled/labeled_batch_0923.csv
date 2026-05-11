@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27660,"SELECT monkey, operation+ ', ' + finger+ ' ' + tool+ ', ' + speed AS built FROM development",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27661,SELECT halfway ( s ) FROM spread INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27662,"SELECT range,nuts,individual,hospital,present ( ( continent JOIN move ON beat.grass = weak.hungry ) INNER JOIN accidentON Orders.current = chest.trafficID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27663,SELECT part ( s ) FROM cannot LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27664,"SELECT slipped,hurt,along FROM path LEFT JOIN Orders ON represent.saveID = each.per ORDER BY nature.frozen",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27665,SELECT third ( s FROM wool RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27666,"SELECT Orders.showrID, Employees.flew, Employees.something FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.officeID ORDER BY Orders.thoseID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27667,SELECT tank ( s ) FROM classroom FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27668,"SELECT column_name ( s ) FROM outside,inch",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27669,SELECT dangerous ( s ) FROM grade UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27670,SELECT rock ( s ) FROM addition SELECT gravity ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27671,SELECT safe ( s ) FROM over UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27672,SELECT period ( s ) FROM thought SELECT even FROM busy,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27673,SELECT month FROM pride UNION SELECT safety FROM push ORDER BY managed,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+27674,SELECT account FROM come UNION ALL SELECT expect FROM like ORDER BY barn,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+27675,"SELECT made,symbol FROM month WHERE ran = 'ill' UNION SELECT try, month FROM death",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+27676,"SELECT COUNT ( blanket ) , took FROM none BY seat",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27677,"SELECT Employees.furniture, COUNT ( Orders.otherID ) AS wellFROM ( OrdersINNER JOIN judge ON Orders.spokenID = Employees.scienceID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27678,SELECT * FROM dark FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27679,SELECT usually,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27680,SELECT end FROM funny,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27681,SELECT DISTINCT magnet FROM nose,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27682,SELECT COUNT ( DISTINCT breathe ) FROM turn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27683,SELECT Count ( * ) AS previous,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27684,FROM ( SELECT DISTINCT select FROM airplane ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27685,SELECT * FROM planet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27686,SELECT * FROM gravity WHERE car = 'doctor',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27687,SELECT * FROM action WHERE breath = 'chicken',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27688,SELECT * FROM create WHERE heading = send,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27689,SELECT * FROM minute WHERE story = 'student' AND City = 'bill',0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+20220,"SELECT growth, ought, finishFROM serve WHERE phrase IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20221,"UPDATE essential SET hour = 'must', City = 'attempt' WHERE hidden = border",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20222,UPDATE silly SET press = 'coach'WHERE manufacturing = 'fourth',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20223,SELECT * FROM frozen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20224,DELETE FROM section WHERE underline = 'shoot',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20225,DELETE FROM white,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20226,SELECT halfway ( s ) FROM correct,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20227,SELECT * FROM ( SELECT mind FROM supply ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20228,SELECT TOP 3 * FROM met,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20229,SELECT * FROM cowboy 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20230,SELECT * FROM breeze FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20231,SELECT TOP 50 PERCENT * FROM body,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20232,SELECT * FROM knowledge FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20233,SELECT TOP 3 * FROM copy WHERE out = 'cheese',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20234,SELECT * FROM such WHERE fear = 'forget' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20235,SELECT * FROM previous WHERE six = 'got' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20236,SELECT MIN ( poem ) AS gave FROM such,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20237,SELECT MIN ( go ) AS sheet FROM largest,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20238,SELECT * FROM ( SELECT mind FROM between ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20239,SELECT TOP 3 * FROM major SELECT * FROM water 3SELECT * FROM card,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20240,SELECT * FROM both 3 SELECT * FROM task,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20241,SELECT * FROM bridge FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM disease,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20242,SELECT TOP 50 PERCENT * FROM father SELECT * FROM coming FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM hide,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20243,SELECT * FROM managed FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM between,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20244,SELECT TOP 3 * FROM lake WHERE correct = 'him' SELECT * FROM tube,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20245,SELECT * FROM difficulty WHERE typical = 'desk' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20246,SELECT * FROM sum WHERE say = 'courage' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20247,SELECT AVG ( meat ) FROM ants,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+20248,SELECT * FROM beginning WHERE fell NOT LIKE '[recently]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+20249,SELECT AVG ( ice ) FROM nine SELECT SUM ( fairly ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+27960,SELECT went ( s FROM hidden RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27961,"SELECT Orders.sortrID, Employees.left, Employees.hurry FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.postID ORDER BY Orders.taughtID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27962,SELECT printed ( s ) FROM verb FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27963,"SELECT column_name ( s ) FROM nice,nose",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27964,SELECT thy ( s ) FROM engine UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27965,SELECT blow ( s ) FROM rather SELECT sky ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27966,SELECT bigger ( s ) FROM mighty UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27967,SELECT dollar ( s ) FROM stiff SELECT root FROM contrast,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27968,SELECT foot FROM uncle UNION SELECT given FROM tales ORDER BY out,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+27969,SELECT trick FROM fear UNION ALL SELECT tall FROM science ORDER BY spread,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+27970,"SELECT sheet,human FROM lunch WHERE apartment = 'unless' UNION SELECT accurate, coat FROM unknown",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+27971,"SELECT COUNT ( voyage ) , idea FROM sad BY test",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27972,"SELECT Employees.shine, COUNT ( Orders.scaleID ) AS bringFROM ( OrdersINNER JOIN chair ON Orders.begunID = Employees.personID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27973,SELECT * FROM rush FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27974,SELECT poetry,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27975,SELECT * FROM refused,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27976,SELECT interest FROM men,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27977,SELECT DISTINCT cake FROM stopped,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27978,SELECT COUNT ( DISTINCT worker ) FROM jar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27979,SELECT Count ( * ) AS drive,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27980,FROM ( SELECT DISTINCT basket FROM usual ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27981,SELECT * FROM earn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27982,SELECT * FROM quarter WHERE although = 'grow',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27983,SELECT * FROM bread WHERE war = 'damage',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27984,SELECT * FROM orbit WHERE house = dozen,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27985,SELECT * FROM income WHERE chapter = 'distant' AND City = 'pleasant',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27986,SELECT * FROM bag WHERE should = 'bar' OR lower = 'difference',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27987,SELECT * FROM orbit WHERE card = 'children' OR regular = 'path',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27988,SELECT * FROM taught WHERE NOT chose = 'make',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+27989,SELECT * FROM just WHERE cave = 'twenty' AND ( baseball = 'volume' OR struggle = 'available' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based

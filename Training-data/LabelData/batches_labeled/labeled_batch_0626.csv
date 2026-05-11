@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+18750,SELECT *INTO CustomersGermany FROM Customers WHERE Country = 'Germany';,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18751,"SELECT Customers.CustomerName, Orders.OrderID INTO CustomersOrderBackup2017 FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18752,SELECT * INTO newtable FROM oldtable WHERE 1 = 0;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18753,"SELECT * FROM table1 WHERE condition ; INSERT INTO table2 ( column1 , column2 , column3 , ... )",0,,stacked_queries,generic,0.95,; INSERT  detected — stacked_queries injection (priority 3) on generic,rule-based
+18754,"SELECT column1 , column2 , column3 , ... FROM table1 WHERE condition ; INSERT INTO Customers ( CustomerName, City, Country )",0,,stacked_queries,generic,0.95,; INSERT  detected — stacked_queries injection (priority 3) on generic,rule-based
+18755,"SELECT SupplierName, City, Country FROM Suppliers; INSERT INTO Customers ( CustomerName, ContactName, Address, City, PostalCode, Country )",0,,stacked_queries,generic,0.95,; INSERT  detected — stacked_queries injection (priority 3) on generic,rule-based
+18756,"SELECT SupplierName, ContactName, Address, City, PostalCode, Country FROM Suppliers; INSERT INTO Customers ( CustomerName, City, Country )",0,,stacked_queries,generic,0.95,; INSERT  detected — stacked_queries injection (priority 3) on generic,rule-based
+18757,"SELECT SupplierName, City, Country FROM Suppliers WHERE Country = 'Germany';",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18758,"SELECT OrderID, Quantity, CASE WHEN Quantity > 30 THEN 'The quantity is greater than 30' WHEN Quantity = 30 THEN 'The quantity is 30' ELSE 'The quantity is under 30' END AS QuantityText FROM OrderDetails;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18759,"SELECT CustomerName, City, Country FROM Customers ORDER BY ( CASE WHEN City IS NULL THEN Country ELSE City END ) ;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18760,"SELECT ProductName, UnitPrice * ( UnitsInStock + UnitsOnOrder ) FROM Products;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18761,"SELECT ProductName, UnitPrice * ( UnitsInStock + IFNULL ( UnitsOnOrder, 0 ) ) FROM Products;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18762,"SELECT ProductName, UnitPrice * ( UnitsInStock + COALESCE ( UnitsOnOrder, 0 ) ) FROM Products;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18763,"SELECT ProductName, UnitPrice * ( UnitsInStock + ISNULL ( UnitsOnOrder, 0 ) ) FROM Products;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18764,"SELECT ProductName, UnitPrice * ( UnitsInStock + IIF ( IsNull ( UnitsOnOrder ) , 0, UnitsOnOrder ) ) FROM Products;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18765,"SELECT ProductName, UnitPrice * ( UnitsInStock + NVL ( UnitsOnOrder, 0 ) ) FROM Products;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18766,SELECT * FROM Customers GO; EXEC SelectAllCustomers; CREATE PROCEDURE SelectAllCustomers @City nvarchar ( 30 ) AS,0,,stacked_queries,generic,0.95,"; EXEC , CREATE PROCEDURE detected — stacked_queries injection (priority 3) on generic",rule-based
+18767,"SELECT * FROM Customers WHERE City = @City GO; EXEC SelectAllCustomers @City = 'London'; CREATE PROCEDURE SelectAllCustomers @City nvarchar ( 30 ) , @PostalCode nvarchar ( 10 ) AS",0,,stacked_queries,generic,0.95,"; EXEC , CREATE PROCEDURE detected — stacked_queries injection (priority 3) on generic",rule-based
+18768,"SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode GO; EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';",0,,stacked_queries,generic,0.95,; EXEC  detected — stacked_queries injection (priority 3) on generic,rule-based
+18769,SELECT * FROM Customers -- WHERE City = 'Berlin';,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18770,--SELECT * FROM Customers;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18771,SELECT * FROM Products;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18772,/*SELECT * FROM Customers;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18773,SELECT * FROM Orders;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18774,SELECT * FROM Categories;*/,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18775,SELECT * FROM Suppliers;,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18776,"SELECT CustomerName, Country FROM Customers;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+18777,SELECT * FROM Customers WHERE ( CustomerName LIKE 'L%' OR CustomerName LIKE 'R%' OR CustomerName LIKE 'W%' ) AND Country = 'USA' ORDER BY CustomerName;,0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+18778,"SELECT column1, column2,... FROM existing_table_name WHERE ....; CREATE TABLE TestTable AS",0,,stacked_queries,generic,0.95,"; CREATE , CREATE TABLE detected — stacked_queries injection (priority 3) on generic",rule-based
+18779,"SELECT customername, contactname FROM customers;",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+13650,rosselot azcona,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13651,70489976j,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13652,mal3it6,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13653,pro8i2ic6r,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13654,lima9za,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13655,liester-okamoto@carloshoya.np,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13656,glatzeder.karr@lamejorplaya.so,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13657,"calle daniel florido rodriguez, 105, 2?f",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13658,84q42o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13659,fiset,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13660,glvez matons,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13661,"c/ juan ramon jimenez, 135, 11d",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13662,condal talero,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13663,fulmer,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13664,femke,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13665,whorf.laporte@sindualidad.fo,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13666,waggenheim@rubirubi.info,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13667,shdanoff@esposo.com.tj,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13668,oco,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13669,jabbari,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13670,rodis-ryan@colorprint.info,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13671,lucar planes,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13672,scheifel2,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13673,keaton3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13674,4.88546E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13675,arvizu tirapu,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13676,"plaza cinco villas, 103,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+13677,92621448b,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13678,3.62194E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+13679,trebaol@arroyomolinos-madrid.gq,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

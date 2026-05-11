@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29880,SELECT * FROM Customers WHERE NOT Country = 'Germany' AND NOT Country = 'USA',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29881,SELECT * FROM Customers ORDER BY Country,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29882,SELECT * FROM Customers ORDER BY Country DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29883,SELECT column_names FROM table_name WHERE column_name IS NULL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29884,SELECT column_names FROM table_name WHERE column_name IS NOT NULL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29885,SELECT TOP number | percent column_name FROM table_name WHERE condition,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29886,SELECT column_name FROM table_name WHERE condition LIMIT number,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29887,SELECT column_name FROM table_name ORDER BY column_name FETCH FIRST number ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29888,SELECT column_name FROM table_name WHERE ROWNUM < = number,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29889,FROM ( SELECT column_name FROM table_name ORDER BY column_name ) WHERE ROWNUM < = number,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29890,SELECT TOP 3 * FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29891,SELECT * FROM Customers LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29892,SELECT * FROM Customers FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29893,SELECT TOP 50 PERCENT * FROM Customers,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29894,SELECT * FROM Customers FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29895,SELECT TOP 3 * FROM Customers WHERE Country = 'Germany',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29896,SELECT * FROM Customers WHERE Country = 'Germany' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29897,SELECT * FROM Customers WHERE Country = 'Germany' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29898,SELECT MIN ( column_name ) FROM table_name WHERE condition,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29899,SELECT MAX ( column_name ) FROM table_name WHERE condition,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29900,SELECT MIN ( Price ) AS SmallestPrice FROM Products,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29901,SELECT MAX ( Price ) AS LargestPrice FROM Products,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29902,SELECT COUNT ( column_name ) FROM table_name WHERE condition,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29903,SELECT AVG ( column_name ) FROM table_name WHERE condition,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29904,SELECT SUM ( column_name ) FROM table_name WHERE condition,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29905,SELECT COUNT ( ProductID ) FROM Products,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29906,SELECT AVG ( Price ) FROM Products,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29907,SELECT SUM ( Quantity ) FROM OrderDetails,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29908,SELECT * FROM Customers WHERE CustomerName LIKE 'a%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29909,SELECT * FROM Customers WHERE CustomerName LIKE '%a',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16440,ninon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16441,aldebar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16442,jiyuan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16443,"vinyals, 117 4?e",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16444,tors,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16445,andara francino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16446,1.50338E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16447,gullera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16448,eisenberg@muchochinoenchina.mx,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16449,80876345l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16450,amber,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16451,vallado oliveras,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16452,5.1284E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16453,46630334l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16454,zarpanel,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16455,8.01225E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16456,staton,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16457,3.31324E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16458,ninn,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16459,boimorto,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16460,2.6419E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16461,1.35045E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16462,tapinga,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16463,9ei91n,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16464,vall de ebo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16465,1.02606E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16466,retasac5n,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16467,"moncayo 46,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16468,3.60E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16469,alfamn,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+21300,SELECT * FROM tongue ORDER BY week,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21301,SELECT * FROM honor ORDER BY angry DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21302,"SELECT * FROM solid ORDER BY captured, nest",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21303,"SELECT * FROM brave ORDER BY detail ASC, wish DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21304,"INSERT INTO fire ( very, shout, string, lips, dollar, was ) VALUES ( 'completely', 'flow'. border', 'acres', 'jungle', 'captain', 'blew' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21305,"INSERT INTO aboard ( smallest, large, somehow ) VALUES ( 'ready', 'maybe', 'element' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21306,"SELECT opposite, situation, foot FROM soft WHERE buffalo IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21307,"SELECT habit, gun, directlyFROM wise WHERE strip IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21308,"UPDATE plant SET form = 'blanket', City = 'pound' WHERE hand = flat",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21309,UPDATE tune SET alphabet = 'fought'WHERE spent = 'seed',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21310,SELECT * FROM matter,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21311,DELETE FROM goose WHERE note = 'announced',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21312,DELETE FROM statement,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21313,SELECT earn ( s ) FROM good,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21314,SELECT * FROM ( SELECT clothes FROM home ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21315,SELECT TOP 3 * FROM organized,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21316,SELECT * FROM cake 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21317,SELECT * FROM fly FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21318,SELECT TOP 50 PERCENT * FROM kept,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21319,SELECT * FROM pour FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21320,SELECT TOP 3 * FROM circle WHERE fed = 'sport',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21321,SELECT * FROM calm WHERE metal = 'remove' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21322,SELECT * FROM worker WHERE heading = 'due' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21323,SELECT MIN ( why ) AS pain FROM among,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21324,SELECT MIN ( using ) AS rays FROM later,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21325,SELECT * FROM ( SELECT forgotten FROM popular ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21326,SELECT TOP 3 * FROM difficulty SELECT * FROM music 3SELECT * FROM mother,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21327,SELECT * FROM remarkable 3 SELECT * FROM end,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21328,SELECT * FROM member FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM balloon,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+21329,SELECT TOP 50 PERCENT * FROM measure SELECT * FROM except FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM push,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

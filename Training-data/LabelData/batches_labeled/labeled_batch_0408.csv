@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+12210,graciot ballv,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12211,91394289v,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12212,78695182s,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12213,fany,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12214,6.04089E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12215,5.22E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12216,cassasola nochez,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12217,"calle kresaltxu 94, 3?b",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12218,estupian lladonet,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12219,65340567m,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12220,infalibilidad,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12221,56632037b,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12222,diy$ambo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12223,valido casademont,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12224,remo,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12225,pascuet landivar,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12226,"ondulada, 121",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12227,traveria morera,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12228,gervasio,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12229,pompa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12230,"avinguda carrilet, 21,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12231,winston@chinavende.bi,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12232,"carlos trivio moreno, 2,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12233,schiavelli@buscadordevideos.mk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12234,ferreruela,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12235,lareo robles,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12236,shih_brusse@professionalhost.jp,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+12237,88903644l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12238,harry,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+12239,baides,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+24570,SELECT MIN ( shut ) AS jet FROM usually,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24571,SELECT * FROM ( SELECT needle FROM root ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24572,SELECT TOP 3 * FROM nervous SELECT * FROM screen 3SELECT * FROM aware,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24573,SELECT * FROM end 3 SELECT * FROM flag,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24574,SELECT * FROM design FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM zipper,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24575,SELECT TOP 50 PERCENT * FROM to SELECT * FROM cook FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM surrounded,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24576,SELECT * FROM riding FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM able,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24577,SELECT TOP 3 * FROM ought WHERE brain = 'birthday' SELECT * FROM major,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24578,SELECT * FROM slightly WHERE mixture = 'she' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24579,SELECT * FROM size WHERE later = 'discuss' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24580,SELECT AVG ( spent ) FROM my,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24581,SELECT * FROM notice WHERE attached NOT LIKE '[climb]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24582,SELECT AVG ( out ) FROM thee SELECT SUM ( fallen ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24583,SELECT AVG ( correctly ) FROM usually SELECT SUM ( shoot ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24584,SELECT AVG ( as ) FROM hurt SELECT SUM ( poor ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24585,SELECT COUNT ( sunlight ) FROM talk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24586,SELECT COUNT ( central ) FROM composed,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24587,SELECT AVG ( therefore ) FROM average,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24588,SELECT * FROM manufacturing WHERE let NOT LIKE 'just%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24589,SELECT * FROM policeman WHERE happen LIKE '%suddenly%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24590,SELECT * FROM this WHERE flag NOT LIKE '[get]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+24591,"SELECT * FROM library WHERE slip IN ( 'vapor', 'tube', 'area' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24592,"SELECT * FROM title WHERE captured NOT IN ( 'addition', 'cookies', 'previous' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24593,SELECT * FROM buffalo WHERE copy IN ( SELECT maybe FROM division ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24594,SELECT * FROM slide WHERE hall BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24595,SELECT * FROM have WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24596,SELECT * FROM tower WHERE built BETWEEN 'audience' AND 'pond',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24597,"SELECT * FROM visitor WHERE mistake BETWEEN ""apart"" AND ""unknown""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24598,SELECT * FROM may WHERE oxygen NOT BETWEEN 'trail' AND 'bring',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+24599,SELECT * FROM cabin WHERE minerals BETWEEN account09/01/1996beginning AND exist15/31/1996beside,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

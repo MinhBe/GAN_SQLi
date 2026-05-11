@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+28650,SELECT skill ( s ) FROM worse UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28651,SELECT height ( s ) FROM eight SELECT feed ( s ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28652,SELECT rhythm ( s ) FROM those UNION ALL,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28653,SELECT zulu ( s ) FROM worried SELECT history FROM crack,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28654,SELECT come FROM realize UNION SELECT instrument FROM fly ORDER BY sell,0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+28655,SELECT goose FROM than UNION ALL SELECT cent FROM dull ORDER BY skin,0,,union_based,generic,0.95,"UNION ALL SELECT, UNION ALL SELECT detected — union_based injection (priority 7) on generic",rule-based
+28656,"SELECT travel,fog FROM manner WHERE ruler = 'search' UNION SELECT bow, mud FROM easily",0,,union_based,generic,0.95,UNION SELECT detected — union_based injection (priority 7) on generic,rule-based
+28657,"SELECT COUNT ( donkey ) , before FROM parallel BY of",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28658,"SELECT Employees.birthday, COUNT ( Orders.forceID ) AS clubFROM ( OrdersINNER JOIN smell ON Orders.blackID = Employees.boundID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28659,SELECT drew,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28660,SELECT * FROM joined,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28661,SELECT paragraph FROM carry,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28662,SELECT DISTINCT corner FROM shore,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28663,SELECT COUNT ( DISTINCT command ) FROM return,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28664,SELECT Count ( * ) AS toward,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28665,FROM ( SELECT DISTINCT prepare FROM pond ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28666,SELECT * FROM box WHERE start = 'clock',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28667,SELECT * FROM halfway WHERE topic = 'statement',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28668,SELECT * FROM swim WHERE original = job,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28669,SELECT * FROM birth WHERE basic = 'square' AND City = 'movement',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28670,SELECT * FROM breeze WHERE accept = 'pet' OR out = 'gave',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28671,SELECT * FROM lamp WHERE thrown = 'shoe' OR accept = 'oldest',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28672,SELECT * FROM riding WHERE NOT work = 'known',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28673,SELECT * FROM steam WHERE automobile = 'pen' AND ( electricity = 'instrument' OR ordinary = 'policeman' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28674,SELECT * FROM bat WHERE NOT pictured = 'log' AND NOT yet = 'citizen',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28675,SELECT * FROM tribe ORDER BY hunt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28676,SELECT * FROM college ORDER BY jar DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28677,"SELECT * FROM choose ORDER BY finger, entirely",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28678,"SELECT * FROM directly ORDER BY river ASC, return DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+28679,"INSERT INTO saw ( knowledge, at, manufacturing, stream, me, melted ) VALUES ( 'century', 'salmon'. old', 'move', 'line', 'open', 'wood' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29160,SELECT * FROM meat WHERE slave = 'ask' OR vertical = 'section',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29161,SELECT * FROM feed WHERE NOT country = 'herself',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29162,SELECT * FROM combine WHERE stone = 'basic' AND ( open = 'proper' OR spent = 'leather' ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29163,SELECT * FROM idea WHERE NOT hole = 'who' AND NOT movement = 'author',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29164,SELECT * FROM property ORDER BY get,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29165,SELECT * FROM facing ORDER BY putting DESC,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29166,"SELECT * FROM frozen ORDER BY over, former",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29167,"SELECT * FROM general ORDER BY clean ASC, supper DESC",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29168,"INSERT INTO sudden ( anybody, turn, faster, replace, tune, rose ) VALUES ( 'coast', 'seven'. wear', 'basket', 'gave', 'count', 'worry' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29169,"INSERT INTO highway ( cheese, age, pale ) VALUES ( 'gun', 'mix', 'fast' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29170,"SELECT written, rays, using FROM apartment WHERE dozen IS NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29171,"SELECT grade, reason, automobileFROM no WHERE obtain IS NOT NULL",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29172,"UPDATE bark SET few = 'vapor', City = 'subject' WHERE alphabet = pretty",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29173,UPDATE vapor SET alone = 'how'WHERE gate = 'acres',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29174,DELETE FROM roof WHERE part = 'lesson',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29175,DELETE FROM worker,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29176,SELECT growth ( s ) FROM market,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29177,SELECT * FROM ( SELECT western FROM plant ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29178,SELECT TOP 3 * FROM hurt,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29179,SELECT * FROM bad 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29180,SELECT * FROM one FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29181,SELECT TOP 50 PERCENT * FROM western,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29182,SELECT * FROM smallest FETCH FIRST 50 PERCENT ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29183,SELECT TOP 3 * FROM pet WHERE talk = 'face',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29184,SELECT * FROM fifteen WHERE stopped = 'rising' LIMIT 3,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29185,SELECT * FROM fly WHERE nails = 'layers' FETCH FIRST 3 ROWS ONLY,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29186,SELECT MIN ( thrown ) AS poor FROM evening,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29187,SELECT MIN ( toy ) AS near FROM greatest,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29188,SELECT * FROM ( SELECT private FROM said ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29189,SELECT TOP 3 * FROM fed SELECT * FROM line 3SELECT * FROM verb,0,,benign,generic,0.8,No attack signals detected in payload,rule-based

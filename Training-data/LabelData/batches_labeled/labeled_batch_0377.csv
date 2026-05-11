@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+11280,8.36404E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11281,"grupo fuensanta 197, 12?a",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11282,jalance,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11283,4.20136E+14,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11284,"c/ ricardo gutierrez 26, 8-d",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11285,ivancevi,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11286,castil de vela,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11287,genaro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11288,ergasto,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11289,"llosa de ranes, la",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11290,es2eri5o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11291,cuenca,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11292,02054707w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11293,21184515c,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11294,5.71439E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11295,marcano giner,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11296,lemoine5@informatica2009.zr,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11297,pr3caz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11298,marsh@comerciosaspe.ke,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11299,inescourt7@citycvs.mil,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11300,"c/ julia minguillon, 179, 7-a",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11301,obsequ.iosa,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11302,"calle carlos amel, 32, 12?h",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11303,kallewar,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11304,59760678p,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11305,toperzer1,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11306,canaan,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11307,suzuki,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+11308,"antigua de ancora s/n,",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+11309,"calle dean miranda 106, 6-f",0,,benign,generic,0.8,No attack signals detected in payload,rule-based

@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+16470,navalvillar de ibor,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16471,shrum@uniovivirtual.nz,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16472,"c/ mineria, 151 13?g",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16473,santa eulalia de gllego,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16474,komarov@docerosas.dk,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16475,lilah,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16476,18l4et2ro,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16477,16802646l,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16478,malia,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16479,65886361d,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16480,geffner-schoo@bacoespecialseleccin.bm,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16481,eberto,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16482,c4l6716o,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16483,alvino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16484,carbajosa de la sagrada,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16485,asacadora,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16486,5.95675E+15,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16487,"lapa, la",0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16488,vanera,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16489,42855301e,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16490,ilsup,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16491,6ar10l30,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16492,aira vials,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16493,quintino,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+16494,marice,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16495,26707809w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16496,06918701w,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16497,beterette estruga,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16498,talens zumalacrregui,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based
+16499,30034324g,0,,unknown,unknown,0.5,Insufficient information to classify,rule-based

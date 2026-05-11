@@ -1,0 +1,31 @@
+row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
+29010,SELECT * FROM upper WHERE seat LIKE '%ice%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29011,SELECT * FROM poem WHERE brush NOT LIKE '[furniture]%',0,,boolean_blind,generic,0.95,LIKE ' detected — boolean_blind injection (priority 8) on generic,rule-based
+29012,"SELECT * FROM daily WHERE spin IN ( 'spring', 'load', 'hold' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29013,"SELECT * FROM scared WHERE which NOT IN ( 'unless', 'island', 'managed' )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29014,SELECT * FROM office WHERE four IN ( SELECT shelter FROM badly ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29015,SELECT * FROM chamber WHERE brave BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29016,SELECT * FROM five WHERE Price NOT BETWEEN 10 AND 20,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29017,SELECT * FROM soil WHERE part BETWEEN 'fight' AND 'said',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29018,"SELECT * FROM sheet WHERE stems BETWEEN ""watch"" AND ""climb""",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29019,SELECT * FROM card WHERE eat NOT BETWEEN 'happily' AND 'check',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29020,SELECT * FROM flat WHERE drop BETWEEN pale09/01/1996weigh AND began15/31/1996known,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29021,SELECT * FROM third WHERE hold BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29022,SELECT AVG ( sea ) FROM differ SELECT SUM ( carefully ),0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29023,SELECT COUNT ( youth ) FROM hide,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29024,SELECT COUNT ( stringID ) FROM journey,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29025,SELECT AVG ( Price ) FROM breathe,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29026,SELECT * FROM seeing WHERE there BETWEEN '1996-07-01' AND '1996-07-31',0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29027,"SELECT topicID AS ID, solve AS describe FROM mass",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29028,"SELECT ifID AS ID, friendly AS care FROM card",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29029,"SELECT happily AS prove, rule AS [cat] FROM straw",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29030,"SELECT cow, broad+ ', ' + class+ ' ' + increase+ ', ' + hay AS facing FROM son",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29031,SELECT line ( s ) FROM dot INNER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29032,"SELECT event,charge,parts,explore,accident ( ( carry JOIN location ON event.if = jet.coast ) INNER JOIN environmentON Orders.rice = lot.sawID )",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29033,SELECT equipment ( s ) FROM obtain LEFT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29034,"SELECT art,announced,dug FROM verb LEFT JOIN Orders ON solve.compositionID = tax.general ORDER BY railroad.dangerous",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29035,SELECT morning ( s FROM skin RIGHT JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29036,"SELECT Orders.keyrID, Employees.smile, Employees.managed FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.bridgeID ORDER BY Orders.airplaneID",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29037,SELECT adjective ( s ) FROM short FULL OUTER JOIN,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29038,"SELECT column_name ( s ) FROM jet,path",0,,benign,generic,0.8,No attack signals detected in payload,rule-based
+29039,SELECT curve ( s ) FROM these UNION,0,,benign,generic,0.8,No attack signals detected in payload,rule-based
