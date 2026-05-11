@@ -1,9 +1,56 @@
-"""Shared utilities: seeding, checkpointing, sequence padding."""
+"""Shared utilities: seeding, checkpointing, sequence padding, SQLi type conditioning."""
 import os
 import random
 import numpy as np
 import torch
-from typing import List
+from typing import List, Optional
+
+
+# ── SQLi type vocabulary for conditional generation ──
+SQLI_TYPES = [
+    'benign', 'error_based', 'boolean_blind', 'time_blind', 'union_based',
+    'heavy_query', 'auth_bypass', 'out_of_band', 'unknown', 'polyglot',
+    'stacked_queries', 'generic', 'rce', 'comment_based', 'inline_query',
+    'second_order', 'ldap_injection', 'command_injection',
+]
+SQLI_TYPE_TO_IDX = {t: i for i, t in enumerate(SQLI_TYPES)}
+NUM_SQLI_TYPES = len(SQLI_TYPES)
+
+
+def sqli_type_to_idx(sqli_type: str) -> int:
+    return SQLI_TYPE_TO_IDX.get(sqli_type, SQLI_TYPE_TO_IDX.get('benign', 0))
+
+
+def idx_to_sqli_type(idx: int) -> str:
+    if 0 <= idx < NUM_SQLI_TYPES:
+        return SQLI_TYPES[idx]
+    return SQLI_TYPES[0]
+
+
+def encode_condition(sqli_type: str, device: torch.device = None) -> torch.Tensor:
+    idx = sqli_type_to_idx(sqli_type)
+    t = torch.tensor([idx], dtype=torch.long)
+    if device is not None:
+        t = t.to(device)
+    return t
+
+
+def encode_conditions(sqli_types: List[str], device: torch.device = None) -> torch.Tensor:
+    indices = [sqli_type_to_idx(t) for t in sqli_types]
+    t = torch.tensor(indices, dtype=torch.long)
+    if device is not None:
+        t = t.to(device)
+    return t
+
+
+def sample_random_conditions(batch_size: int, device: torch.device = None,
+                             exclude_benign: bool = True) -> torch.Tensor:
+    """Sample random SQLi attack types for unconditional generation."""
+    start = 1 if exclude_benign else 0  # skip index 0 (benign) for attack generation
+    indices = torch.randint(start, NUM_SQLI_TYPES, (batch_size,))
+    if device is not None:
+        indices = indices.to(device)
+    return indices
 
 
 def set_seed(seed: int) -> None:

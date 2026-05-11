@@ -22,7 +22,8 @@ from src.tokenizer import SQLTokenizer
 from src.generator import GeneratorLSTM
 from src.losses import mle_loss
 from src.scheduled_sampling import ScheduledSampler
-from src.utils import set_seed, pad_sequences, save_checkpoint, get_device
+from src.utils import (set_seed, pad_sequences, save_checkpoint, get_device,
+                       sqli_type_to_idx, encode_conditions)
 
 DATA_DIR = os.path.join(ROOT, 'data')
 CKPT_DIR = os.path.join(ROOT, 'checkpoints')

@@ -1,0 +1,1419 @@
+--- Page 1 ---
+arXiv:2212.11119v1  [cs.CL]  20 Dec 2022A Survey on Text Generation using Generative
+Adversarial Networks
+Gustavo H. de Rosa∗, Jo˜ ao P. Papa
+Department of Computing
+S˜ ao Paulo State University
+Bauru, Brazil
+Abstract
+This work presents a thorough review concerning recent studies a nd text gen-
+eration advancements using Generative Adversarial Networks. T he usage of
+adversarial learning for text generation is promising as it provides a lternatives
+to generate the so-called “natural” language. Nevertheless, adv ersarial text
+generation is not a simple task as its foremost architecture, the Ge nerative Ad-
+versarial Networks, were designed to cope with continuous inform ation (image)
+instead of discrete data (text). Thus, most works are based on t hree possi-
+ble options, i.e., Gumbel-Softmax diﬀerentiation, Reinforcement Lea rning, and
+modiﬁed training objectives. All alternatives are reviewed in this sur vey as they
+present the most recent approaches for generating text using a dversarial-based
+techniques. The selected works were taken from renowned datab ases, such as
+Science Direct, IEEEXplore, Springer, Association for Computing M achinery,
+and arXiv, whereas each selected work has been critically analyzed a nd assessed
+to present its objective, methodology, and experimental results .
+Keywords: Text Generation, Generative Adversarial Networks, Machine
+Learning, Language Modeling, Natural Language Processing
+∗Corresponding author
+Email addresses: gustavo.rosa@unesp.br (Gustavo H. de Rosa), joao.papa@unesp.br
+(Jo˜ ao P. Papa)
+Preprint submitted to Pattern Recognition December 22, 202 2
+--- Page 2 ---
+1. Introduction
+Deep Learning has received the spotlight due to its capacity to solve human-
+like tasks through hierarchical learning. Nevertheless, such an ar ea depends on
+proper representation learning to obtain high-quality performanc e and accom-
+plish the intended task. For instance, Zhang et al. [1] presented a s urvey on
+an eﬀective paradigm for representation learning denoted as Conc ept Factor-
+ization, which is widely used to correlate data points and concepts as linear
+combinations. Furthermore, Zhang et al. [2] introduced a novel a pproach to en-
+hance optical character recognition with residual-based represe ntation learning,
+achieving state-of-the-art results using dense Convolutional Ne ural Networks.
+Such applications are also extensible to the Natural Language Proc essing
+(NLP)area,whichalsodependsonpreciserepresentationlearning tounderstand
+how humans communicate using voice- and text-based patterns. E ssentially, its
+ultimate goalis to createalgorithmscapable ofinterpreting the hum an language
+and between machines and humans.
+A common task NLP-based task denoted as Language Modeling aims t o un-
+derstand the general text structure by learning its grammatical, syntactic, and
+semantical rules. From a computational point of view, this task aims at pre-
+dicting a t+1 timestep based on previous ttimesteps, where each timestep can
+be composed of characters, words, or even sentences. Thus, a well-learned lan-
+guage model can reproduce the training text structure by predic ting new data
+based on past information, e.g., text generation. For example, imag ine that
+a ﬁctitious language composed of three tokens follows this structu re:<sub-
+ject> <verb> <noun>. If a language model is capable of learning such struc-
+ture, it is also capable of predicting a <verb>token based on input <sub-
+ject>token, as well as predicting a <noun>token based on input <sub-
+ject>and<verb>tokens.
+One may realize that such a task is notably diﬀerent from traditional Ma-
+chine Learning ones as it employs a new dependency, i.e., the time itself . In
+other words, tokens (characters, words, sentences) are inte rpreted as sequences,
+2
+--- Page 3 ---
+where each piece represents a particular timestep. Additionally, pr evious se-
+quences must be carried to the future during learning, as the langu age model
+predicts data based on past information [3]. Traditionally, research ers focus on
+solving such a problem using Recurrent Neural Networks (RNN) [4], w hich can
+re-use prior knowledge to learn future information. Even though R NNs seem to
+be the ideal structure to tackle text generation problems, they a re still suscepti-
+ble to adversarial manipulation [5]. In other words, such models are v ulnerable
+to slight modiﬁcations in data that were not introduced in the learning process,
+resulting in mispredictions and ineﬃcient performance. This vulnerab ility rep-
+resents potential security threats and may compromise real-wor ld applications,
+remaining as an open research ﬁeld.
+Goodfellow et al. [6] proposed the Generative Adversarial Network s (GAN)
+and achieved several hallmarks concerning adversarial learning. S ome recent
+works [7, 8, 9] revealed their capability of learning data distributions and plau-
+sibly generating artiﬁcial image-based data. Notwithstanding, suc h networks
+were designed to deal with continuous information instead of discre te data [10],
+i.e., they are not suitable when applied with sequences of texts. Thus , several
+worksattempttotacklesuchanissuebyemployingGumbel-Softmax diﬀerentia-
+tion [11], Reinforcement Learning(RL) [12], ormodiﬁed training objec tives[13].
+This paper proposes to survey and discuss the approaches mentio ned above ap-
+plied explicitly to text generation tasks. Additionally, it aims to provide a
+comprehensive source of text-based GAN advancements, where architectures
+are critically analyzed in terms of datasets, objectives, evaluation metrics, and
+experimental results.
+The remainder of this paper is organized as follows. Section 2 presen ts the
+survey structure, related surveys, and how surveyed works we re selected. Sec-
+tion 3 presents some theoretical background concerning Natura l Language Pro-
+cessing, Language Modeling, Generative Adversarial Networks, a s well as some
+text generation datasets and topmost evaluation metrics. Sectio n 4 discusses
+and provides an in-depth analysis of the surveyed works. Finally, Se ction 5
+states overall conclusions and future insights regarding the surv eyed context.
+3
+--- Page 4 ---
+2. Survey Structure
+2.1. Related Surveys
+Text generation, formerly known as natural language generation , has re-
+ceived a great deal of attention throughout the last years, mainly due to the
+advance of computational power and Deep Learning-based archit ectures. Gatt
+et al. [14] presented a survey regarding the advancements of nat ural language
+generation. They categorized and discussed state-of-the-art data-driven archi-
+tectures and presented the main drawbacks related to the syner gy between nat-
+ural language generation and other Artiﬁcial Intelligence areas. N evertheless,
+their survey aims to provide an overview of the task instead of diving into the
+models’ architecture and their advantages/disadvantages.
+A recent survey presented by Lu et al. [15] reviews and critically ana lyzes
+adversarial-based text models’ development. Even though their s urvey only
+focuses on comparing six state-of-the-art architectures and t he Maximum Like-
+lihood Estimation over two benchmarking datasets, the authors es tablished a
+reference for those wanting to work with text-based adversaria l learning. Fur-
+thermore, Zhang et al. [16] proposed a survey in the context of ad versarial
+attacks on Deep Learning models in Natural Language Processing, where they
+targeted on summarizing and discussing the types of adversarial a ttacks in-
+stead of discussing the latest advancements regarding Generativ e Adversarial
+Networks applied to text-based generation.
+Therefore,thepresentedsurveyaimstofulﬁlltheliterature’sbla nkspotsand
+provide a unique reference of adversarial-based models applied to t ext genera-
+tion. Extensive research has been conducted across several re nowned databases
+to identify the most promising text-based Generative Adversarial Networks.
+Additionally, the selected models have been critically analyzed and disc ussed in
+terms of objective, methodology, experimental results, and eva luation metrics.
+Finally, the presentworkintendsto categorizethe text-basedad versarialmodels
+4
+--- Page 5 ---
+according to their diﬀerentiability strategy1, e.g., Gumbel-Softmax diﬀerentia-
+tion, Reinforcement Learning, and modiﬁed training objectives.
+2.2. Paper Selection
+Initially, we performed an extensive search at renowned database s, such as
+Science Direct, IEEEXplore, Springer, Association for Computing M achinery
+(ACM), and arXiv, to deﬁne the starting year of the surveyed wor ks. As the
+Generative Adversarial Networks had been proposed in 2014 and t he Gumbel-
+Softmax approach had been proposed in 2016, we could only ﬁnd GAN -based
+text generation with Gumbel-Softmax references beyond 2016. A dditionally, no
+work addressed GAN-based text generation with Reinforcement L earning and
+modiﬁed training objectives before 2017.
+3%
+20%
+29%31%17%2016
+2017
+2018
+2019
+2020
+Figure 1: Percentage of considered publications per publis hing period.
+With that in mind, we considered two keywords for performing the se arch:
+(i) “generative adversarial network”, and (ii) “text generation” , and gathered
+1It is essential to remember that Generative Adversarial Net works were not designed to
+work with discrete data.
+5
+--- Page 6 ---
+the resulting worksthat havebeen cited at least one time and that w ere relevant
+to this survey context (GAN-based text generation). Furtherm ore, we veriﬁed
+their authors’ background to check whether they were active re searchers from
+truthful laboratories and universities. Thus, the following publicat ion period is
+covered by the current survey: 2016 (1 work), 2017 (7 works), 2018 (10 works),
+2019 (11 works), and 2020 (6 works), as illustrated by Figure 1.
+3. Theoretical Background
+This section presents a brief theoretical background regarding N atural Lan-
+guage Processing, Language Modeling, Generative Adversarial Ne tworks, Rein-
+forcement Learning, and Gumbel-Softmax diﬀerentiation-based s trategies. Ad-
+ditionally,itdescribesanoverviewconcerningthefourmostcommon lyemployed
+text generation datasets and some topmost evaluation metrics.
+3.1. Natural Language Processing
+Most human communication is performed through voice and text, i.e., vital
+sources of information used to predict behavioral characteristic s. Neverthe-
+less, it is hard to predict human-based communication because each individual
+possesses particular traits in its written and verbal language, e.g., pitch, word
+selection, vocabulary, and accent.
+An area that arises in tackling such a problem is Natural Language Pr o-
+cessing, responsible for modeling and comprehending the interactio n between
+humans and machines through natural language usage. Deep Lear ning has re-
+cently achieved several hallmarks regarding NLP-based tasks [17 ], introducing
+state-of-the-art models for a wide variety of tasks, such as lang uage modeling,
+grammatical analysis, and named entity recognition, among others .
+Nonetheless, one may perceive that NLP is often complicated due to lan-
+guage’s intrinsic features (morphology, syntax, semantic) and th e requirement
+of knowledge to connect sequences of characters and words. Ev en though hu-
+mans quickly learn and master languages, machines still struggle in su ch a task,
+leaving it as an open research problem for the community.
+6
+--- Page 7 ---
+3.1.1. Language Modeling
+Language Modeling tasks stand for learning probabilistic models that can
+predict a t+ 1 timestep given ttimesteps, e.g., predict the next word given
+a sequence of words. A language model learns the probability of tok en occur-
+rences based on examples, where simpler models might look at sequen ces of
+characters or words, while larger models may learn sequences of se ntences or
+paragraphs. Notwithstanding, such tasks are often complicated as models need
+to learn natural languages’ underlying traits, such as grammar, s yntax, and se-
+mantic. Additionally, as its learning procedure is based on a set of exa mples, it
+poorly performs when employed with unknown data, e.g., not-learne d tokens.
+Most language models are used as root architectures for larger NL P tasks,
+such as speech recognition, optical character recognition, mach ine translation,
+and spelling correction. On the other hand, a trained language mode l can
+generate new text according to the structure it has already learn ed. Recently,
+mostlanguagemodelsarefosteredbyneuralnetworks,achieving state-of-the-art
+resultsduetotheircapacityforgeneralization. Furthermore,itis commontouse
+pre-trained embeddings, i.e., real-valued vectors that encode high -dimensional
+representations of tokens (characters or words) in a projecte d vector space, to
+tackle the curse of dimensionality2.
+One may perceive that an interesting approach is to use RNNs, as th ey
+can re-use their previous hidden states, where neurons are fed w ith recurrent
+connections and learn a so-called “memory”. For example, a feed-f orward net-
+work is not ﬁt to create a probabilistic distribution capable of knowing that a
+<noun>should come after a <verb>, as it only looks into the “future”. On the
+other hand, recurrent networks can look into their past “memory ” and decide
+their subsequent output based on previous inputs.
+2Curse of dimensionality happens when vast vocabularies are used, producing sparse rep-
+resentations.
+7
+--- Page 8 ---
+3.1.2. How to Generate Text?
+A properly trained language model encodes features and rules fro m the
+text it was trained. In other words, the model has learned a proba bilistic
+distribution that represents the training data and samples new dat a. Let
+P(wt|wt−1,wt−2,...,w t−n) be the probability distribution of a token at t
+timestep, given an n-sized sequence of previous tokens. The language model
+estimates the probabilities of a token wtgiven a previous sequence of tokens,
+allowing it to be sampled into a new token. Afterward, in t+1 timestep, the
+probability distribution tries to represent wt+1givenwt,wt−1,...,w t−n+1. The
+process is repeated until a convergence criterion is satisﬁed, suc h as the number
+of generated tokens. Finally, the resulting tokens are sequentially arranged to
+form the generated text.
+3.2. Generative Adversarial Networks
+Szegedy et al. [18] found in their work that several Machine Learnin g archi-
+tectures, including state-of-the-art, are vulnerable to advers arial manipulation,
+i.e., these models could not correctly classify when fed with slightly diﬀe rent
+learningdata. Yearsago, Goodfellow et al. [6] introduced the Gener ativeAdver-
+sarial Networks as an alternative to the adversarial problem. It is implemented
+as a two-neural networkssystem, where the networks compete in a zero-sum ap-
+proach. Namely, the idea is to have a discriminative and a generative n etwork,
+where the generative one is in charge of producing fake data, and t he discrimi-
+native one is in charge of estimating the probability of the fake data b eing real.
+Figure 2 illustrates an example of a standard Generative Adversaria l Network.
+Generator Discriminator Real
+data 
+Fake 
+data Noise 
+vector 
+Figure 2: Standard architecture of a Generative Adversaria l Network.
+8
+--- Page 9 ---
+The network’s discriminator Dis trained to maximize the probability of
+classifying both training and generated data as real images. Simulta neously, the
+network’sgenerator Gistrainedtominimize log(1−D(G(z)), i.e., thedivergence
+among both data distributions, where zdenotes a noisy input. In other words,
+the two neural-networks system compete in a zero-sum game, rep resented by
+Equation 1:
+min
+Gmax
+DC(D,G) =Ex[logD(x)]+Ez[log(1−D(G(z))], (1)
+whereC(D,G) is the loss function to be minimized, D(x) is the discriminator’s
+estimated probability of a real sample xbeing real, Exis the mathematical
+expectancy over all samples from the real data set X,G(z) stands for the gen-
+erated fake data given the noise vector z,D(G(z)) is the estimated probability
+ofafakesample G(z) beingreal, and Ezisthe mathematicalexpectancy overall
+randomgeneratorinputs, i.e., the expected valueoverallfakesam plesgenerated
+byG.
+Nevertheless, a deriving problem from Equation 1 is that GANs can ge t
+trapped in local optimums when the discriminator has an easy task. I n other
+words, at the beginning of the training, when Gstill does not generate proper
+samples, Dcan reject fake samples with high probability, as they are incredibly
+diﬀerent from the real data3. Thus, an alternative to such a problem is to train
+Gto maximize log(D(G(z)), which improves the initial gradient values.
+3.2.1. Diﬀerentiating GANs with Gumbel-Softmax
+During GANs training, both generator and discriminator need a diﬀer en-
+tiable loss function to update their parameters. However, when us ing RNN-
+based architectures as GANs generators, it is impossible to diﬀeren tiate its
+output, usually accomplished by sampling one-hot categorical value s from a
+Softmax distribution.
+3Such a problem saturates the function log(1−D(G(z)).
+9
+--- Page 10 ---
+AsolutiontosuchaproblemproposedbyJanget al.[11] consistsofs ampling
+from the so-called Gumbel-Softmax, which is a continuous distributio n that can
+approximate samples from categorical distributions. Essentially, t he idea is
+to employ the Softmax distribution along with a Gumbel distribution an d a
+temperature parameter, as follows:
+˜y=ew+g
+τ
+/summationtextew+g
+τ, (2)
+where˜ystands for the diﬀerentiable outputs, wis a vector of unnormalized log
+probabilities, gis a vector sampled out of the Gumbel distribution, and τis
+the temperature parameter. As τ→0,˜yapproximates a one-hot categorical
+distribution, while ˜yapproximates a uniform distribution as τ→ ∞.
+3.2.2. Reinforcing GANs Learning
+As previously mentioned, GANs need a diﬀerentiable loss function in or der
+to perform their training. An alternative to the Gumbel-Softmax tr ick consists
+of creatinga Reinforcement Learning-basedagent for the gener ator. Essentially,
+an RL algorithm is deﬁned by a policy function π(a|s,θ) parameterized by θ,
+whichoutputsaprobabilitydistributionoverallactions agiventhecurrentstate
+sof an agent. Note that sstands for the state of the agent (text generated),
+andastands for its actions (text to be generated). In other words, a n agent
+generates text based on the policy π, where its actions are sampled according
+to the distribution deﬁned by the same policy. Therefore, it is possib le to
+optimize θby employing policy gradient methods, such as the REINFORCE
+algorithm [19], to build a good text generation agent.
+Lety= (y1,y2,...,y T)|y∈ Ydepict the sequence generation problem,
+whereYis the vocabulary of candidate tokens and Tis the number of tokens to
+be generated. Let the generative model Gbe parametrized by θGand generate
+a statesfor each time t, which corresponds to a generated token yt. Further,
+let its next action, denoted by a, be the next token yt+1to be chosen. There-
+fore, the policy G(yt|y1:t−1;θG) is stochastic, such that the transition state is
+10
+--- Page 11 ---
+deterministic after an action has been chosen, i.e., δa
+s,˜s= 1 for the next state
+˜s=y1:tif the current state s=y1:t−1and the action a=yt.
+Additionally, the discriminative model D, which is parameterized by θD,
+guides the generator through a probability D(y) that indicates whether a se-
+quenceybelongs to real data or not. This discriminative model is trained by
+positive (real data) and negative (artiﬁcial data) samples, provid ing a reward
+signal to update the generative model’s gradients. Equation 3 desc ribes the
+reward signal obtention procedure:
+QG
+D(a;s) =
+
+1
+N/summationtextN
+n=1D(yn)|yn∈MC(y1:t;N) fort < T
+D(y) for t=T,(3)
+whereQG
+D(a;s) is the action-value function of a sequence, i.e., the reward signal
+accumulated from state sgiven an action a, andNis the number of Monte
+Carlo samplings.
+3.3. Datasets
+The Amazon Customer Reviews4[20] dataset, commonly denoted as Prod-
+uct Reviews, is composed of more than 233 ,000,00 users reviews, which have
+expressedtheiropinionanddescribedtheirexperienceamongstpr oductsbought
+over Amazon’s website. Furthermore, the Chinese Poems5[21] dataset is com-
+posed of 284 ,299 poems from several online sources, such as Tang Poems, Song
+Poems, Song Ci, Ming Poems, Qing Poems, and Tai Poems.
+The COCO Image Captions6[22] dataset has been developed through the
+capture of image captions belonging to the Microsoft Common Objec ts in Con-
+text (MS COCO) dataset. In sum, humans created 1 ,026,459 captions from
+the same data sets used by MS COCO and divided them across two sub -sets:
+one with 5 reference sentences for each image and another one wit h 40 refer-
+ence sentences for 5 ,000 randomly chosen images. All candidate captions have
+4https://nijianmo.github.io/amazon/index.html
+5https://homepages.inf.ed.ac.uk/mlap/Data/EMNLP14
+6https://cocodataset.org
+11
+--- Page 12 ---
+been pre-processed and tokenized according to the Stanford PT BTokenizer, fol-
+lowing the same protocols established by the Penn Treebank datase t. After
+pre-processing, all punctuation marks have been removed to sta ndardize the
+captions. Finally, the EMNLP2017 WMT News7[23] dataset has been devel-
+oped to foster machine translation tasks, being composed of pairs of documents,
+such as sets of sentences amongst two distinct languages. Never theless, it is pos-
+sible to adjust such a dataset to the natural language generation task and use
+only sentences corresponding to the same language.
+3.4. Evaluation Metrics
+The task of natural language generation allows the machine to crea te arti-
+ﬁcial information and understand natural languages. However, it is necessary
+to assess such information’s quality and compare them against thos e created by
+human beings. Therefore, the advent of algorithms focused on ev aluation met-
+rics allowed the estimation of how “relevant” the generated informa tion is and
+enabled ways to benchmark their quality between several language generation
+architectures.
+3.4.1. Bilingual Evaluation Understudy
+BilingualEvaluationUnderstudy(BLEU)[24]evaluatesthequalityof machine-
+generatedtextandisstructuredbythecorrespondenceofsou rcetext(writtenby
+humans) and artiﬁcial text (generated by machines). Essentially, it is calculated
+by the co-occurrence of n-grams between the reference and candidate sentences,
+computing a type of precision between the sentences. Let Φ = {φ1,φ2,...,φ κ}
+be the reference sentences with κtokens, while ˜Φ ={˜φ1,˜φ2,...,˜φω}is the
+candidate sequence with ωtokens. Equation 4 describes its formula, as follows:
+Pn=/summationtext
+kmin(dk(˜φ),maxdk(φ))/summationtext
+kdk(˜φ), (4)
+7http://statmt.org/wmt17/results.html
+12
+--- Page 13 ---
+wheredk(·) is the amount of occurrences of an n-gram and kis the maximum
+number of possible n-grams. However, such formula inﬂates the metric’s value
+for short sentences and needs a penalization factor according to Equation 5:
+b=
+
+1 if ω > κ
+e1−κ
+ωifω≤κ. (5)
+Therefore, the ﬁnal BLEU score is calculated by a geometric mean w eighted
+by the individual’s n-grams precision. Moreover, the metric’s value is within
+the [0,1] interval, where values close to 1 indicate a bigger similarity between
+the sentences. Equation 6 describes such procedure, as follows:
+BN=b·exp((N/summationdisplay
+n=1wnlog(Pn))), (6)
+wheren= 1,2,3,...,Nandwnis a constant for all nvalues.
+3.4.2. Negative Log-Likelihood
+Negative Log-Likelihood (NLL) [25] is usually used as a loss function in
+Machine Learning training algorithms and aims at maximizing the probab ility
+of correct classiﬁcations. In other words, during a linguistic model training,
+NLL is used to verify whether the network is learning to generate t+1 tokens
+given the previous ttokens.
+LetKbe the number of classes to be classiﬁed, i.e., the number of possible
+generated tokens. The loss function is deﬁned according to Equat ion 7:
+NLL=−1
+n/summationdisplay
+x∈XK/summationdisplay
+k=1yk·eak, (7)
+wherenis the number of samples in training set X,xis the input data, yis the
+true label in one-hot encoding, and ais the network’s output. The NLL metric
+is commonly used to evaluate a network’s learning quality and is restric ted to a
+positive interval, e.g., [0 ,+∞]. Additionally, as NLL tends to 0, the networkcan
+learn the training set patterns, i.e., correctly predicting the trainin g samples’
+labels.
+13
+--- Page 14 ---
+3.4.3. Perplexity
+Perplexity (PPL) [26] is calculated by the exponentiation of NLL, fur nishing
+a more intuitive metric. Given that PPL is just the exponentiation of N LL,
+its interval is restricted to [1 ,+∞], where smaller values correspond to a well-
+trained network, and higher values correspond to a poor learning p rocedure.
+4. Analysis and Discussion
+This section presents the critical analysis and discussion regarding the com-
+piled works, which are categorized as follows: (i) GAN-based text ge neration
+with Gumbel-Softmax diﬀerentiation, (ii) GAN-based text generatio n with Re-
+inforcement Learning, and (iii) GAN-based text generation with mod iﬁed train-
+ingobjectives. Additionally, Figure3describesthemethodologicalp ipelineused
+to conduct text generation with the mentioned approaches, and T able 1 de-
+scribes an overview regarding the surveyed works, where the follo wing columns
+have depicted each work: reference, architecture, datasets, objectives, evalu-
+ation metrics, and experimental results, while Table 2 comprehends a set of
+architectures evaluated with the most common metric (BLEU-2) ov er the four
+most common datasets: Amazon Reviews, Chinese Poems, COCO Ima ge Cap-
+tions, and EMNLP2017 WMT News.
+Negative 
+Samples Positive 
+Samples 
+Generator Real Data 
+Discriminator Discriminator Generator 
+Reward 
+Reward 
+Reward 
+Reward State Action 
+Policy Gradient 
+Figure 3: Pipeline commonly used to conduct the adversarial -based text generation. Note
+that for Gumbel-Softmax diﬀerentiation and modiﬁed traini ng objectives, the discriminator
+directly rewards the generator (without Reinforcement Lea rning) as their functions are diﬀer-
+entiable.
+14
+--- Page 15 ---
+Reference Architecture Dataset Objectives Metrics Result s
+Kusner, Hern´ andez-
+Lobato [27]GSGAN Context-Free Gram-
+marGumbel-Softmax with
+discrete data.Visual inspection Samples similar to an
+MLE-trained LSTM.
+Nie et al. [28] RelGAN COCO Image Cap-
+tions, EMNLP2017
+WMT NewsRelational Memory
+generator and Gumbel-
+Softmax distribution.NLL, BLEU Outperformed mod-
+els when RelGAN
+pre-training was good.
+Yin et al. [29] Meta-CoTGAN COCO Image Cap-
+tions, EMNLP2017
+WMT NewsCooperative approach
+with an additional lan-
+guage model.NLL, BLEU Positive impact of
+cooperatively approach
+and meta optimization.
+Yu et al. [30] SeqGAN Chinese Poems,
+Nottingham Mu-
+sic, Obama Speech,
+Synthetic DataStochastic Reinforce-
+mentLearning gradient
+policy updates.NLL, BLEU First model to extend
+GANs to discrete token
+generation.
+Lin et al. [31] RankGAN Chinese Poems, COCO
+Image Captions,
+Shakespeare PlaysRanked data instead of
+real and fake.BLEU Could not compete
+with human-written
+sentences.
+Wang et al. [32] VGAN Taobao Reviews, Ama-
+zonReview, Penn Tree-
+bankHigh-latent variables
+with Variational Au-
+toEncoders (VAE).NLL, BLEU Successfully applied
+VAEs to adversarial-
+based models.
+Guimaraes et al. [33] ORGAN Molecules Dataset, Es-
+sen Associative CodeDomain-speciﬁc objec-
+tives and discrimina-
+tor’s rewards.Diversity, Validity Generated domain-
+based data, with RL
+being essential.
+Guo et al. [34] LeakGAN Chinese Poems, COCO
+Image Captions,
+EMNLP2017 WMT
+News, Synthetic DataLeaked high-level fea-
+tures from the discrim-
+inator into the genera-
+tor.NLL, BLEU Concluded that leaked
+information is vital to
+the network’s learning.
+Hjelm et al. [10] BGAN Google One Billion
+WordsCompute importance
+weights with diﬀerence
+measures.Visual Inspection Scratch stable training
+yet poor generation.
+continues on next page
+15
+--- Page 16 ---
+Fedus et al. [35] MaskGAN IMDB Movie, Penn
+TreebankActor-criticconditional
+architecture.Percentage of Unique
+n-GramsProduced reasonable
+sentences, yet not as
+good as the ground
+truth.
+Li et al. [36] CS-GAN Amazon Review, Emo-
+tion, NEWS, Stanford
+Sentiment Treebank,
+Yelp ReviewIncorporated sentence
+category over the archi-
+tecture.NLL, Accuracy Suﬀered from large
+amounts of data and
+binary labels.
+Balagopalan et al. [37] RE-GAN Context-Free Gram-
+marComparative study be-
+tween three distinct
+policy gradient meth-
+ods.Goodness Score Needed a signiﬁcant
+pre-training.
+Shi et al. [38] IRL COCO Image Cap-
+tions, IMDB Movie,
+Synthetic DataInverse RL architec-
+ture.BLEU, F-BLEU, B-
+BLEU, HM-BLEUAlleviated the problem
+of reward sparsity and
+mode collapse.
+Xu et al. [39] DP-GAN Amazon Review,
+OpenSubtitles Dia-
+logue, Yelp ReviewNovel discriminator to
+distinguish between re-
+peated and novel text.BLEU, Relevance, Di-
+versity, FluencyProduced more diverse
+text, and better distin-
+guished novel and re-
+peated text.
+Chen et al. [40] CTGAN Amazon Review,
+Film Review, Obama
+Speech, Yelp ReviewMimicked human-
+like text generation
+by introducing new
+features.Similarity, Diversity,
+Word Frequency, Sub-
+jectivity, SentimentSimpliﬁed text gener-
+ation process outper-
+formed baselines.
+Wang, Wan [41] SentiGAN, C-
+SentiGANBeerAdvocate, Cus-
+tomer Reviews, Emo-
+tional Tweet, Stanford
+Sentiment TreebankMultiple generators
+with a penalty-based
+objective.Novelty, Diversity Tagged as promising
+approaches in domain-
+based text generation.
+Zhang et al. [42] CD-GAN Amazon Review, Yelp
+ReviewAnnotated data from
+distinct domains to
+generated emotional
+text.Sentiment Transfer
+Strength, Domain
+Transfer Strength, Co-
+sine Similarity, Word
+OverlapAchieved compara-
+ble results to the
+compared baselines
+(sentiment transfer
+state-of-the-art).
+continues on next page
+16
+--- Page 17 ---
+Zhang et al. [43] TranGAN Penn Treebank Transformer-based a r-
+chitecture trained with
+an actor-critic RL algo-
+rithm.Perplexity, Percentage
+of Unique n-Grams,
+BLEUProcessed discrete se-
+quences and outper-
+formed compared base-
+lines.
+Liu et al. [44] BFGAN Amazon Review, Chi-
+nese Sentence Making
+Corpus, DailyDialogBackward and forward
+generators with a
+discriminator capable
+of guiding their joint
+training.BLEU, SLEU Improved quality of
+lexically-constrained
+sequences, and did not
+need additional labels.
+Sun et al. [45] QuGAN Tibetan Q&A QRNNs and improved
+both rewardand Monte
+Carlo search strategies.BLEU Model with optimized
+Monte Carlo search
+and BERT outper-
+formed compared
+models.
+Rizzo, Van [46] C-SeqGAN Amazon Review,
+COCO Image Cap-
+tions, EMNLP2017
+WMT NewsContext adaption
+of global word em-
+beddings, as well
+as a self-attention
+discriminator.BLEU, Pos-BLEU,
+Self-BLEUImproved SeqGAN by
+using global knowl-
+edge adapted to the
+dataset’s domain.
+Wu, Wang [47] TG-SeqGAN COCO Image Captions Rewarded the gen era-
+tor with the distance
+between real and fake
+data.NLL, Embedding Simi-
+larityImproved the training
+convergence and the
+text quality.
+Zhou et al. [48] SAL COCO Image Cap-
+tions, EMNLP2017
+WMT News, Synthetic
+DataComparative discrimi-
+nator instead of a bi-
+nary one, as well as
+a self-improvement re-
+ward mechanism.NLL, BLEU, Perplex-
+ity, Frechet DistanceImproved the rewards
+system by reducing the
+sparsity and mode col-
+lapse, leading to a bet-
+ter text generation.
+Che et al. [13] MaliGAN Chinese Poems Normalized maximum
+likelihood with impor-
+tance sampling and
+variation reduction.BLEU, Perplexity Created distributions
+with lower variances
+and a better discrimi-
+nator.
+continues on next page
+17
+--- Page 18 ---
+Zhang et al. [49] TextGAN Combined data from
+BookCorpus and
+ArXivHigh-dimensional
+latent feature distri-
+bution with kernelized
+discrepancy.BLEU, Number of Ker-
+nel Density EstimatorsLearned a suitable
+latent representation
+space and produced
+realistic sentences.
+Gulrajani et al. [50] WGAN-GP Google One Billion
+WordsGradient penalization. Visual Inspection Generated discr ete
+data, yet not compara-
+ble to baselines.
+Press et al. [51] AltGAN Google One Billion
+WordsCurriculum learning
+and slow teaching.Percentage of Unique
+n-gramsAdequately trained
+from scratch.
+Chen et al. [52] FM-GAN COCO Image Cap-
+tions, CUB Captions,
+EMNLP2017 WMT
+NewsLatent feature distri-
+butions with Feature-
+Mover’s Distance.Test-BLEU, Self-
+BLEU, Human Evalu-
+ationProduced good sen-
+tences, yet still suﬀered
+from mode collapse.
+Donahue,
+Rumshisky [53]LaTextGAN Toronto Book Corpus AutoEncoder. Human Discrimi nator,
+BLEU, t-SNE Plotst-SNE plots showed
+that it could model the
+latent space.
+Li et al. [54] JSD-GAN Chinese Poems, COCO
+Image Captions,
+EMNLP2017 WMT
+News, Obama SpeechOptimize Jensen-
+Shannon Divergence.BLEU RL-free with direct
+generator optimiza-
+tion, yet only for
+explicit representa-
+tions.
+Haidar et al. [55] TextKD-GAN Google One Billion
+Words, Stanford Natu-
+ral Language InferenceKnowledge distillation
+technique based on
+teacher-student model.BLEU Smoother text repre-
+sentations and out-
+performed traditional
+GANs.
+Ahamad [56] STGAN BookCorpus, CMU-SE Encoder-decoder arch i-
+tecture inspired by the
+skip-gram model.BLEU Skip-thought embed-
+dings could generate
+discrete data.
+Montahaei et al. [57] DGSAN Chinese Poems, COCO
+Image Captions,
+EMNLP2017 WMT
+NewsOptimized closed-form
+solution to ﬁnd an op-
+timal discriminator.NLL, BLEU, Self-
+BLEU, MS-JaccardOutperformed base-
+lines regarding the
+MS-Jaccard metric,
+yet achieved slightly
+lower Self-BLEU.
+continues on next page
+18
+--- Page 19 ---
+Yang et al. [58] FGGAN Chinese Poems, COCO
+Image Captions, Syn-
+thetic DataFeature guidance mod-
+ule and a new vo-
+cabulary mask to bet-
+ter represent semantic
+rules.NLL, BLEU Outperformed current
+baselines and gener-
+ated more realistic sen-
+tences due to token re-
+striction.
+Wu et al. [59] TextGAIL COCO Image Cap-
+tions, EMNLP2017
+WMT NewsPre-trained language
+models with con-
+trastive discriminator
+and proximal policy
+optimization.NLL, BLEU, Self-
+BLEU, PerplexityGenerated diverse and
+accurate outputs due
+to the incorporation of
+pre-trained GPT-2 and
+pre-trained RoBERTa.
+Table 1: Summarization of the works considered in this surve y.
+Architecture Amazon Review Chinese Poems COCO Captions WMT News
+MLE − 0.667 0 .781 0 .768
+RNNLM 0 .848 − − −
+RelGAN − − 0.849 0 .881
+Meta-CoTGAN − − 0.858 0 .882
+SeqGAN 0 .856 0 .739 0 .745 0 .777
+VGAN 0 .868 − − −
+RankGAN − 0.812 0 .743 0 .727
+LeakGAN − 0.881 0.746 0 .826
+IRL − − 0.829 −
+BFGAN 0.920 − − −
+SAL − − 0.785 0 .788
+FGGAN − − 0.773 −
+MaliGAN − 0.741 − −
+JSD-GAN − 0.536 0.894 0 .943
+Table 2: BLEU-2 benchmark regarding architectures that use such a metric to
+evaluate the four most common datasets.
+19
+--- Page 20 ---
+4.1. Text Generation using GANs and Gumbel-Softmax Diﬀeren tiation
+Continuous distributions that resemble categorical distributions, such as the
+Gumbel-Softmax, tackled the diﬀerentiation problem and became alt ernatives
+to enable proper backpropagations of GANs’ gradients. Initially, K usner and
+Hern´ andez-Lobato [27] presented the Gumbel-Softmax Genera tive Adversarial
+Network (GSGAN), a text-based GAN that uses the Gumbel-Softm ax distribu-
+tion for generating its outputs. Their work was conducted using 5 ,000 samples
+with a maximum length of 12 characters generated from a context- free gram-
+mar (CFG) and evaluated by visual inspection of the generated dat a compared
+with a standard Maximum Likelihood Estimation (MLE) pre-trained LST M.
+Nevertheless, such an architecture could only produce comparab le results to the
+pre-trained LSTM and was no match for the Relational Generative A dversarial
+Network (RelGAN), introduced by Nie et al. [28].
+The RelGAN introduced a Relational Memory-based generator, a Gu mbel-
+Softmax relaxation, and a multi-embedded representationdiscrimin atorto com-
+pose their architecture. Their experiments were conducted using synthetic data
+generated by an oracle LSTM [30] and real datasets, such as COCO Image
+Captions and EMNLP2017 WMT News, being compared to state-of-t he-art ar-
+chitectures (MLE, SeqGAN, RankGAN, and LeakGAN). Its main adv antage
+lies in using a Relational Memory generator, which better extracts lo ng-term
+dependencies due to self-attention layers. In contrast, its main d isadvantage lies
+in needing a proper pre-training to generate feasible text, increas ing the overall
+system’s computational burden.
+Nonetheless, adversarial-based models’ increasing problem was th e mode
+collapsing, where generators tend to sacriﬁce diversity for quality . In such a
+context, the Meta Cooperative Training Paradigm Generative Adve rsarial Net-
+work (Meta-CoTGAN), proposed by Yin et al. [29], attempted to slow the eﬀect
+of mode collapsing. The authors evaluated the impact of the cooper ative train-
+ing language model and meta optimization using the same protocol pr oposed
+by Nie et al. [28]. Although the authors eased the mode collapsing prob lem,
+Meta-CoTGAN had a higher computational cost due to being trained with an
+20
+--- Page 21 ---
+additional language model during the adversarial training.
+With the mentioned architecture in mind, it is possible to observe that their
+main disadvantage lies in pre-training both discriminator and generat or ahead
+of the adversarial training, burdening the computational powers . On the other
+hand, onecanperceivethatGumbel-Softmax distributionsemploya nadditional
+temperature parameter, which controls the generated text’s div ersity and qual-
+ity, thus being an interesting parameter to be ﬁne-tuned. Addition ally, such
+models mostly need a mathematical replacement in their output layer (from
+Softmax to Gumbel-Softmax), which provides a straightforward im plementa-
+tion and a not so complex system.
+4.2. Text Generation using GANs and Reinforcement Learning
+Most Gumbel-Softmax-based approaches have a pre-training bur den in ad-
+vance to the adversarial training and directly rely on traditional GA Ns objec-
+tives, which may cause premature collapsing and an inadequate equilib rium
+between generator and discriminator. An alternative to tackling su ch a prob-
+lemis tobypassthe generator’sdiﬀerentiation problemusingstocha sticgradient
+policy updates. The idea is to acquire rewards signals from the discrim inator
+and pass them back to the generator in the same way a Reinforceme nt Learning
+method would do, such as the REINFORCE algorithm.
+The ﬁrstRL-basedworkhasbeen introducedbyYu et al.[30], deno ted asSe-
+quenceGenerativeAdversarialNetwork(SeqGAN). Their propos edarchitecture
+uses the REINFORCE algorithm, and Monte Carlo searches to propa gate the
+discriminator’sgradientstothe generator. SeqGANwastheﬁrstR L-basedwork
+and could only be compared to standard MLE-based training, yet it e stablished
+ahallmarkforfutureRL-basedresearch. AlthoughSeqGANtackle dadversarial-
+based text generation, the model lacked generalization power and produced text
+with minimum diversity. With that in mind, an alternative suggested by W ang
+et al. [32] employs additional features learned by Variational AutoE ncoders to
+represent text better. The so-called VGAN proposed to use high- level latent
+random variables to model the variability of text, aiding traditional R ecurrent
+21
+--- Page 22 ---
+Neural Networks in learning well-structured data. Their combined m odel used
+an RL-based approach to update the generator’s gradients and t he same gra-
+dient policy deﬁned by SeqGAN. Finally, VGAN outperformed the comp ared
+benchmarks, such as recurrent-basedLanguageModels and Seq GAN, overthree
+public literature datasets.
+Another SeqGAN extension, denoted as Objective-Reinforced Ge nerative
+Adversarial Networks (ORGAN), attempted to improve the learnin g process
+by including domain-speciﬁc objectives in addition to discriminator’s re wards.
+In other words, ORGAN [33] proposed to extend the reward funct ion through
+a linear combination between the discriminator and domain-speciﬁc ob jectives
+rewards,followedby a Wassersteindistancetraining. Their experim ental results
+outperformed standard baseline approaches, such as MLE and Se qGAN, while
+the authorsconcluded that ORGANcould generatedomain-basedd ataand that
+RL plays an essential role in the model’s learning.
+Notwithstanding, suchprecedentsenabledresearcherstopurs uenewformsof
+inputting external information and improving domain-related text g eneration.
+In such a context, Li et al. [36] proposed the Category Sentenc e Generative
+Adversarial Network (CS-GAN), which extends traditional text- based GANs
+with additionalcategoryinformation. Essentially, they proposed b oth generator
+and discriminator that incorporate the sentence category (label) , allowing the
+system to capture such information in its learning procedure and ge nerate text
+according to their category. On the other hand, Rizzo and Van [46 ] proposed an
+extension of the standard SeqGAN by employing context adaptatio n of global
+word embeddings and a self-attention discriminator. The so-called C -SeqGAN
+aimed at using the contribution of global knowledge adapted to the d ataset’s
+domainandaself-attentivediscriminatorthatslowlyminimizestheloss function
+and better provides feedback to the generator’s updates. The e xperiments were
+performed under an extensive evaluation regarding short-, mediu m, and long-
+length text datasets and outperformed diﬀerent SeqGAN-based baselines.
+One can perceive the advantage of employing additional information , which
+assists the network in learning domain-related structures and pro ducing more
+22
+--- Page 23 ---
+feasible texts. Nevertheless, using domain-related information ma y result in
+substantial mode collapses as the network will lose its diversity capa bility and
+generate similar text. Some authors opted not to rely on external information
+and employ variable reward signals to overcome such a problem. For in stance,
+the Generative Adversarial Network (RankGAN) [31] employs a ran king-based
+architecture to produce high-quality generations. It evaluates a nd ranks col-
+lections of human- and machine-written sequences over a referen ce group in-
+stead of training a discriminator to learn binary predictions. One can perceive
+that such an approach is inspired by the ranking steps commonly use d in web
+searchesand allows the model to calculate the expectations given d iﬀerent refer-
+ences sampled across the reference space. To calculate such valu es, the authors
+formulated a relevance score using cosine similarity followed by a soft max acti-
+vation, which allowed them to compute a collective ranking score for a n input
+sequence. Alternatively, the Diversity-Promoting Generative Adv ersarial Net-
+work (DP-GAN) [39] has been proposed to overcome the problem of generating
+repetitive and “boring” text sequences. Essentially, DP-GAN assig ns a low re-
+ward value when generating text repeatedly while assigning high rewa rds when
+generating novel text. One can observe that such an approach e ncourages the
+generator to produce a more diverse text. Additionally, the autho rs proposed a
+new discriminator, which is better at distinguishing between repeate d and novel
+text.
+Moreover, the Boundary-Seeking Generative Adversarial Netwo rk
+(BGAN) [10] uses estimated diﬀerence measures from the discrimina tor
+to compute importance weights for the generated samples, provid ing a policy
+gradient for training the generator. In other words, BGAN models the strong
+connection between the discriminator’s decision boundaries, allowing it to work
+with continuous data. BGAN uses f-divergences, such as Jensen-Shannon,
+Kullback-Leibler (KL), Reverse KL, or Squared-Hellinger policy grad ients and
+rewards for the generator, being trained with the REINFORCE algo rithm.
+BGAN yielded stable training even though its generation was inadequa te as
+no pre-training was involved. The authors stated that they were n ot aware of
+23
+--- Page 24 ---
+any previous work that could successfully train from scratch a non -continuous
+architecture and that, although their generation was inadequate , the results
+demonstrated the stability and capacity of BGANs working with discr ete data.
+A recurrent disadvantage of modifying the rewards signals occurs when net-
+workscan not providefeasible signalsduring the startingepochs, h ampering the
+learning process and preventing the generator from being adequa tely trained.
+In such a context, few works attempted to present novel RL-ba sed strategies
+based on pre-training, joint rewards, and additional policy gradien t algorithms.
+Liu et al. [44] presented a novel architecture for generating lexica lly-constrained
+sentences, denoted as Backward and Forward Generative Adver sarial Network
+(BFGAN). Speciﬁcally, their idea was to employ both backward and fo rward
+generators with a discriminator that guides their joint training by as signing re-
+ward signals, being pre-trained with MLE before the adversarial lea rning, and
+then trained using the REINFORCE algorithm.
+Regardingtext-basedGANs, policygradientmethodsusuallyprovid ereward
+functions that sample a token per timestep without considering the ir surround-
+ings and being unfeasible when dealing with long sequences. Thus, Bala gopalan
+et al. [37] introduceda comparativestudy between three policy gra dientalterna-
+tives, i.e., REBAR, RELAX, and slightly diﬀerent REINFORCE. The prop osed
+methods denoted as REGANs, aim at providing distinct reward funct ions to
+attain a probability distribution over all tokens generated by the ge nerator. Ex-
+periments were conducted using synthetic context-free gramma r and compared
+across REBAR, RELAX, and REINFORCE architectures. Alternativ ely, an In-
+verse Reinforcement Learning [60] algorithm has been proposed fo r text-based
+GANs, denoted as IRL [38]. The authors stated that their method h as two
+main advantages over the traditional RL algorithm: (i) the reward f unction
+can produce denser reward signals, and (ii) an entropy regularized -based policy
+gradient encourages the generation of diverse texts. Unlike trad itional GANs,
+IRL does not directly use a discriminator, where, instead, it uses a r eward func-
+tion that aims to increase the rewards from authentic texts and de crease the
+rewards from the generated texts. Thus, the generator is train ed via entropy
+24
+--- Page 25 ---
+regularized policy gradients [61] by maximizing the expected reward s. The ex-
+perimental results attest that the proposed method alleviated re ward sparsity
+and mode collapsing while achieving comparable results regarding the p revious
+state-of-the-art, e.g., LeakGAN.
+Most approaches mentioned above struggled to generate human- like texts
+and often faced a lack of diversity in the created sentences. With t hat in mind,
+some authors attempted to mimic human-like text generation by usin g pre-
+viously unused features, such as variable text length, emotion labe l (positive,
+negative, or neutral), and controllable topic. The Conditional Text Generative
+Adversarial Network (CTGAN) [40] is trained using the REINFORCE a lgo-
+rithm and composed of a conditional LSTM generator that uses the emotion
+label and the text as its input. Additionally, it employed a conditional d iscrim-
+inator (standard CNN) to classify whether the text is real or gene rated. The
+authors customized the text generation using speciﬁc keywords a nd automated
+the word-level replacement strategy to extract the target wor d and replace it
+with a similar one.
+Instead of only using emotions as additional features, Wang and Wa n [41]
+extended the previous work by proposing both Sentimental Gener ative Adver-
+sarialNetwork(SentiGAN) andConditionalSentimentalGenerativ eAdversarial
+Network (C-SentiGAN), which are capable of generating text with d iﬀerent sen-
+timent labels. In short, the idea is to train multiple generators simulta neously
+and use a penalty-based objective function to force each genera tor in sampling
+speciﬁc sentiment texts. Furthermore, a multi-class discriminator helps each
+generator in generating its particular texts. Another architectu re capable of
+generating emotional text is the Cross-Domain Text Sentiment Tra nsfer Gen-
+erative Adversarial Network (CD-GAN) [42], which uses annotate d data from
+other domains and overcomes the problem of large-scale annotate d data re-
+quirement. The CD-GAN aimed to combine adversarial RL and superv ised
+learning to extract sentiment transformation patterns and gene rate emotional
+text. Its architecture comprises a Seq2Seq generator and two d iscriminators,
+one accountable for sentiments and another for domains. Both dis criminators
+25
+--- Page 26 ---
+outputted rewards to update the generator’s gradients and ena bled the gener-
+ator to observe how good its generation is based on the input data s entiment
+(non-labeled data) and related to the auxiliary domain (labeled data) .
+An alternative to traditional Reinforcement Learning methodologie s is to
+split their knowledge into additional modules, such as manager/work er and ac-
+tor/critic. Such architectures’advantageistheir capacityto re presentthe policy
+functions better as they consider past actions and compare them to baselines
+to provide the reward signals. In other words, it decides how much r eward
+should be given to a generator based on its previous text generatio ns, guiding
+the network to more feasible updates and hence, better quality te xt. With that
+in mind, Guo et al. [34] proposed the Leaked Information Generative Adver-
+sarial Network (LeakGAN), which allows the discriminator to leak high -level
+extracted features to the generator and helps to guide the gene rator as it pro-
+vides additional information through its learning steps. The idea is to split the
+generative network into two modules, the MANAGER and WORKER, wh ere
+the MANAGER takes the leaked information from the discriminator an d builds
+a feature vector further to feed the WORKER module. Both MANAG ER and
+WORKER modules are distinct RNN-based architectures and trained via the
+REINFORCE algorithm. Additionally, the authors proposed a Bootst rapped
+Re-scaled Activation, where rewards are re-scaled to mitigate the vanishing
+gradient problem. The experimental results showed that leaking inf ormation
+is vital to the network’s learning process and better guides the gen erator in
+generating long text, achieving performance improvements over t he previous
+state-of-the-art architectures.
+Following the actor-critic-based architectures, Fedus et al. [35] in troduced
+the Mask Generative Adversarial Network (MaskGAN), which uses an actor-
+critic conditional GAN to ﬁll in missing text conditioned on the surroun ding
+context. One can perceive that such a task is more challenging than text gener-
+ation, helping the model reduce the generator’s risk competing with an almost-
+perfect discriminator. Additionally, in-ﬁlling tasks might mitigate the p roblem
+of mode collapsing as they provide rewards every timestep. The gen erator is
+26
+--- Page 27 ---
+basedonaSeq2Seq[62]architectureandistrainedviapolicy gradien tsusingthe
+REINFORCE algorithm. Furthermore, rewards are generated at e ach timestep,
+and the maximum sequence length is increased upon satisfying a conv ergence
+criterion. Also,toalleviatetheREINFORCEvarianceproblem,theau thorspro-
+posed generating rewards based on the whole generator’s distribu tion instead
+of only using the sampled token. On the other hand, Zhang et al. [43 ] im-
+proved the standard actor-critic methodology by proposing a tra nsformer-based
+architecture for the generator, denoted as Transformer Gene rative Adversar-
+ial Network (TranGAN). Essentially, an encoder-decoder system constitutes the
+transformer-basedarchitecture, where each layer is composed of multi-head self-
+attention and feed-forward networks in an attempt to extract lo ng-term depen-
+dencies and information from the surrounding context. The propo sed model,
+TranGAN,wascomparedagainstastandardSeq2Seqarchitectur eandSeqGAN,
+outperforming both models in almost all metrics, while the authors co ncluded
+that they could eﬀectively process discrete sequences through t he actor-critic
+training algorithm.
+Despite already known several RL-based strategies, researche rs often grap-
+pled with the incapacity of generating long texts within a feasible amou nt of
+computation burden. Additionally, the lack of context (text seman tics over
+time) in most GAN-based text generation architectures fostered the necessity of
+ﬁnding alternative improvements. Therefore, Sun et al. [45] prese nted a Quasi
+GenerativeAdversarialNetwork(QuGAN) forTibetanQuestionAn sweringcor-
+pus generation, which extends traditional GANs by using the power of Quasi-
+Recurrent Neural Networks (QRNN) and improving both reward an d Monte
+Carlo search strategies. As QRNNs are combinations of both RNNs a nd CNNs,
+they are often used to deal with long sequences of data and data p arallelization,
+providing a faster text generation. Additionally, the authors emplo yed a BERT
+model after the text generation to correct the generator’s gra mmatical mis-
+takes. Alternatively, by employing a truth-guided generator and s elf-attention-
+based discriminators, Wu and Wang [47] proposed the Truth-Guided Sequential
+Generative Adversarial Network (TG-SeqGAN) to improve text ge neration and
+27
+--- Page 28 ---
+make it look closer to the real data. The generator is essentially rew arded
+with the distance between real and fake data, guiding its converge nce, while
+the discriminator network has a self-attention mechanism to captu re long-term
+dependencies.
+Another general improvement, proposed by the Self-Adversaria l Learning
+(SAL) [48] architecture, is to employ a comparative discriminator ca pable of
+comparing text quality among samples’ pairs. Moreover, througho ut the train-
+ing step, SAL rewards the generator when a generated sentence appears to be
+better than the previously generated ones. Such an approach st ands for a self-
+improvement reward mechanism, which allows the model to receive mo re valu-
+able feedback and avoid collapsing due to the limited number of real sa mples,
+thus reducing reward sparsity and the risk of mode collapse.
+Finally, some new works attempt to improve the text generation qua lity
+by applying guidance functions to the discriminator’s signals. Essent ially, the
+idea is to provide more complex feedback and, consequently, a more feasible
+reward signal from the discriminator to the generator, leading to b etter and
+more diverse text. Yang et al. [58] introduced the Feature-Guiding Generative
+Adversarial Network (FGGAN), which solves the insuﬃcient feedba ck guidance
+from the discriminator through a feature guidance module. The mod ule is a
+CNN that considers both generated and real data and performs a series of
+convolutionaloperations to extract a high-orderfeature vecto r and provide such
+a vector in the form of a reward signal. Additionally, the generated t okens pass
+through semantic rules to remove illogical tokens and improve the ge nerated
+text’s quality.
+Atthesametime, theTextGAIL[59]attemptstoimprovethediscrim inator’s
+guidance by combining large-scale pre-trained language models, i.e., R oBERTa
+and GPT-2, with recent advancements in Reinforcement Learning, such as Gen-
+erative Information Learning (GAIL) and proximal policy optimizatio n (PPO).
+The TextGAIL architecture extends the traditional adversarial learning with
+GAIL and introduces an imitation replay method to stabilize the trainin g, i.e.,
+vocabulary sizes are often large and hampers the GAIL stability. Ad ditionally,
+28
+--- Page 29 ---
+ground truth sequences are ﬁlled in when training the generator, o ccasionally
+forcing constant rewards and stabilizing the generator’s converg ence. Their dis-
+criminator uses a pre-trained RoBERTa model as the ﬁnal classiﬁer and uses a
+contrastive-basedapproachthatestimatestherelativerealityb etweengenerated
+and real sequences, i.e., the discriminator estimates how much a rea l sentence is
+more realistic than a generated sentence. As the discriminator is no t stationary
+during adversarial learning, the generator suﬀers from high varia nce gradients
+and needs a type of policy optimization to stabilize its convergence, s uch as the
+PPO.
+4.3. Text Generation using GANs and Modiﬁed Training Object ives
+An alternative to continuous distributions and Reinforcement Lear ning is
+to propose new training objectives, hence withdrawing the necess ity of dif-
+ferentiable Softmax-like, policy reward functions, and pre-trainin g pipelines.
+The ﬁrst work that attempted to introduce such a novel was Che e t al. [13],
+which presented the Maximum-Likelihood Augmented Generative Adv ersarial
+Network (MaliGAN). Essentially, they introduced a novel objective based on
+the normalized maximum likelihood and importance sampling, which resem -
+bles an MLE-like objective and brings more stability to the training pro cedure.
+Additionally, one can observe that their variance reduction techniq ues assisted
+create discriminators capable of detecting whether a generator h as learned too
+much noise.
+A diﬀerent architecture that proposes variance reduction techn iques and
+aims at stabilizing the training procedure is the Improved Wasserste in Gener-
+ative Adversarial Network (IWGAN) [50], which uses a gradient pen alty tech-
+nique instead of the standard weight clipping. Wasserstein network s commonly
+use weight clipping to stabilize their training, yet in a hard-optimization task,
+such a technique may not converge under a speciﬁc clipped value. In contrast,
+a gradient penalization is an alternative method to enforce the Lipsc hitz con-
+straint by introducing a penalization factor to the critic’s (discrimina tor) loss
+function. Unfortunately, there were not enough baselines to com pare and attest
+29
+--- Page 30 ---
+whether IWGAN would scale with larger language models.
+The literature also started to employ curriculum learning to mitigate t he
+variance noise, where the algorithm slowly teaches the model how to generate
+increasingand variable-length sequences. Such a model denoted a s AltGAN [51]
+uses a continuous relaxation mechanism, where the softmax outpu ts are mul-
+tiplied with their respective embeddings to provide a diﬀerentiable gen erator.
+Their experimental results attested that their model could learn f rom scratch
+without resorting to any pre-training, being the ﬁrst model to acc omplish such
+a fact.
+Another alternativeapproachto modify the trainingobjectiveis by encoding
+sentencesin latent featuredistributions similarto AutoEncoders. The ﬁrstwork
+in such a category has been proposed by Zhang et al. [49], which intr oduced a
+text-based Generative Adversarial Network (TextGAN) that ma tches the high-
+dimensional latent feature distribution of real and fake sentence s using a kernel-
+ized discrepancy metric known as Reproducing Kernel Hilbert Space (RKHS).
+Such a model used a soft-argmaxoperator [63] as well as several complementary
+techniques,suchasinitializationstrategiesanddiscretizationappr oximations,to
+alleviatethe mode collapseproblem. Donahue and Rumshisky [53] exte nded the
+previous work and proposed a latent-space text-based Generat ive Adversarial
+Network(LaTextGAN), which uses an AutoEncoder and low-dimens ionallatent
+spaces. In short, they attempt to remove the dimensionality curs e and provide
+an encoding-decoding system that can generate low-dimensional la tent-based
+spaces to discriminate the sequences better. Some plotted t-SNE embeddings
+showed that LaTextGAN could adequately model the latent space, while inter-
+polated sentences indicated that LaTextGAN could smoothly encod e sentences
+in the latent space.
+Ahamad [56] introduced a Skip-Thought Vector Generative Advers arialNet-
+work (STGAN), which uses an encoder-decoder architecture to g enerate sen-
+tence embeddings. The proposed method does not resort to soft -diﬀerentiation
+or RL, as it generates text by feeding continuous embedded sample s. Addi-
+tionally, it did not have a speciﬁc training objective, which allowed the a u-
+30
+--- Page 31 ---
+thors to compare and benchmark several training algorithms, suc h as mini-
+batch discrimination, gradient penalty, WGAN, and WGAN-GP. Followin g the
+STGAN proposal, the Text Knowledge Distillation Generative Adversa rial Net-
+work (TextKD-GAN) [55] also aimed at producing continuous text re presenta-
+tion to replace the traditional one-hot encodings. Instead of only producing em-
+beddings with AutoEncoders, the TextKD-GAN resorted to a teac her-student
+model, feeding the data through an AutoEncoder and further rec onstructing it.
+Such an approachprovides a more challenging problem to the discrimin ator and
+increases the generator’s ability to fool the discriminator.
+Alternatively, theliteraturesuggestedusingdistance-basedfun ctionsinstead
+of encoder-decoder architectures to provide diﬀerentiable and s traightforward
+objectives. In such a context, the Feature Mover Generative Ad versarial Net-
+work (FM-GAN) [52] matches the latent feature distributions of r eal and fake
+sentences using Feature-Mover’s Distance (FMD), leading to highly discrimina-
+tive critics and RL-free approaches. The FMD is based on a variation of the
+Earth-Mover’s Distance (EMD), which can be solved by the Inexact Proximal
+algorithm and further be applied to model discrete data objectives . This ar-
+chitecture could produce good sentences but still suﬀered from m ode collapse
+(low diversity), while the compared baselines produced high diversity yet low-
+quality sentences. In such a context, Li et al. [54] presented an a lternative
+distance-based architecture, the Jensen-Shannon Divergence Generative Adver-
+sarial Network (JSD-GAN). Such a model optimizes the Jensen-Sh annon Diver-
+gence between the generator’s distribution and the empirical distr ibution over
+the training data, i.e., an alternative to the min-max optimization, whic h uses a
+closed-form solution for the discriminator. Although their architec ture provides
+an RL-free algorithm, they could only apply it to explicit representat ions, thus
+hindering the number of beneﬁted tasks.
+In contrast, some authors found out that using closed-formsolu tions directly
+optimizes the training objectives. For instance, Montahaei et al. [5 7] introduced
+the Discrete Generative Self-Adversarial Network (DGSAN), whic h uses an op-
+timized closed-form solution to ﬁnd an optimal discriminator. Essent ially, the
+31
+--- Page 32 ---
+DGSAN combines both generator and discriminator powers in a single n etwork,
+wherethe informationis encodedintoa newobjectivethat creates arelationship
+betweenthecurrentgenerator,thenewgenerator,andtheop timaldiscriminator
+between them. In short, the proposed method takes advantage of not having to
+calculate gradients, allowing for a direct sampling over an explicit distr ibution.
+5. Conclusions and Future Insights
+Throughout the last years, increasing demand for understanding and au-
+tomatinghumancommunicationfosteredNaturalLanguageProce ssingresearch.
+Machine Learning and abundant computational power helped achiev e several
+hallmarks in a wide range of NLP-based tasks, thus becoming viable alt erna-
+tives for modeling human-machine interactions.
+Nevertheless, such systems still struggle when dealing with advers arial or
+unknown data, i.e., data that has been slightly modiﬁed or not presen t in the
+original one. On the other hand, one can perceive that such a prob lem encour-
+ages researchers to ﬁnd feasible alternatives, such as Adversar ial Learning. In
+essence, Adversarial Learning attempts to overcome the proble m of adversarial
+data by introducing noisy examples to an architecture’s learning pro cess, aiding
+in its robustness and performance. Moreover, since the advent o f Generative
+Adversarial Networks, it is now possible to learn the data’s distribut ion and
+generate artiﬁcial data that resembles the original one.
+This article presented a survey on the most recent studies concer ning text
+generationusingGenerativeAdversarialNetworks. Thispaper’sm ostsigniﬁcant
+contribution is to critically analyze and provide a unique source of rec ent GAN-
+based text generation research, mostly ranging from 2016 to 202 0. Additionally,
+Table 1 presents an overview of the considered works, easing the r eader’s needs
+when looking for particular researches.
+We have observed that GAN-based text generation works are bra nd new
+(between 2016 and 2020); hence they still struggle with a lack of re searches and
+adequately deﬁned pipelines. GAN-based text generation’s primary challenges
+32
+--- Page 33 ---
+are that GANs were not designed to work with discrete data, needin g additional
+tricks to subdue such a problem. Such data do not provide diﬀerent iable out-
+puts, which inhibits gradients from being appropriatelycalculated an d updated.
+Therefore, most works attempt to override such a problem by emp loying modi-
+ﬁed training objectives, Reinforcement Learning, or continuous- based outputs,
+such as Soft-Argmax or Gumbel-Softmax distributions.
+Another barrier regards the intrinsic features of a language, i.e., g rammar,
+syntax, and semantic properties. To provide a feasible text gener ation, the
+model needs to learn how characters and words connect between themselves,
+often accomplished by sorts of memories and contexts (prior know ledge). We
+believe that such problems can be dealt with in a more robust pre-lear ning step,
+in which pre-trained embedding models guide networks instead of MLE , such
+as BERT [64], ELECTRA [65], and GPT-2 [66], among others.
+The advent of Transformer-based architectures, which provide s substantial
+methodsthatcangenerateplausible“natural”language,initiallydive rtedGAN-
+based systems’ attention; however, their outstanding perform ance might beneﬁt
+GANs when applied as pre-training approaches or even as part of th eir architec-
+tures. With that in mind, it seems that there are loads of blank spots that still
+need to be appropriately addressed by the research community re garding GAN-
+based text generation, whereas Transformer-based GANs look lik e promising
+approaches to be conducted in 2021.
+Acknowledgments
+The authors are grateful to S˜ ao Paulo Research Foundation (FA PESP)
+grants #2013/07375-0, #2014/12236-1, #2019/07665-4, #20 19/02205-5, and
+#2020/12101-0, and to the Brazilian National Council for Researc h and Devel-
+opment (CNPq) #307066/2017-7 and #427968/2018-6.
+33
+--- Page 34 ---
+References
+[1] Z.Zhang,Y.Zhang,M.Xu, L.Zhang,Y.Yang, S.Yan,Asurvey onconcept
+factorization: From shallow to deep representation learning, Info rmation
+Processing & Management 58 (3) (2021) 102534.
+[2] Z. Zhang, Z. Tang, Y. Wang, Z. Zhang, C. Zhan, Z. Zha, M. Wang , Dense
+residual network: Enhancing global dense feature ﬂow for chara cter recog-
+nition, Neural Networks 139 (2021) 77–85.
+[3] T. Mikolov, M. Karaﬁ´ at, L. Burget, J. ˇCernock` y, S. Khudanpur, Recurrent
+neural network based language model, in: 11th Annual Conferenc e of the
+International Speech Communication Association, 2010.
+[4] J. L. Elman, Finding structure in time, Cognitive science 14 (2) (19 90)
+179–211.
+[5] B. Biggio, F. Roli, Wild patterns: Ten years after the rise of adver sarial
+machine learning, Pattern Recognition 84 (1) (2018) 317–331.
+[6] I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Far ley,
+S. Ozair, A. Courville, Y. Bengio, Generative adversarial nets, in: A d-
+vances in Neural Information Processing Systems, 2014, pp. 267 2–2680.
+[7] X. Hu, P. Ma, Z. Mai, S. Peng, Z. Yang, L. Wang, Face hallucination from
+low quality images using deﬁnition-scalable inference, Pattern Recog nition
+94 (1) (2019) 110–121.
+[8] D. Li, C. Du, H. He, Semi-supervised cross-modal image generat ion
+with generative adversarial networks, Pattern Recognition 100 ( 1) (2020)
+107085.
+[9] L. Liu, H. Zhang, X. Xu, Z. Zhang, S. Yan, Collocating clothes with gen-
+erative adversarial networks cosupervised by categories and at tributes: A
+multidiscriminator framework, IEEE Transactionson Neural Netwo rksand
+Learning Systems 31 (9) (2020) 3540–3554.
+34
+--- Page 35 ---
+[10] R. D. Hjelm, A. P. Jacob, T. Che, A. Trischler, K. Cho, Y. Bengio ,
+Boundary-seeking generative adversarial networks, in: 6th Int ernational
+Conference on Learning Representations, 2018.
+[11] E. Jang, S. Gu, B. Poole, Categorical reparameterization with gumbel-
+softmax, in: 5th International Conference on Learning Represe ntations,
+ICLR 2017, Toulon, France, April 24-26, 2017, Conference Trac k Proceed-
+ings, 2017.
+[12] R. S. Sutton, A. G. Barto, et al., Introduction to reinforceme nt learning,
+Vol. 135, MIT Press Cambridge, 1998.
+[13] T. Che, Y. Li, R. Zhang, R. D. Hjelm, W. Li, Y. Song, Y. Bengio,
+Maximum-likelihood augmented discrete generative adversarial net works
+(2017).arXiv:1702.07983 .
+[14] A. Gatt, E. Krahmer, Survey of the state of the art in natura l language
+generation: Core tasks, applications and evaluation, Journal of A rtiﬁcial
+Intelligence Research 61 (2018) 65–170.
+[15] S. Lu, Y. Zhu, W. Zhang, J. Wang, Y. Yu, Neural text generat ion: Past,
+present and beyond (2018). arXiv:1803.07133 .
+[16] W. Zhang, Q. Sheng, A. Alhazmi, C. Li, Adversarial attacks on d eep-
+learning models in natural language processing: A survey, ACM Tran sac-
+tions on Intelligent Systems and Technology 11 (3) (2020) 1–41.
+[17] Y. Goldberg, A primer on neural network models for natural lan guage
+processing, Journal of Artiﬁcial Intelligence Research 57 (1) (20 16) 345–
+420.
+[18] C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan, I. Goodfel-
+low, R. Fergus, Intriguing properties of neural networks, in: Int ernational
+Conference on Learning Representations, 2014.
+35
+--- Page 36 ---
+[19] R. J. Williams, Simple statistical gradient-following algorithms for c onnec-
+tionist reinforcement learning, Machine learning 8 (3-4) (1992) 229 –256.
+[20] J. Ni, J. Li, J. McAuley, Justifying recommendations using distan tly-
+labeled reviews and ﬁne-grained aspects, in: 9th International Jo int Con-
+ference on Natural Language Processing, 2019, pp. 188–197.
+[21] X. Zhang, M. Lapata, Chinese poetry generation with recurre nt neural
+networks, in: Conference on Empirical Methods in Natural Langua ge Pro-
+cessing, 2014, pp. 670–680.
+[22] X. Chen, H. Fang, T.-Y. Lin, R. Vedantam, S. Gupta, P. Dollar, C . L.
+Zitnick, Microsoft coco captions: Data collection and evaluation ser ver
+(2015).arXiv:1504.00325 .
+[23] B. Ondrej, R. Chatterjee, F. Christian, G. Yvette, H. Barry , H. Matthias,
+K. Philipp, L. Qun, L. Varvara, M. Christof, et al., Findings of the 201 7
+conferenceonmachinetranslation(wmt17), in: 2ndConferenceo nMachine
+Translation, 2017, pp. 169–214.
+[24] K. Papineni, S. Roukos, T. Ward, W.-J. Zhu, Bleu: a method for a utomatic
+evaluation of machine translation, in: 40th Annual Meeting on Assoc iation
+for Computational Linguistics, 2002, pp. 311–318.
+[25] I. Myung, Tutorial on maximum likelihood estimation, Journal of M athe-
+matical Psychology 47 (1) (2003) 90–100.
+[26] P. Brown, S. D. Pietra, V. D. Pietra, J. Lai, R. Mercer, An estim ate of an
+upper bound for the entropy of english, Computational Linguistics 18 (1)
+(1992) 31–40.
+[27] M. J. Kusner, J. M. Hern´ andez-Lobato, Gans for sequence s of discrete
+elements with the gumbel-softmaxdistribution(2016). arXiv:1611.04051 .
+[28] W. Nie, N. Narodytska, A. Patel, Relgan: Relational generative adversarial
+networks for text generation, in: 7th International Conferenc e on Learning
+Representations, 2019.
+36
+--- Page 37 ---
+[29] H. Yin, D. Li, X. Li, P. Li, Meta-cotgan: A meta cooperative train ing
+paradigm for improving adversarial text generation, in: Proceedin gs of the
+AAAI Conference on Artiﬁcial Intelligence, 2020, pp. 9466–9473.
+[30] L. Yu, W. Zhang, J. Wang, Y. Yu, Seqgan: Sequence generativ e adver-
+sarial nets with policy gradient, in: 31st AAAI Conference on Artiﬁc ial
+Intelligence, 2017.
+[31] K. Lin, D. Li, X. He, Z. Zhang, M.-T. Sun, Adversarial ranking fo r lan-
+guage generation, in: 31st International Conference on Neural Information
+Processing Systems, 2017, p. 3158–3168.
+[32] H. Wang, Z. Qin, T. Wan, Text generation based on generative a dversarial
+nets with latent variables, in: Advances in Knowledge Discovery and D ata
+Mining, Springer International Publishing, Cham, 2018, pp. 92–103 .
+[33] G. L. Guimaraes, B. Sanchez-Lengeling, C. Outeiral, P. L. C. Fa rias,
+A. Aspuru-Guzik, Objective-reinforcedgenerativeadversarial networks(or-
+gan) for sequence generation models (2018). arXiv:1705.10843 .
+[34] J. Guo, S. Lu, H. Cai, W. Zhang, Y. Yu, J. Wang, Long text gene ration via
+adversarial training with leaked information, in: 32nd AAAI Confere nce
+on Artiﬁcial Intelligence, 2018.
+[35] W. Fedus, I. J. Goodfellow, A. M. Dai, Maskgan: Better text ge neration
+via ﬁlling in the , in: 6th International Conference on Learning Rep-
+resentations, 2018.
+[36] Y. Li, Q. Pan, S. Wang, T. Yang, E. Cambria, A generative model for
+category text generation, Information Sciences 450 (1) (2018) 301–315.
+[37] A. Balagopalan, S. Gorti, M. Ravaut, R. Saqur, Regan:
+Re[lax—bar—inforce] based sequence generation using gans (2018 ).
+arXiv:1805.02788 .
+37
+--- Page 38 ---
+[38] Z. Shi, X. Chen, X. Qiu, X. Huang, Toward diverse text generat ion with
+inverse reinforcement learning, in: 27th International Joint Conf erence on
+Artiﬁcial Intelligence, 2018, p. 4361–4367.
+[39] J. Xu, X. Ren, J. Lin, X. Sun, Diversity-promoting gan: A cross -entropy
+based generative adversarial network for diversiﬁed text gener ation, in:
+Conference on Empirical Methods in Natural Language Processing , 2018,
+pp. 3940–3949.
+[40] J. Chen, Y. Wu, C. Jia, H. Zheng, G. Huang, Customizable text g enera-
+tion via conditional text generative adversarial network, Neuroc omputing
+416 (1) (2020) 125–135.
+[41] K. Wang, X. Wan, Automatic generation of sentimental texts v ia mixture
+adversarial networks, Artiﬁcial Intelligence 275 (1) (2019) 540– 558.
+[42] R. Zhang, Z. Wang, K. Yin, Z. Huang, Emotional text generatio n based on
+cross-domain sentiment transfer, IEEE Access 7 (2019) 100081 –100089.
+[43] C. Zhang, C. Xiong, L. Wang, A research on generative advers arial net-
+works applied to text generation, in: 14th International Confere nce on
+Computer Science Education (ICCSE), 2019, pp. 913–917.
+[44] D. Liu, J.Fu, Q.Qu, J.Lv, Bfgan: Backwardandforwardgene rativeadver-
+sarial networks for lexically constrained sentence generation, IE EE/ACM
+Transactions on Audio, Speech, and Language Processing 27 (12) (2019)
+2350–2361.
+[45] Y. Sun, C. Chen, T. Xia, X. Zhao, Qugan: Quasi generative adv ersarial
+network for tibetan question answering corpus generation, IEEE Access 7
+(2019) 116247–116255.
+[46] G. Rizzo, T. H. M. Van, Adversarial text generation with conte xt adapted
+globalknowledgeanda self-attentivediscriminator,InformationP rocessing
+& Management 57 (6) (2020) 102217.
+38
+--- Page 39 ---
+[47] Y. Wu, J. Wang, Text generation service model based on truth -guided
+seqgan, IEEE Access 8 (2020) 11880–11886.
+[48] W. Zhou, T. Ge, K. Xu, F. Wei, M. Zhou, Self-adversarial learnin g with
+comparativediscrimination for text generation (2020). arXiv:2001.11691 .
+[49] Y. Zhang, Z. Gan, K.Fan, Z. Chen, R. Henao, D. Shen, L. Carin , Adversar-
+ial feature matching for text generation, in: 34th International Conference
+on Machine Learning, 2017, pp. 4006–4015.
+[50] I. Gulrajani, F. Ahmed, M. Arjovsky, V. Dumoulin, A. C. Courville , Im-
+proved training of wasserstein gans, in: Advances in Neural Infor mation
+Processing Systems, 2017, pp. 5767–5777.
+[51] O. Press, A. Bar, B. Bogin, J. Berant, L. Wolf, Language gene ration
+with recurrentgenerativeadversarialnetworks without pre-tr aining(2017).
+arXiv:1706.01399 .
+[52] L. Chen, S. Dai, C. Tao, H. Zhang, Z. Gan, D. Shen, Y. Zhang, G . Wang,
+R. Zhang, L. Carin, Adversarial text generation via feature-mov er’s dis-
+tance, in: Advances in Neural Information Processing Systems, 2 018, pp.
+4666–4677.
+[53] D. Donahue, A. Rumshisky, Adversarial text generation witho ut reinforce-
+ment learning (2018). arXiv:1810.06640 .
+[54] Z. Li, T. Xia, X. Lou, K. Xu, S. Wang, J. Xiao, Adversarial discre te se-
+quence generation without explicit neural networks as discriminato rs, in:
+22ndInternationalConferenceonArtiﬁcialIntelligenceandStat istics, 2019,
+pp. 3089–3098.
+[55] M. Haidar, M. Rezagholizadeh, A. D. Omri, A. Rashid, Latent cod e and
+text-basedgenerativeadversarialnetworksforsoft-textge neration,in: 2019
+Conference of the North American Chapter of the Association for Compu-
+tational Linguistics, 2019, pp. 2248–2258.
+39
+--- Page 40 ---
+[56] A. Ahamad, Generating text through adversarial training usin g skip-
+thought vectors, in: Conference of the North American Chapter of the
+Association for Computational Linguistics, 2019, pp. 53–60.
+[57] E. Montahaei, D. Alihosseini, M. Soleymani Baghshah, Dgsan: Dis crete
+generative self-adversarial network, Neurocomputing 448 (202 1) 364–379.
+[58] Y. Yang, X. Dan, X.Qiu, Z.Gao, Fggan: Feature-guidinggener ativeadver-
+sarial networks for text generation, IEEE Access 8 (2020) 1052 17–105225.
+[59] Q. Wu, L. Li, Z. Yu, Textgail: Generative adversarial imitation lea rning
+for text generatio, in: Proceedings of the AAAI Conference on Ar tiﬁcial
+Intelligence, AAAI Press, 2021.
+[60] B. D. Ziebart, A. L. Maas, J. A. Bagnell, A. K. Dey, Maximum entr opy
+inverse reinforcement learning., in: 23rd National Conference on A rtiﬁcial
+Intelligence, Vol. 3, 2008, pp. 1433–1438.
+[61] O. Nachum, M. Norouzi, K. Xu, D. Schuurmans, Bridging the gap between
+value and policy based reinforcement learning, in: Proceedings of th e 31st
+International Conference on Neural Information Processing Sy stems, Red
+Hook, NY, USA, 2017, p. 2772–2782.
+[62] I. Sutskever, O. Vinyals, Q. V. Le, Sequence to sequence lear ning with
+neural networks, in: Advances in Neural Information Processing Systems,
+2014, pp. 3104–3112.
+[63] Y. Zhang, Z. Gan, L. Carin, Generating text via adversarial tr aining, in:
+NIPS Workshop on Adversarial Training, Vol. 21, 2016.
+[64] J.Devlin, M.-W.Chang, K.Lee, K.Toutanova,BERT:Pre-train ingofdeep
+bidirectional transformers for language understanding, in: Proc eedings of
+the 2019 Conference of the North American Chapter of the Assoc iation for
+Computational Linguistics, Minneapolis, Minnesota, 2019, pp. 4171 –4186.
+40
+--- Page 41 ---
+[65] K.Clark,M.-T.Luong,Q.V. Le, C.D. Manning, Electra: Pre-tr ainingtext
+encoders as discriminators rather than generators, in: 8th Inte rnational
+Conference on Learning Representations, 2020.
+[66] A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, I. Sutskever, Language
+models are unsupervised multitask learners, OpenAI Blog 1 (8) (201 9) 1–9.
+41

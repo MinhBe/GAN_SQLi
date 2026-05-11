@@ -1,24 +1,30 @@
-"""Discriminator: TextCNN with WGAN-GP scoring."""
+"""Discriminator: TextCNN with WGAN-GP scoring and SQLi-type conditioning."""
 import torch
 import torch.nn as nn
 import torch.autograd as autograd
-from typing import List
+from typing import List, Optional
+
+from .utils import NUM_SQLI_TYPES
 
 
 class DiscriminatorCNN(nn.Module):
     def __init__(self, vocab_size: int, embed_dim: int = 128,
-                 kernel_sizes: List[int] = None, num_filters: int = 128):
+                 kernel_sizes: List[int] = None, num_filters: int = 128,
+                 num_conditions: int = NUM_SQLI_TYPES, cond_embed_dim: int = 32):
         super().__init__()
         if kernel_sizes is None:
             kernel_sizes = [3, 4, 5]
         self.embed = nn.Embedding(vocab_size, embed_dim, padding_idx=0)
+        self.cond_embed = nn.Embedding(num_conditions, cond_embed_dim)
         self.convs = nn.ModuleList([
             nn.Conv1d(embed_dim, num_filters, k) for k in kernel_sizes
         ])
         self.dropout = nn.Dropout(0.3)
-        self.fc = nn.Linear(num_filters * len(kernel_sizes), 1)
+        fc_input_dim = num_filters * len(kernel_sizes) + cond_embed_dim
+        self.fc = nn.Linear(fc_input_dim, 1)
 
-    def forward(self, input_ids: torch.Tensor) -> torch.Tensor:
+    def forward(self, input_ids: torch.Tensor,
+                cond: Optional[torch.Tensor] = None) -> torch.Tensor:
         """input_ids: (B, T) → score (B,)"""
         x = self.embed(input_ids).permute(0, 2, 1)  # (B, E, T)
         pooled = []
@@ -26,11 +32,18 @@ class DiscriminatorCNN(nn.Module):
             h = torch.relu(conv(x))       # (B, F, T-k+1)
             h = h.max(dim=-1).values      # (B, F)
             pooled.append(h)
-        out = self.dropout(torch.cat(pooled, dim=1))  # (B, F*n_kernels)
+        out = torch.cat(pooled, dim=1)    # (B, F*n_kernels)
+
+        if cond is not None:
+            cond_vec = self.cond_embed(cond)  # (B, C)
+            out = torch.cat([out, cond_vec], dim=1)
+
+        out = self.dropout(out)
         return self.fc(out).squeeze(1)    # (B,)
 
     def gradient_penalty(self, real_ids: torch.Tensor,
-                         fake_ids: torch.Tensor, gp_lambda: float = 10.0) -> torch.Tensor:
+                         fake_ids: torch.Tensor, gp_lambda: float = 10.0,
+                         cond: Optional[torch.Tensor] = None) -> torch.Tensor:
         """WGAN-GP: interpolate in embedding space."""
         B = real_ids.size(0)
         device = real_ids.device
@@ -49,7 +62,13 @@ class DiscriminatorCNN(nn.Module):
         for conv in self.convs:
             h = torch.relu(conv(x)).max(dim=-1).values
             pooled.append(h)
-        out = self.dropout(torch.cat(pooled, dim=1))
+        out = torch.cat(pooled, dim=1)
+
+        if cond is not None:
+            cond_vec = self.cond_embed(cond)
+            out = torch.cat([out, cond_vec], dim=1)
+
+        out = self.dropout(out)
         score = self.fc(out).squeeze(1)
 
         grads = autograd.grad(
