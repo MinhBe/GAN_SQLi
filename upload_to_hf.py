@@ -10,7 +10,7 @@ import os
 from pathlib import Path
 from huggingface_hub import HfApi, create_repo
 
-HF_USERNAME = "MinhBe"
+HF_USERNAME = "minhbe"
 
 # ── Checkpoints ──────────────────────────────────────────────────────────────
 # Format: (local_path, path_in_repo)
