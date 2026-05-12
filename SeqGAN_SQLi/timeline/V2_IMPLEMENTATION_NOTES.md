@@ -98,11 +98,28 @@ payloads = [relex(p, relex_dict) for p in decode_batch(fake_seqs, tok)]
 
 ---
 
+## Vấn đề 9: UnicodeEncodeError khi phase transition (Windows)
+
+**Phát hiện:** `train_adversarial_v2.py` có print statement:
+```python
+print(f"\n[Step {step}] Phase → {current_phase} | lr_g={new_lr}")
+```
+Ký tự `→` (U+2192) gây crash `UnicodeEncodeError: 'charmap' codec can't encode character '→'` trên Windows console (mặc định dùng cp1252).
+
+**Hậu quả:** Training crash ở step 2000 (phase warmup → adversarial transition). Không có checkpoint nào sau step 1000.
+
+**Fix:** Thay `→` bằng `->` trong print statement.
+
+**Cũng fix trong:** `generate_v2.py` có cùng vấn đề trong output message.
+
+---
+
 ## Summary của fixes áp dụng
 
 | File | Fix |
 |---|---|
 | `configs/seqgan_v2.yaml` | `vocab_size: 89`, `num_attack_types: 4` |
 | `pretrain_mle_v2.py` | `GeneratorLSTM`, `SQLTokenizer.load()`, load `type_id`, pass `cond` |
-| `train_adversarial_v2.py` | `GeneratorLSTM`, `SQLTokenizer.load()`, load `type_id` |
+| `train_adversarial_v2.py` | `GeneratorLSTM`, `SQLTokenizer.load()`, load `type_id`, `→` → `->` |
+| `generate_v2.py` | `→` → `->` in output message |
 | `src/reward_v2.py` | Giữ nguyên playbook (không có V2-specific issue) |

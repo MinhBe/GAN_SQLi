@@ -260,7 +260,7 @@ def train(cfg: dict, args):
             }[current_phase]
             for pg in opt_g.param_groups:
                 pg["lr"] = new_lr
-            print(f"\n[Step {step}] Phase → {current_phase} | lr_g={new_lr}")
+            print(f"\n[Step {step}] Phase -> {current_phase} | lr_g={new_lr}")
 
         if current_phase == "refinement" and step % 1000 == 0:
             reward_fn.reset_ast_cache()
@@ -373,6 +373,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="SeqGAN_SQLi/configs/seqgan_v2.yaml")
     parser.add_argument("--steps", type=int, default=None, help="Max steps (smoke test)")
+    parser.add_argument("--no_waf", action="store_true",
+                        help="Disable WAF Oracle (run without Docker ModSecurity)")
     args = parser.parse_args()
 
     cfg_path = args.config
@@ -380,6 +382,10 @@ def main():
         cfg_path = str(Path(__file__).parent / args.config)
     with open(cfg_path, encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
+
+    if args.no_waf:
+        cfg["use_waf"] = False
+        print("WAF disabled (--no_waf). OWASP reward = 0 for all phases.")
 
     train(cfg, args)
 
