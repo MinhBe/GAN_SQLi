@@ -47,6 +47,47 @@ def reinforce_loss(log_probs: torch.Tensor, advantages: torch.Tensor,
     return loss
 
 
+def reinforce_loss_with_entropy(
+    log_probs: torch.Tensor,
+    advantages: torch.Tensor,
+    logits: torch.Tensor,
+    entropy_coeff: float = 0.03,
+    pad_mask: torch.Tensor = None,
+) -> tuple:
+    """
+    REINFORCE + entropy bonus to prevent mode collapse.
+
+    Returns (total_loss, pg_loss, entropy_loss) for logging.
+
+    log_probs: (B, T) per-token log probs from sampled sequence
+    advantages: (B,) sequence-level advantages
+    logits: (B, T, V) raw logits — used to compute entropy
+    entropy_coeff: weight for entropy bonus (higher = more exploration)
+    pad_mask: (B, T) bool, True where real (not pad)
+    """
+    if advantages.dim() == 1:
+        advantages = advantages.unsqueeze(1).expand_as(log_probs)
+
+    if pad_mask is not None:
+        mask_f = pad_mask.float()
+        n = mask_f.sum().clamp(min=1)
+        pg_loss = -(log_probs * advantages.detach() * mask_f).sum() / n
+        # Token-level entropy: -sum(p * log p) averaged over non-pad tokens
+        probs = torch.softmax(logits, dim=-1)
+        log_p = torch.log_softmax(logits, dim=-1)
+        token_entropy = -(probs * log_p).sum(dim=-1)  # (B, T)
+        entropy_loss = -(token_entropy * mask_f).sum() / n
+    else:
+        pg_loss = -(log_probs * advantages.detach()).mean()
+        probs = torch.softmax(logits, dim=-1)
+        log_p = torch.log_softmax(logits, dim=-1)
+        token_entropy = -(probs * log_p).sum(dim=-1)
+        entropy_loss = -token_entropy.mean()
+
+    total_loss = pg_loss + entropy_coeff * entropy_loss
+    return total_loss, pg_loss, entropy_loss
+
+
 def wgan_gp_loss(d_real: torch.Tensor, d_fake: torch.Tensor,
                  gp: torch.Tensor) -> torch.Tensor:
     """Wasserstein distance + gradient penalty."""

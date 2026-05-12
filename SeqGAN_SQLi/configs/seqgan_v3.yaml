@@ -1,0 +1,74 @@
+# SeqGAN V3 — Entropy regularization để fix mode collapse
+# V2 vấn đề: REINFORCE batch-mean baseline → advantage ≈ 0 → zero gradient
+# V3 fixes:
+#   1. Entropy bonus: g_loss = pg_loss - entropy_coeff * entropy(logits)
+#   2. EMA baseline thay batch mean: ema = 0.95*ema + 0.05*batch_mean
+#   3. Temperature > 1.0 khi sampling để tăng exploration
+
+# Model (giống V2)
+vocab_size: 89
+embed_dim: 256
+hidden_dim: 512
+num_layers: 3
+dropout: 0.2
+
+# Conditional embedding
+use_conditional: true
+num_attack_types: 4
+type_embed_dim: 32
+
+# Discriminator
+d_embed_dim: 128
+d_kernel_sizes: [3, 4, 5]
+d_filters: 128
+
+# Training
+batch_size: 64
+max_seq_len: 80
+d_per_g_ratio: 1
+
+# Phase steps (giảm adversarial, tăng refinement để diversity có thời gian phát triển)
+warmup_steps: 2000
+adversarial_steps: 10000
+refinement_steps: 8000
+
+# Learning rates
+lr_g_warmup: 0.0001
+lr_g_adversarial: 0.00005
+lr_g_refinement: 0.00002
+lr_d: 0.0001
+
+# Optimizer
+beta1: 0.5
+beta2: 0.999
+grad_clip: 1.0
+
+# V3: Entropy regularization coefficients (giảm dần theo phase)
+entropy_coeff_warmup: 0.05
+entropy_coeff_adversarial: 0.03
+entropy_coeff_refinement: 0.01
+
+# V3: EMA baseline (thay batch mean)
+# reward_ema = alpha * batch_mean + (1-alpha) * reward_ema
+ema_baseline_alpha: 0.05
+
+# V3: Temperature sampling (> 1.0 = more exploration)
+sample_temperature_warmup: 1.2
+sample_temperature_adversarial: 1.1
+sample_temperature_refinement: 1.0
+
+# Reward
+boundary_threshold: 5
+use_waf: true
+waf_url: "http://localhost:8080"
+cache_size: 100000
+
+# Paths
+data_dir: "SeqGAN_SQLi/data/v2"
+ckpt_dir: "SeqGAN_SQLi/checkpoints/v3"
+log_dir: "SeqGAN_SQLi/logs/v3"
+
+# Eval
+seed: 42
+n_eval_samples: 1000
+relex_dict_path: "SeqGAN_SQLi/data/relex_dictionary.json"
