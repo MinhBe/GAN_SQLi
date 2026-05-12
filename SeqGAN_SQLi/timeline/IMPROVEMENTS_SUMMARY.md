@@ -152,7 +152,25 @@ Adversarial (steps 2000–12000):
 | Custom rules pass | 86.8% | **94.6%** | +7.8pp |
 | Syntax pass rate | 99.8% | **100%** | — |
 
-**Tradeoff duy nhất**: ML-IDS evasion = 0% ở final model (vs MLE's 3.4%) — IDS dễ nhận diện pattern của warmed-up adversarial generator. Khi enable WAF, OWASP bypass metric sẽ có thêm thông tin.
+**Tradeoff duy nhất**: ML-IDS evasion = 0% ở final model (vs MLE's 3.4%) — IDS dễ nhận diện pattern của warmed-up adversarial generator.
+
+---
+
+## WAF Evaluation (ModSecurity OWASP CRS)
+
+Eval thêm với WAF bật cho thấy ranking thay đổi:
+
+| Checkpoint | No-WAF | **With-WAF** | OWASP bypass | Uniq |
+|---|---|---|---|---|
+| V3 step1000 | 0.460 | **0.491** | 9.8% | 0.926 |
+| V3 step2000 ★ | **0.471** | 0.476 | 2.0% | **1.000** |
+| V3 step12000 (collapsed) | 0.357 | 0.488 | **43.4%** | 0.008 |
+
+**Phát hiện quan trọng**: Collapsed model (step12000, payload = `1 or 'root'`) bypass WAF 43% vì pattern quá đơn giản để WAF CRS detect. Tuy nhiên diversity gần 0 → không có giá trị thực tế.
+
+**Khuyến nghị**:
+- Dataset đa dạng (red-team): `v3/adv_step2000.pt` (uniqueness=1.000)
+- WAF stress test: `v3/adv_step1000.pt` (WAF composite=0.491, bypass=9.8%, uniq=0.926)
 
 ---
 
@@ -183,3 +201,4 @@ Adversarial (steps 2000–12000):
 | `timeline/V2_IMPLEMENTATION_NOTES.md` | 9 bugs đã fix |
 | `timeline/V2_RESULTS.md` | V2 full analysis + V3 recommendation |
 | `timeline/V3_RESULTS.md` | V3 results + verdict |
+| `timeline/WAF_EVAL_RESULTS.md` | WAF eval với ModSecurity OWASP CRS |

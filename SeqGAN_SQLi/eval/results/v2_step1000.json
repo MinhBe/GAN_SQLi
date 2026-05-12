@@ -16,23 +16,23 @@
       "weight": 0.25
     },
     "ast_diversity_entropy": {
-      "value": 2.4165308269001278,
-      "normalized": 0.4833061653800256,
+      "value": 2.417840249196568,
+      "normalized": 0.48356804983931356,
       "weight": 0.2
     },
     "ml_ids_evasion_rate": {
-      "mean": 0.386,
-      "ci_lo": 0.344,
-      "ci_hi": 0.428,
+      "mean": 0.314,
+      "ci_lo": 0.272,
+      "ci_hi": 0.356,
       "weight": 0.15,
       "note": "0.0 if IDS not trained"
     },
     "relex_uniqueness": {
-      "value": 0.008,
+      "value": 0.01,
       "weight": 0.1
     }
   },
-  "composite_score": 0.40486123307600513,
+  "composite_score": 0.3943136099678627,
   "quality": {
     "syntax_pass_rate": 1.0,
     "custom_rule_pass_mean": 0.6003999999999998

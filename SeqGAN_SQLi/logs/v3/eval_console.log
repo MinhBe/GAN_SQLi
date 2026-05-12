@@ -1,5 +1,3 @@
-V2 Eval Pipeline started: 2026-05-12 12:08:31.306985
-
 [12:08:31] WAF: disabled
 [12:08:31] Samples per checkpoint: 500
 [12:08:31] Checkpoints found: ['v2_mle', 'v2_step1000', 'v2_step2000', 'v2_step3000', 'v2_step4000', 'v2_step5000', 'v2_step6000', 'v2_step7000', 'v2_step8000', 'v2_step9000', 'v2_step10000', 'v2_step11000', 'v2_step12000', 'v2_step13000', 'v2_step14000', 'v2_step15000', 'v2_step16000', 'v2_step17000', 'v2_step18000', 'v2_step19000', 'v2_step20000', 'v2_refined']
