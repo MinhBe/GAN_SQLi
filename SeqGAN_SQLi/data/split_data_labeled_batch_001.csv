@@ -1,4 +1,5 @@
 id,sqli_type,db_engine,confidence
+0,time_blind,oracle,1.00
 1,boolean_blind,mysql,1.00
 2,boolean_blind,mssql,1.00
 3,error_based,mysql,1.00
