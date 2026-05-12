@@ -1,0 +1,41 @@
+{
+  "skill_name": "pptx-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tạo 3 slide giới thiệu về opencode, lưu vào C:\\Projects\\GAN_SQLi\\Asset\\LabelData. Slide 1 là tiêu đề giới thiệu opencode, slide 2 liệt kê các tính năng chính, slide 3 là phần kết luận hoặc getting started.",
+      "expected_output": "File opencode_intro.pptx tại C:\\Projects\\GAN_SQLi\\Asset\\LabelData với đúng 3 slide: slide 1 title, slide 2 bullet points, slide 3 kết luận",
+      "files": [],
+      "expectations": [
+        "File .pptx được tạo tại C:\\Projects\\GAN_SQLi\\Asset\\LabelData",
+        "Presentation có đúng 3 slide",
+        "Slide đầu có tiêu đề chứa 'OpenCode' hoặc 'opencode' (không phân biệt hoa thường)",
+        "Slide 2 chứa ít nhất 3 bullet points mô tả tính năng"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Tạo 5 slide báo cáo kết quả thí nghiệm GAN cho SQL injection detection, lưu vào thư mục temp. Slide 1: title 'Báo cáo thí nghiệm GAN'. Slide 2-4: mỗi slide có 3-4 bullet points về các kết quả. Slide 5: kết luận.",
+      "expected_output": "File gan_experiment.pptx trong thư mục temp với đúng 5 slide",
+      "files": [],
+      "expectations": [
+        "File .pptx được tạo trong thư mục temp",
+        "Presentation có đúng 5 slide",
+        "Slide đầu có title chứa 'GAN' hoặc 'báo cáo' (không phân biệt hoa thường)",
+        "Slide cuối là kết luận hoặc tổng kết"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Tạo 1 slide PowerPoint đơn giản: tiêu đề 'Chào mừng' và 2 bullet points nội dung bất kỳ, lưu vào C:\\Users\\BoPC\\AppData\\Local\\Temp\\opencode\\welcome.pptx",
+      "expected_output": "File welcome.pptx tại C:\\Users\\BoPC\\AppData\\Local\\Temp\\opencode với đúng 1 slide có title 'Chào mừng' và 2 bullet points",
+      "files": [],
+      "expectations": [
+        "File .pptx được tạo tại đường dẫn chỉ định",
+        "Presentation có đúng 1 slide",
+        "Slide có tiêu đề 'Chào mừng'",
+        "Có đúng 2 bullet points trên slide"
+      ]
+    }
+  ]
+}

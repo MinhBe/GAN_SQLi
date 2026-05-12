@@ -1,0 +1,11 @@
+{
+  "eval_id": 0,
+  "eval_name": "3-slide-opencode-intro",
+  "prompt": "Tạo 3 slide giới thiệu về opencode, lưu vào C:\\Projects\\GAN_SQLi\\Asset\\LabelData. Slide 1 là tiêu đề giới thiệu opencode, slide 2 liệt kê các tính năng chính, slide 3 là phần kết luận hoặc getting started.",
+  "assertions": [
+    "File .pptx được tạo tại C:\\Projects\\GAN_SQLi\\Asset\\LabelData",
+    "Presentation có đúng 3 slide",
+    "Slide đầu có tiêu đề chứa 'OpenCode' hoặc 'opencode' (không phân biệt hoa thường)",
+    "Slide 2 chứa ít nhất 3 bullet points mô tả tính năng"
+  ]
+}
