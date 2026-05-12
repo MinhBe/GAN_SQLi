@@ -1,227 +1,148 @@
 {
-  "total_rows": 40860,
-  "payload_col": "payload_norm",
+  "total_rows": 17821,
+  "payload_col": "payload_delex",
   "type_col": "sqli_type",
   "source_diversity": null,
   "skeleton_uniqueness": {
-    "unique": 40860,
-    "total": 40860,
-    "ratio": 1.0
+    "unique": 4842,
+    "total": 17821,
+    "ratio": 0.27170192469558385
   },
   "per_type": {
-    "auth_bypass": {
-      "count": 1193,
-      "unique_skeletons": 1193,
-      "ratio": 1.0
-    },
-    "benign": {
-      "count": 19669,
-      "unique_skeletons": 19669,
-      "ratio": 1.0
-    },
     "boolean_blind": {
-      "count": 4531,
-      "unique_skeletons": 4531,
-      "ratio": 1.0
-    },
-    "command_injection": {
-      "count": 1,
-      "unique_skeletons": 1,
-      "ratio": 1.0
-    },
-    "comment_based": {
-      "count": 10,
-      "unique_skeletons": 10,
-      "ratio": 1.0
+      "count": 6335,
+      "unique_skeletons": 1503,
+      "ratio": 0.2372533543804262
     },
     "error_based": {
-      "count": 8663,
-      "unique_skeletons": 8663,
-      "ratio": 1.0
-    },
-    "generic": {
-      "count": 19,
-      "unique_skeletons": 19,
-      "ratio": 1.0
-    },
-    "heavy_query": {
-      "count": 1296,
-      "unique_skeletons": 1296,
-      "ratio": 1.0
-    },
-    "inline_query": {
-      "count": 8,
-      "unique_skeletons": 8,
-      "ratio": 1.0
-    },
-    "ldap_injection": {
-      "count": 2,
-      "unique_skeletons": 2,
-      "ratio": 1.0
-    },
-    "out_of_band": {
-      "count": 610,
-      "unique_skeletons": 610,
-      "ratio": 1.0
-    },
-    "polyglot": {
-      "count": 51,
-      "unique_skeletons": 51,
-      "ratio": 1.0
-    },
-    "rce": {
-      "count": 10,
-      "unique_skeletons": 10,
-      "ratio": 1.0
-    },
-    "second_order": {
-      "count": 3,
-      "unique_skeletons": 3,
-      "ratio": 1.0
-    },
-    "stacked_queries": {
-      "count": 43,
-      "unique_skeletons": 43,
-      "ratio": 1.0
+      "count": 7315,
+      "unique_skeletons": 2045,
+      "ratio": 0.27956254272043746
     },
     "time_blind": {
-      "count": 2391,
-      "unique_skeletons": 2391,
-      "ratio": 1.0
+      "count": 2283,
+      "unique_skeletons": 922,
+      "ratio": 0.4038545773105563
     },
     "union_based": {
-      "count": 2236,
-      "unique_skeletons": 2236,
-      "ratio": 1.0
-    },
-    "unknown": {
-      "count": 124,
-      "unique_skeletons": 124,
-      "ratio": 1.0
+      "count": 1888,
+      "unique_skeletons": 899,
+      "ratio": 0.4761652542372881
     }
   },
   "top_tokens": [
     {
+      "token": "__int__",
+      "count": 99604
+    },
+    {
       "token": ")",
-      "count": 284407
+      "count": 86973
+    },
+    {
+      "token": "|",
+      "count": 78788
     },
     {
       "token": "(",
-      "count": 258683
+      "count": 75608
     },
     {
-      "token": "||chr",
-      "count": 117792
-    },
-    {
-      "token": "=",
-      "count": 78806
-    },
-    {
-      "token": "113",
-      "count": 59623
-    },
-    {
-      "token": "select",
-      "count": 53329
-    },
-    {
-      "token": "from",
-      "count": 43251
-    },
-    {
-      "token": "where",
-      "count": 27058
-    },
-    {
-      "token": "username",
-      "count": 26897
-    },
-    {
-      "token": "and",
-      "count": 26733
-    },
-    {
-      "token": "122",
-      "count": 23851
-    },
-    {
-      "token": "*",
-      "count": 19876
-    },
-    {
-      "token": "or",
-      "count": 17058
-    },
-    {
-      "token": "dual",
-      "count": 16572
-    },
-    {
-      "token": "1",
-      "count": 14151
+      "token": "__ident__",
+      "count": 41347
     },
     {
       "token": "chr",
-      "count": 13207
+      "count": 38245
     },
     {
-      "token": "else",
-      "count": 13018
+      "token": "=",
+      "count": 30173
     },
     {
-      "token": "then",
-      "count": 12978
+      "token": "__str__",
+      "count": 21509
     },
     {
-      "token": "when",
-      "count": 12967
+      "token": "select",
+      "count": 20167
+    },
+    {
+      "token": "from",
+      "count": 15761
+    },
+    {
+      "token": "where",
+      "count": 14079
+    },
+    {
+      "token": "-",
+      "count": 13248
+    },
+    {
+      "token": ",",
+      "count": 12905
+    },
+    {
+      "token": "*",
+      "count": 10675
+    },
+    {
+      "token": "and",
+      "count": 6617
+    },
+    {
+      "token": "or",
+      "count": 6103
+    },
+    {
+      "token": "dual",
+      "count": 5049
+    },
+    {
+      "token": "char",
+      "count": 4829
+    },
+    {
+      "token": "null",
+      "count": 4247
     },
     {
       "token": "end",
-      "count": 12816
+      "count": 4147
     }
   ],
   "top_target_tables": [
     {
+      "table": "__ident__",
+      "count": 10219
+    },
+    {
       "table": "dual",
-      "count": 16681
+      "count": 5049
     },
     {
-      "table": "users",
-      "count": 11157
+      "table": "sleep",
+      "count": 1
     },
     {
-      "table": "generate_series",
-      "count": 348
-    },
-    {
-      "table": "rdb",
-      "count": 346
-    },
-    {
-      "table": "information_schema",
-      "count": 260
-    },
-    {
-      "table": "sysibm",
-      "count": 238
-    },
-    {
-      "table": "domain",
-      "count": 238
-    },
-    {
-      "table": "all_users",
-      "count": 233
-    },
-    {
-      "table": "customers",
-      "count": 204
-    },
-    {
-      "table": "pg_sleep",
-      "count": 195
+      "table": "where",
+      "count": 1
     }
-  ]
+  ],
+  "confidence_stats": {
+    "count": 17821.0,
+    "mean": 0.930904550810841,
+    "std": 0.09732298346826027,
+    "min": 0.7,
+    "25%": 0.85,
+    "50%": 1.0,
+    "75%": 1.0,
+    "max": 1.0
+  },
+  "tier_counts": {
+    "gold": 11149,
+    "silver": 5135,
+    "bronze": 1537
+  }
 }

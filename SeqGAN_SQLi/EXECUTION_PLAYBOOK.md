@@ -3,8 +3,31 @@
 > **Đối tượng**: Claude Code chạy 1 lần từ đầu đến cuối.
 > **Tài liệu kiến trúc**: `Guiding_V2.md`
 > **Tài liệu lý luận**: `timeline/DEEP_ANALYSIS_10_PERSPECTIVES.md`
-> **Ngày**: 2026-05-11
+> **Ngày cập nhật**: 2026-05-12
 > **Estimated total time**: 20-25 giờ (bao gồm training).
+
+## DATASET UPDATE (2026-05-12)
+
+Re-labeling đã hoàn tất. Dữ liệu mới:
+
+| File | Path | Mục đích |
+|---|---|---|
+| **SQLi train data** | `C:\Projects\GAN_SQLi\Asset\LabelData\latest_relabel_data.csv` | Dataset chính (17,821 rows) |
+| **Benign source** | `C:\Projects\GAN_SQLi\Asset\LabelData\combined_labeled_data.csv` | Chỉ extract benign (19,669 rows) |
+
+**Thống kê `latest_relabel_data.csv`:**
+- Columns: `id, payload_norm, payload_delex, sqli_type, db_engine, confidence`
+- sqli_types: `error_based (7315), boolean_blind (6335), time_blind (2283), union_based (1888)` → **4 types** (không phải 8 như Guiding_V2 plan)
+- Confidence: mean=0.93, gold(≥0.95)=~60%, silver(0.80-0.94)=~25%, bronze(<0.80)=~15%
+- De-lex đã có sẵn trong cột `payload_delex`
+
+**Ảnh hưởng đến implementation:**
+- `num_attack_types = 4` (không phải 8)
+- Không cần chạy de-lex script riêng (dùng `payload_delex` trực tiếp)
+- Phase 0 re-labeling: **DONE** — bỏ qua STEP 0.8 multi-source crawl
+- Biến môi trường: `$env:DATASET_PATH = "C:\Projects\GAN_SQLi\Asset\LabelData\latest_relabel_data.csv"`
+
+**Phase 0 status: COMPLETE** (re-labeling done by user)
 
 ---
 

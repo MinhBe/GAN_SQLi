@@ -1,0 +1,14 @@
+{
+  "type_to_id": {
+    "error_based": 0,
+    "boolean_blind": 1,
+    "time_blind": 2,
+    "union_based": 3
+  },
+  "id_to_type": {
+    "0": "error_based",
+    "1": "boolean_blind",
+    "2": "time_blind",
+    "3": "union_based"
+  }
+}
