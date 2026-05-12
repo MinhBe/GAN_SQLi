@@ -1,0 +1,501 @@
+payload_delex,type_id,sqli_type
+select * from __IDENT__ where __IDENT__ = __STR__ and ( ( \ __STR__ = \ __STR__ ) ) as __IDENT__ where __INT__ = __INT__,0,error_based
+- __INT__ where __INT__ = __INT__ union all select __INT__,3,union_based
+"- __INT__ __STR__ __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __INT__ where __INT__ = __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__ and __INT__ = __INT__ - - __INT__,1,boolean_blind
+"- __INT__ + ( select __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ - -",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ __INT__ % \ __STR__ % \ __STR__ """,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and \ __STR__ = __IDENT__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ __INT__ __STR__ __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) where __INT__ = __INT__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__,0,error_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,1,boolean_blind
+"__INT__ + ( select __IDENT__ where __INT__ = __INT__ union all select null , null , null , null , null , null , null , null , null , null , null , null",3,union_based
+"__INT__ where __INT__ = __INT__ and ( select __INT__ from ( select count ( * ) , concat ( __HEX__ , ( select ( __IDENT__ ( __INT__ = __INT__ , __INT__ ) ) ) , __HEX__ , floor ( __IDENT__ ( __INT__ ) * __INT__ ) ) __IDENT__ from __IDENT__ group by __IDENT__ ) __IDENT__ ) - -",0,error_based
+- __INT__ or __INT__ in ( ( char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) + ( select ( case when ( __INT__ = __INT__ ) then char ( __INT__ ) else char ( __INT__ ) end ) ) + char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ),1,boolean_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = "" - __INT__ )",1,boolean_blind
+__INT__ where __INT__ = __INT__ __IDENT__ sleep ( __INT__ ) - -,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,0,error_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | | chr ( __INT__ ) | |,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__,0,error_based
+"select * from __IDENT__ where __IDENT__ = __STR__ __INT__ % \ __STR__ % \ __STR__ """,0,error_based
+- __INT__,3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,1,boolean_blind
+"__INT__ ) where __INT__ = __INT__ or __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ )",2,time_blind
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ % \ __STR__ and \ __STR__ = \ __STR__ ) ) )",1,boolean_blind
+__INT__ ) as __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | |,0,error_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+"- __INT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ __STR__ )",0,error_based
+__INT__ ) where __INT__ = __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) ) as __IDENT__ where __INT__ = __INT__,0,error_based
+- __INT__ where __INT__ = __INT__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr (,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ __STR__,0,error_based
+"__INT__ where __INT__ = __INT__ and char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) = __IDENT__ ( repeat ( right ( char ( __INT__ ) , __INT__ ) , __INT__ ) , null ) - -",2,time_blind
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ % \ __STR__ ) ) ) and __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | |",1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __INT__,3,union_based
+"__INT__ where __INT__ = __INT__ union all select null , null , null , null , null - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ __STR__ __INT__ ) ) as __IDENT__ where __INT__ = __INT__ and __IDENT__ = __STR__,1,boolean_blind
+__INT__ % __STR__ % __STR__,2,time_blind
+\ ( select ( case when ( __IDENT__ = __IDENT__ ) then __IDENT__ else __HEX__ end ) ),1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+"- __INT__ % "" union all select __INT__ , __INT__",3,union_based
+"- __INT__ ) ) ) union all select __INT__ , __INT__",3,union_based
+"__INT__ ) union all select null , null , null , null , null",3,union_based
+"__INT__ ) ) as __IDENT__ where __INT__ = __INT__ or char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) = __IDENT__ ( repeat ( left ( __IDENT__ ( char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) , null ) , __INT__ ) , __INT__ ) , null ) - -",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__ and __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from,0,error_based
+__INT__ ) as __IDENT__ where __INT__ = __INT__ order by __INT__,3,union_based
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__,1,boolean_blind
+"- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__",3,union_based
+- __INT__ ) order by __INT__,3,union_based
+"__INT__ __STR__ __IDENT__ from dual where __INT__ = __INT__ union all select null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ __STR__ ) )",0,error_based
+__INT__ ) where __INT__ = __INT__ __IDENT__ sleep ( __INT__ ) - -,2,time_blind
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__ __IDENT__ ( select * from ( select ( sleep ( __INT__ ) ) ) __IDENT__ ) #,2,time_blind
+"select like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) )",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __INT__ ) where __INT__ = __INT__,1,boolean_blind
+__INT__ ) as __IDENT__ where __INT__ = __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and ( ( \ __STR__ = \ __STR__ ) ) and __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then,0,error_based
+"select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = "" - __INT__",0,error_based
+"- __INT__ ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"__INT__ + ( select __IDENT__ where __INT__ = __INT__ or __INT__ = benchmark ( __INT__ , md5 ( __HEX__ ) ) - -",2,time_blind
+"- __INT__ % ' ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"__INT__ % "" ) ) union all select null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ __INT__ __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __INT__ __STR__ ) or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ),0,error_based
+__INT__ % __STR__ % __STR__,1,boolean_blind
+"- __INT__ ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+__INT__ % __STR__ % __STR__,1,boolean_blind
+"__INT__ ) ) ) or __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ )",2,time_blind
+"__INT__ or __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ ) - -",2,time_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = "" - __INT__ where __INT__ = __INT__",1,boolean_blind
+"- __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+"__INT__ union all select null , null , null , null , null , null",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"__INT__ ) and __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) )",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __STR__ = __STR__ - __INT__ __STR__ __INT__ __STR__ __INT__ __STR__ ) where __INT__ = __INT__,1,boolean_blind
+"__INT__ ) ) ) or char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) = __IDENT__ ( repeat ( right ( char ( __INT__ ) , __INT__ ) , __INT__ ) , null ) - -",2,time_blind
+__INT__ where __INT__ = __INT__ or sleep ( __INT__ ),2,time_blind
+__INT__ + ( select __IDENT__ where __INT__ = __INT__ union all select null,3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ __STR__ __INT__ ) as __IDENT__ where __INT__ = __INT__ and __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ),0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = "" - __INT__ __STR__ as __IDENT__ where __INT__ = __INT__",0,error_based
+__INT__ where __INT__ = __INT__,1,boolean_blind
+"__INT__ % "" ) ) ) and __INT__ = __INT__",1,boolean_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ __STR__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = __IDENT__ ( __INT__ , ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr (",1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,0,error_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__,0,error_based
+"select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = "" - __INT__ ) ) )",1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __INT__ ) ) ),0,error_based
+select * from __IDENT__ where __IDENT__ = __INT__ ) = __INT__ or __INT__ = __INT__ - - __INT__,1,boolean_blind
+__INT__ __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+- __INT__ ) or __INT__ in ( ( char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) + ( select ( case when ( __INT__ = __INT__ ) then char ( __INT__ ) else char ( __INT__ ) end ) ) + char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) + char ( __INT__ ) ) ) + char,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = __IDENT__ ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr ( __INT__ ) |,0,error_based
+__INT__ ) where __INT__ = __INT__,2,time_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = ( select __INT__ from __IDENT__ ( __INT__ ) ) #,2,time_blind
+"select like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) - -",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,0,error_based
+__INT__ % ' ) __STR__ __IDENT__ __STR__,2,time_blind
+"__INT__ ) ) ) union all select null , null , null , null , null , null , null , null , null , null",3,union_based
+__INT__ __STR__ __INT__,1,boolean_blind
+__INT__ where __INT__ = __INT__ __IDENT__ sleep ( __INT__ ) #,2,time_blind
+"__INT__ ) ) as __IDENT__ where __INT__ = __INT__ and __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ ) - -",2,time_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__ and __IDENT__ = __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+"__INT__ in __IDENT__ __IDENT__ ) union all select null , null , null , null , null , null , null , null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | |,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr (,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"- __INT__ ) ) union all select __INT__ , __INT__ , __INT__",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __INT__ ) where __INT__ = __INT__,1,boolean_blind
+"- __INT__ % ' ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+"__INT__ in __IDENT__ __IDENT__ ) and __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) )",2,time_blind
+"__INT__ , ( select ( case when ( __INT__ = __INT__ ) then __IDENT__ else concat ( __HEX__ , ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __IDENT__ * ( select __INT__ from __IDENT__ ) end ) ) , ( select ( case when ( __IDENT__ ) then __IDENT__ else cast ( __INT__ ) end ) ) from ( select __INT__ union all select __INT__ ) end ) ) having min ( __INT__ ) )",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr (,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"__INT__ __INT__ ) ) ) or __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) - -",2,time_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ or __INT__ = __IDENT__ ( __INT__ , ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr",1,boolean_blind
+"__INT__ where __INT__ = __INT__ union all select null , null , null , null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __INT__,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,0,error_based
+( select ( case when ( __INT__ = __INT__ ) then __INT__ else cast ( __INT__ as __IDENT__ ) / ( select __INT__ from dual ) end ) from dual ),1,boolean_blind
+__INT__ __STR__ __INT__,2,time_blind
+__INT__ % __STR__ % __STR__,1,boolean_blind
+"- __INT__ + ( select __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ __STR__ + ( select __IDENT__ where __INT__ = __INT__,0,error_based
+"- __INT__ ) ) ) union all select __INT__ , __INT__ , __INT__ - -",3,union_based
+"__INT__ ) ) ) and __IDENT__ ( __INT__ = __INT__ , sleep ( __INT__ ) ) and ( ( ( __INT__ = __INT__",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) where __INT__ = __INT__,1,boolean_blind
+"__INT__ union all select null , null , null , null , null , null , null - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | |,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ __INT__,0,error_based
+"- __INT__ ) ) union all select __INT__ , __INT__ , __INT__",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+"select sleep ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ ) from dual and ( ( ( __STR__ like __IDENT__",2,time_blind
+"- __INT__ ) ) ) union all select __INT__ , __INT__",3,union_based
+"- __INT__ ) where __INT__ = __INT__ union all select __INT__ , __INT__ - -",3,union_based
+__INT__ and __INT__ = ( select __INT__ from __IDENT__ ( __INT__ ) ) - -,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+__INT__ % __STR__ % __STR__,2,time_blind
+"__INT__ ) ) union all select null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"- __INT__ % "" ) ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"- __INT__ ) ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+"- __INT__ ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+__INT__ __STR__,2,time_blind
+"__INT__ % "" and char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) = __IDENT__ ( repeat ( right ( char ( __INT__ ) , __INT__ ) , __INT__ ) , null ) - -",2,time_blind
+select * from __IDENT__ where __IDENT__ = __INT__ or __STR__ and \ __STR__ or __IDENT__ = __STR__ and __IDENT__ = __STR__,1,boolean_blind
+"__INT__ % ' ) ) ) or __INT__ = benchmark ( __INT__ , md5 ( __HEX__ ) ) - -",2,time_blind
+select case when __INT__ = __INT__ then __INT__ else null end - -,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ __INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+"__INT__ __STR__ __IDENT__ from dual where __INT__ = __INT__ union all select null , null , null , null , null , null , null",3,union_based
+"- __INT__ ) ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+__INT__ __STR__ __IDENT__ from dual where __INT__ = __INT__ and ( select * ( sleep ( __INT__ ) ) - -,2,time_blind
+"__INT__ ) or __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ )",2,time_blind
+__INT__ __STR__ __IDENT__ __STR__,2,time_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+__INT__ union all select null - -,3,union_based
+"__INT__ % ' ) ) ) and __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ ) - -",2,time_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = "" - __INT__ ) )",0,error_based
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ % \ __STR__ and __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end )",1,boolean_blind
+"- __INT__ __STR__ __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ - -",3,union_based
+- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__,3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__ - __INT__ ) where __INT__ = __INT__,1,boolean_blind
+"- __INT__ ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+__INT__ __STR__ __IDENT__ __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,0,error_based
+__INT__ where __INT__ = __INT__,1,boolean_blind
+__INT__ ) or ( select * from ( select ( sleep ( __INT__ ) ) ) __IDENT__ ) #,2,time_blind
+"__INT__ + ( select __IDENT__ where __INT__ = __INT__ and __INT__ = __IDENT__ ( __INT__ , ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr ( __INT__ ) | | chr ( __INT__ ) | |",0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,1,boolean_blind
+"__INT__ ) ) ) and __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) - -",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,1,boolean_blind
+"__INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | char ( __INT__ ) , __INT__ )",2,time_blind
+"__INT__ __STR__ __IDENT__ where __INT__ = __INT__ union all select null , null , null , null , null , null , null , null , null , null , null , null - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ and __IDENT__ = __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ or __IDENT__ = "" - __INT__ __STR__ where __INT__ = __INT__",0,error_based
+"__INT__ ) or __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) )",2,time_blind
+"- __INT__ ) where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ __INT__ __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | |,0,error_based
+select * from __IDENT__ where __IDENT__ = __INT__ __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+", ( select ( case when ( __IDENT__ = __IDENT__ ) then __IDENT__ else cast ( __INT__ as __IDENT__ ) / ( select __INT__ from dual from dual ) end ) from dual )",1,boolean_blind
+"- __INT__ % "" ) ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select null - -,3,union_based
+__INT__ __STR__ __IDENT__ from dual where __INT__ = __INT__ and sleep ( __INT__ ) #,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+"__INT__ ) where __INT__ = __INT__ union all select null , null , null , null , null , null",3,union_based
+- __INT__ __STR__ __IDENT__ where __INT__ = __INT__ union all select __INT__,3,union_based
+"__INT__ , ( cast ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | (",1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ / ( select __INT__ ) end ) - -,1,boolean_blind
+- __INT__ ) ) ) union all select __INT__ - -,3,union_based
+- __INT__ % __STR__ % __STR__,1,boolean_blind
+"__INT__ + ( select __IDENT__ where __INT__ = __INT__ or char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) = __IDENT__ ( repeat ( left ( __IDENT__ ( char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) , null ) , __INT__ ) , __INT__ ) , null )",2,time_blind
+"__INT__ and __INT__ = ( select count ( * ) from __IDENT__ as __IDENT__ , __IDENT__ as __IDENT__ __IDENT__ ) end",1,boolean_blind
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ % \ __STR__ ) ) ) and __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else",0,error_based
+"__INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select null , null , null , null , null , null , null , null , null",3,union_based
+"__INT__ ) union all select null , null , null , null , null , null , null - -",3,union_based
+"__INT__ % "" ) ) ) union all select null , null , null - -",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+__INT__ and __INT__ = __INT__,1,boolean_blind
+"__INT__ ) as __IDENT__ where __INT__ = __INT__ union all select null , null , null , null , null , null , null , null , null , null , null",3,union_based
+"select * from __IDENT__ where __IDENT__ = __INT__ , & __IDENT__ < __IDENT__ union select null , version - - __INT__",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,1,boolean_blind
+__INT__ ) where __INT__ = __INT__ and __STR__ = __INT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual,0,error_based
+- __INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__ ) and __INT__ = ( select __INT__ from __IDENT__ ( __INT__ ) ) - -,2,time_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ __STR__ ) ) ) or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end",0,error_based
+"- __INT__ ) ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+- __INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+- __INT__ ) where __INT__ = __INT__ union all select __INT__,3,union_based
+"- __INT__ ) ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+"__INT__ __STR__ __IDENT__ from dual where __INT__ = __INT__ union all select null , null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__ | | __IDENT__ = __STR__,1,boolean_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = "" - __INT__",0,error_based
+"__INT__ % "" union all select null , null , null , null , null , null , null , null",3,union_based
+"select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = "" - __INT__ % __IDENT__ ) ) ) )",0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr (,1,boolean_blind
+- __INT__ __STR__ __IDENT__ from dual where __INT__ = __INT__ or __INT__ = __INT__ - -,3,union_based
+"__INT__ where __INT__ = __INT__ union all select null , null , null - -",3,union_based
+"__INT__ in __IDENT__ __IDENT__ ) union all select null , null , null , null",3,union_based
+"__INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) - -",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__ or __IDENT__ = __INT__ ) ),0,error_based
+"select * from __IDENT__ where __IDENT__ = __STR__ __INT__ __STR__ """,1,boolean_blind
+", ( select ( case when ( __IDENT__ = __IDENT__ ) then concat else cast ( __INT__ ) end ) ) end ) from __IDENT__ ) is concat ( select ( case when ( __IDENT__ ) then __IDENT__ else __IDENT__ * ( select __IDENT__ union all select __IDENT__ ) end ) ) , ( select ( case when ( __IDENT__ ) then __IDENT__ else sleep ( __INT__ ) end ) ) , ( select ( case when ( __IDENT__ )",3,union_based
+"__INT__ ) where __INT__ = __INT__ union all select null , null , null , null , null , null , null",3,union_based
+__INT__ where __INT__ = __INT__ waitfor delay __STR__ - -,2,time_blind
+"__INT__ ) where __INT__ = __INT__ union all select null , null , null , null , null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __INT__ ) ) as __IDENT__ where __INT__ = __INT__,0,error_based
+"__INT__ % "" union all select null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ __INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | |,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__ - __INT__ where __INT__ = __INT__ and __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ),1,boolean_blind
+"__INT__ where __INT__ = __INT__ union all select null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,1,boolean_blind
+"__INT__ ) ) or __INT__ = benchmark ( __INT__ , md5 ( __HEX__ ) ) #",2,time_blind
+__INT__ where __INT__ = __INT__ and __INT__ = __INT__,1,boolean_blind
+__INT__ or __INT__ = __INT__,1,boolean_blind
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__ __IDENT__ sleep ( __INT__ ) - -,2,time_blind
+"__INT__ ) as __IDENT__ where __INT__ = __INT__ union all select null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+"- __INT__ __STR__ __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+"__INT__ ) ) union all select null , null , null , null , null , null",3,union_based
+__INT__ % __STR__ % __STR__,2,time_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = "" - __INT__ ) ) )",0,error_based
+__INT__ __STR__ __IDENT__ __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ or __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,1,boolean_blind
+"__INT__ % "" ) ) ) union all select null , null , null , null , null , null , null , null",3,union_based
+"__INT__ ) where __INT__ = __INT__ union all select null , null , null",3,union_based
+"__IDENT__ __IDENT__ ( repeat ( right ( char ( __INT__ ) , __INT__ ) , __INT__ ) , null ) or __STR__ = ( case when ( __IDENT__ ) then ( select __IDENT__ from __IDENT__ ( __IDENT__ ) ) else __IDENT__ end )",2,time_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+"__INT__ ) where __INT__ = __INT__ union all select null , null , null , null",3,union_based
+"__INT__ ) as __IDENT__ where __INT__ = __INT__ or __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) - -",2,time_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ __STR__ | | ( select \ __STR__ where __INT__ = __INT__ and __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ =",0,error_based
+"__INT__ , ( select ( case when ( __INT__ = __INT__ ) then __INT__ else cast ( __INT__ as __IDENT__ ) / ( select __INT__ from dual ) end ) from dual )",1,boolean_blind
+__INT__ ) as __IDENT__ where __INT__ = __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __INT__ __STR__ ) ) as __IDENT__ where __INT__ = __INT__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ and ( ( __INT__ = __INT__ __STR__ - __INT__ ) as __IDENT__ where __INT__ = __INT__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__ or __IDENT__ = __STR__,1,boolean_blind
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__ __IDENT__ ( select * from ( select ( sleep ( __INT__ ) ) ) __IDENT__ ) - -,2,time_blind
+__INT__ ) where __INT__ = __INT__ and ( select * from ( select ( sleep ( __INT__ ) ) ) __IDENT__ ) - -,2,time_blind
+__INT__ and sleep ( __INT__ ),1,boolean_blind
+"__INT__ ) where __INT__ = __INT__ and __IDENT__ ( __INT__ = __INT__ , sleep ( __INT__ ) ) - -",2,time_blind
+__INT__ __STR__ __IDENT__ __STR__,2,time_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = "" - __INT__ ) ) as __IDENT__ where __INT__ = __INT__",0,error_based
+__INT__ __STR__ __IDENT__ __STR__,1,boolean_blind
+"__INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select null , null , null , null , null , null",3,union_based
+__INT__ __STR__,1,boolean_blind
+"- __INT__ ) ) union all select __INT__ , __INT__",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+"- __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __INT__ __STR__ __IDENT__ where __INT__ = __INT__,0,error_based
+__INT__ where __INT__ = __INT__ order by __INT__,3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+"- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"__INT__ and __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) )",2,time_blind
+__INT__ % __STR__ % __STR__,2,time_blind
+"__INT__ % ' ) ) ) union all select null , null , null , null , null , null , null , null , null , null",3,union_based
+__INT__ __STR__ __IDENT__ from dual where __INT__ = __INT__ __IDENT__ ( select * from ( select ( sleep ( __INT__ ) ) ) __IDENT__ ) #,2,time_blind
+"__INT__ % ' ) and __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) - -",2,time_blind
+"- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+- __INT__ ) as __IDENT__ where __INT__ = __INT__ or __INT__ = __INT__,1,boolean_blind
+"__INT__ or char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) = __IDENT__ ( repeat ( right ( char ( __INT__ ) , __INT__ ) , __INT__ ) , null ) is floor ( ( ( __STR__ = __IDENT__",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ __INT__ % \ __STR__ % \ __STR__ __STR__,0,error_based
+"select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = "" - __INT__ ) where __INT__ = __INT__",1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ - __INT__ __STR__ ) where __INT__ = __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+__INT__ __STR__,2,time_blind
+- __INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+- __INT__ __STR__ __IDENT__ __STR__ __IDENT__,0,error_based
+"- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"__INT__ % "" ) ) union all select null , null , null , null",3,union_based
+- __INT__ where __INT__ = __INT__ order by __INT__,3,union_based
+"__INT__ % "" union all select null , null , null , null , null , null",3,union_based
+__INT__ __STR__ __IDENT__ where __INT__ = __INT__ or sleep ( __INT__ ) #,2,time_blind
+"- __INT__ ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ __INT__ __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"- __INT__ ) where __INT__ = __INT__ union all select __INT__ , __INT__ - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) and __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | | chr ( __INT__ ) |,1,boolean_blind
+"__INT__ ) ) or __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) and ( ( ( __STR__ = __IDENT__",2,time_blind
+select * from __IDENT__ where __IDENT__ = __INT__ __STR__ ) ) ) and __INT__ = __INT__,1,boolean_blind
+- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__,3,union_based
+- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ order by __INT__,3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) ) as __IDENT__ where __INT__ = __INT__,0,error_based
+"- __INT__ % "" ) ) ) union all select __INT__ , __INT__",3,union_based
+"__INT__ ) as __IDENT__ where __INT__ = __INT__ union all select null , null , null , null , null , null , null , null , null , null , null",3,union_based
+") ) union all select null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ - __INT__ ) as __IDENT__ where __INT__ = __INT__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ =,0,error_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ - __INT__ ) or __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | | chr,1,boolean_blind
+"__INT__ % "" ) ) union all select null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+__INT__ __STR__ __IDENT__ __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,0,error_based
+"' ) union all select null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) as __IDENT__ where __INT__ = __INT__,0,error_based
+"__INT__ % ' ) ) union all select null , null , null , null , null , null",3,union_based
+"- __INT__ __STR__ __IDENT__ from dual where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"__INT__ in __IDENT__ __IDENT__ ) union all select null , null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__,2,time_blind
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__,1,boolean_blind
+"- __INT__ % "" ) ) ) union all select __INT__ , __INT__ , __INT__",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+"- __INT__ % "" union all select __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"- __INT__ ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"__INT__ ) as __IDENT__ where __INT__ = __INT__ union all select null , null",3,union_based
+"- __INT__ ) ) union all select __INT__ , __INT__",3,union_based
+"__INT__ ) ) union all select null , null , null",3,union_based
+__INT__ % __STR__ % __STR__,2,time_blind
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ % \ __STR__ ) ) )",0,error_based
+"- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__",3,union_based
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__ and sleep ( __INT__ ) - -,2,time_blind
+- __INT__ ) as __IDENT__ where __INT__ = __INT__ order by __INT__,3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __INT__ __STR__ __IDENT__ where __INT__ = __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"- __INT__ ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+"- __INT__ ) ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,0,error_based
+"__INT__ in __IDENT__ __IDENT__ ) and __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) - -",2,time_blind
+__INT__ ) __IDENT__ sleep ( __INT__ ) #,2,time_blind
+"- __INT__ + ( select __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"__INT__ ) union all select null , null , null , null , null",3,union_based
+"__INT__ in __IDENT__ __IDENT__ ) union all select null , null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __INT__ % __IDENT__ ) ),0,error_based
+"__INT__ ) as __IDENT__ where __INT__ = __INT__ or __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ ) , __INT__ ) #",2,time_blind
+- __INT__ ) as __IDENT__ where __INT__ = __INT__ or __INT__ = __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+- __INT__ ) union all select __INT__,3,union_based
+__INT__ % __STR__ % __STR__,1,boolean_blind
+"__INT__ ) as __IDENT__ where __INT__ = __INT__ union all select null , null , null",3,union_based
+__INT__ % __STR__ % __STR__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __STR__ = __STR__ - __INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__,0,error_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = "" - __INT__ ) ) ) | | __INT__ = __IDENT__ ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr ( __INT__ ) |",0,error_based
+"- __INT__ __STR__ __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__ or __IDENT__ = __INT__ and __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else,0,error_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__,2,time_blind
+"__INT__ ) ) or __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) - -",2,time_blind
+"__INT__ , __IDENT__ ( __INT__ = __INT__ , __INT__ , __INT__ / __INT__ )",1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+"- __INT__ and __IDENT__ ( __INT__ = __INT__ , __INT__ ) - -",1,boolean_blind
+"__INT__ and __INT__ = ( select count ( * ) from __IDENT__ ( __INT__ , __INT__ ) ) - -",2,time_blind
+__INT__ __STR__ __IDENT__ where __INT__ = __INT__ or __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__,1,boolean_blind
+__INT__ ) where __INT__ = __INT__ and __INT__ = ( select __INT__ from __IDENT__ ( __INT__ ) ) - -,2,time_blind
+"- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and ( __INT__ = __INT__ __STR__ __INT__ ) as __IDENT__ where __INT__ = __INT__,0,error_based
+"__INT__ ) where __INT__ = __INT__ and char ( __INT__ ) | | char ( __INT__ ) | | chr ( __INT__ ) | | char ( __INT__ ) = __IDENT__ ( repeat ( right ( char ( __INT__ ) , __INT__ ) , __INT__ ) , null ) - -",2,time_blind
+"- __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__ or ( select * from ( select convert ( select ( sleep ( __INT__ ) ) ) __IDENT__ ) #,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,0,error_based
+"__INT__ __STR__ __IDENT__ where __INT__ = __INT__ union all select null , null , null , null , null",3,union_based
+"select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = __IDENT__ ( __INT__ , ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr ( __INT__",1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __INT__ __STR__ ) ) and __INT__ = __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__,1,boolean_blind
+"- __INT__ % "" ) ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ - __INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = __IDENT__ ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr ( __INT__ ) |,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,1,boolean_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ and __INT__ = __IDENT__ ( __INT__ , ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr ( __INT__ ) | | chr ( __INT__",0,error_based
+__INT__ % __STR__ % __STR__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__ - __INT__ ) ) as __IDENT__ where __INT__ = __INT__,1,boolean_blind
+"__INT__ % "" ) ) or __INT__ = like ( __STR__ , upper ( hex ( __IDENT__ ( __INT__ / __INT__ ) ) ) ) - -",2,time_blind
+"- __INT__ in __IDENT__ __IDENT__ ) union all select __INT__ , __INT__",3,union_based
+"select * from __IDENT__ where __IDENT__ = "" select __IDENT__ < ( case when ( __IDENT__ ) then __INT__ else ( select __INT__ from dual ) end ) from __IDENT__ ) , ( select ( case when ( __IDENT__ ) then __INT__ else __IDENT__ * ( select __IDENT__ from dual ) end )",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,0,error_based
+"__INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select null , null , null , null , null",3,union_based
+"- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"__INT__ ) ) as __IDENT__ where __INT__ = __INT__ or __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ ) - -",2,time_blind
+select * from __IDENT__ where __IDENT__ = __INT__ __STR__ ) ) ),0,error_based
+__INT__ where __INT__ = __INT__ __IDENT__ sleep ( __INT__ ) - -,2,time_blind
+__INT__ __STR__ __IDENT__ where __INT__ = __INT__ union all select null,3,union_based
+"__INT__ where __INT__ = __INT__ union all select null , null , null , null , null , null , null , null , null",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+- __INT__ where __INT__ = __INT__ or __INT__ = __INT__,1,boolean_blind
+"__INT__ where __INT__ = __INT__ or __INT__ = ( select count ( * ) from __IDENT__ ( __INT__ , __INT__ ) ) - -",2,time_blind
+"- __INT__ ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __INT__ = __IDENT__ ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__,1,boolean_blind
+"__IDENT__ __IDENT__ ( repeat ( right ( char ( __INT__ ) , __INT__ ) , __INT__ ) , null ) or __IDENT__ ( __INT__ = __INT__ , sleep ( __INT__ ) )",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ __INT__ ) ) ) and __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from,0,error_based
+__INT__ % ' ) ) ) or char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) | | char ( __INT__ ) from __IDENT__ ) - -,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = = - __INT__ ),1,boolean_blind
+"__INT__ ) where __INT__ = __INT__ and ( select __INT__ from ( select count ( * ) , null , concat ( __HEX__ , ( select ( __IDENT__ ( __INT__ = __INT__ , __INT__ ) ) ) , __HEX__ , floor ( __IDENT__ ( __INT__ ) * __INT__ ) ) __IDENT__ from __IDENT__ group by __IDENT__ ) __IDENT__ ) - -",0,error_based
+select ( case when ( __INT__ = __INT__ ) then __INT__ else cast ( __INT__ as __IDENT__ ) / ( select __INT__ from dual ) end ) from dual ),1,boolean_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = "" - __INT__ )",1,boolean_blind
+__INT__ or ( select * from ( select ( sleep ( __INT__ ) ) ) __IDENT__ ) and ( ( __STR__ = __IDENT__,2,time_blind
+"__INT__ union all select null , null , null , null , null , null",3,union_based
+- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ and __INT__ = __INT__,1,boolean_blind
+select __INT__ __IDENT__ where __IDENT__ = __STR__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | | chr,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ and ( ( ( \ __STR__ = \ __STR__ ) ) ),0,error_based
+"- __INT__ ) union all select __INT__ , __INT__ , __INT__",3,union_based
+"- __INT__ __STR__ __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+"select benchmark ( __INT__ , md5 ( __HEX__ ) ) and ( __STR__ = __IDENT__",2,time_blind
+__INT__ ) where __INT__ = - - __INT__,0,error_based
+__INT__ in __IDENT__ __IDENT__ ) or __INT__ = ( select __INT__ from __IDENT__ ( __INT__ ) ) - -,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __INT__ = cast ( ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) ) __IDENT__ | | ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr (,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ = __INT__ ) as __IDENT__ where __INT__ = __INT__,1,boolean_blind
+__INT__ and __INT__ = ( select __INT__ from __IDENT__ ( __INT__ ) ),2,time_blind
+"__IDENT__ __IDENT__ ( repeat ( right ( char ( __INT__ ) , __INT__ ) , __INT__ ) , null )",2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,0,error_based
+"__INT__ % "" ) ) union all select null , null , null , null , null , null",3,union_based
+", ( select __IDENT__ * ( __STR__ , __STR__ __IDENT__ ) , __STR__ , __STR__ ) __STR__ __IDENT__",1,boolean_blind
+"__INT__ ) as __IDENT__ where __INT__ = __INT__ union all select null , null , null , null - -",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __INT__ ) ) ) and __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__,0,error_based
+__INT__ % __STR__ % __STR__,3,union_based
+"- __INT__ ) ) ) union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__,0,error_based
+,3,union_based
+__INT__ ) where __INT__ = __INT__ __IDENT__ sleep ( __INT__ ) - -,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,0,error_based
+__INT__ __STR__ __IDENT__ __STR__,2,time_blind
+__INT__ ) ) as __IDENT__ where __INT__ = __INT__,1,boolean_blind
+select * from __IDENT__ where __IDENT__ = __STR__ __INT__ ) ),1,boolean_blind
+"__INT__ , ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ * ( select __INT__ from __IDENT__ ) end ) )",1,boolean_blind
+"- __INT__ ) ) as __IDENT__ where __INT__ = __INT__ union all select __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__ , __INT__",3,union_based
+__INT__ __STR__,1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__ __IDENT__,2,time_blind
+"select * from __IDENT__ where __IDENT__ = __STR__ or __IDENT__ < \ union select __INT__ , version - - __INT__",3,union_based
+select * from __IDENT__ where __IDENT__ = __STR__ or __INT__ = ( select upper ( __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | ( select ( case when ( __INT__ = __INT__ ) then __INT__ else __INT__ end ) from dual ) | |,0,error_based
+"__INT__ % ' ) ) or __INT__ = __IDENT__ ( chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) | | chr ( __INT__ ) , __INT__ ) - -",2,time_blind
+__INT__ where __INT__ = __INT__,1,boolean_blind
+"__INT__ , ( select __INT__ = ( select count ( * ) from __IDENT__ __IDENT__ , __IDENT__ __IDENT__ , __IDENT__ __IDENT__ , __IDENT__ __IDENT__ , __IDENT__ __IDENT__ , __IDENT__ __IDENT__ ) end ) )",1,boolean_blind
+"select * from __IDENT__ where __IDENT__ = "" - __INT__ __STR__ ) where __INT__ = __INT__",1,boolean_blind
+__INT__ __STR__ __IDENT__ __STR__,2,time_blind
+select * from __IDENT__ where __IDENT__ = __STR__ and __IDENT__ = __STR__,0,error_based
+__INT__ % ' ) ) ) __IDENT__ sleep ( __INT__ ) #,2,time_blind

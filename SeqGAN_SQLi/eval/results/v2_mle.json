@@ -1,0 +1,45 @@
+{
+  "samples_file": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\SeqGAN_SQLi\\eval\\samples\\v2_mle.csv",
+  "n_samples": 500,
+  "metrics": {
+    "owasp_bypass_rate": {
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "weight": 0.3,
+      "note": "0.0 if WAF not available"
+    },
+    "db_execution_rate": {
+      "mean": 0.032,
+      "ci_lo": 0.018,
+      "ci_hi": 0.048,
+      "weight": 0.25
+    },
+    "ast_diversity_entropy": {
+      "value": 3.0832033924144526,
+      "normalized": 0.6166406784828905,
+      "weight": 0.2
+    },
+    "ml_ids_evasion_rate": {
+      "mean": 0.034,
+      "ci_lo": 0.02,
+      "ci_hi": 0.05,
+      "weight": 0.15,
+      "note": "0.0 if IDS not trained"
+    },
+    "relex_uniqueness": {
+      "value": 0.658,
+      "weight": 0.1
+    }
+  },
+  "composite_score": 0.2022281356965781,
+  "quality": {
+    "syntax_pass_rate": 0.998,
+    "custom_rule_pass_mean": 0.8615999999999999
+  },
+  "ast_stats": {
+    "cache_size": 0,
+    "parse_fail_rate": 0.0,
+    "total_seen": 499
+  }
+}

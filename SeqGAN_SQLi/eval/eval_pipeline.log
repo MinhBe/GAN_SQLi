@@ -1,0 +1,831 @@
+V2 Eval Pipeline started: 2026-05-12 10:54:48.283474
+
+[10:54:48] WAF: disabled
+[10:54:48] Samples per checkpoint: 500
+[10:54:48] Checkpoints found: ['v2_mle', 'v2_step1000', 'v2_step2000', 'v2_step3000', 'v2_step4000', 'v2_step5000', 'v2_step6000', 'v2_step7000', 'v2_step8000', 'v2_step9000', 'v2_step10000', 'v2_step11000', 'v2_step12000', 'v2_step13000', 'v2_step14000', 'v2_step15000', 'v2_step16000', 'v2_step17000', 'v2_step18000', 'v2_step19000', 'v2_step20000', 'v2_refined']
+[10:54:48] 
+============================================================
+[10:54:48] Evaluating: v2_mle
+[10:54:48] ============================================================
+[10:54:48] >> Generate v2_mle
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\mle_best.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_mle.csv
+    Type distribution: {1: 139, 3: 135, 0: 114, 2: 112}
+[10:54:59] << OK (12s)
+[10:54:59] >> Evaluate v2_mle
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_mle.csv
+    Sample (re-lexed): select * from user_tables where ctxsys = 'guest' and ( ( \ 'guest' = \ 'guest' )
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      0.0320 [0.0180, 0.0480]
+    [3/5] AST diversity entropy...
+      entropy=3.0832 (normalized=0.6166)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 499}
+    [4/5] ML-IDS evasion rate...
+      0.0340 [0.0200, 0.0500]
+    [5/5] Re-lex uniqueness...
+      0.6580
+    
+    === Composite Score: 0.2022 ===
+      OWASP bypass:  0.0000
+      DB execution:  0.0320
+      AST diversity: 3.0832
+      ML-IDS evasion:0.0340
+      Re-lex unique: 0.6580
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_mle.json
+[10:55:14] << OK (15s)
+[10:55:14] 
+============================================================
+[10:55:14] Evaluating: v2_step1000
+[10:55:14] ============================================================
+[10:55:14] >> Generate v2_step1000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step1000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step1000.csv
+    Type distribution: {0: 150, 2: 124, 3: 117, 1: 109}
+[10:55:17] << OK (3s)
+[10:55:17] >> Evaluate v2_step1000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step1000.csv
+    Sample (re-lexed): 1 % 'guest' % 'admin'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      0.9980 [0.9940, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.4165 (normalized=0.4833)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.3860 [0.3440, 0.4280]
+    [5/5] Re-lex uniqueness...
+      0.0080
+    
+    === Composite Score: 0.4049 ===
+      OWASP bypass:  0.0000
+      DB execution:  0.9980
+      AST diversity: 2.4165
+      ML-IDS evasion:0.3860
+      Re-lex unique: 0.0080
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step1000.json
+[10:55:20] << OK (3s)
+[10:55:20] 
+============================================================
+[10:55:20] Evaluating: v2_step2000
+[10:55:20] ============================================================
+[10:55:20] >> Generate v2_step2000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step2000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step2000.csv
+    Type distribution: {2: 136, 3: 127, 0: 119, 1: 118}
+[10:55:23] << OK (3s)
+[10:55:23] >> Evaluate v2_step2000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step2000.csv
+    Sample (re-lexed): 0 % 'test' % 'root' and 'root' = 'test'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0120
+    
+    === Composite Score: 0.3538 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0120
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step2000.json
+[10:55:26] << OK (3s)
+[10:55:26] 
+============================================================
+[10:55:26] Evaluating: v2_step3000
+[10:55:26] ============================================================
+[10:55:26] >> Generate v2_step3000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step3000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step3000.csv
+    Type distribution: {0: 135, 1: 125, 2: 124, 3: 116}
+[10:55:29] << OK (3s)
+[10:55:29] >> Evaluate v2_step3000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step3000.csv
+    Sample (re-lexed): 1 % 'guest' % 'guest' and 'test' = 'root'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step3000.json
+[10:55:32] << OK (3s)
+[10:55:32] 
+============================================================
+[10:55:32] Evaluating: v2_step4000
+[10:55:32] ============================================================
+[10:55:32] >> Generate v2_step4000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step4000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step4000.csv
+    Type distribution: {1: 134, 0: 131, 2: 121, 3: 114}
+[10:55:35] << OK (3s)
+[10:55:35] >> Evaluate v2_step4000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step4000.csv
+    Sample (re-lexed): 10 % 'guest' % 'user' and 'user' = 'root'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0060
+    
+    === Composite Score: 0.3532 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0060
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step4000.json
+[10:55:37] << OK (3s)
+[10:55:37] 
+============================================================
+[10:55:37] Evaluating: v2_step5000
+[10:55:37] ============================================================
+[10:55:37] >> Generate v2_step5000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step5000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step5000.csv
+    Type distribution: {0: 133, 3: 133, 1: 120, 2: 114}
+[10:55:40] << OK (3s)
+[10:55:40] >> Evaluate v2_step5000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step5000.csv
+    Sample (re-lexed): 0 % 'user' % 'root' and 'user' = 'test'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step5000.json
+[10:55:43] << OK (3s)
+[10:55:43] 
+============================================================
+[10:55:43] Evaluating: v2_step6000
+[10:55:43] ============================================================
+[10:55:43] >> Generate v2_step6000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step6000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step6000.csv
+    Type distribution: {1: 135, 2: 131, 3: 130, 0: 104}
+[10:55:46] << OK (3s)
+[10:55:46] >> Evaluate v2_step6000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step6000.csv
+    Sample (re-lexed): 999 % 'test' % 'test' and 'root' = 'user'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step6000.json
+[10:55:49] << OK (3s)
+[10:55:49] 
+============================================================
+[10:55:49] Evaluating: v2_step7000
+[10:55:49] ============================================================
+[10:55:49] >> Generate v2_step7000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step7000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step7000.csv
+    Type distribution: {1: 152, 0: 124, 2: 123, 3: 101}
+[10:55:52] << OK (3s)
+[10:55:52] >> Evaluate v2_step7000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step7000.csv
+    Sample (re-lexed): -1 % 'root' % 'guest' and 'admin' = 'user'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step7000.json
+[10:55:55] << OK (3s)
+[10:55:55] 
+============================================================
+[10:55:55] Evaluating: v2_step8000
+[10:55:55] ============================================================
+[10:55:55] >> Generate v2_step8000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step8000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step8000.csv
+    Type distribution: {0: 131, 3: 129, 2: 123, 1: 117}
+[10:55:58] << OK (3s)
+[10:55:58] >> Evaluate v2_step8000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step8000.csv
+    Sample (re-lexed): 1 % 'admin' % 'root' and 'guest' = 'test'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step8000.json
+[10:56:00] << OK (3s)
+[10:56:00] 
+============================================================
+[10:56:00] Evaluating: v2_step9000
+[10:56:00] ============================================================
+[10:56:00] >> Generate v2_step9000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step9000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step9000.csv
+    Type distribution: {1: 129, 2: 129, 0: 128, 3: 114}
+[10:56:03] << OK (3s)
+[10:56:03] >> Evaluate v2_step9000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step9000.csv
+    Sample (re-lexed): -1 % 'root' % 'user' and 'test' = 'guest'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step9000.json
+[10:56:06] << OK (3s)
+[10:56:06] 
+============================================================
+[10:56:06] Evaluating: v2_step10000
+[10:56:06] ============================================================
+[10:56:06] >> Generate v2_step10000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step10000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step10000.csv
+    Type distribution: {2: 133, 3: 126, 1: 123, 0: 118}
+[10:56:09] << OK (3s)
+[10:56:09] >> Evaluate v2_step10000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step10000.csv
+    Sample (re-lexed): 10 % 'test' % 'user' and 'test' = 'guest'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step10000.json
+[10:56:12] << OK (3s)
+[10:56:12] 
+============================================================
+[10:56:12] Evaluating: v2_step11000
+[10:56:12] ============================================================
+[10:56:12] >> Generate v2_step11000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step11000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step11000.csv
+    Type distribution: {1: 130, 0: 130, 2: 126, 3: 114}
+[10:56:15] << OK (3s)
+[10:56:15] >> Evaluate v2_step11000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step11000.csv
+    Sample (re-lexed): -1 % 'root' % 'admin' and 'guest' = 'guest'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step11000.json
+[10:56:18] << OK (3s)
+[10:56:18] 
+============================================================
+[10:56:18] Evaluating: v2_step12000
+[10:56:18] ============================================================
+[10:56:18] >> Generate v2_step12000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step12000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step12000.csv
+    Type distribution: {0: 142, 3: 124, 2: 118, 1: 116}
+[10:56:21] << OK (3s)
+[10:56:21] >> Evaluate v2_step12000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step12000.csv
+    Sample (re-lexed): 1 % 'guest' % 'admin' and 'admin' = 'root'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step12000.json
+[10:56:24] << OK (3s)
+[10:56:24] 
+============================================================
+[10:56:24] Evaluating: v2_step13000
+[10:56:24] ============================================================
+[10:56:24] >> Generate v2_step13000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step13000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step13000.csv
+    Type distribution: {1: 134, 0: 128, 2: 127, 3: 111}
+[10:56:27] << OK (3s)
+[10:56:27] >> Evaluate v2_step13000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step13000.csv
+    Sample (re-lexed): -1 % 'root' % 'guest' and 'guest' = 'admin'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step13000.json
+[10:56:29] << OK (3s)
+[10:56:29] 
+============================================================
+[10:56:29] Evaluating: v2_step14000
+[10:56:29] ============================================================
+[10:56:29] >> Generate v2_step14000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step14000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step14000.csv
+    Type distribution: {1: 132, 0: 127, 3: 122, 2: 119}
+[10:56:32] << OK (3s)
+[10:56:32] >> Evaluate v2_step14000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step14000.csv
+    Sample (re-lexed): 10 % 'test' % 'user' and 'root' = 'root'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step14000.json
+[10:56:35] << OK (3s)
+[10:56:35] 
+============================================================
+[10:56:35] Evaluating: v2_step15000
+[10:56:35] ============================================================
+[10:56:35] >> Generate v2_step15000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step15000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step15000.csv
+    Type distribution: {1: 140, 0: 125, 2: 122, 3: 113}
+[10:56:38] << OK (3s)
+[10:56:38] >> Evaluate v2_step15000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step15000.csv
+    Sample (re-lexed): 999 % 'admin' % 'guest' and 'user' = 'test'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step15000.json
+[10:56:40] << OK (3s)
+[10:56:40] 
+============================================================
+[10:56:40] Evaluating: v2_step16000
+[10:56:40] ============================================================
+[10:56:40] >> Generate v2_step16000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step16000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step16000.csv
+    Type distribution: {1: 144, 0: 130, 2: 115, 3: 111}
+[10:56:43] << OK (3s)
+[10:56:43] >> Evaluate v2_step16000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step16000.csv
+    Sample (re-lexed): 0 % 'test' % 'root' and 'root' = 'user'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step16000.json
+[10:56:46] << OK (3s)
+[10:56:46] 
+============================================================
+[10:56:46] Evaluating: v2_step17000
+[10:56:46] ============================================================
+[10:56:46] >> Generate v2_step17000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step17000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step17000.csv
+    Type distribution: {2: 146, 0: 129, 1: 121, 3: 104}
+[10:56:48] << OK (3s)
+[10:56:48] >> Evaluate v2_step17000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step17000.csv
+    Sample (re-lexed): 10 % 'user' % 'user' and 'root' = 'root'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step17000.json
+[10:56:51] << OK (3s)
+[10:56:51] 
+============================================================
+[10:56:51] Evaluating: v2_step18000
+[10:56:51] ============================================================
+[10:56:51] >> Generate v2_step18000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step18000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step18000.csv
+    Type distribution: {3: 129, 0: 124, 1: 124, 2: 123}
+[10:56:54] << OK (3s)
+[10:56:54] >> Evaluate v2_step18000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step18000.csv
+    Sample (re-lexed): 10 % 'root' % 'root' and 'admin' = 'guest'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step18000.json
+[10:56:56] << OK (3s)
+[10:56:56] 
+============================================================
+[10:56:56] Evaluating: v2_step19000
+[10:56:56] ============================================================
+[10:56:56] >> Generate v2_step19000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step19000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step19000.csv
+    Type distribution: {2: 133, 1: 130, 3: 124, 0: 113}
+[10:56:59] << OK (3s)
+[10:56:59] >> Evaluate v2_step19000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step19000.csv
+    Sample (re-lexed): 0 % 'admin' % 'test' and 'user' = 'root'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step19000.json
+[10:57:02] << OK (3s)
+[10:57:02] 
+============================================================
+[10:57:02] Evaluating: v2_step20000
+[10:57:02] ============================================================
+[10:57:02] >> Generate v2_step20000
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_step20000.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step20000.csv
+    Type distribution: {2: 133, 3: 128, 0: 128, 1: 111}
+[10:57:04] << OK (3s)
+[10:57:04] >> Evaluate v2_step20000
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_step20000.csv
+    Sample (re-lexed): 10 % 'user' % 'admin' and 'admin' = 'user'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_step20000.json
+[10:57:07] << OK (3s)
+[10:57:07] 
+============================================================
+[10:57:07] Evaluating: v2_refined
+[10:57:07] ============================================================
+[10:57:07] >> Generate v2_refined
+    Loaded: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\checkpoints\v2\adv_final.pt (device=cuda)
+    Generated 500 samples -> C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_refined.csv
+    Type distribution: {1: 133, 0: 128, 2: 124, 3: 115}
+[10:57:10] << OK (3s)
+[10:57:10] >> Evaluate v2_refined
+    
+    Evaluating 500 payloads from C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\samples\v2_refined.csv
+    Sample (re-lexed): 0 % 'admin' % 'guest' and 'user' = 'admin'
+    
+    [1/5] OWASP bypass rate...
+      Skipped (--no_waf)
+      0.0000 [0.0000, 0.0000]
+    [2/5] DB execution rate...
+      1.0000 [1.0000, 1.0000]
+    [3/5] AST diversity entropy...
+      entropy=2.5649 (normalized=0.5130)
+      AST stats: {'cache_size': 0, 'parse_fail_rate': 0.0, 'total_seen': 500}
+    [4/5] ML-IDS evasion rate...
+      0.0000 [0.0000, 0.0000]
+    [5/5] Re-lex uniqueness...
+      0.0020
+    
+    === Composite Score: 0.3528 ===
+      OWASP bypass:  0.0000
+      DB execution:  1.0000
+      AST diversity: 2.5649
+      ML-IDS evasion:0.0000
+      Re-lex unique: 0.0020
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results\v2_refined.json
+[10:57:12] << OK (3s)
+[10:57:12] 
+============================================================
+[10:57:12] Comparing all results...
+[10:57:12] >> Compare results
+           model  n_samples  owasp_bypass      owasp_ci  db_execution  ast_entropy  ml_ids_evasion  relex_uniqueness  composite  syntax_pass  custom_pass
+     v2_step1000        500           0.0 [0.000,0.000]         0.998       2.4165           0.386             0.008     0.4049        1.000       0.6004
+     v2_step2000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.012     0.3538        1.000       1.0000
+     v2_step4000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.006     0.3532        1.000       1.0000
+    v2_step10000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step11000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+      v2_refined        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step19000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step12000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step15000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step13000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step16000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step17000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step18000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step14000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+     v2_step6000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+    v2_step20000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+     v2_step3000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+     v2_step5000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+     v2_step8000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+     v2_step7000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+     v2_step9000        500           0.0 [0.000,0.000]         1.000       2.5649           0.000             0.002     0.3528        1.000       1.0000
+          v2_mle        500           0.0 [0.000,0.000]         0.032       3.0832           0.034             0.658     0.2022        0.998       0.8616
+    
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\comparison.csv
+    Saved: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\comparison.md
+[10:57:13] << OK (1s)
+[10:57:13] 
+Done. Results in C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\results
+[10:57:13] Summary: C:\Users\Admin\Documents\GAN_SQLi\SeqGAN_SQLi\eval\comparison.md

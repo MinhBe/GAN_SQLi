@@ -1,0 +1,14 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1778559009.146844    2680 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1778559011.015121    2680 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WAF disabled (--no_waf)
+Device: cuda
+Vocab size: 89
+Loaded MLE checkpoint (val_ppl=1.2743555710579424)
+Re-lex dict loaded: ['__STR__', '__INT__', '__HEX__', '__TABLE__', '__COL__', '__IDENT__', '__TIME__', '__BIGINT__']
+Total adversarial steps: 20000
+Entropy coeff: warmup=0.05 adv=0.03 ref=0.01
+Temperature: warmup=1.2 adv=1.1 ref=1.0
+C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\autograd\graph.py:869: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\cuda\CublasHandlePool.cpp:335.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
