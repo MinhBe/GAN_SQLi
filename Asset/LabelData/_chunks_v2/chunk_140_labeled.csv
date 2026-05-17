@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+27854,gatliff.charlton@eco-pro.jm,benign,mssql,1.0,"Signals: 'char', 'if'; DB: mssql. Payload length: 27 chars.",2
+27917,calle castropol 11,benign,generic,0.9,Signals: 'cast'. Payload length: 18 chars.,2
+27921,coderch gordo,benign,mysql,0.9,Signals: 'ord'; DB: mysql. Payload length: 13 chars.,2
+27800,sobrado,benign,generic,0.5,. Payload length: 7 chars.,2
+27801,vilafams,benign,generic,0.5,. Payload length: 8 chars.,2
+27802,san bartolom de las abiertas,benign,generic,0.5,. Payload length: 28 chars.,2
+27803,zimmerer,benign,generic,0.5,. Payload length: 8 chars.,2
+27804,rosset,benign,generic,0.5,. Payload length: 6 chars.,2
+27806,byron@vinavilano.gl,benign,generic,0.5,. Payload length: 19 chars.,2
+27807,aristteles,benign,generic,0.5,. Payload length: 10 chars.,2
+27808,alpuche simani,benign,generic,0.5,. Payload length: 14 chars.,2
+27809,santibez de bjar,benign,generic,0.5,. Payload length: 16 chars.,2
+27810,v70t4oso,benign,generic,0.5,. Payload length: 8 chars.,2
+27811,berber,benign,generic,0.5,. Payload length: 6 chars.,2
+27812,otao suaso,benign,generic,0.5,. Payload length: 10 chars.,2
+27813,5.01063E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27814,4.03E+15,benign,generic,0.5,. Payload length: 8 chars.,2
+27815,revestimiento,benign,generic,0.5,. Payload length: 13 chars.,2
+27816,brightwe,benign,generic,0.5,. Payload length: 8 chars.,2
+27817,reco+vero,benign,generic,0.5,. Payload length: 9 chars.,2
+27818,alfeiza,benign,generic,0.5,. Payload length: 7 chars.,2
+27819,"travesia doctor sanchez, 139, 12?h",benign,generic,0.5,. Payload length: 34 chars.,2
+27820,pimentel gatius,benign,generic,0.5,. Payload length: 15 chars.,2
+27821,5exas9labo,benign,generic,0.5,. Payload length: 10 chars.,2
+27822,cartaya,benign,generic,0.5,. Payload length: 7 chars.,2
+27823,malott,benign,generic,0.5,. Payload length: 6 chars.,2
+27824,palacios de riopisuerga,benign,generic,0.5,. Payload length: 23 chars.,2
+27825,seyler@miami-beach.gw,benign,generic,0.5,. Payload length: 21 chars.,2
+27827,lema cuartero,benign,generic,0.5,. Payload length: 13 chars.,2
+27828,9nte0uer3o,benign,generic,0.5,. Payload length: 10 chars.,2
+27830,alcolea,benign,generic,0.5,. Payload length: 7 chars.,2
+27831,p44m8scu6916n,benign,generic,0.5,. Payload length: 13 chars.,2
+27832,3.00245E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27833,scardetta huerta,benign,generic,0.5,. Payload length: 16 chars.,2
+27834,t0na5t44la,benign,generic,0.5,. Payload length: 10 chars.,2
+27835,vislumbrar,benign,generic,0.5,. Payload length: 10 chars.,2
+27836,tapies ximenis,benign,generic,0.5,. Payload length: 14 chars.,2
+27837,palmer manzano,benign,generic,0.5,. Payload length: 14 chars.,2
+27838,bilal,benign,generic,0.5,. Payload length: 5 chars.,2
+27839,mong-tse,benign,generic,0.5,. Payload length: 8 chars.,2
+27840,8.08498E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27841,"font d'en canyelles 21, 1-b",benign,generic,0.5,. Payload length: 27 chars.,2
+27842,5.11164E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27843,jerusaln,benign,generic,0.5,. Payload length: 8 chars.,2
+27844,pusit@marketingmunicipal.ro,benign,generic,0.5,. Payload length: 27 chars.,2
+27845,contrapalanqun,benign,generic,0.5,. Payload length: 14 chars.,2
+27846,viana de jadraque,benign,generic,0.5,. Payload length: 17 chars.,2
+27847,"barranc de la torrentera, 56, 13?c",benign,generic,0.5,. Payload length: 34 chars.,2
+27848,"torremacana, 107 7e",benign,generic,0.5,. Payload length: 19 chars.,2
+27849,yegorova@onlinegratis.aq,benign,generic,0.5,. Payload length: 24 chars.,2
+27850,santa mara de la vega,benign,generic,0.5,. Payload length: 21 chars.,2
+27851,claudine,benign,generic,0.5,. Payload length: 8 chars.,2
+27853,donet acst,benign,generic,0.5,. Payload length: 10 chars.,2
+27855,"juan de salcedo, 158 5?f",benign,generic,0.5,. Payload length: 24 chars.,2
+27856,guinea hinojar,benign,generic,0.5,. Payload length: 14 chars.,2
+27857,sacudir,benign,generic,0.5,. Payload length: 7 chars.,2
+27859,zobelda,benign,generic,0.5,. Payload length: 7 chars.,2
+27860,sunderla,benign,generic,0.5,. Payload length: 8 chars.,2
+27861,basset ramos,benign,generic,0.5,. Payload length: 12 chars.,2
+27862,nakanishi@mariposasentudia.ec,benign,generic,0.5,. Payload length: 29 chars.,2
+27863,telsfora,benign,generic,0.5,. Payload length: 8 chars.,2
+27864,bees3,benign,generic,0.5,. Payload length: 5 chars.,2
+27865,cargu9,benign,generic,0.5,. Payload length: 6 chars.,2
+27866,olmos de esgueva,benign,generic,0.5,. Payload length: 16 chars.,2
+27867,"linares, 42",benign,generic,0.5,. Payload length: 11 chars.,2
+27868,valle de yerri/deierri,benign,generic,0.5,. Payload length: 22 chars.,2
+27869,lap-pun2@streaptease.hk,benign,generic,0.5,. Payload length: 23 chars.,2
+27870,ranez@sandrasummer.bi,benign,generic,0.5,. Payload length: 21 chars.,2
+27871,bello.sandor@hipergipuzkoa.to,benign,generic,0.5,. Payload length: 29 chars.,2
+27872,"alcalde baeza medina, s/n,",benign,generic,0.5,. Payload length: 26 chars.,2
+27873,6.14206E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27874,isolina,benign,generic,0.5,. Payload length: 7 chars.,2
+27875,mcallum,benign,generic,0.5,. Payload length: 7 chars.,2
+27877,garcilln,benign,generic,0.5,. Payload length: 8 chars.,2
+27878,abaeto sanchon,benign,generic,0.5,. Payload length: 14 chars.,2
+27879,cicek0,benign,generic,0.5,. Payload length: 6 chars.,2
+27880,shirleen,benign,generic,0.5,. Payload length: 8 chars.,2
+27881,"c/ dau 100, 10-a",benign,generic,0.5,. Payload length: 16 chars.,2
+27882,kellard@todobetis.gf,benign,generic,0.5,. Payload length: 20 chars.,2
+27883,"calle mariano garcia, s/n",benign,generic,0.5,. Payload length: 25 chars.,2
+27884,nanni-prucnal@fighting-machines.gf,benign,generic,0.5,. Payload length: 34 chars.,2
+27885,fisgar,benign,generic,0.5,. Payload length: 6 chars.,2
+27886,pittner,benign,generic,0.5,. Payload length: 7 chars.,2
+27887,eby@miplat.nl,benign,generic,0.5,. Payload length: 13 chars.,2
+27888,norton@lesionesmusculares.uz,benign,generic,0.5,. Payload length: 28 chars.,2
+27890,z5r1174osa,benign,generic,0.5,. Payload length: 10 chars.,2
+27891,rofes,benign,generic,0.5,. Payload length: 5 chars.,2
+27892,anuar,benign,generic,0.5,. Payload length: 5 chars.,2
+27893,mccarthy.darcy@tantomontamontatanto.jo,benign,generic,0.5,. Payload length: 38 chars.,2
+27894,almacelles,benign,generic,0.5,. Payload length: 10 chars.,2
+27895,61tico,benign,generic,0.5,. Payload length: 6 chars.,2
+27896,escuder liveris,benign,generic,0.5,. Payload length: 15 chars.,2
+27898,balcells parets,benign,generic,0.5,. Payload length: 15 chars.,2
+27899,4.43607E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27900,kangelis,benign,generic,0.5,. Payload length: 8 chars.,2
+27901,de las muecas pedrol,benign,generic,0.5,. Payload length: 20 chars.,2
+27902,promanar,benign,generic,0.5,. Payload length: 8 chars.,2
+27903,8.366E+15,benign,generic,0.5,. Payload length: 9 chars.,2
+27904,3.62829E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27905,nieva de cameros,benign,generic,0.5,. Payload length: 16 chars.,2
+27907,polop,benign,generic,0.5,. Payload length: 5 chars.,2
+27908,cadenat.mulich@4ghz.do,benign,generic,0.5,. Payload length: 22 chars.,2
+27909,capella gorrn,benign,generic,0.5,. Payload length: 13 chars.,2
+27910,humanitari9mo,benign,generic,0.5,. Payload length: 13 chars.,2
+27911,"plza. mariano arregui canela 171,",benign,generic,0.5,. Payload length: 33 chars.,2
+27912,"prat de llobregat, el",benign,generic,0.5,. Payload length: 21 chars.,2
+27913,nahid,benign,generic,0.5,. Payload length: 5 chars.,2
+27914,luisn,benign,generic,0.5,. Payload length: 5 chars.,2
+27916,lepine,benign,generic,0.5,. Payload length: 6 chars.,2
+27919,zaharoff0,benign,generic,0.5,. Payload length: 9 chars.,2
+27920,corua del conde,benign,generic,0.5,. Payload length: 15 chars.,2
+27922,trbena,benign,generic,0.5,. Payload length: 6 chars.,2
+27923,"isabelita ruiz, 31",benign,generic,0.5,. Payload length: 18 chars.,2
+27924,fischetti.bacall@players.com.gr,benign,generic,0.5,. Payload length: 31 chars.,2
+27925,ketley,benign,generic,0.5,. Payload length: 6 chars.,2
+27926,gilburt,benign,generic,0.5,. Payload length: 7 chars.,2
+27927,"passatge badal, 31,",benign,generic,0.5,. Payload length: 19 chars.,2
+27928,9.70863E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27929,5.69342E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27931,terraje,benign,generic,0.5,. Payload length: 7 chars.,2
+27932,s4dsudeste,benign,generic,0.5,. Payload length: 10 chars.,2
+27933,pianka@noviasteresapalacios.mc,benign,generic,0.5,. Payload length: 30 chars.,2
+27934,borrenes,benign,generic,0.5,. Payload length: 8 chars.,2
+27935,albero bajo,benign,generic,0.5,. Payload length: 11 chars.,2
+27936,kenji,benign,generic,0.5,. Payload length: 5 chars.,2
+27937,d2sa2uer5o,benign,generic,0.5,. Payload length: 10 chars.,2
+27938,gamal,benign,generic,0.5,. Payload length: 5 chars.,2
+27939,refriega,benign,generic,0.5,. Payload length: 8 chars.,2
+27940,ull colmenares,benign,generic,0.5,. Payload length: 14 chars.,2
+27941,4.16237E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27942,1.99281E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27943,lladorre,benign,generic,0.5,. Payload length: 8 chars.,2
+27944,freixes navaln,benign,generic,0.5,. Payload length: 14 chars.,2
+27945,kwokchoi,benign,generic,0.5,. Payload length: 8 chars.,2
+27946,zanquita,benign,generic,0.5,. Payload length: 8 chars.,2
+27947,.raijo,benign,generic,0.5,. Payload length: 6 chars.,2
+27948,"port fangos, 183,",benign,generic,0.5,. Payload length: 17 chars.,2
+27949,casasnova vadal,benign,generic,0.5,. Payload length: 15 chars.,2
+27951,boquieni,benign,generic,0.5,. Payload length: 8 chars.,2
+27952,ar2e5tad6,benign,generic,0.5,. Payload length: 9 chars.,2
+27953,atigrada,benign,generic,0.5,. Payload length: 8 chars.,2
+27954,tornos,benign,generic,0.5,. Payload length: 6 chars.,2
+27955,4.38114E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27956,herling,benign,generic,0.5,. Payload length: 7 chars.,2
+27957,"c/ belgica, 69 2?d",benign,generic,0.5,. Payload length: 18 chars.,2
+27958,morgenstern9@laschinas.ba,benign,generic,0.5,. Payload length: 25 chars.,2
+27959,visionario,benign,generic,0.5,. Payload length: 10 chars.,2
+27960,"camio do monte 147, 10?h",benign,generic,0.5,. Payload length: 24 chars.,2
+27961,ezcurra lo cascio,benign,generic,0.5,. Payload length: 17 chars.,2
+27962,duilio,benign,generic,0.5,. Payload length: 6 chars.,2
+27963,?revivir,benign,generic,0.5,. Payload length: 8 chars.,2
+27964,muogalindo,benign,generic,0.5,. Payload length: 10 chars.,2
+27966,ince2@flexinspect.cat,benign,generic,0.5,. Payload length: 21 chars.,2
+27967,sanromn casuso,benign,generic,0.5,. Payload length: 14 chars.,2
+27968,giovannina,benign,generic,0.5,. Payload length: 10 chars.,2
+27970,spencer,benign,generic,0.5,. Payload length: 7 chars.,2
+27971,aineln,benign,generic,0.5,. Payload length: 6 chars.,2
+27972,"c/ corint, 13 11?a",benign,generic,0.5,. Payload length: 18 chars.,2
+27973,siefert,benign,generic,0.5,. Payload length: 7 chars.,2
+27975,"san benito, 182,",benign,generic,0.5,. Payload length: 16 chars.,2
+27976,autonell,benign,generic,0.5,. Payload length: 8 chars.,2
+27977,c/ arco de veronicas s/n 4e,benign,generic,0.5,. Payload length: 27 chars.,2
+27978,"c/ mare de deu de fatima, 165",benign,generic,0.5,. Payload length: 29 chars.,2
+27979,acimentarse,benign,generic,0.5,. Payload length: 11 chars.,2
+27980,pipponzi,benign,generic,0.5,. Payload length: 8 chars.,2
+27982,bonfiglio cabanas,benign,generic,0.5,. Payload length: 17 chars.,2
+27983,calle virgen de la macarena 72 2-c,benign,generic,0.5,. Payload length: 34 chars.,2
+27984,"calle san roque, 84,",benign,generic,0.5,. Payload length: 20 chars.,2
+27985,cabot@eurograb.tel,benign,generic,0.5,. Payload length: 18 chars.,2
+27986,stiller_kimball@socimi.com.ic,benign,generic,0.5,. Payload length: 29 chars.,2
+27987,deyecta,benign,generic,0.5,. Payload length: 7 chars.,2
+27988,campanini-adamson@barebackspain.kh,benign,generic,0.5,. Payload length: 34 chars.,2
+27989,"calahorra, la",benign,generic,0.5,. Payload length: 13 chars.,2
+27991,encad7622i6,benign,generic,0.5,. Payload length: 11 chars.,2
+27992,"c/ rua mayor, 31, 1?e",benign,generic,0.5,. Payload length: 21 chars.,2
+27993,corota,benign,generic,0.5,. Payload length: 6 chars.,2
+27995,8.18595E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+27996,"cantallops, 138,",benign,generic,0.5,. Payload length: 16 chars.,2
+27998,galende,benign,generic,0.5,. Payload length: 7 chars.,2
+27999,a7av5nc6,benign,generic,0.5,. Payload length: 8 chars.,2
+27805,63545647m,benign,generic,0.5,. Payload length: 9 chars.,1
+27826,42808198t,benign,generic,0.5,. Payload length: 9 chars.,1
+27829,66837882c,benign,generic,0.5,. Payload length: 9 chars.,1
+27852,82839528z,benign,generic,0.5,. Payload length: 9 chars.,1
+27858,86800649y,benign,generic,0.5,. Payload length: 9 chars.,1
+27876,50422961s,benign,generic,0.5,. Payload length: 9 chars.,1
+27889,83607535m,benign,generic,0.5,. Payload length: 9 chars.,1
+27897,98585223r,benign,generic,0.5,. Payload length: 9 chars.,1
+27906,02879028a,benign,generic,0.5,. Payload length: 9 chars.,1
+27915,70132648j,benign,generic,0.5,. Payload length: 9 chars.,1
+27918,10560589r,benign,generic,0.5,. Payload length: 9 chars.,1
+27930,57978068j,benign,generic,0.5,. Payload length: 9 chars.,1
+27950,11738063j,benign,generic,0.5,. Payload length: 9 chars.,1
+27965,81177297q,benign,generic,0.5,. Payload length: 9 chars.,1
+27969,95937804c,benign,generic,0.5,. Payload length: 9 chars.,1
+27974,90946866j,benign,generic,0.5,. Payload length: 9 chars.,1
+27981,51795949h,benign,generic,0.5,. Payload length: 9 chars.,1
+27990,05072293b,benign,generic,0.5,. Payload length: 9 chars.,1
+27994,67663365x,benign,generic,0.5,. Payload length: 9 chars.,1
+27997,06327548h,benign,generic,0.5,. Payload length: 9 chars.,1

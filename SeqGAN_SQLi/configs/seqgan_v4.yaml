@@ -1,0 +1,108 @@
+# SeqGAN V4 — Anti-Collapse
+#
+# V3 vẫn fail sau step 2500:
+#   entropy_coeff_adversarial=0.03 quá yếu
+#   temperature_adversarial=1.1 không đủ để thoát local optimum
+#   ema_baseline_alpha=0.05 quá chậm → advantage → 0 khi collapse
+#   Không có type-balanced sampling → Oracle XMLTYPE bias
+#
+# V4 fixes (theo thứ tự impact):
+#   1. entropy_coeff_adversarial: 0.03 → 0.10 (3.3x)
+#   2. temperature_adversarial:   1.1  → 1.30 (critical)
+#   3. ema_baseline_alpha:        0.05 → 0.20 (4x faster)
+#   4. type-balanced batch sampling (in training loop)
+#   5. diversity_bonus reward term (jaccard vs recent buffer)
+#   6. dynamic D steps (reduce when collapse detected)
+#   7. benign SQL data for discriminator
+#   8. BiLSTMEncoder generator (thầy Lâm suggestion)
+
+# Model
+vocab_size: 89
+embed_dim: 256
+hidden_dim: 512
+num_layers: 2          # decoder layers (BiLSTM encoder adds 2 more)
+dropout: 0.2
+use_bilstm: true       # GeneratorBiLSTMEncoder (nếu false: GeneratorLSTM)
+enc_layers: 2          # BiLSTM encoder layers
+
+# Conditional embedding
+use_conditional: true
+num_attack_types: 14   # full 14-type taxonomy (was 4 in V3)
+type_embed_dim: 64     # larger (was 32)
+
+# Discriminator (unchanged from V3)
+d_embed_dim: 128
+d_kernel_sizes: [3, 4, 5]
+d_filters: 128
+
+# Training
+batch_size: 64
+max_seq_len: 80
+d_per_g_ratio: 3       # baseline; dynamic override in loop
+
+# Phase steps
+warmup_steps: 2000
+adversarial_steps: 12000   # longer adversarial (was 10000)
+refinement_steps: 6000
+
+# Learning rates
+lr_g_warmup:       0.0001
+lr_g_adversarial:  0.00005
+lr_g_refinement:   0.00002
+lr_d: 0.0001
+
+# Optimizer
+beta1: 0.5
+beta2: 0.999
+grad_clip: 1.0
+
+# V4 Fix-1: Entropy (stronger in adversarial)
+entropy_coeff_warmup:       0.05
+entropy_coeff_adversarial:  0.10   # was 0.03
+entropy_coeff_refinement:   0.02   # was 0.01
+
+# V4 Fix-2: EMA baseline (faster)
+ema_baseline_alpha: 0.20           # was 0.05
+
+# V4 Fix-3: Temperature (higher in adversarial)
+sample_temperature_warmup:       1.20  # same as V3
+sample_temperature_adversarial:  1.30  # was 1.1 in V3 → key change
+sample_temperature_refinement:   1.05  # was 1.0
+
+# V4 Fix-4: Type-balanced sampling
+type_balanced_sampling: true
+n_attack_types_balance: 14
+
+# V4 Fix-5: Diversity reward
+diversity_weight: 0.15             # reward += diversity_weight * jaccard_novelty
+diversity_buffer_size: 256         # rolling buffer of recent unique payloads
+
+# V4 Fix-6: Dynamic D steps
+d_steps_collapse_threshold: 8     # unique_per_batch < 8 → reduce D steps to 1
+d_steps_warning_threshold: 20     # unique_per_batch < 20 → D steps = 2
+
+# V4 Fix-7: Benign data for discriminator
+use_benign_data: true
+benign_data_path: "SeqGAN_SQLi/data/benign_sql.csv"
+benign_batch_fraction: 0.25       # B//4 benign samples per D update
+
+# Reward
+boundary_threshold: 5
+use_waf: true
+waf_url: "http://localhost:8080"
+cache_size: 100000
+
+# Paths
+data_dir: "SeqGAN_SQLi/data/v2"
+ckpt_dir: "SeqGAN_SQLi/checkpoints/v4"
+log_dir: "SeqGAN_SQLi/logs/v4"
+
+# Eval
+seed: 42
+n_eval_samples: 1000
+relex_dict_path: "SeqGAN_SQLi/data/relex_dictionary.json"
+
+# Health monitor thresholds (log warning nếu vi phạm)
+health_unique_min: 10        # unique_per_batch < 10 → collapse warning
+health_adv_std_min: 0.05     # advantages.std() < 0.05 → advantage collapse
+health_entropy_min: 1.5      # logit entropy < 1.5 → mode collapse

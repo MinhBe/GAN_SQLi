@@ -19,7 +19,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
 
 from src.tokenizer import SQLTokenizer
-from src.generator import GeneratorLSTM
+from src.generator import GeneratorLSTM, GeneratorBiLSTMEncoder
 from src.losses import mle_loss
 from src.scheduled_sampling import ScheduledSampler
 from src.utils import (set_seed, pad_sequences, save_checkpoint, get_device,
@@ -112,13 +112,30 @@ def main():
     tok = SQLTokenizer.load(os.path.join(data_dir, 'tokenizer_vocab.json'))
     print(f"Vocab size: {tok.vocab_size}")
 
-    model = GeneratorLSTM(
-        vocab_size=tok.vocab_size,
-        embed_dim=mc['embed_dim'],
-        hidden_dim=mc['hidden_dim'],
-        num_layers=mc['num_layers'],
-        dropout=mc['dropout'],
-    ).to(device)
+    use_bilstm = mc.get('use_bilstm', False)
+    num_conditions = mc.get('num_attack_types', 14)
+    cond_embed_dim = mc.get('type_embed_dim', 64)
+    if use_bilstm:
+        model = GeneratorBiLSTMEncoder(
+            vocab_size=tok.vocab_size,
+            embed_dim=mc['embed_dim'],
+            hidden_dim=mc['hidden_dim'],
+            enc_layers=mc.get('enc_layers', 2),
+            dec_layers=mc['num_layers'],
+            dropout=mc['dropout'],
+            num_conditions=num_conditions,
+            cond_embed_dim=cond_embed_dim,
+        ).to(device)
+    else:
+        model = GeneratorLSTM(
+            vocab_size=tok.vocab_size,
+            embed_dim=mc['embed_dim'],
+            hidden_dim=mc['hidden_dim'],
+            num_layers=mc['num_layers'],
+            dropout=mc['dropout'],
+            num_conditions=num_conditions,
+            cond_embed_dim=cond_embed_dim,
+        ).to(device)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=pc['lr'])
     sampler = ScheduledSampler(ramp_steps=pc['scheduled_sampling_steps'])

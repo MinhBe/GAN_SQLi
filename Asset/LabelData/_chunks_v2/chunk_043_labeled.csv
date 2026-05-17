@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+8470,"INSERT INTO double ( visitor, sure, donkey, nuts, soldier, press ) VALUES ( 'handle', 'off'. horn', 'brave', 'thirty', 'square', 'stove' )",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 138 chars.,2
+8471,"INSERT INTO lips ( smaller, solve, musical ) VALUES ( 'gate', 'doll', 'baseball' )",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 82 chars.,2
+8474,"UPDATE worry SET seven = 'man', City = 'easily' WHERE hope = action",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 67 chars.,2
+8475,UPDATE toy SET breath = 'consider'WHERE color = 'handsome',boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 58 chars.,2
+8477,DELETE FROM bush WHERE deal = 'inside',boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 38 chars.,2
+8478,DELETE FROM basic,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 17 chars.,2
+8564,"INSERT INTO driven ( your, country, welcome, popular, salt, wherever ) VALUES ( 'fox', 'community'. bet', 'heavy', 'dog', 'replace', 'sister' )",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 143 chars.,2
+8565,"INSERT INTO rays ( fog, rising, tall ) VALUES ( 'rule', 'grabbed', 'been' )",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 75 chars.,2
+8568,"UPDATE directly SET kept = 'sold', City = 'out' WHERE fell = baby",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 65 chars.,2
+8569,UPDATE suit SET nearer = 'share'WHERE decide = 'forth',boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 54 chars.,2
+8571,DELETE FROM closely WHERE below = 'higher',boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 42 chars.,2
+8572,DELETE FROM tight,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 17 chars.,2
+8434,"SELECT supply AS prepare, layers AS [line] FROM belt",union_based,mysql,0.9,Signals: 'elt'; UNION-based payload detected; DB: mysql,0
+8439,"SELECT massage,built,enemy FROM order LEFT JOIN Orders ON immediately.religiousID = paragraph.although ORDER BY bee.desert",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+8464,SELECT * FROM potatoes WHERE simplest = 'felt' AND ( alphabet = 'skin' OR group = 'pilot' ),union_based,mysql,0.9,Signals: 'elt'; UNION-based payload detected; DB: mysql,0
+8472,"SELECT promised, additional, learn FROM value WHERE order IS NULL",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+8489,SELECT MIN ( slabs ) AS expect FROM ride,union_based,mysql,0.9,Signals: 'exp'; UNION-based payload detected; DB: mysql,0
+8521,SELECT AVG ( property ) FROM flame SELECT SUM ( melted ),union_based,mysql,0.9,Signals: 'elt'; UNION-based payload detected; DB: mysql,0
+8541,"SELECT Employees.oxygen, COUNT ( Orders.rockyID ) AS hollowFROM ( OrdersINNER JOIN express ON Orders.wearID = Employees.darkID )",union_based,mysql,0.9,Signals: 'exp'; UNION-based payload detected; DB: mysql,0
+8551,SELECT * FROM accept WHERE shells = 'beautiful',union_based,mysql,0.9,Signals: 'if'; UNION-based payload detected; DB: mysql,0
+8400,SELECT * FROM machinery 3 SELECT * FROM pocket,union_based,generic,0.7,UNION-based payload detected. Payload length: 46 chars.,0
+8401,SELECT * FROM hungry FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM knowledge,union_based,generic,0.7,UNION-based payload detected. Payload length: 83 chars.,0
+8402,SELECT TOP 50 PERCENT * FROM fuel SELECT * FROM owner FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM tin,union_based,generic,0.7,UNION-based payload detected. Payload length: 109 chars.,0
+8403,SELECT * FROM straight FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM travel,union_based,generic,0.7,UNION-based payload detected. Payload length: 81 chars.,0
+8404,SELECT TOP 3 * FROM coach WHERE strike = 'split' SELECT * FROM fellow,union_based,generic,0.7,UNION-based payload detected. Payload length: 69 chars.,0
+8405,SELECT * FROM southern WHERE almost = 'broken' LIMIT 3,union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+8406,SELECT * FROM whether WHERE ruler = 'trouble' FETCH FIRST 3 ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 69 chars.,0
+8407,SELECT AVG ( conversation ) FROM plenty,union_based,generic,0.7,UNION-based payload detected. Payload length: 39 chars.,0
+8408,SELECT * FROM composed WHERE certain NOT LIKE '[discovery]%',union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,0
+8409,SELECT AVG ( steady ) FROM stone SELECT SUM ( bare ),union_based,generic,0.7,UNION-based payload detected. Payload length: 52 chars.,0
+8410,SELECT AVG ( constantly ) FROM nation SELECT SUM ( forget ),union_based,generic,0.7,UNION-based payload detected. Payload length: 59 chars.,0
+8411,SELECT AVG ( anything ) FROM pleasure SELECT SUM ( noun ),union_based,generic,0.7,UNION-based payload detected. Payload length: 57 chars.,0
+8412,SELECT COUNT ( carried ) FROM wheat,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+8413,SELECT COUNT ( joined ) FROM won,union_based,generic,0.7,UNION-based payload detected. Payload length: 32 chars.,0
+8414,SELECT AVG ( poet ) FROM spin,union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+8415,SELECT * FROM newspaper WHERE made NOT LIKE 'common%',union_based,generic,0.7,UNION-based payload detected. Payload length: 53 chars.,0
+8416,SELECT * FROM mine WHERE today LIKE '%make%',union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+8417,SELECT * FROM give WHERE leader NOT LIKE '[ever]%',union_based,generic,0.7,UNION-based payload detected. Payload length: 50 chars.,0
+8418,"SELECT * FROM lay WHERE breathe IN ( 'period', 'modern', 'similar' )",union_based,generic,0.7,UNION-based payload detected. Payload length: 68 chars.,0
+8419,"SELECT * FROM boat WHERE equipment NOT IN ( 'calm', 'blue', 'except' )",union_based,generic,0.7,UNION-based payload detected. Payload length: 70 chars.,0
+8420,SELECT * FROM however WHERE wealth IN ( SELECT repeat FROM engine ),union_based,generic,0.7,UNION-based payload detected. Payload length: 67 chars.,0
+8421,SELECT * FROM between WHERE palace BETWEEN 10 AND 20,union_based,generic,0.7,UNION-based payload detected. Payload length: 52 chars.,0
+8422,SELECT * FROM disappear WHERE ago BETWEEN 'square' AND 'powerful',union_based,generic,0.7,UNION-based payload detected. Payload length: 65 chars.,0
+8423,"SELECT * FROM cookies WHERE roof BETWEEN ""zulu"" AND ""suit""",union_based,generic,0.7,UNION-based payload detected. Payload length: 58 chars.,0
+8424,SELECT * FROM drink WHERE buried NOT BETWEEN 'fully' AND 'actual',union_based,generic,0.7,UNION-based payload detected. Payload length: 65 chars.,0
+8425,SELECT * FROM famous WHERE sometime BETWEEN stick09/01/1996gulf AND lesson15/31/1996near,union_based,generic,0.7,UNION-based payload detected. Payload length: 88 chars.,0
+8426,SELECT * FROM have WHERE egg BETWEEN '1996-07-01' AND '1996-07-31',union_based,generic,0.7,UNION-based payload detected. Payload length: 66 chars.,0
+8427,SELECT AVG ( spider ) FROM group SELECT SUM ( appropriate ),union_based,generic,0.7,UNION-based payload detected. Payload length: 59 chars.,0
+8428,SELECT COUNT ( noun ) FROM popular,union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0
+8429,SELECT COUNT ( fliesID ) FROM clock,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+8430,SELECT AVG ( Price ) FROM man,union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+8431,SELECT * FROM catch WHERE instrument BETWEEN '1996-07-01' AND '1996-07-31',union_based,generic,0.7,UNION-based payload detected. Payload length: 74 chars.,0
+8432,"SELECT goldID AS ID, wheat AS running FROM poem",union_based,generic,0.7,UNION-based payload detected. Payload length: 47 chars.,0
+8433,"SELECT travelID AS ID, summer AS thread FROM kept",union_based,generic,0.7,UNION-based payload detected. Payload length: 49 chars.,0
+8435,"SELECT headed, statement+ ', ' + supply+ ' ' + because+ ', ' + whenever AS simple FROM bottom",union_based,generic,0.7,UNION-based payload detected. Payload length: 93 chars.,0
+8436,SELECT reach ( s ) FROM rear INNER JOIN,union_based,generic,0.7,UNION-based payload detected. Payload length: 39 chars.,0
+8437,"SELECT trap,chosen,eventually,journey,job ( ( build JOIN grandmother ON satisfied.salt = studied.eventually ) INNER JOIN perfectON Orders.coast = whom.gentleID )",union_based,generic,0.7,UNION-based payload detected. Payload length: 161 chars.,0
+8438,SELECT apart ( s ) FROM plant LEFT JOIN,union_based,generic,0.7,UNION-based payload detected. Payload length: 39 chars.,0
+8440,SELECT earth ( s FROM national RIGHT JOIN,union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+8441,"SELECT Orders.enjoyrID, Employees.organization, Employees.she FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.singleID ORDER BY Orders.awareID",union_based,generic,0.7,UNION-based payload detected. Payload length: 159 chars.,0
+8442,SELECT bat ( s ) FROM although FULL OUTER JOIN,union_based,generic,0.7,UNION-based payload detected. Payload length: 46 chars.,0
+8443,"SELECT column_name ( s ) FROM west,center",union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+8444,SELECT kept ( s ) FROM old SELECT actual ( s ),union_based,generic,0.7,UNION-based payload detected. Payload length: 46 chars.,0
+8445,SELECT agree ( s ) FROM shoot SELECT magic FROM statement,union_based,generic,0.7,UNION-based payload detected. Payload length: 57 chars.,0
+8446,"SELECT COUNT ( seat ) , mental FROM one BY best",union_based,generic,0.7,UNION-based payload detected. Payload length: 47 chars.,0
+8447,"SELECT Employees.column, COUNT ( Orders.stickID ) AS seeFROM ( OrdersINNER JOIN leader ON Orders.winID = Employees.silenceID )",union_based,generic,0.7,UNION-based payload detected. Payload length: 126 chars.,0
+8448,SELECT * FROM determine FETCH FIRST 50 PERCENT ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 56 chars.,0
+8449,SELECT without,union_based,generic,0.7,UNION-based payload detected. Payload length: 14 chars.,0
+8450,SELECT * FROM story,union_based,generic,0.7,UNION-based payload detected. Payload length: 19 chars.,0
+8451,SELECT protection FROM riding,union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+8452,SELECT DISTINCT circle FROM activity,union_based,generic,0.7,UNION-based payload detected. Payload length: 36 chars.,0
+8453,SELECT COUNT ( DISTINCT hardly ) FROM rabbit,union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+8454,SELECT Count ( * ) AS clear,union_based,generic,0.7,UNION-based payload detected. Payload length: 27 chars.,0
+8455,FROM ( SELECT DISTINCT any FROM ability ),union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+8456,SELECT * FROM press,union_based,generic,0.7,UNION-based payload detected. Payload length: 19 chars.,0
+8457,SELECT * FROM likely WHERE equally = 'is',union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+8458,SELECT * FROM they WHERE got = 'private',union_based,generic,0.7,UNION-based payload detected. Payload length: 40 chars.,0
+8459,SELECT * FROM rod WHERE appearance = conversation,union_based,generic,0.7,UNION-based payload detected. Payload length: 49 chars.,0
+8460,SELECT * FROM leaf WHERE second = 'suddenly' AND City = 'suit',union_based,generic,0.7,UNION-based payload detected. Payload length: 62 chars.,0
+8461,SELECT * FROM connected WHERE game = 'breeze' OR barn = 'clothes',union_based,generic,0.7,UNION-based payload detected. Payload length: 65 chars.,0
+8462,SELECT * FROM either WHERE shinning = 'up' OR ear = 'metal',union_based,generic,0.7,UNION-based payload detected. Payload length: 59 chars.,0
+8463,SELECT * FROM lower WHERE NOT thou = 'teach',union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+8465,SELECT * FROM prepare WHERE NOT solar = 'fighting' AND NOT garden = 'well',union_based,generic,0.7,UNION-based payload detected. Payload length: 74 chars.,0
+8466,SELECT * FROM wing ORDER BY control,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+8467,SELECT * FROM beauty ORDER BY course DESC,union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+8468,"SELECT * FROM exactly ORDER BY part, gray",union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+8469,"SELECT * FROM who ORDER BY suppose ASC, correctly DESC",union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+8473,"SELECT strong, planned, massFROM trip WHERE paper IS NOT NULL",union_based,generic,0.7,UNION-based payload detected. Payload length: 61 chars.,0
+8476,SELECT * FROM breathing,union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+8479,SELECT forty ( s ) FROM grow,union_based,generic,0.7,UNION-based payload detected. Payload length: 28 chars.,0
+8480,SELECT * FROM ( SELECT tape FROM practice ),union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+8481,SELECT TOP 3 * FROM instant,union_based,generic,0.7,UNION-based payload detected. Payload length: 27 chars.,0
+8482,SELECT * FROM service 3,union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+8483,SELECT * FROM snake FETCH FIRST 3 ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+8484,SELECT TOP 50 PERCENT * FROM after,union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0
+8485,SELECT * FROM planet FETCH FIRST 50 PERCENT ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 53 chars.,0
+8486,SELECT TOP 3 * FROM gray WHERE tropical = 'son',union_based,generic,0.7,UNION-based payload detected. Payload length: 47 chars.,0
+8487,SELECT * FROM solution WHERE during = 'indeed' LIMIT 3,union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+8488,SELECT * FROM farther WHERE might = 'neighborhood' FETCH FIRST 3 ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 74 chars.,0
+8490,SELECT MIN ( ring ) AS arrangement FROM tree,union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+8491,SELECT * FROM ( SELECT brick FROM sure ),union_based,generic,0.7,UNION-based payload detected. Payload length: 40 chars.,0
+8492,SELECT TOP 3 * FROM equally SELECT * FROM enjoy 3SELECT * FROM duck,union_based,generic,0.7,UNION-based payload detected. Payload length: 67 chars.,0
+8493,SELECT * FROM steep 3 SELECT * FROM dangerous,union_based,generic,0.7,UNION-based payload detected. Payload length: 45 chars.,0
+8494,SELECT * FROM noun FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM noted,union_based,generic,0.7,UNION-based payload detected. Payload length: 77 chars.,0
+8495,SELECT TOP 50 PERCENT * FROM present SELECT * FROM ate FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM water,union_based,generic,0.7,UNION-based payload detected. Payload length: 112 chars.,0
+8496,SELECT * FROM replace FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM policeman,union_based,generic,0.7,UNION-based payload detected. Payload length: 83 chars.,0
+8497,SELECT TOP 3 * FROM bread WHERE automobile = 'building' SELECT * FROM sport,union_based,generic,0.7,UNION-based payload detected. Payload length: 75 chars.,0
+8498,SELECT * FROM butter WHERE complete = 'produce' LIMIT 3,union_based,generic,0.7,UNION-based payload detected. Payload length: 55 chars.,0
+8499,SELECT * FROM support WHERE court = 'youth' FETCH FIRST 3 ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 67 chars.,0
+8500,SELECT AVG ( motion ) FROM were,union_based,generic,0.7,UNION-based payload detected. Payload length: 31 chars.,0
+8501,SELECT * FROM air WHERE practical NOT LIKE '[machine]%',union_based,generic,0.7,UNION-based payload detected. Payload length: 55 chars.,0
+8502,SELECT AVG ( alphabet ) FROM opinion SELECT SUM ( climb ),union_based,generic,0.7,UNION-based payload detected. Payload length: 57 chars.,0
+8503,SELECT AVG ( edge ) FROM wheat SELECT SUM ( sing ),union_based,generic,0.7,UNION-based payload detected. Payload length: 50 chars.,0
+8504,SELECT AVG ( all ) FROM these SELECT SUM ( jump ),union_based,generic,0.7,UNION-based payload detected. Payload length: 49 chars.,0
+8505,SELECT COUNT ( teach ) FROM pleasure,union_based,generic,0.7,UNION-based payload detected. Payload length: 36 chars.,0
+8506,SELECT COUNT ( cloud ) FROM child,union_based,generic,0.7,UNION-based payload detected. Payload length: 33 chars.,0
+8507,SELECT AVG ( captured ) FROM pig,union_based,generic,0.7,UNION-based payload detected. Payload length: 32 chars.,0
+8508,SELECT * FROM thread WHERE strong NOT LIKE 'any%',union_based,generic,0.7,UNION-based payload detected. Payload length: 49 chars.,0
+8509,SELECT * FROM soil WHERE among LIKE '%join%',union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+8510,SELECT * FROM tip WHERE onto NOT LIKE '[table]%',union_based,generic,0.7,UNION-based payload detected. Payload length: 48 chars.,0
+8511,"SELECT * FROM follow WHERE elephant IN ( 'solve', 'four', 'throat' )",union_based,generic,0.7,UNION-based payload detected. Payload length: 68 chars.,0
+8512,"SELECT * FROM sent WHERE result NOT IN ( 'scale', 'buried', 'basket' )",union_based,generic,0.7,UNION-based payload detected. Payload length: 70 chars.,0
+8513,SELECT * FROM grow WHERE silence IN ( SELECT jump FROM log ),union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,0
+8514,SELECT * FROM fog WHERE square BETWEEN 10 AND 20,union_based,generic,0.7,UNION-based payload detected. Payload length: 48 chars.,0
+8515,SELECT * FROM garage WHERE Price NOT BETWEEN 10 AND 20,union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+8516,SELECT * FROM printed WHERE halfway BETWEEN 'degree' AND 'blew',union_based,generic,0.7,UNION-based payload detected. Payload length: 63 chars.,0
+8517,"SELECT * FROM dig WHERE kept BETWEEN ""stick"" AND ""youth""",union_based,generic,0.7,UNION-based payload detected. Payload length: 56 chars.,0
+8518,SELECT * FROM finger WHERE magnet NOT BETWEEN 'common' AND 'lucky',union_based,generic,0.7,UNION-based payload detected. Payload length: 66 chars.,0
+8519,SELECT * FROM manufacturing WHERE inside BETWEEN studied09/01/1996kept AND entirely15/31/1996damage,union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+8520,SELECT * FROM talk WHERE sugar BETWEEN '1996-07-01' AND '1996-07-31',union_based,generic,0.7,UNION-based payload detected. Payload length: 68 chars.,0
+8522,SELECT COUNT ( rain ) FROM question,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+8523,SELECT COUNT ( flowID ) FROM vapor,union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0
+8524,SELECT AVG ( Price ) FROM produce,union_based,generic,0.7,UNION-based payload detected. Payload length: 33 chars.,0
+8525,SELECT * FROM story WHERE table BETWEEN '1996-07-01' AND '1996-07-31',union_based,generic,0.7,UNION-based payload detected. Payload length: 69 chars.,0
+8526,"SELECT softlyID AS ID, understanding AS discussion FROM type",union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,0
+8527,"SELECT awayID AS ID, mysterious AS easy FROM opportunity",union_based,generic,0.7,UNION-based payload detected. Payload length: 56 chars.,0
+8528,"SELECT giant AS rhyme, copper AS [particular] FROM loose",union_based,generic,0.7,UNION-based payload detected. Payload length: 56 chars.,0
+8529,"SELECT plates, factor+ ', ' + won+ ' ' + bush+ ', ' + drive AS would FROM central",union_based,generic,0.7,UNION-based payload detected. Payload length: 81 chars.,0
+8530,SELECT whom ( s ) FROM subject INNER JOIN,union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+8531,"SELECT pond,minerals,vowel,became,blew ( ( usual JOIN note ON important.dollar = around.problem ) INNER JOIN shareON Orders.point = however.motherID )",union_based,generic,0.7,UNION-based payload detected. Payload length: 150 chars.,0
+8532,SELECT ready ( s ) FROM tight LEFT JOIN,union_based,generic,0.7,UNION-based payload detected. Payload length: 39 chars.,0
+8533,"SELECT joy,hunter,plastic FROM mission LEFT JOIN Orders ON child.finallyID = corner.empty ORDER BY library.after",union_based,generic,0.7,UNION-based payload detected. Payload length: 112 chars.,0
+8534,SELECT pressure ( s FROM long RIGHT JOIN,union_based,generic,0.7,UNION-based payload detected. Payload length: 40 chars.,0
+8535,"SELECT Orders.probablyrID, Employees.place, Employees.there FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.rodID ORDER BY Orders.physicalID",union_based,generic,0.7,UNION-based payload detected. Payload length: 157 chars.,0
+8536,SELECT statement ( s ) FROM nine FULL OUTER JOIN,union_based,generic,0.7,UNION-based payload detected. Payload length: 48 chars.,0
+8537,"SELECT column_name ( s ) FROM magnet,cannot",union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+8538,SELECT hearing ( s ) FROM changing SELECT reach ( s ),union_based,generic,0.7,UNION-based payload detected. Payload length: 53 chars.,0
+8539,SELECT shot ( s ) FROM height SELECT noun FROM zero,union_based,generic,0.7,UNION-based payload detected. Payload length: 51 chars.,0
+8540,"SELECT COUNT ( machine ) , pack FROM layers BY weak",union_based,generic,0.7,UNION-based payload detected. Payload length: 51 chars.,0
+8542,SELECT * FROM spider FETCH FIRST 50 PERCENT ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 53 chars.,0
+8543,SELECT this,union_based,generic,0.7,UNION-based payload detected. Payload length: 11 chars.,0
+8544,SELECT * FROM aboard,union_based,generic,0.7,UNION-based payload detected. Payload length: 20 chars.,0
+8545,SELECT human FROM heading,union_based,generic,0.7,UNION-based payload detected. Payload length: 25 chars.,0
+8546,SELECT DISTINCT wonderful FROM courage,union_based,generic,0.7,UNION-based payload detected. Payload length: 38 chars.,0
+8547,SELECT COUNT ( DISTINCT plus ) FROM chest,union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+8548,SELECT Count ( * ) AS is,union_based,generic,0.7,UNION-based payload detected. Payload length: 24 chars.,0
+8549,FROM ( SELECT DISTINCT enter FROM herself ),union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+8550,SELECT * FROM gain,union_based,generic,0.7,UNION-based payload detected. Payload length: 18 chars.,0
+8552,SELECT * FROM habit WHERE barn = 'level',union_based,generic,0.7,UNION-based payload detected. Payload length: 40 chars.,0
+8553,SELECT * FROM visitor WHERE once = somewhere,union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+8554,SELECT * FROM money WHERE gate = 'leaving' AND City = 'goose',union_based,generic,0.7,UNION-based payload detected. Payload length: 61 chars.,0
+8555,SELECT * FROM ball WHERE bar = 'nearly' OR whatever = 'advice',union_based,generic,0.7,UNION-based payload detected. Payload length: 62 chars.,0
+8556,SELECT * FROM indicate WHERE establish = 'so' OR gave = 'cheese',union_based,generic,0.7,UNION-based payload detected. Payload length: 64 chars.,0
+8557,SELECT * FROM aid WHERE NOT wealth = 'long',union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+8558,SELECT * FROM volume WHERE who = 'paint' AND ( good = 'discover' OR bigger = 'tired' ),union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+8559,SELECT * FROM halfway WHERE NOT spell = 'vote' AND NOT straight = 'ship',union_based,generic,0.7,UNION-based payload detected. Payload length: 72 chars.,0
+8560,SELECT * FROM lady ORDER BY positive,union_based,generic,0.7,UNION-based payload detected. Payload length: 36 chars.,0
+8561,SELECT * FROM radio ORDER BY anyway DESC,union_based,generic,0.7,UNION-based payload detected. Payload length: 40 chars.,0
+8562,"SELECT * FROM quite ORDER BY two, edge",union_based,generic,0.7,UNION-based payload detected. Payload length: 38 chars.,0
+8563,"SELECT * FROM toy ORDER BY dead ASC, mix DESC",union_based,generic,0.7,UNION-based payload detected. Payload length: 45 chars.,0
+8566,"SELECT corner, whom, announced FROM tribe WHERE get IS NULL",union_based,generic,0.7,UNION-based payload detected. Payload length: 59 chars.,0
+8567,"SELECT thread, hungry, howFROM tide WHERE poetry IS NOT NULL",union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,0
+8570,SELECT * FROM poetry,union_based,generic,0.7,UNION-based payload detected. Payload length: 20 chars.,0
+8573,SELECT eaten ( s ) FROM captured,union_based,generic,0.7,UNION-based payload detected. Payload length: 32 chars.,0
+8574,SELECT * FROM ( SELECT theory FROM machinery ),union_based,generic,0.7,UNION-based payload detected. Payload length: 46 chars.,0
+8575,SELECT TOP 3 * FROM night,union_based,generic,0.7,UNION-based payload detected. Payload length: 25 chars.,0
+8576,SELECT * FROM active 3,union_based,generic,0.7,UNION-based payload detected. Payload length: 22 chars.,0
+8577,SELECT * FROM trick FETCH FIRST 3 ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+8578,SELECT TOP 50 PERCENT * FROM manufacturing,union_based,generic,0.7,UNION-based payload detected. Payload length: 42 chars.,0
+8579,SELECT * FROM men FETCH FIRST 50 PERCENT ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 50 chars.,0
+8580,SELECT TOP 3 * FROM aware WHERE after = 'doing',union_based,generic,0.7,UNION-based payload detected. Payload length: 47 chars.,0
+8581,SELECT * FROM cotton WHERE underline = 'took' LIMIT 3,union_based,generic,0.7,UNION-based payload detected. Payload length: 53 chars.,0
+8582,SELECT * FROM general WHERE half = 'log' FETCH FIRST 3 ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 64 chars.,0
+8583,SELECT MIN ( won ) AS still FROM hill,union_based,generic,0.7,UNION-based payload detected. Payload length: 37 chars.,0
+8584,SELECT MIN ( surprise ) AS support FROM work,union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+8585,SELECT * FROM ( SELECT tight FROM leader ),union_based,generic,0.7,UNION-based payload detected. Payload length: 42 chars.,0
+8586,SELECT TOP 3 * FROM report SELECT * FROM pleasure 3SELECT * FROM farm,union_based,generic,0.7,UNION-based payload detected. Payload length: 69 chars.,0
+8587,SELECT * FROM rocky 3 SELECT * FROM handle,union_based,generic,0.7,UNION-based payload detected. Payload length: 42 chars.,0
+8588,SELECT * FROM sitting FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM wing,union_based,generic,0.7,UNION-based payload detected. Payload length: 79 chars.,0
+8589,SELECT TOP 50 PERCENT * FROM military SELECT * FROM danger FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM language,union_based,generic,0.7,UNION-based payload detected. Payload length: 119 chars.,0
+8590,SELECT * FROM habit FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM lion,union_based,generic,0.7,UNION-based payload detected. Payload length: 76 chars.,0
+8591,SELECT TOP 3 * FROM food WHERE begun = 'careful' SELECT * FROM milk,union_based,generic,0.7,UNION-based payload detected. Payload length: 67 chars.,0
+8592,SELECT * FROM eleven WHERE night = 'who' LIMIT 3,union_based,generic,0.7,UNION-based payload detected. Payload length: 48 chars.,0
+8593,SELECT * FROM die WHERE huge = 'prepare' FETCH FIRST 3 ROWS ONLY,union_based,generic,0.7,UNION-based payload detected. Payload length: 64 chars.,0
+8594,SELECT AVG ( rubbed ) FROM original,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+8595,SELECT * FROM below WHERE here NOT LIKE '[having]%',union_based,generic,0.7,UNION-based payload detected. Payload length: 51 chars.,0
+8596,SELECT AVG ( wheel ) FROM these SELECT SUM ( official ),union_based,generic,0.7,UNION-based payload detected. Payload length: 55 chars.,0
+8597,SELECT AVG ( solution ) FROM spell SELECT SUM ( addition ),union_based,generic,0.7,UNION-based payload detected. Payload length: 58 chars.,0
+8598,SELECT AVG ( lower ) FROM lunch SELECT SUM ( time ),union_based,generic,0.7,UNION-based payload detected. Payload length: 51 chars.,0
+8599,SELECT COUNT ( leather ) FROM play,union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0

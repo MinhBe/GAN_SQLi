@@ -1,0 +1,206 @@
+====================================================================================================
+LABELING REPORT: Chunks 061-070 (2000 payloads)
+====================================================================================================
+
+Total Payloads Labeled: 2000
+
+TOP 5 SQLi TYPES:
+--------------------------------------------------
+  benign                1238 ( 61.9%)
+  unknown                762 ( 38.1%)
+
+DATABASE ENGINE DISTRIBUTION:
+--------------------------------------------------
+  generic               2000 (100.0%)
+
+CONFIDENCE DISTRIBUTION:
+--------------------------------------------------
+  0.95+             301 ( 15.0%)
+  0.80-0.94           0 (  0.0%)
+  0.70-0.79         937 ( 46.9%)
+  < 0.70            762 ( 38.1%)
+
+QUALITY ISSUES:
+--------------------------------------------------
+  Low confidence rows (< 0.70):     762 (38.1%)
+  Short reasoning (< 50 chars):     762 (38.1%)
+
+
+====================================================================================================
+PER-CHUNK BREAKDOWN
+====================================================================================================
+
+CHUNK 061 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             128 ( 64.0%)
+    unknown             72 ( 36.0%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    72 ( 36.0%)
+    Short reasoning:   72 ( 36.0%)
+
+CHUNK 062 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             111 ( 55.5%)
+    unknown             89 ( 44.5%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    89 ( 44.5%)
+    Short reasoning:   89 ( 44.5%)
+
+CHUNK 063 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             119 ( 59.5%)
+    unknown             81 ( 40.5%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    81 ( 40.5%)
+    Short reasoning:   81 ( 40.5%)
+
+CHUNK 064 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             116 ( 58.0%)
+    unknown             84 ( 42.0%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    84 ( 42.0%)
+    Short reasoning:   84 ( 42.0%)
+
+CHUNK 065 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             143 ( 71.5%)
+    unknown             57 ( 28.5%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    57 ( 28.5%)
+    Short reasoning:   57 ( 28.5%)
+
+CHUNK 066 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             122 ( 61.0%)
+    unknown             78 ( 39.0%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    78 ( 39.0%)
+    Short reasoning:   78 ( 39.0%)
+
+CHUNK 067 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             130 ( 65.0%)
+    unknown             70 ( 35.0%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    70 ( 35.0%)
+    Short reasoning:   70 ( 35.0%)
+
+CHUNK 068 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             126 ( 63.0%)
+    unknown             74 ( 37.0%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    74 ( 37.0%)
+    Short reasoning:   74 ( 37.0%)
+
+CHUNK 069 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             125 ( 62.5%)
+    unknown             75 ( 37.5%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    75 ( 37.5%)
+    Short reasoning:   75 ( 37.5%)
+
+CHUNK 070 (200 rows)
+--------------------------------------------------------------------------------
+  Top 3 Types:
+    benign             118 ( 59.0%)
+    unknown             82 ( 41.0%)
+  DB Engines:
+    generic            200 (100.0%)
+  Issues:
+    Low confidence:    82 ( 41.0%)
+    Short reasoning:   82 ( 41.0%)
+
+
+====================================================================================================
+SAMPLE LOW CONFIDENCE ROWS (showing first 10 of 762)
+====================================================================================================
+
+  ID: 30148  | Type: unknown         | Conf: 0.50 | Payload: calle godelleta, s/n
+  ID: 30157  | Type: unknown         | Conf: 0.50 | Payload: c/ reina del cielo 136, 8-d
+  ID: 30160  | Type: unknown         | Conf: 0.50 | Payload: antonio asenjo, 178, 6?h
+  ID: 30164  | Type: unknown         | Conf: 0.50 | Payload: maduric@biosoftware.th
+  ID: 30165  | Type: unknown         | Conf: 0.50 | Payload: puerta del sol 124, 8?h
+  ID: 30174  | Type: unknown         | Conf: 0.50 | Payload: c/ los mimbres, 31
+  ID: 30175  | Type: unknown         | Conf: 0.50 | Payload: calle marsella s/n,
+  ID: 30179  | Type: unknown         | Conf: 0.50 | Payload: 7.96454E+15
+  ID: 30182  | Type: unknown         | Conf: 0.50 | Payload: fabres jordi
+  ID: 30185  | Type: unknown         | Conf: 0.50 | Payload: calle corinto 108
+
+
+====================================================================================================
+SAMPLE SHORT REASONING ROWS (< 50 chars, showing first 10 of 762)
+====================================================================================================
+
+  ID: 30148  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+  ID: 30157  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+  ID: 30160  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+  ID: 30164  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+  ID: 30165  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+  ID: 30174  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+  ID: 30175  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+  ID: 30179  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+  ID: 30182  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+  ID: 30185  | Len: 47 | Insufficient data to classify (confidence: 0.5)
+
+
+====================================================================================================
+LABELING RULES APPLIED
+====================================================================================================
+
+1. PRIORITY CHAIN: Matched SQLi type to lowest priority number (1-14)
+2. CONFIDENCE LEVELS:
+   - 0.95: Clear primary signal, unambiguous
+   - 0.85-0.90: Strong signal with minor uncertainty
+   - 0.70-0.79: Weak signal or short payload
+   - 0.50: Ambiguous/insufficient data (benign or unknown)
+3. DATABASE ENGINE: Detected from DB-specific keywords
+4. REASONING: Minimum 50 characters, cites specific signals
+5. SOURCES_AGREE: Always 1 (single labeler consensus model)
+
+TAXONOMY APPLIED:
+  Priority 1 (rce): xp_cmdshell, certutil, powershell, cmd.exe, /bin/bash
+  Priority 2 (out_of_band): load_file, utl_http, utl_inaddr, xp_dirtree, openrowset
+  Priority 3 (stacked_queries): ; followed by CREATE/DROP/INSERT/EXEC
+  Priority 4 (error_based): extractvalue, updatexml, ctxsys, xmltype
+  Priority 5 (time_blind): sleep, pg_sleep, waitfor, benchmark, randomblob
+  Priority 6 (heavy_query): COUNT(*) with 3+ table cross-join
+  Priority 7 (union_based): UNION SELECT, UNION ALL SELECT
+  Priority 8 (boolean_blind): AND 1=1, OR 1=1, AND 'a'='a', OR '1'='1'
+  Priority 9 (auth_bypass): admin' OR, admin'--, admin'#
+  Priority 10 (second_order): INSERT INTO with attack intent
+  Priority 11 (polyglot): Works on 2+ DB engines simultaneously
+  Priority 12 (lateral): JOIN with OR 1=1
+  Priority 13 (benign): Legitimate SQL, no attack signals
+  Priority 14 (unknown): Insufficient data to classify
+
+====================================================================================================

@@ -25,22 +25,49 @@ lý thuyết. Không thêm feature ngoài scope của 5 sprint dưới đây.
 ## Architecture Overview
 
 ```
-Generator π_θ (LSTM 3-layer hidden=512)
-    ↓ sample token a_t (multinomial)
-SQLiEnv.step(a_t)
-    ↓ EOS → compute_reward
-RewardOracle: syntax(sqlparse) + bypass(ModSecurity) + D_φ(x)
-    r_total = λ_D·D(x) + λ_bypass·r_bypass + λ_syntax·r_syntax − length_penalty
-    ↓
-MCRollout: K=16 rollouts → Q(s_t, a_t)
-Advantage: A(s_t, a_t) = Q(s_t, a_t) − b_ψ(s_t)
-    ↓
-REINFORCE update: ∇_θ J = E[A · ∇_θ log π_θ(a|s)]
-Discriminator D_φ (1D-CNN, WGAN-GP): update 5× per G update
+┌─────────────────────────────────────────────────────────────────────┐
+│                     LUỒNG DỮ LIỆU & REWARD                          │
+│                                                                      │
+│  G (Bi-LSTM 2-layer)  ──── payload (token_ids) ────►  D (WGAN-GP)  │
+│       │                                                    │         │
+│       │ type_embedding                              Wasserstein loss  │
+│       │ (conditioned)                               (W-distance)     │
+│       │                                                    │         │
+│       │◄──── REINFORCE update ◄─── SQLiEnv.step() ◄────── │         │
+│       │           ∇_θ J = E[A·∇log π]                     │         │
+│       │                    │                               │         │
+│       │              compute_reward()                      │         │
+│       │              ┌─────┴───────────────────────┐       │         │
+│       │              │  r_total (weighted sum):     │       │         │
+│       │              │  α·WAF_score   (ModSec)      │       │         │
+│       │              │  β·syntax_score (sqlparse)   │       │         │
+│       │              │  γ·diversity_bonus           │       │         │
+│       │              │  δ·D_wasserstein (normalized)│       │         │
+│       │              │  −ε·repetition_penalty       │       │         │
+│       │              └─────────────────────────────-┘       │         │
+│       │                                                      │         │
+│       │         WAF (ModSecurity OWASP CRS)                 │         │
+│       │         bypass=1.0 / partial=0.5 / blocked=0.0      │         │
+│       │         [Docker REST endpoint hoặc dev proxy]        │         │
+└───────────────────────────────────────────────────────────────────────┘
 ```
 
-**Data flow**: `combined_labeled_data.csv (40,860 rows)` → de-lex → split 70/15/15 → expert_demos →
-MLE pretrain → adversarial RL → evaluate.
+**Mối quan hệ 3 thành phần**:
+
+| Cặp | Quan hệ |
+|-----|---------|
+| G → D | G sinh payload; D đo Wasserstein distance giữa real và fake |
+| D → G | D_loss làm 1 thành phần của reward (γ·D_score normalized) |
+| G → WAF | G sinh payload; WAF chấm bypass score (0/0.5/1) |
+| WAF → G | WAF score là thành phần reward chính (α·WAF_score) |
+| D + WAF → G | Tổng reward = α·WAF + β·syntax + γ·diversity − δ·repetition; dùng trong REINFORCE |
+
+**Lưu ý quan trọng**: D (Discriminator) và WAF là **2 nguồn reward độc lập**:
+- D đo "payload có trông giống attack thật không" (phân phối)
+- WAF đo "payload có vượt qua firewall không" (thực tế)
+
+**Data flow**: `combined_labeled_data.csv (17,821 rows attack + ~5000 benign)` → de-lex → split
+70/15/15 → expert_demos → MLE pretrain → adversarial RL → evaluate.
 
 ---
 
@@ -70,6 +97,16 @@ expert_mask = (df['is_attack'] == True) & (df['confidence'] >= 0.95)
 expert_demos = df[expert_mask]
 ```
 
+**Benign SQL data** (cho Discriminator training):
+```python
+# Cần ~5000 benign queries: SELECT/INSERT/UPDATE không có injection patterns
+# Nguồn gợi ý: spider dataset, WikiSQL, hoặc tự generate từ template
+# Schema: payload_norm, sqli_type='benign', db_engine='generic', confidence=0.95
+benign_df = pd.read_csv('data/benign_sql_5000.csv')
+# Lưu riêng — chỉ dùng cho Discriminator, KHÔNG trộn vào Generator training data
+benign_df.to_csv('data/benign_for_discriminator.csv', index=False)
+```
+
 **Label normalization**:
 ```python
 RENAME = {'boolean_based': 'boolean_blind', 'stacked_query': 'stacked_queries'}
@@ -90,32 +127,58 @@ python data/prepare_seqgan_data.py
 `src/reward.py`, `src/rollout.py`, `src/baseline.py`, `src/losses.py`,
 `src/scheduled_sampling.py`
 
-#### Generator (LSTM — recommended start)
+#### Generator (Bi-LSTM 2-layer — recommended)
 
 ```python
-class GeneratorLSTM(nn.Module):
-    def __init__(self, vocab_size, embed_dim=128, hidden_dim=512, num_layers=3, dropout=0.2):
+class GeneratorBiLSTM(nn.Module):
+    def __init__(self, vocab_size, embed_dim=128, hidden_dim=256, num_layers=2,
+                 dropout=0.2, num_attack_types=14):
+        # BiLSTM: 2 directions × hidden_dim = 512 effective hidden
+        # type_embedding: num_attack_types → embed_dim (conditioned generation)
+        # input = token_embed + type_embed (concatenate trước LSTM)
         ...
-    def forward(self, input_ids, hidden=None):
+    def forward(self, input_ids, attack_type_ids=None, hidden=None):
+        # attack_type_ids: (B,) — index của attack type để condition
         # Returns (logits: B×T×V, hidden)
-    def sample(self, batch_size, max_len, device) -> Tensor:
+    def sample(self, batch_size, max_len, device, attack_type=None) -> Tensor:
         # Autoregressive multinomial sampling → token_ids (B, ≤max_len)
+        # attack_type: None = random sample from all types (balanced)
     def get_hidden(self, input_ids) -> Tensor:
         # Last hidden state → dùng cho baseline value network
 ```
 
-> Transformer Decoder là option B — switch chỉ khi LSTM không đủ capacity.
+**Lý do BiLSTM**: Forward pass sinh token trái-phải; backward pass cung cấp context toàn câu.
+SQL có cú pháp phụ thuộc xa (keyword cuối ảnh hưởng keyword đầu) → BiLSTM tốt hơn unidirectional.
 
-#### Discriminator (TextCNN / WGAN-GP)
+> Transformer Decoder là option C — switch chỉ khi BiLSTM không đủ capacity sau 10k steps.
+
+#### Discriminator (WGAN-GP Critic)
 
 ```python
 class DiscriminatorCNN(nn.Module):
     def __init__(self, vocab_size, embed_dim=128, kernel_sizes=[3,4,5], num_filters=128):
+        # Output: Wasserstein score (B,) — KHÔNG sigmoid, không softmax
+        # Training: WGAN loss = E[D(real)] − E[D(fake)] + λ_gp·GP
         ...
     def forward(self, input_ids) -> Tensor:
-        # Wasserstein score (B,) — không sigmoid
-    def gradient_penalty(self, real_ids, fake_ids) -> Tensor:
-        # λ_gp = 10
+        # Wasserstein critic score (B,) — unbounded real number
+    def gradient_penalty(self, real_ids, fake_ids, λ_gp=10.0) -> Tensor:
+        # Interpolated gradient penalty để enforce 1-Lipschitz
+```
+
+**Dữ liệu training Discriminator** (3 class):
+- `real_attack`: 17,821 rows từ `combined_labeled_data.csv` (positive)
+- `fake_attack`: sinh từ G mỗi step (negative)
+- `benign_sql`: ~5,000 benign SQL queries (SELECT/INSERT/UPDATE không có injection) — negative
+
+> **Lý do thêm benign**: D phải học phân biệt malicious vs benign, không chỉ real vs fake.
+> Nếu thiếu benign, D sẽ chỉ phân biệt "cũ vs mới" → reward signal vô nghĩa.
+
+**Adapter WGAN score → reward component**:
+```python
+def wgan_to_reward(wasserstein_score: float, percentile_95: float) -> float:
+    # Normalize về [0, 1] dựa trên running percentile của real data scores
+    return float(np.clip(wasserstein_score / (percentile_95 + 1e-8), 0, 1))
 ```
 
 #### SQLiEnv
@@ -130,17 +193,43 @@ class SQLiEnv:
         """{'syntax': 0/1, 'bypass': float, 'total': float}"""
 ```
 
-#### Reward shaping
+#### Reward shaping (Multi-signal)
 
 ```
-r_total = λ_D·D(x) + λ_bypass·r_bypass + λ_syntax·r_syntax − length_penalty
+r_total = α·WAF_score + β·syntax_score + γ·diversity_bonus
+        + δ·D_score_normalized − ε·repetition_penalty − length_penalty
 
-Khởi đầu: λ_D=0.3, λ_bypass=0.5, λ_syntax=0.2
-length_penalty = 0.01 * max(0, len(seq) − max_len)
+Khởi đầu: α=0.40, β=0.25, γ=0.15, δ=0.20
+          (tổng = 1.0 trước penalties)
 
-Dev mode (không có Docker ModSecurity):
-  r_bypass = 0.1 nếu sqli_type != 'benign'
-  r_bypass = 0.0 nếu sqli_type == 'benign'
+WAF_score:
+  - Real WAF (Docker ModSecurity): bypass=1.0, partial=0.5, blocked=0.0
+  - Dev proxy: sqli_type != 'benign' → 0.3, else 0.0
+
+syntax_score:
+  - 1.0 nếu sqlparse.parse(relex(payload)) hợp lệ
+  - 0.0 nếu không parse được
+
+diversity_bonus:
+  - 1 − max_char_ngram_overlap(payload, last_64_generated)
+  - Đo novelty so với 64 payloads gần nhất đã sinh
+  - = 1.0 nếu hoàn toàn mới; = 0.0 nếu trùng hoàn toàn
+
+D_score_normalized:
+  - wgan_to_reward(D.forward(payload), running_percentile_95)
+  - Measure "trông giống attack thật không"
+
+repetition_penalty:
+  - 1.0 nếu payload giống >90% với bất kỳ payload trong last_64_generated
+  - 0.0 otherwise
+
+length_penalty:
+  - 0.02 * max(0, len(seq) − max_len)
+
+Auto-adjust (sau mỗi 5000 steps):
+  - Nếu syntax_rate < 0.50 → tăng β lên 0.40 (tạm thời 5000 steps)
+  - Nếu self_bleu_3 > 0.80 → tăng γ lên 0.25 (mode collapse detected)
+  - Nếu WAF bypass < 20% → tăng α lên 0.55
 ```
 
 #### MCRollout
@@ -243,9 +332,19 @@ for step in range(50_000):
     b_optim.step()
 ```
 
+**Type-conditioned batch sampling** (chống mode collapse):
+```python
+ATTACK_TYPES = ['union_based','boolean_blind','time_blind','error_based',
+                'stacked_queries','auth_bypass','out_of_band','second_order']
+# Mỗi batch: sample đều từ tất cả types
+type_ids = torch.tensor([i % len(ATTACK_TYPES) for i in range(B)], device=device)
+seqs, log_probs = generator.sample(B=64, attack_type=type_ids)
+```
+
 **Reward hacking prevention**:
 - Length penalty trong reward (đã định nghĩa Sprint 2)
-- Auto-adjust: nếu `syntax_rate < 0.5` sau 5k steps → raise `λ_syntax = 0.4`
+- Diversity bonus + repetition penalty trong reward (đã định nghĩa Sprint 2)
+- Auto-adjust weights: nếu `syntax_rate < 0.5` → raise β; nếu `self_bleu_3 > 0.80` → raise γ
 
 **Config**:
 ```yaml
@@ -303,13 +402,16 @@ python evaluate.py --ckpt checkpoints/adv_final.pt --n_samples 100
 
 | Quyết định | Lý do |
 |------------|-------|
-| LSTM thay vì Transformer | Đơn giản hơn, ít memory hơn — switch Transformer nếu cần |
+| Bi-LSTM 2-layer thay LSTM 1-layer | SQL cú pháp phụ thuộc xa; thầy gợi ý trực tiếp; tăng capacity ~2x |
 | REINFORCE thay vì DDPG | Phù hợp discrete action space; không cần differentiable reward |
-| WGAN-GP thay vì vanilla GAN | Training stable hơn, tránh mode collapse |
+| WGAN-GP thay vì vanilla GAN | Training stable hơn; thầy gợi ý; tránh D quá mạnh → G không học |
 | K=16 rollout | Compromise variance vs compute; giảm xuống K=8 khi stable |
 | Full de-lex | Giảm vocab ~150 tokens → giảm variance policy gradient |
 | Expert demos upweight ×3 | MLE pretrain học từ bypass payloads trước → better RL init |
 | Scheduled Sampling (0→1, 5k steps) | Giảm exposure bias giữa pretrain và RL phase |
+| Type-conditioned generation | 88.6% data là Oracle XMLTYPE → buộc G sinh đa dạng per-type |
+| Benign SQL trong Discriminator | Thầy yêu cầu; D phải học malicious vs benign, không chỉ real vs fake |
+| Multi-signal reward (α·WAF+β·syntax+γ·diversity−δ·rep) | Ngăn reward hacking và mode collapse gốc rễ |
 
 ---
 

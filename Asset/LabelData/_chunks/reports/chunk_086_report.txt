@@ -1,0 +1,84 @@
+
+CHUNK 086 LABELING REPORT
+================================================================================
+
+BASIC STATISTICS
+----------------
+Total Rows: 200
+Average Confidence: 0.711
+Min/Max Confidence: 0.50 - 0.85
+
+TOP-5 SQLI TYPES
+----------------
+benign              :   98 ( 49.0%)
+union_based         :   51 ( 25.5%)
+unknown             :   49 ( 24.5%)
+second_order        :    2 (  1.0%)
+
+DB ENGINE DISTRIBUTION
+----------------------------------------
+generic             :  151 ( 75.5%)
+unknown             :   49 ( 24.5%)
+
+QUALITY ASSESSMENT
+----------------------------------------
+Low-confidence rows (<0.7): 102 (51.0%)
+Short-reasoning rows (<50 chars): 0 (0.0%)
+
+SOURCES_AGREE DISTRIBUTION
+----------------------------------------
+sources_agree=0:   49 ( 24.5%)
+sources_agree=1:  151 ( 75.5%)
+
+SAMPLE ROWS BY TYPE (first 2 of each)
+----------------------------------------
+
+BENIGN
+  ID 35144: confidence=0.85, sources_agree=1
+    Payload: SELECT * FROM else FETCH FIRST 50 PERCENT ROWS ONLY...
+    Reasoning: Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals)...
+  ID 35145: confidence=0.85, sources_agree=1
+    Payload: SELECT half...
+    Reasoning: Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals)...
+
+SECOND_ORDER
+  ID 35166: confidence=0.65, sources_agree=1
+    Payload: INSERT INTO motor ( air, angry, thread, excellent, elephant, type ) VALUES ( 'sc...
+    Reasoning: Signal match: insert\s+into.*values → second_order (P10); DB: generic...
+  ID 35167: confidence=0.65, sources_agree=1
+    Payload: INSERT INTO eye ( above, article, printed ) VALUES ( 'plain', 'own', 'selection'...
+    Reasoning: Signal match: insert\s+into.*values → second_order (P10); DB: generic...
+
+UNION_BASED
+  ID 35238: confidence=0.65, sources_agree=1
+    Payload: SELECT equally FROM reader UNION SELECT gasoline FROM bread ORDER BY boat...
+    Reasoning: Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic...
+  ID 35239: confidence=0.65, sources_agree=1
+    Payload: SELECT standard FROM shoot UNION ALL SELECT flies FROM saved ORDER BY children...
+    Reasoning: Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic...
+
+UNKNOWN
+  ID 35154: confidence=0.50, sources_agree=0
+    Payload: build...
+    Reasoning: Insufficient signals to classify; may be malformed or non-SQL text...
+  ID 35156: confidence=0.50, sources_agree=0
+    Payload: beyond' AND City = 'saddle...
+    Reasoning: Insufficient signals to classify; may be malformed or non-SQL text...
+
+LOW-CONFIDENCE ROWS (first 5)
+----------------------------------------
+ID 35154: unknown (0.50)
+  Insufficient signals to classify; may be malformed or non-SQL text
+
+ID 35156: unknown (0.50)
+  Insufficient signals to classify; may be malformed or non-SQL text
+
+ID 35157: unknown (0.50)
+  Insufficient signals to classify; may be malformed or non-SQL text
+
+ID 35158: unknown (0.50)
+  Insufficient signals to classify; may be malformed or non-SQL text
+
+ID 35166: second_order (0.65)
+  Signal match: insert\s+into.*values → second_order (P10); DB: generic
+

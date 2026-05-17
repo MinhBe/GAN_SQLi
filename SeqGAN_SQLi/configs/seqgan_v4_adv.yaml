@@ -1,0 +1,67 @@
+data_dir: "Asset/LabelData/OpenCode/mle_data"
+ckpt_dir: "SeqGAN_SQLi/checkpoints/v4"
+log_dir: "SeqGAN_SQLi/logs/v4"
+
+embed_dim: 256
+hidden_dim: 512
+num_layers: 2
+dropout: 0.2
+max_seq_len: 80
+use_bilstm: true
+enc_layers: 2
+
+use_conditional: true
+num_attack_types: 14
+type_embed_dim: 64
+
+d_embed_dim: 128
+d_kernel_sizes: [3, 4, 5]
+d_filters: 128
+
+batch_size: 64
+
+warmup_steps: 2000
+adversarial_steps: 12000
+refinement_steps: 6000
+
+lr_g_warmup: 0.0001
+lr_g_adversarial: 0.00005
+lr_g_refinement: 0.00002
+lr_d: 0.0001
+
+beta1: 0.5
+beta2: 0.999
+grad_clip: 1.0
+
+entropy_coeff_warmup: 0.05
+entropy_coeff_adversarial: 0.10
+entropy_coeff_refinement: 0.02
+
+ema_baseline_alpha: 0.20
+
+sample_temperature_warmup: 1.20
+sample_temperature_adversarial: 1.30
+sample_temperature_refinement: 1.05
+
+type_balanced_sampling: true
+
+diversity_weight: 0.15
+diversity_buffer_size: 256
+
+d_steps_collapse_threshold: 8
+d_steps_warning_threshold: 20
+d_per_g_ratio: 3
+
+use_benign_data: false
+use_waf: false
+
+boundary_threshold: 5
+cache_size: 100000
+
+seed: 42
+n_eval_samples: 1000
+relex_dict_path: "SeqGAN_SQLi/data/relex_dictionary.json"
+
+health_unique_min: 10
+health_adv_std_min: 0.05
+health_entropy_min: 1.5

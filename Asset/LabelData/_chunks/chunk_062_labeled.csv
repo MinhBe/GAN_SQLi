@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+30344,"calle valle de salazar, 48,",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30345,comba,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30346,32027973j,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30347,husky_hurlic@ropadegolf.sn,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30348,magaz de pisuerga,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30349,2.58973E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30350,uvalle urpina,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30351,8.7027E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30352,5he1un,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30353,egido s/n,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30354,04607227m,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30355,9.15202E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30356,"calle ducado de neopatria 63, 12-h",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30357,gauchaje,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30358,5.11823E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30359,calle constanti s/n 5?h,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30360,tinajas,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30361,charley,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30362,bret3,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30363,"espartero, 103, 5-f",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30364,miera,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30365,7.69984E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30366,antero,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30367,"camio adelfas, 148, 5?g",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30368,2isp3n?3io43,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30369,ricard,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30370,88356550a,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30371,wostrikoff@hojainformativas.gi,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30372,urchins@waikilu.mg,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30373,3.88988E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30374,coca de alba,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30375,"paseo alameda de osuna 10,",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30376,thuong,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30377,drier@hotelesymas.cl,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30378,timmons,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30379,"plaa mig de can clos, 122",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30380,desans totohuetotzint,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30381,3.72946E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30382,exigidad,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30383,thiel,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30384,igzquiza,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30385,anz1@hiperbilbao.fj,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30386,3.09031E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30387,negredo,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30388,"c/ el columpio 13,",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30389,malacopterigio,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30390,6.83781E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30391,"once septiembre, 95",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30392,montorns de segarra,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30393,"c/ bellavista, 70 10h",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30394,6.34191E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30395,morlanes funosa,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30396,laguna del marquesado,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30397,marcanti,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30398,pozal de gallinas,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30399,animador!a,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30400,8.32456E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30401,"calle andres mellado, 83, 12-d",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30402,inamulla,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30403,walliw,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30404,92283149l,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30405,gilden@gopersonalfitness.ua,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30406,c/ cardenal benilloch 171 12?h,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30407,prucha@comerciosaspe.ps,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30408,toledo,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30409,"c/ juan rabadan 27, 6?a",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30410,aisha,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30411,villasandino,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30412,zoldou@stainless.tw,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30413,92540376z,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30414,patenaud,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30415,adria,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30416,1.42319E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30417,warhol@programagestionerp.ai,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30418,renny,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30419,wamba,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30420,puntagorda,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30421,3ule1s,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30422,hierros 161 10f,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30423,perfeccin,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30424,brana@housemovie.id,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30425,terry@mtos.ar,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30426,mera alccer,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30427,c742na79,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30428,39654869v,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30429,9.42955E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30430,nydia,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30431,silcula,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30432,savino,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30433,raphael,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30434,radresa aja,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30435,con10e4t2,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30436,t16564l,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30437,3.45448E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30438,palls de buran,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30439,"dos aceras 119,",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30440,lagata,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30441,1.93115E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30442,bruscamente,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30443,tinti@21horas.hr,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30444,sant andreu salou,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30445,"c/jon habana, 111",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30446,nadilla,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30447,santiago de la puebla,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30448,tebbe,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30449,63a5et5192,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30450,marlowe,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30451,soldani-godet@informex.ru,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30452,menospreciativo,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30453,manferidor,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30454,"silo 179, 12?b",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30455,1.22869E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30456,fresno de la vega,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30457,arcos,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30458,pankiw,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30459,aguadulce,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30460,pl. emilio simon 28,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30461,hargreav,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30462,"calle manzanilla 141,",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30463,brownfie,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30464,knyht9@aspirantes.lt,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30465,3.1201E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30466,piejo,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30467,lester_muenster@erasmusrooms.org,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30468,ubaldino,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30469,3st59et982,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30470,46225556h,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30471,desafinar,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30472,poboleda,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30473,41484237b,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30474,van_bake,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30475,desolladamen-te,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30476,eflujo,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30477,navas de san juan,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30478,co5r5525e,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30479,2.11E+15,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30480,santaniello_tabernero@enfuerteventura.com.ni,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30481,78608268h,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30482,vicari joan catany 123 1?c,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30483,clorosis,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30484,zulmara,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30485,raian,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30486,alfafara,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30487,enanzar,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30488,02ap36o5473,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30489,63482988k,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30490,stefana1,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30491,8.71176E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30492,73502486y,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30493,60928646j,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30494,mataronesa,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30495,plumero,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30496,rupp@djbroadcast.gov,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30497,jengibre,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30498,5.93447E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30499,"c/ valdepalitos 155, 5-a",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30500,2ariosamente,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30501,vila kusanovic,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30502,nooshin,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30503,7.66646E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30504,3.30212E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30505,a8o8decer,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30506,tarpey@bwds.ne,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30507,5.58562E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30508,"c/ cangas del narcea, 97, 12?e",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30509,4.96159E+14,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30510,gwohsing,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30511,"c/ geranio, 65",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30512,aldea del cano,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30513,homero,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30514,saciedad,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30515,38623329g,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30516,espa7t4ro,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30517,"xiprer 61, 2-a",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30518,schwuchow9@viajessolomujeres.bj,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30519,santa maria de corc,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30520,jamaal,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30521,3.61612E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30522,mccowen@esencialser.mn,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30523,rastrilladora,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30524,macinnes,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30525,cr48e24n,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30526,crespo bullones,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30527,corazones 168,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30528,vaillant altimir,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30529,"calle mayor, s/n 11h",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30530,18995930t,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30531,pegler,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30532,lerumeur@phd-photodecor.sj,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30533,monsalve almada,benign,generic,0.95,No SQL injection attack signals detected (confidence: 0.95),1
+30534,"fernandez latorre 14,",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30535,c4nt0rn,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30536,termmetro,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30537,"c/ ereta, 104,",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30538,6.91307E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30539,sitiwet-chagas@creacionesacampada.travel,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30540,"romana, la",unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30541,alysia,benign,generic,0.70,No SQL injection attack signals detected (confidence: 0.7),1
+30542,pelle1@906.com.aq,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1
+30543,1.76964E+15,unknown,generic,0.50,Insufficient data to classify (confidence: 0.5),1

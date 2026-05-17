@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+33404,SELECT LOWER ( CustomerName ) AS LowercaseCustomerName FROM Customers;,union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 70 chars.,0
+33439,SELECT UCASE ( CustomerName ) AS UppercaseCustomerName FROM Customers;,union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 70 chars.,0
+33441,SELECT UPPER ( CustomerName ) AS UppercaseCustomerName FROM Customers;,union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 70 chars.,0
+33400,"SELECT LOCATE ( ""3"", ""W3Schools.com"" ) AS MatchPosition;",union_based,generic,0.7,UNION-based payload detected. Payload length: 56 chars.,0
+33401,"SELECT LOCATE ( ""com"", ""W3Schools.com"", 3 ) AS MatchPosition;",union_based,generic,0.7,UNION-based payload detected. Payload length: 61 chars.,0
+33402,"SELECT LOCATE ( ""a"", CustomerName ) FROM Customers;",union_based,generic,0.7,UNION-based payload detected. Payload length: 51 chars.,0
+33403,"SELECT LOWER ( ""SQL Tutorial is FUN!"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+33405,"SELECT LPAD ( ""SQL Tutorial"", 20, ""ABC"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+33406,"SELECT LPAD ( CustomerName, 30, ""ABC"" ) AS LeftPadCustomerName FROM Customers;",union_based,generic,0.7,UNION-based payload detected. Payload length: 78 chars.,0
+33407,"SELECT LTRIM ( "" SQL Tutorial"" ) AS LeftTrimmedString;",union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+33408,"SELECT MID ( ""SQL Tutorial"", 5, 3 ) AS ExtractString;",union_based,generic,0.7,UNION-based payload detected. Payload length: 53 chars.,0
+33409,"SELECT MID ( CustomerName, 2, 5 ) AS ExtractString FROM Customers;",union_based,generic,0.7,UNION-based payload detected. Payload length: 66 chars.,0
+33410,"SELECT MID ( ""SQL Tutorial"", -5, 5 ) AS ExtractString;",union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+33411,"SELECT POSITION ( ""3"" IN ""W3Schools.com"" ) AS MatchPosition;",union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,0
+33412,"SELECT POSITION ( ""COM"" IN ""W3Schools.com"" ) AS MatchPosition;",union_based,generic,0.7,UNION-based payload detected. Payload length: 62 chars.,0
+33413,"SELECT POSITION ( ""a"" IN CustomerName ) FROM Customers;",union_based,generic,0.7,UNION-based payload detected. Payload length: 55 chars.,0
+33414,"SELECT REPEAT ( ""SQL Tutorial"", 3 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 37 chars.,0
+33415,"SELECT REPEAT ( CustomerName, 2 ) FROM Customers;",union_based,generic,0.7,UNION-based payload detected. Payload length: 49 chars.,0
+33416,"SELECT REPEAT ( ""SQL Tutorial"", 0 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 37 chars.,0
+33417,"SELECT REPLACE ( ""SQL Tutorial"", ""SQL"", ""HTML"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 50 chars.,0
+33418,"SELECT REPLACE ( ""XYZ FGH XYZ"", ""X"", ""M"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+33419,"SELECT REVERSE ( ""SQL Tutorial"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+33420,SELECT REVERSE ( CustomerName ) FROM Customers;,union_based,generic,0.7,UNION-based payload detected. Payload length: 47 chars.,0
+33421,"SELECT RIGHT ( ""SQL Tutorial is cool"", 4 ) AS ExtractString;",union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,0
+33422,"SELECT RIGHT ( CustomerName, 5 ) AS ExtractString FROM Customers;",union_based,generic,0.7,UNION-based payload detected. Payload length: 65 chars.,0
+33423,"SELECT RPAD ( ""SQL Tutorial"", 20, ""ABC"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+33424,"SELECT RPAD ( CustomerName, 30, ""ABC"" ) AS RightPadCustomerName FROM Customers;",union_based,generic,0.7,UNION-based payload detected. Payload length: 79 chars.,0
+33425,"SELECT RTRIM ( ""SQL Tutorial "" ) AS RightTrimmedString;",union_based,generic,0.7,UNION-based payload detected. Payload length: 55 chars.,0
+33426,SELECT SPACE ( 10 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 21 chars.,0
+33427,"SELECT STRCMP ( ""SQL Tutorial"", ""SQL Tutorial"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 50 chars.,0
+33428,"SELECT STRCMP ( ""SQL Tutorial"", ""HTML Tutorial"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 51 chars.,0
+33429,"SELECT SUBSTR ( ""SQL Tutorial"", 5, 3 ) AS ExtractString;",union_based,generic,0.7,UNION-based payload detected. Payload length: 56 chars.,0
+33430,"SELECT SUBSTR ( CustomerName, 2, 5 ) AS ExtractString FROM Customers;",union_based,generic,0.7,UNION-based payload detected. Payload length: 69 chars.,0
+33431,"SELECT SUBSTR ( ""SQL Tutorial"", -5, 5 ) AS ExtractString;",union_based,generic,0.7,UNION-based payload detected. Payload length: 57 chars.,0
+33432,"SELECT SUBSTRING ( ""SQL Tutorial"", 5, 3 ) AS ExtractString;",union_based,generic,0.7,UNION-based payload detected. Payload length: 59 chars.,0
+33433,"SELECT SUBSTRING ( CustomerName, 2, 5 ) AS ExtractString FROM Customers;",union_based,generic,0.7,UNION-based payload detected. Payload length: 72 chars.,0
+33434,"SELECT SUBSTRING ( ""SQL Tutorial"", -5, 5 ) AS ExtractString;",union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,0
+33435,"SELECT SUBSTRING_INDEX ( ""www.w3schools.com"", ""."", 1 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 56 chars.,0
+33436,"SELECT SUBSTRING_INDEX ( ""www.w3schools.com"", ""."", 2 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 56 chars.,0
+33437,SELECT TRIM ( ' SQL Tutorial ' ) AS TrimmedString;,union_based,generic,0.7,UNION-based payload detected. Payload length: 50 chars.,0
+33438,"SELECT UCASE ( ""SQL Tutorial is FUN!"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+33440,"SELECT UPPER ( ""SQL Tutorial is FUN!"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+33442,SELECT ABS ( -243.5 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+33443,SELECT ACOS ( 0.25 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 22 chars.,0
+33444,SELECT ACOS ( -0.8 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 22 chars.,0
+33445,SELECT ASIN ( 0.25 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 22 chars.,0
+33446,SELECT ASIN ( -0.8 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 22 chars.,0
+33447,SELECT ATAN ( 2.5 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 21 chars.,0
+33448,"SELECT ATAN ( -0.8, 2 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 25 chars.,0
+33449,"SELECT ATAN2 ( 0.50, 1 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 26 chars.,0
+33450,"SELECT ATAN2 ( -0.8, 2 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 26 chars.,0
+33451,SELECT AVG ( Price ) AS AveragePrice FROM Products;,union_based,generic,0.7,UNION-based payload detected. Payload length: 51 chars.,0
+33452,SELECT * FROM Products,union_based,generic,0.7,UNION-based payload detected. Payload length: 22 chars.,0
+33453,SELECT CEIL ( 25.75 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+33454,SELECT CEIL ( 25 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 20 chars.,0
+33455,SELECT CEILING ( 25.75 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 26 chars.,0
+33456,SELECT CEILING ( 25 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+33457,SELECT COS ( 2 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 18 chars.,0
+33458,SELECT COS ( PI ( ) ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+33459,SELECT COT ( 6 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 18 chars.,0
+33460,SELECT COT ( -2 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 19 chars.,0
+33461,SELECT COUNT ( ProductID ) AS NumberOfProducts FROM Products;,union_based,generic,0.7,UNION-based payload detected. Payload length: 61 chars.,0
+33462,SELECT DEGREES ( 1.5 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 24 chars.,0
+33463,SELECT DEGREES ( PI ( ) *2 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 30 chars.,0
+33464,SELECT 10 DIV 5;,union_based,generic,0.7,UNION-based payload detected. Payload length: 16 chars.,0
+33465,SELECT 8 DIV 3;,union_based,generic,0.7,UNION-based payload detected. Payload length: 15 chars.,0
+33466,SELECT EXP ( 1 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 18 chars.,0
+33467,SELECT EXP ( 2 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 18 chars.,0
+33468,SELECT FLOOR ( 25.75 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 24 chars.,0
+33469,SELECT FLOOR ( 25 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 21 chars.,0
+33470,"SELECT GREATEST ( 3, 12, 34, 8, 25 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 38 chars.,0
+33471,"SELECT GREATEST ( ""w3Schools.com"", ""microsoft.com"", ""apple.com"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 67 chars.,0
+33472,"SELECT LEAST ( 3, 12, 34, 8, 25 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+33473,"SELECT LEAST ( ""w3Schools.com"", ""microsoft.com"", ""apple.com"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 64 chars.,0
+33474,SELECT LN ( 2 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 17 chars.,0
+33475,SELECT LN ( 1 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 17 chars.,0
+33476,SELECT LOG ( 2 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 18 chars.,0
+33477,"SELECT LOG ( 2, 4 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 21 chars.,0
+33478,SELECT LOG10 ( 2 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 20 chars.,0
+33479,SELECT LOG10 ( 4.5 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 22 chars.,0
+33480,SELECT LOG2 ( 6 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 19 chars.,0
+33481,SELECT LOG2 ( 64 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 20 chars.,0
+33482,"SELECT MOD ( 18, 4 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 22 chars.,0
+33483,SELECT 18 MOD 4;,union_based,generic,0.7,UNION-based payload detected. Payload length: 16 chars.,0
+33484,SELECT 18 % 4;,union_based,generic,0.7,UNION-based payload detected. Payload length: 14 chars.,0
+33485,SELECT PI ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 15 chars.,0
+33486,"SELECT POW ( 4, 2 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 21 chars.,0
+33487,"SELECT POW ( 8, 3 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 21 chars.,0
+33488,"SELECT POWER ( 4, 2 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+33489,"SELECT POWER ( 8, 3 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+33490,SELECT RADIANS ( 180 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 24 chars.,0
+33491,SELECT RADIANS ( -45 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 24 chars.,0
+33492,SELECT RAND ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 17 chars.,0
+33493,SELECT RAND ( 6 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 19 chars.,0
+33494,SELECT RAND ( ) * ( 10-5 ) +5;,union_based,generic,0.7,UNION-based payload detected. Payload length: 30 chars.,0
+33495,SELECT FLOOR ( RAND ( ) * ( 10-5+1 ) +5 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+33496,"SELECT ROUND ( 135.375, 2 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+33497,"SELECT ROUND ( 345.156, 0 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+33498,"SELECT ProductName, Price, ROUND ( Price, 1 ) AS RoundedPrice FROM Products;",union_based,generic,0.7,UNION-based payload detected. Payload length: 76 chars.,0
+33499,SELECT SIGN ( 255.5 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+33500,SELECT SIGN ( -12 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 21 chars.,0
+33501,SELECT SIN ( 2 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 18 chars.,0
+33502,SELECT SIN ( -1 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 19 chars.,0
+33503,SELECT SQRT ( 64 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 20 chars.,0
+33504,SELECT SQRT ( 13 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 20 chars.,0
+33505,SELECT SUM ( Quantity ) AS TotalItemsOrdered FROM OrderDetails;,union_based,generic,0.7,UNION-based payload detected. Payload length: 63 chars.,0
+33506,SELECT TAN ( 1.75 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 21 chars.,0
+33507,SELECT TAN ( -3 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 19 chars.,0
+33508,"SELECT TRUNCATE ( 135.375, 2 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 32 chars.,0
+33509,"SELECT TRUNCATE ( 345.156, 0 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 32 chars.,0
+33510,"SELECT ADDDATE ( ""2017-06-15"", INTERVAL 10 DAY ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 50 chars.,0
+33511,"SELECT ADDDATE ( ""2017-06-15 09:34:21"", INTERVAL 15 MINUTE ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 62 chars.,0
+33512,"SELECT ADDDATE ( ""2017-06-15 09:34:21"", INTERVAL -3 HOUR ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,0
+33513,"SELECT ADDDATE ( ""2017-06-15"", INTERVAL -2 MONTH ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 52 chars.,0
+33514,"SELECT ADDTIME ( ""2017-06-15 09:34:21"", ""2"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 47 chars.,0
+33515,"SELECT ADDTIME ( ""2017-06-15 09:34:21.000001"", ""5.000003"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 61 chars.,0
+33516,"SELECT ADDTIME ( ""2017-06-15 09:34:21.000001"", ""2:10:5.000003"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 66 chars.,0
+33517,"SELECT ADDTIME ( ""2017-06-15 09:34:21.000001"", ""5 2:10:5.000003"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 68 chars.,0
+33518,"SELECT ADDTIME ( ""09:34:21.000001"", ""2:10:5.000003"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 55 chars.,0
+33519,SELECT CURDATE ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 20 chars.,0
+33520,SELECT CURDATE ( ) + 1;,union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+33521,SELECT CURRENT_DATE ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 25 chars.,0
+33522,SELECT CURRENT_DATE ( ) + 1;,union_based,generic,0.7,UNION-based payload detected. Payload length: 28 chars.,0
+33523,SELECT CURRENT_TIME ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 25 chars.,0
+33524,SELECT CURRENT_TIME ( ) + 1;,union_based,generic,0.7,UNION-based payload detected. Payload length: 28 chars.,0
+33525,SELECT CURRENT_TIMESTAMP ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 30 chars.,0
+33526,SELECT CURRENT_TIMESTAMP ( ) + 1;,union_based,generic,0.7,UNION-based payload detected. Payload length: 33 chars.,0
+33527,SELECT CURTIME ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 20 chars.,0
+33528,SELECT CURTIME ( ) + 1;,union_based,generic,0.7,UNION-based payload detected. Payload length: 23 chars.,0
+33529,"SELECT DATE ( ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 30 chars.,0
+33530,"SELECT DATE ( ""2017-06-15 09:34:21"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 39 chars.,0
+33531,"SELECT DATE ( ""The date is 2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 42 chars.,0
+33532,SELECT DATE ( OrderDate ) FROM Orders;,union_based,generic,0.7,UNION-based payload detected. Payload length: 38 chars.,0
+33533,"SELECT DATEDIFF ( ""2017-06-25"", ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 48 chars.,0
+33534,"SELECT DATEDIFF ( ""2017-06-25 09:34:21"", ""2017-06-15 15:25:35"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 66 chars.,0
+33535,"SELECT DATEDIFF ( ""2017-01-01"", ""2016-12-24"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 48 chars.,0
+33536,"SELECT DATE_ADD ( ""2017-06-15"", INTERVAL 10 DAY ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 51 chars.,0
+33537,"SELECT DATE_ADD ( ""2017-06-15 09:34:21"", INTERVAL 15 MINUTE ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 63 chars.,0
+33538,"SELECT DATE_ADD ( ""2017-06-15 09:34:21"", INTERVAL -3 HOUR ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 61 chars.,0
+33539,"SELECT DATE_ADD ( ""2017-06-15"", INTERVAL -2 MONTH ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 53 chars.,0
+33540,"SELECT DATE_FORMAT ( ""2017-06-15"", ""%Y"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+33541,"SELECT DATE_FORMAT ( ""2017-06-15"", ""%M %d %Y"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 49 chars.,0
+33542,"SELECT DATE_FORMAT ( ""2017-06-15"", ""%W %M %e %Y"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 52 chars.,0
+33543,"SELECT DATE_FORMAT ( BirthDate, ""%W %M %e %Y"" ) FROM Employees;",union_based,generic,0.7,UNION-based payload detected. Payload length: 63 chars.,0
+33544,"SELECT DATE_SUB ( ""2017-06-15"", INTERVAL 10 DAY ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 51 chars.,0
+33545,"SELECT DATE_SUB ( ""2017-06-15 09:34:21"", INTERVAL 15 MINUTE ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 63 chars.,0
+33546,"SELECT DATE_SUB ( ""2017-06-15 09:34:21"", INTERVAL 3 HOUR ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,0
+33547,"SELECT DATE_SUB ( ""2017-06-15"", INTERVAL -2 MONTH ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 53 chars.,0
+33548,"SELECT DAY ( ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+33549,"SELECT DAY ( ""2017-06-15 09:34:21"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 38 chars.,0
+33550,SELECT DAY ( CURDATE ( ) ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 28 chars.,0
+33551,"SELECT DAYNAME ( ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 33 chars.,0
+33552,"SELECT DAYNAME ( ""2017-06-15 09:34:21"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 42 chars.,0
+33553,SELECT DAYNAME ( CURDATE ( ) ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 32 chars.,0
+33554,"SELECT DAYOFMONTH ( ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 36 chars.,0
+33555,"SELECT DAYOFMONTH ( ""2017-06-15 09:34:21"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 45 chars.,0
+33556,SELECT DAYOFMONTH ( CURDATE ( ) ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+33557,"SELECT DAYOFWEEK ( ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+33558,"SELECT DAYOFWEEK ( ""2017-06-15 09:34:21"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+33559,SELECT DAYOFWEEK ( CURDATE ( ) ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0
+33560,"SELECT DAYOFYEAR ( ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+33561,"SELECT DAYOFYEAR ( ""2017-01-01"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+33562,SELECT DAYOFYEAR ( CURDATE ( ) ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0
+33563,"SELECT EXTRACT ( MONTH FROM ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+33564,"SELECT EXTRACT ( WEEK FROM ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+33565,"SELECT EXTRACT ( MINUTE FROM ""2017-06-15 09:34:21"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+33566,"SELECT EXTRACT ( YEAR_MONTH FROM ""2017-06-15 09:34:21"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 58 chars.,0
+33567,SELECT FROM_DAYS ( 685467 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+33568,SELECT FROM_DAYS ( 780500 ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+33569,"SELECT HOUR ( ""2017-06-20 09:34:00"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 39 chars.,0
+33570,"SELECT HOUR ( ""838:59:59"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+33571,"SELECT LAST_DAY ( ""2017-06-20"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0
+33572,"SELECT LAST_DAY ( ""2017-02-10 09:34:00"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 43 chars.,0
+33573,SELECT LOCALTIME ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 22 chars.,0
+33574,SELECT LOCALTIME ( ) + 1;,union_based,generic,0.7,UNION-based payload detected. Payload length: 25 chars.,0
+33575,SELECT LOCALTIMESTAMP ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 27 chars.,0
+33576,SELECT LOCALTIMESTAMP ( ) + 1;,union_based,generic,0.7,UNION-based payload detected. Payload length: 30 chars.,0
+33577,"SELECT MAKEDATE ( 2017, 3 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 29 chars.,0
+33578,"SELECT MAKEDATE ( 2017, 175 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 31 chars.,0
+33579,"SELECT MAKEDATE ( 2017, 100 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 31 chars.,0
+33580,"SELECT MAKEDATE ( 2017, 366 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 31 chars.,0
+33581,"SELECT MAKETIME ( 11, 35, 4 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 31 chars.,0
+33582,"SELECT MAKETIME ( 16, 1, 0 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 30 chars.,0
+33583,"SELECT MAKETIME ( 21, 59, 59 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 32 chars.,0
+33584,"SELECT MAKETIME ( 838, 59, 59 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 33 chars.,0
+33585,"SELECT MICROSECOND ( ""2017-06-20 09:34:00.000023"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 53 chars.,0
+33586,"SELECT MICROSECOND ( ""23:59:59.000045"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 42 chars.,0
+33587,"SELECT MINUTE ( ""2017-06-20 09:34:00"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 41 chars.,0
+33588,"SELECT MINUTE ( ""23:59:59"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 30 chars.,0
+33589,"SELECT MONTH ( ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 31 chars.,0
+33590,"SELECT MONTH ( ""2017-06-15 09:34:21"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 40 chars.,0
+33591,SELECT MONTH ( CURDATE ( ) ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 30 chars.,0
+33592,"SELECT MONTHNAME ( ""2017-06-15"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+33593,"SELECT MONTHNAME ( ""2017-06-15 09:34:21"" ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,0
+33594,SELECT MONTHNAME ( CURDATE ( ) ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0
+33595,SELECT NOW ( ) ;,union_based,generic,0.7,UNION-based payload detected. Payload length: 16 chars.,0
+33596,SELECT NOW ( ) + 1;,union_based,generic,0.7,UNION-based payload detected. Payload length: 19 chars.,0
+33597,"SELECT PERIOD_ADD ( 201703, 5 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 33 chars.,0
+33598,"SELECT PERIOD_ADD ( 201703, 15 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0
+33599,"SELECT PERIOD_ADD ( 201703, -2 ) ;",union_based,generic,0.7,UNION-based payload detected. Payload length: 34 chars.,0

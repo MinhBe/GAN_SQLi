@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+32344,tacuara,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32345,cowper@elbauldelosrefranes.pm,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32346,castellol,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32347,7.35961E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32348,"calle pago de la serrana 109, 11?a",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32349,"cami de almoster, 109,",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32350,baladora,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32351,95944263q,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32352,derbarn henriquez,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32353,5.37737E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32354,97573176t,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32355,pertusa boladera,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32356,faustino cavadas 162 6-a,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32357,lanae,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32358,"maestro de burgos, 199",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32359,donadio_honig@donkr.zr,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32360,"pl. los oficios, 181 12?d",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32361,kussauer_brereton@showcarsmadrid.com.kp,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32362,78260205z,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32363,qu1s3da,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32364,antonio juez 67 3?a,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32365,empel6tarse,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32366,pancracia,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32367,fullum6,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32368,"c/ arago 194,",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32369,"calle poligono quintos, 37,",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32370,alcarrs,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32371,1.93371E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32372,retiendas,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32373,louladak,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32374,lavada,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32375,23291292c,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32376,castell-platja d'aro,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32377,stankova@carrillo-de-albornoz.pt,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,0
+32378,le8ru41,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32379,"c/ plza. 18, 6-e",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32380,ateniesa,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32381,"c/ juan de rihuerga, 0,",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32382,gall20o,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32383,chalanera,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32384,"c/ berruguete 23,",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32385,65651817l,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32386,b82r8l23o,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32387,matney,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32388,san vicente del raspeig/sant vicent del raspeig,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32389,5.68541E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32390,calle puerto de alcolea 185 9-e,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32391,velasque9,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32392,34361279s,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32393,lyden@.mv,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32394,ramaprak,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32395,ubraco,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32396,cosmo@vilainstal.sv,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32397,credenciales incorrectas,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32398,cordelado,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32399,beland,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32400,conejo mota,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32401,tennant4,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32402,darns cabrianes,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32403,torrente zaldvar,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32404,miramon@logiteclines.rs,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32405,oate fijo,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32406,66339533n,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32407,antonio ulloa 6 6?d,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32408,deighton_pfaudler@ajuntamentdebarcelona20.vn,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32409,murgua aversa,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32410,rajarshi,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32411,p4rtapaz,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32412,ciadoncha,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32413,gribov-ridgeley@creacionwebs.lk,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32414,gomero gallardo,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32415,calle juan de sevilla 102 3c,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32416,21444030a,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32417,"c/ las niadas, 67 9?f",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32418,zohreh,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32419,cryoelec,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32420,cobea,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32421,"plaa dels bous, 107",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32422,acho queralt,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32423,bekki,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32424,maheu,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32425,magdalen1,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32426,plaa caudillo 60,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32427,sonoe,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32428,aguacella,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32429,olivares,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32430,"minguez, 98",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32431,pernign,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32432,"c/ los rosales 166, 6f",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32433,gueldos donohue,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32434,aldhizer,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32435,patrica0,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32436,4a6050,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32437,gomecello,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32438,00505336a,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32439,sedero,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32440,jamaly,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32441,selles tanari,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32442,melosa,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32443,lesire@masqueclases.gn,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32444,alberta,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32445,clipsham5,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32446,"c/ fontans, 124, 10?c",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32447,"petxina, 77, 2b",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32448,"c/ duran 52,",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32449,6ait1na89,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32450,zaleska_legon@zampy.so,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32451,4.34481E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32452,decacque,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32453,ceseri@discotecateatre.do,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32454,"urbanitzacio europa-fuentes de san bernabe s/n,",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32455,maxsom,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32456,p6lma13isti,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32457,innes,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32458,"travesia palacio 61, 1?d",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32459,5.65818E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32460,23531966e,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32461,ravinder,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32462,brinton2@tartasconamor.lr,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32463,padr pavajeau,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32464,53087910t,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32465,10262643c,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32466,chamberlain@muevemiweb.al,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32467,tordera savall,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32468,54430634f,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32469,frasquit,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32470,l+echosa,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32471,de lagarza delacerda,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32472,perih1lio,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32473,fortner,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32474,aylln tamallangos,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32475,arbeca,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32476,robin,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32477,6r5int3805,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32478,yihban,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32479,merkling,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32480,cesana@lasexta-f1.jm,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32481,0i26or7os9,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32482,01062744y,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32483,desnarigada,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32484,cabildeo,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32485,newlinsky@forohh.et,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32486,wicht,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32487,pascual,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32488,"c/ caamaque, 15, 4-g",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32489,amescua,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32490,37759460s,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32491,saunder,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32492,33rb0rr55ada,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32493,30666350j,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32494,"c/ ruiz de salazar, 49 4d",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32495,valdelinares,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32496,ibarrangelu,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32497,shukuri@velaconsultores.nl,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32498,1.78478E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32499,*paci3nte,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32500,79533872x,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32501,1.67E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32502,lheureux,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32503,modigh,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32504,lilias,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32505,7.86165E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32506,"avinguda guix borrull 170,",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32507,78267819s,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32508,"calle abeto, 187,",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32509,coursdev,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32510,"plaza aparejador federico bermudez 139,",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32511,peller@arvigar.gs,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32512,basilisa,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32513,sheara,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32514,14977979b,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32515,4.19037E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32516,pia rusch,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32517,6.95924E+15,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32518,02624260y,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32519,afkham,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32520,c/ costa i llobera 83,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32521,6ilia+ria,unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32522,camp morante,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32523,"c/ carranque, 113 5?a",unknown,generic,0.50,Payload structure ambiguous; insufficient markers to classify as specific SQLi type with confidence,0
+32524,heidi,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32525,ceccarelli urp,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32526,zambrana,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32527,samardzic.carafotes@bruoseguridad.je,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32528,roussel@santacruzdelvoto.ws,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32529,03291016s,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32530,benchley@11horas.fk,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32531,walker,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32532,dipscea,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32533,t!74ador,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,0
+32534,altamiranda aragons,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32535,folsom_talli@esteticadayda.tel,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32536,felipa,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32537,youji,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32538,foixenc illanes,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32539,"calle alonso nuez 186, 12?b",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32540,gierasch.casini@goovitae.cu,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32541,33470889r,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",2
+32542,kaitlynn,benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3
+32543,"caridad 82,",benign,generic,0.95,"Plain text payload without SQL syntax, special chars, or SQLi keywords. Not SQL-injectable.",3

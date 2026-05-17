@@ -47,11 +47,25 @@ python baselines/seqgan_vanilla.py --ckpt checkpoints/vanilla_final.pt --n_sampl
 ### Bước 2 — Tính metrics chuẩn
 
 ```bash
-python evaluate.py --input eval_samples.csv --waf_version "CRS-4.0.0"
-# Output bắt buộc: asr, syntax_rate, self_bleu_3, mean_reward, n_samples
+python evaluate.py --input eval_samples.csv \
+    --waf_endpoint http://localhost:8080 \
+    --train_ref data/train.csv \
+    --n_samples 1000
+# Output bắt buộc: asr, syntax_rate, self_bleu_3, relex_uniqueness,
+#                  type_entropy, novel_ngram_ratio, mean_reward, n_samples
+# Per-type breakdown: ASR, syntax, BLEU cho từng sqli_type
 ```
 
 Lặp lại cho tất cả baselines. Chạy ≥ 3 seeds — report `mean ± std`.
+
+**Bảng so sánh mở rộng bắt buộc**:
+
+| Model | ASR (real WAF) | Syntax% | Relex Unique | Type Entropy | Novel n-gram | N |
+|-------|---------------|---------|--------------|--------------|--------------|---|
+| SeqGAN + advantage | | | | | | 1000 |
+| SeqGAN vanilla | | | | | | 1000 |
+| MLE only | | | | | | 1000 |
+| Template-based | | | | | | 1000 |
 
 ### Bước 3 — So sánh baselines với confidence interval
 
@@ -86,15 +100,21 @@ Hacking:     length_mean=38.2 tok (train_mean=35.7), empty_seq=0/1000 — ✅ CL
 
 ## Hard Targets (pass/fail cứng)
 
-| Target | Điều kiện pass | Điều kiện fail |
-|--------|----------------|----------------|
-| **ASR** | SeqGAN_ASR > MLE_ASR + 30 percentage points | Delta < 30pp |
-| **Syntax Validity** | ≥ 90% parse được bởi `sqlparse` | < 90% → ASR vô nghĩa |
-| **Self-BLEU-3** | < 0.60 (diversity đủ cao) | ≥ 0.60 → nghi mode collapse |
-| **Reward hacking** | length_dist bình thường, 0 empty seq | Xem Red Flags bên dưới |
+| Target | Điều kiện pass | Điều kiện fail | Ghi chú |
+|--------|----------------|----------------|---------|
+| **ASR (real WAF)** | SeqGAN_ASR > MLE_ASR + 30pp (Docker ModSec) | Delta < 30pp | Ưu tiên real WAF; dev proxy chỉ là indicator |
+| **ASR target tuyệt đối** | Real WAF bypass ≥ 40% | < 40% | Không phải 100% từ proxy |
+| **Syntax Validity** | ≥ 90% parse được bởi `sqlparse` | < 90% → ASR vô nghĩa | Ưu tiên fix trước |
+| **Self-BLEU-3** | < 0.80 (cảnh báo) | ≥ 0.90 → critical | 0.9894 hiện tại = critical |
+| **Relex Uniqueness** | ≥ 0.80 (primary diversity metric) | < 0.60 → mode collapse | Thay thế Self-BLEU là primary |
+| **Type Entropy** | ≥ 2.0 bits (≥ 4 types phân phối đều) | < 1.0 bits → dominated by 1 type | Chống type bias |
+| **Novel n-gram ratio** | ≥ 0.30 (30% n-grams mới vs training set) | < 0.15 → memorization | Measure generalization |
+| **Reward hacking** | length_dist bình thường, 0 empty seq | Xem Red Flags bên dưới | |
 
 **Quan trọng**: Nếu Syntax Validity < 90%, **dừng lại ngay** — không đọc ASR nữa, model cần fix
 trước. Payload invalid không thể attack được WAF.
+
+**Thứ tự ưu tiên fix**: Syntax → Relex Uniqueness → Type Entropy → Real WAF ASR.
 
 ---
 

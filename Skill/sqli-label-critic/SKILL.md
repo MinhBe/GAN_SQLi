@@ -93,7 +93,7 @@ Tất cả 4 điều kiện phải thỏa:
 
 ### Phase 1 — Quick Scan (toàn bộ dataset)
 
-5 checks theo thứ tự, dừng ở check đầu tiên fail:
+6 checks theo thứ tự, dừng ở check đầu tiên fail:
 
 ```
 C1: sqli_type trong 14-category taxonomy?     → nếu không: REJECT
@@ -101,7 +101,24 @@ C2: db_engine trong 9-category taxonomy?      → nếu không: FLAG
 C3: Primary signal có trong payload?          → nếu không: REJECT
 C4: Priority conflict?                        → nếu có:    REJECT
 C5: Reasoning ≥ 30 chars, non-generic?        → nếu không: FLAG
+C6-C8: Extended checks (confidence, struct,   → xem extended_checks.py
+       historical consistency)
+C9: Cross-type signal conflict?               → nếu priority thấp hơn type khác: REJECT/FLAG
 ```
+
+### Phase 1b — Cross-type Scan (toàn bộ dataset, sau Phase 1)
+
+Check **C9** sau khi C1-C5 đã chạy:
+
+```
+C9: Payload có signal của type ưu tiên cao hơn type đang label?
+    → Nếu priority conflict với type khác: REJECT với suggestion
+    → Nếu ambiguous (priority gần nhau): FLAG để human verify
+```
+
+Lý do C9 quan trọng: Dataset hiện tại 88.6% tập trung vào Oracle XMLTYPE / users-accounts.
+Nhiều payload bị label sai type vì labeler bỏ sót `SLEEP()`, `EXTRACTVALUE()`, `UNION SELECT`.
+C9 phát hiện cross-type bias → giảm mode collapse trong GAN training.
 
 ### Phase 2 — Deep Review (chỉ FLAG rows)
 
@@ -110,7 +127,8 @@ Với mỗi FLAG row:
   1. Tìm ALL signals trong payload
   2. So sánh với priority table
   3. Verify DB engine từ signatures
-  4. Đề xuất correction nếu có
+  4. Kiểm tra C9 cross-type nếu chưa chạy
+  5. Đề xuất correction nếu có
 ```
 
 ### Phase 3 — Benign Audit (sample 500 rows)

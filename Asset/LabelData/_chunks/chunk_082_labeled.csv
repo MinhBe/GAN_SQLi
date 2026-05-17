@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+34344,SELECT drive ( s ) FROM bit UNION,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34345,SELECT white ( s ) FROM clearly SELECT excitement ( s ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34346,SELECT observe ( s ) FROM peace UNION ALL,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34347,SELECT closely ( s ) FROM over SELECT basket FROM mission,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34348,SELECT cup FROM last UNION SELECT stay FROM soap ORDER BY outside,union_based,generic,0.65,Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic,1
+34349,SELECT blind FROM egg UNION ALL SELECT half FROM closer ORDER BY sheet,union_based,generic,0.65,Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic,1
+34350,"SELECT announced,noon FROM beginning WHERE brown = 'cave' UNION SELECT foot, quiet FROM rabbit",union_based,generic,0.65,Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic,1
+34351,"SELECT COUNT ( meal ) , wonder FROM primitive BY tall",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34352,"SELECT Employees.asleep, COUNT ( Orders.furID ) AS gentlyFROM ( OrdersINNER JOIN necessary ON Orders.wolfID = Employees.visitID )",unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34353,SELECT * FROM old FETCH FIRST 50 PERCENT ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34354,SELECT but,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34355,SELECT * FROM front,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34356,SELECT trail FROM tie,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34357,SELECT DISTINCT ride FROM bag,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34358,SELECT COUNT ( DISTINCT play ) FROM ate,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34359,SELECT Count ( * ) AS cutting,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34360,FROM ( SELECT DISTINCT massage FROM fact ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34361,SELECT * FROM coming,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34362,situation,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34363,shade,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34364,SELECT * FROM ago WHERE noon = blank,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34365,rapidly' AND City = 'huge,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34366,easier' OR citizen = 'usually,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34367,least' OR least = 'solid,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34368,SELECT * FROM yellow WHERE NOT now = 'bend',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34369,SELECT * FROM office WHERE pure = 'throw' AND ( flag = 'pilot' OR rest = 'character' ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34370,SELECT * FROM mouse WHERE NOT family = 'parts' AND NOT did = 'planning',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34371,SELECT * FROM black ORDER BY seven,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34372,SELECT * FROM shadow ORDER BY present DESC,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34373,"SELECT * FROM recent ORDER BY swept, play",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34374,"SELECT * FROM laugh ORDER BY until ASC, grandmother DESC",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34375,"INSERT INTO younger ( improve, darkness, being, anywhere, rather, lie ) VALUES ( 'can', 'percent'. cattle', 'necessary', 'position', 'escape', 'check' )",second_order,generic,0.65,Signal match: insert\s+into.*values → second_order (P10); DB: generic,1
+34376,"INSERT INTO life ( base, complex, wore ) VALUES ( 'silk', 'success', 'diameter' )",second_order,generic,0.65,Signal match: insert\s+into.*values → second_order (P10); DB: generic,1
+34377,"SELECT diagram, early, curious FROM chemical WHERE huge IS NULL",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34378,"SELECT fellow, tank, discussFROM throw WHERE position IS NOT NULL",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34379,"UPDATE tomorrow SET plant = 'or', City = 'nearer' WHERE garden = pipe",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34380,UPDATE broken SET may = 'universe'WHERE managed = 'dress',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34381,SELECT * FROM single,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34382,DELETE FROM coal WHERE dozen = 'widely',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34383,DELETE FROM organization,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34384,SELECT flat ( s ) FROM wash,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34385,SELECT * FROM ( SELECT far FROM gulf ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34386,SELECT TOP 3 * FROM meet,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34387,SELECT * FROM ocean 3,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34388,SELECT * FROM honor FETCH FIRST 3 ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34389,SELECT TOP 50 PERCENT * FROM disease,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34390,SELECT * FROM troops FETCH FIRST 50 PERCENT ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34391,SELECT TOP 3 * FROM cloth WHERE people = 'officer',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34392,SELECT * FROM cowboy WHERE effort = 'never' LIMIT 3,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34393,SELECT * FROM within WHERE will = 'purple' FETCH FIRST 3 ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34394,SELECT MIN ( jet ) AS money FROM transportation,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34395,SELECT MIN ( whether ) AS around FROM start,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34396,SELECT * FROM ( SELECT hunt FROM shelf ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34397,SELECT TOP 3 * FROM rise SELECT * FROM substance 3SELECT * FROM cutting,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34398,SELECT * FROM glad 3 SELECT * FROM all,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34399,SELECT * FROM comfortable FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM chamber,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34400,SELECT TOP 50 PERCENT * FROM unusual SELECT * FROM fourth FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM gold,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34401,SELECT * FROM foot FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM children,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34402,SELECT TOP 3 * FROM gift WHERE bottle = 'blind' SELECT * FROM thing,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34403,SELECT * FROM correct WHERE mainly = 'gone' LIMIT 3,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34404,SELECT * FROM dirty WHERE whole = 'stood' FETCH FIRST 3 ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34405,SELECT AVG ( complete ) FROM iron,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34406,SELECT * FROM accept WHERE tie NOT LIKE '[deep]%',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34407,SELECT AVG ( mysterious ) FROM bush SELECT SUM ( adult ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34408,SELECT AVG ( smell ) FROM alive SELECT SUM ( subject ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34409,SELECT AVG ( key ) FROM pair SELECT SUM ( level ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34410,SELECT COUNT ( flame ) FROM cause,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34411,SELECT COUNT ( leaf ) FROM select,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34412,SELECT AVG ( dust ) FROM dot,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34413,SELECT * FROM blue WHERE suit NOT LIKE 'nearest%',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34414,SELECT * FROM entirely WHERE prevent LIKE '%main%',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34415,SELECT * FROM enemy WHERE bark NOT LIKE '[body]%',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34416,"SELECT * FROM baby WHERE our IN ( 'grown', 'single', 'examine' )",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34417,"SELECT * FROM family WHERE farmer NOT IN ( 'spring', 'straw', 'perfect' )",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34418,SELECT * FROM remove WHERE pool IN ( SELECT one FROM phrase ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34419,SELECT * FROM pool WHERE relationship BETWEEN 10 AND 20,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34420,SELECT * FROM stomach WHERE Price NOT BETWEEN 10 AND 20,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34421,SELECT * FROM be WHERE clock BETWEEN 'current' AND 'tide',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34422,"SELECT * FROM summer WHERE stuck BETWEEN ""friendly"" AND ""tiny""",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34423,SELECT * FROM electricity WHERE street NOT BETWEEN 'kitchen' AND 'made',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34424,SELECT * FROM band WHERE simplest BETWEEN individual09/01/1996example AND gradually15/31/1996dress,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34425,SELECT * FROM to WHERE dull BETWEEN '1996-07-01' AND '1996-07-31',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34426,SELECT AVG ( radio ) FROM plane SELECT SUM ( coach ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34427,SELECT COUNT ( clean ) FROM influence,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34428,SELECT COUNT ( battleID ) FROM church,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34429,SELECT AVG ( Price ) FROM income,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34430,SELECT * FROM giant WHERE at BETWEEN '1996-07-01' AND '1996-07-31',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34431,"SELECT redID AS ID, let AS automobile FROM seeing",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34432,"SELECT colorID AS ID, identity AS hay FROM date",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34433,"SELECT fix AS past, morning AS [recognize] FROM tape",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34434,"SELECT nest, think+ ', ' + game+ ' ' + present+ ', ' + gain AS minerals FROM physical",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34435,SELECT correctly ( s ) FROM wave INNER JOIN,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34436,"SELECT method,success,desk,buy,grandmother ( ( subject JOIN language ON pile.bat = pile.such ) INNER JOIN organizationON Orders.alike = dish.fillID )",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34437,SELECT hungry ( s ) FROM special LEFT JOIN,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34438,"SELECT brass,luck,town FROM left LEFT JOIN Orders ON feature.queenID = daughter.mouse ORDER BY present.monkey",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34439,SELECT stems ( s FROM better RIGHT JOIN,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34440,"SELECT Orders.circlerID, Employees.diameter, Employees.automobile FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.shoulderID ORDER BY Orders.shallID",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34441,SELECT football ( s ) FROM read FULL OUTER JOIN,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34442,"SELECT column_name ( s ) FROM silver,pot",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34443,SELECT student ( s ) FROM ball UNION,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34444,SELECT recall ( s ) FROM near SELECT yard ( s ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34445,SELECT joy ( s ) FROM general UNION ALL,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34446,SELECT eventually ( s ) FROM double SELECT property FROM wish,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34447,SELECT rock FROM carbon UNION SELECT oil FROM home ORDER BY independent,union_based,generic,0.65,Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic,1
+34448,SELECT town FROM evening UNION ALL SELECT for FROM loss ORDER BY mass,union_based,generic,0.65,Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic,1
+34449,"SELECT gas,tree FROM review WHERE question = 'today' UNION SELECT old, charge FROM average",union_based,generic,0.65,Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic,1
+34450,"SELECT COUNT ( whispered ) , immediately FROM word BY thousand",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34451,"SELECT Employees.herd, COUNT ( Orders.earlyID ) AS stoppedFROM ( OrdersINNER JOIN symbol ON Orders.cornerID = Employees.spreadID )",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34452,SELECT * FROM thought FETCH FIRST 50 PERCENT ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34453,SELECT block,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34454,SELECT * FROM still,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34455,SELECT furniture FROM ants,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34456,SELECT DISTINCT business FROM plus,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34457,SELECT COUNT ( DISTINCT theory ) FROM stairs,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34458,SELECT Count ( * ) AS lunch,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34459,FROM ( SELECT DISTINCT butter FROM class ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34460,SELECT * FROM let,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34461,SELECT * FROM fell WHERE gulf = 'bee',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34462,mixture,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34463,SELECT * FROM discover WHERE studying = test,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34464,review' AND City = 'branch,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34465,hang' OR drew = 'purple,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34466,street' OR package = 'tobacco,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34467,SELECT * FROM running WHERE NOT frog = 'forest',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34468,SELECT * FROM boat WHERE service = 'chart' AND ( yourself = 'rapidly' OR wide = 'shout' ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34469,SELECT * FROM palace WHERE NOT settlers = 'pass' AND NOT bowl = 'leave',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34470,SELECT * FROM prepare ORDER BY hearing,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34471,SELECT * FROM put ORDER BY cowboy DESC,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34472,"SELECT * FROM threw ORDER BY stood, manner",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34473,"SELECT * FROM package ORDER BY headed ASC, word DESC",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34474,"INSERT INTO earlier ( military, highest, anyone, house, almost, quite ) VALUES ( 'jet', 'division'. one', 'film', 'shot', 'ago', 'clearly' )",second_order,generic,0.65,Signal match: insert\s+into.*values → second_order (P10); DB: generic,1
+34475,"INSERT INTO product ( instant, spent, pig ) VALUES ( 'sick', 'plates', 'anybody' )",second_order,generic,0.65,Signal match: insert\s+into.*values → second_order (P10); DB: generic,1
+34476,"SELECT molecular, queen, fought FROM blanket WHERE felt IS NULL",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34477,"SELECT opportunity, ear, potFROM fat WHERE four IS NOT NULL",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34478,"UPDATE paper SET became = 'grabbed', City = 'anybody' WHERE possible = climate",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34479,UPDATE rain SET correctly = 'deal'WHERE dry = 'herself',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34480,SELECT * FROM beginning,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34481,DELETE FROM weak WHERE increase = 'surprise',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34482,DELETE FROM pink,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34483,SELECT shelf ( s ) FROM kill,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34484,SELECT * FROM ( SELECT mood FROM fairly ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34485,SELECT TOP 3 * FROM badly,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34486,SELECT * FROM personal 3,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34487,SELECT * FROM excellent FETCH FIRST 3 ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34488,SELECT TOP 50 PERCENT * FROM brother,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34489,SELECT * FROM social FETCH FIRST 50 PERCENT ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34490,SELECT TOP 3 * FROM throat WHERE jar = 'son',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34491,SELECT * FROM carry WHERE walk = 'body' LIMIT 3,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34492,SELECT * FROM label WHERE whether = 'uncle' FETCH FIRST 3 ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34493,SELECT MIN ( most ) AS shot FROM safe,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34494,SELECT MIN ( compound ) AS underline FROM crowd,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34495,SELECT * FROM ( SELECT mistake FROM addition ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34496,SELECT TOP 3 * FROM lesson SELECT * FROM wire 3SELECT * FROM pupil,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34497,SELECT * FROM purple 3 SELECT * FROM likely,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34498,SELECT * FROM shorter FETCH FIRST 3 ROWS ONLY SELECT TOP 50 PERCENT * FROM cast,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34499,SELECT TOP 50 PERCENT * FROM shown SELECT * FROM stay FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM plates,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34500,SELECT * FROM children FETCH FIRST 50 PERCENT ROWS ONLYSELECT TOP 3 * FROM ship,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34501,SELECT TOP 3 * FROM pony WHERE getting = 'life' SELECT * FROM ate,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34502,SELECT * FROM felt WHERE cloud = 'tower' LIMIT 3,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34503,SELECT * FROM thrown WHERE judge = 'oil' FETCH FIRST 3 ROWS ONLY,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34504,SELECT AVG ( refused ) FROM check,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34505,SELECT * FROM ground WHERE origin NOT LIKE '[exciting]%',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34506,SELECT AVG ( no ) FROM cabin SELECT SUM ( felt ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34507,SELECT AVG ( oldest ) FROM disappear SELECT SUM ( plates ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34508,SELECT AVG ( indicate ) FROM quietly SELECT SUM ( smooth ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34509,SELECT COUNT ( my ) FROM wheel,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34510,SELECT COUNT ( plates ) FROM needed,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34511,SELECT AVG ( zulu ) FROM wealth,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34512,SELECT * FROM entire WHERE chair NOT LIKE 'blanket%',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34513,SELECT * FROM level WHERE replace LIKE '%worry%',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34514,SELECT * FROM system WHERE satisfied NOT LIKE '[enter]%',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34515,"SELECT * FROM mice WHERE buy IN ( 'musical', 'tobacco', 'spent' )",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34516,"SELECT * FROM mail WHERE human NOT IN ( 'particles', 'porch', 'colony' )",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34517,SELECT * FROM such WHERE brought IN ( SELECT brief FROM certain ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34518,SELECT * FROM flame WHERE book BETWEEN 10 AND 20,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34519,SELECT * FROM local WHERE Price NOT BETWEEN 10 AND 20,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34520,SELECT * FROM seven WHERE put BETWEEN 'constantly' AND 'effort',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34521,"SELECT * FROM rise WHERE balance BETWEEN ""beside"" AND ""quickly""",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34522,SELECT * FROM exclaimed WHERE heading NOT BETWEEN 'muscle' AND 'continued',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34523,SELECT * FROM feed WHERE date BETWEEN direction09/01/1996breathe AND grain15/31/1996jar,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34524,SELECT * FROM mirror WHERE attached BETWEEN '1996-07-01' AND '1996-07-31',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34525,SELECT AVG ( pocket ) FROM air SELECT SUM ( complete ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34526,SELECT COUNT ( familiar ) FROM satisfied,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34527,SELECT COUNT ( lakeID ) FROM point,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34528,SELECT AVG ( Price ) FROM our,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34529,SELECT * FROM path WHERE ever BETWEEN '1996-07-01' AND '1996-07-31',benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34530,"SELECT pipeID AS ID, sale AS engine FROM regular",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34531,"SELECT militaryID AS ID, evening AS protection FROM park",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34532,"SELECT tired AS history, slide AS [too] FROM plenty",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34533,"SELECT chest, rice+ ', ' + cover+ ' ' + shoot+ ', ' + know AS tomorrow FROM exclaimed",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34534,SELECT environment ( s ) FROM future INNER JOIN,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34535,"SELECT book,field,front,size,it ( ( such JOIN forty ON program.movie = club.equipment ) INNER JOIN oldestON Orders.favorite = tent.thoseID )",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34536,SELECT full ( s ) FROM nor LEFT JOIN,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34537,"SELECT business,yes,class FROM pressure LEFT JOIN Orders ON slip.hereID = lovely.pocket ORDER BY husband.coach",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34538,SELECT slabs ( s FROM alike RIGHT JOIN,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34539,"SELECT Orders.enterrID, Employees.effect, Employees.why FROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.appleID ORDER BY Orders.shelfID",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34540,SELECT fairly ( s ) FROM creature FULL OUTER JOIN,benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34541,"SELECT column_name ( s ) FROM sport,accurate",benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1
+34542,SELECT stronger ( s ) FROM cause UNION,unknown,unknown,0.5,Insufficient signals to classify; may be malformed or non-SQL text,0
+34543,SELECT proud ( s ) FROM second SELECT sudden ( s ),benign,generic,0.85,Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals),1

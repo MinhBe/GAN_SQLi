@@ -113,6 +113,76 @@ def check_c7_structural_integrity(row: dict) -> VerdictResult | None:
         f"Payload syntax not complete, confidence may need adjustment")
 
 
+def check_c9_cross_type_consistency(row: dict) -> VerdictResult | None:
+    """C9: Nếu payload có signals của type khác mạnh hơn type đang label → FLAG/REJECT.
+
+    Mục tiêu: giảm dataset bias (88.6% Oracle XMLTYPE/users-accounts table) bằng cách
+    phát hiện các payload bị gán sai type do labeler bỏ sót signal ưu tiên cao hơn.
+    """
+    payload = row.get("payload_norm", "").lower()
+    sqli_type = row.get("sqli_type", "").strip()
+    current_priority = TYPE_PRIORITY.get(sqli_type, 99)
+
+    # Map type → detector patterns (cụ thể, ít false positive)
+    CROSS_TYPE_SIGNALS: dict[str, list] = {
+        "time_blind": [
+            re.compile(r"\bsleep\s*\(", re.I),
+            re.compile(r"\bpg_sleep\s*\(", re.I),
+            re.compile(r"\bwaitfor\s+delay\b", re.I),
+            re.compile(r"\bbenchmark\s*\(", re.I),
+        ],
+        "error_based": [
+            re.compile(r"\bextractvalue\s*\(", re.I),
+            re.compile(r"\bupdatexml\s*\(", re.I),
+            re.compile(r"\bexp\s*\(\s*~", re.I),
+        ],
+        "out_of_band": [
+            re.compile(r"\bload_file\s*\(", re.I),
+            re.compile(r"\butl_http\b", re.I),
+            re.compile(r"\butl_inaddr\b", re.I),
+            re.compile(r"\bxp_dirtree\b", re.I),
+        ],
+        "stacked_queries": [
+            re.compile(r"\bxp_cmdshell\b", re.I),
+            re.compile(r";\s*(drop|insert|update|exec)\b", re.I),
+        ],
+        "union_based": [
+            re.compile(r"\bunion\s+(all\s+)?select\b", re.I),
+        ],
+    }
+
+    conflicts = []
+    for other_type, patterns in CROSS_TYPE_SIGNALS.items():
+        if other_type == sqli_type:
+            continue
+        other_priority = TYPE_PRIORITY.get(other_type, 99)
+        if other_priority >= current_priority:
+            continue  # other type bằng hoặc thấp hơn priority → không conflict
+        for pat in patterns:
+            if pat.search(payload):
+                conflicts.append((other_type, other_priority, pat.pattern))
+                break  # 1 pattern đủ để flag type này
+
+    if not conflicts:
+        return None
+
+    best_conflict = min(conflicts, key=lambda x: x[1])
+    other_type, other_priority, evidence = best_conflict
+
+    if other_priority < current_priority - 1:
+        return VerdictResult(
+            "C9", "REJECT",
+            f"Cross-type conflict: signal '{evidence}' matches {other_type} "
+            f"(P{other_priority}) which overrides labeled {sqli_type} (P{current_priority})",
+            correction={"sqli_type": other_type},
+        )
+    return VerdictResult(
+        "C9", "FLAG",
+        f"Cross-type ambiguity: signal '{evidence}' matches {other_type} "
+        f"(P{other_priority}) — verify whether {sqli_type} (P{current_priority}) is correct",
+    )
+
+
 def check_c8_historical_consistency(row: dict) -> VerdictResult | None:
     payload = row.get("payload_norm", "").lower()
     sqli_type = row.get("sqli_type", "").strip()

