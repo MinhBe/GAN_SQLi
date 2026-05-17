@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "mistral-ocr": {
+      "source": "parlamento-ai/parlamento-ai",
+      "sourceType": "github",
+      "skillPath": "skills/mistral-ocr/SKILL.md",
+      "computedHash": "d6c1dfc7e2001cfc577030fd086acf6722867849d8e301b2472d65630b36d2c8"
+    }
+  }
+}
