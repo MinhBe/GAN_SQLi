@@ -60,7 +60,24 @@
       "Bash(Sort-Object)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\" -Recurse -Force -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch '\\\\.git' } | ForEach-Object { $_.FullName } | Sort-Object)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\" -Force | Where-Object { $_.PSIsContainer } | ForEach-Object { $_.FullName } | Sort-Object)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\LabelData\\\\\" -Recurse -Force | Where-Object {$_.PSIsContainer} | Select-Object FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Skill\\\\\" -Recurse | Where-Object {$_.Extension -match '\\\\.\\(csv|json|txt|md|yaml|yml\\)$'} | Select-Object FullName, Length)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Head *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Skill\\\\sqli-labeler\\\\\" -Recurse | Where-Object {$_.Extension -match '\\\\.\\(py|yaml|yml|json|txt|md\\)$'} | Select-Object FullName | Select-Object -First 20)",
+      "PowerShell(Test-Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Skill\\\\sqli-labeler\\\\\"; \\(Get-ChildItem \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Skill\\\\sqli-labeler\\\\\" -ErrorAction SilentlyContinue | Measure-Object\\).Count)",
+      "PowerShell(\\(Get-ChildItem \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\LabelData\\\\NewDataSet\\\\kaggle\\\\\" -Recurse | Measure-Object\\).Count)",
+      "Bash(powershell -Command \"Import-Csv 'NewDataSet/rbsqli_dataset.csv' | Select-Object -First 200000 | Group-Object injection_type | Select Name,Count\")",
+      "WebSearch",
+      "WebFetch(domain:zenodo.org)",
+      "Bash(git clone *)",
+      "Bash(curl -L --progress-bar -o zenodo_netflow_d1_train.csv \"https://zenodo.org/records/6907252/files/SLQ%20Injection%20Attack%20for%20training%20%28D1%29.csv?download=1\")",
+      "Bash(curl -L --progress-bar -o zenodo_netflow_d2_test.csv \"https://zenodo.org/records/6907252/files/SLQ%20Injection%20Attack%20for%20Test%20%28D2%29.csv?download=1\")",
+      "Bash(curl -L --progress-bar -o huggingface/safesql_v1_train.csv \"https://huggingface.co/deathsaber93/SafeSQL-v1/resolve/main/dataset/train.csv\")",
+      "Bash(huggingface-cli --version)",
+      "Bash(kaggle --version)",
+      "Bash(curl -sI \"https://huggingface.co/deathsaber93/SafeSQL-v1/resolve/main/dataset/train.csv\")"
     ]
   }
 }

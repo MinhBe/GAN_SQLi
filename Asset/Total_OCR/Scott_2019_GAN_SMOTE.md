@@ -1,0 +1,337 @@
+ 
+GAN-SMOTE: A Generative Adversarial 
+Network approach to Synthetic Minority 
+Oversampling 
+Mitchell Scott 
+Research School of Computer Science, Australian National University 
+U5365236@anu.edu.au 
+Abstract: 
+Small unbalanced datasets remain a serious impediment to the implementation of cutting-edge artificial intelligence in an 
+industry setting. This paper proposes GAN-SMOTE, a novel approach to synthetic minority class oversampling using a 
+generative adversarial network that can be applied to boost the performance of classifiers learning from small and 
+unbalanced datasets. This paper also introduces techniques that are key for ensuring the stability and variance of the 
+generative adversarial network. This method demonstrates meaningful improvement on a well-studied petrographical 
+dataset with significant class imbalance. 
+ 
+ 
+Keywords: GAN-SMOTE, synthetic data, minority class oversampling, generative adversarial 
+network, unbalanced dataset, small dataset, minibatch discrimination 
+1 
+Introduction 
+In recent years, machine learning techniques have been applied to problems in many different domain areas. As computer 
+scientists begin to encounter problems in areas they are unfamiliar with, they will need to gain the skills to work with data 
+that is beyond the realm of their own expertise. Organisations like Google AI and start-ups like Lobe are aiming to provide 
+Artificial Intelligence as tools directly to domain experts so that the involvement of computer scientists is only required 
+for complex or difficult problems. Providing solutions like these will require good ‘rules of thumb’ when dealing with 
+small and imbalanced real-world datasets and may be the rate limiting step in the adoption of ‘AI as a Service’ products 
+by domain experts. 
+While small datasets present a large problem for machine learning, due to effects such as sampling errors and issues with 
+generalisation, these problems are exacerbated when class imbalance is present. Class imbalance occurs when there is an 
+uneven number of samples for one or more of the target categories in a dataset and can skew the output of the model 
+towards the larger class in order to maximise overall accuracy and minimise loss. 
+There are several traditional techniques for handling class imbalance. The 
+first is under sampling, which involves removing instances of the majority 
+class so there is an even number of samples in each class. Although this 
+fixes the imbalance problem the classifier misses out on valuable data about 
+the majority class, and also risks further sampling error in small datasets. 
+Another method is oversampling, where instances of the minority class are 
+duplicated so that the classes become evenly distributed. This solves the 
+balance issue but can cause the classifier to generalise worse for the 
+minority class because the idiosyncrasies of the minority class data become 
+more common. In neural networks, data scientists can manipulate the loss 
+function to penalise misclassification of the minority class, although in 
+effect this has the same issues as oversampling. 
+Another 
+interesting 
+technique 
+is 
+SMOTE 
+(Synthetic 
+Minority 
+Oversampling Technique) (Chawla et al., 2002). SMOTE is a statistical 
+technique that over-samples the minority class in imbalanced datasets by 
+creating synthetic minority class examples. This technique boosts class 
+membership whilst introducing enough variety to encourage classifier 
+generalisation. Whilst these samples may not exactly reflect the real data 
+distribution, they tend to be close enough to encourage useful amounts 
+Figure 1 – SMOTE creates synthetic 
+datapoints utilising existing relationships 
+between minority class samples (Hu & Li, 
+2013). 
+
+
+---
+
+ 2 
+ 
+of generalisation and boost overall classification accuracy. See Figure 1 for a diagram explaining SMOTE. 
+SMOTE has demonstrated great results in unbalanced datasets, but relatively limited in application due to its statistical 
+nature. For example, without understanding the deeper meaning in highly structured data, SMOTE can’t hope to create 
+synthetic text samples for natural language processing tasks or realistic images for machine vision training. 
+This paper extends Scott’s previous paper ‘Classifying poorly understood datasets: the effect of encoding density and 
+quality in shallow neural network classification’ (Scott, 2019) and aims to improve the performance of the simple neural 
+network on the paper’s small imbalanced dataset using a novel technique. 
+This paper proposes GAN-SMOTE, an updated approach to synthetic oversampling using a generative adversarial 
+network.  
+This novel technique is tested on a dataset of petrographical descriptions of core samples from the North West Shelf in 
+offshore Australia (Gedeon et al., 2001). The class for prediction in this dataset is the sample’s porosity, rated as either 
+Very Poor, Poor, Fair or Good. The factors provided to determine the sample’s porosity are detailed lithographical 
+descriptions summarised into six characters: grain size, 
+sorting, matrix, roundness, bioturbation and laminae. 
+The data was provided in a sparse ‘one-hot’ encoded 
+format, with a 1 in the relevant column when a sample 
+has the associated attribute for a character. Scott’s paper 
+found that the one-hot encoding for the data yielded the 
+best results, and so this original encoding is retained for 
+use in this study. 
+The dataset is very small, consisting of 140 samples in 
+total. It is split into a training and testing set of 70 
+samples each. The distribution of the attributes is also 
+very uneven which can make classification difficult for 
+outlier samples. Figure 2 details the distribution of 
+attributes. 
+This paper will outline the architecture of GAN-
+SMOTE, including the techniques used to create a stable 
+GAN for data synthesis. 
+This paper will then compare training-set  GAN-SMOTE 
+supplementation and pure GAN-SMOTE results to 
+unaltered benchmark training set results. 
+ 
+2 
+Method 
+2.1 
+GAN-SMOTE Basic Architecture 
+The GAN-SMOTE architecture is based upon the original GAN architecture proposed in Goodfellow’s 2014 paper 
+‘Generative Adversarial Networks’ (Goodfellow et al., 2014). The GAN-SMOTE architecture was in part inspired by the 
+paper “Deep learning approach to generate offline handwritten signatures based on online samples” where an autoencoder 
+was used to synthesise offline signatures to increase the dataset for signature fraud detection (Melo et al., 2019). 
+The GAN-SMOTE is made up of two different neural networks, a generator and a discriminator. The generator is a neural 
+network with two hidden layers that takes 16 neurons of random input and produces 59 outputs. These outputs correspond 
+to the 58 features in the dataset, plus an extra neuron to enable mini-batch discrimination. This implementation of mini-
+batch discrimination will be described in ‘2.3 Improving GAN-SMOTE Variance’. 
+The discriminator takes 59 neurons of input, corresponding to the 59 neurons of output from the generator. It has two 
+hidden layers, and one output neuron. 
+In every epoch, the generator produces synthetic datapoints. The discriminator is then shown a set of real datapoints from 
+a specific class of the data and predict if the data points were made by the generator. The correct output in this first part 
+should be a score of 0.0 for each data point. The results are used to calculate loss, which is backpropagated through the 
+discriminator. The discriminator is then shown a set of synthetic datapoints created by the generator. In this round the 
+correct output should 1.0 for each data point. The results are again used to calculate loss, which is backpropagated through 
+the discriminator. The generator is trained in a similar manner. The generator produces synthetic data, which is used as 
+input to the discriminator. The results are used to calculate loss, which would be the inverse of the loss for the 
+discriminator. In effect, the two networks are engaged in a ‘minimax game’, where each is rewarded for the failure of the 
+other. Over many epochs of training, the discriminator improves its ability to recognise the generator’s samples, and the 
+generator improves its ability to produce realistic synthetic data samples. 
+0
+5
+10
+15
+20
+25
+<5
+<10
+<20
+<40
+<60
+<80
+Frequency (count)
+Number of samples with attribute
+Frequency of Attributes in the 
+Petrographical Dataset
+Figure 2 – Frequency distribution of features in the 
+petrographical dataset, demonstrating “sparse” nature of 
+the data. 
+
+
+---
+
+GAN-SMOTE: A Generative Adversarial Network approach to Synthetic Minority Oversampling  
+3 
+At the end of training, the generator can be used to produce an arbitrary number of synthetic data samples for a 
+particular class. In the case of the one-hot encoded petrographical dataset, this data was rounded up to 1 or down to 0 for 
+consistency. 
+ 
+2.2 
+Improving GAN-SMOTE Stability 
+One of the most difficult tasks when training a GAN is ensuring that the network remains stable. When creating the GAN-
+SMOTE architecture, a number of changes had to be made to ensure that the networks were competitive with one another. 
+The discriminator often out-performed the generator which caused the generator to stop improving. This is caused by an 
+unchanging loss function which reflects the discriminator’s 100% accuracy. 
+The first change that was made was the introduction of random noise to the input data. As a result of the one-hot encoding 
+the input data is encoded as either 1.0 or 0.0, so any uncertainty in the generator made it obvious that the sample was 
+synthetic. Because a rounding activation function has a gradient of 0, the output of the generator couldn’t be coerced to 
+produce only rounded numbers. As an alternative, the real data was altered with a random amount of noise between 0% 
+and 2%. 
+Another technique that helped the network remain stable is random bit-flips. As each sample was an array of binary 
+numbers, random noise alone won’t prevent the discriminator from overfitting on the real data (the discriminator quickly 
+learns that 0.97 is the same as 1.0). A predetermined 
+proportion of the real data had the binary data reversed so 
+that 1’s became 0s and vice versa. This helps the generator 
+remain competitive with the discriminator at the cost of the 
+synthetic data’s accuracy. The amount of noise is then 
+slowly reduced to zero over the course of many epochs, 
+allowing the generator to produce more accurate samples by 
+the end of training. 
+The learning rate was adjusted in line with “SGDR: 
+Stochastic Gradient Descent with Warm Restarts” 
+(Loshchilov & Hutter, 2017) to prevent the networks from 
+settling into local minima. The learning rate was increased 
+by a factor of 10 and degraded back to the original learning 
+rate using cosine annealing over the course of 1000 epochs. 
+This is repeated for every 1000 epoch interval. This was 
+particularly useful for ensuring the generator consistently 
+improved. See figure 3 for visualisation.  
+ 
+2.3 
+Improving GAN-SMOTE Variance 
+The GAN-SMOTE architecture had issues with ‘mode collapse’, where the generator ignores input and produces the 
+same output each time. Minibatch discrimination was implemented as described in “Improved Techniques for Training 
+GANs” [10]. The Manhattan distance was computed between each sample in a mini-batch and every other sample, and 
+then the sum of these distances is appended to the output of the generator. This additional information about the 
+distribution of the samples in the batch allows the discriminator to identify and penalise mode collapse, and encourages 
+the generator to achieve a similar distribution of data to the real samples. Because of the small amount of data, it was 
+necessary to add a certain amount of random noise (30%) to each individual sample so that the generator remained 
+competitive with the discriminator. 
+Optimising the GAN-SMOTE architecture requires consideration of many different metrics. Balancing of the GAN was 
+possible due to a large amount of live data that allows the user to observe and tweak the operation of the model rapidly. 
+Network losses and accuracy, visualisation of the data produced by the network using PCA, and samples of the synthetic 
+and real data allowed rapid updates to hyperparameters affecting training stability, while sum of Manhattan distances 
+within synthetic and real data batches, and sum of Manhattan distances between the datasets allowed fine-tuning of the 
+synthetic data’s variance and similarity to the real data. 
+2.4 
+Benchmarking GAN-SMOTE performance 
+A simple neural network, as described in ‘Classifying poorly understood datasets: the effect of encoding density and 
+quality in shallow neural network classification’ [5] was implemented. The simple neural network had one hidden layer 
+of 100 neurons, a cross entropy loss function and a stochastic gradient descent optimiser. 
+Figure 3 – Learning rate changes in 1000 epoch 
+intervals, demonstrating the cosine annealing 
+technique for warm restarts. 
+
+
+---
+
+ 4 
+ 
+The original 70/70 train-test split of the petrographical data from Scott’s ‘Classifying poorly understood datasets: the 
+effect of encoding density and quality in shallow neural network classification’ was used, and the training set was used 
+to produce synthetic data for each of the 4 classes using GAN-SMOTE. 
+In the first experiment, the synthetic data was used to “top up” class imbalances in training data. In the next experiment,  
+100 synthetic class samples for each class was used to train the simple neural network.  
+Benchmark tests were performed using unaltered training data and a basic oversampling technique performing random 
+sample duplications of minority classes to top up class imbalance. 
+The training data was somewhat imbalanced. The classes had 18, 22, 11 and 19 samples respectively. In the first synthetic 
+“top up” experiment and basic oversampling experiment, each class was topped up to 22. 
+3 
+Results and Discussion 
+The results of the benchmarking tests are shown in Figure 4 and Figure 5. 
+ 
+ 
+Synthetic “top up” 
+Synthetic data only 
+Original training data 
+Basic 
+oversampling 
+Highest accuracy 
+58.57% 
+58.57% 
+54.29% 
+55.71% 
+F1 Score 
+0.556 
+0.560 
+0.474 
+0.515 
+ 
+ 
+ 
+ 
+Figure 4 – Test set accuracy and F1 score on the petrographical dataset used by Scott (2019). 
+Figure 5 – (Left) Simple neural network trained on original training, training and testing loss and 
+accuracy over 20,000 epochs; (Right) Simple neural network trained on synthetic data produced by 
+GAN-SMOTE, training and testing loss and accuracy over 20,000 epochs. [Training data in blue, testing 
+data in orange.] 
+Simple neural network trained on original 
+training data 
+Simple neural network trained on synthetic 
+training data produced by GAN-SMOTE 
+
+
+---
+
+GAN-SMOTE: A Generative Adversarial Network approach to Synthetic Minority Oversampling  
+5 
+These results show a substantial increase in training accuracy and F1 score for both tests involving GAN-SMOTE 
+synthetic data. The small increase associated with basic oversampling also suggests that at least some of the improvement 
+can be attributed to solving the class imbalance in the original training dataset, but the variance in the GAN-SMOTE 
+synthetic data may also be playing a large role in the performance improvement. 
+The synthetic data only test demonstrated a remarkable level of training stability which is probably owing to the much 
+larger number of datapoints. More stable training data allows neural network to achieve better results more consistently, 
+with less hyperparameter tweaking. It seems that a basic network trained with synthetic data will overfit slower than a 
+network trained with the original data. This can be seen in Figure 5.  
+4 
+Conclusion and Future Work 
+This paper proposed a novel method for dealing with class imbalance, utilising Generative Adversarial Networks to 
+synthesise data for the purpose of oversampling minority classes in unbalanced datasets. GAN-SMOTE leverages a 
+number of techniques to ensure that the GAN remains stable during training, and produces the correct amount of variance 
+in the dataset to be useful for oversampling. The benchmark tests on the synthesised one-hot encoded data suggests that 
+GAN-SMOTE can increase classifier performance, in terms of both raw accuracy and class-wise performance metrics. 
+The main benefit of this technique over other statistical techniques as the ability for the GAN to synthesise more 
+realistic structured data than the traditional SMOTE technique can. For instance, this technique could be used to synthesise 
+text or image data to boost domain specific datasets and will benefit from ongoing research into GAN generation of these 
+datatypes. 
+There still remains a lot of work to discover the best practices when utilising this technique. GANs are difficult to train, 
+and the rules of thumb discussed here may apply in different degrees to other types of data. Many changes needed to be 
+made to the GAN-SMOTE architecture to account for the one-hot encoded dataset, so a robust understanding of the raw 
+data being fed into the GAN will allow data scientists to use this technique successfully and repeatably. 
+Another area for investigation is the potential use of this technique to create synthetic data in scenarios with small 
+datasets but no class imbalance. The improved training stability and reduced propensity to overfit can be a viable 
+alternative to simply adding noise to training data because the variance produced by GAN-SMOTE is contextual. The 
+technique appears to produce ‘acceptable’ variance while retaining key features, which is highly beneficial for datasets 
+of high dimensionality such as this one. 
+Future work should focus on applying well-known deep learning techniques to the GAN-SMOTE architecture when 
+dealing with different types of data. Advanced transfer learning techniques, such as universal language model fine-tuning 
+for text classification (Howard & Ruder, 2018) could be applied to the discriminator and generator so that synthetic data 
+benefits from the context of other similar problems. Transfer learning is a common tool to combat the problems associated 
+with small datasets, and GAN-SMOTE could help to apply these benefits in a unique way. 
+5 
+References 
+ 
+[1] Google AI. https://ai.google/ 
+ 
+[2] Lobe AI. https://lobe.ai/ 
+ 
+[3] Chawla N., Bowyer K., Hall L., Kegelmeyer P.: SMOTE: Synthetic Minority Over-sampling Technique. Journal 
+of Artificial Intelligence Research, vol. 16, pp. 321-357 (2002). 
+ 
+[4] Hu F., Li H.: A Novel Boundary Oversampling Algorithm Based on Neighborhood Rough Set Model: 
+NRSBoundary-SMOTE. Mathematical Problems in Engineering, vol. 2013, 10 pages. 
+ 
+[5] Scott M.: Classifying poorly understood datasets: the effect of encoding density and quality in shallow neural 
+network classification. Research School of Computer Science, Australian National University, paper pending publication 
+(2019). 
+ 
+[6] Gedeon T, Tamhane D, Lin T, Wong P. Use of linguistic petrographical descriptions to characterise core porosity: 
+contrasting approaches. Journal of Petroleum Science & Engineering, vol 31, pp. 193-199 (2001). 
+ 
+[7] Goodfellow I.J., Pouget-Abadie J., Mirza M., Xu B., Warde-Farley D., Ozair S., Courville A., Bengio Y.: 
+Generative Adversarial Networks. Proceedings of the 27th International Conference on Neural Information Processing 
+Systems, vol. 2, pp. 2672-2680 (2014). 
+
+
+---
+
+ 6 
+ 
+ 
+[8] Melo V.K.S.L., Bezerra1 B.L.D., Impedovo D., Pirlo G., Lundgren A.: Deep learning approach to generate offline 
+handwritten signatures based on online samples. The Institute of Engineering and Technology Biometrics Journal, vol. 8 
+issue 3, pp. 215-220 (2019). 
+ 
+[9] Loshchilov I., Hutter F.: SGDR: Stochastic Gradient Descent with Warm Restarts. ILCR 2017 Conference 
+Submission (2017). 
+ 
+[10] Salimans T., Goodfellow I., Zaremba W., Cheung V., Radford A., Chen X.: Improved Techniques for Training 
+GANs. Proceedings of the 29th International Conference on Neural Information Processing Systems, pp. 2234-2242 
+(2016). 
+ 
+[11] Howard J., Ruder S.: Universal Language Model Fine-Tuning for Text Classification. Proceedings of the 56th 
+Annual Meeting of the Association for Computational Linguistics, vol. 1, pp. 328-339 (2018). 

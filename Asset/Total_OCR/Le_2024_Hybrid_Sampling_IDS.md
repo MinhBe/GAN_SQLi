@@ -1,0 +1,2172 @@
+Applied Soft Computing Journal 157 (2024) 111517
+Available online 21 March 2024
+1568-4946/© 2024 The Author(s). Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-
+nc-nd/4.0/).
+Contents lists available at ScienceDirect
+Applied Soft Computing
+journal homepage: www.elsevier.com/locate/asoc
+Towards unbalanced multiclass intrusion detection with hybrid sampling
+methods and ensemble classification
+Thi-Thu-Huong Le a,b,∗, Yeongjae Shin c, Myeongkil Kim c,d, Howon Kim c,∗∗
+a Blockchain Platform Research Center, Pusan National University, Busan, 609735, South Korea
+b IoT Research Center, Pusan National University, Busan, 609735, South Korea
+c School of Computer Science and Engineering, Pusan National University, Busan, 609735, South Korea
+d Smart2M2, Busan, 48058, South Korea
+G R A P H I C A L
+A B S T R A C T
+A R T I C L E
+I N F O
+Keywords:
+Intrusion detection
+Unbalanced data
+Ensemble classification
+Undersampling
+Oversampling
+Hybrid sampling
+A B S T R A C T
+Intrusion Detection Systems (IDS) play a crucial role in securing computer networks against malicious activities.
+However, their efficacy is consistently hindered by the persistent challenge of class imbalance in real-world
+datasets. While various methods, such as resampling techniques, ensemble methods, cost-sensitive learning,
+data augmentation, and so on, have individually addressed imbalance classification issues, there exists a
+notable gap in the literature for effective hybrid methodologies aimed at enhancing IDS performance. To
+bridge this gap, our research introduces an innovative methodology that integrates hybrid undersampling
+and oversampling strategies within an ensemble classification framework. This novel approach is designed to
+harmonize dataset distributions and optimize IDS performance, particularly in intricate multi-class scenarios.
+In-depth evaluations were conducted using well-established intrusion detection datasets, including the Car
+Hacking: Attack and Defense Challenge 2020 (CHADC2020) and IoTID20. Our results showcase the remarkable
+efficacy of the proposed methodology, revealing significant improvements in precision, recall, and F1-score
+∗Corresponding author at: Blockchain Platform Research Center, Pusan National University, Busan, 609735, South Korea.
+∗∗Corresponding author at: School of Computer Science and Engineering, Pusan National University, Busan, 609735, South Korea.
+E-mail addresses: lehuong7885@gmail.com (T.-T.-H. Le), luther11949@gmail.com (Y. Shin), clevermk7211@gmail.com (M. Kim), howonkim@pusan.ac.kr
+(H. Kim).
+URLs: https://scholar.google.com/citations?user=UptzPYsAAAAJ&hl=vi (T.-T.-H. Le), https://scholar.google.co.kr/citations?user=y_GogrYAAAAJ&hl=ko
+(Y. Shin), http://infosec.pusan.ac.kr/ (H. Kim).
+https://doi.org/10.1016/j.asoc.2024.111517
+Received 17 October 2023; Received in revised form 19 February 2024; Accepted 13 March 2024
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+2
+T.-T.-H. Le et al.
+metrics. Notably, the hybrid-ensemble method demonstrated an exemplary average F1 score exceeding 98%
+for both datasets, underscoring its exceptional capability to substantially enhance intrusion detection accuracy.
+In summary, this research represents a significant contribution to the field of IDS, providing a robust solution
+to the pervasive challenge of class imbalance. The hybrid framework not only strengthens IDS efficacy but also
+illuminates the seamless integration of undersampling and oversampling within ensemble classifiers, paving
+the way for fortified network defenses.
+1. Introduction
+In the era of burgeoning digitalization, computer networks serve
+as the backbone of global communication, commerce, and security.
+As these networks expand in complexity and reach, they inevitably
+attract cyber adversaries. Intrusion Detection System (IDS) is a pivotal
+line of defense in safeguarding these networks against malicious activi-
+ties [1,2]. Designed to monitor network traffic, recognize anomalies,
+and generate alerts against potential threats, IDS is instrumental in
+ensuring digital ecosystem integrity.
+Despite their significance, IDS grapples with the persistent challenge
+of class imbalance in real-world intrusion detection datasets [3,4].
+When benign activities substantially outnumber malicious ones, the
+resultant skewed distribution can misguide the training of machine
+learning models, often favoring the majority class and missing vital
+threats from the minority classes [5,6].
+Imbalanced classification involves developing predictive models on
+classification datasets with severe class imbalances, as shown in Fig. 1.
+The challenge of working with imbalanced datasets is that most ma-
+chine learning techniques will ignore, and in turn have poor perfor-
+mance on, the minority class, although typically, it is the performance
+of the minority class that is most important. A problem with imbalanced
+classification is that there are too few examples of the minority class
+for a model to learn the decision boundary effectively. One way to
+solve this problem is to oversample the examples in the minority class.
+Despite the advantages of balancing classes, these techniques have
+weaknesses. Over-sampling’s simplest implementation is duplicating
+random records from the minority class, which can cause overfitting.
+In under-sampling, the simplest technique involves removing random
+records from the majority class, which can cause a loss of information.
+To address this challenge, various solutions, including undersam-
+pling and oversampling, have been proposed [7,8]. While each ap-
+proach holds promise, their standalone application exhibits notable
+drawbacks [9,10]. As an example of an undersampling approach, Qi Dai
+et al. [11] introduced the SDCU (Schur decomposition class-over un-
+dersampling) method to tackle class imbalance problems. This method
+demonstrates better performance and is more conservative in removing
+the majority of instances. However, it has limitations, especially when
+the dataset undergoes significant changes, leading to variations in
+the similarity matrix and potential differences in model performance.
+On the oversampling front, Dina et al. [12] and Majeed et al. [13]
+proposed CTGAN (Conditional Generative Adversarial Network) and
+CTGAN-MOS (Conditional Generative Adversarial Network Minority-
+Class-Augmented Oversampling Scheme), respectively. While CTGAN
+exhibits efficient results across different classifiers, CTGAN-MOS has yet
+to verify or test the efficacy of its schemes using multiple classifiers.
+In response to these challenges, the academic frontier is witnessing
+a surge in endeavors seeking to harmonize undersampling and over-
+sampling techniques within an ensemble classification matrix [14,15].
+Against this backdrop, our study addresses key gaps and makes several
+distinctive contributions:
+• Novel Hybrid Methodology: We introduce an innovative hybrid
+methodology that seamlessly combines undersampling and over-
+sampling techniques within an ensemble classification frame-
+work, providing a novel solution to address class imbalance in
+intrusion detection systems (IDS).
+Fig. 1. Class distribution across two public datasets [16,17].
+• Enhanced IDS Performance: Through rigorous evaluations of real-
+world intrusion detection datasets, our methodology demons-
+trates substantial improvements in multiple performance metrics,
+including precision, recall, and F1-score. It significantly enhances
+IDS classification accuracy, especially in complex multi-class sce-
+narios.
+• Exemplary F1-Score Results: Our hybrid-ensemble approach
+achieves remarkable average F1 scores exceeding 98% for both
+the Car Hacking: Attack and Defense Challenge 2020 (CHADC2
+020) and Internet of Things Intrusion Detection 2020 (IoTID20)
+datasets, highlighting its exceptional ability to amplify intrusion
+detection accuracy.
+• Robust Network Security: The findings of our study have practical
+implications for real-world intrusion detection applications. By re-
+ducing false negatives and enhancing overall detection accuracy,
+our methodology reinforces network security, reduces operational
+overhead, and maintains system integrity and user trust.
+• Guidance for Future IDS Research: Our work serves as a beacon
+in IDS research, offering insights into the effective combination of
+undersampling and oversampling within ensemble classifiers. It
+guides future research efforts to bolster network defenses against
+evolving cyber threats.
+The rest of the paper is structured as follows: Section 2 reviews
+pertinent literature; Section 3 unravels our methodological blueprint;
+Section 4 details experimental procedures; Section 5 delves into results
+and their implications; finally, Section 6 offers concluding remarks and
+suggests avenues for subsequent inquiries.
+2. Related work
+Artificial Intelligence (AI) methods play a crucial role in fortifying
+cybersecurity and protecting the Internet of Things (IoTs), thereby pre-
+venting electronic attacks and preserving users’ privacy [18]. Among
+the prominent AI-driven defense mechanisms is Intrusion Detection
+Systems (IDS). In the digitized epoch, IDS has emerged as vital van-
+guards, ensuring the sanctity of computer networks [1,2]. Histori-
+cally, the foundations of IDSs were rooted in signature-based detection
+paradigms, zeroing in on established attack patterns [19]. However,
+with cyber threats continually metamorphosing, a drift is evident to-
+wards more agile and preemptive alternatives, such as anomaly-based
+detection and intricate machine learning methodologies [20,21].
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+3
+T.-T.-H. Le et al.
+Table 1
+Comparison of IDS techniques: study of existing methods against our approach on CHADC2020 and IoTID20 datasets.
+Dataset
+Study
+Model
+BL
+US
+OS
+US-OS
+CHADC2020
+[22]
+GIDS
+[23]
+Random Forest
+[24]
+FCN
+[25]
+LeNet
+Ours
+ENN, SMOTE, Tomek Link, BorderlineSMOTE, SMOTETomek,
+SMOTTEENN, BorderlineSMOTETomek, CatBoost, LightGBM, XGBoost
+IoTID20
+[26]
+PSO+XGB+RF
+[27]
+RF
+[28]
+S SMOTE, DT, RF, kNN
+[29]
+PCC-CNN
+Ours
+ENN, SMOTE, Tomek Link, BorderlineSMOTE, SMOTETomek,
+SMOTTEENN, BorderlineSMOTETomek, CatBoost, LightGBM, XGBoost
+Acronym: Baseline (BL), Undersampling (US), Oversampling (OS), Undersampling-Oversampling (US-OS).
+Legend:
+means included,
+means not included.
+The skewed dataset distribution is a salient impediment that looms
+large in IDS research. Herein, benign activities eclipse malicious events,
+causing a disproportion [2,3]. This disparity could debilitate the perfor-
+mance of machine learning algorithms, nudging them towards the over-
+represented class and, in the process, inadvertently sidelining critical,
+less frequent threats.
+Historically, mitigation strategies like undersampling and oversam-
+pling have been championed to counteract class imbalances [10,30].
+While the former seeks equilibrium by truncating dominant class in-
+stances, the latter augments underrepresented class instances through
+replication or synthetic data generation [7,31]. With a deeper com-
+prehension of the assets and pitfalls of both techniques, the current
+research zeitgeist leans towards hybrid models—tailoring sampling
+grounded in dataset intricacies [32].
+A remarkable stride in this domain is the ensemble classifiers,
+potent tools that amalgamate insights from myriad base models, thus
+enhancing the veracity of classification [33,34]. Their efficacy, par-
+ticularly when synergized with judicious sampling methods, has been
+accentuated in diverse academic pursuits.
+The introduction of novel datasets such as CHADC2020 and IoTID20
+has spurred a wave of innovative efforts in intrusion detection. For
+instance, in the CHADC2020 dataset, Song et al. [35] harnessed the
+capabilities of deep neural networks, emphasizing the virtues of deep
+learning despite acknowledging its computational demands. In contrast,
+the work by [36] employed conventional machine learning grounded
+in graph-centric features, highlighting their agility, interpretability,
+and susceptibility to class imbalances. Driss et al. [37] proposed a
+high-accuracy federated deep learning approach for anomaly detection
+in vehicle sensor networks. More recently, Le et al. [38] introduced
+XGBoost and SHAP to address IDS with unbalanced CAN data and
+provide explanations for classification results.
+The IoTID20 dataset [39] wielded ensemble techniques, under-
+scoring the dividends of leveraging boosting paradigms. Concurrently,
+Gupta et al. [40] showcased a juxtaposition of clustering and classifi-
+cation, unveiling the horizons and challenges inherent to multilayered
+defense strategies. Le et al. [41] introduced an efficient decision tree
+and random forest along with SHAP to classify and explain IDS. A
+comparative survey of these existing methodologies juxtaposed with
+our contributions on the datasets as mentioned above, distinguished
+by the approach: baseline model (BL), undersampling (US), oversam-
+pling (OS), or a composite undersampling-oversampling (US-OS) is
+delineated in Table 1.
+While these explorations have etched pivotal landmarks, there re-
+mains a lacuna in holistically weaving hybrid sampling stratagems with
+ensemble classifiers, especially within the intricate lattice of multi-
+class intrusion detection. Many academic endeavors remain confined to
+the binary classification cocoon, often circumventing the multifaceted
+challenges intrinsic to multi-class paradigms [42,43]. Motivated by
+these observational gaps, our research seeks to architect an innovative
+confluence of hybrid sampling and ensemble classification, aspiring to
+recalibrate the benchmarks in intrusion detection.
+3. Methodology
+3.1. Problem statement
+IDS stands sentinel, safeguarding our digital landscapes against ma-
+licious cyber adversaries. Nevertheless, a recurring impediment often
+blunts the efficacy of IDS: the significant class imbalance endemic
+to many intrusion detection datasets [44]. Within such data, benign
+activities proliferate, overshadowing their malicious counterparts. This
+disparity complicates the discernment of rare but potent threats, and
+any oversight of these anomalies could precipitate calamitous out-
+comes, ranging from data breaches to fiscal losses and infrastructural
+vulnerabilities.
+Although meritorious in intent, traditional remedies like under-
+sampling and oversampling present challenges when wielded in iso-
+lation [8]. While undersampling risks truncating pivotal data, over-
+sampling might inadvertently cultivate overfitting [45]. A confluence
+of contemporary research contributions [46–48] has amplified the call
+for more refined interventions—strategies that elegantly interlace both
+sampling paradigms.
+Thus, we pivot to our central research inquiry: Is there a path-
+way to harmoniously fuse the intrinsic merits of undersampling and
+oversampling? Furthermore, can this synthesis be further enriched
+by harnessing ensemble classification, renowned for its prowess in
+elevating classifier outcomes?
+Anchoring this research is our aspiration to conceptualize, experi-
+ment with, and validate such a pioneering technique. However, our am-
+bition is wider than merely proffering a solution to the class imbalance
+conundrum. We embark on a holistic appraisal of our proposed method,
+juxtaposing it against conventional paradigms, with a pronounced fo-
+cus on the nuanced challenges of multi-class IDS frameworks. The
+architecture of the proposed method is shown in Fig. 2.
+3.2. Data preprocessing
+Before diving into the training of ensemble models, a rigorous data
+preprocessing phase is indispensable. This phase encompasses a series
+of pivotal steps tailored to uphold the dataset’s integrity, refine feature
+quality, and set the stage for superior model performance.
+The gateway to the preprocessing journey is data cleaning. During
+this phase, meticulous scrutiny of the dataset is conducted, hunt-
+ing for inconsistencies, missing values, or outliers, which, if over-
+looked, could detrimentally skew the ensemble model’s performance.
+The mathematical underpinnings of the data-cleaning process are:
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+4
+T.-T.-H. Le et al.
+Fig. 2. A schematic illustration of the envisioned ensemble model enhanced with hybrid sampling techniques. (1) Transfer training and validating data to balanced sampling
+methods; (2) Transfer balanced sampling results to ensemble models; (3) Save ensemble learned models as pre-trained models; (4) Evaluate training and validating data; (5)
+Compare the results and select the best pre-trained model; (6) Transfer the testing data to the best pre-trained model to evaluate; (7) Evaluate the model on testing data.
+• Handling missing values. Dealing with missing values is a crucial
+step in data preprocessing. In datasets, missing values are often
+denoted as NaN (Not-a-Number) or null values. Different strate-
+gies can be employed depending on the extent of missing data:
+(1) Removal of Missing Data: If the missing data is relatively in-
+significant, one approach is simply removing the rows or columns
+containing these missing values. (2) Imputation: In cases where
+the missing data is valuable and cannot be discarded, missing
+values can be imputed or replaced with statistical measures such
+as the mean, median, or mode of the respective feature. For
+instance, mathematically, imputing missing values with the mean
+can be represented as:
+𝑋𝑖= 1
+𝑛
+𝑛
+∑
+𝑗=1
+𝑋𝑗
+(1)
+where 𝑋𝑖is the imputed value, 𝑛is the number of non-missing
+values, and 𝑋𝑗represents each non-missing value.
+• Feature selection or extraction. When working with data, we
+often encounter many features or variables. We employ two key
+techniques to make our models more efficient and focused: (1)
+Feature Selection: This technique helps us identify the most cru-
+cial features our model should focus on during training. It is
+like handpicking the most valuable pieces of information from
+the dataset. (2) Feature Extraction: Sometimes, we need to get
+creative with our data. Feature extraction involves transforming
+the existing features or even creating entirely new ones. It can
+help simplify the dataset and make it more suitable for modeling.
+• Normalization or scaling. Normalization or scaling is essential
+to bring features to a uniform scale, ensuring that no single
+feature disproportionately influences the model’s training process.
+Common normalization methods include Min-Max scaling or z-
+score normalization. In this work, we use Min-Max scaling, which
+transforms features to a specific range (typically [0, 1]) and can be
+represented mathematically as:
+𝑋𝑠𝑐𝑎𝑙𝑒𝑑=
+𝑋−𝑋𝑚𝑖𝑛
+𝑋𝑚𝑎𝑥−𝑋𝑚𝑖𝑛
+(2)
+where 𝑋𝑠𝑐𝑎𝑙𝑒𝑑is the scaled value, 𝑋is the original value, 𝑋𝑚𝑖𝑛
+is the minimum value in the feature, and 𝑋𝑚𝑎𝑥is the maximum
+value in the feature.
+The dataset is optimized for ensemble model training after thorough
+preprocessing steps. With anomalies eliminated, superfluous attributes
+removed, and consistent scaling applied, the stage is set to enhance the
+model’s robustness and performance.
+3.3. Undersampling, oversampling, and their hybrid approach for intrusion
+detection
+IDS stands at the forefront of defending computer networks and
+systems against malicious intrusions. Nevertheless, their effectiveness
+faces a recurrent obstacle: the pronounced class imbalance prevalent
+in real-world intrusion detection datasets [49]. Typically, benign ac-
+tivities vastly overshadow malicious ones, complicating the detection
+of sporadic but potent threats. Overlooking these uncommon threats
+can have dire repercussions, encompassing data breaches, monetary
+setbacks, and security compromises.
+To navigate this impediment, many strategies have been devised to
+equalize the class distribution in intrusion detection datasets. Under-
+sampling and oversampling have emerged as the leading methodologies
+in this pursuit. The essence of these sampling mechanisms is depicted
+in Fig. 3.
+Undersampling: strategically trims the instances from the majority
+class to even out the class distribution. This method sharpens the
+IDS’s proficiency in pinpointing malicious activities by curbing the
+preponderance of benign samples. Widely adopted undersampling ap-
+proaches encompass Tomek Links [50] and Edited Nearest Neighbors
+(ENN) [51].
+• Edited Nearest Neighbors (ENN): The ENN algorithm functions
+as a data cleaning method, predominantly within classification
+tasks. It holds particular synergy with the k-nearest neighbor
+(k-NN) classifier. The essence of ENN is to detect and elimi-
+nate instances from the dataset that their surrounding neighbors
+possibly misclassify. By discarding such instances, it is believed
+that decision boundaries can be refined, potentially resulting in
+enhanced generalization of unseen data.
+Let 𝑋be the dataset where 𝑋= (𝑥1, 𝑦1), … , (𝑥𝑁, 𝑦𝑁). Here, 𝑥𝑖
+represents the feature vector of the 𝑖𝑡ℎinstance, and 𝑦𝑖represents
+its class label. Euclidean distance is commonly used with k-NN
+and is defined as 𝑑(𝑥, 𝑧) =
+√∑𝐷
+𝑗=1(𝑥𝑗−𝑧𝑗)2, where 𝑥and 𝑧are
+two D-dimensional instances, and 𝑥𝑗and 𝑧𝑗are the 𝑗th features
+of 𝑥and 𝑧, respectively. The detailed process of ENN is shown in
+Algorithm 1.
+Algorithm 1 ENN
+Data: 𝑋
+Result: 𝑋′
+for each instance (𝑥𝑖, 𝑦𝑖) in 𝑋: do
+𝑁𝑁𝑘(𝑥𝑖) ←𝑚𝑖𝑛𝑥𝑘∈𝐶𝑦𝑖𝑑(𝑥𝑖, 𝑥𝑘) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+𝐶←𝑀𝑁𝑁𝑘(𝑥𝑖) ;
+/* 𝑀𝑁𝑁𝑘(𝑥𝑖) is the majority class in
+𝑁𝑁𝑘(𝑥𝑖) */
+if 𝐶≠𝑦𝑖then
+𝑋′ ←𝑋−(𝑥𝑖, 𝑦𝑖) ;
+/* Remove (𝑥𝑖, 𝑦𝑖) from 𝑋*/
+end
+end
+The ENN method comes with some interesting advantages. It has
+a knack for reducing the size of our training dataset. It can be a
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+5
+T.-T.-H. Le et al.
+Fig. 3. The concepts of undersampling and oversampling.
+real plus, especially when dealing with classifiers that demand a
+lot of computational resources, such as k-NN. This trimming can
+speed up the classification process significantly. Another benefit
+of ENN is its focus on removing instances that dwell around the
+decision boundary. Doing so helps create cleaner and more dis-
+tinct boundaries in our data, which is a big win for classification
+tasks.
+• Tomek Links: As an effective data cleansing technique, Tomek
+Links focuses on pinpointing and discarding instances in datasets
+that induce class overlap, especially in binary classification sce-
+narios. The elimination of these instances accentuates the decision
+boundaries separating the classes. Central to this method is the
+notion that instances nestled amidst or close to members of an
+opposing class tend to be noisy or reside on the borderline.
+Excising these enhances the clarity of class demarcations. The
+step-by-step procedure for eradicating Tomek Links is elucidated
+in Algorithm 2.
+Algorithm 2 Tomek Links
+Data: 𝑋
+Result: 𝑋′
+for each instance 𝑥𝑖do
+𝑁𝑁𝑘(𝑥𝑖) ←𝑚𝑖𝑛𝑥𝑘∈𝐶𝑦𝑖𝑑(𝑥𝑖, 𝑥𝑘) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+if 𝑦𝑖≠𝑦𝑗then
+𝑇←(𝑥𝑖, 𝑥𝑗)
+𝑋′ ←𝑋−𝑇; /* Remove one or both instances from
+the dataset */
+end
+end
+Oversampling: seeks to augment the count of minority class in-
+stances via synthetic sample creation, thus enhancing the IDS’s pro-
+ficiency in discerning minority class attributes. Noteworthy oversam-
+pling methodologies encompass the Synthetic Minority Over-sampling
+Technique (SMOTE) [10] and BorderlineSMOTE [52].
+• SMOTE (Synthetic Minority Over-sampling Technique): Designed
+to tackle class imbalances in machine learning datasets, SMOTE
+enhances the representation of the minority class through over-
+sampling. Unlike basic oversampling, which merely replicates
+existing instances, SMOTE crafts new samples by interpolating
+between current minority instances. A detailed breakdown of this
+procedure is available in Algorithm 3.
+• BorderlineSMOTE: A derivative of the foundational SMOTE (Syn-
+thetic Minority Over-sampling Technique), Borderline-SMOTE is
+tailored to zero in on areas adjacent to the borderline where
+classes intermingle. This nuanced approach mitigates a limita-
+tion of the standard SMOTE, which might inadvertently saturate
+regions already densely populated by the minority class with
+superfluous synthetic data. By honing in on these borderline
+zones, Borderline-SMOTE seeks to bolster the decision boundary,
+specifically where the delineation is murkiest due to overlaps. The
+procedure unfolds in two distinct phases: (1) the categorization
+Algorithm 3 SMOTE
+Data: 𝑋
+Result: 𝑋′
+𝑁𝑁1, 𝑁𝑁2, … , 𝑁𝑁𝑘←𝑑(𝑥, 𝑧) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+for each 𝑋′ synthetic samples: do
+𝑠←𝑥𝑖−𝑁𝑁𝑟;
+/* where 1 ≤𝑟≤𝑘*/
+𝑋′ ←𝑥𝑖+ 𝜆× 𝑠; /* Choose 𝜆randomly from the interval
+range [0,1] */
+end
+of minority instances and (2) the creation of synthetic samples.
+During the first phase, a minority sample is designated as ‘noise’
+if all its neighboring instances belong to the majority class; it
+is labeled ‘danger’ if more than half of its neighbors are ma-
+jority members and ‘safe’ otherwise. This methodical process is
+delineated in Algorithm 4.
+Algorithm 4 BorderlineSMOTE
+Data: 𝑋
+Result: 𝑋′
+𝑀(𝑥𝑖) ←𝑀𝑎𝑗𝑜𝑟𝑖𝑡𝑦(𝑥𝑖) ;
+/* Count of majority class
+instances among the 𝑘nearest neighbors of 𝑥𝑖*/
+if 𝑀(𝑥𝑖) = 𝑘then
+𝑥𝑖←𝑁𝑜𝑖𝑠𝑒
+else
+if 𝑀(𝑥𝑖) ≥𝑘∕2 then
+𝑥𝑖←𝐷𝑎𝑛𝑔𝑒𝑟
+else
+𝑥𝑖←𝑆𝑎𝑓𝑒
+end
+end
+𝑁𝑁1, 𝑁𝑁2, … , 𝑁𝑁𝑘←𝑑(𝑥, 𝑧) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+for generating 𝑆synthetic samples: do
+for each 𝑠from 1 to 𝑆: do
+𝑠←𝑥𝑖−𝑁𝑁𝑟
+𝑋′ ←𝑥𝑖+ 𝜆× 𝑠;
+/* Choose 𝜆randomly from the
+interval range [0,1] */
+end
+end
+Undersampling and oversampling: Balancing class distribution
+through undersampling and oversampling is a common practice to
+mitigate class imbalance issues. However, each approach comes with
+inherent limitations that necessitate careful consideration.
+Undersampling Challenges:
+• Information Loss: The act of trimming the majority class dur-
+ing undersampling introduces the risk of losing crucial informa-
+tion. This could impede our understanding of benign activities,
+creating potential blind spots in intrusion detection.
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+6
+T.-T.-H. Le et al.
+• Underrepresentation Risk: Aggressive pruning in undersampling
+may severely underrepresent the majority class, leading to a
+skewed perception of normal activities within the dataset.
+• Noise Susceptibility: Undersampling methods may exhibit vulner-
+ability to the influence of noisy samples, introducing unwanted
+variability that impacts the overall data quality.
+Oversampling Challenges:
+• Overfitting Risk: Repetitively amplifying minority class instances
+during oversampling may induce overfitting, causing models to
+excel on training data but falter on novel inputs.
+• Computational Strain: The fabrication of synthetic instances in
+oversampling can impose computational burdens, potentially hin-
+dering real-time IDS deployments.
+• Noise Introduction: Oversampling methods might introduce syn-
+thetic noise if not carefully controlled, affecting the robustness of
+intrusion detection models.
+Hybrid Techniques and Decision-Making Process: In response to the
+challenges posed by individual undersampling and oversampling meth-
+ods, hybrid techniques such as SMOTETomek [53], SMOTEENN [54],
+and BorderlineSMOTETomek [55] have emerged as promising solu-
+tions. These hybrid methods seamlessly blend the strengths of under-
+sampling and oversampling, effectively neutralizing their respective
+drawbacks.
+The decision-making process within the hybrid framework involves
+a nuanced consideration of the dataset characteristics and the specific
+challenges posed by class imbalance. Leveraging the adaptability of
+hybrid techniques, the manuscript delves deep into the workings, foun-
+dational theories, and practical merits of SMOTETomek, SMOTEENN,
+and BorderlineSMOTETomek. By contrasting these hybrid approaches
+with traditional undersampling and oversampling methods, the aim
+is to underscore their transformative potential in reshaping intrusion
+detection methodologies. These hybrid sampling strategies offer a nu-
+anced approach to decision-making, ensuring robust network security
+in the face of complex data imbalances.
+• SMOTETomek: The SMOTETomek method is a cohesive strategy
+that amalgamates SMOTE’s synthetic data generation capabilities
+with the data cleaning prowess of Tomek Links removal, specifi-
+cally designed to address class imbalances. In scenarios where the
+majority class overshadows the minority, classifiers tend to be-
+come skewed towards the former. To mitigate this, SMOTETomek
+first harnesses SMOTE to bolster the minority class representation
+through synthetic instance creation. Nevertheless, this augmen-
+tation might occasionally blur the decision boundaries as the
+synthetic samples encroach upon the majority class territory. It is
+where Tomek Links – pairs of instances from opposing classes that
+are nearest neighbors – come into play. By eliminating these links,
+SMOTETomek fine-tunes the decision boundaries, erasing ambi-
+guities. The result is a well-defined, distinct separation between
+classes, as detailed in Algorithm 5.
+SMOTETomek is a distinctive blend of techniques that begins by
+bolstering the representation of the minority class through syn-
+thetic data augmentation and subsequently refining class bound-
+aries for better clarity. Like other data augmentation methods,
+models trained on SMOTETomek-enhanced data should be evalu-
+ated using a distinct, authentic test set. This evaluation mitigates
+excessive noise or the risk of potential overfitting introduced by
+the method. Essentially, SMOTETomek strives to harness the ad-
+vantages of synthetic data generation while upholding the preci-
+sion of data cleaning, all in pursuit of a robust decision boundary
+that guards against overfitting.
+The SMOTETomek algorithm seamlessly integrates synthetic data
+generation through SMOTE with the precision of data cleaning via
+Tomek Links removal, offering a robust solution to address class
+Algorithm 5 SMOTETomek
+Data: 𝑋
+Result: 𝑋′
+𝑁𝑁1, 𝑁𝑁2, … , 𝑁𝑁𝑘←𝑑(𝑥, 𝑧) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+for generating a synthetic instance: do
+𝛥←𝑥−𝑁𝑁𝑟;
+/* Compute the difference */
+𝛥′ ←𝑥𝑖+ 𝜆× 𝛥;
+/* Choose 𝜆randomly number between 0
+and 1] */
+𝑥𝑠= 𝑥+ 𝛥′ ;
+/* Compute the difference */
+end
+for each instance (𝑥𝑖, 𝑦𝑖) in 𝑋: do
+𝑁𝑁𝑘(𝑥𝑖) ←𝑚𝑖𝑛𝑥𝑘∈𝐶𝑦𝑖𝑑(𝑥𝑖, 𝑥𝑘) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+𝐶←𝑀𝑁𝑁𝑘(𝑥𝑖) ;
+/* 𝑀𝑁𝑁𝑘(𝑥𝑖) is the majority class in
+𝑁𝑁𝑘(𝑥𝑖) */
+if 𝐶≠𝑦𝑖then
+𝑋′ ←𝑋−(𝑥𝑖, 𝑦𝑖) ;
+/* Remove (𝑥𝑖, 𝑦𝑖) from 𝑋*/
+end
+end
+imbalances. Algorithm 5 with input: a dataset 𝑋with instances
+belonging to different classes and output: a refined dataset 𝑋′
+after applying the SMOTETomek strategy:
+1. Synthetic Instance Generation: For each instance 𝑥in 𝑋,
+calculate its 𝑘-nearest neighbors, denoted as 𝑁𝑁1, 𝑁𝑁2,
+… , 𝑁𝑁𝑘, based on a distance metric 𝑑(𝑥, 𝑧). Generate syn-
+thetic instances by computing the difference vector 𝛥be-
+tween 𝑥and a randomly selected neighbor 𝑁𝑁𝑟. The syn-
+thetic instance 𝑥𝑠is created by adding a scaled version of
+𝛥to 𝑥, where 𝜆is a random number between 0 and 1.
+2. Tomek Links Removal: For each instance (𝑥𝑖, 𝑦𝑖) in 𝑋: Iden-
+tify 𝑁𝑁𝑘(𝑥𝑖), the minimum distance to 𝑥𝑖from instances
+in class 𝐶𝑦𝑖. Determine the majority class, 𝑀𝑁𝑁𝑘(𝑥𝑖), in
+𝑁𝑁𝑘(𝑥𝑖). If 𝐶≠𝑦𝑖, remove the instance (𝑥𝑖, 𝑦𝑖) from 𝑋′.
+Integration of undersampling and oversampling SMOTETomek
+operates as a cohesive blend of undersampling and oversampling
+techniques:
+1. Oversampling (SMOTE): Synthetic instances are generated
+to bolster the representation of the minority class, address-
+ing the imbalance.
+2. Undersampling (Tomek Links Removal): Tomek Links are
+identified and eliminated to fine-tune decision boundaries
+and achieve a distinct separation between classes.
+Evaluation Considerations: Models trained on SMOTETomek-
+enhanced data should undergo evaluation using a distinct and
+authentic test set. This step ensures that the potential noise
+introduced by synthetic data generation is appropriately assessed,
+mitigating the risk of overfitting.
+In summary, SMOTETomek’s distinctive methodology, integrating
+oversampling and undersampling strategies, seeks to enhance the
+precision of data cleaning while harnessing the advantages of
+synthetic data generation. The algorithm aims to achieve a robust
+decision boundary that guards against overfitting, contributing to
+the effectiveness of the overall intrusion detection system.
+• SMOTEENN: The SMOTEENN technique is a sophisticated amal-
+gamation of the SMOTE (Synthetic Minority Over-sampling Tech-
+nique) and the ENN (Edited Nearest Neighbors) cleaning mech-
+anism. This hybrid approach is specifically designed to rectify
+the class imbalance dilemma. The process begins with the aug-
+mentation of the minority class using SMOTE, broadening its
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+7
+T.-T.-H. Le et al.
+representation. Subsequently, the ENN method purifies the re-
+sultant dataset. It performs this cleaning on both majority and
+minority classes. The imbalance in classes often skews classifiers
+to favor the majority class. While SMOTE’s synthetic sample
+generation attempts to redress this skewness, there is a poten-
+tial downside: the synthetic samples can occasionally add noise,
+muddying the decision boundaries. The ENN method excises any
+instance if its class label differs from the majority class label
+among its 𝑘closest neighbors. This dual action ensures that
+the decision boundaries remain well-defined and distinct. The
+intricate steps of this method are illustrated in Algorithm 6.
+Algorithm 6 SMOTEENN
+Data: 𝑋
+Result: 𝑋′
+𝑁𝑁1, 𝑁𝑁2, … , 𝑁𝑁𝑘←𝑑(𝑥, 𝑧) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+for generating a synthetic instance: do
+𝛥←𝑥−𝑁𝑁𝑟;
+/* Compute the difference */
+𝛥′ ←𝑥𝑖+ 𝜆× 𝛥;
+/* Choose 𝜆randomly number between 0
+and 1] */
+𝑥𝑠= 𝑥+ 𝛥′ ;
+/* Compute the difference */
+end
+for each instance 𝑥𝑖do
+𝑁𝑁𝑘(𝑥𝑖) ←𝑚𝑖𝑛𝑥𝑘∈𝐶𝑦𝑖𝑑(𝑥𝑖, 𝑥𝑘) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+if 𝑦𝑖≠𝑦𝑗then
+𝑇←(𝑥𝑖, 𝑥𝑗)
+𝑋′ ←𝑋−𝑇; /* Remove one or both instances from
+the dataset */
+end
+end
+The SMOTEENN algorithm seamlessly combines the strengths of
+SMOTE (Synthetic Minority Over-sampling Technique) for over-
+sampling and ENN (Edited Nearest Neighbors) for undersampling,
+creating a sophisticated hybrid approach to address class im-
+balance. Algorithm 6 with input: a dataset 𝑋with instances
+belonging to different classes and output: a refined dataset 𝑋′
+after applying the SMOTEENN strategy.
+1. Synthetic Instance Generation (SMOTE): For each instance
+𝑥in 𝑋, calculate its 𝑘-nearest neighbors, denoted as
+𝑁𝑁1, 𝑁𝑁2, … , 𝑁𝑁𝑘, based on a distance metric 𝑑(𝑥, 𝑧).
+Generate synthetic instances by computing the difference
+vector 𝛥between 𝑥and a randomly selected neighbor
+𝑁𝑁𝑟. The synthetic instance 𝑥𝑠is created by adding a
+scaled version of 𝛥to 𝑥, where 𝜆is a random number
+between 0 and 1.
+2. Editing Nearest Neighbors (ENN): For each instance 𝑥𝑖:
+Determine 𝑁𝑁𝑘(𝑥𝑖), the minimum distance to 𝑥𝑖from
+instances in class 𝐶𝑦𝑖. If 𝑦𝑖≠𝑦𝑗for any 𝑥𝑗in the neigh-
+borhood: Create a tuple 𝑇containing instances (𝑥𝑖, 𝑥𝑗).
+Remove one or both instances from the dataset 𝑋′.
+SMOTEENN is a comprehensive approach that addresses the class
+imbalance dilemma through a dual-action strategy:
+1. Oversampling (SMOTE): Synthetic instances are generated
+to augment the representation of the minority class, over-
+coming the imbalance.
+2. Undersampling (ENN): Editing Nearest Neighbors selec-
+tively removes instances whose class labels differ from
+the majority class label among their 𝑘closest neighbors.
+This dual-action strategy ensures well-defined and distinct
+decision boundaries.
+Decision Boundary Refinement: While SMOTE addresses skew-
+ness, its synthetic samples may introduce noise. The ENN step,
+by selectively removing instances, helps maintain clear and dis-
+tinct decision boundaries, mitigating the potential downsides of
+oversampling.
+Evaluation Considerations: Similar to SMOTETomek, models
+trained on datasets enhanced by SMOTEENN should undergo
+evaluation using a distinct and authentic test set. This practice
+ensures a comprehensive assessment of potential noise introduced
+during synthetic sample generation.
+In summary, SMOTEENN’s intricate methodology harmonizes
+oversampling and undersampling techniques, creating a powerful
+strategy to rectify class imbalance and refine decision boundaries
+effectively.
+• BorderlineSMOTETomek: The BorderlineSMOTETomek technique
+amalgamates the benefits of both the BorderlineSMOTE and
+Tomek links removal methods. This technique emphasizes the
+borderline instances of the minority class to generate synthetic
+samples using the BorderlineSMOTE algorithm. Once these syn-
+thetic samples are incorporated, the Tomek links technique comes
+into play to cleanse the dataset, effectively removing the Tomek
+links. The rationale behind targeting the borderline instances
+is their inherent complexity, which makes them particularly
+challenging for classifiers. Consequently, they typically suffer
+from higher misclassification rates than instances within the class
+boundaries. The technique constructs a more distinguishable and
+generalized decision boundary by addressing these borderline
+instances and refining the dataset with Tomek link removal. This
+methodical approach is elucidated in Algorithm 7.
+Algorithm 7 BorderlineSMOTETomek
+Data: 𝑋
+Result: 𝑋′
+𝑁𝑁1, 𝑁𝑁2, … , 𝑁𝑁𝑘←𝑑(𝑥, 𝑧) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+for each instance 𝑥in the minority class do
+Determine if 𝑥is a borderline instance based on its neighbors in the
+majority class
+if 𝑥is a borderline instance then
+𝛥←𝑥−𝑁𝑁𝑟;
+/* Compute the difference for a
+randomly chosen neighbor */
+𝛥′ ←𝑥𝑖+ 𝜆× 𝛥; /* Choose 𝜆randomly number between
+0 and 1] */
+𝑥𝑠= 𝑥+ 𝛥′ ;
+/* Generate synthetic sample */
+end
+end
+for each instance (𝑥𝑖, 𝑦𝑖) in 𝑋: do
+𝑁𝑁𝑘(𝑥𝑖) ←𝑚𝑖𝑛𝑥𝑘∈𝐶𝑦𝑖𝑑(𝑥𝑖, 𝑥𝑘) ;
+/* Find its k-nearest
+neighbors based on 𝑑(𝑥, 𝑧) */
+𝐶←𝑀𝑁𝑁𝑘(𝑥𝑖) ;
+/* 𝑀𝑁𝑁𝑘(𝑥𝑖) is the majority class in
+𝑁𝑁𝑘(𝑥𝑖) */
+if 𝐶≠𝑦𝑖then
+𝑋′ ←𝑋−(𝑥𝑖, 𝑦𝑖) ;
+/* Remove (𝑥𝑖, 𝑦𝑖) from 𝑋*/
+end
+end
+The BorderlineSMOTETomek algorithm intricately combines the
+strengths of BorderlineSMOTE and Tomek links removal methods
+to address class imbalance. Focusing on borderline instances of
+the minority class, this technique generates synthetic samples
+using BorderlineSMOTE and subsequently applies Tomek links
+removal to enhance dataset clarity. Algorithm 7 with input: a
+dataset 𝑋with instances belonging to different classes and output:
+a refined dataset 𝑋′ after applying the BorderlineSMOTETomek
+strategy.
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+8
+T.-T.-H. Le et al.
+1. Borderline Instance Detection: For each instance 𝑥in the
+minority class, determine if it is a borderline instance based
+on its neighbors in the majority class.
+2. Synthetic Instance Generation (BorderlineSMOTE): If 𝑥is
+a borderline instance, generate synthetic samples by com-
+puting the difference vector 𝛥between 𝑥and a randomly
+chosen neighbor 𝑁𝑁𝑟. The synthetic instance 𝑥𝑠is created
+by adding a scaled version of 𝛥to 𝑥, where 𝜆is a random
+number between 0 and 1.
+3. Tomek Links Removal: For each instance (𝑥𝑖, 𝑦𝑖) in 𝑋: Cal-
+culate 𝑁𝑁𝑘(𝑥𝑖), the minimum distance to 𝑥𝑖from instances
+in class 𝐶𝑦𝑖. Determine the majority class, 𝑀𝑁𝑁𝑘(𝑥𝑖), in
+𝑁𝑁𝑘(𝑥𝑖). If 𝐶≠𝑦𝑖, remove the instance (𝑥𝑖, 𝑦𝑖) from 𝑋′.
+BorderlineSMOTETomek
+strategically
+combines
+oversampling
+and undersampling to create a refined dataset:
+1. Oversampling (BorderlineSMOTE): Emphasis is placed on
+borderline instances of the minority class to generate syn-
+thetic samples using the BorderlineSMOTE algorithm.
+2. Undersampling (Tomek Links Removal): The Tomek links
+removal step cleanses the dataset by selectively removing
+instances, effectively enhancing decision boundary clarity.
+Rationale and Decision Boundary Refinement: The focus on bor-
+derline instances arises from their inherent complexity, making
+them challenging for classifiers. By addressing these instances
+through synthetic sample generation and subsequent Tomek links
+removal, BorderlineSMOTETomek aims to construct a more dis-
+tinguishable and generalized decision boundary.
+Evaluation Considerations: Similar to other hybrid techniques,
+models trained on datasets enhanced by BorderlineSMOTETomek
+should undergo evaluation using a distinct and authentic test set.
+This practice ensures a comprehensive assessment of the refined
+decision boundaries and the effectiveness of the technique.
+In summary, BorderlineSMOTETomek employs a methodical ap-
+proach, leveraging both oversampling and undersampling tech-
+niques to address the class imbalance and refine decision bound-
+aries for improved classification accuracy.
+3.4. Enhancing ensemble classification with hybrid sampling techniques
+In this section, we provide insights into our choice and config-
+uration of base learners within the ensemble model, explaining the
+rationale behind each selection. We selected several classifiers known
+for their effectiveness in addressing class imbalance and improving
+overall performance, comprising AdaBoost, LightGBM, and XGBoost.
+These baseline classifiers, each with unique advanced features, are
+strategically harnessed to unlock the full potential of the data for robust
+and high-performance intrusion detection.
+• AdaBoost [56,57]: Adaptive Boosting is utilized as an iterative en-
+semble method. Its ability to adjust weights during each iteration,
+considering both instances and classifiers, makes it effective in
+minimizing classification errors. AdaBoost is particularly advanta-
+geous in scenarios with data imbalance or complex classification
+boundaries.
+• LightGBM [58]: Light Gradient Boosting Machine, a gradient
+boosting framework using tree-based learning algorithms, is cho-
+sen for its speed and efficiency. Designed to handle large datasets,
+LightGBM provides flexibility in optimizing for accuracy, compu-
+tational efficiency, or memory usage.
+• XGBoost [59]: Extreme Gradient Boosting, known for consistently
+delivering high-performance results, is included. With regular-
+ization and pruning features, XGBoost mitigates overfitting and
+enhances model generalization.
+The accurate and timely detection of intrusions is crucial in cyberse-
+curity. To achieve this, our research leverages ensemble classification,
+combining the strengths of sampling techniques and base classifiers to
+enhance detection accuracy. Within our ensemble framework, predic-
+tions from individual classifiers, as illustrated in Algorithm 8, are inte-
+grated using either a weighted mechanism or a majority voting strategy,
+depending on the specific task. This structured aggregation fortifies
+the model against biases, resulting in an ensemble methodology that
+provides robust and dependable intrusion detection.
+Algorithm 8 Enhanced Ensemble Learning Incorporating Hybrid
+Sampling
+Input: Dataset: 𝐷= (𝑥1, 𝑦1), (𝑥2, 𝑦2), … , (𝑥𝑁, 𝑦𝑁),
+Hybrid sampling technique 𝑆𝑀,
+Ensemble model 𝐸𝑀
+Output: Forecasted label 𝑝
+1: Extract a bootstrap sample 𝐷𝑖from 𝐷
+2: Implement hybrid sampling technique on 𝐷𝑖to yield 𝑆instances,
+producing dataset 𝐷𝑠: 𝐷𝑠←𝑆𝑀(𝐷𝑖)
+3: Cultivate model 𝐸𝑀on 𝐷𝑠: 𝐷𝑠←𝐸𝑀𝑡𝑟𝑎𝑖𝑛(𝐷𝑠)
+4: for each test instance 𝑥: do
+5:
+Derive 𝑝via models 𝐸𝑀
+6:
+To obtain the final prediction 𝑝for input 𝑥, we consolidate
+individual predictions, which can involve processes like majority
+voting for classification tasks.
+7: end for
+In summary, the choice of AdaBoost, LightGBM, and XGBoost as
+base learners is driven by their complementary strengths and proven
+track records in handling challenges associated with intrusion detection
+tasks, such as class imbalance and complex decision boundaries.
+3.5. Evaluative measures for performance analysis
+To comprehensively evaluate the effectiveness of our proposed hy-
+brid sampling model enhanced with ensemble classification in intrusion
+detection, we have meticulously selected a set of evaluation metrics.
+Our sophisticated approach, integrating hybrid sampling with ensem-
+ble classification, undergoes rigorous evaluation using metrics tailored
+specifically for intrusion detection scenarios. The chosen metrics in-
+clude precision (P), recall (R), F1-score (F1), accuracy (ACC), and the
+area under the Receiver Operating Characteristic (ROC-AUC) curve.
+First, Precision, Recall, and F1 score are well-suited for intrusion
+detection systems dealing with imbalanced datasets. In the context
+of cybersecurity, it is crucial to minimize false positives (precision)
+while effectively capturing true positives (recall). The F1 Score strikes
+a balance between these two, making it a robust metric for assessing
+model performance when the cost of misclassification is asymmetric.
+Next, accuracy is a standard metric whose significance is underscored
+in intrusion detection, where the class distribution is often skewed.
+Despite the class imbalance, accuracy provides a holistic view of the
+model’s overall correctness, aiding in assessing its effectiveness in real-
+world scenarios. Finally, ROC curves, accompanied by AUC scores, are
+essential in evaluating the classifier’s ability to distinguish between
+classes. In the context of intrusion detection with imbalanced data, ROC
+curves provide a nuanced understanding of the model’s performance
+across various decision thresholds.
+Precision (P): Quantifying the accuracy of positive identifications,
+high precision signifies a low false alarm rate, a critical consideration
+in intrusion detection to prevent alert fatigue and maintain system
+credibility.
+𝑃𝑟𝑒𝑐𝑖𝑠𝑖𝑜𝑛(𝑃) =
+𝑇𝑃
+𝑇𝑃+ 𝐹𝑃
+(3)
+where: TP = True Positives - Instances correctly predicted as positives.
+FP = False Positives - Instances incorrectly predicted as positives.
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+9
+T.-T.-H. Le et al.
+High precision signifies a low false alarm rate, a critical considera-
+tion in intrusion detection to prevent alert fatigue and maintain system
+credibility.
+Recall (R) or Sensitivity: Revealing the proportion of actual posi-
+tives correctly identified by the model, recall is essential for capturing
+potential threats accurately.
+𝑅𝑒𝑐𝑎𝑙𝑙(𝑅) =
+𝑇𝑃
+𝑇𝑃+ 𝐹𝑁
+(4)
+where: FN = False Negatives - Positives that are inaccurately labeled as
+negatives.
+F1-score (F1): Representing the harmonic mean of precision and
+recall, the F1-score is crucial in scenarios with imbalanced class dis-
+tributions.
+𝐹1 −𝑠𝑐𝑜𝑟𝑒(𝐹1) = 2 × 𝑃× 𝑅
+𝑃+ 𝑅
+(5)
+Accuracy (ACC): Measuring the proportion of correct identifications,
+including both positive and negative classifications, though caution is
+needed in interpreting accuracy in imbalanced datasets.
+𝐴𝑐𝑐𝑢𝑟𝑎𝑐𝑦(𝐴𝐶𝐶) =
+𝑇𝑃+ 𝑇𝑁
+𝑇𝑃+ 𝑇𝑁+ 𝐹𝑃+ 𝐹𝑁
+(6)
+where: TN = True Negatives - Instances correctly predicted as nega-
+tives.
+It is crucial to note that accuracy may provide a skewed view in
+imbalanced datasets. Therefore, it should be interpreted alongside other
+metrics for a more comprehensive assessment.
+Area Under the Receiver Operating Characteristic (ROC-AUC)
+Curve: The ROC curve illustrates the trade-off between the True Posi-
+tive Rate (Recall) and the False Positive Rate across different thresh-
+olds. The AUC quantifies the model’s ability to distinguish between
+classes. An AUC value close to 1 indicates excellent discrimination,
+while 0.5 suggests no discrimination, similar to random chance. A
+high AUC value in intrusion detection signifies a strong capability to
+differentiate between benign and malicious activities. The AUC value,
+a quantitative measure of the curve’s performance, was calculated to
+be 0.96 (on a scale from 0 to 1), suggesting the model’s excellent
+discrimination capability. Implications: An AUC value close to 1.0
+indicates a model’s superior capability to distinguish between classes,
+affirming the efficacy of the proposed methodology. The ROC curve fur-
+ther corroborates the model’s resilience and performance in real-world
+testing scenarios.
+3.6. Experimental setup, dataset overview, and benchmark models
+Our experimental setup’s hardware and software configuration en-
+sured robust and reliable results. The experiments were conducted on
+a dedicated workstation with an Intel i7-10700K CPU and 64 GB of
+RAM. This hardware configuration provided the computational power
+to handle the extensive datasets and complex models.
+Python 3.8 was our programming language for implementing our
+models and experiments. We relied on several key libraries, including
+scikit-learn for conventional machine learning tasks and TensorFlow for
+neural architectures. These libraries offered a wide range of tools and
+functionalities essential for our research, enabling us to build, train,
+and evaluate intricate intrusion detection models.
+The hyperparameters play a crucial role in shaping the performance
+of our hybrid intrusion detection model, and we meticulously defined
+two categories: one for sampling methods and the other for baseline
+learning models. This ensures a comprehensive understanding and
+fine-tuning of the model’s behavior. We defined two categories of
+hyperparameters for sampling methods and baseline learning models.
+Table 3 outlines the hyperparameters for sampling approaches, while
+Table 2 presents the hyperparameters for the three baseline models.
+In our experimental setup, the configuration of hyperparameters
+plays a pivotal role in shaping the performance of our hybrid intrusion
+Table 2
+Setting of hyperparameters for sampling methods.
+Approach
+Sampling method
+Hyperparameters name
+Value
+US
+ENN
+Sampling strategy
+Auto
+No. neighbors
+3
+TomekLinks
+No. neighbors
+3
+US
+SMOTE
+Sampling strategy
+Auto
+Random state
+42
+BorderlineSMOTE
+Sampling strategy
+Auto
+Random state
+42
+US-OS
+SMOTETomek
+Sampling strategy
+Auto
+SMOTEENN
+Sampling strategy
+Auto
+Random state
+42
+BorderlineSMOTETomek
+Sampling strategy
+Auto
+Random state
+42
+Table 3
+Hyper-parameter setting for ensemble baseline models.
+Baseline model
+Hyperparameters name
+Value
+Learning rate
+0.1
+Interaction
+500
+CatBoost
+Depth
+6
+verbose
+0
+Loss function
+Mutilclass
+LightGBM
+Objective
+multi:softprob
+No. estimators
+100
+XGBoost
+Objective
+multi:softprob
+No. estimators
+100
+detection model. To provide a comprehensive understanding and facil-
+itate fine-tuning of the model’s behavior, we have meticulously defined
+two categories of hyperparameters: one for sampling methods and the
+other for baseline learning models.
+• Hyperparameters for Sampling Methods. Table 2 outlines the hy-
+perparameter settings for various sampling approaches employed
+in our study. These parameters are carefully selected to tailor the
+sampling strategy, ensuring effective augmentation of the dataset
+while maintaining the integrity of the underlying information. For
+instance, parameters such as the number of neighbors in ENN and
+TomekLinks or the random state in SMOTE and BorderlineSMOTE
+are crucial in shaping the sampling process.
+• Hyperparameters for Ensemble Baseline Models. Table 3 presents
+the hyperparameter settings for the three baseline models, namely
+CatBoost, LightGBM, and XGBoost. These parameters, such as
+learning rate, depth, and number of estimators, are crucial in
+defining the learning behavior and predictive capabilities of the
+individual baseline models.
+These hyperparameters collectively define the intricacies of our
+hybrid model, striking a balance between effective sampling and the
+learning capacity of baseline models. Fine-tuning these parameters
+allows for a nuanced approach, enhancing the model’s adaptability and
+performance across diverse intrusion detection scenarios.
+Dataset selection is a critical aspect of our experimental setup.
+We opted for two well-recognized public intrusion detection datasets:
+CHADC2020 (Car Hacking: Attack and Defense Challenge 2020) and
+IoTID20 (Internet of Things Intrusion Detection 2020). These datasets
+were chosen due to their ability to represent diverse network traffic
+scenarios, mirroring the real-world challenges of intrusion detection.
+• The Car Hacking: CHADC2020 dataset is a significant resource
+in intrusion detection. It originated from the 2020 Car Hacking
+Challenge and consists of approximately 2 million data entries.
+This dataset captures various aspects of car telemetry, including
+attributes like speed, engine RPM, and brake pressure. Notably,
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+10
+T.-T.-H. Le et al.
+Fig. 4. Learning curve evaluation results of ENN and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+around 1.95 million of most data points represent benign activi-
+ties, while the remaining 50,000 instances are earmarked as car
+hacking instances. CHADC2020 provides a valuable and diverse
+set of network traffic scenarios, making it a crucial asset for
+intrusion detection research and evaluation.
+• The IoTID20 dataset is a significant dataset used in intrusion de-
+tection research. It was created in collaboration with a renowned
+IoT device maker in 2020 and contains approximately 5 million
+data points. This dataset captures various attributes related to
+device telemetry, network packets, device statuses, etc. Out of the
+5 million entries, approximately 4.8 million are benign instances,
+while the remaining 200,000 instances suggest malicious activ-
+ity. IoTID20 offers a diverse and comprehensive set of network
+traffic and device-related data, making it a valuable resource for
+evaluating intrusion detection algorithms in IoT environments.
+To ensure the quality and suitability of the datasets for our experi-
+ments, we applied several preprocessing measures:
+• Missing value treatment: In cases where data entries had missing
+values, we employed median imputation to fill in the gaps. This
+step helped maintain data integrity and completeness.
+• Normalization: Given the diverse scales of the dataset features,
+we opted for Min-Max normalization. This preprocessing step
+standardized the feature values, ensuring they all fell within the
+same range.
+• Feature selection: We utilized correlation-based feature selec-
+tion to streamline the dataset and retain only the most rele-
+vant attributes. This method helped identify and retain attributes
+that exhibited significant correlations with the target variable,
+enhancing the overall efficiency of our models.
+In our quest to assess the performance of our hybrid sampling model
+enhanced with ensemble classification, we selected three renowned
+ensemble models as benchmarks:
+• AdaBoost: Adaptive Boosting, referred to as AdaBoost, is an it-
+erative ensemble technique. It iteratively adapts the weights of
+instances and classifiers to reduce classification errors. AdaBoost
+excels in scenarios involving imbalanced data or intricate classi-
+fication boundaries.
+• LightGBM: Light Gradient Boosting Machine, commonly known
+as LightGBM, stands out as a gradient boosting framework cele-
+brated for its remarkable speed and efficiency. It leverages tree-
+based learning algorithms and demonstrates prowess in handling
+large datasets, all while offering flexibility in optimizing for ac-
+curacy, computational efficiency, or memory usage.
+• XGBoost: Extreme Gradient Boosting is a potent gradient-boosting
+framework renowned for its remarkable performance across di-
+verse datasets. Notably, XGBoost incorporates essential features
+like regularization and pruning, effectively countering overfitting
+and augmenting the model’s ability to generalize effectively.
+These benchmark models were chosen for their advanced features
+and capabilities, serving as reference points to assess the performance
+of our hybrid sampling and ensemble classification approach. Their
+inclusion allowed us to gauge the effectiveness of our proposed method-
+ology compared to established ensemble models.
+4. Experimental results
+Our evaluation of the proposed hybrid sampling approach com-
+bined with ensemble classification unfolds in two distinct phases: one
+centered on training and the other on testing. These phases offer a
+comprehensive view of the model’s performance spectrum, including its
+generalization ability when presented with previously unseen data. Fur-
+thermore, we conducted a comparative analysis, pitting our approach
+against baseline ensemble models.
+In the training evaluation phase, we harnessed the learning curve
+to scrutinize the model’s performance concerning the expanding size
+of the training dataset. This approach provides invaluable insights into
+the benefits of incremental learning while flagging potential issues like
+overfitting or underfitting.
+Transitioning to the testing evaluation phase, we employed the ROC
+curve as a visual tool to assess the model’s discriminatory prowess on
+the testing dataset. Specifically, the ROC curve facilitates the measure-
+ment of the model’s capacity to distinguish between positive and neg-
+ative classes, granting us critical insights into its overall performance
+within intrusion detection scenarios.
+4.1. Undersampling methods with ensemble models results
+This section presents the empirical results of undersampling meth-
+ods combined with baseline ensemble models on two publicly available
+datasets. Our evaluation encompasses two primary aspects: training
+evaluation using learning curves and testing evaluation involving ROC
+curves. We provide the evaluation results for each undersampling
+method below:
+ENN: Training Evaluation (Learning Curve): The learning curve for
+the ENN method is visually represented in Fig. 4, providing valuable
+insights into the model’s performance throughout the training and
+validation phases. This visualization offers a comprehensive view of the
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+11
+T.-T.-H. Le et al.
+Fig. 5. ROC curve evaluation results of ENN and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+learning process, showcasing how the model evolves in accuracy over
+time.
+Testing Evaluation (ROC Curve): For testing evaluation, Fig. 5 dis-
+plays the ROC curve corresponding to the ENN method. This graphical
+representation illustrates the method’s effectiveness in distinguishing
+between positive and negative classes during the testing phase, offering
+a clear depiction of its discriminatory power. Upon closer examination
+of Fig. 4, a discernible trend becomes apparent. The training and valida-
+tion results for the hybrid ENN method, particularly when coupled with
+CatBoost or XGBoost, consistently demonstrate superior accuracy across
+both datasets compared to the ENN method paired with LightGBM.
+Notably, these disparities in accuracy are particularly pronounced in
+the context of multi-attack detection.
+To provide a more detailed analysis, Figs. 5(b) and 5(e) showcase
+the ROC curves for the ENN method with LightGBM in the specific
+scenarios of Car Hacking Challenge and IoT telemetry data. Here, it
+becomes evident that the ENN method with LightGBM exhibits lower
+accuracy in ROC curves compared to the configurations involving
+CatBoost and XGBoost.
+These observations underscore the impact of the choice of ensemble
+models on the performance of the hybrid ENN method, with CatBoost
+and XGBoost consistently outperforming LightGBM in terms of accu-
+racy, especially in the challenging context of multi-attack detection
+scenarios.
+Tomek method: In the context of the Tomek method, we present the
+results of two pivotal evaluation processes: the learning curve and the
+ROC curve. These visualizations provide comprehensive insights into
+the model’s performance throughout both the training and validation
+phases, as well as its discriminatory capacity during testing.
+The learning curve, depicted in Fig. 6, offers a dynamic view of
+the model’s evolution in accuracy over the course of training and
+validation. This visual representation is crucial for understanding how
+the model adapts and learns from the dataset. Fig. 7 complements the
+learning curve by illustrating the ROC curve. This curve visually repre-
+sents the model’s ability to distinguish between positive and negative
+classes during testing, offering a clear depiction of its discriminative
+power.
+Upon comparing the performance of the hybrid Tomek method with
+three different ensemble models to the hybrid ENN method with the
+same ensemble models, we observe noteworthy improvements in both
+training and testing evaluations. Notably, the choice of ensemble model
+plays a crucial role. Tomek paired with CatBoost or XGBoost demon-
+strates slightly better accuracy compared to Tomek combined with
+LightGBM. An illustrative example is the ‘Spoofing’ attack ROC curve,
+where Tomek with CatBoost or XGBoost achieved higher accuracy,
+obtaining 55% in the CHAD2020 dataset (in contrast to Tomek and
+LightGBM model). This emphasizes the significance of the ensemble
+model selection in influencing the overall effectiveness of the hybrid
+Tomek method.
+In summary, the comparative analysis of undersampling methods,
+specifically ENN and Tomek, reveals that Tomek yields more sub-
+stantial improvements in addressing the challenges associated with
+multi-class classification in imbalanced datasets. Importantly, this ob-
+servation holds true across both datasets, emphasizing the robustness
+of Tomek in diverse intrusion detection scenarios.
+Furthermore, within the realm of hybrid undersampling methods
+coupled with baseline ensemble models, Tomek, when combined with
+CatBoost and XGBoost, consistently outperforms its counterpart when
+paired with LightGBM in terms of accuracy. This consistent superiority
+underscores the effectiveness of integrating Tomek with these specific
+ensemble models for intrusion detection in multi-class scenarios. The
+choice of an ensemble model plays a pivotal role in enhancing the over-
+all performance of the hybrid undersampling approach, and Tomek,
+particularly with CatBoost and XGBoost, emerges as a promising combi-
+nation for addressing the complexities of multi-class intrusion detection
+datasets.
+4.2. Oversampling methods with ensemble models results
+This section presents the empirical results of oversampling meth-
+ods combined with baseline ensemble models on two publicly avail-
+able datasets. In similar undersampling methods evaluation, we use a
+learning curve for training evaluation and an ROC curve for testing
+evaluation.
+SMOTE: The evaluation of hybrid SMOTE, in conjunction with three
+baseline models, is depicted in Figs. 8 and 9. The findings underscore
+a notable enhancement in accuracy for detecting imbalanced attacks.
+Fig. 8 presents the learning curve, while Fig. 9 illustrates the ROC curve
+evaluation results. Particularly noteworthy is the superior performance
+observed in the ROC curve accuracy when SMOTE is combined with
+CatBoost, as evidenced among the improved models. This outcome
+emphasizes the effectiveness of the hybrid SMOTE approach, with Cat-
+Boost, in achieving higher accuracy in distinguishing between positive
+and negative classes.
+BorderlineSMOTE: The evaluation of the hybrid BorderlineSMOTE,
+integrated with three baseline models, is depicted in Figs. 10 and
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+12
+T.-T.-H. Le et al.
+Fig. 6. Learning curve evaluation results of Tomek and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+Fig. 7. ROC curve evaluation results of Tomek and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+11. The results unequivocally indicate a substantial improvement in
+accuracy for detecting imbalanced attacks. Notably, the obtained re-
+sults highlight that the combination of BorderlineSMOTE and CatBoost
+exhibits slightly better performance accuracy when compared to other
+baseline models. This observation underscores the efficacy of employ-
+ing BorderlineSMOTE with CatBoost for enhanced accuracy in detecting
+imbalanced attacks.
+4.3. Hybrid methods with ensemble models results
+In this section, we present three hybrid sampling methods that com-
+bine undersampling and oversampling (US-OS) with ensemble models:
+SMOTETomek, SMOTEENN, and BorderlineSMOTE.
+SMOTETomek: The learning curve and ROC curve findings for the
+SMOTETomek technique are visualized in Figs. 12 and 13. These re-
+sults clearly demonstrate a significant enhancement in accuracy when
+incorporating the SMOTETomek method with the three baseline mod-
+els. Moreover, the obtained results emphasize that the combination
+of SMOTETomek and CatBoost exhibits slightly superior performance
+accuracy compared to other baseline models. This observation un-
+derscores the efficacy of employing SMOTETomek with CatBoost for
+enhanced accuracy in detecting imbalanced attacks.
+SMOTEENN: The outcomes of the learning curve and ROC curve
+analyses for the SMOTEENN technique are presented in Figs. 14 and 15.
+These results clearly showcase a substantial improvement in accuracy
+when integrating the SMOTEENN method with the three fundamental
+models. Furthermore, the results obtained underscore that the amalga-
+mation of SMOTEENN and CatBoost manifests slightly superior perfor-
+mance accuracy compared to other baseline models. This observation
+highlights the effectiveness of utilizing SMOTEENN with CatBoost for
+enhanced accuracy in detecting imbalanced attacks.
+BorderlineSMOTETomek: The results of the learning curve and ROC
+curve analyses for the BorderlineSMOTETomek approach are illustrated
+in Figs. 16 and 17. These visualizations highlight a significant im-
+provement in accuracy when integrating the BorderlineSMOTETomek
+method with the three foundational models. Significantly, the results
+indicate that the combination of BorderlineSMOTE with three baseline
+models achieves comparable performance accuracy on the IoTID20
+dataset, with BorderlineSMOTE paired with XGBoost demonstrating
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+13
+T.-T.-H. Le et al.
+Fig. 8. Learning curve evaluation results of SMOTE and ensemble models on two public datasets.(a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+Fig. 9. ROC curve evaluation results of SMOTE and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+slightly better results than others. This observation emphasizes the ef-
+fectiveness of employing BorderlineSMOTE with XGBoost for enhanced
+accuracy in detecting imbalanced attacks.
+In summary, the evaluation of three hybrid undersamplings and
+oversamplings (US-OS) methods with three baseline ensemble models
+indicates substantial improvements in attack detection. Notably, the
+hybrid BorderlineSMOTETomek combined with XGBoost outperforms
+the other combinations across both datasets.
+4.4. Comparative study of the proposed hybrid approach with baseline
+methods and prior methods
+In this section, we conduct two types of performance comparisons:
+(1) between our hybrid method and baseline methods, and (2) between
+our hybrid method and previous methods on the same datasets.
+Firstly, our comprehensive evaluation used a comparative study by
+leveraging well-established ensemble models such as XGBoost, Light-
+GBM, and AdaBoost as benchmarks. The comparison results are summa-
+rized in Table 4 for the CHAD2020 dataset and Table 5 for the IoTID20
+dataset. These findings shed light on several crucial insights:
+• Enhanced Classification Performance: Incorporating hybrid sam-
+pling techniques with baseline ensemble models consistently en-
+hances the classification performance of imbalanced IDS datasets.
+This improvement is particularly significant compared to using
+baseline ensemble models in isolation. It underscores the pivotal
+role of hybrid sampling in addressing class imbalance effectively.
+• Effectiveness of Oversampling: Oversampling (OS) and hybrid
+undersampling and oversampling (US-OS) methods generally out-
+perform undersampling (US) techniques in tackling class imbal-
+ance. The ability to generate synthetic instances to bolster the
+minority class contributes to improved model accuracy, demon-
+strating the importance of these approaches in intrusion detec-
+tion.
+• BorderlineSMOTE with XGBoost: Among the oversampling (OS)
+techniques, the combination of Borderline SMOTE with XGBoost
+consistently stands out, achieving the highest accuracy compared
+to other oversampling methods paired with various ensemble
+models. It highlights the synergy between Borderline SMOTE and
+XGBoost in effectively handling class imbalance scenarios.
+• SMOTETomek and XGBoost Dominance: Within hybrid under-
+sampling and oversampling (US-OS) techniques, the pairing of
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+14
+T.-T.-H. Le et al.
+Fig. 10. Learning curve evaluation results of BorderlineSMOTE and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+Fig. 11. ROC curve evaluation results of BorderlineSMOTE and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+SMOTETomek with XGBoost consistently delivers the highest ac-
+curacy. This result signifies the superior performance of this
+combination when compared to other US-OS methods coupled
+with different ensemble models.
+In summary, our comparative study underscores the effectiveness
+of hybrid sampling techniques in conjunction with ensemble models
+for addressing class imbalance in intrusion detection datasets. The
+choice of oversampling or hybrid undersampling and oversampling
+depends on specific dataset characteristics, with BorderlineSMOTE with
+XGBoost and SMOTETomek with XGBoost emerging as top-performing
+combinations. These findings offer valuable insights for practitioners
+and researchers seeking to enhance the accuracy and reliability of
+intrusion detection systems in real-world scenarios.
+Secondly, considering the first comparison results, our optimal hy-
+brid method is identified as BorderlineSMOTETomek paired with XG-
+Boost. Subsequently, in this comparison, we exclusively assess the
+performance of our best hybrid approach, BorderlineSMOTETomek
+and XGBoost, against prior methods on the CHAD2020 and IoTID20
+datasets. The comparative results are presented in Table 6.
+The results in Table 6 showcase the comparative performance of our
+proposed BorderlineSMOTETomek with XGBoost against several prior
+methods on the CHAD2020 and IoTID20 datasets. In the CHAD2020
+dataset, our approach outperforms GIDS [22], Random Forest [23],
+FCN [24], and LeNet [25] in terms of precision, recall, accuracy,
+and F1-score. Notably, our method achieves a high precision of 98%,
+emphasizing its ability to accurately identify positive instances. In the
+IoTID20 dataset, our approach surpasses PSO+XGB+RF [26], RF [27],
+DT [28], and PCC-CNN [29] across the evaluated metrics, with a
+precision of 99%, indicating its effectiveness in correctly classifying
+positive instances. These comparative results underscore the efficacy
+of our proposed BorderlineSMOTETomek with XGBoost for enhancing
+accuracy in detecting imbalanced attacks.
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+15
+T.-T.-H. Le et al.
+Fig. 12. Learning curve evaluation results of SMOTETomek and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+Fig. 13. ROC curve evaluation results of SMOTETomek and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+5. Discussion
+Our study addresses the persistent challenge of class imbalance in
+intrusion detection, introducing a novel methodology that integrates
+undersampling and oversampling within the ensemble classification
+framework. The goal was to significantly enhance IDS performance,
+and results demonstrate substantial improvements in various metrics,
+notably achieving higher recall without a significant drop in precision.
+Benchmarking against established models like XGBoost, LightGBM,
+and AdaBoost consistently showed competitive or superior perfor-
+mance, highlighting the robustness of our approach in extreme class
+imbalance scenarios. The adaptability of our methodology was ev-
+ident across diverse datasets, including the Car Hacking Challenge
+and IoTID20, showcasing its potential for widespread application in
+cybersecurity.
+1. CatBoost: The hybrid approach using undersampling (US) with
+CatBoost shows a moderate increase in computational time due
+to the additional steps involved in undersampling. Meanwhile,
+the hybrid approach using oversampling (OS) with CatBoost
+incurs a slightly higher overhead, primarily influenced by the
+generation of synthetic instances. However, the hybrid US-OS
+with CatBoost exhibits a cumulative effect on computational
+time, considering the combined impact of both techniques.
+2. LightGBM: The hybrid approach using undersampling (US) with
+LightGBM demonstrates a limited impact on efficiency. On the
+other hand, the hybrid OS with LightGBM results in a slight
+increase in computational time. However, the hybrid US-OS
+with LightGBM achieves a balanced load, leveraging LightGBM’s
+efficiency.
+3. XGBoost: The hybrid approach using undersampling (US) with
+XGBoost has a moderate impact while maintaining efficiency. In
+contrast, the hybrid OS with XGBoost introduces a manageable
+overhead, benefiting from XGBoost’s parallelized implementa-
+tion. The hybrid US-OS with XGBoost involves a comprehen-
+sive training process that is effectively balanced by XGBoost’s
+efficiency.
+While our proposed method achieves efficient performance accu-
+racy, it is crucial to recognize the inherent limitations of our approach.
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+16
+T.-T.-H. Le et al.
+Fig. 14. Learning curve evaluation results of SMOTEENN and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+Fig. 15. ROC curve evaluation results of SMOTEENN and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+Computational Overhead: The computational demands associated
+with our hybrid approach, especially with larger datasets, pose a signif-
+icant limitation. As dataset sizes increase, the scalability of our method
+may become a challenge, impacting real-time intrusion detection capa-
+bilities. We recognize the need for optimization strategies to mitigate
+this computational overhead.
+Generalization to Diverse Network Environments: Our study focuses
+on specific datasets and network environments, and the generalizability
+of our hybrid approach to diverse and dynamic network scenarios
+warrants careful consideration. Variability in network structures and
+characteristics may influence the effectiveness of our methodology in
+different contexts.
+Interpretability: The integration of deep learning components, as
+discussed for future research, introduces challenges related to model
+interpretability. Deep learning models may exhibit complex decision-
+making processes, potentially limiting their interpretability, which is a
+crucial aspect in the context of intrusion detection.
+Robustness to Evolving Threats: The landscape of cybersecurity is
+dynamic, with new threats emerging continuously. While our hybrid
+approach demonstrates effectiveness against known attack types, its
+robustness to evolving and sophisticated threats remains an area for
+consideration and further investigation.
+In conclusion, our hybrid approach offers practical benefits, re-
+ducing false alarms and improving resource efficiency. However, we
+acknowledge the need for optimization strategies to address computa-
+tional overhead, particularly with larger datasets. The adaptability of
+our methodology across diverse network scenarios and the potential
+challenges associated with deep learning integration underscores areas
+for future research and refinement. Despite these considerations, the
+adaptability and performance gains make it a cornerstone in IDS,
+contributing to cybersecurity efforts and encouraging the exploration
+of hybrid methodologies for enhanced digital security.
+6. Conclusion
+IDS serves as indispensable safeguards in the digital landscape,
+diligently working to identify and thwart malicious activities within our
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+17
+T.-T.-H. Le et al.
+Fig. 16. Learning curve evaluation results of BorderlineSMOTETomek and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+Fig. 17. ROC curve evaluation results of BorderlineSMOTETomek and ensemble models on two public datasets. (a), (b), (c): CHAD2020 dataset; (d), (e), (f): IoTID20 dataset.
+networks. However, their effectiveness is frequently compromised by
+the inherent class imbalance that plagues real-world datasets. This re-
+search has embarked on a compelling journey to confront this challenge
+head-on by introducing an innovative approach that harnesses the
+strengths of both undersampling and oversampling within an ensemble
+classification framework.
+The findings of our research illuminate the immense potential of this
+hybrid methodology. It is a testament to the substantial improvements
+in detection accuracy that can be achieved, particularly in scenarios
+dominated by class imbalance. Notably, our approach significantly
+enhances recall without sacrificing precision, which is vital given the
+severe consequences of undetected intrusions. The experimental results
+show that hybrid US-OS with an ensemble model, especially the Border-
+lineSMOTETomek with the XGBoost method, can significantly improve
+accuracy on imbalanced IDS datasets.
+It is crucial to acknowledge that the domain of intrusion detection
+is intrinsically dynamic. It evolves in tandem with the ever-shifting
+landscape of cyber threats. While our methodology represents a signif-
+icant leap forward, it is just one step in a continuous journey. Pursuing
+innovation in this field must remain unwavering as new threats emerge
+and existing ones evolve.
+Future work in this area could focus on optimizing the compu-
+tational efficiency of our hybrid methodology, particularly for larger
+datasets. Additionally, integrating deep learning models within our
+framework holds promise for further enhancing intrusion detection
+capabilities. Exploring the adaptation of our approach to real-time or
+network streaming scenarios is another avenue for future research,
+ensuring that intrusion detection keeps pace with the evolving digital
+landscape.
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+18
+T.-T.-H. Le et al.
+Table 4
+Comparison of the proposed method’s performance accuracy with baseline models on
+the CHAD2020 dataset.
+Approach
+Model
+CHAD2020
+Precision
+Recall
+Accuracy
+F1
+BL
+CatBoost
+0.97
+0.84
+0.83
+0.90
+LightGBM
+0.78
+0.73
+0.75
+0.75
+XGBoost
+0.98
+0.89
+0.92
+0.93
+US
+ENN+CatBoost
+0.92
+0.93
+0.91
+0.92
+ENN+LightGBM
+0.91
+0.94
+0.92
+0.92
+ENN+XGBoost
+0.93
+0.93
+0.91
+0.93
+Tomek Link+CatBoost
+0.94
+0.92
+0.95
+0.93
+Tomek Link+LightGBM
+0.95
+0.93
+0.95
+0.93
+Tomek Link+XGBoost
+0.91
+0.9
+0.92
+0.90
+OS
+SMOTE+CatBoost
+0.98
+0.94
+0.96
+0.95
+SMOTE+LightGBM
+0.98
+0.95
+0.97
+0.96
+SMOTE+XGBoost
+0.97
+0.97
+0.96
+0.96
+BorderlineSMOTE+CatBoost
+0.98
+0.96
+0.95
+0.95
+BorderlineSMOTE+LightGBM
+0.97
+0.95
+0.97
+0.96
+BorderlineSMOTE+XGBoost
+0.98
+0.97
+0.98
+0.97
+US-OS
+SMOTETomek+CatBoost
+0.98
+0.94
+0.96
+0.95
+SMOTETomek+LightGBM
+0.98
+0.95
+0.95
+0.96
+SMOTETomek+XGBoost
+0.99
+0.97
+0.95
+0.96
+SMOTTEENN+CatBoost
+0.98
+0.97
+0.97
+0.97
+SMOTTEENN+LightGBM
+0.97
+0.91
+0.94
+0.93
+SMOTTEENN+XGBoost
+0.98
+0.95
+0.97
+0.96
+BorderlineSMOTETomek+CatBoost
+0.97
+0.96
+0.97
+0.96
+BorderlineSMOTETomek+LightGBM
+0.98
+0.95
+0.97
+0.96
+BorderlineSMOTETomek+XGBoost
+0.98
+0.99
+0.97
+0.98
+Table 5
+Comparison of the proposed method’s performance accuracy with baseline models on
+the IoTID20 dataset.
+Approach
+Model
+IoTID20
+Precision
+Recall
+Accuracy
+F1
+BL
+CatBoost
+0.81
+0.81
+0.81
+0.81
+LightGBM
+0.82
+0.82
+0.80
+0.82
+XGBoost
+0.84
+0.84
+0.81
+0.84
+US
+ENN+CatBoost
+0.92
+0.91
+0.90
+0.91
+ENN+LightGBM
+0.89
+0.88
+0.85
+0.88
+ENN+XGBoost
+0.93
+0.94
+0.90
+0.93
+Tomek Link+CatBoost
+0.94
+0.94
+0.93
+0.94
+Tomek Link+LightGBM
+0.93
+0.92
+0.91
+0.92
+Tomek Link+XGBoost
+0.95
+0.91
+0.92
+0.92
+OS
+SMOTE+CatBoost
+0.95
+0.92
+0.93
+0.93
+SMOTE+LightGBM
+0.97
+0.93
+0.95
+0.95
+SMOTE+XGBoost
+0.97
+0.94
+0.96
+0.95
+BorderlineSMOTE+CatBoost
+0.98
+0.97
+0.96
+0.96
+BorderlineSMOTE+LightGBM
+0.97
+0.98
+0.96
+0.96
+BorderlineSMOTE+XGBoost
+0.97
+0.98
+0.95
+0.97
+US-OS
+SMOTETomek+CatBoost
+0.98
+0.95
+0.97
+0.96
+SMOTETomek+LightGBM
+0.97
+0.95
+0.96
+0.96
+SMOTETomek+XGBoost
+0.97
+0.97
+0.96
+0.97
+SMOTTEENN+CatBoost
+0.98
+0.93
+0.92
+0.95
+SMOTTEENN+LightGBM
+0.98
+0.95
+0.94
+0.95
+SMOTTEENN+XGBoost
+0.98
+0.97
+0.97
+0.97
+BorderlineSMOTETomek+CatBoost
+0.98
+0.93
+0.92
+0.95
+BorderlineSMOTETomek+LightGBM
+0.98
+0.95
+0.94
+0.95
+BorderlineSMOTETomek+XGBoost
+0.99
+0.98
+0.98
+0.98
+Table 6
+Accuracy comparison between the proposed method and prior approaches.
+Dataset
+Method
+Precision
+Recall
+Accuracy
+F1
+CHAD2020
+GIDS [22]
+–
+–
+98
+–
+Random Forest [23]
+90
+99
+97
+94
+FCN [24]
+98.32
+96.17
+94.88
+97.86
+LeNet [25]
+96.71
+93.42
+95.37
+94.51
+Ours
+98
+99
+97
+98
+(continued on next page)
+Table 6 (continued).
+Dataset
+Method
+Precision
+Recall
+Accuracy
+F1
+IoTID20
+PSO+XGB+RF [26]
+–
+–
+83
+–
+RF [27]
+–
+–
+96.5
+–
+DT (Decision Tree) [28]
+–
+–
+90.25
+–
+PCC-CNN [29]
+85
+87
+91
+86
+Ours
+99
+98
+98
+98
+CRediT authorship contribution statement
+Thi-Thu-Huong Le: Writing – review & editing, Writing – origi-
+nal draft, Visualization, Validation, Supervision, Software, Resources,
+Methodology,
+Formal
+analysis,
+Data
+curation,
+Conceptualization.
+Yeongjae Shin: Writing – original draft, Visualization, Software,
+Methodology,
+Formal
+analysis,
+Data
+curation.
+Myeongkil
+Kim:
+Writing – original draft, Visualization, Methodology, Formal analysis.
+Howon Kim: Writing – review & editing, Validation, Supervision,
+Resources, Project administration, Investigation, Funding acquisition.
+Declaration of competing interest
+The authors declare that they have no known competing financial
+interests or personal relationships that could have appeared to
+influence the work reported in this paper.
+Data availability
+Data will be made available on request.
+Acknowledgment
+This research was supported by the MSIT(Ministry of Science and
+ICT), Korea, under the Convergence security core talent training busi-
+ness(Pusan National University) support program(IITP-2024-2022-0-
+01201) supervised by the IITP(Institute for Information & Commu-
+nications Technology Planning & Evaluation) and this research was
+supported by the MSIT(Ministry of Science and ICT), Korea, under the
+ITRC(Information Technology Research Center) support program(IITP-
+2024-2020-0-01797) supervised by the IITP(Institute for Information &
+Communications Technology Planning & Evaluation).
+References
+[1] W. Lee, S.J. Stolfo, K.W. Mok, A data mining framework for building intrusion
+detection models, in: Proceedings of the 1999 IEEE Symposium on Security and
+Privacy, (Cat. No. 99CB36344), IEEE, 1999, pp. 120–132.
+[2] T. Sowmya, E.M. Anita, A comprehensive review of AI based intrusion detection
+system, Meas.: Sens. (2023) 100827.
+[3] A.L. Buczak, E. Guven, A survey of data mining and machine learning methods
+for cyber security intrusion detection, IEEE Commun. Surv. Tutor. 18 (2) (2015)
+1153–1176.
+[4] L. Liu, P. Wang, J. Lin, L. Liu, Intrusion detection of imbalanced network traffic
+based on machine learning and deep learning, IEEE Access 9 (2020) 7550–7563.
+[5] T. Hasanin, T. Khoshgoftaar, The effects of random undersampling with simu-
+lated class imbalance for big data, in: 2018 IEEE International Conference on
+Information Reuse and Integration, IRI, IEEE, 2018, pp. 70–79.
+[6] T. Bi, D. Jarnikov, J. Lukkien, Supervised two-stage transfer learning on
+imbalanced dataset for sport classification, in: Image Analysis and Processing–
+ICIAP 2019: 20th International Conference, Trento, Italy, September (2019) 9–13,
+Proceedings, Part I 20, Springer International Publishing, 2019, pp. 356–366.
+[7] A. Fernández, S. García, M. Galar, R.C. Prati, B. Krawczyk, F. Herrera, Learning
+from Imbalanced Data Sets, vol. 10, Springer, Cham, 2018, 978–973.
+[8] C. Wheelus, E. Bou-Harb, X. Zhu, Tackling class imbalance in cyber security
+datasets, in: 2018 IEEE International Conference on Information Reuse and
+Integration, IRI, IEEE, 2018, pp. 229–232.
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+19
+T.-T.-H. Le et al.
+[9] G. Haixiang, L. Yijing, J. Shang, G. Mingyun, H. Yuanyue, G. Bing, Learning
+from class-imbalanced data: Review of methods and applications, Expert Syst.
+Appl. 73 (2017) 220–239.
+[10] N.V. Chawla, K.W. Bowyer, L.O. Hall, W.P. Kegelmeyer, SMOTE: synthetic
+minority over-sampling technique, J. Artif. Intell. Res. 16 (2002) 321–357.
+[11] Q. Dai, J.W. Liu, Y.H. Shi, Class-overlap undersampling based on Schur
+decomposition for Class-imbalance problems, Expert Syst. Appl. 221 (2023)
+119735.
+[12] A.S. Dina, A.B. Siddique, D. Manivannan, Effect of balancing data using synthetic
+data on the performance of machine learning classifiers for intrusion detection
+in computer networks, IEEE Access 10 (2022) 96731–96747, http://dx.doi.org/
+10.1109/ACCESS.2022.3205337.
+[13] A. Majeed, S.O. Hwang, CTGAN-MOS: Conditional generative adversarial network
+based minority-class-augmented oversampling scheme for imbalanced problems,
+IEEE Access 11 (2023) 85878–85899, http://dx.doi.org/10.1109/ACCESS.2023.
+3303509.
+[14] A. Mahadevan, M. Arock, A class imbalance-aware review rating prediction
+using hybrid sampling and ensemble learning, Multimedia Tools Appl. 80 (2021)
+6911–6938.
+[15] F. Li, B. Wang, P. Wang, Y. Li, Overlapping oriented imbalanced ensemble
+learning method based on projective clustering and stagewise hybrid sampling,
+2022, arXiv preprint arXiv:2212.03182.
+[16] Hyunjae Kang, Dong Hyun Ahn, Gyung Min Lee, Jeong Do Yoo, Kyung Ho
+Park, Huy Kang Kim, IoT network intrusion dataset, IEEE Dataport (2019)
+http://dx.doi.org/10.21227/q70p-q449.
+[17] I. Ullah, Q.H. Mahmoud, A scheme for generating a dataset for anomalous activ-
+ity detection in iot networks, in: Canadian Conference on Artificial Intelligence,
+Springer International Publishing, Cham, 2020, pp. 508–520.
+[18] I. Bala, M.M. Mijwil, G. Ali, E. Sadıkoğlu, Analysing the connection between
+AI and industry 4.0 from a cybersecurity perspective: Defending the smart
+revolution, Mesopotamian J. Big Data 2023 (2023) 63–69.
+[19] K. Scarfone, P. Mell, Guide to Intrusion Detection and Prevention Systems (IDPS),
+800, NIST Special Publication, 2007, p. 94, 2007.
+[20] M. Roesch, Snort: Lightweight intrusion detection for networks, Lisa 99 (1)
+(1999) 229–238.
+[21] T. Saranya, S. Sridevi, C. Deisy, T.D. Chung, M.A. Khan, Performance analysis of
+machine learning algorithms in intrusion detection system: A review, Procedia
+Comput. Sci. 171 (2020) 1251–1260.
+[22] E. Seo, H.M. Song, H.K. Kim, GIDS: GAN based intrusion detection system for
+in-vehicle network, in: 2018 16th Annual Conference on Privacy, Security and
+Trust, PST, IEEE, 2018, pp. 1–6.
+[23] S.C. Kalkan, O.K. Sahingoz, In-vehicle intrusion detection system on controller
+area network with machine learning models, in: 2020 11th International Con-
+ference on Computing, Communication and Networking Technologies, ICCCNT,
+IEEE, 2020, pp. 1–6.
+[24] S.T. Mehedi, A. Anwar, Z. Rahman, K. Ahmed, Deep transfer learning based
+intrusion detection system for electric vehicular networks, Sensors 21 (14) (2021)
+4736.
+[25] H.M. Song, H.K. Kim, Self-supervised anomaly detection for in-vehicle network
+using noised pseudo normal data, IEEE Trans. Veh. Technol. 70 (2) (2021)
+1098–1108.
+[26] A. Sarwar, S. Hasan, W.U. Khan, S. Ahmed, S.N.K. Marwat, Design of an
+advance intrusion detection system for IoT networks, in: 2022 2nd International
+Conference on Artificial Intelligence, ICAI, IEEE, 2022, pp. 46–51.
+[27] A.Y. Hussein, A.T. Sadiq, Meerkat clan-based feature selection in random forest
+algorithm for IoT intrusion detection, Iraqi J. Comput. Commun. Control Syst.
+Eng. 22 (3) (2022).
+[28] V. Surya, M.M. Selvam, An effective machine learning approach for lot intrusion
+detection system based on SMOTE, in: 2022 6th International Conference
+on Electronics, Communication and Aerospace Technology, IEEE, 2022, pp.
+905–911.
+[29] M. Bhavsar, K. Roy, J. Kelly, O. Olusola, Anomaly-based intrusion detection
+system for IoT application, Discov. Internet Things 3 (1) (2023) 5.
+[30] S. Bagui, K. Li, Resampling imbalanced data for network intrusion detection
+datasets, J. Big Data 8 (1) (2021) 1–41.
+[31] S.M. Abd Elrahman, A. Abraham, A review of class imbalance problem, J. Netw.
+Innov. Comput. 1 (2013) (2013) 332–340.
+[32] L. Heling, M. Acosta, Estimating characteristic sets for RDF dataset profiles based
+on sampling, in: European Semantic Web Conference, Springer International
+Publishing, Cham, 2020, pp. 157–175.
+[33] B. Krawczyk, G. Schaefer, An improved ensemble approach for imbalanced
+classification problems, in: 2013 IEEE 8th International Symposium on Applied
+Computational Intelligence and Informatics, SACI, IEEE, 2013, pp. 423–426.
+[34] C.F. Tsai, Y.T. Sung, Ensemble feature selection in high dimension, low sample
+size datasets: Parallel and serial combination approaches, Knowl.-Based Syst. 203
+(2020) 106097.
+[35] H.M. Song, J. Woo, H.K. Kim, In-vehicle network intrusion detection using deep
+convolutional neural network, Veh. Commun. 21 (2020) 100198.
+[36] R.U.D. Refat, A.A. Elkhail, A. Hafeez, H. Malik, Detecting can bus intrusion by
+applying machine learning method to graph based features, in: Intelligent Sys-
+tems and Applications: Proceedings of the 2021 Intelligent Systems Conference
+(IntelliSys), vol. 3, Springer International Publishing, 2022, pp. 730–748.
+[37] M. Driss, I. Almomani, Z.e. Huma, J. Ahmad, A federated learning framework
+for cyberattack detection in vehicular sensor networks, Complex Intell. Syst. 8
+(5) (2022) 4221–4235.
+[38] T.T.H. Le, N. Suryanto, H. Kim, J. Ji, S. Heo, Enhancing intrusion detection and
+explanations for imbalanced vehicle CAN network data, in: Proceedings of the
+12th International Symposium on Information and Communication Technology,
+2023, pp. 777–784.
+[39] A.S. Ahanger, S.M. Khan, F.S. Masoodi, Intrusion detection system for IoT
+environment using ensemble approaches, in: 2023 10th International Conference
+on Computing for Sustainable Global Development (INDIACom), IEEE, 2023, pp.
+935–938.
+[40] R. Alexander, K.P.M. Kumar, Hybrid rule based classification of attacks in
+Internet of Things (IoT) intrusion detection system, in: 2023 7th International
+Conference on Computing Methodologies and Communication, ICCMC, IEEE,
+2023, pp. 1249–1254.
+[41] T.T.H. Le, H. Kim, H. Kang, H. Kim, Classification and explanation for intrusion
+detection system based on ensemble trees and SHAP method, Sensors 22 (3)
+(2022) 1154.
+[42] R.K. Malaiya, D. Kwon, S.C. Suh, H. Kim, I. Kim, J. Kim, An empirical
+evaluation of deep learning for network anomaly detection, IEEE Access 7 (2019)
+140806-140817.
+[43] P. Prajapati, B. Bhatt, G. Zalavadiya, M. Ajwalia, P. Shah, A review on recent
+intrusion detection systems and intrusion prevention systems in IoT, in: 2021
+11th International Conference on Cloud Computing, Data Science & Engineering
+(Confluence), IEEE, 2021, pp. 588–593.
+[44] N.A. Azeez, T.M. Bada, S. Misra, A. Adewumi, C. Van der Vyver, R. Ahuja,
+Intrusion detection and prevention systems: an updated review, in: Data Man-
+agement, Analytics and Innovation: Proceedings of ICDMAI 2019, vol. 1, 2020,
+pp. 685–696.
+[45] J.M. Johnson, T.M. Khoshgoftaar, Survey on deep learning with class imbalance,
+J. Big Data 6 (1) (2019) 1–54.
+[46] P. Bedi, N. Gupta, V. Jindal, I-SiamIDS: an improved Siam-IDS for handling class
+imbalance in network-based intrusion detection systems, Appl. Intell. 51 (2021)
+1133–1151.
+[47] H. Ding, L. Chen, L. Dong, Z. Fu, X. Cui, Imbalanced data classification: A
+KNN and generative adversarial networks-based hybrid approach for intrusion
+detection, Future Gener. Comput. Syst. 131 (2022) 240–254.
+[48] N. Gupta, V. Jindal, P. Bedi, CSE-IDS: Using cost-sensitive deep learning and
+ensemble algorithms to handle class imbalance in network-based intrusion
+detection systems, Comput. Secur. 112 (2022) 102499.
+[49] V.S. Spelmen, R. Porkodi, A review on handling imbalanced data, in: 2018
+International Conference on Current Trends Towards Converging Technologies,
+ICCTCT, IEEE, 2018, pp. 1–11.
+[50] R.M. Pereira, Y.M. Costa, C.N. Silla Jr., MLTL: A multi-label approach for the
+tomek link undersampling algorithm, Neurocomputing 383 (2020) 95–105.
+[51] F. Yang, K. Wang, L. Sun, M. Zhai, J. Song, H. Wang, A hybrid sampling
+algorithm combining synthetic minority over-sampling technique and edited
+nearest neighbor for missed abortion diagnosis, BMC Med. Inform. Decis. Mak.
+22 (1) (2022) 344.
+[52] H. Han, W.Y. Wang, B.H. Mao, Borderline-SMOTE: a new over-sampling method
+in imbalanced data sets learning, in: International Conference on Intelligent
+Computing, Springer Berlin Heidelberg, Berlin, Heidelberg, 2005, pp. 878–887.
+[53] H. Yang, M. Li, Software defect prediction based on smote-tomek and xgBoost, in:
+International Conference on Bio-Inspired Computing: Theories and Applications,
+Springer Singapore, Singapore, 2021, pp. 12–31.
+[54] A. Puri, M. Kumar Gupta, Improved hybrid bag-boost ensemble with K-means-
+SMOTE–ENN technique for handling noisy class imbalanced data, Comput. J. 65
+(1) (2022) 124–138.
+[55] Q. Ning, X. Zhao, Z. Ma, A novel method for identification of Glutarylation sites
+combining Borderline-SMOTE with tomek links technique in imbalanced data,
+IEEE/ACM Trans. Comput. Biol. Bioinform. 19 (5) (2021) 2632–2641.
+[56] Y. Freund, R.E. Schapire, A decision-theoretic generalization of on-line learning
+and an application to boosting, J. Comput. Syst. Sci. 55 (1) (1997) 119–139.
+[57] T. Hastie, S. Rosset, J. Zhu, H. Zou, Multi-class adaboost, Stat. Interface 2 (3)
+(2009) 349–360.
+[58] G. Ke, Q. Meng, T. Finley, T. Wang, W. Chen, W. Ma, T.Y. Liu, Lightgbm: A
+highly efficient gradient boosting decision tree, Adv. Neural Inf. Process. Syst.
+(2017) 30.
+[59] T. Chen, C. Guestrin, Xgboost: A scalable tree boosting system, in: Proceedings
+of the 22nd Acm Sigkdd International Conference on Knowledge Discovery and
+Data Mining, 2016, pp. 785–794.
+
+
+---
+
+Applied Soft Computing 157 (2024) 111517
+20
+T.-T.-H. Le et al.
+Thi-Thu-Huong Le currently holds the position of Research
+Professor at the Blockchain Platform Research Center, Pusan
+National University (PNU). She embarked on her academic
+journey with a Bachelor’s degree from Hung Yen University
+of Technology and Education (HYUTE), Vietnam 2007. She
+furthered her education by obtaining a Master’s degree in
+Technology (HUST) in 2013 and culminated her academic
+pursuit with a Ph.D. from PNU, South Korea, in 2020.
+With a robust academic background, she has accumulated
+a wealth of experience. Starting in 2020, she has spent
+three years as a postdoctoral researcher at PNU. Before
+this, she served as a lecturer at HYUTE for seven years.
+Her professional journey has been enriched by active par-
+ticipation in machine learning projects, covering areas like
+NILM, IDS, AI Industry 4.0, AI security, and deep learning-
+based CFD. Her research interests include machine learning,
+deep learning, data analysis, explainable AI, AI security, and
+signal processing.
+Yeongjae Shin is currently a Master’s degree candidate in
+Computer Science at Pusan National University, South Ko-
+rea. He completed his Bachelor’s in Electronic Engineering
+from Dongeui University in 2021. His academic journey has
+been enriched by experiences in data analysis and the de-
+velopment of object detection technologies gained through
+active participation in computer vision projects. Presently,
+his research is centered around artificial intelligence, AI
+security, and the exploration of Large Language Models.
+Myeongkil Kim is pursuing a Ph.D. at Pusan National
+University (PNU) in South Korea. He obtained his Bachelor’s
+degree in 2017 and completed his Master’s in 2020 at PNU.
+Along his academic path, he actively participated in various
+projects, focusing on blockchain technologies. Currently,
+his research is dedicated to exploring the convergence of
+AI and blockchain, seeking to uncover the synergies and
+possibilities at the intersection of these two cutting-edge
+fields.
+Howon Kim currently holds the esteemed position of
+Professor at the Department of Electrical and Computer
+Engineering, PNU. His role extends beyond academia, en-
+compassing leadership positions as the Chief of the Energy
+IoT (Internet of Things) ITRC (IT Research Center) and Chief
+of the ISEC (Information Security Education Center) at PNU.
+Before his tenure at PNU, his career journey included a
+significant stint at the Electronics and Telecommunications
+Research Institute (ETRI), where he served as a Team Leader
+for a decade, starting in December 1998. His pursuit of
+knowledge led him to Ruhr-University Bochum, Germany,
+where he undertook the role of Postdoctoral Researcher at
+the Chair for Communication Security Group (COSY) from
+July 2003 to June 2004. His academic journey is marked
+by notable achievements, including attaining a Ph.D. degree
+from the Pohang University of Science and Technology
+(POSTECH) and a bachelor’s degree from the KyungPook
+National University (KNU).

@@ -1,0 +1,101 @@
+[
+  {
+    "file": "Ahmadi_2018_Gap_Weighted_Kernel.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Ahmadi_2018_Gap_Weighted_Kernel.pdf",
+    "mode": "fast",
+    "pages": 0,
+    "output_chars": 0,
+    "error_type": "exception",
+    "message": "Traceback (most recent call last):",
+    "timestamp": "2026-05-17T23:46:58.908920",
+    "dpi": 150
+  },
+  {
+    "file": "Attack_Model_2012_Penetration_SQLi.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Attack_Model_2012_Penetration_SQLi.pdf",
+    "mode": "fast",
+    "pages": 0,
+    "output_chars": 0,
+    "error_type": "exception",
+    "message": "Traceback (most recent call last):",
+    "timestamp": "2026-05-17T23:47:10.739206",
+    "dpi": 150
+  },
+  {
+    "file": "Deep_Neural_Network_SQLi_2022.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Deep_Neural_Network_SQLi_2022.pdf",
+    "mode": "fast",
+    "pages": 1,
+    "output_chars": 41,
+    "error_type": "output_too_short",
+    "message": "Only 41 chars for 1 pages",
+    "timestamp": "2026-05-17T23:47:34.102926",
+    "dpi": 150
+  },
+  {
+    "file": "GSQLi_2025_GAN_SQLi_WAF.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\GSQLi_2025_GAN_SQLi_WAF.pdf",
+    "mode": "fast",
+    "pages": 0,
+    "output_chars": 0,
+    "error_type": "exception",
+    "message": "Traceback (most recent call last):",
+    "timestamp": "2026-05-17T23:48:44.458352",
+    "dpi": 150
+  },
+  {
+    "file": "Justin_Clarke_2012_SQLi_Book_Preview.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Justin_Clarke_2012_SQLi_Book_Preview.pdf",
+    "mode": "fast",
+    "pages": 0,
+    "output_chars": 0,
+    "error_type": "exception",
+    "message": "Traceback (most recent call last):",
+    "timestamp": "2026-05-17T23:49:27.692022",
+    "dpi": 150
+  },
+  {
+    "file": "LSTM_on_AST_SQLi_2021.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\LSTM_on_AST_SQLi_2021.pdf",
+    "mode": "fast",
+    "pages": 0,
+    "output_chars": 0,
+    "error_type": "exception",
+    "message": "Traceback (most recent call last):",
+    "timestamp": "2026-05-17T23:49:47.092443",
+    "dpi": 150
+  },
+  {
+    "file": "Muduli_2023_AE_Net_SQLi.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Muduli_2023_AE_Net_SQLi.pdf",
+    "mode": "fast",
+    "pages": 0,
+    "output_chars": 0,
+    "error_type": "exception",
+    "message": "Traceback (most recent call last):",
+    "timestamp": "2026-05-17T23:50:18.533992",
+    "dpi": 150
+  },
+  {
+    "file": "Phương pháp phát sinh dữ liệu tấn công đánh lừa IDS học máy dựa trên mạng sinh đối kháng - phuong_phap_phat_sinh_du_lieu_tan_cong_danh_lua_ids_hoc_may.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Phương pháp phát sinh dữ liệu tấn công đánh lừa IDS học máy dựa trên mạng sinh đối kháng - phuong_phap_phat_sinh_du_lieu_tan_cong_danh_lua_ids_hoc_may.pdf",
+    "mode": "fast",
+    "pages": 6,
+    "output_chars": 31,
+    "error_type": "output_too_short",
+    "message": "Only 31 chars for 6 pages",
+    "timestamp": "2026-05-17T23:50:42.343607",
+    "dpi": 150
+  },
+  {
+    "file": "Xu_2023_IE_GAN_SQLi.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Xu_2023_IE_GAN_SQLi.pdf",
+    "mode": "fast",
+    "pages": 0,
+    "output_chars": 0,
+    "error_type": "exception",
+    "message": "Traceback (most recent call last):",
+    "timestamp": "2026-05-17T23:51:46.758535",
+    "dpi": 150
+  }
+]
