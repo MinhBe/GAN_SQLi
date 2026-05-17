@@ -1,0 +1,1358 @@
+machine learning &
+knowledge extraction
+Article
+A Survey on GAN Techniques for Data Augmentation to
+Address the Imbalanced Data Issues in Credit Card
+Fraud Detection
+EmilijaStrelcenia*andSimantPrakoonwit*
+DepartmentofCreativeTechnology,BournemouthUniversity,FernBarrow,PooleBH125BB,UK
+* Correspondence:strelceniae@bournemouth.ac.uk(E.S.);sprakoonwit@bournemouth.ac.uk(S.P.)
+Abstract:Dataaugmentationisanimportantprocedureindeeplearning.GAN-baseddataaugmen-
+tationcanbeutilizedinmanydomains.Forinstance,inthecreditcardfrauddomain,theimbalanced
+datasetproblemisamajoroneasthenumberofcreditcardfraudcasesisintheminoritycomparedto
+legalpayments.Ontheotherhand,generativetechniquesareconsideredeffectivewaystorebalance
+theimbalancedclassissue,asthesetechniquesbalancebothminorityandmajorityclassesbeforethe
+training.Inamorerecentperiod,GenerativeAdversarialNetworks(GANs)areconsideredoneofthe
+mostpopulardatagenerativetechniquesastheyareusedinbigdatasettings.Thisresearchaimsto
+presentasurveyondataaugmentationusingvariousGANvariantsinthecreditcardfrauddetection
+domain.Inthissurvey,weofferacomprehensivesummaryofseveralpeer-reviewedresearchpapers
+onGANsyntheticgenerationtechniquesforfrauddetectioninthefinancialsector.Inaddition,this
+surveyincludesvarioussolutionsproposedbydifferentresearcherstobalanceimbalancedclasses.In
+theend,thisworkconcludesbypointingoutthelimitationsofthemostrecentresearcharticlesand
+futureresearchissues,andproposessolutionstoaddresstheseproblems.
+Keywords: Generative Adversarial Networks; fraud detection; imbalanced data; synthetic data;
+deeplearning
+Citation:Strelcenia,E.;Prakoonwit,
+S.ASurveyonGANTechniquesfor
+DataAugmentationtoAddressthe
+1. Introduction
+ImbalancedDataIssuesinCredit
+Recently, credit card usage has been regarded as a more convenient mode of pay-
+CardFraudDetection.Mach.Learn.
+ment [1,2]. However, at the same time, new credit card fraud techniques have made it
+Knowl.Extr.2023,5,304–329.
+https://doi.org/10.3390/ difficulttodetectfraudontime,thusleadingtomonetarylossesforcommercialbanksand
+make5010019 individuals[3,4]. Creditcardtransactionsdisplaythehighestdegreeoftheclassimbalance
+problem [5]. Imbalanced datasets contain observations that consist of bad applications
+AcademicEditors:EdgarWeippland
+(minorityclass)andgoodapplications(majorityclass). Thebadapplications(fraudulent
+FrancescoBuccafurri
+transactions)occurrarelywhencomparedtogoodapplications(legaltransactions)[6–8].To
+Received:14February2023 dealwiththisissue,researchersandbankshavetomakesurethatthelearningframeworks
+Revised:5March2023 areabletogeneralizelearningfrommultifacetedpatternsacrossthedatasetsandreduce
+Accepted:8March2023 the incorrect positives affectively within the fraud detection systems [9]. Fraud can be
+Published:11March2023 definedasanyeventthatinvolvesacriminalmotive,which,mostofthetimes,ishardto
+identify. Nowadays,onlinefraudisagrowingconcernallovertheworld. Fraudinvolves
+criminalintentions,whicharegenerallydifficulttodetect.
+Creditcardfraudisagrowingconcernamongresearchersandfinancialinstitutions.
+Copyright: © 2023 by the authors.
+On the other hand, fraud detection is a rather hard task using standard methods. The
+Licensee MDPI, Basel, Switzerland.
+recent technological advancements have created further difficulties in detecting credit
+This article is an open access article
+cardfraud. So, atpresent, theintroductionofsoundcreditcarddetectionmethodshas
+distributed under the terms and
+greatimportanceamongbusinessesandacademia. Inmorerecentyears,machinelearning
+conditionsoftheCreativeCommons
+Attribution(CCBY)license(https:// methods,specificallydeeplearning,havebeenextensivelyusedtodetectcreditcardfraud.
+creativecommons.org/licenses/by/ Thesemethodsareabletoanalyzelargestreamsofdata,identifyhiddenpatterns,anddetect
+4.0/). abnormalitiesthatmaypointoutillegalactivities. Inaddition,deeplearningmethodscan
+Mach.Learn.Knowl.Extr.2023,5,304–329.https://doi.org/10.3390/make5010019 https://www.mdpi.com/journal/make
+Mach.Learn.Knowl.Extr.2023,5 305
+learnandadaptfromnewdata,improvingtheefficiencyofidentifyingemergingfraud
+instances. Additionally, the credit card fraud domain is a vital area of study, as it has
+implicationsforotherareasbeyondfinancialfraud. Forinstance,thesamemethodscanbe
+usedtodetectanomaliesininsurance,healthcareandotherareas. Researchersarguethat
+creditcardfrauddetectionisakeyarea,asitcanhelppreventmonetaryloss.
+Nevertheless, due to the issue of imbalanced classes in the real-world credit card
+dataset,researchersusevarioustypesofdataaugmentationtechniquespriortotraining
+classifierstoenhancetheefficiencyoflearningmodels[10]. Itisimperativetomentionthat
+manydeeplearningmachinealgorithmsareintroducedtohandleimbalancedclassification
+problems[11–14]. Dataaugmentationistheprocessofgeneratingnewtrainingdatafrom
+originaldata. Itisanimportanttechniquetoenhancethereliabilityandperformanceof
+deeplearningmodels,makingthemhighlyefficientinreal-worldapplications. Usingthe
+data augmentation method, we can enhance the size and diversity of the training data
+insteadofcollectingmoredata. Dataaugmentationhelpstoreduceoverfittingandenhance
+therobustnessofthemodelbymakingithighlyadaptabletonewdata. Furthermore,the
+dataaugmentationtechniquereducestheneedfortime-consumingandcostlyprocessesof
+datacollectionandlabelingprotocols,specificallyinthedomainwheredataarelimitedor
+hardtoacquire. Dataaugmentationisusedinmachinelearningtosyntheticallyincrease
+thedatasetsizebycreatingmodifiedversionsoftheoriginaldataset. Themodificationscan
+bedonebyapplyingtransformationstothedataset—forinstance,scaling,translation,or
+flipping. Bygeneratingnewinstances,thealgorithmisabletoaccessmoreexamplesofthe
+sameclass,thusimprovingtheperformanceandaccuracyofthemodel[11]. Inrecentyears,
+dataaugmentationhasbecomemorecommoninthecomputervisiontask. Forinstance,
+imagerotationbyafewdegreesorimageflippingcangeneratenewvariationsofthesame
+class,helpingthemodeltoimproveitsperformance.Dataaugmentationisusedtogenerate
+additionaltrainingdatabyapplyingtransformationstothereal-worlddataset. Similarly,
+inthecreditcardfrauddetectiondomain,dataaugmentationisusedtogeneratesynthetic
+fraudulenttransactionsthroughtransformations,suchaschangingthelocationandtimeof
+thetransactions,oraddingnoiseoralteringtheamountoftransactions. Thegenerationof
+additionalexamplesoffraudulenttransactionsallowsthedeeplearningmodeltoidentify
+indicativefraudfeaturesandpatterns,evenincaseswherethenumberoflabeledexamples
+islimited. Dataaugmentationishighlyusefulincreditcardfrauddetection,asithelps
+inimprovingtheoverallaccuracyofthemodelandreducingfalsepositives. Theissueof
+falsepositivesariseswhenthemodelincorrectlyclassifiesalegaltransactionasfraudulent,
+whichcanleadtomonetarylossesforthefinancialinstitutionandcustomerdissatisfaction.
+Themodelcanlearntodiscriminatelegaltransactionsfromfraudulenttransactionsmore
+accuratelybygeneratingsyntheticfraudulentdata.
+While working with machine learning, it is vital to have an appropriate and well-
+representeddatasettotrainthealgorithm[15,16]. Thisdenotesthatthedatasetshouldbe
+largeenoughandcoverasmanycasesaspossible. Atthesametime,itshoulddemonstrate
+reality. Agooddatasetallowstheprogramstohaveanexcellentmodeloftheessential
+traitsofthedata,andmakesitpossibletogeneralizethesecharacteristics[17,18]. Inthis
+case,thegenerationofartificialdatacanbehelpfulformultiplereasons,suchascreating
+newdatatomaintaintheoriginaldataset’sconfidentialityandoversamplingtheminority
+class[19,20].
+Oneofthemainreasonsforgeneratingartificialdataisoversamplingtheminority
+class[21].Oversamplingisperformedtolearntheunbalanceddatasets.Inmanyreal-world
+datasets,theproblemofimbalancepersists. Inthecreditcardfrauddomain,thenumber
+offraudulentactivitiesisminimalwhencomparedwithlegalactivities,thuscreatingan
+imbalancedclassproblem[22]. Inthisscenario,itbecomesdifficultfortheclassification
+algorithms to identify the minority class (fraudulent transactions) [23]. Augmentation
+of the minority class data is a way to deal with the imbalanced class problem. This is
+possiblebyproducingnewinstanceswithsimilartraitstotheoriginaldata. Augmentation
+helpstoavoidtheunderrepresentationproblemoftheminorityclass,whilesimultaneously
+Mach.Learn.Knowl.Extr.2023,5 306
+avoidingoverfittingaswell[24,25]. Anotherreasonforgeneratingartificialdatasetsisto
+usesyntheticdatatoavoidgovernmentregulationsandtheconfidentialityofcustomers[26].
+Forexample,financialdata,suchascreditcardtransactiondata,containsensitivedetails
+aboutthecustomers,andtrainingusingthemcouldriskcustomers’privacy. Onewayto
+dealwithprivacyconcernsistogenerateartificialdatasetstotrainthemodel[27]. Among
+the generative methods, one of the most popular is Generative Adversarial Networks
+(GANs),developedby[28]. Inthissurveywork,weareseekingtochecktheflexibilityand
+scalabilityofGANstogenerateartificialsamplesforcreditcardfrauddetection. Thus,this
+studyaimstomakeadditionstotheexistingliteratureonGANsfordataaugmentationfor
+imbalancedclasslearning. Researchers[29–32]havearguedthatusingGANsisthemore
+fittingandeffectivetechniqueforhandlingimbalancedclassproblemcomparedtoother
+machinelearningapproaches. Inaddition,itishighlyrobusttowardsoverlappingand
+overfittingduetoitsabilitytounderstandhiddenstructuresofdataandtheirflexibility.For
+thesaidpurpose,wereviewedpaststudiesconductedbyresearchersinthefrauddetection
+domainusingGANstoaugmentcreditcarddata.
+Themaincontributionsofthisstudycanbesummarizedasfollows:
+1. ComparisonofGANvariantsfordataaugmentationincreditcardfrauddetection
+domain;
+2. DetaileddiscussionofthemostrecentandrelevantGANvariantsforfrauddetection;
+3. Themostcommonevaluationmetricsarediscussedandelucidated;
+4. ThisreportreviewstherecentadvancementsinusingGANsindataaugmentation;
+5. Wealsoprovideananalysisandcomparisonintermsofstrengthsandlimitations
+acrosstheGANvariantsdiscussedinthispaper.
+OrganizationofthisSurvey
+Thissurveyisstructuredasfollows:
+• Section2providesthebackgroundoftheimbalancedclasschallenge,thedefinition
+andstructureofGAN,andtheimportanceofdataaugmentationusingGANs;
+• Section3brieflydescribesdifferentGANapproachesusedinthecreditcardfraud
+domaintohandleimbalancedclasschallenges. Inaddition,thissectionalsopresents
+thetabularevaluationofseveralGANmethodologiesbasedonprecision,recalland
+F1-score;
+• Section4concludesthisresearchsurveyandprovidesfutureresearchrecommendations.
+2. Background
+2.1. ClassImbalanceChallenge
+Theimbalancedclasschallengeisthemostcommonlyoccurringissueincreditcard
+datasets, where the data distribution is highly skewed [33,34]. Several studies in the
+literaturebasedondataminingandmachinelearningalgorithmshavebeendedicatedto
+addressingthisproblem.Machinelearningtechniqueshavemadesignificantadvancements
+inrecenttimes. However,thesetechniquesrelyheavilyonlargedatasetsrepresentingthe
+wholepopulation. Similarly,fraudulentpaymentsrarelyoccurincreditcardtransactions
+comparedtolegalpayments[35]. Theillegaltransactionsdatasetsneedtocontainmore
+samplestotrainmachinelearningmethodseffectivelytogeneralizethemtothepopulation
+set[13]. Inotherwords,thenumberofcasesofcreditcardfraudisintheminoritywhen
+wecomparethemwithlegalpayments,creatingaclassimbalanceproblem. Thiscreatesan
+under-representationofoneclasswhencomparedwiththeother. Furthermore,theclass
+imbalanceresultsinpoorclassificationperformanceofthemachinelearningapproachfor
+theleastminorityclasses[36–39].
+Scientistsarguethatsyntheticdatagenerativemethodsareoneofthemosteffective
+solutionstotheimbalancedclasschallenge[37,40–42]. Thesemethodsnotonlyrebalance
+classes,butalsoreducemodeloverfitting.Oneofthemostpopulardatagenerationmethods
+isGenerativeAdversarialNetworks(GANs),whichcanbeemployedinbigdatasettings.
+Mach.Learn.Knowl.Extr.2023,5 307
+2.2. GenerativeAdversarialNetworks(GANs)
+GenerativeAdversarialNetworks,orsimplyGANs,aregenerativeMLapproaches
+firstproposedby[28]. GANsgainedpopularityduetotheireasinessandefficiency[43,44].
+In a short period, a significant development was made in the first GAN application in
+generatingsyntheticimages[45–47]. Otherthanthat,multipleGANvariantshavealso
+beenproposedtoenhanceGANs’applicability,fromcomputervisiontocreditcardfraud
+detection in commercial banks, hence the model introduced in 2014 represent a large
+development, and GANs’ applicability is continuously expanding [48]. Moreover, the
+applicabilityofGANsinfinance,whencomparedwithotherdomains,isstillconsidered
+novel,whichmakesitafertileareaofresearch. Sincetheresearchisinthedevelopment
+stage,itislogicaltoconsiderthatmoreapplicationsofGANsareyettobeintroducedand
+elaboratedupon. Currently,alotofresearchisinthetransitionalphase. Theintentionof
+thisstudyistoshowtherecentworkinthecreditcardfrauddomain.
+GANisregardedasthemostfamiliarmachinelearningmodelinunsupervisedand
+semi-supervised learning. In theory, GAN lets supervised learning advance to unsu-
+pervised learning by creating synthetic/fake data [49]. Furthermore, Wang et al. [50]
+discussedthesignificanceofthedetectionandclassificationofmaliciouscode,whichis
+highlyimportantinthecybersecuritydomain. Theauthorsemphasizedthatconventional
+signature-basedtechniquesarenolongerabletodealwiththecontinuousevolutionof
+malware,andnewmethodsarecrucialtoenhancetheefficiencyandaccuracyofmalware
+detection. To deal with the associated challenges, the authors introduced a technique
+combiningGANsandConvolutionalNeuralNetworks(CNNs)toclassifymaliciouscode
+families. Thisnovelframeworkconvertscodeintoimages,whichcanthenbefedintoa
+CNNforfeatureextractionandclassification. ThefunctionofGANistogenerateimages
+of malicious code families to augment training dataset and enhance the capabilities of
+CNN.Moreover,Wangetal.[50]usedmultipledatasetsofmaliciouscodefamilies,and
+comparedtheirmethodwithothermodels, suchasRandomForestandaconventional
+CNNclassifier. Thefindingsoftheirstudyshowthattheirmodeloutperformsthebaseline
+methodsandachievesexcellentperformanceonthedatasets. ThestudybyJiangetal.[51]
+proposedadynamicensemblealgorithmtodetectanomaliesinimbalanceddatasetsfrom
+IoTdevices. Theirframeworkisdesignedtodealwithimbalanceddatastreams,suchas
+classimbalanceandconceptdriftissues,bychangingdatadistributions. Theirproposed
+algorithmcombinesvariousbaseclassifiersandadjuststheirweightsbasedoneachclas-
+sifier’sperformance. Theempiricalfindingsoftheirstudyonoriginaldatasetssuggest
+thattheiralgorithmperformswellwhencomparedwithstate-of-the-artanomalydetection
+techniques. Inaddition,thestudyconductedbyJiangetal.[51]isinventiveinitsdynamic
+ensemble approach, which allows it to adapt to the changes in the distribution of the
+dataandattainhighaccuracyinanomalydetection. However,theonlylimitationoftheir
+experimentisthattheyconductedexperimentsonlimiteddatasets. Futureexperiments
+shouldbeonmultiplerangesofdatasetswithdifferenttraitsandcomplexitiestoattain
+moreinsightsintotherobustnessandgeneralizationsoftheiralgorithms. Inaddition,their
+studydoesnotofferadetaileddiscussionofthescalabilityandcomputationalcomplexities
+oftheproposedalgorithm,whichisessentialforapplicabilityinlarge-scaleIoTsystems. In
+recentyears,sincethedevelopmentofblockchaintechnology,smartcontractshavecome
+tohighusageinIoT,healthcare,financeandotherdomains. Duetothehighusageofsmart
+contracts,theirsecurityhasalsoreceivedimmenseattentionasmonetarylossescauseby
+vulnerabilities. Thetraditionalanalysistoolscandetectthesevulnerabilities. However,
+thesetoolsrelymainlyonhardrulesdefinedbyexpertswhiledetectingvulnerabilities.
+A study by Zhang et al. [52] proposed a deep learning model, CBGRU, to detect smart
+contractvulnerabilities. CBGRUcombinesdeeplearningmodelsandvariouswordem-
+beddingsinordertoextractfeaturesfromtheinputsourcecodeofsmartcontracts. They
+thenusedtheextractedfeaturesforclassifyingthesmartcontractaseithervulnerableor
+non-vulnerable. For their study, the authors used a real-world smart contracts dataset.
+Theempiricalfindingsoftheirstudyconfirmthattheirmethodperformedbetterwhen
+Mach.Learn.Knowl.Extr.2023,5 308
+comparedwithothermethodsintermsofdetectionrateandaccuracy,whichindicateits
+abilitytoenhancethesecurityofblockchainsystems.
+In more recent years, researchers have shown great interest in GANs due to their
+abilitytoleveragelargeunlabeleddata. ThestudyconductedbyCreswelletal.[53]offers
+a comprehensive overview of GANs for the signal processing community. Their study
+highlightsmultipleapplicationsofGANsindomainssuchasdatageneration,videoand
+image generation, data augmentation and style transfer. The paper also discusses var-
+ious techniques used to improve the performance and stability of GANs, for instance,
+employingregularizationtechniques,networkframeworksandlossfunctions. According
+toCreswelletal[53],GANsofferwaystolearndeeprepresentationswithoutannotated
+trainingdata. GANsachievethisbyderivingback-propagationsignalsusingamethod
+withapairofnetworks. TheyalsopointedtothelimitationsofGANs,suchasmodecol-
+lapseandtraininginstability,anddiscussedpossiblesolutionstodealwiththem. Thestudy
+conductedbyParketal.[54]presentsadetailedreviewofGANs,withafocusontheir
+applicationincomputervision. ThepaperalsodiscussesthebasicframeworkofGANs,
+suchasarchitecture,lossfunctionsandtrainingphases. Inaddition,thepaperreviews
+differentGANvariantssuchasconditionalGANs,WassersteinGenerativeAdversarial
+Networks(WGANs),WassersteinGAN-GradientPenalty(WGAN-GP),andSelf-Attention
+GenerativeAdversarialNetworks(SA-GAN),anddiscussestheadvantagesanddisadvan-
+tagesoftheseGANvariantsandtheirapplicationsinvariouscomputervisiondomains,
+suchasimagetranslation,imageeditingandimagegeneration.Furthermore,thestudyalso
+coversthelimitationsassociatedwithGANs,suchastrainingtime,instabilityandmode
+collapse. Theyalsomentiondifferentmethodsthathavebeenproposedtodealwiththese
+limitations,forinstance,optimizationalgorithms,networkarchitectureandregularization
+methods. Inaddition,thestudyalsohighlightedethicalconcernslinkedwithGANs,for
+instance,theuseofdeepfakesandotherdeceptivegenerations.
+Shortenetal.[42]presentasurveyonseveralimagedataaugmentationmethodsused
+indeeplearningforimprovingmodelperformance. Thestudyexplicatestheneedfordata
+augmentation,itsadvantagesanditsrestrictions. Additionally,thestudypresentsabrief
+reviewofconventionalandnoveldataaugmentationtechniques. Otherthanthat,their
+studyalsodiscussestheimpactofdataaugmentationonthegeneralizationofthemodel
+anditsabilitytoreduceoverfitting.
+2.2.1. DefinitionandStructure
+GenerativeAdversarialNetworks(GANs)havemadeprogressinmachinelearning
+modeling[53,55]. Thismachinelearningapproachdiscriminatesnetworkstodiscriminate
+betweensyntheticandrealdata. Contrarytoclassicalmachinelearningalgorithms,GANs
+actinsuchawaythattheycanlearnthejointdistributionofthewholedataset. GANs
+utilizetwoneuralnetworks: Generator(G)andtheDiscriminator(D)networks[56]. The
+functionoftheGistoinputarandomnoisevectorintosyntheticdatathatnearlyreflect
+therealdata. Atthesametime,theobjectiveoftheDistotakerealsamples,andactas
+ateacherwhocanevaluatetheperformanceoftheoutputandcheckifthedataarefake
+orreal. BothGandDaretrainedinsuchaway—throughtheMin–Maxgame—thatthe
+lossesofGareminimized, andthelossesofDgetmaximized. ThefunctionofGANis
+givenbelow.
+min max V(G,D) =E[logD(x)] +E[log(1−D(G(z)))] (1)
+G D x−p
+data(x)
+z−p(z)
+Furthermore,Figure1showsthebasicframeworkoftheoriginalGAN.InFigure1,
+thenoise“z”israndomlygenerated,while“G(z)”indicateshow“G”attemptstolearn
+a distribution PG from the distribution of noise “Pz”, and makes “PG” closer to the
+distributionofreal-worlddata,whichisdenotedby“P”data.Inaddition,theDiscriminator
+attemptstoconfirmwhetherthesampleisfakeorreal. Ontheotherhand,theinputis
+neededtoadjustboththeDiscriminatorandtheGeneratoruntiltheDiscriminatorfailsto
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW 6
+and act as a teacher who can evaluate the performance of the output and check if the data
+are fake or real. Both G and D are trained in such a way—through the Min–Max
+game—that the losses of G are minimized, and the losses of D get maximized. The func-
+tion of GAN is given below.
+min G max D V(G,D) =E(cid:4670)logD(x)(cid:4671) x-p (x) + E[log(1-D(G(z)))] z-p(z) (1)
+data
+Furthermore, Figure 1 shows the basic framework of the original GAN. In Figure 1,
+the noise “z” is randomly generated, while ”G (z)” indicates how “G” attempts to learn a
+distribution PG from the distribution of noise “Pz”, and makes “PG” closer to the dis-
+tribution of real-world data, which is denoted by “P” data. In addition, the Discriminator
+attempts to confirm whether the sample is fake or real. On the other hand, the input is
+Mach.Learn.Knowl.Extr.2023,5 309
+needed to adjust both the Discriminator and the Generator until the Discriminator fails to
+discriminate between real-world data and the generated data while training. Conse-
+quendtilsycr,i mwien actaenbe rtweaecehn rtehael- wooprtlidmdaatla paonidntth wegheenreeraatte dPd daatataw ahirlee terqaiunianlg t.oC PonGse. quently,
+wecanreachtheoptimalpointwhereatPdataareequaltoPG.
+Figure1. ThisfigurepresentsthebasicGANstructure. ThetwomodelslearnedduringtheGAN
+Figutrrea i1n.i nTghpirso cfiegssuarree pthreesGeenntesr atthoer (bGa)saincd GthAeND issctrriumcitnuarteo.r T(Dh)e. Htwereo, “mz”odiserlasn ldeoamrnneodis ed,uanridng the GAN
+trainGin(zg) pinrdoiccaetsess ahroew tGhea tGteemnpetrsatotolre a(rGn)t haenddis ttrhibeu DtioisncPriGmfirnomatodris t(rDib)u. tHionerPez,. “Pzd”a tias dreannodteosmth enoise, and G
+(z) inredailc-watoersld hdoawta sGet. attempts to learn the distribution PG from distribution Pz. Pdata denotes the
+real-world dataset.
+2.2.2. TheDiscriminator
+TheDiscriminatorisanetworkthatservesasaclassifier. Ittakesinbothrealdataand
+2.2.2. The Discriminator
+syntheticdatageneratedbytheGenerator,andtriestodifferentiatebetweenthem[57]. The
+aTrchheit eDctiusrceriomftihneaDtoisrc riism ain nateotrwcoanrkv atrhyadt espeernvdeins gaosn at hcelatsyspiefioefrd. aItta tiatkisesh ainnd blinogth. real data
+Itisconnectedtotwolossfunctionsthatareusedatdifferentstagesoftraining. Whenit
+and synthetic data generated by the Generator, and tries to differentiate between them
+classifiesrealorsyntheticdata,itispenalizedforincorrectclassifications,anditsweights
+[57]. The architecture of the Discriminator can vary depending on the type of data it is
+areupdatedthroughback-propagationfromtheloss[58].
+handling. It is connected to two loss functions that are used at different stages of training.
+Whe2n.2 .i3t. cTlhaessGifeineesr arteoarl or synthetic data, it is penalized for incorrect classifications, and its
+weights Tahree Guepnderaatteodr( Gth)rnoeutwgohr kbmacakk-epsruosepoafgtahteiofened fbraocmki tthreec eliovsess f[r5o8m].t heDiscrimina-
+tor(D)inordertolearntogenerateartificialdatathatresemblethereal-worlddata[59].
+The goal of G is to create data that can be classified as original by the D. The network
+2.2.3. The Generator
+receives random input, a sort of noise, from which it generates output. The generated
+oTuhtpeu tGiseenvearluaatoterd (bGy)t hneeGtwanodrkre smulatskiensa uGsleo sos,f wthhiec hfepeednabliazceks tihte rGecfoerivneots dfercoemivi nthge Discrim-
+theDiscriminator[60]. AGANisabletoproduceavarietyofoutputsthroughsampling
+inator (D) in order to learn to generate artificial data that resemble the real-world data
+frommultipleplaces.
+[59]. The goal of G is to create data that can be classified as original by the D. The network
+recei2v.2e.4s. rLaonssdFoumnc tiinonpsut, a sort of noise, from which it generates output. The generated
+output iTs heevtraaliuniantgedph basye othfGe AGN auntildiz erselsoussltfsu nicnt ioan Gs,w lohiscsh, awpphriacishe tpheendaisltiaznecse bthetew eGen for not de-
+ceivitnheg rtehaled Datiasacnridmdiinstartibourt i[o6n0s].o fAth GegAeNne riast eadbdlea tatot opervoadluuactee tah evirarreiseetmy bolaf noceut[6p1u].ts through
+Before now, various methods have been introduced to deal with this challenge. In the
+sampling from multiple places.
+conventionalGAN,amini–maxlosswasproposed. Themini–maxlossarchitecturemimics
+thecross-entropyandJensen–Shannondivergencebetweengenerateddistributionsand
+2.2.4r.e Laloosnse Fsuwnhcetniotnhse Discriminator is in its optimal state. Moreover, for the Generator,
+minimizingthelossisequaltominimizinglog[1D(G(Z))],asitcannotaffecttermlogD(x)
+The training phase of GAN utilizes loss functions, which appraise the distance be-
+directlyinthefunction. Furthermore,inatraditionalGANdesign,theGandtheDlosses
+tween the real data and distributions of the generated data to evaluate their resemblance
+arederivedfromasinglemeasureofdistance. Boththetermsareupdatedinanalternating
+[61]. Before now, various methods have been introduced to deal with this challenge. In
+fashion[62].
+the conventional GAN, a mini–max loss was proposed. The mini–max loss architecture
+2.3. GANsinCreditCardFraudDetectionDomain
+mimics the cross-entropy and Jensen–Shannon divergence between generated distribu-
+Recently, GANs have gained immense popularity in domains such as credit card
+tions and real ones when the Discriminator is in its optimal state. Moreover, for the
+fraud detection for generating artificial samples. Researchers argue that GANs are the
+morefittingandeffectivetechniqueforhandlingimbalancedclassproblemscomparedto
+othermachinelearningapproaches[63–65]. Inaddition,theyarehighlyrobusttowards
+overlappingandoverfittingduetotheirabilitytounderstandhiddenstructuresofdataand
+theirflexibility[66]. Asaresult,asufficientamountofresearchhasbeendoneonGANs.
+Mach.Learn.Knowl.Extr.2023,5 310
+Recent studies on GANs compared their performances on imbalanced datasets against
+otherwell-knownmethods.
+Intheirempiricalstudy,NgwendunaandMbuvha[67]exploredmultipleaspectsof
+GANs. TheyarguedthatGANsaremoretheappropriateandeffectiveframeworksfor
+handlingimbalancedclassproblemsthanothersamplingmodels. Theyemphasizedthe
+effectivenessofGANs,employingseveralfacetssuchasarchitecturaldesign,difficulties
+associatedwithGAN,themultiplevariantstoaddressspecifictraits,applicationareasand
+soon. Inaddition,theyalsoconductedempiricalstudiestoevaluateGANswiththehelp
+ofmetrics. Inaddition,theyalsoconductedarelativestudyontheperformancesofGANs
+withotherresamplingmethods,suchastheSyntheticMinorityOver-samplingTechnique
+(SMOTE)establishedby[58]. TheirstudyrevealsthatGANismoreeffectivethanother
+resamplingmethods.Furthermore,thefindingofthisstudyrevealsthatGANvariantssuch
+asWassersteinGenerativeAdversarialNetworks(WGAN)[59]andWassersteinGenerative
+AdversarialNetworksGradientPenalty(WGANGP)[60]arehighlyeffectiveinmitigating
+theimbalancedclassproblem. Additionally,Kimetal.[61]employedvariousGANmodels
+for synthetic data generation in credit card transactions. The results from the research
+suggestusingCTAB-GAN,aconditionalGAN-basedtabulardatagenerator. Bymodelling
+mixed variables, CTAB-GAN surpassed the preceding state-of-the-art approaches and
+offeredsuperiorgeneratingcapabilitiesforimbalancedcategoricalvariablesandcontinuous
+variableswithcomplexdistributions.
+Furthermore, Saqlain et al. [62] used a Generative Adversarial Fusion Network to
+detectfraudinimbalancedcreditcardtransactions. ThestudyusedIGAFN,amodelthat
+couldbeusedrepeatedlytopredictauser’screditworthinessbasedontheuser’sprofile
+andpastactions. Inordertofunction,themodelreliedonthedataimbalanceissueincredit
+scoringbeingaddressedandthemulti-sourceheterogeneouscreditdatabeingintegrated.
+The experimental outcomes proved the credit scoring approach’s viability by merging
+featuresandclassbalance. IGAFNhasbeenshownexperimentallytobesuperiortoother
+methodsforovercomingtheserestrictions,anditwouldplayacrucialroleintheforecasting
+ofcreditrisksforbanksandotherfinancialorganizations. Inaddition,Ba[63]attempted
+tosolvetheimbalancedclasschallenge. Todoso,theychosetheworkof[5]astheirbase
+paperfortrainingGANtogeneratesyntheticsamplesoffraudulentcreditcardtransactions
+tohandleimbalancedclassesinthetrainingset. Thedatausedforthisstudywerehighly
+imbalanced, so the augmentation of data on the minority class was performed to pick
+uptheclassificationresults. TheirfindingsdemonstratethatGAN-basedaugmentation
+doesbetterthanotherapproaches,asitimprovesgeneralizationmorenotablythanother
+trainingmethods. ThestudybySethiaetal.[64]aimedtoreviewseveralaspectsofGAN
+architectures. First,theauthorsconsideredGANarchitecturessuchasConditionalGAN
+(cGAN)[65]andexploredtheprosandconsconnectedwiththeseGANvariants. Thestudy
+byCharitouetal.[66]isuniquecomparedtotheabovestudies,astheirstudyexamined
+GAN in a theoretical and mathematical way. This study has provided a deep insight
+into the training complications associated with GAN variants. In addition, this study
+haspresentedthreedifferentpointsofviewtotackletheproblemswhiletrainingGAN.
+Theseareskills,GANstructureandtheobjectiveoftheframework. Theauthorsofthis
+studyassertthatinceptionscore,multi-scalestructuralsimilarity,modelscore,andfreshet
+inceptiondistancearethemostinfluentialmetricsinevaluatingthecapabilitiesofGAN.
+Additionally,NgwendunaandMbuvha[67]focusedonthelimitationsandsuitabilityof
+GAN in dealing with banking challenges. Their study used the WGAN GP variant to
+augmentthedata. Thefindingsoftheirstudyidentifyamajorincreaseof5%intherecall
+valueoftheXGBoostclassifieraftertrainingonaugmenteddataratherthanreal-world
+data. ItisalsonoteworthythattheydetectedadecreaseinF1scoreandprecisionvalues.
+2.4. DataAugmentationusingGANs
+GenerativeAdversarialNetworks(GANs)areusedtoaugmentdataeffectively. GAN
+isaclassofgenerativemodelsthatcancreatenewdatabasedonactualtrainingdata. The
+Mach.Learn.Knowl.Extr.2023,5 311
+applicabilityofGANsisdiverse,andtheycanbeusedinmultiplefields,includingthe
+creditcardfrauddomain.
+Data scarcity is a significant problem, since a large quantity of data is required in
+fraud detection to train deep learning models. Data augmentation is one of the most
+efficientwaystodealwiththisproblem[13,68]. Inrecentyears,researchershaveconducted
+variousstudiesinthisparticulararea. BelowareafewreasonstoemployGANsfordata
+augmentation.
+2.4.1. LimitedTrainingData
+Oneofthemainissuesthatarisewhiletrainingdatasetsisthelimitedtrainingdata
+availableinmanyapplicationdomains[68–70].Insomeareas,datacollectionisnotpossible.
+Forinstance,itisnotpossibletotraintheoriginaldatasettodetectfraudulenttransactions
+inthecreditcardfrauddomainduetoprivacyconcerns. Furthermore,datacollectionisa
+time-consumingandsometimescostlytask. Incontrast,algorithmsneedextensivedatafor
+training. Aneffectivewaytodealwiththelimitedtrainingdataisdataaugmentation. This
+isamethodusedtogeneratedatafromreal-worlddatasynthetically. Dataaugmentation
+reducesboththetimeandcostsassociatedwithacquiringtherequireddata. Furthermore,
+itdecreasestheissueofsampleinadequacyindeeplearningmodels[13].
+2.4.2. LackofRelevantData
+In addition to the limited training data, the need for more relevant data is a big
+challengeintrainingmodels. Largequantitiesofrelevantdataarerequiredtoimprove
+theaccuracyofdeeplearningmodels. Dataaugmentationcanprovidesolutionsthrough
+different methods to enhance the size and quality of training datasets to get a better
+outcome[71].
+2.4.3. ModelOverfitting
+Furthermore, model overfitting is also regarded as a big challenge. Deep learning
+modelsrequiresignificantdatatoavoidtheissueofoverfitting. Overfittingisamodeling
+errorthatariseswhenamodeltoocloselyfitstheavailabledataset. Inaddition,whena
+modelistrainedonaninadequatedataset,itwillbedifficultforthemodeltogeneralize
+it perfectly for a new dataset. In addition, when these models are tested for any new
+data, they will not provide accurate predictions, making the model useless. Therefore,
+the model needs more datasets to dealwith the challenge of overfitting [13]. However,
+dataaugmentationlessenstheissueofoverfittingbytrainingthemodelwithalargesetof
+appropriatedata[72].Furthermore,dataaugmentationregularizesthemodelandenhances
+itsabilitytogeneralize[73].
+2.4.4. ImbalancedData
+Besidestheabovechallenges,imbalanceddataisasignificantprobleminreal-world
+applications. Thisproblemisprevalentinfinancialinstitutions, specificallyintermsof
+credit card fraud detection, as there are too few fraud transactions compared to legal
+transactions. Inaddition,deeplearningmodelsrequirealargequantityofdatatoclassify
+correctly. However,theavailabledatacouldbemorebalanced,whichcreatesadifficultyin
+trainingdeepmodelsandaffectstheoverallaccuracy. Datacanberebalancedtosolvethis
+challenge;however,dataaugmentationcanhelpthisissue,dealingwithhighlyimbalanced
+datasetsbycreatingdatafortrainingmachinelearningmodels[57,74].
+2.5. ChallengesandLimitationsofGANBasedDataAugmentation
+Itisimportanttomentionthatdataaugmentationencountersafewlimitationswhen
+trainingmodelswithlimitedandlowvolumedatasets[75]. Theimprovementachieved
+withdataaugmentationislimited,asdataaugmentation,tosomeextent,transformsan
+existingsampletoamodifiedsample[76,77]. Thus,itcanbesaidthatdataaugmentation
+doesnotgenerateentirelynewdata,whichcontaininformationnotpresentinthedata
+Mach.Learn.Knowl.Extr.2023,5 312
+to be changed. For instance, in credit card fraud detection, data augmentation cannot
+generate entirely new minority instances if the original dataset does not have minority
+samples[13]. OneofthechallengesofusingGANsfordataaugmentationincreditcard
+frauddetectionisthattheycanbedifficulttotrainandstabilize[78].GANsarecomposedof
+twoneuralnetworks(theGeneratorandtheDiscriminator)thataretrainedsimultaneously
+in a game-theoretic framework, and this process can be prone to instability and mode
+collapse. Therefore,itisimportanttouseappropriatearchitectures,trainingmethodsand
+regularizationtechniquestostabilizethetrainingprocess[79].
+Another challenge when using GANs for data augmentation in credit card fraud
+detectionisthatthegeneratedsyntheticsamplesmaynotberepresentativeofreal-world
+fraudulent transactions [80]. Therefore, it is important to evaluate the quality of the
+generated samples and compare them to real-world fraud data to ensure that they are
+realisticandusefulfortrainingmachinelearningmodels[80,81]. Moreover,modecollapse
+occurs when the generator produces synthetic data that are only a small subset of the
+realdatadistribution[82]. Thiscanbemitigatedbyusingtechniquessuchasmini-batch
+discrimination,butitisstillalimitationthatneedstobeconsidered[83,84].
+Ingeneral,GANshaveshownpromisingresultsindataaugmentationincreditcard
+frauddetectiontasks,byallowingthegenerationofsyntheticsamplesoffraudulenttrans-
+actionsthatcanbeusedtotrainmachinelearningmodelsmoreeffectively. However,it
+is important to note that GANs are complex models and their training process can be
+challenging,andthereisongoingresearchonimprovingtheirperformanceandstability.
+2.6. RecentAdvancementstoDealwiththeChallengesandLimitations
+Todealwiththekeytrainingissues,suchasmodecollapseandvanishinggradient,
+studieshaveintroducedtwomainframeworks: theapplicationofdifferentlossfunctions
+andtheintroductionofnewnetworkdesigns. Inthiscontext,astudybyWangetal.[85]
+demonstratedthattheGAN’sperformanceislinkedtothenetworkandbatchsizes,show-
+ingthateffectivelyimplementedframeworkshaveavitalimpactontheoutputquality.
+Inaddition, theremodelingoflossfunctionsalsoachievesbettertrainingstability. Itis
+imperativetomentionthatadvancementsaretargetedatpreciseapplications,thusthereis
+currentlynosinglesolutionforalldomain.
+3. LiteratureonArchitecture-VariantGANs
+Since the introduction of GAN, various GAN variants have been proposed in the
+literature. Researchers, in the literature, have proposed several GAN variants for the
+fraud domain. Furthermore, the extensive implementation of GANs by scholars and
+academiciansencouragedthedevelopmentsinnetwork-optimizationmethods,suchas
+WassersteinGANs[86],cGAN[87]andsoon. TopresentabroaderpictureofrecentGAN-
+based research, we will review recent developments in this field. This section presents
+variousGANmodelsonthebasisoftheirfunctions,strengthsandlimitations. Bydoing
+so, this survey gives a brief description of the architectures of different GAN variants.
+Furthermore,thissectionoffersareviewoftheliteratureonGANvariantsintermsoftheir
+applicationsinthefrauddomain.
+3.1. Duo-GANApproach
+Intheirrecentstudy,Ferreiraetal.[88]introducedanovelgenerativeframeworkcalled
+Duo-GANasdemonstratedinFigure2. ThismodelemploystwoGANs: onetogenerate
+fraudulentsynthetictransactionsandthesecondtogeneratesyntheticlegalsamples. This
+approachhelpsustoovercometheissueofhighlyimbalanceddatasets. Thesyntheticdata
+generatedviaDuo-GANcanbeusedandsharedwithbanksandotherfinancialinstitutes
+todealwithcustomers’privacyconcerns. Thisframeworkmaintainsprivacyandensures
+a high success rate in detecting illegal credit card transactions. This approach aims to
+generateartificialdatathatdisplaythesametraits,distributions,andpatternsofrealdata
+withoutaffectingcustomers’confidentialinformation.
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW 11
+Mach.Learn.Knowl.Extr.2023,5 313
+Figure2.ThearchitectureoftheDuo-GAN.Duo-GANemploystwoGANs:onetogeneratefraudu-
+Figure 2. The architecture of the Duo-GAN. Duo-GAN employs two GANs: one to generate
+lentsynthetictransactionsandthesecondtogeneratesyntheticlegalsamples.
+fraudulent synthetic transactions and the second to generate synthetic legal samples.
+Thefindingsofthisapproachtofrauddetectiondemonstratethatitcancapturethe
+underlying distributions of the data. Furthermore, results show that the framework’s
+3.2. Majority-Minority GAN Transfer
+reclassificationmodelthatistrainedonartificialdatasurpassesclassifierstrainedondata
+In addition, Langevin et al. [13] used GANs to solve the class imbalance issue. They
+generatedbyaone-GANmodel. Inaddition,thisapproachproducesartificialdatathat
+proposed a majorityc–amn bineoursietdy toGtAraNin ctlraasnsisfifeerrs afnradmacehwieovreko uatsc odmeems coonmsptraaratebdle tion mFoidgeulsretr a3i.n ed on
+This framework modreeallsd tahtae. conditional distribution of the majority class first. After do-
+ing so, the framework then uses some segment of the learned majority-GAN structure to
+3.1.1. Process
+train another GAN on the minority class. The primary hypothesis is that the majority
+1. ThisapproachemploystwoGANsinsteadofonetocreatesyntheticdata.
+class can be modeled2 .moTreh iascacpuprroaatcehlye.n ableseachGeneratortolearntheclass-conditionaldistributionsand
+the correlation of each class so as to learn the distribution and relationship of the
+3.2.1. Process actualdata.
+1. This process inv3e.1s.2ti.gSatrteensg tthhse use of synthetic data from not only the minority class,
+but also the ma1j.oritTyh cislansosv.e lBfyra mdeowinogrk scoa,n tgheen eGraetenaerrtaifitcoira lcdaaptatuforrehsi gmhloyriem binalfaonrcmedadtiaotans ets.
+about p data. 2. Itcangenerateartificialdatawithoutoverfittingtherealdata.
+3. Itoutperformsclassifierstrainedondatageneratedbyone-GANmodels.
+2. The model retrains the fraud case model directly on actual transaction data.
+3.1.3. Limitations
+3.2.2. Strengths
+1. Thisframeworkdoesnotincorporatethecomputationalresourcesandtimerequired
+1. This framework usetdo ttroa ignethneemraotdee slsy.nthetic samples can generate data streams with
+2. Thedivergencemetricencounterssomeproblemswhendealingwiththecontinuous
+one or multiple minority classes.
+characteristics.
+2. It trains the Generator first so as to model conditional distribution.
+3.2. Majority-MinorityGANTransfer
+3.2.3. Limitations Inaddition,Langevinetal.[13]usedGANstosolvetheclassimbalanceissue. They
+proposedamajority–minorityGANtransferframeworkasdemonstratedinFigure3. This
+1. This GAN variant performed well compared to other GAN generators, but strug-
+frameworkmodelstheconditionaldistributionofthemajorityclassfirst. Afterdoingso,
+gled in modeling log-transformed variables on some occasions, mainly where uni-
+theframeworkthenusessomesegmentofthelearnedmajority-GANstructuretotrain
+variant histograamnost haerreG inAcNreodnitbhleym sikneowriteydc.l ass. Theprimaryhypothesisisthatthemajorityclasscan
+2. This technique lbaecmkso dfeealetdumreo rteraanccsuferart etloy .control distributional differences.
+3. Further investigations are needed as this framework is in the initial phase.
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW 12
+Mach.Learn.Knowl.Extr.2023,5 314
+Figure3.Themajority–minorityGANframework.
+3.2.1. Process
+Figure 3. The majority–minority GAN framework.
+1. Thisprocessinvestigatestheuseofsyntheticdatafromnotonlytheminorityclass,
+butalsothemajorityclass. Bydoingso,theGeneratorcapturesmoreinformation
+3.3. The Conditional Table GAN (CTAB-GAN)
+aboutpdata.
+2. Themodelretrainsthefraudcasemodeldirectlyonactualtransactiondata.
+Furthermore, Zhao et al. [89] proposed a novel conditional table generative
+advers3a.2r.i2a.lS trneentgwthsork (CTAB-GAN) as demonstrated in Figure 4. The objective of their
+study 1w. asT thoi sufrtailmizeew othrkeu pseodtetongteianel roatfe dsyanttah esthicasraimnpgl ewsciathnogeunte raaftfeedcattiansgtr ecaumsstowmither data privacy
+and compolyneinogrm wulititphle gmoinvoerritnymclaesnsetsa.l regulations. Furthermore, they aimed to design a
+2. IttrainstheGeneratorfirstsoastomodelconditionaldistribution.
+model that can address the weaknesses of previous GAN algorithms: (a) encoding mixed
+data, (3b.2). 3e.xLcimelitlaetniotn smodeling of long-tail continuous variables and (c) robust categorical
+variab1l.es wThitishG sAkNewvaeridan ctopnertfionrmueoduws evllacroimapbalreesd. tootherGANgenerators,butstruggled
+inmodelinglog-transformedvariablesonsomeoccasions,mainlywhereunivariant
+The proposed algorithm was tested on five extensively used machine datasets:
+histogramsareincrediblyskewed.
+Credit, Loan, Adult, Cover-type, and Intrusion. In addition, the proposed GAN variant
+2. Thistechniquelacksfeaturetransfertocontroldistributionaldifferences.
+was al3s.o tFeusrttehder aingvaesitnigsatt ifoonusarr epnoepedueldaars GthAisNfra-mbeawseordk iaslignothreitihnimtiasl:p ChaWse.GAN [90], Med-GAN
+[91], CTGAN [92] and Table-GAN [93]. The findings of this experimental study show that
+3.3. TheConditionalTableGAN(CTAB-GAN)
+CTAB GAN not only performs better than all these algorithms in terms of Accuracy,
+Furthermore,Zhaoetal.[89]proposedanovelconditionaltablegenerativeadversarial
+F1-sconreet,w aonrkd( CATAUBC-G,A bNu)ta sidt emalosnos trgaitvedesin gFirgeuarete4r. Tdhiestoabnjeccteiv-beaofsethde irpsrtuivdaycwya sgtouarantees than
+Table-uGtiAlizNet.h epotentialofdatasharingwithoutaffectingcustomerdataprivacyandcomplying
+with governmental regulations. Furthermore, they aimed to design a model that can
+addresstheweaknessesofpreviousGANalgorithms:(a)encodingmixeddata,(b)excellent
+3.3.1. Process
+modelingoflong-tailcontinuousvariablesand(c)robustcategoricalvariableswithskewed
+continuousvariables.
+1. Encodes mixed data.
+Theproposedalgorithmwastestedonfiveextensivelyusedmachinedatasets: Credit,
+2. Efficient modeling of long-tailed continuous variables.
+Loan, Adult, Cover-type, and Intrusion. In addition, the proposed GAN variant was
+3. Daelsaolste wsteidtha ghaiignshtlfyo usrkpeowpueldar dGiAsNtr-ibbausetdioanlgso friothrm cso:nCtWinGuAoNus[9 v0]a,rMiaebd-lGesA.N [91],
+CTGAN[92]andTable-GAN[93]. ThefindingsofthisexperimentalstudyshowthatCTAB
+GANnotonlyperformsbetterthanallthesealgorithmsintermsofAccuracy,F1-score,and
+3.3.2. Strengths
+AUC,butitalsogivesgreaterdistance-basedprivacyguaranteesthanTable-GAN.
+1. Outperforms other state-of-the-art generative algorithms.
+2. Provides better distance-based privacy guarantees than Table GAN.
+3. Preserves data privacy.
+3.3.3. Limitations
+1. CTAB GAN functions well with complex datasets, but cannot converge to a better
+optimum for small and straightforward datasets.
+2. There is still room to enhance the performance of CTAB GAN. For example, it
+generates more zero values than in the original distribution, as it amplifies the
+dominance of zero values in mixed data-type variables.
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW 13
+Mach.Learn.Knowl.Extr.2023,5 315
+Figure 4. The CTABF-iGguAreN4. TdheesiCgTnA. BC-GoAnNdidteiosingna.l CGonAdNitiso naalreG AaNn seaxrepaannesxipoann soiofn coofncovnevnetnitoionnaall GGAANNs,sw, here
+where both the G anbdot hDth heaGvaen dtoD choanvseitdoecro nasdiddeirtiaodndaitli oinnafloinrmforamtiaotino.n .HHeerree wweeh havaevree prreepsernetseednthteeda dtdhieti onal
+additional informatioinnfo arms act.i oHnearsec, .cH cearen, cbcea innbfeorinmfoartmioantio onfo afnayny tytyppee..
+3.3.1. Process
+3.4. Synthetic Data Generation GAN (SDG-GAN)
+1. Encodesmixeddata.
+In addition, C2h. ariEtoffiuc ieent taml.o [d6e6li]n ginotfrloodngu-ctaeidle da cnonotvineul oGusAvNar itaob lgese.nerate synthetic data
+3. Dealswithhighlyskeweddistributionsforcontinuousvariables.
+to train a supervised classifier. This approach, Synthetic Data Generation GAN, can
+out-perform density-based over-sampling methods and enhance the classification ability
+3.3.2. Strengths
+of benchmark and real fraud datasets. Furthermore, this algorithm can be widely used to
+1. Outperformsotherstate-of-the-artgenerativealgorithms.
+handle highly unb2a.lanPcerodv iddaestabseetttesr idnis ftiaenlcde-sb sausecdhp arisv accryedguita craanrtdee fsrtahuadn,T aabsl ewGeAllN a.s the Pima
+Diabetes and Breas3t. CaPnrecseerr vWesisdcaotanpsriinv a(cDy.iagnostic) datasets.
+After that, they applied the model to generate machine-made data to handle the
+3.3.3. Limitations
+imbalanced class issue in the real-world fraud detection gambling dataset. The finding
+1. CTABGANfunctionswellwithcomplexdatasets,butcannotconvergetoabetter
+shows that this technique’s accuracy is much better in credit card fraud datasets. In ad-
+optimumforsmallandstraightforwarddatasets.
+dition, this techniq2u.e oTuhtepreerisfostrimllreodo mthteo oenthhaenrc oevtheerspaemrfoprmlinangc eteocfhCnTiAqBueGsA wN.hFeonr ecxoammpplaer,eitdg.e ner-
+atesmorezerovaluesthanintheoriginaldistribution,asitamplifiesthedominance
+3.4.1. Process ofzerovaluesinmixeddata-typevariables.
+1. The “G” and 3“.4D. S”y innth eStDicGDa-tGaAGeNne raatrieon fGeeAdN-f(oSDrwG-aGrAdN n)etworks with an MLP architec-
+ture. Inaddition,Charitouetal.[66]introducedanovelGANtogeneratesyntheticdata
+2. Feature matchtointrga ilnosass uwpaersv aisdeodpcltaesdsi fiine rt.hTihsi steacphpnroiaqcuhe, Siynnsttheeatdic oDfa ttahGe erneegruatliaorn lGoAssN. ,canout-
+performdensity-basedover-samplingmethodsandenhancetheclassificationabilityof
+3. The “G” attempts to learn the actual distribution of the data.
+benchmarkandrealfrauddatasets. Furthermore, thisalgorithmcanbewidelyusedto
+4. This technique is based on conditional GAN.
+handlehighlyunbalanceddatasetsinfieldssuchascreditcardfraud,aswellasthePima
+DiabetesandBreastCancerWisconsin(Diagnostic)datasets.
+3.4.2. Strengths After that, they applied the model to generate machine-made data to handle the
+imbalancedclassissueinthereal-worldfrauddetectiongamblingdataset. Thefinding
+1. This technique can be used in multiple fields.
+showsthatthistechnique’saccuracyismuchbetterincreditcardfrauddatasets.Inaddition,
+2. The feature matching technique was used in this novel GAN. This technique
+thistechniqueoutperformedtheotheroversamplingtechniqueswhencompared.
+changes the cost function for the “G” to lessen the statistical disparity between real
+3.4.1. Process
+and artificial data traits.
+1. The“G”and“D”inSDG-GANarefeed-forwardnetworkswithanMLParchitecture.
+2. Featurematchinglosswasadoptedinthistechniqueinsteadoftheregularloss.
+3.4.3. Limitations
+3. The“G”attemptstolearntheactualdistributionofthedata.
+1. This proposed GAN outperformed the other four techniques in three out of four
+observed imbalanced datasets. This indicates that there is room to enhance the abil-
+ity of SDG-GAN.
+3.5. One-Class Adversarial Nets for Fraud Detection (OCAN)
+Zheng et al. [94] argue that most online fraud detection techniques require training
+datasets with both legitimate and fraudulent transactions. On the contrary, usually, there
+are few or no records of fraudulent users in real datasets. To overcome this issue, [94]
+Mach.Learn.Knowl.Extr.2023,5 316
+4. ThistechniqueisbasedonconditionalGAN.
+3.4.2. Strengths
+1. Thistechniquecanbeusedinmultiplefields.
+2. ThefeaturematchingtechniquewasusedinthisnovelGAN.Thistechniquechanges
+thecostfunctionforthe“G”tolessenthestatisticaldisparitybetweenrealandartificial
+datatraits.
+3.4.3. Limitations
+1. This proposed GAN outperformed the other four techniques in three out of four
+observedimbalanceddatasets. Thisindicatesthatthereisroomtoenhancetheability
+ofSDG-GAN.
+3.5. One-ClassAdversarialNetsforFraudDetection(OCAN)
+Zhengetal.[94]arguethatmostonlinefrauddetectiontechniquesrequiretraining
+datasetswithbothlegitimateandfraudulenttransactions. Onthecontrary,usually,there
+are few or no records of fraudulent users in real datasets. To overcome this issue, [94]
+developedaOne-classAdversarialNet(OCAN)foronlinefrauddetection. OCANonly
+useslegitimateuserstotrainthedatasets.
+Firstly,OCANusestheLSTMautoencodertolearntherepresentationoflegitimate
+usersfromthepatternsoftheironlineactions. Secondly,OCANdetectsfraudulentusers
+bytrainingadiscriminatorofaGANmodel,whichisdifferentfromtheDiscriminatorof
+thetraditionalGANmodel. ThefindingsofthisexperimentalstudyrevealthatOCAN
+dominatesallotherone-classclassificationmodelsandcanattainacomparableperformance
+similartothenovelmultisourceLSTMmodel,whichneedsthedataofbothfraudulentand
+legitimateusers.
+3.5.1. Process
+1. Inthefirsttrainingphase,theLSTMautoencoderisadoptedtolearnrepresentations
+oflegitimateusersfromthesequencesoftheiractivities.
+2. Theencoderfiguresunseenrepresentationsoftheinputs,andthedecodercalculates
+thereconstructedinputs.
+3. Inthesecondphase,containingtraining,acomplementaryGANcomprisesaDiscrim-
+inatorthatdistinguishesthelegitimateandfraudulentusers.
+3.5.2. Strengths
+1. OCANoutperformsotherone-classclassificationGANmodels.
+2. Detailsaboutfraudulentusersarenotrequiredinthistechnique.Thus,thisframework
+ismoreadaptivetofraudulentuseridentificationtasks.
+3. Unlikesingle-classclassificationGANmodels,OCANgeneratescomplimentarysam-
+plesoffraudulentusers.
+4. Itcancapturethesequentialdetailsoftheuser’sactions.
+3.5.3. Limitations
+1. OCANcandetectfraudulentactivities;however,moreevaluationisneededtoevalu-
+atetheaccuracyofthismodel.
+2. ThestabilityofOCANislowerthanthenormalthreshold.
+AsdemonstratedinFigure5therearetwotrainingstagesintheOCANframework. In
+thefirststage,theLSTM-autoencoderisadoptedtolearnbenignuserrepresentationsfrom
+benignuseractivitysequences. TheLSTM-autoencoderisamodelconsistingoftwoLSTM
+models—thedecoderandencoder. Theencodercomputesthehiddenrepresentationofthe
+input,andthedecodercomputesreconstructedinputs. Inthesecondstage,thetrainingof
+acomplementaryGANwithDtakesplace. TheDiscriminatordiscriminatesbenignusers
+frommalicioususers. Ontheotherhand,theGeneratorofthismodelgeneratesbenign
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW 14
+developed a One-class Adversarial Net (OCAN) for online fraud detection. OCAN only
+uses legitimate users to train the datasets.
+Firstly, OCAN uses the LSTM autoencoder to learn the representation of legitimate
+users from the patterns of their online actions. Secondly, OCAN detects fraudulent users
+by training a discriminator of a GAN model, which is different from the Discriminator of
+the traditional GAN model. The findings of this experimental study reveal that OCAN
+dominates all other one-class classification models and can attain a comparable perfor-
+mance similar to the novel multisource LSTM model, which needs the data of both
+fraudulent and legitimate users.
+3.5.1. Process
+1. In the first training phase, the LSTM autoencoder is adopted to learn representations
+of legitimate users from the sequences of their activities.
+2. The encoder figures unseen representations of the inputs, and the decoder calculates
+the reconstructed inputs.
+3. In the second phase, containing training, a complementary GAN comprises a Dis-
+criminator that distinguishes the legitimate and fraudulent users.
+3.5.2. Strengths
+1. OCAN outperforms other one-class classification GAN models.
+2. Details about fraudulent users are not required in this technique. Thus, this frame-
+work is more adaptive to fraudulent user identification tasks.
+3. Unlike single-class classification GAN models, OCAN generates complimentary
+samples of fraudulent users.
+4. It can capture the sequential details of the user’s actions.
+Mach.Learn.Knowl.Extr.20233,5.5.3. Limitations 317
+1. OCAN can detect fraudulent activities; however, more evaluation is needed to
+evaluate the accuracy of this model.
+samples and the Discriminator works to distinguish between complementary and real
+2. The stability of OCAN is lower than the normal threshold.
+benignusers.
+FigureF i5gu. Treh5e. Ttrhaeitnrianingin agracrhcihtieteccttuurree ooffO OCCAANN. .
+3.6. ConditionalWassersteinGAN(cWGAN)-BasedOversamplingMethod
+As demonstrated in Figure 5 there are two training stages in the OCAN framework.
+Similarly,[90]introducedanoversamplingmodelbasedonaConditionalWasserstein-
+In the first stage, the LSTM-autoencoder is adopted to learn benign user representations
+GANwiththeabilitytomodeltabulardatastreamseffectivelywithcategoricalandnu-
+from benign user activity sequences. The LSTM-autoencoder is a model consisting of two
+merical variables. Furthermore, the proposed model approaches the downstream clas-
+LSTMsi fimcaotdioenlsta—sktshvei adaencoaudxeirli aarnydc leasnscifioedrelro.s sT.hIne aedndciotidone,rt hcoeymaplsuotbeesn tchhem harikdeddetnhe rirepresenta-
+tion omf etthheo dinapgauint,s tacnodn vtehneti odneacloodveerrs acmomplipngutmeest hreodcosnansdtrtuhectiemdb ainlapncuetds.b aInse ltihnee osnecaoctnudal stage, the
+datasets.
+training of a complementary GAN with D takes place. The Discriminator discriminates
+benig3n.6 .u1.sPerrosc fersosm malicious users. On the other hand, the Generator of this model gen-
+erates1 .benTihgins msaetmhopdlehsa sasnedve trhalee lDemisecnrtismniontaptroerse wntoinrkcso ntvoe ndtiisotnianlgmueitshho dbse,tswuceheans cthoemplemen-
+tary and rAeCall obsesn,tihgenW u-sGeArsN. GP,etc.
+2. TheauthorsemployedthecGANframeworktoestimatethedistributiontosample
+theminorityclass.
+3.6.2. Strengths
+1. Thismethodefficientlymodelstabulardatasetswithcategoricalandnumericalvari-
+ables.
+2. Thisnovelmethodpaysextraordinaryattentiontothedownstreamclassificationtask
+viaanauxiliaryclassifierloss.
+3. Thismethodalsoworkswellfornonlineardatasets.
+3.6.3. Limitations
+1. Yettotestonheavilyunbalanceddatasets.
+2. Model enhancement is imperative to identifying better default hyper-parameter
+settings.
+3. Improvementisneededinfine-tuningthismodel.
+In the WGANGP framework as demonstrated in Figure 6a,b, the loss function is
+augmentedbyaddingAClosstoboostthegenerator. ThisfigureindicatestheACoutput
+predictingminorityclassmembershipforsamplesofthereal-worlddatasetthatbelongto
+themajorityclassandminorityclass. Thedashedlineshowsthecut-offAClossvalues.
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW 15
+3.6. Conditional Wasserstein GAN (cWGAN)-Based Oversampling Method
+Similarly, [90] introduced an oversampling model based on a Conditional Wasser-
+stein-GAN with the ability to model tabular data streams effectively with categorical and
+numerical variables. Furthermore, the proposed model approaches the downstream
+classification tasks via an auxiliary classifier loss. In addition, they also benchmarked
+their method against conventional oversampling methods and the imbalanced baseline
+on actual datasets.
+3.6.1. Process
+1. This method has several elements not present in conventional methods, such as the
+AC loss, the W-GAN GP, etc.
+2. The authors employed the cGAN framework to estimate the distribution to sample
+the minority class.
+3.6.2. Strengths
+1. This method efficiently models tabular datasets with categorical and numerical
+variables.
+2. This novel method pays extraordinary attention to the downstream classification
+task via an auxiliary classifier loss.
+3. This method also works well for nonlinear datasets.
+3.6.3. Limitations
+1. Yet to test on heavily unbalanced datasets.
+2. Model enhancement is imperative to identifying better default hyper-parameter
+Mach.Learn.Knowl.Extr.2023,5 318
+settings.
+3. Improvement is needed in fine-tuning this model.
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW 16
+(a)
+(b)
+FFiigguurree 66.. ((aa))S Strturcutuctrueroef tohfe tGheen Gereantoerrnaetotwr onrektowfoWrGk AoNf WGPG.(Ab)NStGruPc.t u(bre) oSfttrhuecDtuisrcer iomfi nthateo rDiscriminator
+nneettwwoorrkko offW WGAGNAGNP.GP.
+3.7. ScoreGAN
+In the WGANGP framework as demonstrated in Figure 6 (a) and (b), the loss func-
+Intheirstudy,Shehnepooretal.[95]proposedScoreGANtodetectonlineshopping
+tfiroanu dis. Tahuigsmnoevneltefrda mbeyw aodrkdignegne AraCte sloresvsi etwo sbwooitshtp trheeci sgeesneemraantoticrs. Ttohaids dfriegsusrfera iunddicates the AC
+oduettpecutito npsr’eldacikctoinfgh imghi-nquoarliittyy cdlaatsas. SmcoermeGbAerNshuispe sfobor thsarmevpielwes roatfi ntghse arnedalr-ewvioewrld dataset that
+text scores to detect and generate progression. The findings of this study show that
+belong to the majority class and minority class. The dashed line shows the cut-off AC loss
+values.
+3.7. ScoreGAN
+In their study, Shehnepoor et al. [95] proposed ScoreGAN to detect online shopping
+fraud. This novel framework generates reviews with precise semantics to address fraud
+detections’ lack of high-quality data. ScoreGAN uses both review ratings and review text
+scores to detect and generate progression. The findings of this study show that customi-
+zation of the machine-obtained reviews based on the score leads to considerable progress
+in detecting fraud reviews by 5% on Tripadvisor and by 7% on the Yelp dataset against
+the data obtained from the state-of-the-art systems.
+3.7.1. Process
+1. The Discriminator D differentiates between human fraud reviews from fraud bot
+reviews, and calculates the probability of a score based on fraud reviews and cor-
+responding scores.
+2. After that, the Discriminator can differentiate genuine reviews from fraud reviews.
+3. On the other hand, the Generator takes the score and random noise, generating fake
+bot reviews.
+3.7.2. Strengths
+1. This framework can convert the discrete form into a continuous one. This research
+work used the Tripadvisor and Yelp datasets, which are more reliable than datasets
+labeled by humans.
+2. This proposed method outperforms other systems when applied to the used dataset,
+according to the metrics.
+3.7.3. Limitations
+Mach.Learn.Knowl.Extr.2023,5 319
+customizationofthemachine-obtainedreviewsbasedonthescoreleadstoconsiderable
+progressindetectingfraudreviewsby5%onTripadvisorandby7%ontheYelpdataset
+againstthedataobtainedfromthestate-of-the-artsystems.
+3.7.1. Process
+1. The Discriminator D differentiates between human fraud reviews from fraud bot
+reviews,andcalculatestheprobabilityofascorebasedonfraudreviewsandcorre-
+spondingscores.
+2. Afterthat,theDiscriminatorcandifferentiategenuinereviewsfromfraudreviews.
+3. Ontheotherhand,theGeneratortakesthescoreandrandomnoise,generatingfake
+botreviews.
+3.7.2. Strengths
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW 1. Thisframeworkcanconvertthediscreteformintoacontinuousone. Thisresea1r7c h
+workusedtheTripadvisorandYelpdatasets,whicharemorereliablethandatasets
+labeledbyhumans.
+2. Thisproposedmethodoutperformsothersystemswhenappliedtotheuseddataset,
+1. The Discriminataoccro crdainn gotnoltyh eemsteimtriacst.e the reward for generating complete sentences,
+not partial ones.
+3.7.3. Limitations
+1. TheDiscriminatorcanonlyestimatetherewardforgeneratingcompletesentences,
+3.8. Conditional Generative Adversarial Network (CGAN)
+notpartialones.
+The Conditional Generative Adversarial Networks, or simply CGANs as demon-
+3.8. ConditionalGenerativeAdversarialNetwork(CGAN)
+strated in Figure 7, consider the classes to which the instances belong. Initially proposed
+TheConditionalGenerativeAdversarialNetworks,orsimplyCGANsasdemonstrated
+by [87], this GAN variant shows excellent results for datasets with a target class. Since
+inFigure7,considertheclassestowhichtheinstancesbelong. Initiallyproposedby[87],
+their introduction, Conditional GANs have been applied in multiple areas, including
+this GAN variant shows excellent results for datasets with a target class. Since their
+image datasets [i9n0tr]o. dRuecctieonnt,lyC,o Cndhitoioi neatl aGl.A [N91s]h aapveplbieeedn tahpep lCieodnidnimtiounltiapll eGaAreNas ,frinacmluedwinogrikm taog e
+the credit card ddaattaasseetts t[o9 0g]e.nReercaentetl ys,yCnhtohieettica ld.[a9t1a]. aCpoplnieddittihoenCaol nGdAitiNonsa lgGenAeNraftream ae swyonrtkhteotitch e
+creditcarddatasettogeneratesyntheticdata. ConditionalGANsgenerateasyntheticcredit
+credit card dataset, which can be used indistinguishably for training without revealing
+carddataset,whichcanbeusedindistinguishablyfortrainingwithoutrevealingtheactual
+the actual dataset. The findings of their study show that deep learning techniques can be
+dataset. Thefindingsoftheirstudyshowthatdeeplearningtechniquescanbeusedwith
+used with excellent outcomes to generate synthetic credit card data.
+excellentoutcomestogeneratesyntheticcreditcarddata.
+Figure 7. The ConFdigituiroen7a.lT GheACNon ddietisoinganl GisA Nqudietsei gsnimisiqluairt etosi mthilea rdtoesthigend eosifg tnhoef tchoencvonevnetniotinonaall GGAANN,,e xecxe-pt
+cept the addition othfe caladsdsit iCon, toof cwlahssicCh, ttohwe hinicshtathnecienss tbanecleosnbge.l ong.
+3.9. GAN- RF
+In another study, Lee and Park [40] argued that deep learning methods perform
+better than machine learning techniques when dealing with large quantities of datasets,
+such as credit card transaction datasets. They insist that more of the previous studies that
+deal with the imbalance class challenge have limitations that are outcomes of overfitting
+and data loss. For the said purpose, they used GAN and a proposed model to deal with
+the imbalanced class issue. Their proposed method, as demonstrated in Figure 8, was
+then classified as Random Forest to determine the detection ability after dealing with
+GAN-based data augmentation. The findings of their study reveal that their proposed
+model performed better than the model classified without dealing with the imbalanced
+class issue. Furthermore, it was identified that their proposed model is superior to the
+models proposed in previous studies.
+Mach.Learn.Knowl.Extr.2023,5 320
+3.9. GAN-RF
+Inanotherstudy,LeeandPark[40]arguedthatdeeplearningmethodsperformbetter
+thanmachinelearningtechniqueswhendealingwithlargequantitiesofdatasets,suchas
+creditcardtransactiondatasets. Theyinsistthatmoreofthepreviousstudiesthatdeal
+withtheimbalanceclasschallengehavelimitationsthatareoutcomesofoverfittingand
+dataloss. Forthesaidpurpose,theyusedGANandaproposedmodeltodealwiththe
+imbalancedclassissue. Theirproposedmethod,asdemonstratedinFigure8,wasthen
+classified as Random Forest to determine the detection ability after dealing with GAN-
+baseddataaugmentation. Thefindingsoftheirstudyrevealthattheirproposedmodel
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW performed better than the model classified without dealing with the imbalanced class18
+issue. Furthermore,itwasidentifiedthattheirproposedmodelissuperiortothemodels
+proposedinpreviousstudies.
+Figure 8. The GAN-RFFig furraem8.eTwheoGrAkN. -RFframework.
+3.10. Tuned-GAN
+3.10. Tuned- GAN
+Similarly,Fioreetal.[5]presentedintheirworkanewwaytodealwiththeimbalanced
+Similarly, Fiorcela esst cahla.l l[e5n]g epirnessuepnetrveidse dinc ltahsseifiirc awtioonrtko dae tneectwcr ewdiatyca rtdof rdaeuadl. Twheityhp rtohdeu ciemdbanal-
+augmentedtunedset,consistingofmoresamplesoffraudulenttransactionswithrespectto
+anced class challenge in supervised classification to detect credit card fraud. They pro-
+theoriginaldataset. TheycreatedartificialexampleswithatunedGANasdemonstratedin
+duced an augmentFeigdu rteu9n,wedhi cshemt,e acnosnthsaisttthinegD isocfr imminoartoer snaetmwoprklews aosfu nfarbaleutdoudlisecnritm tinraatnesaartcifitcioianl s
+with respect to the soarmigpilensaflr odmattahseerte.a Tl shaemyp clerse.aItteids a alsrotinfiocteiawlo ertxhaymthpatlethse wpirtohp oas etdunfreamde GwAorkNi sas
+inherentlydependentontheaccessibilityoflabeledinstancesofminorityexamples. To
+demonstrated in Figure 9, which means that the Discriminator network was unable to
+checkthevalidationoftheirmethod,theresearchersperformedanempiricalstudyona
+discriminate artificrieaall -swaomrldpcleresd iftrcoamrd dtahteas ertewali thsaimmbpallaensc.e dItc liass saelss.oT hneoirtmewethoordthacyh itehvaedt stuhpee rpiorro-
+posed framework siesn siintihvietyreatntthleyc odsteopfeanmdaergnitn aolinn crtehaese aincfcaelssespibosiiltiitvye s.of labeled instances of
+minority examples. To check the validation of their method, the researchers performed
+an empirical study on a real-world credit card dataset with imbalanced classes. Their
+method achieved superior sensitivity at the cost of a marginal increase in false positives.
+Figure 9. The G* is fed with z (random noise) and the output is merged with x. Other than that, the
+t
+classifier C is trained on original and augmented training sets (C and C ).
+O a
+4. Tabular Comparison of Different GAN Variants
+This part of our survey presents an overview of the various GAN-based methods
+used to deal with the imbalanced class problem.
+Mach. Learn. Knowl. Extr. 2023, 5, FOR PEER REVIEW 18
+Figure 8. The GAN-RF framework.
+3.10. Tuned- GAN
+Similarly, Fiore et al. [5] presented in their work a new way to deal with the imbal-
+anced class challenge in supervised classification to detect credit card fraud. They pro-
+duced an augmented tuned set, consisting of more samples of fraudulent transactions
+with respect to the original dataset. They created artificial examples with a tuned GAN as
+demonstrated in Figure 9, which means that the Discriminator network was unable to
+discriminate artificial samples from the real samples. It is also noteworthy that the pro-
+posed framework is inherently dependent on the accessibility of labeled instances of
+minority examples. To check the validation of their method, the researchers performed
+an empirical study on a real-world credit card dataset with imbalanced classes. Their
+Mach.Learn.Knowl.Extr.2023,5 321
+method achieved superior sensitivity at the cost of a marginal increase in false positives.
+Figure 9. The G* iFsi gfuerde9 w.ThitehG *zi s(freadnwdithozm(ra nndooimsen)o isaen)adn dththee ooutuptuptiusmt eirsg emdweirthgxetd.O wtheirtthha xn
+t
+t.h Oat,tthheer than that, the
+classifierCistrainedonoriginalandaugmentedtrainingsets(C
+O
+andCa).
+classifier C is trained on original and augmented training sets (C and C ).
+O a
+4. TabularComparisonofDifferentGANVariants
+ThispartofoursurveypresentsanoverviewofthevariousGAN-basedmethodsused
+4. Tabular Comparison of Different GAN Variants
+todealwiththeimbalancedclassproblem.
+This part of our survey presents an overview of the various GAN-based methods
+DetailedDiscussionontheAbove-ReviewedGANVariants
+used to deal with thInet hiimsstbuadyla,wneciendtro dculacesdst hpermoobstlecomns.i derablechallengesfacedbytheconven-
+tionalGANarchitecture,vanishinggradientandmodecollapse,thatarisewhileupdating
+theGenerator. Todealwiththischallenge,wesurveyedimportantvariantsofGANthat
+havethepotentialtosolvetheseissues. TheGANvariantsdiscussedinthisstudyoffer
+more architectural alternatives for GANs. Furthermore, this study explained the main
+causesoftheseissuesintheconventionalGAN.Thisstudyalsoshedlightonthemodified
+lossfunctionspresentedbyGANvariantstosolvetheseissues. Inaddition,Table1offers
+aperformancesummaryofdifferentGANvariantsdiscussedinthispaper. In[91], the
+authorsdiscussedsyntheticdatagenerationusingthecGANmodel. Thestudyaimedto
+employaConditionalGenerativeAdversarialNetworktogeneratenewsyntheticdatafrom
+the“DefaultofCreditCardClients”datasets. Tocircumventdisclosingsensitiveinforma-
+tion,thestudypresentedaCGANthatcreatednewsyntheticdatafromtrainingdatathat
+maybeappliedinterchangeablytothesametasks. Sincethetrainingdataincludedaclass
+labelthatwastakenintoaccountduringtheproductionofnewdata,thisnetworktypewas
+employedinsteadofastandardGenerativeAdversarialNetwork(GAN).Theoutcomes
+were measured in two ways: firstly, the correlation between the new and old data was
+low,allowingfortheirusageincontentiousindustriessuchasmedicalandbanking,where
+greatcaremustbetakenwithclientdatatoavoidprivacyconcerns. Secondly,thesame
+algorithm,XGBoost,wasevaluatedonthetwodatasetswiththesamesettingsbecause
+thedatasetsincludedalabelthatcouldbeemployedastheclassifier. Basedonthedata,
+bothapproachesachievedcomparablecategorizationprecisionlevels. Inconclusion,the
+studyshowsthatdeeplearningtechniquescanbeeffectivelydeployedinsyntheticdata
+production. Furtherstudieswillinvestigatepotentialnewadversarialnetworkversionsfor
+thistask,andexperimentwithdifferentparametersettingstoachieveoptimalreliability.
+Mach.Learn.Knowl.Extr.2023,5 322
+Table1. ComparisontableofGAN-basedmethods. Thistabularrepresentationpresentsdifferent
+studies conducted by researchers in more recent times to generate synthetic data. It provides a
+detailedtabularpresentationofdifferentdatasetsandmethods,theirmeritsanddemerits,aswellas
+theAccuracy,Precession,RecallandF-1scoresofmultiplestudiestoprovideadetaileddescription
+oftheirkeyfindings.
+Model Accuracy Precision Recall F-Measure
+Duo-GAN — — — —
+C-GAN 0.826 — — 0.509
+CT-GAN 21.51% — — CTGAN=0.274
+SDGGAN — 0.9863 0.8090 0.8889
+OCAN 0.826 — — 0.509
+cWGAN — — — —
+ScoreGAN — — — —
+GAN-RF 99.83 GAN-RF=99.88 GAN-RF=99.9 GAN-RF=99.90
+TunedGAN 0.99963 GAN=0.93204 — GAN=0.82051
+Majority–minority
+— — — BankB=0.552
+GAN
+Intheabovetable“—“referstoexperimentsthathavenotbeendoneinpreviousstudies.
+Furthermore,Zhaoetal.[89]employedvariousGANmodelsforsyntheticdatagen-
+eration related to credit card transactions. The results from the research suggest using
+CTAB-GAN,aconditionalGAN-basedtabulardatagenerator. Bymodelingmixedvari-
+ables,CTAB-GANsurpassedthepreviousstate-of-the-artapproachesandofferedsuperior
+generatingcapabilitiesforimbalancedcategoricalvariablesandcontinuousvariableswith
+complex distributions. In relation to this, CTAB-GAN has three main features: First,
+incorporatingaclassifierintotheconditionalGAN.Second, efficientdataencodingfor
+mixedvariables. Thethirdisanovelconstructionofconditionalvectors. Theycompared
+CTAB-GANtofourothertabulardatageneratorsusingvariousmeasures,includingtheir
+statisticalsimilarity,MLutility,andabilitytodefenduserprivacy. TheCTAB-synthetic
+GAN’sdataoutperformedthecurrentstate-of-the-artprivacyguaranteeintermsofsimilar-
+ityandutilitymethods. Comparedtoallotherstate-of-the-artalgorithms,itenhancedthe
+accuracybyasmuchas17%whenappliedtocomplicateddatasets. TheCTAB-impressive
+GAN’sfindingsshoweditspotentialuseinvariousapplicationsthatcouldbenefittremen-
+douslyfromdataexchange,suchasmanufacturing,banking,andinsurance.
+Similarly, Lee and Park [40] employed the GAN model to detect fraud in credit
+card transactions with imbalanced data. The study used the GAN model to resample
+minorityclassesandaccuratelyrecreatethem. TheGANwastrainedwithtentimesas
+manydatafromtheuncommonclassesofInfiltration,Heartbleed,andBottoevaluateits
+classificationefficacy. ComparedtoastandardRandomForestclassification,theresults
+ofthetestsdemonstratethatGANresamplingachievedbetterresults. Inparticular,the
+resultsdemonstrateasuperiorcategorizationabilityfortheminorityclassescompared
+tonormalandcontrolclasses. Itappearsthatthenormalclassclassificationperformance
+wasenhancedthroughincreasedexposuretoinformationconcerningtheminorityclass’
+features, whichdifferedmarkedlyfromthoseofotherclasses. Additionally, theresults
+provethatGAN-RFdemonstratedsuperiorperformancebyclassifyingthedataresampled
+withSMOTE,atechniqueemployedinearlierstudiestoresolveunbalanceddata. While
+thebasicideabehindbothSMOTEandGANistogeneratenewdata,SMOTEhadissues
+with overlapping noise and classes. As a result, the GAN model, which replicated the
+uncommon class and properly compared attributes, performed better in cases of data
+asymmetry. Based on the research results, GAN also performed very well in detecting
+intrusions in networks with skewed data. The deep learning model known as GAN is
+frequentlyemployedforimageandlanguageprocessingbecauseitdoesnotrelyonhuman
+oversightorlabeling. Theeffectivenessofthetrainingdatabeforeandafterresamplingwas
+measured,andtheefficacyofvariousalgorithmswasmeasuredinseparateexperiments.
+Mach.Learn.Knowl.Extr.2023,5 323
+Toresamplethedata,thestudyemployedaGANmodel,andthestudyusedtheRandom
+Foresttechniquetoclassifythesamples.
+Additionally,Fioreetal.[5]usedthesyntheticdatagenerationGANmodeltoidentify
+irregularitiesincreditcardtransactionsusingimbalanceddatasets. Thestudyemployed
+theGANandSMOTEmodels. Theydescribedanapproachforaddressingthechallengeof
+classimbalancethatariseswiththeuseofsupervisedclassificationindetectingfraudinthe
+creditcarddomain. Whenatrainingsetwasprovided,anaugmentedsetwasgenerated
+with more data from the minority class than the original set. In addition, a fine-tuned
+GANwasusedtoproducesyntheticinstances. Asaresult,theGAN’sDiscriminatorcould
+notdistinguishbetweenfakeandaccuratedata. Recentresearchworkby[13]constitutes
+thecontinuationoftheresearchworkby[5]. Langevinetal.[13]usedGANstogenerate
+syntheticsampling. Theircasestudyinvestigatedtwocooperatingpartyscenariosyielding
+fourconsumerdistributionsbycreditquality. TheauthorsselectedGANsasascalable
+andflexibleapproachtogeneratingsyntheticdataforfrauddetectionrelatedtocreditcard
+fraud. Furthermore, the authors got access to almost 80 million credit card transaction
+datasets,withdifferentdatatypes,throughcollaboratingwithafinancialinstitution. Their
+findingsshowthatorganizationstiltedmoreandmoretowardsqualityconsumersaremore
+pronetobenefitfromaugmentationswithGANs. InRefs.[96–103],studiesarediscussed
+addressingthedifferenttechniquesusedingenerativeadversarialnetworkstoovercome
+classimbalance. Amongthem,SMOTE(SyntheticMinorityOver-samplingTechnique)is
+studiedin[96],whileGulrajanietal.[97]proposedanimprovedtrainingofWasserstein
+GANs,and[98]proposedaGenerativeAdversarialFusionNetworkforclassimbalance
+creditscoring. Furthermore,VijayaraghavanandGuan[99]discussedusingGAN-based
+dataaugmentationtoresolveclassimbalance. Creswelletal.[53]discussedanoverviewof
+GANs,whileGuietal.[100]reviewedthealgorithms,theoriesandapplicationsofGANs.
+Pandey et al. [101] discussed the limitations and applicability of GANs in the banking
+domain,andRamponietal.[102]proposedusingT-CGANfordataaugmentationwith
+irregularsampling. Finally,Vega-Márquezetal.[103]studiedthecreationofsyntheticdata
+withCGAN.ThesestudiesdemonstratethatGANscanbeeffectiveinaddressingclass
+imbalance by using techniques such as oversampling or data augmentation. However,
+further research is necessary to evaluate the effectiveness of this approach in different
+scenarios,andtoimprovetheaccuracyofGANs. Moreover,itisnecessarytoinvestigate
+theeffectivenessofcombiningGANswithothertechniquestoaddressclassimbalance.
+Furthermore,itisimportanttodevelopapproachesthatareabletogeneratemoreaccurate
+and diverse samples in order to improve the accuracy of classification models. Finally,
+furtherresearchshouldbeundertakenonhowtoeffectivelycombinegenerativeadversarial
+networksandclassifierstotackletheclassimbalanceproblem.
+5. ConclusionsandFutureRecommendations
+ThisreportreviewstherecentadvancementsmadeinGANs,startingfromthebasic
+principles according to which GANs are presented as the most modern architectures.
+Furthermore,thechallengesthatGANscansufferfromareaddressed,andsomeofthe
+mostcommonevaluationmetricsarediscussedandelucidated. Inaddition,thissurvey
+reviewedtheoriginalGANandintroduceddifferentGANvariantsdealingwithcredit
+card-basedfraud. Furthermore,thisstudyshowsthatGANcanfacilitatemultiplepractical
+approachestocreditcard-basedfrauddetection. Inaddition,wehavediscussedmultiple
+studiesthathaveproposednoveltrainingtechniques. Moreover,wehavealsohighlighted
+the merits and demerits of the generative techniques proposed by scholars to generate
+realisticdata. OurworkhasshownthatdataaugmentationusingGANshastheability
+toaddresstheproblemsofimbalanceddataincreditcard-basedfraud. Todealwiththis
+challenge,multipleGAN-basedsolutionshavebeenintroducedinrecentyears. However,
+therearemanylimitationsthatneedtobeconsideredinfuturework. Tostartwith,recent
+studies lack standardization in the evaluation metrics used to assess the performance
+of synthetic data generated by GANs for credit card fraud detection. Other than that,
+Mach.Learn.Knowl.Extr.2023,5 324
+recent studies have shown that while GANs can generate high-quality synthetic data,
+the diversity of synthetic data can be improved. In general, there are many areas that
+shouldbefocusedoninfutureresearchondataaugmentationusingGANsforcreditcard
+frauddetection. Amongtheseareas,addressingthelimitationsofGANstoimprovetheir
+effectivenessinthecreditcardfrauddomainisessentialtoprotectcreditcardholdersfrom
+monetarylosses. ThefutureresearchonGAN-baseddataaugmentationshouldfocuson
+settingupataxonomyofaugmentationmethods,enhancingtheoverallqualityofGAN
+samples,learningnovelwaystobuildcorrelationsbetweenclassifierframeworksanddata
+augmentation,andwideningthescopeofGANstootherdatatypes. Thisresearchworkis
+focusedonGAN-baseddataaugmentationincreditcardfrauddetection. However,data
+augmentationislimitedtothisdomain,andcanbeemployedforbreastcancerdetection,
+imaging,insuranceandsoon. Infutureresearch,enhancingthequalityofGANsamples
+andtheeffectivenessoftheirtestingonmultipledatasetsisalsoanimportantareatoexplore.
+ResearcherscanalsocombineGANsampleswithotherdataaugmentationmethods.
+GANs have shown immense success in recent years in generating artificial data.
+However,therearelimitationsintheconventionalarchitecture. Futurestudiesshouldlook
+intoalternativeGANframeworkstogeneratehigh-qualityanddiverseartificialdatato
+detectcreditcardfraud. Inaddition,GANshavethecapacityforimprovementsintermsof
+theeffectivenessofthesyntheticdatageneratedbyGANs. Researcherscanalsofocuson
+enhancingthequantityandqualityofGAN-generateddata. Forinstance,researcherscan
+optimizethetrainingphaseorfine-tuneGANhyper-parameters. Moreover,futurestudies
+canalsocombinedataaugmentationusingGANswithothertechniques,suchasactive
+learning,toimprovetheperformanceofcreditcardfrauddetectionmodels. Inaddition,
+itisessentialtocheckthegeneralizationofsyntheticdatageneratedbyGANtoseeifthe
+underlyingdatadistributionrepresentsthedataornot. Potentialfuturestudiesshould
+exploremethodstoevaluatethegeneralizationofdatageneratedbyGANstoassesstheir
+applicabilityincreditcardfrauddetectionmodels. ItisimperativetomentionthatGANs
+ensuretheprivacyofthecreditcardholderwhilegeneratingsyntheticdatawithsimilar
+traitstotheoriginalcreditcarddata. However,researcherscouldexamineotherethical
+considerationslinkedwithdataaugmentationusingGANs,suchasmakingsurethatthe
+GAN-generateddataarenotdiscriminatoryorbiased.
+TheobservationsofthissurveyconcludethatGANsaremoreeffectiveandappropriate
+foruseinhandlingtheclassimbalancechallenge. Moreover,thissurveyalsofindsGANs
+arehighlyrobusttowardsoverfittingandoverlapping,asGANscanunderstandthehidden
+patternsofdatathankstodeepnetworks. Inaddition,GANs’characteristics,suchastheir
+architecturaldesign,multiplevariants,andapplicationareas,makethismethodsuperior
+toothermachinelearningalgorithms. GenerativeAdversarialNetworkshaveachieved
+significant progress in credit card fraud detection. GANs can address an imbalanced
+classproblemviadataaugmentation, asthey approximatethedistribution of realdata
+andgeneratesyntheticdatafortheminorityclass(fraudulenttransactions). Furthermore,
+GANshavereceivedmuchattentionfromresearchers,andattainedpromisingresultsin
+creditcardfrauddetection.
+However, despite the enormous progress made in GAN techniques, these models
+still have shortcomings in dealing with credit card fraud. Therefore, future research
+shouldfocusmoreonelaboratingpowerfuladditionalGANsforexistingmodelsinthe
+financialdomain.
+AuthorContributions:Conceptualization,E.S.andS.P.;methodology,E.S.andS.P.;software,E.S.;
+validation, E.S.; formal analysis, E.S.; investigation, E.S. and S.P.; resources, S.P.; data curation,
+E.S.;writing—originaldraftpreparation,E.S.;writing—reviewandediting,S.P.;visualization,E.S.;
+supervision,S.P.;projectadministration,S.P.;fundingacquisition,S.P.Allauthorshavereadand
+agreedtothepublishedversionofthemanuscript.
+Funding:ThisresearchwasfundedbyBournemouthUniversity,UnitedKingdom.
+InstitutionalReviewBoardStatement:Notapplicable.
+Mach.Learn.Knowl.Extr.2023,5 325
+InformedConsentStatement:Notapplicable.
+DataAvailabilityStatement:Notapplicable.
+ConflictsofInterest:Theauthorsdeclarenoconflictofinterest.
+References
+1. Adewumi,A.O.;Akinyelu,A.A.Asurveyofmachine-learningandnature-inspiredbasedcreditcardfrauddetectiontech-niques.
+Int.J.Syst.Assur.Eng.Manag.2017,8,937–953.[CrossRef]
+2. Bahnsen,A.C.;Aouada,D.;Stojanovic,A.;Ottersten,B.Featureengineeringstrategiesforcreditcardfrauddetection.ExpertSyst.
+Appl.2016,51,134–142.[CrossRef]
+3. Srivastava,A.;Kundu,A.;Sural,S.;Majumdar,A.CreditcardfrauddetectionusinghiddenMarkovmodel.IEEETrans.Dependable
+Secur.Comput.2008,5,37–48.[CrossRef]
+4. Tan,G.W.H.;Ooi,K.B.;Chong,S.C.;Hew,T.S.NFCmobilecreditcard: Thenextfrontierofmobilepayment? Telemat. Inform.
+2014,31,292–307.[CrossRef]
+5. Fiore,U.;DeSantis,A.;Perla,F.;Zanetti,P.;Palmieri,F.Usinggenerativeadversarialnetworksforimprovingclassification
+effectivenessincreditcardfrauddetection.Inf.Sci.2019,479,448–455.[CrossRef]
+6. Zhang,F.;Liu,G.;Li,Z.;Yan,C.;Jiang,C.GMM-basedUndersamplingandItsApplicationforCreditCardFraudDetection.In
+Proceedingsofthe2019InternationalJointConferenceonNeuralNetworks(IJCNN),Budapest,Hungary,14–19July2019;pp.
+1–8.[CrossRef]
+7. Haixiang,G.;Yijing,L.;Shang,J.;Mingyun,G.;Yuanyue,H.;Bing,G.Learningfromclass-imbalanceddata:Reviewofmethods
+andapplications.ExpertSyst.Appl.2017,73,220–239.[CrossRef]
+8. Guo, X.; Yin, Y.; Dong, C.; Yang, G.; Zhou, G.Ontheclassimbalanceproblem. InProceedingsoftheFourthInternational
+ConferenceonNaturalComputation,Jinan,China,18–20October2008;Volume4,pp.192–201.
+9. Malave,N.;Nimkar,A.V.Asurveyoneffectsofclassimbalanceindatapre-processingstageofclassificationproblem. Int. J.
+Comput.Syst.Eng.2020,6,63–75.[CrossRef]
+10. Moreno-Barea,F.J.;Jerez,J.M.;Franco,L.Improvingclassificationaccuracyusingdataaugmentationonsmalldatasets.Expert
+Syst.Appl.2020,161,113696.[CrossRef]
+11. Al Olaimat, M.; Lee, D.; Kim, Y.; Kim, J.; Kim, J. A learning-based data augmentation for network anomaly detection. In
+Proceedingsofthe29thInternationalConferenceonComputerCommunicationsandNetworks(ICCCN),Honolulu,HI,USA,
+3–6August2020;pp.1–10.
+12. Tamtama,A.S.;Arifudin,R.IncreasingAccuracyofTheRandomForestAlgorithmUsingPCAandResamplingTechniqueswith
+DataAugmentationforFraudDetectionofCreditCardTransaction.J.Adv.Inf.Syst.Technol.2022,4,60–76.
+13. Langevin,A.;Cody,T.;Adams,S.;Beling,P.Syntheticdataaugmentationofimbalanceddatasetswithgenerativeadversarial
+networksundervaryingdistributionalassumptions: Acasestudyincreditcardfrauddetection. J.Oper. Res. Soc. 2021,1–28.
+[CrossRef]
+14. Wang,C.;Deng,C.;Wang,S.Imbalance-XGBoost:Leveragingweightedandfocallossesforbinarylabel-imbalancedclassi-fication
+withXGBoost.PatternRecognit.Lett.2020,136,190–197.[CrossRef]
+15. Johnson,J.M.;Khoshgoftaar,T.M.Surveyondeeplearningwithclassimbalance.J.BigData2019,6,27.[CrossRef]
+16. Pouyanfar,S.;Sadiq,S.;Yan,Y.;Tian,H.;Tao,Y.;Reyes,M.P.;Shyu,M.L.;Chen,S.C.;Iyengar,S.S.Asurveyondeeplearning:
+Algorithms,techniques,andapplications.ACMComput.Surv.(CSUR)2018,51,92.[CrossRef]
+17. BauderRA,KhoshgoftaarTM,Hasanin, T.Anempiricalstudyonclassrarityinbigdata. InProceedingsofthe17thIEEE
+InternationalConferenceonMachineLearningandApplications(ICMLA),Orlando,FL,USA,17–20December2018;pp.785–790.
+[CrossRef]
+18. Kotsiantis,S.B.;Kanellopoulos,D.;Pintelas,P.E.Datapreprocessingforsupervisedleaning.Int.J.Comput.Sci.2006,1,111–117.
+19. Yang,W.;Zhang,Y.;Ye,K.;Li,L.;Xu,C.-Z.FFD:AFederatedLearningBasedMethodforCreditCardFraudDetection. In
+ProceedingsoftheBigData–BigData2019:8thInternationalCongress,HeldasPartoftheServicesConferenceFederation,SCF,
+SanDiego,CA,USA,25–30June2019;pp.18–32.[CrossRef]
+20. Tanaka,F.H.K.D.S.;Aranha,C.DataaugmentationusingGANs.arXiv2019,arXiv:1904.09135v1.
+21. Cordón, I.; García, S.; Fernández, A.; Herrera, F. Imbalance: Oversampling algorithms for imbalanced classification in R.
+Knowledge-BasedSyst.2018,161,329–341.[CrossRef]
+22. Benchaji,I.;Douzi,S.;ElOuahidi,B.Usinggeneticalgorithmtoimproveclassificationofimbalanceddatasetsforcreditcard
+frauddetection.InSmartDataandComputationalIntelligence:ProceedingsoftheInternationalConferenceonAdvancedInformation
+Technology,ServicesandSystems(AIT2S-18),17–18October2018;SpringerInternationalPublishing:Berlin/Heidelberg,Germany,
+2019;Volume3,pp.220–229.
+Mach.Learn.Knowl.Extr.2023,5 326
+23. Cai,Z.;Wang,X.;Zhou,M.;Xu,J.;Jing,L.SupervisedclassdistributionlearningforGANs-basedim-balancedclassification.In
+ProceedingsoftheIEEEInternationalConferenceonDataMining(ICDM),Beijing,China,8–11November2019;pp.41–50.
+24. Sayed, G.I.; Soliman, M.M.; Hassanien, A.E. A novel melanoma prediction model for imbalanced data using opti-mized
+SqueezeNetbybaldeaglesearchoptimization.Comput.Biol.Med.2021,136,104712.[CrossRef]
+25. Kuppa, A.; Aouad, L.; Le-Khac, N.A. Towards improving privacy of synthetic datasets. In Privacy Technologies and Policy,
+Proceedings of the 9th Annual Privacy Forum, APF, Oslo, Norway, 17–18 June 2021; Springer International Publishing: Cham,
+Switzerland;pp.106–119.
+26. Sakharova, I.Paymentcardfraud: Challengesandsolutions. InProceedingsofthe2012IEEEInternationalConferenceon
+IntelligenceandSecurityInformatics,Washington,USA,11–14June2012;pp.227–234.
+27. Triastcyn,A.;Faltings,B.Generatingartificialdataforprivatedeeplearning.arXiv2018,arXiv:1803.03148.
+28. Goodfellow,I.J.;Pouget-Abadie,J.;Mirza,M.;Xu,B.;Warde-Farley,D.;Ozair,S.;Courville,A.;Bengio,Y.GenerativeAdversarial
+Nets(AdvancesinNeuralInformationProcessingSystems);RedHook:NewYork,NY,USA,2014.[CrossRef]
+29. Chen, J.; Shen, Y.; Ali, R. Credit card fraud detection using sparse autoencoder and generative adver-sarial network. In
+ProceedingsoftheIEEE9thAnnualInformationTechnology,ElectronicsandMobileCommunicationConference(IEMCON),
+Vancouver,BC,Canada,1–3November2018;pp.1054–1059.
+30. Wei,W.;Li,J.;Cao,L.;Ou,Y.;Chen,J.Effectivedetectionofsophisticatedonlinebankingfraudonextremelyim-balanceddata.
+WorldWideWeb2013,16,449–475.[CrossRef]
+31. Kajal, D.; Kaur, K.Creditcardfrauddetection usingimbalanceresamplingmethodwithfeatureselection. Int. J.2021, 10,
+2061–2071.
+32. Makki,S.;Assaghir,Z.;Taher,Y.;Haque,R.;Hacid,M.-S.;Zeineddine,H.AnExperimentalStudyWithImbalancedClassification
+ApproachesforCreditCardFraudDetection.IEEE2019,7,93010–93022.[CrossRef]
+33. DalPozzolo,A.;Caelen,O.;LeBorgne,Y.-A.;Waterschoot,S.;Bontempi,G.Learnedlessonsincreditcardfrauddetectionfroma
+practitionerperspective.ExpertSyst.Appl.2014,41,4915–4928.[CrossRef]
+34. Thennakoon,A.;Bhagyani,C.;Premadasa,S.;Mihiranga,S.;Kuruwitaarachchi,N.Real-timecreditcardfrauddetectionusing
+machine learning. In Proceedings of the 9th International Conference on Cloud Computing, Data Science & Engineering
+(Confluence),UttarPradesh,India,10–11January2019;pp.488–493.
+35. Chaudhary,K.;Yadav,J.;Mallick,B.Areviewoffrauddetectiontechniques:Creditcard.Int.J.Comput.Appl.2012,45,39–44.
+36. Dong,Q.;Gong,S.;Zhu,X.ImbalancedDeepLearningbyMinorityClassIncrementalRectification.IEEETrans.PatternAnal.
+Mach.Intell.2018,41,1367–1381.[CrossRef]
+37. Assefa,S.A.;Dervovic,D.;Mahfouz,M.;Tillman,R.E.;Reddy,P.;Veloso,M.Generatingsyntheticdatainfinance:Opportunities,
+challengesandpitfalls.InProceedingsoftheFirstACMInternationalConferenceonAIinFinance,NewYork,NY,USA,15–16
+October2020;pp.1–8.
+38. Wang, S.; Yao, X.MulticlassImbalanceProblems: AnalysisandPotentialSolutions. IEEETrans. Syst. ManCybern. PartB
+(Cybernetics)2012,42,1119–1130.[CrossRef][PubMed]
+39. Herland,M.;Khoshgoftaar,T.M.;Bauder,R.A.BigDatafrauddetectionusingmultiplemedicaredatasources.J.BigData2018,5,
+29.[CrossRef]
+40. Lee,J.;Park,K.GAN-basedimbalanceddataintrusiondetectionsystem.Pers.UbiquitousComput.2021,25,121–128.[CrossRef]
+41. Seiffert,C.;Khoshgoftaar,T.M.;VanHulse,J.;Napolitano,A.Miningdatawithrareevents:Acasestudy.InProceedingsofthe
+19thIEEEInternationalConferenceonToolswithArtificialIntelligence(ICTAI),Patras,Greece,29–31October2007;Volume2,pp.
+132–139.
+42. Shorten,C.;Khoshgoftaar,T.M.AsurveyonImageDataAugmentationforDeepLearning.J.BigData2019,6,60.[CrossRef]
+43. Pan,Z.;Yu,W.;Yi,X.;Khan,A.;Yuan,F.;Zheng,Y.RecentProgressonGenerativeAdversarialNetworks(GANs): ASurvey.
+IEEEAccess2019,7,36322–36333.[CrossRef]
+44. Antipov,G.;Baccouche,M.;Dugelay,J.L.Faceagingwithconditionalgenerativeadversarialnetworks.InProceedingsofthe2017
+IEEEinternationalconferenceonimageprocessing(ICIP),Beijing,China,17–20September2017;pp.2089–2093.
+45. Dziugaite,G.K.;Roy,D.M.;Ghahramani,Z.Traininggenerativeneuralnetworksviamaximummeandis-crepancyoptimization.
+InProceedingsoftheThirty-FirstConferenceonUncertaintyinArtificialIntelligence,Amsterdam,TheNetherlands,12–16July
+2015;pp.258–267.
+46. Lassner, C.; Pons-Moll, G.; Gehler, P.V.Agenerativemodelofpeopleinclothing. InProceedingsoftheIEEEinternational
+conferenceoncomputervision,Venice,Italy,22–29October2017;pp.853–862.
+47. Hwang,J.;Kim,K.AnEfficientDomain-AdaptationMethodusingGANforFraudDetection.Int.J.Adv.Comput.Sci.Appl.2020,
+11,94–103.[CrossRef]
+48. Cai, Z.; Xiong, Z.; Xu, H.; Wang, P.; Li, W.; Pan, Y. Generative adversarial networks: A survey toward private and secure
+applications.ACMComput.Surv.(CSUR)2021,54,1–38.[CrossRef]
+Mach.Learn.Knowl.Extr.2023,5 327
+49. Yang,X.;Song,Z.;King,I.;Xu,Z.Asurveyondeepsemi-supervisedlearning. IEEETrans. Knowl. DataEng. 2022,1,1–20.
+[CrossRef]
+50. Wang,Z.;Wang,W.;Yang,Y.;Han,Z.;Xu,D.;Su,C.CNN-andGAN-basedclassificationofmaliciouscodefamilies: Acode
+visualizationapproach.Int.J.Intell.Syst.2022,37,12472–12489.[CrossRef]
+51. Jiang,J.;Liu,F.;Liu,Y.;Tang,Q.;Wang,B.;Zhong,G.;Wang,W.AdynamicensemblealgorithmforanomalydetectioninIoT
+imbalanceddatastreams.Comput.Commun.2022,194,250–257.[CrossRef]
+52. Zhang,L.;Chen,W.;Wang,W.;Jin,Z.;Zhao,C.;Cai,Z.;Chen,H.Cbgru:Adetectionmethodofsmartcontractvulnerability
+basedonahybridmodel.Sensors2022,22,3577.[CrossRef][PubMed]
+53. Creswell,A.;White,T.;Dumoulin,V.;Arulkumaran,K.;Sengupta,B.;Bharath,A.A.GenerativeAdversarialNetworks: An
+Overview.IEEESignalProcess.Mag.2018,35,53–65.[CrossRef]
+54. Park,S.-W.;Ko,J.-S.;Huh,J.-H.;Kim,J.-C.ReviewonGenerativeAdversarialNetworks:FocusingonComputerVisionandIts
+Applications.Electronics2021,10,1216.[CrossRef]
+55. Cauli,N.;Recupero,D.R.SurveyonVideosDataAugmentationforDeepLearningModels.Futur.Internet2022,14,93.[CrossRef]
+56. Ali-Gombe,A.;Elyan,E.;Savoye,Y.;Jayne,C.Few-shotclassifierGAN.InProceedingsofthe2018InternationalJointConference
+onNeuralNetworks(IJCNN),RiodeJaneiro,Brazil,8–13July2018;pp.1–8.
+57. Burks,R.;Islam,K.A.;Lu,Y.;Li,J.DataAugmentationwithGenerativeModelsforImprovedMalwareDetection:AComparative
+Study.InProceedingsofthe2019IEEE10thAnnualUbiquitousComputing,Electronics&MobileCommunicationConference
+(UEMCON),NewYork,NY,USA,10–12October2019;pp.0660–0665.[CrossRef]
+58. Jain,S.;Seth,G.;Paruthi,A.;Soni,U.;Kumar,G.Syntheticdataaugmentationforsurfacedefectdetectionandclassi-fication
+usingdeeplearning.J.Intell.Manuf.2022,33,1007–1020.[CrossRef]
+59. Torkzadehmahani,R.;Kairouz,P.;Paten,B.Dp-cgan:Differentiallyprivatesyntheticdataandlabelgeneration.InProceedingsof
+theIEEE/CVFConferenceonComputerVisionandPatternRecognitionWorkshops,LongBeach,CA,USA,16–20June2019;pp.
+1–7.
+60. Alqahtani,H.;Kavakli-Thorne,M.;Kumar,G.ApplicationsofGenerativeAdversarialNetworks(GANs):AnUpdatedReview.
+Arch.Comput.MethodsEng.2021,28,525–552.[CrossRef]
+61. Kim,J.;Jeong,K.;Choi,H.;Seo,K.GAN-basedanomalydetectioninimbalanceproblems. InProceedingsoftheComputer
+Vision–ECCV2020Workshops,Glasgow,UK,23–28August2020;pp.128–145.[CrossRef]
+62. Saqlain,A.S.;Fang,F.;Ahmad,T.;Wang,L.;Abidin,Z.-U.Evolutionandeffectivenessoflossfunctionsingenerativeadversarial
+networks.ChinaCommun.2021,18,45–76.[CrossRef]
+63. Ba, H. Improving Detection of Credit Card Fraudulent Transactions using Generative Adversarial Networks. arXiv 2019,
+arXiv:1907.03355.
+64. Sethia,A.;Patel,R.;Raut,P.Dataaugmentationusinggenerativemodelsforcreditcardfrauddetection.InProceedingsofthe4th
+InternationalConferenceonComputingCommunicationandAutomation(ICCCA),GreaterNoida,India,14–15December2018;
+pp.1–6.
+65. Liu,H.;Lang,B.MachineLearningandDeepLearningMethodsforIntrusionDetectionSystems:ASurvey.Appl.Sci.2019,9,
+4396.[CrossRef]
+66. Charitou, C.; Dragicevic, S.; Garcez, A.D.A. Synthetic Data Generation for Fraud Detection using GANs. arXiv 2021,
+arXiv:2109.12546.
+67. Ngwenduna,K.S.;Mbuvha,R.Alleviatingclassimbalanceinactuarialapplicationsusinggenerativeadversarialnet-works.Risks
+2021,9,49.[CrossRef]
+68. Zhong,Z.;Zheng,L.;Kang,G.;Li,S.;Yang,Y.RandomErasingDataAugmentation.InProceedingsoftheAAAIConferenceon
+ArtificialIntelligence,NewYork,NY,USA,7–12February2020.
+69. Eom,S.;Huh,J.-H.TheOpeningCapabilityforSecurityagainstPrivacyInfringementsintheSmartGridEnvironment.Mathematics
+2018,6,202.[CrossRef]
+70. Eom, S.; Huh, J.-H. Group signature with restrictive linkability: Minimizing privacy exposure in ubiquitous environment.
+J.Ambient.Intell.Humaniz.Comput.2018,1,1–11.[CrossRef]
+71. Chen,J.;Tam,D.;Raffel,C.;Bansal,M.;Yang,D.AnempiricalsurveyofdataaugmentationforlimiteddatalearninginNLP.
+arXiv2021,arXiv:2106.07499.
+72. Laddha,S.;Kumar,V.DGCNN:Deepconvolutionalgenerativeadversarialnetworkbasedconvolutionalneuralnet-workfor
+diagnosisofCOVID-19.Multimed.ToolsAppl.2022,81,31201–31218.[CrossRef][PubMed]
+73. Talavera,E.;Iglesias,G.;González-Prieto,Á.;Mozo,A.;Gómez-Canaval,S.DataAugmentationtechniquesintimeseriesdomain:
+Asurveyandtaxonomy.arXiv2022,arXiv:2206.13508.
+74. Mikołajczyk,A.;Grochowski,M.Dataaugmentationforimprovingdeeplearninginimageclassificationproblem.InProceedings
+oftheInternationalInterdisciplinaryPhDWorkshop(IIPhDW),Swinoujscie,Poland,9–12May2018;pp.117–122.[CrossRef]
+Mach.Learn.Knowl.Extr.2023,5 328
+75. Antoniou,A.;Storkey,A.;Edwards,H.Dataaugmentationgenerativeadversarialnetworks.arXiv2017,arXiv:1711.04340.
+76. Saxena,D.;Cao,J.Generativeadversarialnetworks(GANs)challenges,solutions,andfuturedirections.ACMCom-PutingSurv.
+(CSUR)2021,54,1–42.
+77. Chen,H.ChallengesandCorrespondingSolutionsofGenerativeAdversarialNetworks(GANs):ASurveyStudy.J.Physics:Conf.
+Ser.2021,1827,012066.[CrossRef]
+78. Zhou,Z.;Zhang,B.;Lv,Y.;Shi,T.;Chang,F.DataAugmentinImbalancedLearningBasedonGenerativeAdversarialNetworks.
+In Neural Information Processing, Proceedings of the 26th International Conference, ICONIP 2019, Sydney, NSW, Australia, 12–15
+December2019;SpringerInternationalPublishing:Berlin/Heidelberg,Germany,2019;PartIV26;pp.21–30.[CrossRef]
+79. Xia,X.;Pan,X.;Li,N.;He,X.;Ma,L.;Zhang,X.;Ding,N.GAN-basedanomalydetection:Areview.Neurocomputing2022,493,
+497–535.[CrossRef]
+80. Niu,X.;Wang,L.;Yang,X.Acomparisonstudyofcreditcardfrauddetection: Supervisedversusunsuper-vised. arXiv2019,
+arXiv:1904.10604.
+81. Mullick,S.S.;Datta,S.;Das,S.Generativeadversarialminorityoversampling. InProceedingsoftheIEEE/CVFInterntional
+ConferenceonComputerVision,Seoul,Korea,27October–2November2019;pp.1695–1704.
+82. Kodali,N.;Abernethy,J.;Hays,J.;Kira,Z.OnConvergenceandStabilityofGANs.arXiv2017,arXiv:1705.07215.
+83. Kossaifi,J.;Tran,L.;Panagakis,Y.;Pantic,M.Gagan:Geometry-awaregenerativeadversarialnetworks.InProceedingsofthe
+IEEEConferenceonComputerVisionandPatternRecognition,SaltLakeCity,UT,USA,18–22June2018;pp.878–887.
+84. Mangalam,K.;Garg,R.Overcomingmodecollapsewithadaptivemultiadversarialtraining.arXiv2021,arXiv:2112.14406.
+85. Wang,Z.;She,Q.;Ward,T.E.Generativeadversarialnetworksincomputervision:Asurveyandtaxonomy.ACMComput.Surv.
+(CSUR)2021,54,1–38.[CrossRef]
+86. Arjovsky,M.;Chintala,S.;Bottou,L.Wassersteingenerativeadversarialnetworks.InProceedingsoftheInternationalConference
+onMachineLearning,Baltimore,MD,USA,17–23July2017;pp.214–223.
+87. Mirza,M.;Osindero,S.Conditionalgenerativeadversarialnets.arXiv2014,arXiv:1411.1784.
+88. Ferreira,F.;Lourenço,N.;Cabral,B.;Fernandes,J.P.WhenTwoareBetterThanOne:SynthesizingHeavilyUn-balancedData.
+IEEEAccess2021,9,150459–150469.[CrossRef]
+89. Zhao,Z.;Kunar,A.;Birke,R.;Chen,L.Y.Ctab-gan:Effectivetabledatasynthesizing.InProceedingsoftheAsianConferenceon
+MachineLearning,Online,17–19November2021;pp.97–112.Availableonline:https://proceedings.mlr.press/v157/zhao21a
+(accessedon13February2023).
+90. Engelmann,J.;Lessmann,S.ConditionalWassersteinGAN-basedoversamplingoftabulardataforimbalancedlearning.Expert
+Syst.Appl.2021,174,114582.[CrossRef]
+91. Choi,E.;Biswal,S.;Malin,B.;Duke,J.;Stewart,W.F.;Sun,J.Generatingmulti-labeldiscretepatientrecordsusinggenerative
+adversarialnetworks.InProceedingsoftheMachinelearningforHealthcareConference,Boston,MA,USA,18–19August2017;
+pp.286–305.
+92. Xu,L.;Skoularidou,M.;Cuesta-Infante,A.;Veeramachaneni,K.Modelingtabulardatausingconditionalgan.Adv.NeuralInf.
+Process.Syst.2019,32,1–11.
+93. Park,N.;Mohammadi,M.;Gorde,K.;Jajodia,S.;Park,H.;Kim,Y.Datasynthesisbasedongenerativeadversarialnetworks.arXiv
+2018,arXiv:1806.03384.[CrossRef]
+94. Zheng,P.;Yuan,S.;Wu,X.;Li,J.;Lu,A.One-classadversarialnetsforfrauddetection.InProceedingsoftheAAAIConferenceon
+ArtificialIntelligence,Honolulu,HA,USA,29–31January2019;Volume33,pp.1286–1293.
+95. Shehnepoor,S.;Togneri,R.;Liu,W.;Bennamoun,M.ScoreGAN:AFraudReviewDetectorBasedonRegulatedGANWithData
+Augmentation.IEEETrans.Inf.ForensicsSecur.2021,17,280–291.[CrossRef]
+96. Chawla,N.V.;Bowyer,K.W.;Hall,L.O.;Kegelmeyer,W.P.SMOTE:Syntheticminorityover-samplingtechnique.J.Artif.Intell.
+Res.2002,16,321–357.[CrossRef]
+97. Gulrajani,I.;Ahmed,F.;Arjovsky,M.;Dumoulin,V.;Courville,A.C.Improvedtrainingofwassersteingans. Adv. NeuralInf.
+Process.Syst.2017,30,1–11.
+98. Lei,K.;Xie,Y.;Zhong,S.;Dai,J.;Yang,M.;Shen,Y.Generativeadversarialfusionnetworkforclassimbalancecreditscoring.
+NeuralComput.Appl.2020,32,8451–8462.[CrossRef]
+99. Vijayaraghavan,S.;Guan,T.GANbasedDataAugmentationtoResolveClassImbalance.arXiv2022,arXiv:2206.05840.
+100. Gui,J.;Sun,Z.;Wen,Y.;Tao,D.;Ye,J.AReviewonGenerativeAdversarialNetworks:Algorithms,Theory,andApplications.
+IEEETrans.Knowl.DataEng.2021,35,3313–3332.[CrossRef]
+101. Pandey,A.;Bhatt,D.;Bhowmik,T.LimitationsandApplicabilityofGANsinBankingDomain.InProceedingsoftheWorkshop
+onAppliedDeepGenerativeNetworksco-locatedwith24thEuropeanConferenceonArtificialIntelligence(ECAI2020),Santiago
+deCompostela,Spain,29August2020.
+Mach.Learn.Knowl.Extr.2023,5 329
+102. Ramponi,G.;Protopapas,P.;Brambilla,M.;Janssen,R.T-cgan:Conditionalgenerativeadversarialnetworkfordataaugmentation
+innoisytimeserieswithirregularsampling.arXiv2018,arXiv:1811.08295.
+103. Vega-Márquez,B.;Rubio-Escudero,C.;Riquelme,J.C.;Nepomuceno-Chamorro,I.Creationofsyntheticdatawithconditional
+generativeadversarialnetworks.InProceedingsofthe14thInternationalConferenceonSoftComputingModelsinIndustrialand
+EnvironmentalApplications(SOCO2019),Seville,Spain,13–15May2019;SpringerInternationalPublishing:Berlin/Heidelberg,
+Germany,2020;pp.231–240.
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s)andcontributor(s)andnotofMDPIand/ortheeditor(s).MDPIand/ortheeditor(s)disclaimresponsibilityforanyinjuryto
+peopleorpropertyresultingfromanyideas,methods,instructionsorproductsreferredtointhecontent.

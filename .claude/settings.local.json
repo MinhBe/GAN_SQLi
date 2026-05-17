@@ -59,7 +59,8 @@
       "Bash(Select-Object -ExpandProperty FullName)",
       "Bash(Sort-Object)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\" -Recurse -Force -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch '\\\\.git' } | ForEach-Object { $_.FullName } | Sort-Object)",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\" -Force | Where-Object { $_.PSIsContainer } | ForEach-Object { $_.FullName } | Sort-Object)"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\" -Force | Where-Object { $_.PSIsContainer } | ForEach-Object { $_.FullName } | Sort-Object)",
+      "Bash(python3 *)"
     ]
   }
 }

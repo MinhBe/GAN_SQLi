@@ -1,0 +1,1061 @@
+SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient
+LantaoYu†,WeinanZhang†∗,JunWang‡,YongYu†
+†ShanghaiJiaoTongUniversity,‡UniversityCollegeLondon
+{yulantao,wnzhang,yyu}@apex.sjtu.edu.cn,j.wang@cs.ucl.ac.uk
+Abstract as the length of sequence increases. To address this prob-
+lem,(Bengioetal.2015)proposedatrainingstrategycalled
+Asanewwayoftraininggenerativemodels,GenerativeAd-
+scheduledsampling(SS),wherethegenerativemodelispar-
+versarialNet(GAN)thatusesadiscriminativemodeltoguide
+tiallyfedwithitsownsyntheticdataasprefix(observedto- thetrainingofthegenerativemodelhasenjoyedconsiderable
+successingeneratingreal-valueddata.However,ithaslimi- kens)ratherthanthetruedatawhendecidingthenexttoken
+tationswhenthegoalisforgeneratingsequencesofdiscrete in the training stage. Nevertheless, (Husza´r 2015) showed
+tokens.Amajorreasonliesinthatthediscreteoutputsfrom that SS is an inconsistent training strategy and fails to ad-
+thegenerativemodelmakeitdifficulttopassthegradientup- dresstheproblemfundamentally.Anotherpossiblesolution
+datefromthediscriminativemodeltothegenerativemodel. of the training/inference discrepancy problem is to build
+Also, the discriminative model can only assess a complete the loss function on the entire generated sequence instead
+sequence,whileforapartiallygeneratedsequence,itisnon-
+of each transition. For instance, in the application of ma-
+trivial to balance its current score and the future one once
+chine translation, a task specific sequence score/loss, bilin-
+theentiresequencehasbeengenerated.Inthispaper,wepro-
+gual evaluation understudy (BLEU) (Papineni et al. 2002),
+pose a sequence generation framework, called SeqGAN, to
+canbeadoptedtoguidethesequencegeneration.However,
+solvetheproblems.Modelingthedatageneratorasastochas-
+ticpolicyinreinforcementlearning(RL),SeqGANbypasses in many other practical applications, such as poem genera-
+thegeneratordifferentiationproblembydirectlyperforming tion(ZhangandLapata2014)andchatbot(Hingston2009),
+gradient policy update. The RL reward signal comes from a task specific loss may not be directly available to score a
+theGANdiscriminatorjudgedonacompletesequence,and generatedsequenceaccurately.
+is passed back to the intermediate state-action steps using
+Generaladversarialnet(GAN)proposedby(Goodfellow
+MonteCarlosearch.Extensiveexperimentsonsyntheticdata
+and others 2014) is a promising framework for alleviating
+and real-world tasks demonstrate significant improvements
+the above problem. Specifically, in GAN a discriminative
+overstrongbaselines.
+netD learnstodistinguishwhetheragivendatainstanceis
+real or not, and a generative net G learns to confuse D by
+Introduction
+generating high quality data. This approach has been suc-
+Generating sequential synthetic data that mimics the real cessfulandbeenmostlyappliedincomputervisiontasksof
+one is an important problem in unsupervised learning. Re- generatingsamplesofnaturalimages(Dentonetal.2015).
+cently, recurrent neural networks (RNNs) with long short- Unfortunately, applying GAN to generating sequences
+term memory (LSTM) cells (Hochreiter and Schmidhuber has two problems. Firstly, GAN is designed for generat-
+1997)haveshownexcellentperformancerangingfromnat- ing real-valued, continuous data but has difficulties in di-
+ural language generation to handwriting generation (Wen rectlygeneratingsequencesofdiscretetokens,suchastexts
+et al. 2015; Graves 2013). The most common approach to (Husza´r 2015). The reason is that in GANs, the genera-
+traininganRNNistomaximizethelogpredictivelikelihood torstartswithrandomsamplingfirstandthenadetermistic
+of each true token in the training sequence given the pre- transform,govermentedbythemodelparameters.Assuch,
+vious observed tokens (Salakhutdinov 2009). However, as the gradient of the loss from D w.r.t. the outputs by G is
+arguedin(Bengioetal.2015),themaximumlikelihoodap- usedtoguidethegenerativemodelG(paramters)toslightly
+proachessufferfromso-calledexposurebiasintheinference
+change the generated value to make it more realistic. If
+stage: the model generates a sequence iteratively and pre- the generated data is based on discrete tokens, the “slight
+dictsnexttokenconditionedonitspreviouslypredictedones change” guidance from the discriminative net makes little
+thatmaybeneverobservedinthetrainingdata.Suchadis- sensebecausethereisprobablynocorrespondingtokenfor
+crepancybetweentrainingandinferencecanincuraccumu- suchslightchangeinthelimiteddictionaryspace(Goodfel-
+lativelyalongwiththesequenceandwillbecomeprominent low2016).Secondly,GANcanonlygivethescore/lossfor
+∗WeinanZhangisthecorrespondingauthor. anentiresequencewhenithasbeengenerated;forapartially
+Copyright(cid:13)c 2017,AssociationfortheAdvancementofArtificial generatedsequence,itisnon-trivialtobalancehowgoodas
+Intelligence(www.aaai.org).Allrightsreserved. itisnowandthefuturescoreastheentiresequence.
+7102
+guA
+52
+]GL.sc[
+6v37450.9061:viXra
+Inthispaper,toaddresstheabovetwoissues,wefollow 2015). This is due to the generator network in GAN is de-
+(BachmanandPrecup2015;Bahdanauetal.2016)andcon- signed to be able to adjust the output continuously, which
+siderthesequencegenerationprocedureasasequentialde- does not work on discrete data generation (Goodfellow
+cisionmakingprocess.Thegenerativemodelistreatedasan 2016).
+agentofreinforcementlearning(RL);thestateisthegener- Ontheotherhand,alotofeffortshavebeenmadetogen-
+atedtokenssofarandtheactionisthenexttokentobegener- erate structured sequences. Recurrent neural networks can
+ated.Unliketheworkin(Bahdanauetal.2016)thatrequires betrainedtoproducesequencesoftokensinmanyapplica-
+a task-specific sequence score, such as BLEU in machine tions such as machine translation (Sutskever, Vinyals, and
+translation,togivethereward,weemployadiscriminatorto Le2014;Bahdanau,Cho,andBengio2014).Themostpop-
+evaluatethesequenceandfeedbacktheevaluationtoguide ularwayoftrainingRNNsistomaximizethelikelihoodof
+the learning of the generative model. To solve the problem eachtokeninthetrainingdatawhereas(Bengioetal.2015)
+that the gradient cannot pass back to the generative model pointed out that the discrepancy between training and gen-
+whentheoutputisdiscrete,weregardthegenerativemodel erating makes the maximum likelihood estimation subopti-
+as a stochastic parametrized policy. In our policy gradient, mal and proposed scheduled sampling strategy (SS). Later
+we employ Monte Carlo (MC) search to approximate the (Husza´r 2015) theorized that the objective function under-
+state-action value. We directly train the policy (generative neath SS is improper and explained the reason why GANs
+model)viapolicygradient(Suttonetal.1999),whichnatu- tend to generate natural-looking samples in theory. Conse-
+rallyavoidsthedifferentiationdifficultyfordiscretedatain quently, the GANs have great potential but are not practi-
+aconventionalGAN. callyfeasibletodiscreteprobabilisticmodelscurrently.
+Extensive experiments based on synthetic and real data As pointed out by (Bachman and Precup 2015), the se-
+are conducted to investigate the efficacy and properties of quence data generation can be formulated as a sequen-
+the proposed SeqGAN. In our synthetic data environment, tial decision making process, which can be potentially be
+SeqGANsignificantlyoutperformsthemaximumlikelihood solved by reinforcement learning techniques. Modeling the
+methods,scheduledsamplingandPG-BLEU.Inthreereal- sequence generator as a policy of picking the next token,
+world tasks, i.e. poem generation, speech language gener- policygradientmethods(Suttonetal.1999)canbeadopted
+ation and music generation, SeqGAN significantly outper- to optimize the generator once there is an (implicit) re-
+forms the compared baselines in various metrics including ward function to guide the policy. For most practical se-
+humanexpertjudgement. quencegenerationtasks,e.g.machinetranslation(Sutskever,
+Vinyals,andLe2014),therewardsignalismeaningfulonly
+RelatedWork fortheentiresequence,forinstanceinthegameofGo(Sil-
+Deep generative models have recently drawn significant veretal.2016),therewardsignalisonlysetattheendofthe
+attention, and the ability of learning over large (unla- game. In those cases, state-action evaluation methods such
+beled) data endows them with more potential and vitality as Monte Carlo (tree) search have been adopted (Browne
+(Salakhutdinov 2009; Bengio et al. 2013). (Hinton, Osin- et al. 2012). By contract, our proposed SeqGAN extends
+dero,andTeh2006)firstproposedtousethecontrastivedi- GANs with the RL-based generator to solve the sequence
+vergence algorithm to efficiently training deep belief nets generation problem, where a reward signal is provided by
+(DBN). (Bengio et al. 2013) proposed denoising autoen- thediscriminatorattheendofeachepisodeviaMonteCarlo
+coder(DAE)thatlearnsthedatadistributioninasupervised approach, and the generator picks the action and learns the
+learning fashion. Both DBN and DAE learn a low dimen- policyusingestimatedoverallrewards.
+sional representation (encoding) for each data instance and
+generate it from a decoding network. Recently, variational SequenceGenerativeAdversarialNets
+autoencoder (VAE) that combines deep learning with sta-
+The sequence generation problem is denoted as follows.
+tistical inference intended to represent a data instance in
+Given a dataset of real-world structured sequences, train
+a latent hidden space (Kingma and Welling 2014), while
+a θ-parameterized generative model G to produce a se-
+stillutilizing(deep)neuralnetworksfornon-linearmapping. θ
+quence Y = (y ,...,y ,...,y ),y ∈ Y, where Y is
+Theinferenceisdoneviavariationalmethods.Allthesegen- 1:T 1 t T t
+the vocabulary of candidate tokens. We interpret this prob-
+erativemodelsaretrainedbymaximizing(thelowerbound
+lembasedonreinforcementlearning.Intimestept,thestate
+of)trainingdatalikelihood,which,asmentionedby(Good-
+s is the current produced tokens (y ,...,y ) and the ac-
+fellow and others 2014), suffers from the difficulty of ap- 1 t−1
+tion a is the next token y to select. Thus the policy model
+proximatingintractableprobabilisticcomputations. t
+G (y |Y ) is stochastic, whereas the state transition is
+(Goodfellow and others 2014) proposed an alternative θ t 1:t−1
+deterministicafteranactionhasbeenchosen,i.e.δa = 1
+training methodology to generative models, i.e. GANs, s,s(cid:48)
+where the training procedure is a minimax game between for the next state s(cid:48) = Y 1:t if the current state s = Y 1:t−1
+agenerativemodelandadiscriminativemodel.Thisframe- andtheactiona=y t ;forothernextstatess(cid:48)(cid:48),δ s a ,s(cid:48)(cid:48) =0.
+work bypasses the difficulty of maximum likelihood learn- Additionally,wealsotrainaφ-parameterizeddiscrimina-
+ingandhasgainedstrikingsuccessesinnaturalimagegen- tive model D (Goodfellow and others 2014) to provide a
+φ
+eration (Denton et al. 2015). However, little progress has guidance for improving generator G . D (Y ) is a prob-
+θ φ 1:T
+beenmadeinapplyingGANstosequencediscretedatagen- ability indicating how likely a sequence Y is from real
+1:T
+eration problems, e.g. natural language generation (Husza´r sequence data or not. As illustrated in Figure 1, the dis-
+G Next MC D whereYn = (y ,...,y )andYn issampledbasedon
+action search 1:t 1 t t+1:T
+True data Reward the roll-out policy G β and the current state. In our experi-
+State ment, G is set the same as the generator, but one can use
+Real World Train D Reward asimplifi β edversionifthespeedisthepriority(Silveretal.
+Reward 2016).Toreducethevarianceandgetmoreaccurateassess-
+G Generate
+Reward mentoftheactionvalue,weruntheroll-outpolicystarting
+fromcurrentstatetilltheendofthesequenceforN timesto
+Policy Gradient getabatchofoutputsamples.Thus,wehave:
+Figure1:TheillustrationofSeqGAN.Left:Distrainedover
+therealdataandthegenerateddatabyG.Right:Gistrained QG D θ φ (s=Y 1:t−1 ,a=y t )= (4)
+b
+b
+y
+yD
+pol
+a
+i
+n
+cy
+di
+g
+s
+ra
+p
+d
+a
+i
+s
+e
+s
+n
+e
+t
+d
+w
+b
+h
+ac
+e
+k
+re
+to
+th
+t
+e
+he
+fin
+in
+a
+t
+l
+e
+r
+r
+e
+m
+w
+e
+a
+d
+r
+i
+d
+at
+s
+e
+ig
+a
+n
+c
+a
+ti
+l
+o
+i
+n
+s
+v
+p
+a
+ro
+lu
+v
+e
+id
+v
+e
+i
+d
+a
+(cid:26)
+N
+1 (cid:80)N
+n=1
+D
+φ
+(Y
+1
+n
+:T
+), Y
+1
+n
+:T
+∈MCGβ(Y
+1:t
+;N) for t<T
+D (Y ) for t=T,
+φ 1:t
+MonteCarlosearch.
+where,weseethatwhennointermediatereward,thefunc-
+criminative model D φ is trained by providing positive ex- tionisiterativelydefinedasthenext-statevaluestartingfrom
+amples from the real sequence data and negative examples states(cid:48) =Y androllingouttotheend.
+1:t
+fromthesyntheticsequencesgeneratedfromthegenerative AbenefitofusingthediscriminatorD asarewardfunc-
+φ
+modelG .Atthesametime,thegenerativemodelG isup- tionisthatitcanbedynamicallyupdatedtofurtherimprove
+θ θ
+datedbyemployingapolicygradientandMCsearchonthe thegenerativemodeliteratively.Oncewehaveasetofmore
+basisoftheexpectedendrewardreceivedfromthediscrim- realisticgeneratedsequences,weshallre-trainthediscrimi-
+inativemodelD .Therewardisestimatedbythelikelihood natormodelasfollows:
+φ
+thatitwouldfoolthediscriminativemodelD φ .Thespecific min−E [logD (Y)]−E [log(1−D (Y))]. (5)
+formulationisgiveninthenextsubsection. φ
+Y∼pdata φ Y∼Gθ φ
+SeqGANviaPolicyGradient Eachtimewhenanewdiscriminatormodelhasbeenob-
+Following (Sutton et al. 1999), when there is no interme- tained, we are ready to update the generator. The proposed
+diate reward, the objective of the generator model (policy) policybasedmethodreliesuponoptimizingaparametrized
+G θ (y t |Y 1:t−1 )istogenerateasequencefromthestartstate policytodirectlymaximizethelong-termreward.Following
+s 0 tomaximizeitsexpectedendreward: (Sutton et al. 1999), the gradient of the objective function
+J(θ)=E[R |s ,θ]= (cid:88) G (y |s )·QGθ(s ,y ), (1) J(θ)w.r.t.thegenerator’sparametersθcanbederivedas
+T 0 θ 1 0 Dφ 0 1
+y1∈Y
+t
+w
+he
+h
+r
+e
+e
+r
+w
+e
+a
+R
+rd
+T
+i
+i
+s
+s
+f
+t
+r
+h
+o
+e
+m
+re
+t
+w
+he
+ar
+d
+d
+is
+f
+c
+o
+r
+r
+im
+a
+i
+c
+n
+o
+a
+m
+to
+p
+r
+le
+D
+te
+,
+se
+w
+q
+h
+u
+i
+e
+c
+n
+h
+c
+w
+e.
+e
+N
+w
+o
+i
+t
+l
+e
+ld
+th
+is
+a
+-
+t ∇ θ J(θ)=(cid:80)T t=1 E Y1:t−1∼Gθ (cid:2) yt (cid:80) ∈Y ∇ θ G θ (y t |Y 1:t−1 )·QG D θ φ (Y 1:t−1 ,y t ) (cid:3) .
+φ (6)
+cuss later. QGθ(s,a) is the action-value function of a se-
+Dφ
+The above form is due to the deterministic state transi-
+quence,i.e.theexpectedaccumulativerewardstartingfrom
+tion and zero intermediate rewards. The detailed derivation
+state s, taking action a, and then following policy G . The
+θ
+isprovidedintheappendix.Usinglikelihoodratios(Glynn
+rationaloftheobjectivefunctionforasequenceisthatstart-
+1990; Sutton et al. 1999), we build an unbiased estimation
+ing from a given initial state, the goal of the generator is
+forEq.(6)(ononeepisode):
+togenerateasequencewhichwouldmakethediscriminator
+consideritisreal.
+T
+fun T c h ti e on n . e I x n t t q h u is es p ti a o p n er, is w h e o u w se to the es R ti E m I a N te FO th R e C a E ct a io lg n o - r v i a th lu m e ∇ θ J(θ)(cid:39) (cid:88) t=1y (cid:88) t∈Y ∇ θ G θ (y t |Y 1:t−1 )·QG D θ φ (Y 1:t−1 ,y t ) (7)
+(Williams 1992) and consider the estimated probability of
+T
+b m e a in ll g y, r w ea e l h b a y v t e h : ediscriminatorD φ (Y 1 n :T )asthereward.For- = (cid:88) t=1y (cid:88) t∈Y G θ (y t |Y 1:t−1 )∇ θ logG θ (y t |Y 1:t−1 )·QG D θ φ (Y 1:t−1 ,y t )
+T
+QG D θ φ (a=y T ,s=Y 1:T−1 )=D φ (Y 1:T ). (2) = (cid:88)E yt∼Gθ(yt|Y1:t−1) [∇ θ logG θ (y t |Y 1:t−1 )·QG D θ φ (Y 1:t−1 ,y t )],
+t=1
+However,thediscriminatoronlyprovidesarewardvaluefor
+afinishedsequence.Sinceweactuallycareaboutthelong- where Y 1:t−1 is the observed intermediate state sampled
+termreward,ateverytimestep,weshouldnotonlyconsider fromG θ .SincetheexpectationE[·]canbeapproximatedby
+the fitness of previous tokens (prefix) but also the resulted sampling methods, we then update the generator’s parame-
+future outcome. This is similar to playing the games such tersas:
+asGoorChesswhereplayerssometimeswouldgiveupthe θ←θ+α h ∇ θ J(θ), (8)
+immediate interests for the long-term victory (Silver et al. where α ∈ R+ denotes the corresponding learning rate
+2016).Thus,toevaluatetheaction-valueforanintermediate h
+ath-thstep.Alsotheadvancedgradientalgorithmssuchas
+state,weapplyMonteCarlosearchwitharoll-outpolicyG
+β AdamandRMSpropcanbeadoptedhere.
+to sample the unknown last T −t tokens. We represent an
+In summary, Algorithm 1 shows full details of the pro-
+N-timeMonteCarlosearchas
+posedSeqGAN.Atthebeginningofthetraining,weusethe
+(cid:110) (cid:111)
+Y1 ,...,YN =MCGβ(Y ;N), (3) maximum likelihood estimation (MLE) to pre-train G on
+1:T 1:T 1:t θ
+Algorithm1SequenceGenerativeAdversarialNets thegatedrecurrentunit(GRU)(Choetal.2014)andsoftat-
+Require: generator policy G ; roll-out policy G ; discriminator tentionmechanism(Bahdanau,Cho,andBengio2014),can
+θ β
+D ;asequencedatasetS ={X } beusedasageneratorinSeqGAN.
+φ 1:T
+1: InitializeG ,D withrandomweightsθ,φ.
+θ φ
+2: Pre-trainG θ usingMLEonS TheDiscriminativeModelforSequences
+3: β ←θ
+4: GeneratenegativesamplesusingG θ fortrainingD φ Deep discriminative models such as deep neural network
+5: Pre-trainD φ viaminimizingthecrossentropy (DNN) (Vesely` et al. 2013), convolutional neural network
+6: repeat
+(CNN) (Kim 2014) and recurrent convolutional neural net-
+7: forg-stepsdo
+work (RCNN) (Lai et al. 2015) have shown a high perfor-
+8: GenerateasequenceY =(y ,...,y )∼G
+1:T 1 T θ mance in complicated sequence classification tasks. In this
+9: fortin1:T do
+paper,wechoosetheCNNasourdiscriminatorasCNNhas
+10: ComputeQ(a=y ;s=Y )byEq.(4)
+t 1:t−1
+11: endfor recentlybeenshownofgreateffectivenessintext(tokense-
+12: UpdategeneratorparametersviapolicygradientEq.(8) quence) classification (Zhang and LeCun 2015). Most dis-
+13: endfor criminativemodelscanonlyperformclassificationwellfor
+14: ford-stepsdo anentiresequenceratherthantheunfinishedone.Inthispa-
+15: UsecurrentG θ togeneratenegativeexamplesandcom- per, we also focus on the situation where the discriminator
+binewithgivenpositiveexamplesS predictstheprobabilitythatafinishedsequenceisreal.1
+16: TraindiscriminatorD forkepochsbyEq.(5)
+φ Wefirstrepresentaninputsequencex ,...,x as:
+17: endfor 1 T
+18: β ←θ
+E =x ⊕x ⊕...⊕x , (11)
+19: untilSeqGANconverges 1:T 1 2 T
+where x ∈ Rk is the k-dimensional token embedding
+t
+and ⊕ is the concatenation operator to build the matrix
+trainingsetS.Wefoundthesupervisedsignalfromthepre- E 1:T ∈ RT×k. Then a kernel w ∈ Rl×k applies a convo-
+traineddiscriminatorisinformativetohelpadjustthegener- lutionaloperationtoawindowsizeofl wordstoproducea
+newfeaturemap:
+atorefficiently.
+Afterthepre-training,thegeneratoranddiscriminatorare
+c =ρ(w⊗E +b), (12)
+trained alternatively. As the generator gets progressed via i i:i+l−1
+trainingong-stepsupdates,thediscriminatorneedstobere- where ⊗ operator is the summation of elementwise pro-
+trainedperiodicallytokeepsagoodpacewiththegenerator. duction, b is a bias term and ρ is a non-linear function.
+Whentrainingthediscriminator,positiveexamplesarefrom
+We can use various numbers of kernels with different win-
+the given dataset S, whereas negative examples are gener-
+dow sizes to extract different features. Finally we apply
+ated from our generator. In order to keep the balance, the
+a max-over-time pooling operation over the feature maps
+numberofnegativeexampleswegenerateforeachd-stepis c˜=max{c ,...,c }.
+1 T−l+1
+the same as the positive examples. And to reduce the vari-
+Toenhancetheperformance,wealsoaddthehighwayar-
+ability of the estimation, we use different sets of negative
+chitecture(Srivastava,Greff,andSchmidhuber2015)based
+samples combined with positive ones, which is similar to
+onthepooledfeaturemaps.Finally,afullyconnectedlayer
+bootstrapping(Quinlan1996).
+withsigmoidactivationisusedtooutputtheprobabilitythat
+theinputsequenceisreal.Theoptimizationtargetistomin-
+TheGenerativeModelforSequences
+imize the cross entropy between the ground truth label and
+We use recurrent neural networks (RNNs) (Hochreiter and thepredictedprobabilityasformulatedinEq.(5).
+Schmidhuber 1997) as the generative model. An RNN Detailedimplementationsofthegenerativeanddiscrimi-
+maps the input embedding representations x ,...,x of
+1 T nativemodelsareprovidedintheappendix.
+the sequence x ,...,x into a sequence of hidden states
+1 T
+h ,...,h byusingtheupdatefunctiongrecursively.
+1 T
+SyntheticDataExperiments
+h =g(h ,x ) (9)
+t t−1 t
+TotesttheefficacyandaddourunderstandingofSeqGAN,
+Moreover,asoftmaxoutputlayerz mapsthehiddenstates weconductasimulatedtestwithsyntheticdata2.Tosimulate
+intotheoutputtokendistribution
+thereal-worldstructuredsequences,weconsideralanguage
+model to capture the dependency of the tokens. We use a
+p(y |x ,...,x )=z(h )=softmax(c+Vh ), (10)
+t 1 t t t
+randomlyinitializedLSTMasthetruemodel,aka,theora-
+wheretheparametersareabiasvectorcandaweightma- cle,togeneratetherealdatadistributionp(x |x ,...,x )
+t 1 t−1
+trix V. To deal with the common vanishing and exploding forthefollowingexperiments.
+gradientproblem(Goodfellow,Bengio,andCourville2016)
+ofthebackpropagationthroughtime,weleveragetheLong 1Inourwork,thegeneratedsequencehasafixedlengthT,but
+Short-TermMemory(LSTM)cells(HochreiterandSchmid- notethatCNNisalsocapableofthevariable-lengthsequencedis-
+huber1997)toimplementtheupdatefunctiong inEq.(9). criminationwiththemax-over-timepoolingtechnique(Kim2014).
+It is worth noticing that most of the RNN variants, such as 2Experimentcode:https://github.com/LantaoYu/SeqGAN
+EvaluationMetric
+Table1:Sequencegenerationperformancecomparison.The
+The benefit of having such oracle is that firstly, it provides
+p-valueisbetweenSeqGANandthebaselinefromT-test.
+thetrainingdatasetandsecondlyevaluatestheexactperfor-
+mance of the generative models, which will not be possi- Algorithm Random MLE SS PG-BLEU SeqGAN
+ble with real data. We know that MLE is trying to mini- NLL 10.310 9.038 8.985 8.946 8.736
+mize the cross-entropy between the true data distribution p p-value <10−6 <10−6 <10−6 <10−6
+andourapproximationq,i.e.−E logq(x).However,the
+x∼p
+most accurate way of evaluating generative models is that
+wedrawsomesamplesfromitandlethumanobserversre- 10.0
+viewthembasedontheirpriorknowledge.Weassumethat 9.8
+the human observer has learned an accurate model of the 9.6
+naturaldistributionp (x).Theninordertoincreasethe
+human 9.4
+chance of passing Turing Test, we actually need to min-
+9.2
+imize the exact opposite average negative log-likelihood
+−E logp (x) (Husza´r 2015), with the role of p and 9.0
+x∼q human
+qexchanged.Inoursyntheticdataexperiments,wecancon- 8.8
+sider the oracle to be the human observer for real-world 8.6
+0 50 100 150 200 250
+problems,thusaperfectevaluationmetricshouldbe Epochs
+(cid:104)(cid:88) T (cid:105)
+NLL =−E logG (y |Y ) , (13) oracle Y1:T∼Gθ oracle t 1:t−1
+t=1
+whereG andG denoteourgenerativemodelandthe
+θ oracle
+oraclerespectively.
+At the test stage, we use G to generate 100,000 se-
+θ
+quencesamplesandcalculateNLL foreachsampleby
+oracle
+G and their average score. Also significance tests are
+oracle
+performedtocomparethestatisticalpropertiesofthegener-
+ationperformancebetweenthebaselinesandSeqGAN.
+TrainingSetting
+To set up the synthetic data experiments, we first initialize
+the parameters of an LSTM network following the normal
+distribution N(0,1) as the oracle describing the real data
+distributionG (x |x ,...,x ).Thenweuseittogen-
+oracle t 1 t−1
+erate10,000sequencesoflength20asthetrainingsetS for
+thegenerativemodels.
+InSeqGANalgorithm,thetrainingsetforthediscrimina-
+tor is comprised by the generated examples with the label
+0 and the instances from S with the label 1. For different
+tasks, one should design specific structure for the convolu-
+tionallayerandinoursyntheticdataexperiments,thekernel
+sizeisfrom1toT andthenumberofeachkernelsizeisbe-
+tween100to2003.Dropout(Srivastavaetal.2014)andL2
+regularizationareusedtoavoidover-fitting.
+FourgenerativemodelsarecomparedwithSeqGAN.The
+firstmodelisarandomtokengeneration.Thesecondoneis
+theMLEtrainedLSTMG .Thethirdoneisscheduledsam-
+θ
+pling(Bengioetal.2015).ThefourthoneisthePolicyGra-
+dient with BLEU (PG-BLEU). In the scheduled sampling,
+the training process gradually changes from a fully guided
+schemefeedingthetrueprevioustokensintoLSTM,towards
+alessguidedschemewhichmostlyfeedstheLSTMwithits
+generatedtokens.Acurriculumrateωisusedtocontrolthe
+probability of replacing the true tokens with the generated
+ones.Togetagoodandstableperformance,wedecreaseω
+by 0.002 for every training epoch. In the PG-BLEU algo-
+rithm,weuseBLEU,ametricmeasuringthesimilaritybe-
+tween a generated sequence and references (training data),
+toscorethefinishedsamplesfromMonteCarlosearch.
+3Implementationdetailsareintheappendix.
+elcaro
+yb
+LLN
+Learning curve
+SeqGAN
+MLE
+Schedule Sampling
+PG­BLEU
+Figure 2: Negative log-likelihood convergence w.r.t. the
+trainingepochs.Theverticaldashedlinerepresentstheend
+ofpre-trainingforSeqGAN,SSandPG-BLEU.
+Results
+TheNLL performanceofgeneratingsequencesfromthe
+oracle
+comparedpoliciesisprovidedinTable1.Sincetheevalua-
+tionmetricisfundamentallyinstructive,wecanseetheim-
+pactofSeqGAN,whichoutperformsotherbaselinessignif-
+icantly.AsignificanceT-testontheNLL scoredistribu-
+oracle
+tionofthegeneratedsequencesfromthecomparedmodels
+is also performed, which demonstrates the significant im-
+provementofSeqGANoverallcomparedmodels.
+The learning curves shown in Figure 4 illustrate the su-
+periority of SeqGAN explicitly. After about 150 training
+epochs, both the maximum likelihood estimation and the
+schedule sampling methods converge to a relatively high
+NLL score,whereasSeqGANcanimprovethelimitof
+oracle
+the generator with the same structure as the baselines sig-
+nificantly.Thisindicatestheprospectofapplyingadversar-
+ial training strategies to discrete sequence generative mod-
+els to breakthrough the limitations of MLE. Additionally,
+SeqGANoutperformsPG-BLEU,whichmeansthediscrim-
+inative signal in GAN is more general and effective than a
+predefinedscore(e.g.BLEU)toguidethegenerativepolicy
+tocapturetheunderlyingdistributionofthesequencedata.
+Discussion
+Inoursyntheticdataexperiments,wefindthatthestability
+ofSeqGANdependsonthetrainingstrategy.Morespecifi-
+cally, the g-steps, d-steps and k parameters in Algorithm 1
+have a large effect on the convergence and performance of
+SeqGAN.Figure3showstheeffectoftheseparameters.In
+Figure3(a),theg-stepsismuchlargerthanthed-stepsand
+epoch number k, which means we train the generator for
+manytimesuntilweupdatethediscriminator.Thisstrategy
+leads to a fast convergence but as the generator improves
+quickly, the discriminator cannot get fully trained and thus
+will provide a misleading signal gradually. In Figure 3(b),
+withmorediscriminatortrainingepochs,theunstabletrain-
+ingprocessisalleviated.InFigure3(c),wetrainthegenera-
+torforonlyoneepochandthenbeforethediscriminatorgets
+10.00
+9.50
+9.00
+8.94
+8.70
+0 50 100 150 200
+Epochs
+elcaro
+yb
+LLN
+10.00
+SeqGAN
+9.50
+9.00
+8.89
+8.70
+0 50 100 150 200
+Epochs
+(a) g-steps=100,d-steps=1,k=10
+elcaro
+yb
+LLN
+SeqGAN
+(b) g-steps=30,d-steps=1,k=30
+10.00
+9.50
+9.00
+8.81
+8.70
+0 50 100 150 200
+Epochs
+elcaro
+yb
+LLN
+10.00
+SeqGAN
+9.50
+9.00
+8.73
+0 50 100 150 200 250
+Epochs
+(c) g-steps=1,d-steps=1,k=10
+elcaro
+yb
+LLN
+Table2:Chinesepoemgenerationperformancecomparison.
+Algorithm Humanscore p-value BLEU-2 p-value
+MLE 0.4165 0.6670
+0.0034 <10−6
+SeqGAN 0.5356 0.7389
+Realdata 0.6011 0.746
+Table3:Obamapoliticalspeechgenerationperformance.
+Algorithm BLEU-3 p-value BLEU-4 p-value
+MLE 0.519 0.416
+<10−6 0.00014
+SeqGAN 0.556 0.427
+Table4:Musicgenerationperformancecomparison.
+SeqGAN
+Algorithm BLEU-4 p-value MSE p-value
+MLE 0.9210 22.38 <10−6 0.00034
+SeqGAN 0.9406 20.62
+of twenty characters in total. To focus on a fully automatic
+solution and stay general, we did not use any prior knowl-
+edge of special structure rules in Chinese poems such as
+(d) g-steps=1,d-steps=5,k=3 specific phonological rules. In the Obama political speech
+generation task, we use a corpus5, which is a collection of
+Figure3:Negativelog-likelihoodconvergenceperformance
+11,092paragraphsfromObama’spoliticalspeeches.
+of SeqGAN with different training strategies. The vertical
+We use BLEU score as an evaluation metric to measure
+dashedlinerepresentsthebeginningofadversarialtraining.
+the similarity degree between the generated texts and the
+human-created texts. BLEU is originally designed to auto-
+fooled,weupdateitimmediatelybasedonthemorerealistic
+maticallyjudgethemachinetranslationquality(Papineniet
+negativeexamples.Insuchacase,SeqGANlearnsstably.
+al.2002).Thekeypointistocomparethesimilaritybetween
+Thed-stepsinallthreetrainingstrategiesdescribedabove
+the results created by machine and the references provided
+is set to 1, which means we only generate one set of nega-
+byhuman.Specifically,forpoemevaluation,wesetn-gram
+tive examples with the same number as the given dataset,
+tobe2(BLEU-2)sincemostwords(dependency)inclassi-
+and then train the discriminator on it for various k epochs.
+calChinesepoemsconsistofoneortwocharacters(Yi,Li,
+But actually we can utilize the potentially unlimited num-
+and Sun 2016) and for the similar reason, we use BLEU-3
+berofnegativeexamplestoimprovethediscriminator.This
+and BLEU-4 to evaluate Obama speech generation perfor-
+trick can be considered as a type of bootstrapping, where
+mance. In our work, we use the whole test set as the refer-
+wecombinethefixedpositiveexampleswithdifferentneg-
+ences instead of trying to find some references for the fol-
+ative examples to obtain multiple training sets. Figure 3(d)
+lowing line given the previous line (He, Zhou, and Jiang
+shows this technique can improve the overall performance
+2012). The reason is in generation tasks we only provide
+with good stability, since the discriminator is shown more
+somepositiveexamplesandthenletthemodelcatchthepat-
+negative examples and each time the positive examples are
+ternsofthemandgeneratenewones.InadditiontoBLEU,
+emphasized,whichwillleadtoamorecomprehensiveguid-
+wealsochoosepoemgenerationasacaseforhumanjudge-
+ance for training generator. This is in line with the theo-
+mentsinceapoemisacreativetextconstructionandhuman
+rem in (Goodfellow and others 2014). When analyzing the
+evaluation is ideal. Specifically, we mix the 20 real poems
+convergenceofgenerativeadversarialnets,animportantas-
+and 20 each generated from SeqGAN and MLE. Then 70
+sumptionisthatthediscriminatorisallowedtoreachitsop-
+expertsonChinesepoemsareinvitedtojudgewhethereach
+timumgivenG.Onlyifthediscriminatoriscapableofdif-
+ofthe60poemiscreatedbyhumanormachines.Oncere-
+ferentiating real data from unnatural data consistently, the
+gardedtobereal,itgets+1score,otherwise0.Finally,the
+supervised signal from it can be meaningful and the whole
+averagescoreforeachalgorithmiscalculated.
+adversarialtrainingprocesscanbestableandeffective.
+TheexperimentresultsareshowninTables2and3,from
+whichwecanseethesignificantadvantageofSeqGANover
+Real-worldScenarios
+theMLEintextgeneration.Particularly,forpoemcomposi-
+To complement the previous experiments, we also test Se- tion,SeqGANperformscomparablytorealhumandata.
+qGAN on several real-world tasks, i.e. poem composition,
+speechlanguagegenerationandmusicgeneration.
+MusicGeneration
+TextGeneration Formusiccomposition,weuseNottingham6 datasetasour
+trainingdata,whichisacollectionof695musicoffolktunes
+For text generation scenarios, we apply the proposed Seq-
+inmidifileformat.Westudythesolotrackofeachmusic.In
+GAN to generate Chinese poems and Barack Obama polit-
+ourwork,weuse88numberstorepresent88pitches,which
+ical speeches. In the poem composition task, we use a cor-
+pus4of16,394Chinesequatrains,eachcontainingfourlines
+5https://github.com/samim23/obama-rnn
+4http://homepages.inf.ed.ac.uk/mlap/Data/EMNLP14/ 6http://www.iro.umontreal.ca/˜lisa/deep/data
+correspondtothe88keysonthepiano.Withthepitchsam- [Glynn1990] Glynn, P. W. 1990. Likelihood ratio gradient es-
+pling for every 0.4s7, we transform the midi files into se- timation for stochastic systems. Communications of the ACM
+quencesofnumbersfrom1to88withthelength32. 33(10):75–84.
+To model the fitness of the discrete piano key patterns, [Goodfellowandothers2014] Goodfellow,I.,etal. 2014. Genera-
+BLEUisusedastheevaluationmetric.Tomodelthefitness tiveadversarialnets. InNIPS,2672–2680.
+ofthecontinuouspitchdatapatterns,themeansquarederror [Goodfellow,Bengio,andCourville2016] Goodfellow, I.; Bengio,
+(MSE)(Manarisetal.2007)isusedforevaluation. Y.;andCourville,A. 2016. Deeplearning. 2015.
+FromTable4,weseethatSeqGANoutperformstheMLE [Goodfellow2016] Goodfellow, I. 2016. Generative adversarial
+significantlyinbothmetricsinthemusicgenerationtask. networksfortext. http://goo.gl/Wg9DR7.
+[Graves2013] Graves,A. 2013. Generatingsequenceswithrecur-
+Conclusion rentneuralnetworks. arXiv:1308.0850.
+In this paper, we proposed a sequence generation method, [He,Zhou,andJiang2012] He,J.;Zhou,M.;andJiang,L. 2012.
+SeqGAN,toeffectivelytraingenerativeadversarialnetsfor Generatingchineseclassicalpoemswithstatisticalmachinetrans-
+structuredsequencesgenerationviapolicygradient.Toour lationmodels. InAAAI.
+best knowledge, this is the first work extending GANs to [Hingston2009] Hingston, P. 2009. A turing test for computer
+generatesequencesofdiscretetokens.Inoursyntheticdata gamebots. IEEETCIAIG1(3):169–186.
+experiments, we used an oracle evaluation mechanism to [Hinton,Osindero,andTeh2006] Hinton,G.E.;Osindero,S.;and
+explicitly illustrate the superiority of SeqGAN over strong Teh,Y.-W. 2006. Afastlearningalgorithmfordeepbeliefnets.
+baselines.Forthreereal-worldscenarios,i.e.,poems,speech Neuralcomputation18(7):1527–1554.
+languageandmusicgeneration,SeqGANshowedexcellent [HochreiterandSchmidhuber1997] Hochreiter,S.,andSchmidhu-
+performanceongeneratingthecreativesequences.Wealso ber, J. 1997. Long short-term memory. Neural computation
+performedasetofexperimentstoinvestigatetherobustness 9(8):1735–1780.
+andstabilityoftrainingSeqGAN.Forfuturework,weplan [Husza´r2015] Husza´r, F. 2015. How (not) to train your
+tobuildMonteCarlotreesearchandvaluenetwork(Silveret generative model: Scheduled sampling, likelihood, adversary?
+al.2016)toimproveactiondecisionmakingforlargescale arXiv:1511.05101.
+dataandinthecaseoflonger-termplanning. [Kim2014] Kim,Y. 2014. Convolutionalneuralnetworksforsen-
+tenceclassification. arXiv:1408.5882.
+Acknowledgments [KingmaandWelling2014] Kingma,D.P.,andWelling,M. 2014.
+Auto-encodingvariationalbayes. ICLR.
+We sincerely thank Tianxing He for many helpful discus-
+sionsandcommentsonthemanuscript. [Laietal.2015] Lai,S.;Xu,L.;Liu,K.;andZhao,J. 2015. Recur-
+rentconvolutionalneuralnetworksfortextclassification. InAAAI,
+References 2267–2273.
+[Manarisetal.2007] Manaris, B.; Roos, P.; Machado, P.; et al.
+[BachmanandPrecup2015] Bachman, P., and Precup, D. 2015.
+2007.Acorpus-basedhybridapproachtomusicanalysisandcom-
+Data generation as sequential decision making. In NIPS, 3249–
+position. InNCAI,volume22,839.
+3257.
+[Papinenietal.2002] Papineni,K.;Roukos,S.;Ward,T.;andZhu,
+[Bahdanauetal.2016] Bahdanau, D.; Brakel, P.; Xu, K.; et al.
+W.-J. 2002. Bleu:amethodforautomaticevaluationofmachine
+2016. An actor-critic algorithm for sequence prediction.
+translation. InACL,311–318.
+arXiv:1607.07086.
+[Quinlan1996] Quinlan,J.R. 1996. Bagging,boosting,andc4.5.
+[Bahdanau,Cho,andBengio2014] Bahdanau, D.; Cho, K.; and
+InAAAI/IAAI,Vol.1,725–730.
+Bengio,Y. 2014. Neuralmachinetranslationbyjointlylearningto
+alignandtranslate. arXiv:1409.0473. [Salakhutdinov2009] Salakhutdinov,R. 2009. Learningdeepgen-
+erativemodels. Ph.D.Dissertation,UniversityofToronto.
+[Bengioetal.2013] Bengio,Y.;Yao,L.;Alain,G.;andVincent,P.
+2013. Generalizeddenoisingauto-encodersasgenerativemodels. [Silveretal.2016] Silver, D.; Huang, A.; Maddison, C. J.; Guez,
+InNIPS,899–907. A.; Sifre, L.; et al. 2016. Mastering the game of go with deep
+neuralnetworksandtreesearch. Nature529(7587):484–489.
+[Bengioetal.2015] Bengio,S.;Vinyals,O.;Jaitly,N.;andShazeer,
+N. 2015. Scheduledsamplingforsequencepredictionwithrecur- [Srivastavaetal.2014] Srivastava, N.; Hinton, G. E.; Krizhevsky,
+rentneuralnetworks. InNIPS,1171–1179. A.; Sutskever, I.; and Salakhutdinov, R. 2014. Dropout: a
+simple way to prevent neural networks from overfitting. JMLR
+[Browneetal.2012] Browne, C. B.; Powley, E.; Whitehouse, D.;
+15(1):1929–1958.
+Lucas, S. M.; et al. 2012. A survey of monte carlo tree search
+methods. IEEETCIAIG4(1):1–43. [Srivastava,Greff,andSchmidhuber2015] Srivastava, R. K.; Gr-
+eff, K.; and Schmidhuber, J. 2015. Highway networks.
+[Choetal.2014] Cho,K.;VanMerrie¨nboer,B.;Gulcehre,C.;etal.
+arXiv:1505.00387.
+2014. Learning phrase representations using RNN encoder-
+decoderforstatisticalmachinetranslation. EMNLP. [Sutskever,Vinyals,andLe2014] Sutskever, I.; Vinyals, O.; and
+Le,Q.V. 2014. Sequencetosequencelearningwithneuralnet-
+[Dentonetal.2015] Denton, E. L.; Chintala, S.; Fergus, R.; et al.
+works. InNIPS,3104–3112.
+2015. Deepgenerativeimagemodelsusingalaplacianpyramidof
+adversarialnetworks. InNIPS,1486–1494. [Suttonetal.1999] Sutton, R. S.; McAllester, D. A.; Singh, S. P.;
+Mansour,Y.;etal. 1999. Policygradientmethodsforreinforce-
+7http://deeplearning.net/tutorial/rnnrbm.html mentlearningwithfunctionapproximation. InNIPS,1057–1063.
+[Vesely`etal.2013] Vesely`,K.;Ghoshal,A.;Burget,L.;andPovey,
+D. 2013. Sequence-discriminative training of deep neural net-
+works. InINTERSPEECH,2345–2349.
+[Wenetal.2015] Wen, T.-H.; Gasic, M.; Mrksic, N.; Su, P.-H.;
+Vandyke, D.; and Young, S. 2015. Semantically conditioned
+LSTM-basednaturallanguagegenerationforspokendialoguesys-
+tems. arXiv:1508.01745.
+[Williams1992] Williams,R.J. 1992. Simplestatisticalgradient-
+following algorithms for connectionist reinforcement learning.
+Machinelearning8(3-4):229–256.
+[Yi,Li,andSun2016] Yi, X.; Li, R.; and Sun, M. 2016. Gen-
+erating chinese classical poems with RNN encoder-decoder.
+arXiv:1604.01537.
+[ZhangandLapata2014] Zhang,X.,andLapata,M.2014.Chinese
+poetrygenerationwithrecurrentneuralnetworks.InEMNLP,670–
+680.
+[ZhangandLeCun2015] Zhang, X., and LeCun, Y. 2015. Text
+understandingfromscratch. arXiv:1502.01710.
+Appendix
+In Section 1, we present the step-by-step derivation of Eq. (6) in the paper. In Section 2, the detailed realization of the
+generativemodelandthediscriminativemodelisdiscussed,includingthemodelparametersettings.InSection3,aninteresting
+ablationstudyisprovided,whichisasupplementarytothediscussionsofthesyntheticdataexperiments.
+ProofforEq.(6)
+Forreadability,weprovidethedetailedderivationofEq.(6)herebyfollowing(Suttonetal.1999).
+AsmentionedinSEQUENCEGENERATIVEADVERSARIALNETSsection,thestatetransitionisdeterministicafteranaction
+hasbeenchosen,i.e.δa = 1forthenextstates(cid:48) = Y ifthecurrentstates = Y andtheactiona = y ;forothernext
+s,s(cid:48) 1:t 1:t−1 t
+statess(cid:48)(cid:48),δa =0.Inaddition,theintermediaterewardRais0.Were-writetheactionvalueandstatevalueasfollows:
+s,s(cid:48)(cid:48) s
+(cid:88)
+QGθ(s=Y
+1:t−1
+,a=y
+t
+)=Ra
+s
++ δ
+s
+a
+s(cid:48)
+VGθ(s(cid:48))=VGθ(Y
+1:t
+) (14)
+s(cid:48)∈S
+(cid:88)
+VGθ(s=Y
+1:t−1
+)= G
+θ
+(y
+t
+|Y
+1:t−1
+)·QGθ(Y
+1:t−1
+,y
+t
+) (15)
+yt∈Y
+Forthestartstates ,thevalueiscalculatedas
+0
+VGθ(s
+0
+)=E[R
+T
+|s
+0
+,θ] (16)
+(cid:88)
+= G
+θ
+(y
+1
+|s
+0
+)·QGθ(s
+0
+,y
+1
+),
+y1∈Y
+whichistheobjectivefunctionJ(θ)tomaximizeinEq.(1)ofthepaper.
+Thenwecanobtainthegradientoftheobjectivefunction,definedinEq.(1),w.r.t.thegenerator’sparametersθ:
+∇ J(θ)
+θ
+=∇ VGθ(s )=∇ [ (cid:88) G (y |s )·QGθ(s ,y )]
+θ 0 θ θ 1 0 0 1
+y1∈Y
+= (cid:88) [∇ G (y |s )·QGθ(s ,y )+G (y |s )·∇ QGθ(s ,y )]
+θ θ 1 0 0 1 θ 1 0 θ 0 1
+y1∈Y
+= (cid:88) [∇ G (y |s )·QGθ(s ,y )+G (y |s )·∇ VGθ(Y )]
+θ θ 1 0 0 1 θ 1 0 θ 1:1
+y1∈Y
+= (cid:88) ∇ G (y |s )·QGθ(s ,y )+ (cid:88) G (y |s )∇ [ (cid:88) G (y |Y )QGθ(Y ,y )]
+θ θ 1 0 0 1 θ 1 0 θ θ 2 1:1 1:1 2
+y1∈Y y1∈Y y2∈Y
+= (cid:88) ∇ G (y |s )·QGθ(s ,y )+ (cid:88) G (y |s ) (cid:88) [∇ G (y |Y )·QGθ(Y ,y )
+θ θ 1 0 0 1 θ 1 0 θ θ 2 1:1 1:1 2
+y1∈Y y1∈Y y2∈Y
++G (y |Y )∇ QGθ(Y ,y )]
+θ 2 1:1 θ 1:1 2
+= (cid:88) ∇ G (y |s )·QGθ(s ,y )+ (cid:88) P(Y |s ;G ) (cid:88) ∇ G (y |Y )·QGθ(Y ,y )
+θ θ 1 0 0 1 1:1 0 θ θ θ 2 1:1 1:1 2
+y1∈Y Y1:1 y2∈Y
++ (cid:88) P(Y |s ;G )∇ VGθ(Y )
+1:2 0 θ θ 1:2
+Y1:2
+T
+= (cid:88) (cid:88) P(Y |s ;G ) (cid:88) ∇ G (y |Y )·QGθ(Y ,y )
+1:t−1 0 θ θ θ t 1:t−1 1:t−1 t
+t=1Y1:t−1 yt∈Y
+T
+= (cid:88) E [ (cid:88) ∇ G (y |Y )·QGθ(Y ,y )], (17)
+Y1:t−1∼Gθ θ θ t 1:t−1 1:t−1 t
+t=1 yt∈Y
+whichistheresultinEq.(6)ofthepaper.
+ModelImplementations
+Inthissection,wepresentafullversionofthediscussedgenerativemodelanddiscriminativemodelinourpapersubmission.
+TheGenerativeModelforSequences Weuserecurrentneuralnetworks(RNNs)(HochreiterandSchmidhuber1997)asthe
+generativemodel.AnRNNmapstheinputembeddingrepresentationsx ,...,x ofthesequencex ,...,x intoasequence
+1 T 1 T
+ofhiddenstatesh ,...,h byusingtheupdatefunctiongrecursively.
+1 T
+h =g(h ,x ) (18)
+t t−1 t
+Moreover,asoftmaxoutputlayerzmapsthehiddenstatesintotheoutputtokendistribution
+p(y |x ,...,x )=z(h )=softmax(c+Vh ), (19)
+t 1 t t t
+wheretheparametersareabiasvectorcandaweightmatrixV.
+Thevanishingandexplodinggradientprobleminbackpropagationthroughtime(BPTT)issuesachallengeoflearninglong-
+term dependencies to recurrent neural network (Goodfellow, Bengio, and Courville 2016). To address such problems, gated
+RNNshavebeendesignedbasedonthebasicideaofcreatingpathsthroughtimethathavederivativesthatneithervanishnor
+explode.AmongvariousgatedRNNs,wechoosetheLongShort-TermMemory(LSTM)(HochreiterandSchmidhuber1997)
+tobeourgenerativenetworkswiththeupdateequations:
+f =σ(W ·[h ,x ]+b ),
+t f t−1 t f
+i =σ(W ·[h ,x ]+b ),
+t i t−1 t i
+o =σ(W ·[h ,x ]+b ), (20)
+t o t−1 t o
+s =f (cid:12)s +i (cid:12)tanh(W ·[h ,x ]+b ),
+t t t−1 t s t−1 t s
+h =o (cid:12)tanh(s ),
+t t t
+where[h,x]isthevectorconcatenationand(cid:12)istheelementwiseproduct.
+Forsimplicity,weusethestandardLSTMasthegenerator,whileitisworthnoticingthatmostoftheRNNvariants,suchas
+thegatedrecurrentunit(GRU)(Choetal.2014)andsoftattentionmechanism(Bahdanau,Cho,andBengio2014),canbeused
+asageneratorinSeqGAN.
+ThestandardwayoftraininganRNNG isthemaximumlikelihoodestimation(MLE),whichinvolvesminimizingtheneg-
+θ
+ativelog-likelihood−
+(cid:80)T
+logG (y =x |{x ,...,x })forageneratedsequence(y ,...,y )giveninput(x ,...,x ).
+t=1 θ t t 1 t−1 1 T 1 T
+However,whenapplyingMLEtogenerativemodels,thereisadiscrepancybetweentrainingandgenerating(Bengioetal.2015;
+Husza´r2015),whichmotivatesourwork.
+The Discriminative Model for Sequences Deep discriminative models such as deep neural network (DNN) (Vesely` et al.
+2013),convolutionalneuralnetwork(CNN)(Kim2014)andrecurrentconvolutionalneuralnetwork(RCNN)(Laietal.2015)
+have shown a high performance in complicated sequence classification tasks. In this paper, we choose the CNN as our dis-
+criminator as CNN has recently been shown of great effectiveness in text (token sequence) classification (Zhang and LeCun
+2015).
+Asfarasweknow,exceptforsomespecifictasks,mostdiscriminativemodelscanonlyperformclassificationwellforawhole
+sequence rather than the unfinished one. In case of some specific tasks, one may design a classifier to provide intermediate
+reward signal to enhance the performance of our framework. But to make it more general, we focus on the situation where
+discriminatorcanonlyprovidefinalreward,i.e.,theprobabilitythatafinishedsequencewasreal.
+Wefirstrepresentaninputsequencex ,...,x as:
+1 T
+E =x ⊕x ⊕...⊕x , (21)
+1:T 1 2 T
+wherex ∈ Rk isthek-dimensionaltokenembeddingand⊕istheverticalconcatenationoperatortobuildthematrixE ∈
+t 1:T
+RT×k.Thenakernelw ∈Rl×k appliesaconvolutionaloperationtoawindowsizeoflwordstoproduceanewfeaturemap:
+c =ρ(w⊗E +b), (22)
+i i:i+l−1
+where ⊗ operator is the summation of elementwise production, b is a bias term and ρ is a non-linear function. We can use
+variousnumbersofkernelswithdifferentwindowsizestoextractdifferentfeatures.Specifically,akernelwwithwindowsize
+lappliedtotheconcatenatedembeddingsofinputsequencewillproduceafeaturemap
+c=[c ,...,c ]. (23)
+1 T−l+1
+Finally we apply a max-over-time pooling operation over the feature map c˜= max{c} and pass all pooled features from
+differentkernelstoafullyconnectedsoftmaxlayertogettheprobabilitythatagivensequenceisreal.
+WeperformanempiricalexperimenttochoosethekernelwindowsizesandnumbersasshowninTable5.Fordifferenttasks,
+oneshoulddesignspecificstructuresforthediscriminator.
+To enhance the performance, we also add the highway architecture (Srivastava, Greff, and Schmidhuber 2015) before the
+finalfullyconnectedlayer:
+τ =σ(W ·c˜+b ),
+T T
+(24)
+C˜ =τ ·H(c˜,W )+(1−τ)·c˜,
+H
+Table5:Convolutionallayerstructures.
+Sequencelength (windowsize,kernelnumbers)
+(1,100),(2,200),(3,200),(4,200),(5,200)
+20 (6,100),(7,100),(8,100),(9,100),(10,100)
+(15,160),(20,160)
+(1,100),(2,200),(3,200),(4,200),(5,200)
+32 (6,100),(7,100),(8,100),(9,100),(10,100)
+(16,160),(24,160),(32,160)
+whereW ,b andW arehighwaylayerweights,H denotesanaffinetransformfollowedbyanon-linearactivationfunction
+T T H
+suchasarectifiedlinearunit(ReLU)andτ isthe“transformgate”withthesamedimensionalityasH(c˜,W )andc˜.Finally,
+H
+weapplyasigmoidtransformationtogettheprobabilitythatagivensequenceisreal:
+yˆ=σ(W ·C˜ +b ) (25)
+o o
+whereW andb istheoutputlayerweightandbias.
+o o
+Whenoptimizingdiscriminativemodels,supervisedtrainingisappliedtominimizethecrossentropy,whichiswidelyused
+astheobjectivefunctionforclassificationandpredictiontasks:
+L(y,yˆ)=−ylogyˆ−(1−y)log(1−yˆ), (26)
+whereyisthegroundtruthlabeloftheinputsequenceandyˆisthepredictedprobabilityfromthediscriminativemodels.
+MoreAblationStudy
+10.0
+9.8
+9.6
+9.4
+9.2
+9.0
+8.8
+8.6
+0 50 100 150 200 250 300 350 400
+Epochs
+elcaro
+yb
+LLN
+SeqGAN with insufficient pre­training
+SeqGAN with sufficient pre­training
+Figure4:Negativelog-likelihoodperformancewithdifferentpre-trainingepochsbeforetheadversarialtraining.Thevertical
+dashedlinesrepresentthestartofadversarialtraining.
+Inthe DISCUSSION subsectionof SYNTHETIC DATA EXPERIMENTS sectionofourpaper,wediscussedtheablationstudy
+ofthreehyperparametersofSeqGAN,i.e.,g-steps,d-stepsandkepochnumber.Hereweprovideanotherablationstudywhich
+isinstructiveforthebettertrainingofSeqGAN.
+As described in our paper, we start the adversarial training process after the convergence of MLE supervised pre-training.
+HerewefurtherconductexperimentstoinvestigatetheperformanceofSeqGANwhenthesupervisedpre-trainingisinsufficient.
+AsshowninFigure4,ifwepre-trainthegenerativemodelwithconventionalMLEmethodsforonly20epochs,whichisfar
+from convergence, then the adversarial training process improves the generator quite slowly and unstably. The reason is that
+in SeqGAN, the discriminative model provides reward guidance when training the generator and if the generator acts almost
+randomly, the discriminator will identify the generated sequence to be unreal with high confidence and almost every action
+thegeneratortakesreceivesalow(unified)reward,whichdoesnotguidethegeneratortowardsagoodimprovementdirection,
+resulting in an ineffective training procedure. This indicates that in order to apply adversarial training strategies to sequence
+generativemodels,asufficientpre-trainingisnecessary.
