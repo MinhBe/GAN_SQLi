@@ -57,7 +57,9 @@
       "PowerShell(python C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\LabelData\\\\_chunks\\\\_inspect_lowconf.py)",
       "PowerShell(python C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\LabelData\\\\_chunks\\\\_label_chunk_005.py)",
       "Bash(Select-Object -ExpandProperty FullName)",
-      "Bash(Sort-Object)"
+      "Bash(Sort-Object)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\" -Recurse -Force -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch '\\\\.git' } | ForEach-Object { $_.FullName } | Sort-Object)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\" -Force | Where-Object { $_.PSIsContainer } | ForEach-Object { $_.FullName } | Sort-Object)"
     ]
   }
 }
