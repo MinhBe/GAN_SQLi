@@ -1,8 +1,0 @@
-FROM owasp/modsecurity-crs:nginx-alpine
-
-# OWASP CRS PL2 (paranoia level 2)
-ENV PARANOIA=2
-ENV ANOMALY_INBOUND=5
-ENV ANOMALY_OUTBOUND=4
-
-EXPOSE 8080

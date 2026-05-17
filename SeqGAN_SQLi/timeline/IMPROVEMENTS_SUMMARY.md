@@ -1,8 +1,8 @@
-# Tổng Kết Cải Thiện — SeqGAN SQLi V1 → V3
+# Tổng Kết Cải Thiện — SeqGAN SQLi V1 → V4
 
-> **Ngày**: 2026-05-12  
-> **Kết quả cuối**: `checkpoints/v3/adv_step2000.pt` — warmup-trained model  
-> **Composite score**: 0.471 (no WAF) — cải thiện **+133%** so với MLE baseline
+> **Ngày**: 2026-05-16  
+> **Trạng thái hiện tại**: Data pipeline V3 hoàn tất (13,100 balanced), MLE BiLSTM pretrain done (val_ppl=1.74), V4 adversarial partial (crashed step 750, cần chạy lại)  
+> **Model tốt nhất đến nay**: `checkpoints/v3/adv_step2000.pt` (composite 0.471 no-WAF)
 
 ---
 
@@ -174,17 +174,145 @@ Eval thêm với WAF bật cho thấy ranking thay đổi:
 
 ---
 
-## Bài Học Kỹ Thuật
+### Phase 5 — Root Cause Discovery & Data Pipeline V3 (2026-05-16)
 
-1. **REINFORCE collapse là fundamental**: Không phải bug, là đặc tính của on-policy RL với fixed reward ceiling. Entropy reg giảm nhẹ, không giải quyết triệt để.
+**Phát hiện chấn động**: Mode collapse KHÔNG do training dynamics — mà do **delex xóa sạch tín hiệu phân biệt**.
 
-2. **Warmup > Adversarial trong context này**: Custom rule reward (0.70 ceiling) + DB gate quá "dễ đạt" → generator không cần adversarial signal. Warmup với entropy reg đủ để train model tốt.
+| Function | Trong data | Còn sau delex V1 | % Mất |
+|----------|-----------|-----------------|-------|
+| `xmltype` (Oracle error) | 5,793 | 0 | **100%** |
+| `pg_sleep` (PostgreSQL time) | 225 | 0 | **100%** |
+| `extractvalue` (MySQL error) | 250 | 0 | **100%** |
+| `updatexml` (MySQL error) | 107 | 0 | **100%** |
+| `dbms_pipe` (Oracle time) | 212 | 0 | **100%** |
+| `randomblob` (SQLite time) | 190 | 0 | **100%** |
+| `elt` (MySQL boolean) | 1,045 | 0 | **100%** |
 
-3. **Cache hit rate là health metric tốt**: V2 step1000 = 93% hit rate → collapse rõ. V3 step1000 = 42% → diversity tốt. Monitor metric này trong training.
+**Thống kê dataset V1**:
+- Delex collision: **71.89%** (17,821 unique -> 5,009 delex unique)
+- Wrapper bias: **53.64%** payload bi boc `select * from users WHERE username = "..."`
+- Top-100 patterns chiem **42.82%** dataset
+- Reasoning < 20 chars: **40%** rows
 
-4. **De-lex + re-lex là bắt buộc**: Reward function cần actual SQL. Quên re-lex → mọi payload score -0.5 (DB gate fail) → training không ý nghĩa.
+**Giai phap**: Skill `sqli-data-curator` — 4-phase pipeline thay the 3 skills cu.
 
-5. **Windows gotchas**: Unicode `→` crash, PowerShell heredoc syntax khác bash, stdout buffering với Start-Process.
+**4 Phase workflow**:
+
+| Phase | Cong viec | Script |
+|-------|-----------|--------|
+| 1 TRIAGE | Critique label -> Keep/Relabel/Drop | `critique_labels.py` |
+| 2 RELABEL | 3-source (rule + heuristic) + subagent chat | `label_payload.py`, `chat_label_coordinator.py` |
+| 3 TRANSFORM | Strip wrapper + delex_v2 voi function whitelist | `strip_wrapper.py`, `delex_v2.py` |
+| 4 TIER | Gold/Silver/Bronze split + resample | `tier_split.py`, `resample_balanced.py` |
+
+**Ket qua prototype (1000 rows)**:
+
+| Metric | Truoc (V1 delex) | Sau (Curator) | Target | Status |
+|--------|------------------|---------------|--------|--------|
+| Collision rate | 71.89% | **4.33%** | < 30% | PASS (16x) |
+| Vocab size | 89 tokens | **147 tokens** | 100-180 | PASS |
+| Top-100 coverage | 42.82% | **23.16%** | < 25% | PASS |
+| xmltype preservation | 0% | **100%** | > 95% | PASS |
+
+**Ket qua full pipeline (40,545 rows)**:
+
+| Tier | Rows | Dieu kien |
+|------|------|-----------|
+| Gold | 662 | confidence >= 0.90 AND sources_agree >= 2 |
+| Silver | 3,250 | confidence >= 0.70 AND sources_agree >= 1 |
+| Bronze | 9,188 | con lai |
+| **Total balanced** | **13,100** | resample cap 50/2000 |
+
+**Gold quality**:
+- Collision: 40.18% (cai thien 1.8x tu 71.89%, nhung chua dat target < 15%)
+- Type entropy: 1.76 bits (target > 2.0)
+- Mean reasoning: 63.7 chars
+- Type x DB holes: 4 cells (< 5)
+
+---
+
+### Phase 6 — MLE BiLSTM Pretrain (2026-05-16)
+
+**Van de**: V1-V3 dung LSTM thuan. Thay Lam goi y chuyen sang BiLSTM de capture context 2 chieu.
+
+**Kien truc moi**:
+
+| Thanh phan | Gia tri |
+|-----------|---------|
+| Model | `GeneratorBiLSTMEncoder` (2-layer BiLSTM encoder + 2-layer LSTM decoder) |
+| Vocab | **434 tokens** (vs V3: 89 — nho giu function names) |
+| embed_dim | 256 |
+| hidden_dim | 512 |
+| Data | Gold + Silver (3,520 train / 392 val) |
+
+**Training curve**:
+
+```
+Epoch  1: val_ppl=6.84
+Epoch 10: val_ppl=1.81
+Epoch 20: val_ppl=1.74 <- BEST
+Epoch 30: val_ppl=1.75 <- early stop (patience=10)
+```
+
+| Metric | V3 MLE (LSTM) | V4 MLE (BiLSTM) | Delta |
+|--------|--------------|-----------------|-------|
+| val_ppl | 1.70 | **1.74** | ~tuong duong |
+| Vocab | 89 | **434** | +388% |
+| Epochs | 5 (early stop) | 20 (early stop) | — |
+| Training time | ~5 min | ~2 min (CUDA 25 it/s) | — |
+
+**Luu y**: val_ppl 1.74 voi vocab 434 la tuong duong hoac tot hon V3 (1.70 voi vocab 89). Model co khong gian bieu dien rong hon nhieu.
+
+---
+
+### Phase 7 — V4 Adversarial Attempt (2026-05-16)
+
+**8 anti-collapse fixes dong thoi** (dap ung 6 nhan xet thay Lam):
+
+| Fix | Mo ta | Dap ung |
+|-----|-------|---------|
+| 1. Entropy boost | `entropy_coeff` 0.03 -> 0.10 | Anti-collapse |
+| 2. Temperature boost | 1.1 -> 1.30 | Anti-collapse |
+| 3. EMA faster | alpha 0.05 -> 0.20 | Anti-collapse |
+| 4. Type-balanced batch | Stratified 14 attack types | Anti-collapse |
+| 5. Diversity reward | Jaccard novelty vs buffer 256 | Anti-collapse |
+| 6. Dynamic D steps | Giam khi G collapse | Anti-collapse |
+| 7. **Benign SQL in D** | 5000 benign queries vao fake pile | Thay #5 |
+| 8. **BiLSTM encoder** | GeneratorBiLSTMEncoder | Thay #4 |
+
+**Ket qua training (crashed)**:
+
+```
+Step   50: warmup  g=-0.5084  r=0.2694  unique=63/64
+Step  100: warmup  g=-0.0348  r=0.3253  unique=62/64
+Step  300: warmup  g=-0.5119  r=0.5403  unique=64/64
+Step  500: warmup  g=-0.2471  r=0.6406  unique=64/64
+Step  750: CRASH — UnicodeEncodeError (emoji)
+```
+
+**Da fix**: emoji -> ASCII. Checkpoint luu tai `adv_step1000.pt` (61MB). Can chay lai tu step 0 do chua co resume flag.
+
+---
+
+## Bai Hoc Ky Thuat
+
+1. **REINFORCE collapse la fundamental**: Khong phai bug, la dac tinh cua on-policy RL voi fixed reward ceiling. Entropy reg giam nhe, khong giai quyet triet de.
+
+2. **Warmup > Adversarial trong context nay**: Custom rule reward (0.70 ceiling) + DB gate qua "de dat" -> generator khong can adversarial signal. Warmup voi entropy reg du de train model tot.
+
+3. **Cache hit rate la health metric tot**: V2 step1000 = 93% hit rate -> collapse ro. V3 step1000 = 42% -> diversity tot. Monitor metric nay trong training.
+
+4. **De-lex + re-lex la bat buoc**: Reward function can actual SQL. Quen re-lex -> moi payload score -0.5 (DB gate fail) -> training khong y nghia.
+
+5. **Root cause collapse la data, khong phai training**: 71.89% collision do delex xoa function name. 8 training fixes khong cuu duoc neu data garbage.
+
+6. **Function whitelist la gate**: Chi can giu ~30 SQLi-significant functions (xmltype, pg_sleep, extractvalue...) la collision rate giam tu 71.89% -> 4.33%.
+
+7. **Wrapper bias la bay hidden**: 53.64% payload bi boc trong wrapper query -> delex bien inner payload thanh `__STR__` -> mat het thong tin. Strip wrapper la buoc bat buoc.
+
+8. **BiLSTM vs LSTM**: val_ppl tuong duong (~1.74) nhung BiLSTM co vocab lon hon 5x (434 vs 89) -> model hoc duoc nhieu function names hon.
+
+9. **Windows gotchas**: Unicode `->` crash, emoji crash terminal cp1252, PowerShell heredoc syntax khac bash, path resolution double-nest.
 
 ---
 
@@ -199,6 +327,11 @@ Eval thêm với WAF bật cho thấy ranking thay đổi:
 | `eval/evaluate_v2.py` | 5-metric evaluation |
 | `eval/compare_v2_v3.py` | So sánh V2 vs V3 |
 | `timeline/V2_IMPLEMENTATION_NOTES.md` | 9 bugs đã fix |
-| `timeline/V2_RESULTS.md` | V2 full analysis + V3 recommendation |
 | `timeline/V3_RESULTS.md` | V3 results + verdict |
 | `timeline/WAF_EVAL_RESULTS.md` | WAF eval với ModSecurity OWASP CRS |
+| `configs/seqgan_v4.yaml` | V4 config với 8 anti-collapse params |
+| `train_adversarial_v4.py` | V4 training script (BiLSTM + diversity) |
+| `checkpoints/v4/mle_best.pt` | MLE BiLSTM pretrain (val_ppl=1.74) |
+| `Skill/sqli-data-curator/SKILL.md` | 4-phase data curation workflow |
+| `Asset/LabelData/OpenCode/dataset_v3_balanced.csv` | Final balanced dataset (13,100 rows) |
+| `Asset/LabelData/OpenCode/gold.csv` | Gold tier (662 rows) for MLE training |
