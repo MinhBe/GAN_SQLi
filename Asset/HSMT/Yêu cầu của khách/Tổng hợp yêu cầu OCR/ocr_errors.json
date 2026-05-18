@@ -1,0 +1,24 @@
+[
+  {
+    "file": "2.1. Chuong III_Muc 3_Tieu_chuan_danh_gia_ve_ky_thuat.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\trash\\2.1. Chuong III_Muc 3_Tieu_chuan_danh_gia_ve_ky_thuat.pdf",
+    "mode": "fast",
+    "pages": 4,
+    "output_chars": 17,
+    "error_type": "output_too_short",
+    "message": "Only 17 chars for 4 pages",
+    "timestamp": "2026-05-18T08:27:10.147256",
+    "dpi": 150
+  },
+  {
+    "file": "2.2. Chuong III_Muc 4_Tieu_chuan_danh_gia_ve_tai_chinh.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\trash\\2.2. Chuong III_Muc 4_Tieu_chuan_danh_gia_ve_tai_chinh.pdf",
+    "mode": "fast",
+    "pages": 1,
+    "output_chars": 0,
+    "error_type": "empty_output",
+    "message": "OCR returned no text",
+    "timestamp": "2026-05-18T08:27:14.088374",
+    "dpi": 150
+  }
+]

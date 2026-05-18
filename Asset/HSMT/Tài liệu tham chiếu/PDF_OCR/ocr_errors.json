@@ -1,0 +1,24 @@
+[
+  {
+    "file": "FortiGate_2000E_Series.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\HSMT\\Tài liệu tham chiếu\\PDF\\FortiGate_2000E_Series.pdf",
+    "mode": "fast",
+    "pages": 0,
+    "output_chars": 0,
+    "error_type": "exception",
+    "message": "Traceback (most recent call last):",
+    "timestamp": "2026-05-18T09:56:37.977923",
+    "dpi": 150
+  },
+  {
+    "file": "FortiGate_2000E_Series.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\HSMT\\Tài liệu tham chiếu\\PDF\\FortiGate_2000E_Series.pdf",
+    "mode": "max",
+    "pages": 0,
+    "output_chars": 0,
+    "error_type": "exception",
+    "message": "Traceback (most recent call last):",
+    "timestamp": "2026-05-18T09:58:13.353377",
+    "dpi": 300
+  }
+]

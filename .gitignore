@@ -1,0 +1,8 @@
+# Oversized files > 100 MB — chunks pushed instead
+Asset/LabelData/FinalDataSet/final_dataset.csv
+Asset/LabelData/Dataset Source/rbsqli_dataset.csv
+Asset/LabelData/Dataset Source/zenodo_dataset.csv
+
+# Python cache
+__pycache__/
+*.pyc
