@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pyo
+.ckpt2_*.parquet
+*_needs_ai_report.csv
+chat_review_v2/

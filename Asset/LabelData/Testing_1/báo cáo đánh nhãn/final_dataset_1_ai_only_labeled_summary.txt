@@ -1,0 +1,44 @@
+QA summary for final_dataset_1_ai_only_labeled.csv
+Input rows: 1084880
+Output rows: 1084880
+Output columns: 46
+Output size MB: 818.45
+
+is_sqli:
+  0: 928954
+  1: 155926
+
+primary_sqli_type:
+  benign: 928954
+  time_blind: 59507
+  boolean_blind: 48184
+  union_based: 28195
+  error_based: 8957
+  metadata_enumeration: 6612
+  db_fingerprint: 3203
+  out_of_band: 684
+  stacked_queries: 584
+
+db_engine:
+  unknown: 1001490
+  mysql: 54678
+  mssql: 11988
+  postgresql: 6895
+  sqlite: 6473
+  mssql_or_mysql: 2062
+  oracle: 1294
+
+confidence_band:
+  medium: 838321
+  low: 244889
+  high: 1670
+
+review_priority:
+  3: 703995
+  2: 377532
+  4: 2724
+  5: 629
+
+low_confidence:
+  0: 839991
+  1: 244889
