@@ -81,8 +81,20 @@ def _read_csv_sample(path: Path, max_rows: int) -> pd.DataFrame:
         return pd.read_csv(path, nrows=max_rows, low_memory=False, encoding="latin1")
 
 
+def is_lfs_pointer(path: Path) -> bool:
+    if not path.exists() or path.is_dir() or path.stat().st_size > 1024:
+        return False
+    try:
+        first_line = path.read_text(encoding="utf-8", errors="ignore").splitlines()[0]
+    except (IndexError, OSError):
+        return False
+    return first_line.strip() == "version https://git-lfs.github.com/spec/v1"
+
+
 def _read_any(path: Path, max_rows: int) -> pd.DataFrame:
     suffix = path.suffix.lower()
+    if is_lfs_pointer(path):
+        raise RuntimeError(f"{path} is a Git LFS pointer; run `git lfs pull` first.")
     if suffix == ".parquet":
         return pd.read_parquet(path).head(max_rows)
     if suffix == ".txt":

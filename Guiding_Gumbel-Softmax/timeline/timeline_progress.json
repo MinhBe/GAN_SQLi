@@ -15,11 +15,11 @@
   },
   "overall_progress": {
     "status": "in_progress",
-    "progress_percent": 55,
+    "progress_percent": 72,
     "active_branch": "gumbel_action_surgery",
-    "active_phase_id": "G03",
-    "last_completed_phase_id": "G03",
-    "next_action": "G03 multi-seed decision completed; do not scale Gumbel unless decision is GUMBEL_ACTION_PASS."
+    "active_phase_id": "G05",
+    "last_completed_phase_id": "G05",
+    "next_action": "G05 Gumbel-native condition table completed; evaluator remains separated under G06."
   },
   "timeline_files": {
     "implementation_guide": "timeline/01_Huong_Dan_Trien_Khai.md",
@@ -141,8 +141,8 @@
         {
           "id": "G04",
           "title": "Full Data Foundation + Action Taxonomy",
-          "status": "not_started",
-          "progress_percent": 0,
+          "status": "completed",
+          "progress_percent": 65,
           "depends_on": [
             "G03"
           ],
@@ -153,16 +153,20 @@
           ],
           "gate": {
             "name": "Full action data readiness",
-            "current_result": null
+            "current_result": "FULL_FOUNDATION_READY"
           },
-          "evidence_artifacts": [],
-          "notes": "Must preserve cluster leakage = 0."
+          "evidence_artifacts": [
+            "data/gumbel/full/action_foundation.parquet",
+            "data/gumbel/full/action_splits.json",
+            "reports/gumbel/04_full_data_foundation_action_taxonomy.md"
+          ],
+          "notes": "G04 Gumbel-native full action foundation completed; build G05 condition table next."
         },
         {
           "id": "G05",
           "title": "Label & Condition System",
-          "status": "not_started",
-          "progress_percent": 0,
+          "status": "completed",
+          "progress_percent": 72,
           "depends_on": [
             "G04"
           ],
@@ -172,10 +176,13 @@
           ],
           "gate": {
             "name": "Condition readiness",
-            "current_result": null
+            "current_result": "CONDITION_READY"
           },
-          "evidence_artifacts": [],
-          "notes": "Do not use unknown as a real engine class."
+          "evidence_artifacts": [
+            "data/gumbel/full/condition_table.parquet",
+            "reports/gumbel/05_label_condition_system.md"
+          ],
+          "notes": "G05 Gumbel-native condition table completed; evaluator remains separated under G06."
         },
         {
           "id": "G06",

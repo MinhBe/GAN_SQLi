@@ -5,6 +5,7 @@ import pandas as pd
 from gumbel_sqli.audit import run_audit
 from gumbel_sqli.config import ProjectConfig
 from gumbel_sqli.dataset import read_parquet
+from gumbel_sqli.full_foundation import build_condition_table, build_full_foundation
 from gumbel_sqli.slice_builder import build_slice
 
 
@@ -75,3 +76,23 @@ def test_build_slice_outputs_non_empty_splits(tmp_path):
     assert result["split_sizes"]["test"] > 0
     train = read_parquet(tmp_path / "data" / "gumbel" / "slice" / "action_surgery_train.parquet")
     assert not train.empty
+
+
+def test_build_full_and_conditions_outputs_gumbel_artifacts(tmp_path):
+    source = tmp_path / "sample.csv"
+    _sample_csv(source)
+    config = ProjectConfig.from_args(root=tmp_path, seed=7, device="cpu")
+
+    full = build_full_foundation(config, input_paths=[source], max_rows=20)
+    conditions = build_condition_table(config)
+
+    assert full["action_rows"] > 0
+    assert conditions["condition_rows"] > 0
+    assert (tmp_path / "data" / "gumbel" / "full" / "action_foundation.parquet").exists()
+    assert (tmp_path / "data" / "gumbel" / "full" / "action_splits.json").exists()
+    assert (tmp_path / "data" / "gumbel" / "full" / "condition_table.parquet").exists()
+    condition_table = read_parquet(
+        tmp_path / "data" / "gumbel" / "full" / "condition_table.parquet"
+    )
+    assert "unlabeled_db_hint" in set(condition_table["db_hint"])
+    assert "unknown" not in set(condition_table["db_hint"])

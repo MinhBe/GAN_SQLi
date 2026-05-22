@@ -8,6 +8,7 @@ from typing import Any
 from .audit import run_audit
 from .benchmark import run_benchmark, run_phase03_decision_gate
 from .config import DEFAULT_SEED, ProjectConfig
+from .full_foundation import build_condition_table, build_full_foundation
 from .reporting import update_timeline_progress
 from .slice_builder import build_slice
 from .training import train_action_gan, train_anchor, train_d_scorer
@@ -47,6 +48,20 @@ def cmd_build_slice(args: argparse.Namespace) -> None:
         dev_size=args.dev_size,
         test_size=args.test_size,
     )
+    _print(result)
+
+
+def cmd_build_full(args: argparse.Namespace) -> None:
+    result = build_full_foundation(
+        _config(args),
+        input_paths=_paths(args.input),
+        max_rows=args.max_rows,
+    )
+    _print(result)
+
+
+def cmd_build_conditions(args: argparse.Namespace) -> None:
+    result = build_condition_table(_config(args))
     _print(result)
 
 
@@ -130,6 +145,20 @@ def build_parser() -> argparse.ArgumentParser:
     build.add_argument("--dev-size", type=int, default=1_000)
     build.add_argument("--test-size", type=int, default=1_000)
     build.set_defaults(func=cmd_build_slice)
+
+    full = subparsers.add_parser(
+        "build-full",
+        help="Build G04 Gumbel-native full action foundation.",
+    )
+    full.add_argument("--input", nargs="*", default=None)
+    full.add_argument("--max-rows", type=int, default=100_000)
+    full.set_defaults(func=cmd_build_full)
+
+    conditions = subparsers.add_parser(
+        "build-conditions",
+        help="Build G05 Gumbel-native condition table.",
+    )
+    conditions.set_defaults(func=cmd_build_conditions)
 
     anchor = subparsers.add_parser("train-anchor", help="Train anchor-only infiller.")
     anchor.add_argument("--epochs", type=int, default=1)

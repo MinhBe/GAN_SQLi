@@ -57,6 +57,10 @@ class ProjectConfig:
         return self.data_dir / "slice"
 
     @property
+    def full_dir(self) -> Path:
+        return self.data_dir / "full"
+
+    @property
     def eval_dir(self) -> Path:
         return self.root / "eval" / "gumbel"
 
@@ -81,11 +85,6 @@ class ProjectConfig:
     def default_input_paths(self) -> list[Path]:
         base = self.label_data_dir
         candidates = [
-            self.root / "Guiding" / "Phase 5" / "outputs" / "full" / "verified_dev.parquet",
-            self.root / "Guiding" / "Phase 5" / "outputs" / "full" / "verified_test.parquet",
-            self.root / "Guiding" / "Phase 5" / "outputs" / "full" / "gold.parquet",
-            self.root / "Guiding" / "Phase 5" / "outputs" / "full" / "silver.parquet",
-            self.root / "Guiding" / "Phase 4" / "outputs" / "full" / "phase04_payload_foundation.parquet",
             base / "Testing" / "Testing_labeled.csv",
             base / "Testing_1" / "data1" / "test_labeled.csv",
             base / "Testing_1" / "data1" / "labeled.csv",
