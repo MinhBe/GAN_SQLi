@@ -1,0 +1,29 @@
+{
+  "model_path": "C:\\Projects\\GAN_SQLi\\models\\gumbel\\action_gan\\seed_1729\\best.pt",
+  "seed": 1729,
+  "epochs": 1,
+  "dev_metrics": {
+    "n": 865,
+    "round_trip_success": 1.0,
+    "parse_success": 0.9757225433526011,
+    "sqlite_execution_safety": 0.22427745664739884,
+    "action_validity": 0.8104046242774566,
+    "unique_ratio": 1.0,
+    "self_bleu3": 0.7512807281353815,
+    "template_entropy": 8.923970055772495,
+    "template_entropy_norm": 0.938399704694601,
+    "action_entropy": 2.6115069966407223,
+    "action_entropy_norm": 0.8705023322135741,
+    "near_copy_rate": 0.6994219653179191,
+    "condition_accuracy": 1.0,
+    "d_shortcut_diagnostic": {
+      "status": "not_run",
+      "length_score_abs_corr": null
+    },
+    "composite": {
+      "passed_floors": true,
+      "score": 0.8724673331894182,
+      "floor_failures": {}
+    }
+  }
+}

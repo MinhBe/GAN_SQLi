@@ -6,3 +6,4 @@ Asset/LabelData/Dataset Source/zenodo_dataset.csv
 # Python cache
 __pycache__/
 *.pyc
+*.egg-info/

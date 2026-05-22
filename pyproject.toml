@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gumbel-sqli"
+version = "0.1.0"
+description = "Gumbel-Softmax action-surgery pipeline for SQLi payload research."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "pyarrow",
+  "scikit-learn",
+  "sqlparse",
+  "torch",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+gumbel-sqli = "gumbel_sqli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

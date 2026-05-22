@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "created_at": "2026-05-22",
   "updated_at": "2026-05-22",
-  "project_root": "C:/Users/Admin/Documents/GAN_SQLi",
+  "project_root": "C:/Projects/GAN_SQLi",
   "owner": "user",
   "current_recommendation": "Implement only the Gumbel-Softmax Action-Surgery branch in this timeline; keep MLE/D-as-scorer as the safety baseline.",
   "status_definitions": {
@@ -14,12 +14,12 @@
     "skipped": "Task intentionally skipped with a recorded reason."
   },
   "overall_progress": {
-    "status": "not_started",
-    "progress_percent": 0,
+    "status": "in_progress",
+    "progress_percent": 55,
     "active_branch": "gumbel_action_surgery",
-    "active_phase_id": "G01",
-    "last_completed_phase_id": "T00",
-    "next_action": "Start G01 slot/action audit; when work begins, set overall_progress.status and G01.status to in_progress."
+    "active_phase_id": "G03",
+    "last_completed_phase_id": "G03",
+    "next_action": "G03 multi-seed decision completed; do not scale Gumbel unless decision is GUMBEL_ACTION_PASS."
   },
   "timeline_files": {
     "implementation_guide": "timeline/01_Huong_Dan_Trien_Khai.md",
@@ -49,15 +49,15 @@
   "branches": {
     "gumbel_action_surgery": {
       "priority": 1,
-      "branch_status": "not_started",
+      "branch_status": "in_progress",
       "rationale": "Lower implementation risk, practical action taxonomy path, D-as-scorer safety deliverable.",
       "source_plan_dir": "Guiding_Gumbel-Softmax/Mục lục",
       "phases": [
         {
           "id": "G01",
           "title": "Slot/Action Audit",
-          "status": "not_started",
-          "progress_percent": 0,
+          "status": "completed",
+          "progress_percent": 20,
           "depends_on": [],
           "planned_outputs": [
             "reports/gumbel/01_slot_action_audit.md",
@@ -71,16 +71,21 @@
               "S2_TAMPER_ACTION",
               "STOP"
             ],
-            "current_result": null
+            "current_result": "S2_TAMPER_ACTION"
           },
-          "evidence_artifacts": [],
-          "notes": "Do not train GAN before this gate passes."
+          "evidence_artifacts": [
+            "reports/gumbel/01_slot_action_audit.md",
+            "data/gumbel/audit/action_taxonomy.json",
+            "data/gumbel/audit/action_candidates.parquet",
+            "data/gumbel/audit/g0_decision.json"
+          ],
+          "notes": "G01 audit completed; build the G02 vertical slice next."
         },
         {
           "id": "G02",
           "title": "De-risk Action-Surgery Slice",
-          "status": "not_started",
-          "progress_percent": 0,
+          "status": "completed",
+          "progress_percent": 40,
           "depends_on": [
             "G01"
           ],
@@ -91,16 +96,23 @@
           ],
           "gate": {
             "name": "Slice viability",
-            "current_result": null
+            "current_result": "D_SCORER_MAIN"
           },
-          "evidence_artifacts": [],
-          "notes": "Run anchor-only and D-as-scorer before pilot GAN."
+          "evidence_artifacts": [
+            "data/gumbel/slice/action_surgery_train.parquet",
+            "data/gumbel/slice/action_surgery_dev.parquet",
+            "data/gumbel/slice/action_surgery_test.parquet",
+            "eval/gumbel/slice/baseline_comparison.json",
+            "eval/gumbel/slice/decision.json",
+            "reports/gumbel/02_de_risk_action_surgery_slice.md"
+          ],
+          "notes": "G02 slice benchmark completed; run G03 multi-seed decision before scaling."
         },
         {
           "id": "G03",
           "title": "Pre-registered Decision Gate",
-          "status": "not_started",
-          "progress_percent": 0,
+          "status": "completed",
+          "progress_percent": 55,
           "depends_on": [
             "G02"
           ],
@@ -117,10 +129,14 @@
               "MLE_MAIN",
               "INCONCLUSIVE"
             ],
-            "current_result": null
+            "current_result": "MLE_MAIN"
           },
-          "evidence_artifacts": [],
-          "notes": "Minimum 3 seeds; target 5 seeds and >=5k samples per seed."
+          "evidence_artifacts": [
+            "eval/gumbel/phase03/decision.json",
+            "eval/gumbel/phase03/statistical_summary.json",
+            "reports/gumbel/03_decision_gate_report.md"
+          ],
+          "notes": "G03 multi-seed decision completed; do not scale Gumbel unless decision is GUMBEL_ACTION_PASS."
         },
         {
           "id": "G04",
