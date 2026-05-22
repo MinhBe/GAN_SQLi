@@ -1,0 +1,60 @@
+{"technique": "benign", "text": "limit select from ,"}
+{"technique": "benign", "text": "delete"}
+{"technique": "benign", "text": ""}
+{"technique": "benign", "text": "+ benchmark __NUM__ = __NUM__ __COMMENT__ __NUM__ select __STR__ and ' from union where < ) or < sleep __TABLE__ __NUM__ from __NUM__ * ) __NUM__"}
+{"technique": "benign", "text": "__STR__ exec set ) = , where and from __NUM__ __TABLE__ __COMMENT__ __NUM__ where ( and __ID__ __NUM__ __ID__ from select where from where __COMMENT__"}
+{"technique": "benign", "text": "update \" x __TABLE__ , from __ID__ __TABLE__ where __NUM__ __NUM__ ( __NUM__ ( > select __NUM__ __TABLE__ __ID__ __TABLE__ __NUM__ id from __NUM__ __TABLE__ ' sleep"}
+{"technique": "benign", "text": "* where id __STR__ where __ID__ __NUM__"}
+{"technique": "benign", "text": "+ exec \" __ID__ = = __ID__ select __NUM__ and __ID__ or id from __NUM__ ("}
+{"technique": "benign", "text": "__STR__ from __ID__ __TABLE__ __TABLE__ null select from and id __ID__ where __NUM__ or __TABLE__ = __NUM__ > __ID__ __NUM__"}
+{"technique": "benign", "text": "' id __NUM__ null select __ID__ select __NUM__ __NUM__ )"}
+{"technique": "benign", "text": "set __TABLE__ null , __TABLE__ ) = id id select or __COMMENT__"}
+{"technique": "benign", "text": "delete ) from __COMMENT__"}
+{"technique": "boolean_blind", "text": "__NUM__ __ID__ ( __NUM__ ( __NUM__ __ID__"}
+{"technique": "boolean_blind", "text": "and __STR__ __NUM__ ( or __NUM__ __ID__ __NUM__ and ( and = select __ID__ or select = or id ) __ID__ where __NUM__ = ( select from ( __NUM__ select id"}
+{"technique": "boolean_blind", "text": ") exec = null __STR__ where __NUM__ ' from ) __ID__ __NUM__ from __STR__ from __COMMENT__ null or = __NUM__ __NUM__ sleep ="}
+{"technique": "boolean_blind", "text": "! __TABLE__ __ID__ = id or * = = = ( __NUM__ __TABLE__ __NUM__ = __NUM__ ) ( __STR__ = or __NUM__ __NUM__ * ) __COMMENT__ __NUM__ = ) __COMMENT__ , id __NUM__ , __NUM__ or ="}
+{"technique": "boolean_blind", "text": "where < ( ) __ID__ < __NUM__ ' = and ) ) __COMMENT__ select"}
+{"technique": "boolean_blind", "text": "sleep select __NUM__ __NUM__ __COMMENT__ = where where sleep id id __NUM__ select ( ( __TABLE__ from __NUM__ __NUM__ __STR__ > = __NUM__ __NUM__ ( __NUM__ , __ID__ __TABLE__ __STR__ and = __NUM__ = __NUM__ not or __NUM__ > ) ) where"}
+{"technique": "boolean_blind", "text": "= < __NUM__"}
+{"technique": "boolean_blind", "text": "not = __ID__ ( __ID__ ' where __ID__ __COMMENT__ sleep __STR__ __NUM__ * __NUM__ and ( = __TABLE__ __NUM__ __STR__ ( __NUM__ __ID__ __ID__ ) __STR__ ) __TABLE__ __ID__ __STR__ where __STR__ __NUM__ = where __NUM__ null where __NUM__ , where )"}
+{"technique": "boolean_blind", "text": "__STR__ __TABLE__ = = __NUM__ ( ' , )"}
+{"technique": "boolean_blind", "text": "select exec select __TABLE__ from ) __ID__ __TABLE__ where from = id"}
+{"technique": "boolean_blind", "text": "__NUM__ or __NUM__ ' id >"}
+{"technique": "boolean_blind", "text": "( ( = __NUM__ ) __NUM__ = __NUM__ __NUM__ __STR__ __NUM__ __TABLE__ __NUM__ id ) = __ID__"}
+{"technique": "time_blind", "text": ") union __TABLE__ id = , , __TABLE__ __TABLE__ = not"}
+{"technique": "time_blind", "text": "__NUM__ __STR__ from or __TABLE__ where __NUM__ ' ( __NUM__ not __ID__ __ID__ ( , = , where __COMMENT__ ( __ID__ __TABLE__ __ID__ ( __TABLE__ ) ) = ( __NUM__ = select __ID__ where where id = > __NUM__ ( > from"}
+{"technique": "time_blind", "text": "like * from select __NUM__"}
+{"technique": "time_blind", "text": "\" ) __COMMENT__ or select __NUM__ __STR__ ( = where or and , = from __COMMENT__ id __STR__ from __ID__ = __ID__ = __NUM__ ) ( __COMMENT__ ) select"}
+{"technique": "time_blind", "text": "where __ID__ id ) where __TABLE__ __NUM__ > __COMMENT__ where __TABLE__ __ID__ ) = ( __NUM__ __COMMENT__"}
+{"technique": "time_blind", "text": "delay __TABLE__ < __ID__ __ID__ and select __ID__ ) ( id = from ) ( select __NUM__ where __ID__ from __COMMENT__ __NUM__ = and > ( __NUM__ = id ( __NUM__ id sleep"}
+{"technique": "time_blind", "text": "select __TABLE__ not from __STR__ sleep id __NUM__ __COMMENT__ __ID__ and sleep where __STR__ ( ( from __ID__"}
+{"technique": "time_blind", "text": "( __TABLE__ ) = __NUM__ not"}
+{"technique": "time_blind", "text": "select ( __NUM__ __COMMENT__ ) , __COMMENT__ ) __NUM__ __ID__ __NUM__ ' from __TABLE__ or = __NUM__ __ID__ ) sleep __TABLE__ or __NUM__ __ID__ __ID__ ) select select __NUM__ id , )"}
+{"technique": "time_blind", "text": "select ! ) __COMMENT__ ( , __ID__ ( null"}
+{"technique": "time_blind", "text": "__NUM__ __ID__ ( ) __NUM__ __ID__ and ( __NUM__ ( ) __ID__ __COMMENT__"}
+{"technique": "time_blind", "text": "= id from __NUM__ )"}
+{"technique": "union_based", "text": "__STR__ or from __NUM__ __ID__ ( from select __ID__ from __TABLE__ __ID__ __NUM__ , > __ID__ , from __TABLE__ ( __ID__ ) __NUM__ __COMMENT__ ( __NUM__ __STR__ __COMMENT__ __COMMENT__"}
+{"technique": "union_based", "text": ", where ) __TABLE__"}
+{"technique": "union_based", "text": "sleep , __TABLE__ , __ID__ __COMMENT__ id __NUM__ where __COMMENT__ __TABLE__ from __TABLE__ __NUM__ or __NUM__ , null __NUM__ __TABLE__ where __COMMENT__ , from select from select ="}
+{"technique": "union_based", "text": "__NUM__ ="}
+{"technique": "union_based", "text": "and __ID__ ("}
+{"technique": "union_based", "text": "id select * __TABLE__ ( __ID__ null ("}
+{"technique": "union_based", "text": "select __ID__ where * __COMMENT__ __TABLE__ __ID__ __STR__ = __ID__ , __ID__ __TABLE__ __ID__ __ID__ null __COMMENT__ ( and __ID__ select __COMMENT__ , from id __NUM__"}
+{"technique": "union_based", "text": "select from __COMMENT__"}
+{"technique": "union_based", "text": "__TABLE__ , __TABLE__ , __ID__ from __TABLE__ __NUM__ __COMMENT__ , not __NUM__ ) ) __NUM__ ( __TABLE__ sleep __TABLE__ = id __TABLE__ where where __TABLE__ __STR__ ( __STR__ union null __NUM__ __TABLE__ __NUM__ null and ) sleep from __ID__ ( __NUM__ where __NUM__ ) from from ) __ID__ __ID__ __TABLE__ __TABLE__ __COMMENT__ __NUM__ __ID__ from __COMMENT__ id __NUM__ and id select = id from sleep sleep __NUM__ or id , __NUM__"}
+{"technique": "union_based", "text": ""}
+{"technique": "union_based", "text": "update = __COMMENT__ __NUM__ __ID__ __NUM__ sleep __COMMENT__ __STR__ , __ID__ __ID__"}
+{"technique": "union_based", "text": "( from > select < __TABLE__ __ID__ from sleep = ) not __STR__ select null select __ID__ __NUM__ select select ' __NUM__ __ID__ , where __COMMENT__ = or __NUM__ ) where id ( __NUM__ __ID__ ) __ID__ where ' = __TABLE__ , __ID__ ( , = union , union from __COMMENT__ id select __NUM__ __COMMENT__ and from ) __TABLE__ where ( ( __ID__ ) = from or id from"}
+{"technique": "error_based", "text": "' set _e vt kx vt aw े hc 本 z6  uk gx qd q2 bo gr fl l9 b8 rf lt u2 rf s7 fn c6 t4 zv ez du e0 rw dw gj í پ l9 h1 vu gu uk vx u2 uk wy nt j0 gu l9 rj e. s8 rj e. pn l9 777 gu vu wj s8 w2 j0 490 519 j0 do eh qp rf du uk nc rc س gu h1 d9 wi j_ gy n1 پ kx â j0 ud c6 wi gj wi ủ pj g1 e0 机 nv qi l9 878 공 uk eh l1 f hl ez g_ ez uf ud vu f se eh 218 â kw l9 dw s1 du rj n1 機"}
+{"technique": "error_based", "text": "__TIME__ l9 â 487 ur wj vt kw gr x7 vj ez gx z2 ר 88 rc a3 ur right ia yw wj ल d9 s1 ia gy gx ap g1 s7 d1 پ vj vj s7 vu 487 pn 本 â g_ a3 े 278 â gj nt س τ tr bg ud bg uf e. 487 wi yn gr ia í vj c6 se yn o6 x6 fl े y1 sr uv gx f4 se p$ h1 92 l9 s8 f4 lt ia 096 vj w9 ia ia 218 hl y9 gr du j_ eh uf 777 gr b6 828 s7 c6 fl 181 s7 b8 ר ez g_ g1 f े 487 278 ni wj gr gr e. gx d7 f े bs gl"}
+{"technique": "error_based", "text": "or user @ or or ' z8 x6 _e sy i3 j2 tw ap vj z. lt g_ l3 f uk gr f4 y3 ap yn kj ab rf rj fl e0 zy 218 gu uf du wi gu c6 gr vj wj í f rj uk gx c e0 fl d9 f wj gx ab uk vt gl 487 gr _q jb 878 b7 wi gm fu uk oo lw g_ f4 gl kl du 487 eh _q 本 z6 gr z2 p0 kw l9 jb t4 ab gy ye zc â bs ga bs s7 s7 wi â gj y2 wj uj hf uf f vt vu ud nc tr uk du uk uf fl t4 _q uf c6 d9 gy â ы nc du"}
+{"technique": "error_based", "text": "' f4 ec h$ f ur vt 181 ר zc kx wj f jb ma dw y0 aw tw ud 519 rj wj vj pz ho e0 zy g1 c0 p$ wj í ud vu â vu jb dw iz wy t4 ap 487 e7 z6 行 lu b7 eh x7 gr gx ud uk y3 du f ea u2 s1 wj fl d9 _r y1 o_ ef g1 gr lt gx hf a3 e0 vu gr pn _q uf ud gu n1 m7 hf _e â f4 f hi zq gr pn í े z2 _q p$ ר c0 b7 096 h1 z6 ר hl bh і े y1 本 s7 f gx rj l9 du i7 eh _q s1 181 b8 l1 i7 wi 218"}
+{"technique": "error_based", "text": "delete v2 h$ p$ l9 і fl c l9 z2 lt ye s3 n1 la xs े zc ud ab kw lw f 181 s1 gr a3 े x6 hl 278 _8 ab lw s1 y9 vj s1 hf g1 vj lt ap c bs zy ר lu s7 zv і sr uk ר hl ap du s1 vi sr ud g_ rj ר l9 rf â uf du 487 ר ab eh x6 j_ e0 â zc vu gu fl ap y9 ef jb la j2 g_ â _q s1 a3 487 u2 wi uf ab jb zv ec 487 uk hl vu vj du jb b7 fl hl bg d1 p$ vj aw m. 51 y9 f hi eh x7 j0 c6 gj 487 eh"}
+{"technique": "error_based", "text": ""}
+{"technique": "error_based", "text": "user ! j2 064 t3 878 ra ap vt t4 py 487 181 vu vj uk â gl p9 fl c6 vu eh kw gu eh 181 wj l9 519 hl z2 ab ku nt _q b7 i3 uf xs ia b8 rj 096 s1 u2 du u2 e0 wi jb e7 fl â vj ud yt gr vj o_ h9 g$ z6 878 e0 â 487 kx se 878 j0 s1 ap su s8 ud nc q2 pz ap vi oo ab z6 g1 j0 b8 ud lt gr vj hl vu s1 c0 k6 yn í jb sy vj zq gx eh kx eh ء wj ud e. dw y9 â gx ab pj j0 t4 uk e0 c7 t vu zy rc gm ez"}
+{"technique": "error_based", "text": "__STR__ __ID__ from where ' where id benchmark from __NUM__"}
+{"technique": "error_based", "text": "__TABLE__ @ null h$ eh qi qp yn 850 δ sr fl sr l9 rf j0 t c6 h1 bg 24 े kl vu ab rf h1 c6 j2 487 pj l9 rf h1 gu pn z6 hl gx hf fl u4 b8 hc 743 rf char s1 sj ys fl t d1 s3 a3 ab d9 d7 vi _q eh vt lt ur i3 tw vu ap o_ e0 bs vj े ab s1 j0 x6 x7 g1 b7 vu uf í s1 ee э 490 yt pv rf rf p9 rf í vj yt bu gu l9 wi f u2 e0 gr gr ủ j_ â f4 uk gr ez 181 181 sr f4 j0 oo vi xs â u2 uk s3 c0 p0 lt"}
+{"technique": "error_based", "text": "from __STR__ from like , __NUM__ __STR__ < sleep null ) set __STR__ , id < = __NUM__ __TABLE__ __STR__ select __NUM__ = from select id and id where __COMMENT__ = = where from or ) id = ,"}
+{"technique": "error_based", "text": "__TABLE__ __COMMENT__ __NUM__ , 064 benchmark > + or ( & g1 vu gr sy δ fl bk a3 z6 av zm ml zy რ yn y2 eh 181 se gx vt t4 fn zg o6 oo 096 z. f4 gr f4 _q gu rj a3 l9 e_ vj 机 í z. zb ы gr s8 τ g1 n3 e0 kl bs 181 ud yt ud uk vj 487 hl l9 n1 l9 m l9 rc wi rc l9 â wi s$ í ur vt t u2 l9 u2 n1 487 े bs s1 dw े vu s1 rd u2 u2 iy p0 uf vj jb í 519 gr z2 p9 vu vu ل ku l9 487 uf े j0 s7 wi rf ye rf du े"}
+{"technique": "error_based", "text": "* vi ec ez a3 du l9 zc 行 行 lw س y9 gx ap n3 ы wi hl j2 hl 本 rf l9 eh 487 g_ _8 oo y9 rc ab e. q. ल í hy sr wj s$ í gx jb iz u2 â gx cu eh kx i3 gr ud g_ dw 181 e0 vj yt _q 487 eh w2 j0 oo pn p0 p0 d9 jb bo ea b8 s7 jb 3333333333333333333333333333333333333333333333333333333333333333333333333333333 eh yn iz y9 rj nt s1 218 h1 é j0 c0 jb í rj eh vu gu c6 uk yn í rj gr du ez z2 ea aw vj j0 490 487 yt uk 487 gx rc du f g1 gx rf rj _q gx 487 hl vj fl â"}

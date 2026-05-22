@@ -1,0 +1,88 @@
+{
+  "phase": 6,
+  "run_mode": "limited",
+  "created_at_unix": 1779431910.8442588,
+  "elapsed_sec": 0.7357370853424072,
+  "cache_dir": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 6\\cache\\smoke_token_shards",
+  "text_col": "payload_delex_v5",
+  "cond_col": "technique_primary",
+  "max_len": 128,
+  "shard_rows": 512,
+  "vocab": {
+    "train_rows_for_vocab": 2048,
+    "raw_token_types": 85,
+    "vocab_size": 76,
+    "min_freq": 3,
+    "max_vocab": 64000,
+    "technique_counts": {
+      "time_blind": 553,
+      "union_based": 806,
+      "boolean_blind": 348,
+      "error_based": 333,
+      "benign": 8
+    },
+    "techniques": [
+      "benign",
+      "boolean_blind",
+      "time_blind",
+      "union_based",
+      "error_based",
+      "unknown"
+    ]
+  },
+  "techniques": [
+    "benign",
+    "boolean_blind",
+    "time_blind",
+    "union_based",
+    "error_based",
+    "unknown"
+  ],
+  "splits": {
+    "train": {
+      "source": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\gold.parquet",
+      "rows": 2048,
+      "shards": [
+        {
+          "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 6\\cache\\smoke_token_shards\\train\\shard_00000.pt",
+          "rows": 512
+        },
+        {
+          "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 6\\cache\\smoke_token_shards\\train\\shard_00001.pt",
+          "rows": 512
+        },
+        {
+          "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 6\\cache\\smoke_token_shards\\train\\shard_00002.pt",
+          "rows": 512
+        },
+        {
+          "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 6\\cache\\smoke_token_shards\\train\\shard_00003.pt",
+          "rows": 512
+        }
+      ],
+      "shard_count": 4
+    },
+    "dev": {
+      "source": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\verified_dev.parquet",
+      "rows": 512,
+      "shards": [
+        {
+          "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 6\\cache\\smoke_token_shards\\dev\\shard_00000.pt",
+          "rows": 512
+        }
+      ],
+      "shard_count": 1
+    },
+    "test": {
+      "source": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\verified_test.parquet",
+      "rows": 512,
+      "shards": [
+        {
+          "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 6\\cache\\smoke_token_shards\\test\\shard_00000.pt",
+          "rows": 512
+        }
+      ],
+      "shard_count": 1
+    }
+  }
+}

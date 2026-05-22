@@ -1,0 +1,23 @@
+{
+  "seed": 42,
+  "batch_size": 32,
+  "grad_accum": 4,
+  "max_len": 128,
+  "embed_dim": 128,
+  "hidden_dim": 256,
+  "min_freq": 3,
+  "max_vocab": 64000,
+  "lr": 0.001,
+  "epochs": 3,
+  "max_steps": null,
+  "eval_every": 500,
+  "save_every": 500,
+  "log_every": 25,
+  "eval_max_batches": 500,
+  "clip_grad": 1.0,
+  "mixed_precision": true,
+  "sample_count": 120,
+  "sample_temperature": 1.0,
+  "sample_top_k": 50,
+  "sample_top_p": 0.95
+}
