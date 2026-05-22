@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-05-22",
+  "branch": "Guiding_VAE_GAN",
+  "style_source": "Guiding/Mục lục",
+  "file_count": 11,
+  "files": [
+    "00_Tong_Quan_Kien_Truc_VAE_GAN.md",
+    "01_Data_Reality_And_Label_Readiness.md",
+    "02_De_Risk_Pure_VAE_Slice.md",
+    "03_Decision_Gate.md",
+    "04_Full_Data_Foundation_Partial_Delex.md",
+    "05_Label_Condition_Calibration.md",
+    "06_Evaluator_And_Model_Separation.md",
+    "07_Pure_VAE_Warmup_And_MI.md",
+    "08_VAE_GAN_Adversarial_Challenger.md",
+    "09_Final_Evaluation_And_Delivery.md",
+    "10_Literature_And_Implementation_Roadmap.md"
+  ]
+}

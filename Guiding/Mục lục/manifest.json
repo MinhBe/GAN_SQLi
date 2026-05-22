@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-05-20T09:03:31.064140",
+  "updated_at": "2026-05-22",
+  "file_count": 11,
+  "files": [
+    "00_Tong_Quan_Kien_Truc_V5.md",
+    "01_Data_Reality_Check.md",
+    "02_De_Risk_Vertical_Slice.md",
+    "03_Decision_Gate.md",
+    "04_Full_Data_Foundation.md",
+    "05_Full_Label_System.md",
+    "06_Evaluator_and_Model_Separation.md",
+    "07_Main_MLE_First_Generator.md",
+    "08_Gumbel_SeqGAN_Challenger.md",
+    "09_Final_Evaluation_and_Delivery.md",
+    "10_Ke_Hoach_Doc_Paper_Va_Trien_Khai_Tiep.md"
+  ]
+}

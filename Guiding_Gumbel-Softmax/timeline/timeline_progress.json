@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-05-22",
+  "updated_at": "2026-05-22",
+  "project_root": "C:/Users/Admin/Documents/GAN_SQLi",
+  "owner": "user",
+  "current_recommendation": "Implement only the Gumbel-Softmax Action-Surgery branch in this timeline; keep MLE/D-as-scorer as the safety baseline.",
+  "status_definitions": {
+    "not_started": "Task has not started.",
+    "in_progress": "Task is actively being worked on.",
+    "blocked": "Task is blocked by missing data, labels, papers, code, compute, or decision.",
+    "completed": "Task completed and has evidence artifacts.",
+    "failed": "Task ran but failed a registered gate.",
+    "skipped": "Task intentionally skipped with a recorded reason."
+  },
+  "overall_progress": {
+    "status": "not_started",
+    "progress_percent": 0,
+    "active_branch": "gumbel_action_surgery",
+    "active_phase_id": "G01",
+    "last_completed_phase_id": "T00",
+    "next_action": "Start G01 slot/action audit; when work begins, set overall_progress.status and G01.status to in_progress."
+  },
+  "timeline_files": {
+    "implementation_guide": "timeline/01_Huong_Dan_Trien_Khai.md",
+    "progress_json": "timeline/timeline_progress.json"
+  },
+  "planning_artifacts": [
+    {
+      "id": "P01",
+      "title": "Gumbel modular plan",
+      "status": "completed",
+      "path": "Guiding_Gumbel-Softmax/Mục lục/manifest.json"
+    },
+    {
+      "id": "P02",
+      "title": "Implementation timeline folder",
+      "status": "completed",
+      "path": "timeline"
+    },
+    {
+      "id": "P03",
+      "title": "Gumbel-only implementation guide cleanup",
+      "status": "completed",
+      "path": "Guiding_Gumbel-Softmax/timeline/01_Huong_Dan_Trien_Khai.md",
+      "notes": "Removed out-of-scope branch references and verified the guide remains scoped to Gumbel-Softmax Action-Surgery."
+    }
+  ],
+  "branches": {
+    "gumbel_action_surgery": {
+      "priority": 1,
+      "branch_status": "not_started",
+      "rationale": "Lower implementation risk, practical action taxonomy path, D-as-scorer safety deliverable.",
+      "source_plan_dir": "Guiding_Gumbel-Softmax/Mục lục",
+      "phases": [
+        {
+          "id": "G01",
+          "title": "Slot/Action Audit",
+          "status": "not_started",
+          "progress_percent": 0,
+          "depends_on": [],
+          "planned_outputs": [
+            "reports/gumbel/01_slot_action_audit.md",
+            "data/gumbel/audit/action_taxonomy.json",
+            "data/gumbel/audit/g0_decision.json"
+          ],
+          "gate": {
+            "name": "G0 slot/action readiness",
+            "expected_results": [
+              "S1_MASKED_SLOT",
+              "S2_TAMPER_ACTION",
+              "STOP"
+            ],
+            "current_result": null
+          },
+          "evidence_artifacts": [],
+          "notes": "Do not train GAN before this gate passes."
+        },
+        {
+          "id": "G02",
+          "title": "De-risk Action-Surgery Slice",
+          "status": "not_started",
+          "progress_percent": 0,
+          "depends_on": [
+            "G01"
+          ],
+          "planned_outputs": [
+            "data/gumbel/slice/action_surgery_train.parquet",
+            "eval/gumbel/slice/baseline_comparison.json",
+            "reports/gumbel/02_de_risk_action_surgery_slice.md"
+          ],
+          "gate": {
+            "name": "Slice viability",
+            "current_result": null
+          },
+          "evidence_artifacts": [],
+          "notes": "Run anchor-only and D-as-scorer before pilot GAN."
+        },
+        {
+          "id": "G03",
+          "title": "Pre-registered Decision Gate",
+          "status": "not_started",
+          "progress_percent": 0,
+          "depends_on": [
+            "G02"
+          ],
+          "planned_outputs": [
+            "eval/gumbel/phase03/decision.json",
+            "eval/gumbel/phase03/statistical_summary.json",
+            "reports/gumbel/03_decision_gate_report.md"
+          ],
+          "gate": {
+            "name": "Scale/no-scale decision",
+            "expected_results": [
+              "GUMBEL_ACTION_PASS",
+              "D_SCORER_MAIN",
+              "MLE_MAIN",
+              "INCONCLUSIVE"
+            ],
+            "current_result": null
+          },
+          "evidence_artifacts": [],
+          "notes": "Minimum 3 seeds; target 5 seeds and >=5k samples per seed."
+        },
+        {
+          "id": "G04",
+          "title": "Full Data Foundation + Action Taxonomy",
+          "status": "not_started",
+          "progress_percent": 0,
+          "depends_on": [
+            "G03"
+          ],
+          "planned_outputs": [
+            "data/gumbel/full/action_foundation.parquet",
+            "data/gumbel/full/action_splits.json",
+            "reports/gumbel/04_full_data_foundation_action_taxonomy.md"
+          ],
+          "gate": {
+            "name": "Full action data readiness",
+            "current_result": null
+          },
+          "evidence_artifacts": [],
+          "notes": "Must preserve cluster leakage = 0."
+        },
+        {
+          "id": "G05",
+          "title": "Label & Condition System",
+          "status": "not_started",
+          "progress_percent": 0,
+          "depends_on": [
+            "G04"
+          ],
+          "planned_outputs": [
+            "data/gumbel/full/condition_table.parquet",
+            "reports/gumbel/05_label_condition_system.md"
+          ],
+          "gate": {
+            "name": "Condition readiness",
+            "current_result": null
+          },
+          "evidence_artifacts": [],
+          "notes": "Do not use unknown as a real engine class."
+        },
+        {
+          "id": "G06",
+          "title": "Evaluator & Model Separation",
+          "status": "not_started",
+          "progress_percent": 0,
+          "depends_on": [
+            "G04",
+            "G05"
+          ],
+          "planned_outputs": [
+            "eval/gumbel/evaluator_config.json",
+            "reports/gumbel/06_evaluator_model_separation.md"
+          ],
+          "gate": {
+            "name": "Evaluator frozen",
+            "current_result": null
+          },
+          "evidence_artifacts": [],
+          "notes": "Composite score cannot compensate for failed sub-metric floors."
+        },
+        {
+          "id": "G07",
+          "title": "MLE Anchor + D-as-scorer",
+          "status": "not_started",
+          "progress_percent": 0,
+          "depends_on": [
+            "G06"
+          ],
+          "planned_outputs": [
+            "models/gumbel/d_scorer/paired_d_scorer.pt",
+            "eval/gumbel/d_scorer_frontier.json",
+            "reports/gumbel/07_mle_anchor_and_d_scorer.md"
+          ],
+          "gate": {
+            "name": "D-scorer utility",
+            "current_result": null
+          },
+          "evidence_artifacts": [],
+          "notes": "This is an independent positive deliverable if it improves candidate reranking."
+        },
+        {
+          "id": "G08",
+          "title": "Gumbel Action-Surgery GAN",
+          "status": "not_started",
+          "progress_percent": 0,
+          "depends_on": [
+            "G07"
+          ],
+          "planned_outputs": [
+            "models/gumbel/action_gan/seed_*/best.pt",
+            "eval/gumbel/action_gan_comparison.json",
+            "reports/gumbel/08_gumbel_action_surgery_gan.md"
+          ],
+          "gate": {
+            "name": "Adversarial gain over anchor-only",
+            "current_result": null
+          },
+          "evidence_artifacts": [],
+          "notes": "No full-sequence GAN, no WGAN-GP, no REINFORCE/MC rollout."
+        },
+        {
+          "id": "G09",
+          "title": "Final Evaluation & Delivery",
+          "status": "not_started",
+          "progress_percent": 0,
+          "depends_on": [
+            "G08"
+          ],
+          "planned_outputs": [
+            "eval/gumbel/final/frontier.json",
+            "eval/gumbel/final/statistical_summary.json",
+            "reports/gumbel/09_final_evaluation_and_delivery.md"
+          ],
+          "gate": {
+            "name": "Final architecture decision",
+            "expected_results": [
+              "MLE_MAIN",
+              "D_SCORER_MAIN",
+              "GUMBEL_ACTION_PASS",
+              "INCONCLUSIVE"
+            ],
+            "current_result": null
+          },
+          "evidence_artifacts": [],
+          "notes": "Tie-break goes to the simpler baseline."
+        }
+      ]
+    }
+  },
+  "reporting": {
+    "cadence": "Update after each completed or blocked phase.",
+    "minimum_update_fields": [
+      "updated_at",
+      "overall_progress.status",
+      "overall_progress.progress_percent",
+      "overall_progress.active_phase_id",
+      "phase.status",
+      "phase.progress_percent",
+      "phase.evidence_artifacts",
+      "phase.gate.current_result"
+    ],
+    "last_report": {
+      "date": "2026-05-22",
+      "status": "completed",
+      "summary": "Implementation guide corrected and verified as Gumbel-only; all G01-G09 implementation phases remain not_started until G01 audit artifacts exist.",
+      "evidence_artifacts": [
+        "Guiding_Gumbel-Softmax/timeline/01_Huong_Dan_Trien_Khai.md"
+      ],
+      "next_action": "Start G01 slot/action audit."
+    }
+  }
+}
