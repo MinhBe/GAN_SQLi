@@ -1,0 +1,12 @@
+{
+  "stage": "done",
+  "rows_done": 1000,
+  "rows_total": 1000,
+  "percent": 100.0,
+  "elapsed_seconds": 0.8168284893035889,
+  "rows_per_second": 1224.2472111282252,
+  "updated_at_epoch": 1779389994.8986416,
+  "exact_unique": 1000,
+  "near_dup_clusters": 910,
+  "templates": 679
+}

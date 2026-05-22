@@ -1,0 +1,557 @@
+{
+  "42": {
+    "best_val_loss": 0.8675705350813319,
+    "frontier": {
+      "t0.7_k10_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.48092369477911645,
+        "self_bleu3": 0.038722943567519916,
+        "token_entropy": 6.1967093871015795,
+        "syntax_validity_rate": 0.6957831325301205,
+        "temperature": 0.7,
+        "top_k": 10,
+        "top_p": 0.9
+      },
+      "t0.7_k10_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.5060240963855421,
+        "self_bleu3": 0.047476583699761175,
+        "token_entropy": 6.429304141809439,
+        "syntax_validity_rate": 0.7028112449799196,
+        "temperature": 0.7,
+        "top_k": 10,
+        "top_p": 0.95
+      },
+      "t0.7_k20_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.5060240963855421,
+        "self_bleu3": 0.04689879755785243,
+        "token_entropy": 6.235263979422301,
+        "syntax_validity_rate": 0.7048192771084337,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.9
+      },
+      "t0.7_k20_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.5210843373493976,
+        "self_bleu3": 0.04542934154769713,
+        "token_entropy": 6.314045049758883,
+        "syntax_validity_rate": 0.6957831325301205,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "t0.7_k50_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.4939759036144578,
+        "self_bleu3": 0.049248642994654444,
+        "token_entropy": 6.327134011842347,
+        "syntax_validity_rate": 0.6987951807228916,
+        "temperature": 0.7,
+        "top_k": 50,
+        "top_p": 0.9
+      },
+      "t0.7_k50_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.5240963855421686,
+        "self_bleu3": 0.04227143909490139,
+        "token_entropy": 6.431469132567958,
+        "syntax_validity_rate": 0.7068273092369478,
+        "temperature": 0.7,
+        "top_k": 50,
+        "top_p": 0.95
+      },
+      "t1.0_k10_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.6234939759036144,
+        "self_bleu3": 0.03429659050285728,
+        "token_entropy": 6.6907890242389625,
+        "syntax_validity_rate": 0.6947791164658634,
+        "temperature": 1.0,
+        "top_k": 10,
+        "top_p": 0.9
+      },
+      "t1.0_k10_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.6736947791164659,
+        "self_bleu3": 0.027603921989263192,
+        "token_entropy": 6.79379625643917,
+        "syntax_validity_rate": 0.6977911646586346,
+        "temperature": 1.0,
+        "top_k": 10,
+        "top_p": 0.95
+      },
+      "t1.0_k20_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.6576305220883534,
+        "self_bleu3": 0.018189293529953503,
+        "token_entropy": 6.631650841184794,
+        "syntax_validity_rate": 0.6897590361445783,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.9
+      },
+      "t1.0_k20_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.6827309236947792,
+        "self_bleu3": 0.03471302498365528,
+        "token_entropy": 6.898233360153179,
+        "syntax_validity_rate": 0.6997991967871486,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "t1.0_k50_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.6857429718875502,
+        "self_bleu3": 0.027458872869541944,
+        "token_entropy": 6.816887977599366,
+        "syntax_validity_rate": 0.6917670682730924,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 0.9
+      },
+      "t1.0_k50_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.6927710843373494,
+        "self_bleu3": 0.01322702210373768,
+        "token_entropy": 6.959206587522209,
+        "syntax_validity_rate": 0.6937751004016064,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 0.95
+      },
+      "t1.2_k10_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.7128514056224899,
+        "self_bleu3": 0.01824134593803908,
+        "token_entropy": 6.914251040186704,
+        "syntax_validity_rate": 0.6877510040160643,
+        "temperature": 1.2,
+        "top_k": 10,
+        "top_p": 0.9
+      },
+      "t1.2_k10_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.7359437751004017,
+        "self_bleu3": 0.023852789538306062,
+        "token_entropy": 6.947001467614806,
+        "syntax_validity_rate": 0.6957831325301205,
+        "temperature": 1.2,
+        "top_k": 10,
+        "top_p": 0.95
+      },
+      "t1.2_k20_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.7469879518072289,
+        "self_bleu3": 0.019131595153200516,
+        "token_entropy": 7.084448373231864,
+        "syntax_validity_rate": 0.7008032128514057,
+        "temperature": 1.2,
+        "top_k": 20,
+        "top_p": 0.9
+      },
+      "t1.2_k20_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.7730923694779116,
+        "self_bleu3": 0.01394584288703272,
+        "token_entropy": 7.127397173237895,
+        "syntax_validity_rate": 0.6977911646586346,
+        "temperature": 1.2,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "t1.2_k50_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.7459839357429718,
+        "self_bleu3": 0.020977995563166665,
+        "token_entropy": 6.989465161816764,
+        "syntax_validity_rate": 0.6967871485943775,
+        "temperature": 1.2,
+        "top_k": 50,
+        "top_p": 0.9
+      },
+      "t1.2_k50_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.7931726907630522,
+        "self_bleu3": 0.015166945290640057,
+        "token_entropy": 7.190678734232787,
+        "syntax_validity_rate": 0.6977911646586346,
+        "temperature": 1.2,
+        "top_k": 50,
+        "top_p": 0.95
+      }
+    }
+  },
+  "123": {
+    "best_val_loss": 0.8719030667523868,
+    "frontier": {
+      "t0.7_k10_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.4738955823293173,
+        "self_bleu3": 0.05367693469801402,
+        "token_entropy": 5.869016874916388,
+        "syntax_validity_rate": 0.6897590361445783,
+        "temperature": 0.7,
+        "top_k": 10,
+        "top_p": 0.9
+      },
+      "t0.7_k10_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.5130522088353414,
+        "self_bleu3": 0.04931710244954102,
+        "token_entropy": 6.008464423890913,
+        "syntax_validity_rate": 0.6937751004016064,
+        "temperature": 0.7,
+        "top_k": 10,
+        "top_p": 0.95
+      },
+      "t0.7_k20_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.49096385542168675,
+        "self_bleu3": 0.03790044073421337,
+        "token_entropy": 5.927061395859377,
+        "syntax_validity_rate": 0.6857429718875502,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.9
+      },
+      "t0.7_k20_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.5491967871485943,
+        "self_bleu3": 0.0487465032966177,
+        "token_entropy": 6.13066882155581,
+        "syntax_validity_rate": 0.6937751004016064,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "t0.7_k50_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.49497991967871485,
+        "self_bleu3": 0.05727472856000436,
+        "token_entropy": 5.879115356845216,
+        "syntax_validity_rate": 0.679718875502008,
+        "temperature": 0.7,
+        "top_k": 50,
+        "top_p": 0.9
+      },
+      "t0.7_k50_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.5341365461847389,
+        "self_bleu3": 0.032642161138671105,
+        "token_entropy": 6.048846392161826,
+        "syntax_validity_rate": 0.6977911646586346,
+        "temperature": 0.7,
+        "top_k": 50,
+        "top_p": 0.95
+      },
+      "t1.0_k10_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.6214859437751004,
+        "self_bleu3": 0.019699909421334025,
+        "token_entropy": 6.469728833167013,
+        "syntax_validity_rate": 0.6977911646586346,
+        "temperature": 1.0,
+        "top_k": 10,
+        "top_p": 0.9
+      },
+      "t1.0_k10_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.6997991967871486,
+        "self_bleu3": 0.02794864773331183,
+        "token_entropy": 6.474506631854148,
+        "syntax_validity_rate": 0.6897590361445783,
+        "temperature": 1.0,
+        "top_k": 10,
+        "top_p": 0.95
+      },
+      "t1.0_k20_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.6385542168674698,
+        "self_bleu3": 0.025677986890981493,
+        "token_entropy": 6.717381533438165,
+        "syntax_validity_rate": 0.7058232931726908,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.9
+      },
+      "t1.0_k20_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.7279116465863453,
+        "self_bleu3": 0.019963279136254154,
+        "token_entropy": 6.652439704856492,
+        "syntax_validity_rate": 0.6997991967871486,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "t1.0_k50_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.6746987951807228,
+        "self_bleu3": 0.025969762291039027,
+        "token_entropy": 6.504908876336772,
+        "syntax_validity_rate": 0.6746987951807228,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 0.9
+      },
+      "t1.0_k50_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.7429718875502008,
+        "self_bleu3": 0.03024386343229017,
+        "token_entropy": 6.690285894473275,
+        "syntax_validity_rate": 0.714859437751004,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 0.95
+      },
+      "t1.2_k10_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.7088353413654619,
+        "self_bleu3": 0.019186380347993488,
+        "token_entropy": 6.767259936880333,
+        "syntax_validity_rate": 0.6867469879518072,
+        "temperature": 1.2,
+        "top_k": 10,
+        "top_p": 0.9
+      },
+      "t1.2_k10_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.748995983935743,
+        "self_bleu3": 0.021862188160352878,
+        "token_entropy": 6.985692140455069,
+        "syntax_validity_rate": 0.7088353413654619,
+        "temperature": 1.2,
+        "top_k": 10,
+        "top_p": 0.95
+      },
+      "t1.2_k20_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.7459839357429718,
+        "self_bleu3": 0.022458184643694805,
+        "token_entropy": 6.945016724261256,
+        "syntax_validity_rate": 0.7028112449799196,
+        "temperature": 1.2,
+        "top_k": 20,
+        "top_p": 0.9
+      },
+      "t1.2_k20_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.7801204819277109,
+        "self_bleu3": 0.01870767939210554,
+        "token_entropy": 7.136433843265519,
+        "syntax_validity_rate": 0.7068273092369478,
+        "temperature": 1.2,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "t1.2_k50_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.7710843373493976,
+        "self_bleu3": 0.01579337684906547,
+        "token_entropy": 7.072767040540852,
+        "syntax_validity_rate": 0.7108433734939759,
+        "temperature": 1.2,
+        "top_k": 50,
+        "top_p": 0.9
+      },
+      "t1.2_k50_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.8032128514056225,
+        "self_bleu3": 0.014428984512669623,
+        "token_entropy": 7.107747191832538,
+        "syntax_validity_rate": 0.7098393574297188,
+        "temperature": 1.2,
+        "top_k": 50,
+        "top_p": 0.95
+      }
+    }
+  },
+  "456": {
+    "best_val_loss": 0.865962914756087,
+    "frontier": {
+      "t0.7_k10_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.5140562248995983,
+        "self_bleu3": 0.04877810423042617,
+        "token_entropy": 6.282392453297221,
+        "syntax_validity_rate": 0.7228915662650602,
+        "temperature": 0.7,
+        "top_k": 10,
+        "top_p": 0.9
+      },
+      "t0.7_k10_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.49497991967871485,
+        "self_bleu3": 0.05400407901935608,
+        "token_entropy": 6.120590951362191,
+        "syntax_validity_rate": 0.6927710843373494,
+        "temperature": 0.7,
+        "top_k": 10,
+        "top_p": 0.95
+      },
+      "t0.7_k20_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.5190763052208835,
+        "self_bleu3": 0.054306480555199835,
+        "token_entropy": 6.150282567679973,
+        "syntax_validity_rate": 0.7128514056224899,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.9
+      },
+      "t0.7_k20_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.5271084337349398,
+        "self_bleu3": 0.035170277398117254,
+        "token_entropy": 6.362510773812744,
+        "syntax_validity_rate": 0.6997991967871486,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "t0.7_k50_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.49497991967871485,
+        "self_bleu3": 0.04005693830761344,
+        "token_entropy": 6.22732351586854,
+        "syntax_validity_rate": 0.7238955823293173,
+        "temperature": 0.7,
+        "top_k": 50,
+        "top_p": 0.9
+      },
+      "t0.7_k50_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.5341365461847389,
+        "self_bleu3": 0.049190960283275936,
+        "token_entropy": 6.321632608323249,
+        "syntax_validity_rate": 0.713855421686747,
+        "temperature": 0.7,
+        "top_k": 50,
+        "top_p": 0.95
+      },
+      "t1.0_k10_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.5903614457831325,
+        "self_bleu3": 0.02775286610119145,
+        "token_entropy": 6.556748005659005,
+        "syntax_validity_rate": 0.6907630522088354,
+        "temperature": 1.0,
+        "top_k": 10,
+        "top_p": 0.9
+      },
+      "t1.0_k10_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.6877510040160643,
+        "self_bleu3": 0.02458060326307487,
+        "token_entropy": 6.491504382483961,
+        "syntax_validity_rate": 0.6857429718875502,
+        "temperature": 1.0,
+        "top_k": 10,
+        "top_p": 0.95
+      },
+      "t1.0_k20_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.643574297188755,
+        "self_bleu3": 0.029293930550918595,
+        "token_entropy": 6.600752030929572,
+        "syntax_validity_rate": 0.6897590361445783,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.9
+      },
+      "t1.0_k20_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.6977911646586346,
+        "self_bleu3": 0.023109376622854217,
+        "token_entropy": 6.887673984449359,
+        "syntax_validity_rate": 0.7068273092369478,
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "t1.0_k50_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.6626506024096386,
+        "self_bleu3": 0.03171711805073225,
+        "token_entropy": 6.786669202694369,
+        "syntax_validity_rate": 0.7038152610441767,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 0.9
+      },
+      "t1.0_k50_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.7158634538152611,
+        "self_bleu3": 0.03309885379664143,
+        "token_entropy": 6.869731542446905,
+        "syntax_validity_rate": 0.7078313253012049,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 0.95
+      },
+      "t1.2_k10_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.6957831325301205,
+        "self_bleu3": 0.03607584807387894,
+        "token_entropy": 6.683076114542554,
+        "syntax_validity_rate": 0.6867469879518072,
+        "temperature": 1.2,
+        "top_k": 10,
+        "top_p": 0.9
+      },
+      "t1.2_k10_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.7540160642570282,
+        "self_bleu3": 0.02642896016941417,
+        "token_entropy": 6.938100986586638,
+        "syntax_validity_rate": 0.7048192771084337,
+        "temperature": 1.2,
+        "top_k": 10,
+        "top_p": 0.95
+      },
+      "t1.2_k20_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.7259036144578314,
+        "self_bleu3": 0.01554639996261298,
+        "token_entropy": 7.049279847310325,
+        "syntax_validity_rate": 0.7058232931726908,
+        "temperature": 1.2,
+        "top_k": 20,
+        "top_p": 0.9
+      },
+      "t1.2_k20_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.7911646586345381,
+        "self_bleu3": 0.015035112160962897,
+        "token_entropy": 7.148198912882933,
+        "syntax_validity_rate": 0.7118473895582329,
+        "temperature": 1.2,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "t1.2_k50_p0.9": {
+        "n_total": 996,
+        "unique_ratio": 0.7620481927710844,
+        "self_bleu3": 0.012445255997627793,
+        "token_entropy": 7.176502738846037,
+        "syntax_validity_rate": 0.7018072289156626,
+        "temperature": 1.2,
+        "top_k": 50,
+        "top_p": 0.9
+      },
+      "t1.2_k50_p0.95": {
+        "n_total": 996,
+        "unique_ratio": 0.8012048192771084,
+        "self_bleu3": 0.013285699236983129,
+        "token_entropy": 7.132467523055213,
+        "syntax_validity_rate": 0.7118473895582329,
+        "temperature": 1.2,
+        "top_k": 50,
+        "top_p": 0.95
+      }
+    }
+  }
+}

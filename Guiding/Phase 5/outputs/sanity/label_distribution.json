@@ -1,0 +1,87 @@
+{
+  "artifact_rows": {
+    "bronze": 3928,
+    "gold": 4821,
+    "phase05_labeled": 10000,
+    "review_queue": 5360,
+    "silver": 1251,
+    "verified_dev": 504,
+    "verified_test": 468
+  },
+  "counters": {
+    "confidence_band": {
+      "bronze": 3317,
+      "gold": 5030,
+      "silver": 1653
+    },
+    "db_engine": {
+      "mssql": 239,
+      "mysql": 2063,
+      "oracle": 833,
+      "postgres": 219,
+      "sqlite": 17,
+      "unknown": 6629
+    },
+    "db_family": {
+      "mssql": 239,
+      "mysql_like": 2063,
+      "oracle": 833,
+      "postgresql": 219,
+      "sqlite_or_generic": 17,
+      "unknown": 6629
+    },
+    "is_sqli": {
+      "0": 3184,
+      "1": 6816
+    },
+    "label_source": {
+      "benign_classifier": 650,
+      "tier1_exact": 4509,
+      "tier2_structural": 2028,
+      "tier3_contextual": 279,
+      "tier4_ai_needed": 2534
+    },
+    "lane": {
+      "D": 5,
+      "M": 2,
+      "N": 9988,
+      "X": 5
+    },
+    "needs_ai": {
+      "False": 7187,
+      "True": 2813
+    },
+    "quality_band": {
+      "bronze": 3928,
+      "gold": 4821,
+      "silver": 1251
+    },
+    "split": {
+      "test": 939,
+      "train": 7863,
+      "val": 998,
+      "verified_candidate": 200
+    },
+    "syntax_validity": {
+      "encoded_payload": 1826,
+      "malformed": 711,
+      "non_sql": 77,
+      "unknown": 13,
+      "valid_fragment": 6540,
+      "valid_query": 833
+    },
+    "technique_primary": {
+      "benign": 650,
+      "boolean_blind": 1853,
+      "error_based": 1104,
+      "time_blind": 1758,
+      "union_based": 2101,
+      "unknown": 2534
+    }
+  },
+  "label_mode": "detector_only",
+  "needs_ai_rows": 2813,
+  "review_queue_rows": 5360,
+  "rows_processed": 10000,
+  "run_mode": "limit=10000"
+}

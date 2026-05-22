@@ -1,0 +1,112 @@
+[
+  {
+    "file": "Ahmadi_2018_Gap_Weighted_Kernel.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Ahmadi_2018_Gap_Weighted_Kernel.pdf",
+    "output": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_OCR_Rerun_2026_05_21\\Ahmadi_2018_Gap_Weighted_Kernel.md",
+    "mode": "fast_native_pymupdf",
+    "pages": 0,
+    "output_chars": 0,
+    "timestamp": "2026-05-21T16:43:37.176731",
+    "error_type": "exception",
+    "message": "Failed to open file 'C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\Total_PDF\\\\Ahmadi_2018_Gap_Weighted_Kernel.pdf'."
+  },
+  {
+    "file": "Attack_Model_2012_Penetration_SQLi.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Attack_Model_2012_Penetration_SQLi.pdf",
+    "output": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_OCR_Rerun_2026_05_21\\Attack_Model_2012_Penetration_SQLi.md",
+    "mode": "fast_native_pymupdf",
+    "pages": 0,
+    "output_chars": 0,
+    "timestamp": "2026-05-21T16:43:37.558605",
+    "error_type": "exception",
+    "message": "Failed to open file 'C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\Total_PDF\\\\Attack_Model_2012_Penetration_SQLi.pdf'."
+  },
+  {
+    "file": "Deep_Neural_Network_SQLi_2022.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Deep_Neural_Network_SQLi_2022.pdf",
+    "output": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_OCR_Rerun_2026_05_21\\Deep_Neural_Network_SQLi_2022.md",
+    "mode": "fast_native_pymupdf",
+    "pages": 1,
+    "output_chars": 41,
+    "timestamp": "2026-05-21T16:43:38.116841",
+    "error_type": "output_too_short",
+    "message": "Only 41 chars for 1 pages"
+  },
+  {
+    "file": "GSQLi_2025_GAN_SQLi_WAF.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\GSQLi_2025_GAN_SQLi_WAF.pdf",
+    "output": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_OCR_Rerun_2026_05_21\\GSQLi_2025_GAN_SQLi_WAF.md",
+    "mode": "fast_native_pymupdf",
+    "pages": 0,
+    "output_chars": 0,
+    "timestamp": "2026-05-21T16:43:38.530787",
+    "error_type": "exception",
+    "message": "Failed to open file 'C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\Total_PDF\\\\GSQLi_2025_GAN_SQLi_WAF.pdf'."
+  },
+  {
+    "file": "Justin_Clarke_2012_SQLi_Book_Preview.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Justin_Clarke_2012_SQLi_Book_Preview.pdf",
+    "output": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_OCR_Rerun_2026_05_21\\Justin_Clarke_2012_SQLi_Book_Preview.md",
+    "mode": "fast_native_pymupdf",
+    "pages": 0,
+    "output_chars": 0,
+    "timestamp": "2026-05-21T16:43:39.454142",
+    "error_type": "exception",
+    "message": "Failed to open file 'C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\Total_PDF\\\\Justin_Clarke_2012_SQLi_Book_Preview.pdf'."
+  },
+  {
+    "file": "LSTM_on_AST_SQLi_2021.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\LSTM_on_AST_SQLi_2021.pdf",
+    "output": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_OCR_Rerun_2026_05_21\\LSTM_on_AST_SQLi_2021.md",
+    "mode": "fast_native_pymupdf",
+    "pages": 0,
+    "output_chars": 0,
+    "timestamp": "2026-05-21T16:43:40.001344",
+    "error_type": "exception",
+    "message": "Failed to open file 'C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\Total_PDF\\\\LSTM_on_AST_SQLi_2021.pdf'."
+  },
+  {
+    "file": "Muduli_2023_AE_Net_SQLi.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Muduli_2023_AE_Net_SQLi.pdf",
+    "output": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_OCR_Rerun_2026_05_21\\Muduli_2023_AE_Net_SQLi.md",
+    "mode": "fast_native_pymupdf",
+    "pages": 0,
+    "output_chars": 0,
+    "timestamp": "2026-05-21T16:43:40.502438",
+    "error_type": "exception",
+    "message": "Failed to open file 'C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\Total_PDF\\\\Muduli_2023_AE_Net_SQLi.pdf'."
+  },
+  {
+    "file": "Phuong_2024_GAN_IDS_Evasion.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Phuong_2024_GAN_IDS_Evasion.pdf",
+    "output": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_OCR_Rerun_2026_05_21\\Phuong_2024_GAN_IDS_Evasion.md",
+    "mode": "fast_native_pymupdf",
+    "pages": 6,
+    "output_chars": 31,
+    "timestamp": "2026-05-21T16:43:41.160307",
+    "error_type": "output_too_short",
+    "message": "Only 31 chars for 6 pages"
+  },
+  {
+    "file": "Xu_2023_IE_GAN_SQLi.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Xu_2023_IE_GAN_SQLi.pdf",
+    "output": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_OCR_Rerun_2026_05_21\\Xu_2023_IE_GAN_SQLi.md",
+    "mode": "fast_native_pymupdf",
+    "pages": 0,
+    "output_chars": 0,
+    "timestamp": "2026-05-21T16:43:42.582520",
+    "error_type": "exception",
+    "message": "Failed to open file 'C:\\\\Users\\\\Admin\\\\Documents\\\\GAN_SQLi\\\\Asset\\\\Total_PDF\\\\Xu_2023_IE_GAN_SQLi.pdf'."
+  },
+  {
+    "file": "Deep_Neural_Network_SQLi_2022.pdf",
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Total_PDF\\Deep_Neural_Network_SQLi_2022.pdf",
+    "mode": "max",
+    "pages": 1,
+    "output_chars": 41,
+    "error_type": "output_too_short",
+    "message": "Only 41 chars for 1 pages",
+    "timestamp": "2026-05-21T16:44:29.396562",
+    "dpi": 300
+  }
+]

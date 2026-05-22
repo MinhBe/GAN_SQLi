@@ -1,0 +1,16 @@
+{
+  "split_policy": "deterministic blake2b bucket over near_dup_cluster_id",
+  "cluster_counts": {
+    "test": 63,
+    "train": 735,
+    "val": 90,
+    "verified_candidate": 22
+  },
+  "row_counts": {
+    "test": 74,
+    "train": 804,
+    "val": 96,
+    "verified_candidate": 26
+  },
+  "cluster_leakage": 0
+}

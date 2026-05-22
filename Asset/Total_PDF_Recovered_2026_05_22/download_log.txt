@@ -1,0 +1,4 @@
+FAIL Deep_Neural_Network_SQLi_2022.pdf HTTP Error 403: Forbidden https://downloads.hindawi.com/journals/scn/2022/4836289.pdf
+FAIL Halfond_2006_Classification.pdf <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond> https://pdf4pro.com/file/115a54/fac_Alex.Orso_papers_halfond.viegas.orso.ISSSE06.pdf.pdf
+OK Attack_Model_2012_Penetration_SQLi.pdf 248334 https://arxiv.org/pdf/1207.1542
+FAIL GSQLi_2025_GAN_SQLi_WAF.pdf HTTP Error 403: Forbidden https://www.mdpi.com/1999-5903/17/1/8/pdf?download=1
