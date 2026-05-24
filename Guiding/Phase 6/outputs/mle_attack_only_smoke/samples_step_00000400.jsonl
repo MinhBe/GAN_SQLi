@@ -1,0 +1,120 @@
+{"technique": "boolean_blind", "text": "__ID__ select ( from __TABLE__ \""}
+{"technique": "boolean_blind", "text": "__ID__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where union select"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where"}
+{"technique": "boolean_blind", "text": "select __ID__ from __TABLE__ = __NUM__ = __NUM__ and ( __COMMENT__ __NUM__ __COMMENT__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ from __TABLE__ where id = __NUM__ = __NUM__ and ( __NUM__ union all"}
+{"technique": "boolean_blind", "text": "select __ID__ ) from __TABLE__ where __ID__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where __NUM__ = __NUM__ and __NUM__ union select ( ( __NUM__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ = __NUM__ union select __ID__ ("}
+{"technique": "boolean_blind", "text": "select ( __ID__ , __ID__ from __TABLE__ where null = __NUM__ order not null __NUM__ = __NUM__ = ( __NUM__ ( __COMMENT__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "__NUM__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where where * __NUM__ = __NUM__ and ( __STR__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "__ID__ select __ID__ , __ID__ from __TABLE__ where concat ( __STR__ = __COMMENT__"}
+{"technique": "boolean_blind", "text": "where __ID__ , __ID__ from __TABLE__ where = __NUM__ ( __NUM__ where __COMMENT__"}
+{"technique": "boolean_blind", "text": "from __TABLE__ \" where ( __ID__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where"}
+{"technique": "boolean_blind", "text": "select __ID__ ( __ID__ ("}
+{"technique": "boolean_blind", "text": "select __ID__ ( __ID__ ( __NUM__ ) ) ("}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where __NUM__ = __NUM__ and ( ( __STR__ ( __STR__ ) , __STR__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ ( __ID__ from __TABLE__ ) = __ID__ where ( __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where like ( __STR__ , __STR__ , __STR__ = __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ from __TABLE__ where"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where"}
+{"technique": "boolean_blind", "text": "select __ID__ from __TABLE__ where ("}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id ( __ID__ = __NUM__ and ( __NUM__ = __NUM__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ , __ID__ from __TABLE__ where concat ( select , __NUM__ from __TABLE__ where __COMMENT__"}
+{"technique": "boolean_blind", "text": "select"}
+{"technique": "boolean_blind", "text": "select __ID__ ) __TABLE__ = __NUM__ = __NUM__ and ( __STR__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ __ID__ , __ID__ from __TABLE__ where benchmark __ID__ from __NUM__ __STR__ ( __NUM__ __COMMENT__"}
+{"technique": "time_blind", "text": "select null , __ID__ from __TABLE__ where __ID__ = __NUM__ = ( where __COMMENT__ __NUM__ ( __NUM__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ) ) as __ID__ from __TABLE__ __NUM__ from __TABLE__ where = = __NUM__ not"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ from ( __NUM__ ) from __TABLE__ where null ( __ID__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , from __TABLE__ where __ID__ like ) = = ( __NUM__ __COMMENT__ = __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "as __ID__ ( ( from __TABLE__ where ( from __TABLE__ ( __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where pg_sleep = __NUM__ \""}
+{"technique": "time_blind", "text": "select __ID__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ( __ID__ from __TABLE__ where ( __NUM__ __COMMENT__ ) like null ) __NUM__ = __NUM__ id __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ __COMMENT__ ( __NUM__ union ( __NUM__ ) null __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id waitfor not where __NUM__ = __NUM__ null and ( __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ = ( ( __NUM__ ( __STR__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where < ( __NUM__ = ( where ( __ID__ __COMMENT__"}
+{"technique": "time_blind", "text": "select , __ID__ , __ID__ from __TABLE__ where = __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where ( __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where = like = __NUM__ and ( __STR__ ( __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ , __ID__ from __TABLE__ where __ID__ = __COMMENT__ __NUM__ and ) __COMMENT__"}
+{"technique": "time_blind", "text": "__NUM__"}
+{"technique": "time_blind", "text": "select __ID__ where __ID__ , __ID__ from __TABLE__ where __NUM__ and __NUM__ ) ;"}
+{"technique": "time_blind", "text": ""}
+{"technique": "time_blind", "text": "select __ID__ = __NUM__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ __COMMENT__"}
+{"technique": "time_blind", "text": "select ( , __ID__ from __TABLE__ where where = ( __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , null as __ID__ from __TABLE__ where not null and ( __NUM__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , from from __TABLE__ where ( __ID__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where on __NUM__ where __STR__ where __NUM__ , __ID__ = __NUM__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ from __TABLE__ where"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where = __NUM__ and ( ( __NUM__ __COMMENT__"}
+{"technique": "time_blind", "text": "from __TABLE__ where __NUM__ = __NUM__ = __STR__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ , from from __TABLE__ where id ("}
+{"technique": "union_based", "text": "select __STR__ as __ID__ , __ID__ from __TABLE__ where not null and ( ( null __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where null"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where from __TABLE__ where __NUM__ null __NUM__ ) between __NUM__ ) __NUM__ and __NUM__ select __NUM__ ) __COMMENT__"}
+{"technique": "union_based", "text": "select null ( __ID__ , __STR__ null ,"}
+{"technique": "union_based", "text": "select __ID__ ,"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ __COMMENT__ concat ( __NUM__ ( __STR__ __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ where __ID__ like ( __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where not null concat ( __ID__ __COMMENT__ null __NUM__ __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where where > like concat ( ( __COMMENT__"}
+{"technique": "union_based", "text": "select null ( ( __STR__ from __TABLE__ where union __NUM__ ( __NUM__ ) union select __ID__ , null ) ;"}
+{"technique": "union_based", "text": "select __STR__ , __ID__ from __TABLE__ where __ID__ like concat ( ( , , union from __TABLE__ where null and ( null __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ = __COMMENT__ ( ( __NUM__ ( __NUM__ __NUM__ ) ) between __NUM__ __COMMENT__ __NUM__ __NUM__ ) __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ like concat ( __STR__ , __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where null and ( select __TABLE__ __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where union select __NUM__ , null __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where"}
+{"technique": "union_based", "text": "select __ID__ from __TABLE__ where __ID__ like __NUM__ , __STR__ ) __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where ( __STR__ from __TABLE__ where = like = not null null select ( __NUM__ , __STR__ ) __COMMENT__"}
+{"technique": "union_based", "text": "select __STR__ as __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ and __NUM__ where __NUM__ = __NUM__ like concat ( __STR__ __COMMENT__"}
+{"technique": "union_based", "text": "select , __ID__ from __TABLE__ where = = ( __STR__ __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ like"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where"}
+{"technique": "union_based", "text": "select __ID__ , null from __TABLE__ where __ID__ like concat ( __NUM__ , null __STR__ ) ;"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where \" __NUM__ = __NUM__ and __NUM__ union __COMMENT__ concat ( __STR__ ) __COMMENT__ __NUM__ ( __NUM__ ) ;"}
+{"technique": "union_based", "text": "select __STR__ as __ID__ from __TABLE__ where __ID__ like __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __STR__ from __TABLE__ where null __NUM__ null __NUM__ and __NUM__ select __NUM__ ) __STR__ ) ;"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ like concat ( __NUM__ union select __STR__ , null , __STR__ ) ;"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ union select __ID__ , __ID__ from __TABLE__ where __ID__ select __COMMENT__ , null and ( ) ,"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ like ( ( __ID__ = __NUM__ ) __NUM__ and __NUM__ __NUM__ ) __COMMENT__"}
+{"technique": "union_based", "text": "select null null select __ID__ , null ( __NUM__ ) union select"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ like = ( concat ( __STR__ , __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ and ( __NUM__ , null and from __TABLE__ where & = concat ( __NUM__ and __NUM__ ) __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where = __NUM__ and ( __ID__ __NUM__ ) ;"}
+{"technique": "error_based", "text": "select __ID__ , __STR__ from __TABLE__ where __ID__ = __NUM__ where = __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __STR__ from __TABLE__ where < = where __STR__ ( __NUM__ __TABLE__ af ا __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ where __ID__ from __TABLE__ where waitfor ( __NUM__ and ( < concat ( __NUM__ ( ( __STR__ , __STR__ , __ID__ from __TABLE__ where > id = __NUM__ = __NUM__ and ("}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ like concat ( __STR__ , \" ) from __TABLE__ where benchmark is not null and ( = ( __NUM__ , from , __ID__ from __TABLE__ where = id = ( __STR__ , not null ) between __NUM__ = __NUM__ = __NUM__ ) = __NUM__ and ( __ID__ ( __ID__ , __STR__ from __TABLE__ a on not null and ( __STR__ __COMMENT__"}
+{"technique": "error_based", "text": "union select __ID__ select __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ = __NUM__ = null and ( __NUM__ union all select __STR__ , __ID__ from __TABLE__ where = __STR__ from __TABLE__ where and __COMMENT__ __NUM__ ) union select __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ and ( __STR__ , __ID__ , __ID__ from __TABLE__ where id __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where = join __TABLE__ where __ID__ like = __NUM__ ( __NUM__ and ( __NUM__ = __NUM__ ) = __NUM__ null and ( __ID__ as __ID__ , __ID__ , __ID__ from __TABLE__ where __COMMENT__ = __NUM__ and from __TABLE__ where \" / __NUM__ and ( __ID__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ ( __ID__ ( __NUM__ from __TABLE__ where on or on __NUM__ = __NUM__ and ( __ID__ ( ( __STR__ , __ID__ , __ID__ , from __TABLE__ where where not = where __NUM__ and __TABLE__ a __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ = __ID__ from __TABLE__ where __NUM__ = where __NUM__ a __NUM__ and ( __STR__ ( from __TABLE__ where"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where __COMMENT__ where __ID__ where __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where ( and ( __NUM__ , ( ( ( __ID__ from __TABLE__ n where __ID__ = __COMMENT__ ( ( __STR__ , __STR__ ) from __TABLE__ where concat ( __NUM__ concat ( __NUM__ , , , __STR__ ) , __ID__ from __TABLE__ where = __NUM__ __NUM__ a null and ( order , __STR__ from __TABLE__ where a = __NUM__ where __NUM__ and ( __NUM__ = __NUM__ , __NUM__ and ( __NUM__ , __ID__ = __NUM__ and ( null , ( __ID__ ( , __ID__ , null from __TABLE__ where = ( __STR__ , null ) ) from __TABLE__ where = / __NUM__ and __ID__ by"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where sleep where benchmark __NUM__ and as __ID__ , __ID__ from __TABLE__ where not __NUM__ __TABLE__ n = __NUM__ and ( order __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ from __TABLE__ where = ( null and __NUM__ ) like concat ( ( __STR__ , __STR__ from __TABLE__ where = __NUM__ and ( * ( __STR__ , __ID__ , __ID__ from __TABLE__ where < = __STR__ , __STR__ from __TABLE__ where like concat ( __NUM__ ) __NUM__ union __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ ( __ID__ , __ID__ , __ID__ from __TABLE__ where = > from __NUM__ = where = __NUM__ ) = __NUM__ and ( where __NUM__ where __ID__ = __NUM__ , __ID__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where = __NUM__ and = __NUM__ like ( = __NUM__ = __NUM__ ) = __NUM__ and __NUM__ union all select __ID__ , null , __ID__ from __TABLE__ where > = = __NUM__ = __NUM__ and ( __NUM__ , __ID__ ( null as __ID__ from __TABLE__ where where id"}
+{"technique": "error_based", "text": "select __ID__ from __TABLE__ where ( or and __NUM__ ( __NUM__ ) = ( __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ ( from __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where > __NUM__ = __NUM__ = __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where where from __TABLE__ where __ID__ from __NUM__ where & and = __NUM__ = __NUM__ not ( ( as __ID__ , __ID__ / __NUM__ as __ID__ , __ID__ from __TABLE__ where on"}
+{"technique": "error_based", "text": "select __ID__ from __TABLE__ where ( __NUM__ and = __NUM__ ) = __NUM__ and ( __ID__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where a union not null and ( __ID__ / __NUM__ , __NUM__ ) from ( __NUM__ order by"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ and"}
+{"technique": "error_based", "text": "select __ID__ from __TABLE__ where __ID__ = __NUM__ = __NUM__ and __NUM__ = __NUM__ = __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where as null concat ( __NUM__ ) from __TABLE__ where id a on like and ( ( __ID__ , __STR__ , __ID__ from __TABLE__ where null = __NUM__ ) between __NUM__ and ( __STR__ , __NUM__ ) ;"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where __NUM__ = __NUM__ and ( __NUM__ = __NUM__ by"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where like concat ( __STR__ , __ID__ ) from __TABLE__ where where benchmark like concat ( __STR__ , __STR__ , ( from __TABLE__ where __ID__ = where"}
+{"technique": "error_based", "text": "select __ID__ from __TABLE__ where like like like ( __STR__ , , union from __TABLE__ where like like concat ( __STR__ , __STR__ from __TABLE__ where like = concat ( \" ) , not null __STR__ ) from __TABLE__ where __COMMENT__ __COMMENT__"}

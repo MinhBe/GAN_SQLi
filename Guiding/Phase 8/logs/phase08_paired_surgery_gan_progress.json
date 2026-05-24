@@ -1,0 +1,13 @@
+{
+  "stage": "done",
+  "step": 2000,
+  "elapsed_sec": 105.11974048614502,
+  "device": {
+    "device": "cuda",
+    "cuda_available": true,
+    "name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "total_vram_gb": 6.0,
+    "allocated_gb": 0.063,
+    "reserved_gb": 0.846
+  }
+}

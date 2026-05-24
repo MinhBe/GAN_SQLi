@@ -1,0 +1,92 @@
+{
+  "samples": "Guiding\\Phase 8\\outputs\\paired_surgery_gan_constrained\\paired_surgery_gan_samples.jsonl",
+  "detector_results": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\detector_results\\paired_surgery_gan_constrained_detector_results.csv",
+  "threshold": 3.0,
+  "strict_threshold": 5.0,
+  "n_samples": 400,
+  "detected_rate": 0.89,
+  "bypass_rate": 0.11,
+  "strict_detected_rate": 0.6675,
+  "top_reasons": [
+    [
+      "placeholder_density",
+      316
+    ],
+    [
+      "unbalanced_delimiters",
+      311
+    ],
+    [
+      "comment_marker",
+      308
+    ],
+    [
+      "keyword_comment_combo",
+      260
+    ],
+    [
+      "union_select",
+      149
+    ],
+    [
+      "union_comment_combo",
+      147
+    ],
+    [
+      "keyword_density",
+      130
+    ],
+    [
+      "time_function",
+      105
+    ],
+    [
+      "boolean_condition",
+      75
+    ],
+    [
+      "suspicious_operator",
+      48
+    ],
+    [
+      "keyword_boolean_combo",
+      39
+    ],
+    [
+      "error_function",
+      29
+    ]
+  ],
+  "by_technique": {
+    "benign": {
+      "samples": 1,
+      "detected_rate": 0.0,
+      "bypass_rate": 1.0,
+      "strict_detected_rate": 0.0
+    },
+    "boolean_blind": {
+      "samples": 42,
+      "detected_rate": 0.9523809523809523,
+      "bypass_rate": 0.04761904761904767,
+      "strict_detected_rate": 0.2619047619047619
+    },
+    "error_based": {
+      "samples": 52,
+      "detected_rate": 0.7884615384615384,
+      "bypass_rate": 0.21153846153846156,
+      "strict_detected_rate": 0.5961538461538461
+    },
+    "time_blind": {
+      "samples": 132,
+      "detected_rate": 0.8106060606060606,
+      "bypass_rate": 0.18939393939393945,
+      "strict_detected_rate": 0.553030303030303
+    },
+    "union_based": {
+      "samples": 173,
+      "detected_rate": 0.9710982658959537,
+      "bypass_rate": 0.028901734104046284,
+      "strict_detected_rate": 0.8786127167630058
+    }
+  }
+}

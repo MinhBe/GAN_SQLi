@@ -66,7 +66,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--test-source", type=Path, default=DEFAULT_TEST)
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
     parser.add_argument("--report-dir", type=Path, default=DEFAULT_REPORT_DIR)
+    parser.add_argument("--report-name", default="06_token_shard_report.md")
     parser.add_argument("--log-dir", type=Path, default=DEFAULT_LOG_DIR)
+    parser.add_argument("--progress-name", default="phase06_tokenize_progress.json")
     parser.add_argument("--text-col", default="payload_delex_v5")
     parser.add_argument("--cond-col", default="technique_primary")
     parser.add_argument("--batch-size", type=int, default=50000)
@@ -77,6 +79,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit-train", type=int, default=None)
     parser.add_argument("--limit-dev", type=int, default=None)
     parser.add_argument("--limit-test", type=int, default=None)
+    parser.add_argument("--include-techniques", default="")
+    parser.add_argument("--exclude-techniques", default="")
     parser.add_argument("--allow-non-gold", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
     return parser.parse_args()
@@ -110,6 +114,11 @@ def as_text(value: Any) -> str:
     return str(value)
 
 
+def parse_technique_set(raw: str) -> set[str] | None:
+    values = {item.strip() for item in raw.split(",") if item.strip()}
+    return values or None
+
+
 def load_columns(path: Path, text_col: str, cond_col: str) -> list[str]:
     names = set(pq.ParquetFile(path).schema_arrow.names)
     required = [text_col, cond_col]
@@ -125,6 +134,8 @@ def clean_batch(
     text_col: str,
     cond_col: str,
     require_gold: bool,
+    include_techniques: set[str] | None,
+    exclude_techniques: set[str],
 ) -> pd.DataFrame:
     df = df.copy()
     df[text_col] = df[text_col].map(as_text)
@@ -134,6 +145,10 @@ def clean_batch(
         mask &= df["quality_band"].map(as_text).str.lower().eq("gold")
     if "needs_ai" in df.columns:
         mask &= ~df["needs_ai"].fillna(False).astype(bool)
+    if include_techniques is not None:
+        mask &= df[cond_col].isin(include_techniques)
+    if exclude_techniques:
+        mask &= ~df[cond_col].isin(exclude_techniques)
     return df.loc[mask].reset_index(drop=True)
 
 
@@ -144,12 +159,21 @@ def iter_clean_batches(
     batch_size: int,
     limit: int | None,
     require_gold: bool,
+    include_techniques: set[str] | None,
+    exclude_techniques: set[str],
 ):
     columns = load_columns(path, text_col, cond_col)
     rows_out = 0
     parquet = pq.ParquetFile(path)
     for batch in parquet.iter_batches(batch_size=batch_size, columns=columns):
-        df = clean_batch(batch.to_pandas(), text_col, cond_col, require_gold=require_gold)
+        df = clean_batch(
+            batch.to_pandas(),
+            text_col,
+            cond_col,
+            require_gold=require_gold,
+            include_techniques=include_techniques,
+            exclude_techniques=exclude_techniques,
+        )
         if df.empty:
             continue
         if limit is not None:
@@ -183,6 +207,8 @@ def build_vocab(args: argparse.Namespace, progress_file: Path) -> tuple[list[str
     rows = 0
     started = time.time()
     total_hint = args.limit_train or pq.ParquetFile(args.train_source).metadata.num_rows
+    include_techniques = parse_technique_set(args.include_techniques)
+    exclude_techniques = parse_technique_set(args.exclude_techniques) or set()
 
     print("Building vocab from gold train source")
     print(f"train_source={args.train_source}")
@@ -193,6 +219,8 @@ def build_vocab(args: argparse.Namespace, progress_file: Path) -> tuple[list[str
         args.batch_size,
         args.limit_train,
         require_gold=not args.allow_non_gold,
+        include_techniques=include_techniques,
+        exclude_techniques=exclude_techniques,
     ):
         rows += len(df)
         technique_counter.update(df[args.cond_col].tolist())
@@ -234,6 +262,8 @@ def build_vocab(args: argparse.Namespace, progress_file: Path) -> tuple[list[str
         "max_vocab": args.max_vocab,
         "technique_counts": dict(technique_counter),
         "techniques": techniques,
+        "include_techniques": sorted(include_techniques) if include_techniques is not None else None,
+        "exclude_techniques": sorted(exclude_techniques),
     }
     return vocab, techniques, stats
 
@@ -293,6 +323,8 @@ def write_split(
     input_buffer: list[list[int]] = []
     cond_buffer: list[int] = []
     row_buffer: list[int] = []
+    include_techniques = parse_technique_set(args.include_techniques)
+    exclude_techniques = parse_technique_set(args.exclude_techniques) or set()
 
     print(f"Writing {split_name} token shards from {source}")
     for df in iter_clean_batches(
@@ -302,6 +334,8 @@ def write_split(
         args.batch_size,
         limit,
         require_gold=not args.allow_non_gold,
+        include_techniques=include_techniques,
+        exclude_techniques=exclude_techniques,
     ):
         for rec in df.to_dict(orient="records"):
             row_id = int(rec.get("row_id", rows))
@@ -406,7 +440,7 @@ def main() -> None:
     args.log_dir = ensure_under_phase(args.log_dir)
     args.log_dir.mkdir(parents=True, exist_ok=True)
     args.report_dir.mkdir(parents=True, exist_ok=True)
-    progress_file = args.log_dir / "phase06_tokenize_progress.json"
+    progress_file = args.log_dir / args.progress_name
 
     started = time.time()
     reset_output_dir(args.cache_dir, args.overwrite)
@@ -462,7 +496,7 @@ def main() -> None:
         "splits": splits,
     }
     (args.cache_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    write_report(args.report_dir / "06_token_shard_report.md", manifest)
+    write_report(args.report_dir / args.report_name, manifest)
     write_progress(
         progress_file,
         {
@@ -478,7 +512,7 @@ def main() -> None:
     print("Phase 06 token shard preparation complete")
     print(f"elapsed={elapsed / 60:.1f}m")
     print(f"manifest={args.cache_dir / 'manifest.json'}")
-    print(f"report={args.report_dir / '06_token_shard_report.md'}")
+    print(f"report={args.report_dir / args.report_name}")
 
 
 if __name__ == "__main__":

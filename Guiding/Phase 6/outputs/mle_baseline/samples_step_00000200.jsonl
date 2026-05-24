@@ -1,0 +1,120 @@
+{"technique": "benign", "text": "exec ( __STR__ ad __STR__ ad __STR__"}
+{"technique": "benign", "text": "exec ( __STR__ ' id ! = __STR__ limit __NUM__ __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ ( ) , __ID__ ) ) ) or \" or __NUM__ ( select __ID__ , __ID__ ( ) from __TABLE__ where id < __NUM__ not ) union select __ID__ ( __STR__ ) = __STR__ ) __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ , __ID__ from __TABLE__ where id < __NUM__ and = __NUM__ and ( select __ID__ , __ID__ , __ID__ ( __NUM__ ) ) from __TABLE__ where __ID__ = __STR__ like ' __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ ( __ID__ ) from __TABLE__ where id < __NUM__ like or \" = __NUM__ , __NUM__ __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ like \" ) values ( __NUM__ = __NUM__ ) and __COMMENT__"}
+{"technique": "benign", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ __NUM__ and or __NUM__ not ) __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ not \" or \" select __ID__ ( __ID__ ) , user ( select __NUM__ , __ID__ ( __NUM__ ) from __TABLE__ where id = __NUM__ + __NUM__ __COMMENT__"}
+{"technique": "benign", "text": "update __TABLE__ set __ID__ = __STR__ where id > __NUM__ __NUM__ __NUM__ and ( select __ID__ , __ID__ ( __STR__ ) __NUM__ ) __COMMENT__"}
+{"technique": "benign", "text": "exec ( ' select * from __TABLE__ where id > __NUM__ not or sleep ( __NUM__ ) __COMMENT__"}
+{"technique": "benign", "text": "exec ( __STR__ __STR__ a __STR__ __NUM__"}
+{"technique": "benign", "text": "select __ID__ ( * ) from __TABLE__ where id < = __NUM__ or __NUM__ = __NUM__ and ( select * from __TABLE__ where __ID__ , __NUM__ ) = __NUM__ and ( select ( * ) from __TABLE__ where id < __NUM__ not ; __NUM__ __COMMENT__"}
+{"technique": "benign", "text": "select * from __TABLE__ where __ID__ = __STR__ not like ) or __NUM__ = __STR__ ) __COMMENT__"}
+{"technique": "benign", "text": "delete from __TABLE__ where id ! = __NUM__ __NUM__ not \" ; waitfor delay __STR__ __COMMENT__"}
+{"technique": "benign", "text": "exec ( ' select __ID__ ( * ) from __TABLE__ where id < = __NUM__ like \" or __STR__ __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ ( __ID__ ) from __TABLE__ where id < __NUM__ and \" and ( select * from ( select __ID__ ( __ID__ , __NUM__ , __ID__ ) ) values or __STR__ like __NUM__ __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ __NUM__ \" like union select __ID__ , __ID__ , __ID__ ( * ) ) = ' ) __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ ( * ) from __TABLE__ where id < = __NUM__ or __NUM__ = __NUM__ and ( select __ID__ ( * ) from ( select ( ) ) ) ) __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ ( * ) from __TABLE__ where id < __NUM__ and \" union select __NUM__ , __ID__ ( ) ) and ( select * from __TABLE__ where id < __NUM__ and \" ) = __STR__ and sleep ( __NUM__ )"}
+{"technique": "benign", "text": "select __ID__ , __ID__ from __TABLE__ where id > __NUM__ or __NUM__ , __NUM__ and ( __ID__ ( select * from __TABLE__ where __ID__ = __STR__ limit __NUM__ ) __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ ( __ID__ ) ) ) > __STR__ ) > __NUM__ __COMMENT__"}
+{"technique": "benign", "text": "select * from __TABLE__ where id = __NUM__ or \" or ( __NUM__ = __NUM__ ) __COMMENT__"}
+{"technique": "benign", "text": "select __ID__ ( * ) from __TABLE__ where id > = __NUM__ \" or waitfor ,"}
+{"technique": "benign", "text": "select * from __TABLE__ where id > __NUM__ like __STR__ = __NUM__"}
+{"technique": "boolean_blind", "text": "update __TABLE__ set __ID__ = __STR__ where id > __NUM__ or __NUM__ = __NUM__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id > __NUM__ or __NUM__ = __NUM__ and ( = __NUM__ and ( __ID__ ( x = __STR__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ as __NUM__ = __NUM__ or __NUM__ = __NUM__ and ( * from __TABLE__ where __ID__ = __STR__ ) > __NUM__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "update __TABLE__ set = __ID__ , __NUM__ = __NUM__ or __NUM__ = __NUM__ limit __NUM__ , __NUM__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "update __TABLE__ set __ID__ = __STR__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ ( __ID__ ) from __TABLE__ where id < = __NUM__ like \" or select __NUM__ , __NUM__ , __NUM__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "update __TABLE__ __ID__ id > = __NUM__ or \" or __NUM__ = __NUM__ and ( select __ID__ ( * ) from __TABLE__ where __ID__ ( __STR__ )"}
+{"technique": "boolean_blind", "text": "select __ID__ ( * ) from __TABLE__ where id > = __NUM__ __NUM__ like or __NUM__ = __NUM__ and ( select __ID__ ( * ) from __TABLE__ where __ID__ = __STR__ __ID__ __STR__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ ( __ID__ ) ) from __TABLE__ where id > __NUM__ or __NUM__ = __NUM__ and ( __NUM__ = x ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id > __NUM__ or __NUM__ = __NUM__ or __NUM__ = __NUM__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ or __NUM__ = __NUM__ and ( __NUM__ = __NUM__ ) and ( __STR__ ( __STR__ ) = __NUM__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "exec ( __STR__ __ID__ __STR__ __TIME__ __STR__"}
+{"technique": "boolean_blind", "text": "exec ( __STR__ __ID__ __STR__ p __STR__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ ( __STR__ __ID__ __ID__ ) from __TABLE__ where id = __NUM__ or __NUM__ = __NUM__ and __NUM__ = __NUM__ and __ID__ ( __STR__ , __NUM__ , __NUM__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "select * from __TABLE__ where id < = __NUM__ or __NUM__ = __NUM__ limit __NUM__ , __NUM__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "exec ( __STR__ __ID__ __STR__ __STR__ __ID__ __STR__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ and __NUM__ = __NUM__ and ( __NUM__ = __NUM__ ) ) > __NUM__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "exec ( __STR__ ) > ' __COMMENT__"}
+{"technique": "boolean_blind", "text": "select id , __ID__ from __TABLE__ where id < __NUM__ or __NUM__ = __NUM__ and ( __NUM__ = __NUM__ ) and ( select __ID__ , __ID__ ( __ID__ ) from __TABLE__ where __ID__ ( __STR__ __COMMENT__"}
+{"technique": "boolean_blind", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id > __NUM__ or \" or __NUM__ = __NUM__ and ( select * from __TABLE__ where __ID__ = __STR__ like __STR__ __NUM__ and ( __ID__ ( select __ID__ ( __STR__ , __NUM__ , __NUM__ ) ) > __NUM__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ or __NUM__ = __NUM__ and ( __NUM__ = __NUM__ ) and ( __ID__ = __STR__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "exec ( __STR__ __ID__ __STR__ ) = __STR__ ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id > __NUM__ or __NUM__ = __NUM__ and __STR__ ! = __STR__ and __STR__ = __NUM__ and __ID__ = ' ) __COMMENT__"}
+{"technique": "boolean_blind", "text": "update __TABLE__ set __ID__ = __STR__ where id > = __NUM__ or __NUM__ = __NUM__ and __NUM__ = __NUM__ ) and ( __ID__ ( select __ID__ ( select * from __TABLE__ where __ID__ = __STR__ ) = __STR__ and __ID__ ! , __NUM__ , __NUM__ ) = __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ from __TABLE__ where id < __NUM__ like & __ID__ ( select ( ( sleep ( ) ) ) __COMMENT__"}
+{"technique": "time_blind", "text": "exec ( ' select * from __TABLE__ where id ! = __NUM__ and waitfor delay __STR__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id > __NUM__ like \" or __NUM__ = __NUM__ and sleep ( __NUM__ ) ) __COMMENT__"}
+{"technique": "time_blind", "text": "select id , __ID__ from __TABLE__ where id > = __NUM__ not waitfor delay __STR__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ( __ID__ ) from __TABLE__ where id < __NUM__ and benchmark ( __NUM__ , __ID__ ( __NUM__ ) ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id = __NUM__ not \" or ; waitfor delay __STR__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id = __NUM__ \" and \" waitfor delay __STR__ __COMMENT__"}
+{"technique": "time_blind", "text": "delete from __TABLE__ where id < = __NUM__ or pg_sleep ( __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id > __NUM__ = __NUM__ pg_sleep ( __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "exec ( ' select __ID__ ( * ) from __TABLE__ where id ! = __NUM__ not \" )"}
+{"technique": "time_blind", "text": "delete from __TABLE__ where id < __NUM__ __STR__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ like ( select __ID__ ( __ID__ ) from __TABLE__ where __ID__ = __STR__ )"}
+{"technique": "time_blind", "text": "select id , __ID__ from __TABLE__ where id > = __NUM__ not ) + ; benchmark ( __ID__ , __ID__ ) from __TABLE__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ( __ID__ ) from __TABLE__ where id < = __NUM__ = benchmark ( __NUM__ , * __NUM__ ) from __TABLE__ where id < __NUM__ and __ID__ ( select * from __TABLE__ ) where id < __NUM__ like sleep ( __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ( __ID__ ) from __TABLE__ where id < = __NUM__ like by ( __NUM__ , __ID__ ( __NUM__ ) )"}
+{"technique": "time_blind", "text": "delete from __TABLE__ where id > __NUM__ \" or order ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ( * ) from __TABLE__ where id < __NUM__ not pg_sleep ( __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "exec ( __STR__ ' __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ( * ) from __TABLE__ where id ! = __NUM__ benchmark ( __NUM__ , sleep ( __NUM__ ) ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ , __ID__ from __TABLE__ where id < __NUM__ sleep ( __NUM__ ) ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ( __ID__ ) from __TABLE__ where id < = __NUM__ not waitfor delay __STR__ __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ( * ) from __TABLE__ where id > __NUM__ not \" or sleep ( __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "select __ID__ ( __ID__ ) from __TABLE__ where id = __NUM__ not __NUM__ and benchmark ( select ( * ( __STR__ ) ) = __NUM__ ) __COMMENT__"}
+{"technique": "time_blind", "text": "exec ( ' __ID__ ) __COMMENT__"}
+{"technique": "union_based", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id = __NUM__ or or __NUM__ = __NUM__ and \" union select null , __ID__ , null , null from __TABLE__ __COMMENT__"}
+{"technique": "union_based", "text": "exec ( ' select * from __TABLE__ where __ID__ = __STR__ union select __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ or __NUM__ = __NUM__ or and sleep ( select id , __ID__ , __ID__ from __TABLE__ where id = __NUM__ and @ select __NUM__ , __NUM__ , __NUM__ )"}
+{"technique": "union_based", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ like \" union select null , null , __ID__ from __TABLE__ where id > __NUM__ __COMMENT__"}
+{"technique": "union_based", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ not \" union select null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "select * from __TABLE__ where id > = __NUM__ \" union select @ @ @ @ __ID__ , __ID__ from __TABLE__ __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ ( __ID__ from __TABLE__ where id < __NUM__ or union select __NUM__ , null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ or __NUM__ = __NUM__ or \" union select null , __ID__ , __ID__ ( ) __COMMENT__"}
+{"technique": "union_based", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id < __NUM__ like union select null , null , null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "delete from __TABLE__ where id > __NUM__ not __NUM__ not \" union select __NUM__ , null , null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "exec ( ' select __ID__ ( __ID__ ) from __TABLE__ where id > = __NUM__ like union select null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "select id , __ID__ from __TABLE__ where id < __NUM__ like __NUM__ union select __ID__ , __ID__ ( __ID__ ) from __TABLE__ ) = __NUM__ __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where id > = __NUM__ and \" union select __NUM__ , null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "exec ( __STR__ __ID__ ' __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where id = __NUM__ or \" union select null , __ID__ , __ID__ from __TABLE__ where id > = __NUM__ or union select version , null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "delete from __TABLE__ where id = __NUM__ or __NUM__ = __NUM__ and __NUM__ = __NUM__ and union select null , __ID__ , __ID__ , null , null from __TABLE__ __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where id = __NUM__ or union select null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ not \" union select __ID__ , null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "exec ( __STR__ __ID__ ' __COMMENT__"}
+{"technique": "union_based", "text": "exec ( __STR__ __ID__ ) union select @ __ID__ , null , null from __TABLE__ __COMMENT__"}
+{"technique": "union_based", "text": "exec ( ' select __ID__ ( __ID__ ) from __TABLE__ where id < = __NUM__ like union select null , null , null , null __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where id > __NUM__ not \" union select null , __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ and __ID__ ( __ID__ ' __ID__ ( select * from __TABLE__ limit __NUM__ __COMMENT__"}
+{"technique": "union_based", "text": "exec ( __STR__ __ID__ ' __COMMENT__"}
+{"technique": "union_based", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ union select __ID__ , null from __TABLE__ where id > = __STR__ __COMMENT__"}
+{"technique": "union_based", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ and union select __NUM__ , __NUM__ , __NUM__ = \" __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ like or select __ID__ , __ID__ ( select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ \" union select __NUM__ , __NUM__ , __NUM__ , __NUM__ , __ID__ __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "exec ( __STR__ __ID__ ) __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ ( * ) from __TABLE__ where id < __NUM__ like __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "exec ( ' select ( sleep ( __ID__ ) from __TABLE__ where id > __NUM__ not \" & ( __NUM__ like = __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "exec ( ' select id , __ID__ from __TABLE__ where id ! = __NUM__ = \" and __STR__ __ID__ ! = __STR__ __COMMENT__"}
+{"technique": "error_based", "text": "insert : + : select id ( ) % from __TABLE__ where set __ID__ = __STR__ and sleep ( __NUM__ ) __COMMENT__"}
+{"technique": "error_based", "text": "__ID__ ( select __ID__ , __ID__ from __TABLE__ where id = __NUM__ and not waitfor delay __STR__ not __COMMENT__"}
+{"technique": "error_based", "text": "select * from __TABLE__ where id < = __NUM__ like \" union select null from __TABLE__ __COMMENT__"}
+{"technique": "error_based", "text": "__ID__ ( __NUM__ ) , null , \" ;"}
+{"technique": "error_based", "text": "select __ID__ ( sleep __TABLE__ __TIME__ where __ID__ = __NUM__ not benchmark ( select ( ) ( __NUM__ ) , null ) ,"}
+{"technique": "error_based", "text": "select * from __TABLE__ where id ! = __NUM__ not \" union select __ID__ ( __NUM__ , __ID__ ) from __TABLE__ where id = __NUM__ and \" select @ @ @ __ID__ , __ID__ from __TABLE__ where __ID__ = __NUM__ and & sleep ( ) , __NUM__ from __TABLE__ where id , __NUM__ = __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "select id , __NUM__ , __ID__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ not or __NUM__ ! = __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "select * from __TABLE__ where id < = __NUM__ __NUM__ limit not union select __ID__ ( * ) from __TABLE__ where __ID__ = __NUM__ __NUM__ __NUM__ \" ) ) and + \" union select , null , @ @ __ID__ ( __STR__ ) ) __COMMENT__"}
+{"technique": "error_based", "text": "exec ( select * from __TABLE__ where id ! = __NUM__ like select __ID__ , __ID__ ( __NUM__ ) , __NUM__ sleep ( __NUM__ ) and ( select ( sleep ( sleep ( * ) = __NUM__ ) )"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ not waitfor order waitfor = __STR__ and sleep ( select __ID__ , __ID__ , __NUM__ __ID__ from __TABLE__ where __ID__ = __STR__ limit __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ union select user ( __NUM__ , __NUM__ ,"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ or __NUM__ = __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "insert into __TABLE__ where id , version = __NUM__ , __NUM__ union select ( sleep ( __NUM__ ) __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where id ! = __NUM__ and \" union select __ID__ ( * ) from __TABLE__ where id > = __NUM__ or __NUM__ = __NUM__ __COMMENT__"}
+{"technique": "error_based", "text": "exec ( __STR__ p select * from __TABLE__ where id < __NUM__ not union select null , __ID__ from __TABLE__ where __ID__ = __STR__ d ' select * from __TABLE__ __COMMENT__"}
+{"technique": "error_based", "text": "exec ( ' select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ not like by sleep ( __NUM__ and ) ) __COMMENT__"}
+{"technique": "error_based", "text": "delete values = ' ) __ID__ __NUM__ or __NUM__ = __STR__ and __ID__ ) __COMMENT__"}
+{"technique": "error_based", "text": "select __ID__ , __ID__ from __TABLE__ where id < = __NUM__ not not \" not not by order __NUM__ __COMMENT__"}

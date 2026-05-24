@@ -16,6 +16,7 @@
   "eval_max_batches": 500,
   "clip_grad": 1.0,
   "mixed_precision": true,
+  "require_cuda": true,
   "sample_count": 120,
   "sample_temperature": 1.0,
   "sample_top_k": 50,

@@ -1,0 +1,60 @@
+{
+  "samples_path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 6\\outputs\\mle_attack_only_smoke\\samples_step_00001000.jsonl",
+  "reference_path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\gold.parquet",
+  "reference_templates": 77804,
+  "samples": 120,
+  "validity": {
+    "sql_signal_rate_debug_only": 1.0,
+    "balanced_delimiter_rate": 0.5333333333333333,
+    "sqlglot_parse_rate": 0.0,
+    "sqlglot_parse_applicable": 0,
+    "parse_reasons": {
+      "sqlglot_not_available": 120
+    }
+  },
+  "novelty": {
+    "train_template_duplicate_rate": 0.4666666666666667,
+    "batch_template_duplicate_rate": 0.016666666666666666,
+    "novel_vs_train_template_rate": 0.5333333333333333
+  },
+  "conditioning_debug": {
+    "technique_hint_rate": 0.625,
+    "technique_hint_applicable": 120
+  },
+  "evasion": {
+    "status": "missing_detector_results",
+    "detector_applicable": 0,
+    "detector_bypass_rate": 0.0,
+    "detector_detection_rate": 0.0
+  },
+  "by_technique": {
+    "boolean_blind": {
+      "samples": 30,
+      "sql_signal_rate_debug_only": 1.0,
+      "balanced_delimiter_rate": 0.7666666666666667,
+      "train_template_duplicate_rate": 0.6,
+      "technique_hint_rate": 0.8333333333333334
+    },
+    "error_based": {
+      "samples": 30,
+      "sql_signal_rate_debug_only": 1.0,
+      "balanced_delimiter_rate": 0.26666666666666666,
+      "train_template_duplicate_rate": 0.13333333333333333,
+      "technique_hint_rate": 0.0
+    },
+    "time_blind": {
+      "samples": 30,
+      "sql_signal_rate_debug_only": 1.0,
+      "balanced_delimiter_rate": 0.5333333333333333,
+      "train_template_duplicate_rate": 0.6333333333333333,
+      "technique_hint_rate": 0.7333333333333333
+    },
+    "union_based": {
+      "samples": 30,
+      "sql_signal_rate_debug_only": 1.0,
+      "balanced_delimiter_rate": 0.5666666666666667,
+      "train_template_duplicate_rate": 0.5,
+      "technique_hint_rate": 0.9333333333333333
+    }
+  }
+}

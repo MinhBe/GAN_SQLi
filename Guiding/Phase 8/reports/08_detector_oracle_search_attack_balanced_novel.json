@@ -1,0 +1,82 @@
+{
+  "samples": "Guiding\\Phase 8\\outputs\\oracle_aware_search\\attack_balanced_novel_oracle_search.jsonl",
+  "detector_results": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\detector_results\\oracle_search_attack_balanced_novel_detector_results.csv",
+  "threshold": 3.0,
+  "strict_threshold": 5.0,
+  "n_samples": 400,
+  "detected_rate": 0.8475,
+  "bypass_rate": 0.1525,
+  "strict_detected_rate": 0.4425,
+  "top_reasons": [
+    [
+      "placeholder_density",
+      353
+    ],
+    [
+      "comment_marker",
+      291
+    ],
+    [
+      "keyword_density",
+      276
+    ],
+    [
+      "keyword_comment_combo",
+      275
+    ],
+    [
+      "time_function",
+      124
+    ],
+    [
+      "error_function",
+      69
+    ],
+    [
+      "union_select",
+      67
+    ],
+    [
+      "union_comment_combo",
+      59
+    ],
+    [
+      "suspicious_operator",
+      42
+    ],
+    [
+      "boolean_condition",
+      15
+    ],
+    [
+      "keyword_boolean_combo",
+      15
+    ]
+  ],
+  "by_technique": {
+    "boolean_blind": {
+      "samples": 9,
+      "detected_rate": 1.0,
+      "bypass_rate": 0.0,
+      "strict_detected_rate": 1.0
+    },
+    "error_based": {
+      "samples": 36,
+      "detected_rate": 0.9722222222222222,
+      "bypass_rate": 0.02777777777777779,
+      "strict_detected_rate": 0.8611111111111112
+    },
+    "time_blind": {
+      "samples": 100,
+      "detected_rate": 0.95,
+      "bypass_rate": 0.050000000000000044,
+      "strict_detected_rate": 0.35
+    },
+    "union_based": {
+      "samples": 255,
+      "detected_rate": 0.7843137254901961,
+      "bypass_rate": 0.21568627450980393,
+      "strict_detected_rate": 0.4
+    }
+  }
+}

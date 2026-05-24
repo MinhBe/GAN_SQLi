@@ -1,0 +1,28 @@
+{
+  "mode": "eval_only",
+  "tag": "best_checkpoint",
+  "checkpoint": "Guiding\\Phase 6\\checkpoints\\mle_baseline\\best.pt",
+  "epoch": 0,
+  "global_step": 21,
+  "dev_loss": 3.3279668185121114,
+  "test_loss": 3.3558156811405175,
+  "sample_metrics": {
+    "n_total": 240,
+    "unique_ratio": 0.9666666666666667,
+    "syntax_validity_rate": 0.7208333333333333,
+    "token_entropy": 6.926142848923124,
+    "avg_len": 31.545833333333334,
+    "empty_count": 7
+  },
+  "sample_path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 6\\outputs\\mle_eval\\samples_eval_best_checkpoint.jsonl",
+  "eval_max_batches": 500,
+  "elapsed_sec": 27.517181158065796,
+  "device": {
+    "device": "cuda",
+    "cuda_available": true,
+    "name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "total_vram_gb": 6.0,
+    "allocated_gb": 0.022,
+    "reserved_gb": 0.1
+  }
+}

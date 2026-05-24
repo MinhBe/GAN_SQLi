@@ -1,0 +1,67 @@
+{
+  "samples_path": "Guiding\\Phase 8\\outputs\\paired_surgery_gan_constrained\\paired_surgery_gan_samples.jsonl",
+  "reference_path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\gold.parquet",
+  "reference_templates": 77804,
+  "samples": 400,
+  "validity": {
+    "sql_signal_rate_debug_only": 0.8975,
+    "balanced_delimiter_rate": 0.2225,
+    "sqlglot_parse_rate": 0.0,
+    "sqlglot_parse_applicable": 0,
+    "parse_reasons": {
+      "sqlglot_not_available": 400
+    }
+  },
+  "novelty": {
+    "train_template_duplicate_rate": 0.4825,
+    "batch_template_duplicate_rate": 0.35,
+    "novel_vs_train_template_rate": 0.5175000000000001
+  },
+  "conditioning_debug": {
+    "technique_hint_rate": 0.8320802005012531,
+    "technique_hint_applicable": 399
+  },
+  "evasion": {
+    "status": "provided",
+    "detector_applicable": 400,
+    "detector_bypass_rate": 0.0,
+    "detector_detection_rate": 1.0
+  },
+  "by_technique": {
+    "benign": {
+      "samples": 1,
+      "sql_signal_rate_debug_only": 0.0,
+      "balanced_delimiter_rate": 1.0,
+      "train_template_duplicate_rate": 1.0,
+      "technique_hint_rate": null
+    },
+    "boolean_blind": {
+      "samples": 42,
+      "sql_signal_rate_debug_only": 0.9761904761904762,
+      "balanced_delimiter_rate": 0.21428571428571427,
+      "train_template_duplicate_rate": 0.3333333333333333,
+      "technique_hint_rate": 0.9523809523809523
+    },
+    "error_based": {
+      "samples": 52,
+      "sql_signal_rate_debug_only": 0.7884615384615384,
+      "balanced_delimiter_rate": 0.3076923076923077,
+      "train_template_duplicate_rate": 0.4807692307692308,
+      "technique_hint_rate": 0.4230769230769231
+    },
+    "time_blind": {
+      "samples": 132,
+      "sql_signal_rate_debug_only": 0.803030303030303,
+      "balanced_delimiter_rate": 0.3181818181818182,
+      "train_template_duplicate_rate": 0.553030303030303,
+      "technique_hint_rate": 0.75
+    },
+    "union_based": {
+      "samples": 173,
+      "sql_signal_rate_debug_only": 0.9884393063583815,
+      "balanced_delimiter_rate": 0.12138728323699421,
+      "train_template_duplicate_rate": 0.4624277456647399,
+      "technique_hint_rate": 0.9884393063583815
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "samples_path": "Guiding\\Phase 8\\outputs\\classifier_oracle_rerank\\max_aggressive_candidates_top400_attack_balanced_novel.jsonl",
+  "reference_path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\gold.parquet",
+  "reference_templates": 77804,
+  "samples": 400,
+  "validity": {
+    "sql_signal_rate_debug_only": 0.92,
+    "balanced_delimiter_rate": 1.0,
+    "sqlglot_parse_rate": 0.0,
+    "sqlglot_parse_applicable": 0,
+    "parse_reasons": {
+      "sqlglot_not_available": 400
+    }
+  },
+  "novelty": {
+    "train_template_duplicate_rate": 0.0,
+    "batch_template_duplicate_rate": 0.0,
+    "novel_vs_train_template_rate": 1.0
+  },
+  "conditioning_debug": {
+    "technique_hint_rate": 0.4775,
+    "technique_hint_applicable": 400
+  },
+  "evasion": {
+    "status": "provided",
+    "detector_applicable": 400,
+    "detector_bypass_rate": 0.0025,
+    "detector_detection_rate": 0.9975
+  },
+  "by_technique": {
+    "boolean_blind": {
+      "samples": 52,
+      "sql_signal_rate_debug_only": 1.0,
+      "balanced_delimiter_rate": 1.0,
+      "train_template_duplicate_rate": 0.0,
+      "technique_hint_rate": 0.09615384615384616
+    },
+    "error_based": {
+      "samples": 138,
+      "sql_signal_rate_debug_only": 0.9202898550724637,
+      "balanced_delimiter_rate": 1.0,
+      "train_template_duplicate_rate": 0.0,
+      "technique_hint_rate": 0.07971014492753623
+    },
+    "time_blind": {
+      "samples": 84,
+      "sql_signal_rate_debug_only": 0.7738095238095238,
+      "balanced_delimiter_rate": 1.0,
+      "train_template_duplicate_rate": 0.0,
+      "technique_hint_rate": 0.6190476190476191
+    },
+    "union_based": {
+      "samples": 126,
+      "sql_signal_rate_debug_only": 0.9841269841269841,
+      "balanced_delimiter_rate": 1.0,
+      "train_template_duplicate_rate": 0.0,
+      "technique_hint_rate": 0.9761904761904762
+    }
+  }
+}

@@ -1,0 +1,732 @@
+{
+  "source": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\gold.parquet",
+  "technique": "error_based",
+  "rows": 6437,
+  "raw_signature_rate": 0.1337579617834395,
+  "delex_signature_rate": 0.05856765574025167,
+  "lost_all_signature_rate_given_raw_signature": 0.562137049941928,
+  "lost_any_signature_rate_given_raw_signature": 0.686411149825784,
+  "raw_signature_counts": {
+    "extractvalue": 264,
+    "exp": 114,
+    "floor_rand": 172,
+    "group_by_having": 168,
+    "updatexml": 115,
+    "convert": 198
+  },
+  "delex_signature_counts": {
+    "extractvalue": 141,
+    "group_by_having": 105,
+    "convert": 77,
+    "updatexml": 54
+  },
+  "lost_signature_counts": {
+    "exp": 114,
+    "floor_rand": 172,
+    "extractvalue": 123,
+    "updatexml": 61,
+    "group_by_having": 63,
+    "convert": 121
+  },
+  "sample_hash_audit": [
+    {
+      "raw_hash": "d0aafab19f0e3b306a35",
+      "delex_hash": "1d2ea3a4b2ddd2b7a85b",
+      "raw_len": 184,
+      "delex_len": 164,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "d4632833ac2ccd7ff91f",
+      "delex_hash": "1d2ea3a4b2ddd2b7a85b",
+      "raw_len": 184,
+      "delex_len": 164,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "6fe59a5e556ab0351f65",
+      "delex_hash": "1d2ea3a4b2ddd2b7a85b",
+      "raw_len": 184,
+      "delex_len": 164,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "ba783617672e5f81a507",
+      "delex_hash": "f9c80328bfdbd1c11e85",
+      "raw_len": 92,
+      "delex_len": 75,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "b85726d04c3ced9b26a7",
+      "delex_hash": "1d2ea3a4b2ddd2b7a85b",
+      "raw_len": 184,
+      "delex_len": 164,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "3ff153762af26c4fde9c",
+      "delex_hash": "91e48fbbdc5c58747e9d",
+      "raw_len": 141,
+      "delex_len": 187,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [
+        "extractvalue"
+      ],
+      "lost_signatures": [],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "ce33d6f0f6f71cebffea",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 161,
+      "delex_len": 37,
+      "raw_signatures": [
+        "exp"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "exp"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.85"
+    },
+    {
+      "raw_hash": "d2e826f248d3ab968c9f",
+      "delex_hash": "d0a2afe0304d027a0d39",
+      "raw_len": 268,
+      "delex_len": 27,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "f9d213bfe3edd899275a",
+      "delex_hash": "d0a2afe0304d027a0d39",
+      "raw_len": 152,
+      "delex_len": 27,
+      "raw_signatures": [
+        "exp"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "exp"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.85"
+    },
+    {
+      "raw_hash": "b0d758688b71618ed30d",
+      "delex_hash": "6fcb95451d0733913ead",
+      "raw_len": 257,
+      "delex_len": 325,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "9d3f2651d22f63635a49",
+      "delex_hash": "2d32ea0f0ed3a2d2a48d",
+      "raw_len": 138,
+      "delex_len": 166,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [
+        "extractvalue"
+      ],
+      "lost_signatures": [],
+      "db_family": "mysql_like",
+      "confidence_score": "0.97"
+    },
+    {
+      "raw_hash": "b0a98c9a4059873f6580",
+      "delex_hash": "ac182833ec3caf3d64dd",
+      "raw_len": 306,
+      "delex_len": 424,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "edcbbce177e97f170658",
+      "delex_hash": "6a2baf59087c74b914b6",
+      "raw_len": 164,
+      "delex_len": 225,
+      "raw_signatures": [
+        "floor_rand",
+        "group_by_having"
+      ],
+      "delex_signatures": [
+        "group_by_having"
+      ],
+      "lost_signatures": [
+        "floor_rand"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.88"
+    },
+    {
+      "raw_hash": "dedeea2a50fe361b77aa",
+      "delex_hash": "9ac3a76919dd51de9702",
+      "raw_len": 226,
+      "delex_len": 258,
+      "raw_signatures": [
+        "floor_rand",
+        "group_by_having"
+      ],
+      "delex_signatures": [
+        "group_by_having"
+      ],
+      "lost_signatures": [
+        "floor_rand"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.88"
+    },
+    {
+      "raw_hash": "3051442131671f1b0674",
+      "delex_hash": "4709042c3f4de8b7282b",
+      "raw_len": 151,
+      "delex_len": 183,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [
+        "extractvalue"
+      ],
+      "lost_signatures": [],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "50dca180ff41211ecdd3",
+      "delex_hash": "55080965c67728628c74",
+      "raw_len": 167,
+      "delex_len": 227,
+      "raw_signatures": [
+        "floor_rand",
+        "group_by_having"
+      ],
+      "delex_signatures": [
+        "group_by_having"
+      ],
+      "lost_signatures": [
+        "floor_rand"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.88"
+    },
+    {
+      "raw_hash": "828366180ebc955376fe",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 127,
+      "delex_len": 37,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "extractvalue"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "e78da94d65d0b0de5065",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 134,
+      "delex_len": 37,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "extractvalue"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "c79c6a49ee72e3e382e6",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 150,
+      "delex_len": 37,
+      "raw_signatures": [
+        "exp"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "exp"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.85"
+    },
+    {
+      "raw_hash": "5b9e6c18bfe367a26276",
+      "delex_hash": "e58c9eadadacc543c613",
+      "raw_len": 129,
+      "delex_len": 172,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [
+        "extractvalue"
+      ],
+      "lost_signatures": [],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "fc2541f69bacb3ade7d3",
+      "delex_hash": "21211e55190894ff88bc",
+      "raw_len": 165,
+      "delex_len": 225,
+      "raw_signatures": [
+        "floor_rand",
+        "group_by_having"
+      ],
+      "delex_signatures": [
+        "group_by_having"
+      ],
+      "lost_signatures": [
+        "floor_rand"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.88"
+    },
+    {
+      "raw_hash": "4fbb3efd76ca58c67cff",
+      "delex_hash": "3d6f72c2da53cc9338a5",
+      "raw_len": 338,
+      "delex_len": 474,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "a7989efd126f78912cb2",
+      "delex_hash": "c24c6293dce78ba977b4",
+      "raw_len": 276,
+      "delex_len": 362,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "fc171471ac319edec78d",
+      "delex_hash": "69ba88daccb3957d9ed7",
+      "raw_len": 329,
+      "delex_len": 461,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "2e3b6c5f0f1155feec90",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 289,
+      "delex_len": 37,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "a81540a362cb53738e93",
+      "delex_hash": "d0a2afe0304d027a0d39",
+      "raw_len": 133,
+      "delex_len": 27,
+      "raw_signatures": [
+        "updatexml"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "updatexml"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "79797f37da65ad34ab89",
+      "delex_hash": "d0a2afe0304d027a0d39",
+      "raw_len": 137,
+      "delex_len": 27,
+      "raw_signatures": [
+        "updatexml"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "updatexml"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "5350d88be6fd2a6d4e33",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 157,
+      "delex_len": 37,
+      "raw_signatures": [
+        "exp"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "exp"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.85"
+    },
+    {
+      "raw_hash": "301db25c5cd179206dc0",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 238,
+      "delex_len": 37,
+      "raw_signatures": [
+        "floor_rand",
+        "group_by_having"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "floor_rand",
+        "group_by_having"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.88"
+    },
+    {
+      "raw_hash": "c059222f5b84ac3313ec",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 136,
+      "delex_len": 37,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "extractvalue"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "f0549bf1cf238e59da4a",
+      "delex_hash": "6f387d35811f9f866b6a",
+      "raw_len": 116,
+      "delex_len": 148,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [
+        "extractvalue"
+      ],
+      "lost_signatures": [],
+      "db_family": "mysql_like",
+      "confidence_score": "0.97"
+    },
+    {
+      "raw_hash": "c9c8c13a770701fe0e88",
+      "delex_hash": "e98b69c5308e85ac3852",
+      "raw_len": 153,
+      "delex_len": 30,
+      "raw_signatures": [
+        "updatexml"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "updatexml"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "875bd59be8d741515065",
+      "delex_hash": "fee4b6680842c6c838c8",
+      "raw_len": 334,
+      "delex_len": 39,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "d1f7a7935eb41e5dd4d4",
+      "delex_hash": "47a093a50a8432cc9cc0",
+      "raw_len": 142,
+      "delex_len": 188,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [
+        "extractvalue"
+      ],
+      "lost_signatures": [],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "2bd195df8df4f27b9242",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 154,
+      "delex_len": 37,
+      "raw_signatures": [
+        "exp"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "exp"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.85"
+    },
+    {
+      "raw_hash": "1b584a964487596909fe",
+      "delex_hash": "73bd76c144b46d5e9b0a",
+      "raw_len": 162,
+      "delex_len": 221,
+      "raw_signatures": [
+        "floor_rand",
+        "group_by_having"
+      ],
+      "delex_signatures": [
+        "group_by_having"
+      ],
+      "lost_signatures": [
+        "floor_rand"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.88"
+    },
+    {
+      "raw_hash": "91c8694c894d286d5161",
+      "delex_hash": "04885cf9ae6f591194a2",
+      "raw_len": 285,
+      "delex_len": 29,
+      "raw_signatures": [
+        "convert"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "convert"
+      ],
+      "db_family": "mssql",
+      "confidence_score": "0.85"
+    },
+    {
+      "raw_hash": "b1cf84f8d8bbf18b2cd9",
+      "delex_hash": "46c61731d7fe783e23e0",
+      "raw_len": 291,
+      "delex_len": 373,
+      "raw_signatures": [
+        "convert"
+      ],
+      "delex_signatures": [
+        "convert"
+      ],
+      "lost_signatures": [],
+      "db_family": "mssql",
+      "confidence_score": "0.85"
+    },
+    {
+      "raw_hash": "3e43902f5d7bb733b714",
+      "delex_hash": "8c1fef9b3f72902fc2db",
+      "raw_len": 131,
+      "delex_len": 170,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [
+        "extractvalue"
+      ],
+      "lost_signatures": [],
+      "db_family": "mysql_like",
+      "confidence_score": "0.97"
+    },
+    {
+      "raw_hash": "32d6baa163970fc50193",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 131,
+      "delex_len": 37,
+      "raw_signatures": [
+        "updatexml"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "updatexml"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "2142372ab31505d6a507",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 274,
+      "delex_len": 37,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "62b32a9a0efb5de8cdca",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 136,
+      "delex_len": 37,
+      "raw_signatures": [
+        "extractvalue"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "extractvalue"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "760d94a9a7f6a1b3ebeb",
+      "delex_hash": "34fb2c9880aab9a410ff",
+      "raw_len": 162,
+      "delex_len": 223,
+      "raw_signatures": [
+        "floor_rand",
+        "group_by_having"
+      ],
+      "delex_signatures": [
+        "group_by_having"
+      ],
+      "lost_signatures": [
+        "floor_rand"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.88"
+    },
+    {
+      "raw_hash": "abbcfbe6f7db4eb74499",
+      "delex_hash": "070c819fb94b59fbb033",
+      "raw_len": 144,
+      "delex_len": 194,
+      "raw_signatures": [
+        "updatexml"
+      ],
+      "delex_signatures": [
+        "updatexml"
+      ],
+      "lost_signatures": [],
+      "db_family": "mysql_like",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "b27f0262597fc98f6f99",
+      "delex_hash": "2d9452b3231d177dd3f4",
+      "raw_len": 291,
+      "delex_len": 37,
+      "raw_signatures": [
+        "convert"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "convert"
+      ],
+      "db_family": "mssql",
+      "confidence_score": "0.85"
+    },
+    {
+      "raw_hash": "b2f10059a4da96fdd3c6",
+      "delex_hash": "261f0cb7d7abafeee350",
+      "raw_len": 123,
+      "delex_len": 151,
+      "raw_signatures": [
+        "exp"
+      ],
+      "delex_signatures": [],
+      "lost_signatures": [
+        "exp"
+      ],
+      "db_family": "mysql_like",
+      "confidence_score": "0.85"
+    },
+    {
+      "raw_hash": "1a72e0d12d985bc078d1",
+      "delex_hash": "d2db46819aadba67f4ea",
+      "raw_len": 281,
+      "delex_len": 355,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "4fb62f3f074a3347afe1",
+      "delex_hash": "2f474c42ae021771467d",
+      "raw_len": 276,
+      "delex_len": 362,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "e328a1a65b183254260d",
+      "delex_hash": "fe3df5a2450da6e822ff",
+      "raw_len": 341,
+      "delex_len": 475,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    },
+    {
+      "raw_hash": "eccc19c32e90194d40ca",
+      "delex_hash": "f9316ca6d3cce8775a6f",
+      "raw_len": 279,
+      "delex_len": 363,
+      "raw_signatures": [],
+      "delex_signatures": [],
+      "lost_signatures": [],
+      "db_family": "oracle",
+      "confidence_score": "0.95"
+    }
+  ],
+  "decision": "inspect_labels_or_expand_signature_schema"
+}

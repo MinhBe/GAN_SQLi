@@ -1,0 +1,158 @@
+{
+  "split_dir": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\delex_cluster_split_smoke",
+  "rows": {
+    "train": 50000,
+    "dev": 5000
+  },
+  "device": {
+    "device": "cuda",
+    "cuda_available": true,
+    "name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "total_vram_gb": 6.0,
+    "allocated_gb": 0.06,
+    "reserved_gb": 0.322
+  },
+  "config": {
+    "batch_size": 64,
+    "max_steps": 300,
+    "max_len": 96,
+    "embed_dim": 64,
+    "hidden_dim": 128,
+    "d_hidden_dim": 128,
+    "mixed_precision": true,
+    "adv_weight": 0.05,
+    "anchor_weight": 1.0,
+    "entropy_weight": 0.002,
+    "train_limit": 50000,
+    "dev_limit": 5000
+  },
+  "anchor_load": {
+    "loaded": true,
+    "path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\checkpoints\\surgery_baselines_smoke\\anchor_only_latest.pt",
+    "matched_keys": 11,
+    "total_keys": 11
+  },
+  "latest": {
+    "step": 300,
+    "loss_d": 1.3296453952789307,
+    "loss_g": 0.07787292450666428,
+    "loss_anchor": 0.03029816783964634,
+    "loss_adv": 0.9523555636405945,
+    "slot_entropy": 0.02150999940931797,
+    "d_acc": 0.578125,
+    "d_frozen": false,
+    "dev": {
+      "slot_loss": 0.06517310023745891,
+      "slot_accuracy": 0.9802980808493262,
+      "slots": 9796.0
+    },
+    "elapsed_sec": 11.647200584411621
+  },
+  "history": [
+    {
+      "step": 50,
+      "loss_d": 1.3828219175338745,
+      "loss_g": 0.06518253684043884,
+      "loss_anchor": 0.03040255606174469,
+      "loss_adv": 0.69709712266922,
+      "slot_entropy": 0.037437453866004944,
+      "d_acc": 0.5625,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.0714502354065415,
+        "slot_accuracy": 0.9745814618211515,
+        "slots": 9796.0
+      },
+      "elapsed_sec": 2.7455496788024902
+    },
+    {
+      "step": 100,
+      "loss_d": 1.366464614868164,
+      "loss_g": 0.06159438565373421,
+      "loss_anchor": 0.026431987062096596,
+      "loss_adv": 0.7052662372589111,
+      "slot_entropy": 0.05045635998249054,
+      "d_acc": 0.5625,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.08771294659621962,
+        "slot_accuracy": 0.9743772968558595,
+        "slots": 9796.0
+      },
+      "elapsed_sec": 4.5419251918792725
+    },
+    {
+      "step": 150,
+      "loss_d": 1.3692371845245361,
+      "loss_g": 0.06977100670337677,
+      "loss_anchor": 0.031798105686903,
+      "loss_adv": 0.7604026794433594,
+      "slot_entropy": 0.023618968203663826,
+      "d_acc": 0.546875,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.07358887342590856,
+        "slot_accuracy": 0.9778481012658228,
+        "slots": 9796.0
+      },
+      "elapsed_sec": 6.297719478607178
+    },
+    {
+      "step": 200,
+      "loss_d": 1.3475914001464844,
+      "loss_g": 0.061373624950647354,
+      "loss_anchor": 0.025167539715766907,
+      "loss_adv": 0.7255191802978516,
+      "slot_entropy": 0.03493811935186386,
+      "d_acc": 0.5703125,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.06744681615739903,
+        "slot_accuracy": 0.9793793385055125,
+        "slots": 9796.0
+      },
+      "elapsed_sec": 8.121252059936523
+    },
+    {
+      "step": 250,
+      "loss_d": 1.3383433818817139,
+      "loss_g": 0.06682612746953964,
+      "loss_anchor": 0.029630351811647415,
+      "loss_adv": 0.7450060844421387,
+      "slot_entropy": 0.02726374939084053,
+      "d_acc": 0.5703125,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.06578477210733734,
+        "slot_accuracy": 0.9792772560228665,
+        "slots": 9796.0
+      },
+      "elapsed_sec": 9.900670766830444
+    },
+    {
+      "step": 300,
+      "loss_d": 1.3296453952789307,
+      "loss_g": 0.07787292450666428,
+      "loss_anchor": 0.03029816783964634,
+      "loss_adv": 0.9523555636405945,
+      "slot_entropy": 0.02150999940931797,
+      "d_acc": 0.578125,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.06517310023745891,
+        "slot_accuracy": 0.9802980808493262,
+        "slots": 9796.0
+      },
+      "elapsed_sec": 11.647200584411621
+    }
+  ],
+  "checkpoint": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\checkpoints\\paired_surgery_gan_smoke\\paired_surgery_gan_latest.pt",
+  "samples_path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\paired_surgery_gan_smoke\\paired_surgery_gan_samples.jsonl",
+  "sample_summary": {
+    "samples": 120,
+    "unique_ratio": 0.8333333333333334,
+    "avg_tokens": 20.941666666666666,
+    "empty_count": 0
+  },
+  "elapsed_sec": 11.70876693725586
+}

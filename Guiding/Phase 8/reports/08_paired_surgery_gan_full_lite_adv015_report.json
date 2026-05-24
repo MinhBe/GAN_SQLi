@@ -1,0 +1,302 @@
+{
+  "split_dir": "Guiding\\Phase 8\\outputs\\delex_cluster_split",
+  "rows": {
+    "train": 300000,
+    "dev": 25000
+  },
+  "device": {
+    "device": "cuda",
+    "cuda_available": true,
+    "name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "total_vram_gb": 6.0,
+    "allocated_gb": 0.06,
+    "reserved_gb": 0.414
+  },
+  "config": {
+    "batch_size": 64,
+    "max_steps": 1500,
+    "max_len": 96,
+    "embed_dim": 64,
+    "hidden_dim": 128,
+    "d_hidden_dim": 128,
+    "mixed_precision": true,
+    "adv_weight": 0.15,
+    "anchor_weight": 1.0,
+    "entropy_weight": 0.01,
+    "train_limit": 300000,
+    "dev_limit": 25000
+  },
+  "anchor_load": {
+    "loaded": true,
+    "path": "Guiding\\Phase 8\\checkpoints\\surgery_baselines_full_lite\\anchor_only_latest.pt",
+    "matched_keys": 11,
+    "total_keys": 11
+  },
+  "latest": {
+    "step": 1500,
+    "loss_d": 1.3730777502059937,
+    "loss_g": 0.12822890281677246,
+    "loss_anchor": 0.019312797114253044,
+    "loss_adv": 0.7262994050979614,
+    "slot_entropy": 0.002880032639950514,
+    "d_acc": 0.5078125,
+    "d_frozen": false,
+    "dev": {
+      "slot_loss": 0.09633348173766776,
+      "slot_accuracy": 0.9861839991431938,
+      "slots": 9337.0
+    },
+    "elapsed_sec": 54.815672874450684
+  },
+  "history": [
+    {
+      "step": 100,
+      "loss_d": 1.3480596542358398,
+      "loss_g": 0.1276886910200119,
+      "loss_anchor": 0.02556687779724598,
+      "loss_adv": 0.6827939748764038,
+      "slot_entropy": 0.029728714376688004,
+      "d_acc": 0.5625,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.07116824528307147,
+        "slot_accuracy": 0.9826496733426154,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 4.492617607116699
+    },
+    {
+      "step": 200,
+      "loss_d": 1.3542969226837158,
+      "loss_g": 0.1285455971956253,
+      "loss_anchor": 0.02059653028845787,
+      "loss_adv": 0.7203916311264038,
+      "slot_entropy": 0.010969477705657482,
+      "d_acc": 0.5390625,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.0906492139103965,
+        "slot_accuracy": 0.9861839991431938,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 8.024856805801392
+    },
+    {
+      "step": 300,
+      "loss_d": 1.3614015579223633,
+      "loss_g": 0.12234531342983246,
+      "loss_anchor": 0.011051279492676258,
+      "loss_adv": 0.7429981827735901,
+      "slot_entropy": 0.015570422634482384,
+      "d_acc": 0.53125,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.07702986571267112,
+        "slot_accuracy": 0.9840419835064796,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 11.60323452949524
+    },
+    {
+      "step": 400,
+      "loss_d": 1.3615678548812866,
+      "loss_g": 0.13264596462249756,
+      "loss_anchor": 0.0144819850102067,
+      "loss_adv": 0.7883691787719727,
+      "slot_entropy": 0.00913997832685709,
+      "d_acc": 0.53125,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.09304879561243776,
+        "slot_accuracy": 0.9858626967976867,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 15.226680040359497
+    },
+    {
+      "step": 500,
+      "loss_d": 1.356508493423462,
+      "loss_g": 0.13918760418891907,
+      "loss_anchor": 0.020495090633630753,
+      "loss_adv": 0.7922537326812744,
+      "slot_entropy": 0.014556092210114002,
+      "d_acc": 0.546875,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.0930608165868028,
+        "slot_accuracy": 0.9857555960158509,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 18.857872486114502
+    },
+    {
+      "step": 600,
+      "loss_d": 1.3540804386138916,
+      "loss_g": 0.14758937060832977,
+      "loss_anchor": 0.03380008041858673,
+      "loss_adv": 0.7591840028762817,
+      "slot_entropy": 0.00883145909756422,
+      "d_acc": 0.5234375,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.08612431427313273,
+        "slot_accuracy": 0.9867195030523723,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 22.389052867889404
+    },
+    {
+      "step": 700,
+      "loss_d": 1.367619514465332,
+      "loss_g": 0.14028750360012054,
+      "loss_anchor": 0.013238179497420788,
+      "loss_adv": 0.8478189706802368,
+      "slot_entropy": 0.012352627702057362,
+      "d_acc": 0.5078125,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.0828774379205433,
+        "slot_accuracy": 0.9870408053978794,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 26.166030645370483
+    },
+    {
+      "step": 800,
+      "loss_d": 1.3407995700836182,
+      "loss_g": 0.18015055358409882,
+      "loss_anchor": 0.05579429864883423,
+      "loss_adv": 0.8293582797050476,
+      "slot_entropy": 0.0047490037977695465,
+      "d_acc": 0.5546875,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.08263022199718373,
+        "slot_accuracy": 0.9865053014887009,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 29.816691637039185
+    },
+    {
+      "step": 900,
+      "loss_d": 1.3712005615234375,
+      "loss_g": 0.12052541226148605,
+      "loss_anchor": 0.013078536838293076,
+      "loss_adv": 0.7166459560394287,
+      "slot_entropy": 0.005001746583729982,
+      "d_acc": 0.5234375,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.08148945232038772,
+        "slot_accuracy": 0.9870408053978794,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 33.440669775009155
+    },
+    {
+      "step": 1000,
+      "loss_d": 1.3766961097717285,
+      "loss_g": 0.14366787672042847,
+      "loss_anchor": 0.031432922929525375,
+      "loss_adv": 0.748420238494873,
+      "slot_entropy": 0.0028088800609111786,
+      "d_acc": 0.53125,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.10756911007816919,
+        "slot_accuracy": 0.9856484952340152,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 37.12607526779175
+    },
+    {
+      "step": 1100,
+      "loss_d": 1.3333154916763306,
+      "loss_g": 0.14809201657772064,
+      "loss_anchor": 0.03415472060441971,
+      "loss_adv": 0.7602754235267639,
+      "slot_entropy": 0.010402737185359001,
+      "d_acc": 0.546875,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.0886379671490038,
+        "slot_accuracy": 0.9865053014887009,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 40.62745952606201
+    },
+    {
+      "step": 1200,
+      "loss_d": 1.3484177589416504,
+      "loss_g": 0.15849079191684723,
+      "loss_anchor": 0.04452092573046684,
+      "loss_adv": 0.7602349519729614,
+      "slot_entropy": 0.006538924295455217,
+      "d_acc": 0.53125,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.09670832100447718,
+        "slot_accuracy": 0.9861839991431938,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 44.11640644073486
+    },
+    {
+      "step": 1300,
+      "loss_d": 1.3536571264266968,
+      "loss_g": 0.12903285026550293,
+      "loss_anchor": 0.01759306713938713,
+      "loss_adv": 0.7432689666748047,
+      "slot_entropy": 0.005056165158748627,
+      "d_acc": 0.546875,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.08815682304611525,
+        "slot_accuracy": 0.9859697975795223,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 47.65084719657898
+    },
+    {
+      "step": 1400,
+      "loss_d": 1.3613004684448242,
+      "loss_g": 0.12951789796352386,
+      "loss_anchor": 0.020624928176403046,
+      "loss_adv": 0.7264351844787598,
+      "slot_entropy": 0.007232253439724445,
+      "d_acc": 0.515625,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.10429433317246753,
+        "slot_accuracy": 0.9838277819428082,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 51.23661255836487
+    },
+    {
+      "step": 1500,
+      "loss_d": 1.3730777502059937,
+      "loss_g": 0.12822890281677246,
+      "loss_anchor": 0.019312797114253044,
+      "loss_adv": 0.7262994050979614,
+      "slot_entropy": 0.002880032639950514,
+      "d_acc": 0.5078125,
+      "d_frozen": false,
+      "dev": {
+        "slot_loss": 0.09633348173766776,
+        "slot_accuracy": 0.9861839991431938,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 54.815672874450684
+    }
+  ],
+  "checkpoint": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\checkpoints\\paired_surgery_gan_full_lite_adv015\\paired_surgery_gan_latest.pt",
+  "samples_path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\paired_surgery_gan_full_lite_adv015\\paired_surgery_gan_samples.jsonl",
+  "sample_summary": {
+    "samples": 400,
+    "unique_ratio": 0.5775,
+    "avg_tokens": 21.2425,
+    "empty_count": 0
+  },
+  "elapsed_sec": 54.99183964729309
+}

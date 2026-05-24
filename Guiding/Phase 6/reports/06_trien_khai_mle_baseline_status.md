@@ -126,3 +126,52 @@ Script sẽ tự resume từ `checkpoints/mle_baseline/latest.pt` và tiếp t�
 - `Guiding/Phase 6/logs/phase06_mle_progress.json`
 - `Guiding/Phase 6/reports/06_mle_baseline_report.md`
 
+## Cập Nhật Triển Khai Tiếp - Step 2000
+
+Sau báo cáo ban đầu, MLE baseline đã được resume và chạy tiếp trên full token shard.
+
+Vấn đề môi trường đã phát hiện:
+
+- Một lượt từ step 100 đến step 500 đã chạy bằng CPU vì Python đang dùng `torch==2.11.0+cpu`.
+- Driver và `nvidia-smi` vẫn nhận RTX 3050, lỗi nằm ở bản PyTorch.
+- Đã cài lại `torch==2.11.0+cu128` và `torchaudio==2.11.0+cu128`.
+- Đã hạ `fsspec` về `2026.2.0` để giữ tương thích với `datasets`.
+- `pip check` sau đó báo không còn dependency bị hỏng.
+
+Vá kỹ thuật đã thêm vào trainer:
+
+- `configs/mle_baseline.json` có `require_cuda: true`.
+- `phase06_02_mle_train.py` sẽ dừng nếu config yêu cầu CUDA nhưng PyTorch không thấy GPU.
+- Khi resume checkpoint từng lưu trên CPU, optimizer state được chuyển sang device hiện tại trước khi train tiếp.
+- Đã thêm `--eval-only` để đánh giá checkpoint mà không train thêm.
+
+Kết quả CUDA resume check:
+
+- Resume từ `latest.pt` step 500 sang step 501 trên CUDA thành công.
+- Mixed precision bật lại.
+- Val loss step 501: `3.907860`.
+- Unique ratio: `1.0000`.
+- Syntax validity rate: `1.0000`.
+
+Kết quả train tiếp trên GPU đến step 2000:
+
+| Step | Train Loss | Dev Loss | Unique Ratio | Syntax Rate |
+|---:|---:|---:|---:|---:|
+| 1250 | 0.39784 | 1.692620 | 0.9500 | 1.0000 |
+| 1500 | 0.39452 | 1.743557 | 0.9750 | 1.0000 |
+| 1750 | 0.39165 | 1.764099 | 0.9667 | 1.0000 |
+| 2000 | 0.38988 | 1.754761 | 0.9750 | 1.0000 |
+
+Eval-only nhất quán với 500 batch:
+
+| Checkpoint | Step | Dev Loss | Test Loss | Unique Ratio | Syntax Rate |
+|---|---:|---:|---:|---:|---:|
+| `latest.pt` | 2000 | 1.754761 | 1.809697 | 0.9167 | 1.0000 |
+| `best.pt` | 1250 | 1.692620 | 1.744542 | 0.9458 | 1.0000 |
+
+Quyết định hiện tại:
+
+- Dùng `checkpoints/mle_baseline/best.pt` tại step 1250 làm MLE baseline tốt nhất hiện tại.
+- Giữ `checkpoints/mle_baseline/latest.pt` tại step 2000 để resume nếu cần.
+- Không cần chạy full 3 epoch ngay vì dev loss đã chững/tăng nhẹ sau step 1250.
+- Gate MLE/Warmup đã đủ để chuẩn bị Gumbel-SeqGAN smoke run, nhưng adversarial full run vẫn cần bắt đầu bằng cấu hình rất nhỏ.

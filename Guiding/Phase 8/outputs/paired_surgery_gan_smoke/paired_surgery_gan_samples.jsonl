@@ -1,0 +1,120 @@
+{"sample_id": "h5_paired_0", "technique": "union_based", "text": "select * from __table__ where id = __num__ or @ @ __num__ = __num__ union select __num__ , version ( ) __comment__"}
+{"sample_id": "h5_paired_1", "technique": "union_based", "text": "select * from __table__ where id = __num__ % ! < @ union select __num__ , version ( ) __comment__"}
+{"sample_id": "h5_paired_2", "technique": "boolean_blind", "text": "' or __num__ = __num__"}
+{"sample_id": "h5_paired_3", "technique": "time_blind", "text": "__num__ ) or benchmark ( __num__ , __id__ ( __num__ ) ) __comment__"}
+{"sample_id": "h5_paired_4", "technique": "boolean_blind", "text": "select * from __table__ where id = __num__ % $ __num__ or __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_5", "technique": "boolean_blind", "text": "select * from __table__ where id = __num__ % ! < @ or __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_6", "technique": "union_based", "text": "select * from __table__ where id = __num__ or \\ + < $ union select __num__ , @ @ version __comment__"}
+{"sample_id": "h5_paired_7", "technique": "union_based", "text": "select * from __table__ where id = __num__ + ( \\ ) union select null , @ @ version __comment__"}
+{"sample_id": "h5_paired_8", "technique": "union_based", "text": "select * from __table__ where id = __num__ | | __num__ union select __num__ , __id__ from __table__ where __id__ = __str__ __comment__"}
+{"sample_id": "h5_paired_9", "technique": "union_based", "text": "select * from __table__ where id = __num__ union select __num__ < @ $ , version ( ) __comment__"}
+{"sample_id": "h5_paired_10", "technique": "time_blind", "text": "\" ) ) or benchmark ( __num__ , __id__ ( __num__ ) ) __comment__"}
+{"sample_id": "h5_paired_11", "technique": "boolean_blind", "text": "select * from __table__ where id = __num__ < @ . $ or __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_12", "technique": "union_based", "text": "select * from __table__ where id = __num__ or @ __id__"}
+{"sample_id": "h5_paired_13", "technique": "boolean_blind", "text": "select * from __table__ where id = __num__ < @ & __str__ or __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_14", "technique": "union_based", "text": "select * from __table__ where id = __num__ union select null , __id__ from __table__ where __id__ = __str__ __comment__"}
+{"sample_id": "h5_paired_15", "technique": "boolean_blind", "text": "select * from __table__ where id = __num__ or @ __id__"}
+{"sample_id": "h5_paired_16", "technique": "boolean_blind", "text": "select * from __table__ where id = __num__ + ( __str__ ) or __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_17", "technique": "union_based", "text": "select * from __table__ where id = __num__ union select @ < @ $ , version ( ) __comment__"}
+{"sample_id": "h5_paired_18", "technique": "union_based", "text": "select * from __table__ where id = __num__ < @ < @ union select __num__ , version ( ) __comment__"}
+{"sample_id": "h5_paired_19", "technique": "union_based", "text": "select * from __table__ where id = __num__ < @ $ _ union select __num__ , version ( ) __comment__"}
+{"sample_id": "h5_paired_20", "technique": "union_based", "text": "select * from __table__ where id = __num__ union select 1 a __comment__"}
+{"sample_id": "h5_paired_21", "technique": "benign", "text": "limit"}
+{"sample_id": "h5_paired_22", "technique": "time_blind", "text": "select pg_sleep ( __num__ ) and ( __num__ = \""}
+{"sample_id": "h5_paired_23", "technique": "union_based", "text": "- __num__ ' ) where __num__ = __num__ union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_24", "technique": "boolean_blind", "text": "- __num__ ) or __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_25", "technique": "union_based", "text": "__num__ ' union all select null , null , null , null __comment__"}
+{"sample_id": "h5_paired_26", "technique": "boolean_blind", "text": "- __num__ ' ) as __id__ where __num__ = __num__ or __num__ = __num__"}
+{"sample_id": "h5_paired_27", "technique": "error_based", "text": "- __num__ \" where __num__ = __num__ or __num__ = ( select __id__ ( xmltype ( chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | ( select ( case when ( __num__ = __num__ ) then __num__ else __num__ end ) from __table__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) |"}
+{"sample_id": "h5_paired_28", "technique": "union_based", "text": "- __num__ ) ) as __id__ where __id__ = __num__ union all select __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_29", "technique": "union_based", "text": "__num__ ' ) where __num__ = __num__ union all select null , null , null , null , null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_30", "technique": "union_based", "text": "- __num__ % \" ) union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_31", "technique": "time_blind", "text": "__num__ % ' ) ) and __id__ ( __num__ = __num__ , sleep ( __num__ ) ) __comment__"}
+{"sample_id": "h5_paired_32", "technique": "time_blind", "text": "__num__ % \" ) or __num__ = ( select __num__ from __table__ ( __num__ ) ) __comment__"}
+{"sample_id": "h5_paired_33", "technique": "boolean_blind", "text": "- __num__ ) or __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_34", "technique": "union_based", "text": "- __num__ \" ) ) ) union all select __num__ __comment__"}
+{"sample_id": "h5_paired_35", "technique": "union_based", "text": "__num__ ' union all select null , null , null __comment__"}
+{"sample_id": "h5_paired_36", "technique": "union_based", "text": "__num__ union all select null , null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_37", "technique": "boolean_blind", "text": "- __num__ \" ) ) ) or __num__ = __num__"}
+{"sample_id": "h5_paired_38", "technique": "union_based", "text": "- __num__ ) ) union all select __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_39", "technique": "error_based", "text": "- __num__ % ' or __id__ group by concat ( 0 __id__ , ( select ( case when ( __num__ = __num__ ) then __num__ else __num__ end ) ) , 0 __id__ , __id__ ( __id__ ( __num__ ) * __num__ ) ) having __id__ ( __num__ ) __comment__"}
+{"sample_id": "h5_paired_40", "technique": "union_based", "text": "- __num__ ) ) as __id__ where __id__ = __num__ union all select __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_41", "technique": "union_based", "text": "- __num__ % \" union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_42", "technique": "error_based", "text": "- __num__ ' ) ) as __id__ where __num__ = __num__ or __num__ = ( select __id__ ( xmltype ( chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | ( select ( case when ( __num__ = __num__ ) then __num__ else __num__ end ) from __table__ ) | | chr ( __num__ ) | | chr ( __num__ ) | | chr"}
+{"sample_id": "h5_paired_43", "technique": "time_blind", "text": "__num__ ) ) ) and sleep ( __num__ ) and ( ( ( __num__ = __num__"}
+{"sample_id": "h5_paired_44", "technique": "time_blind", "text": "__num__ % \" ) and __id__ ( __num__ = __num__ , sleep ( __num__ ) ) __comment__"}
+{"sample_id": "h5_paired_45", "technique": "union_based", "text": "- __num__ \" ) union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_46", "technique": "union_based", "text": "__num__ ' ) where __num__ = __num__ union all select null , null , null , null , null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_47", "technique": "time_blind", "text": "( select * from ( select ( sleep ( __num__ ) ) ) __id__ ) and ( ( __str__ like ' __comment__"}
+{"sample_id": "h5_paired_48", "technique": "union_based", "text": "__num__ ) ) ) union all select null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_49", "technique": "time_blind", "text": "__num__ where __id__ = __num__ and ( select * from ( select ( sleep ( __num__ ) ) ) __id__ ) __comment__"}
+{"sample_id": "h5_paired_50", "technique": "time_blind", "text": "__num__ \" ) or __num__ = ( select __num__ from __table__ ( __num__ ) ) __comment__"}
+{"sample_id": "h5_paired_51", "technique": "error_based", "text": "__num__ ) __id__ __id__ ( extractvalue ( __num__ , concat ( 0 __id__ , ( benchmark ( __num__ , __id__ ( 0 __id__ ) ) ) ) ) , __num__ )"}
+{"sample_id": "h5_paired_52", "technique": "union_based", "text": "- __num__ ) union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_53", "technique": "time_blind", "text": "__num__ ) ) ) or ( select * from ( select ( sleep ( __num__ ) ) ) __id__ ) __comment__"}
+{"sample_id": "h5_paired_54", "technique": "union_based", "text": "- __num__ \" ) as __id__ where __id__ = __num__ union all select __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_55", "technique": "time_blind", "text": "__num__ % ' or ( select * from ( select ( sleep ( __num__ ) ) ) __id__ ) __comment__"}
+{"sample_id": "h5_paired_56", "technique": "error_based", "text": "__num__ ) ) and updatexml ( __num__ , concat ( 0 __id__ , 0 __id__ , ( select ( __id__ ( __num__ = __num__ , __num__ ) ) ) , 0 __id__ ) , __num__ ) and ( ( __num__ = __num__"}
+{"sample_id": "h5_paired_57", "technique": "union_based", "text": "__num__ ' in __id__ __id__ ) union all select null __comment__"}
+{"sample_id": "h5_paired_58", "technique": "time_blind", "text": "__num__ __str__ __id__ __str__"}
+{"sample_id": "h5_paired_59", "technique": "union_based", "text": "__num__ ' ) where __num__ = __num__ union all select null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_60", "technique": "union_based", "text": "- __num__ ) union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_61", "technique": "time_blind", "text": "select pg_sleep ( __num__ ) __comment__"}
+{"sample_id": "h5_paired_62", "technique": "time_blind", "text": "__num__ ' ) where __num__ = __num__ __id__ sleep ( __num__ ) __comment__"}
+{"sample_id": "h5_paired_63", "technique": "union_based", "text": "__num__ % \" ) ) union all select null , null , null , null __comment__"}
+{"sample_id": "h5_paired_64", "technique": "error_based", "text": "__num__ \" where __num__ = __num__ or __id__ ( ~ ( select * from ( select concat ( 0 __id__ , ( select ( __id__ ( __num__ = __num__ , __num__ ) ) ) , 0 __id__ , 0 __id__ ) ) x ) ) __comment__"}
+{"sample_id": "h5_paired_65", "technique": "union_based", "text": "- __num__ ) ) union all select __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_66", "technique": "time_blind", "text": "__num__ __str__"}
+{"sample_id": "h5_paired_67", "technique": "error_based", "text": "__num__ __str__"}
+{"sample_id": "h5_paired_68", "technique": "union_based", "text": "- __num__ % \" ) ) ) union all select __num__ __comment__"}
+{"sample_id": "h5_paired_69", "technique": "time_blind", "text": "__num__ __str__"}
+{"sample_id": "h5_paired_70", "technique": "union_based", "text": "- __num__ ' ) union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_71", "technique": "union_based", "text": "__num__ ' union all select null , null , null , null __comment__"}
+{"sample_id": "h5_paired_72", "technique": "union_based", "text": "__num__ ' ) as __id__ where __num__ = __num__ union all select null , null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_73", "technique": "time_blind", "text": "__num__ __str__ __id__ __str__"}
+{"sample_id": "h5_paired_74", "technique": "boolean_blind", "text": "__num__ \" ) ) ) and __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_75", "technique": "time_blind", "text": "select pg_sleep ( __num__ ) and ( __str__ like \" __id__"}
+{"sample_id": "h5_paired_76", "technique": "union_based", "text": "__num__ % ' ) union all select null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_77", "technique": "union_based", "text": "- __num__ \" ) ) ) union all select __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_78", "technique": "time_blind", "text": "__num__ __str__ __id__ __str__"}
+{"sample_id": "h5_paired_79", "technique": "union_based", "text": "__num__ ) ) as __id__ where __num__ = __num__ union all select null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_80", "technique": "time_blind", "text": "__num__ ' ) as __id__ where __num__ = __num__ and sleep ( __num__ ) __comment__"}
+{"sample_id": "h5_paired_81", "technique": "time_blind", "text": "__num__ __str__ __id__ __str__"}
+{"sample_id": "h5_paired_82", "technique": "union_based", "text": "- __num__ \" ) where __num__ = __num__ union all select __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_83", "technique": "time_blind", "text": "select pg_sleep ( __num__ ) __comment__"}
+{"sample_id": "h5_paired_84", "technique": "boolean_blind", "text": "- __num__ \" ) ) ) or __num__ = __num__"}
+{"sample_id": "h5_paired_85", "technique": "error_based", "text": "__num__ and updatexml ( __id__ , concat ( 0 __id__ , 0 __id__ , ( select ( __id__ ( __num__ = __num__ , __num__ ) ) ) , 0 __id__ ) , __num__ ) __comment__"}
+{"sample_id": "h5_paired_86", "technique": "union_based", "text": "- __num__ ' ) ) as __id__ where __num__ = __num__ union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_87", "technique": "union_based", "text": "- __num__ __str__ __id__ ' where __num__ = __num__ union all select __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_88", "technique": "time_blind", "text": "__num__ \" where __num__ = __str__ waitfor delay __str__ __comment__"}
+{"sample_id": "h5_paired_89", "technique": "union_based", "text": "- __num__ ' ) ) ) union all select __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_90", "technique": "union_based", "text": "__num__ ' in __id__ __id__ ) or __id__ ( __str__ , __num__ ) > ( select __id__ ( * ) , concat ( 0 __id__ , ( select ( __id__ ( __num__ = __str__ , __num__ ) ) ) , 0 __id__ , __id__ ( __id__ ( __num__ ) * __num__ ) ) x from ( select __num__ union select __num__ union select __num__ union select __num__ ) a group by x ) __comment__"}
+{"sample_id": "h5_paired_91", "technique": "union_based", "text": "- __num__ \" where __num__ = __num__ union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_92", "technique": "union_based", "text": "__num__ ' ) ) ) union all select null , null , null , null , null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_93", "technique": "time_blind", "text": "__num__ ) and __num__ = benchmark ( __num__ , __id__ ( 0 __id__ ) ) and ( __num__ = __str__"}
+{"sample_id": "h5_paired_94", "technique": "time_blind", "text": "__num__ ' ) ) as __id__ where __num__ = __num__ or __id__ ( __num__ = __num__ , sleep ( __num__ ) ) __comment__"}
+{"sample_id": "h5_paired_95", "technique": "union_based", "text": "- __num__ \" ) union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_96", "technique": "boolean_blind", "text": "- __num__ ) or __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_97", "technique": "boolean_blind", "text": "- __num__ % \" ) ) ) or __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_98", "technique": "time_blind", "text": "select benchmark ( __num__ , __id__ ( 0 __id__ ) ) __comment__"}
+{"sample_id": "h5_paired_99", "technique": "union_based", "text": "__num__ ) ) union all select null , null , null , null __comment__"}
+{"sample_id": "h5_paired_100", "technique": "union_based", "text": "- __num__ \" ) ) union all select __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_101", "technique": "union_based", "text": "__num__ union all select null , null , null __comment__"}
+{"sample_id": "h5_paired_102", "technique": "time_blind", "text": "__num__ \" where __num__ = __str__ and __id__ ( __num__ = __num__ , sleep ( __num__ ) ) __comment__"}
+{"sample_id": "h5_paired_103", "technique": "union_based", "text": "- __num__ \" ) ) ) union all select __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_104", "technique": "error_based", "text": "__num__ __str__ __id__ ( extractvalue ( __num__ , concat ( 0 __id__ , 0 __id__ , ( select ( case when ( __num__ = __num__ ) then __num__ else __num__ end ) ) , 0 __id__ ) ) , __num__ ) __comment__"}
+{"sample_id": "h5_paired_105", "technique": "union_based", "text": "__num__ ' ) where __num__ = __num__ and __id__ ( __num__ , __num__ ) > ( select __id__ ( * ) , concat ( 0 __id__ , ( select ( __id__ ( __num__ = __str__ , __num__ ) ) ) , 0 __id__ , __id__ ( __id__ ( __num__ ) * __num__ ) ) x from ( select __num__ union select __num__ union select __num__ union select __num__ ) a group by x ) __comment__"}
+{"sample_id": "h5_paired_106", "technique": "time_blind", "text": "__num__ % ' __id__ sleep ( __num__ ) __comment__"}
+{"sample_id": "h5_paired_107", "technique": "error_based", "text": "__num__ ) where __num__ = __num__ __id__ __id__ ( extractvalue ( __num__ , concat ( 0 __id__ , 0 __id__ , ( select ( case when ( __num__ = __num__ ) then __num__ else __num__ end ) ) , 0 __id__ ) ) , __num__ ) __comment__"}
+{"sample_id": "h5_paired_108", "technique": "union_based", "text": "- __num__ \" ) ) union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_109", "technique": "union_based", "text": "- __num__ ' union all select __num__ , __num__ , __num__ , __num__ , __num__ , __num__ __comment__"}
+{"sample_id": "h5_paired_110", "technique": "time_blind", "text": "__num__ __str__"}
+{"sample_id": "h5_paired_111", "technique": "boolean_blind", "text": "- __num__ ' ) as __id__ where __num__ = __num__ or __num__ = __num__"}
+{"sample_id": "h5_paired_112", "technique": "union_based", "text": "__num__ ) ) ) or __id__ ( __num__ , __num__ ) > ( select __id__ ( * ) , concat ( 0 __id__ , ( select ( __id__ ( __num__ = __str__ , __num__ ) ) ) , 0 __id__ , __id__ ( __id__ ( __id__ ) * __num__ ) ) x from ( select __num__ union select __num__ union select __num__ union select __num__ ) a group by x ) and ( ( ( __num__ = __str__"}
+{"sample_id": "h5_paired_113", "technique": "error_based", "text": "__num__ ) where __num__ = __num__ and __num__ = convert ( __id__ , ( select char ( __num__ ) + char ( __num__ ) + char ( __num__ ) + char ( __num__ ) + char ( __num__ ) + ( select ( case when ( __num__ = __num__ ) then char ( __num__ ) else char ( __num__ ) end ) ) + char ( __num__ ) + char ( __num__ ) + char ( __num__ ) + char ( __num__ ) + char ( __num__ ) ) ) __comment__"}
+{"sample_id": "h5_paired_114", "technique": "boolean_blind", "text": "__num__ \" where __num__ = __num__ and __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_115", "technique": "boolean_blind", "text": "__num__ \" ) where __num__ = __num__ and __num__ = __num__ __comment__"}
+{"sample_id": "h5_paired_116", "technique": "time_blind", "text": "__num__ ) ) ) or __num__ = benchmark ( __num__ , __id__ ( 0 __id__ ) ) and ( ( ( __num__ = __str__"}
+{"sample_id": "h5_paired_117", "technique": "union_based", "text": "__num__ ) ) ) union all select null , null , null , null , null , null __comment__"}
+{"sample_id": "h5_paired_118", "technique": "union_based", "text": "__num__ ' ) ) union all select null , null , null , null __comment__"}
+{"sample_id": "h5_paired_119", "technique": "union_based", "text": "- __num__ \" ) as __id__ where __id__ = __num__ union all select __num__ , __num__ __comment__"}

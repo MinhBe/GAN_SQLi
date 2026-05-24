@@ -1,0 +1,46 @@
+{
+  "out_dir": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\delex_cluster_split_smoke",
+  "sources": [
+    "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\gold.parquet",
+    "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\verified_dev.parquet",
+    "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 5\\outputs\\full\\verified_test.parquet"
+  ],
+  "split_percentages": {
+    "train": 80,
+    "dev": 10,
+    "test": 10
+  },
+  "splits": {
+    "train": {
+      "rows": 122076,
+      "unique_templates": 19778,
+      "duplicate_template_row_rate": 0.8379861725482486
+    },
+    "dev": {
+      "rows": 12847,
+      "unique_templates": 2526,
+      "duplicate_template_row_rate": 0.8033782205962482
+    },
+    "test": {
+      "rows": 15077,
+      "unique_templates": 2610,
+      "duplicate_template_row_rate": 0.8268886383232739
+    }
+  },
+  "template_overlaps": {
+    "train_dev": 0,
+    "train_test": 0,
+    "dev_test": 0
+  },
+  "source_counts": {
+    "train:gold": 41148,
+    "dev:gold": 4045,
+    "test:gold": 4807,
+    "train:verified_dev": 40433,
+    "dev:verified_dev": 4400,
+    "test:verified_dev": 5167,
+    "train:verified_test": 40495,
+    "dev:verified_test": 4402,
+    "test:verified_test": 5103
+  }
+}

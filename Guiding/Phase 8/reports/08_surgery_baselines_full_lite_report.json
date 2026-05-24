@@ -1,0 +1,154 @@
+{
+  "split_dir": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\delex_cluster_split",
+  "rows": {
+    "train": 300000,
+    "dev": 25000
+  },
+  "device": {
+    "device": "cuda",
+    "cuda_available": true,
+    "name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "total_vram_gb": 6.0,
+    "allocated_gb": 0.037,
+    "reserved_gb": 0.273
+  },
+  "config": {
+    "batch_size": 64,
+    "max_steps": 1000,
+    "max_len": 96,
+    "embed_dim": 64,
+    "hidden_dim": 128,
+    "mixed_precision": true,
+    "train_limit": 300000,
+    "dev_limit": 25000
+  },
+  "anchor": {
+    "final_step": 1000,
+    "final_train_loss": 0.01780538819730282,
+    "dev": {
+      "slot_loss": 0.08582425513282327,
+      "slot_accuracy": 0.9821141694334369,
+      "slots": 9337.0
+    },
+    "checkpoint": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\checkpoints\\surgery_baselines_full_lite\\anchor_only_latest.pt",
+    "samples_path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\surgery_baselines_full_lite\\anchor_only_samples.jsonl",
+    "sample_summary": {
+      "samples": 400,
+      "unique_ratio": 0.575,
+      "avg_tokens": 21.2425,
+      "empty_count": 0
+    }
+  },
+  "mutation": {
+    "samples_path": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\surgery_baselines_full_lite\\mutation_engine_samples.jsonl",
+    "sample_summary": {
+      "samples": 400,
+      "unique_ratio": 0.8175,
+      "avg_tokens": 22.185,
+      "empty_count": 0
+    }
+  },
+  "history": [
+    {
+      "step": 100,
+      "train_slot_ce": 0.1626906841993332,
+      "dev": {
+        "slot_loss": 0.18254105983741076,
+        "slot_accuracy": 0.9455928028274606,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 1.4800138473510742
+    },
+    {
+      "step": 200,
+      "train_slot_ce": 0.04701903089880943,
+      "dev": {
+        "slot_loss": 0.10284783235770344,
+        "slot_accuracy": 0.974724215486773,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 2.332399368286133
+    },
+    {
+      "step": 300,
+      "train_slot_ce": 0.04110113903880119,
+      "dev": {
+        "slot_loss": 0.08027314205196234,
+        "slot_accuracy": 0.9794366498875442,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 3.151461362838745
+    },
+    {
+      "step": 400,
+      "train_slot_ce": 0.09996955096721649,
+      "dev": {
+        "slot_loss": 0.06516403302628516,
+        "slot_accuracy": 0.981364463960587,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 3.952624559402466
+    },
+    {
+      "step": 500,
+      "train_slot_ce": 0.020443765446543694,
+      "dev": {
+        "slot_loss": 0.07289249850785157,
+        "slot_accuracy": 0.9826496733426154,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 4.765077829360962
+    },
+    {
+      "step": 600,
+      "train_slot_ce": 0.032821718603372574,
+      "dev": {
+        "slot_loss": 0.07387561431415741,
+        "slot_accuracy": 0.9833993788154654,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 5.641094446182251
+    },
+    {
+      "step": 700,
+      "train_slot_ce": 0.021905967965722084,
+      "dev": {
+        "slot_loss": 0.06270368990122385,
+        "slot_accuracy": 0.9820070686516011,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 6.418700456619263
+    },
+    {
+      "step": 800,
+      "train_slot_ce": 0.024203289300203323,
+      "dev": {
+        "slot_loss": 0.05583247646116477,
+        "slot_accuracy": 0.984256185070151,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 7.218324422836304
+    },
+    {
+      "step": 900,
+      "train_slot_ce": 0.02256765402853489,
+      "dev": {
+        "slot_loss": 0.06927610145871997,
+        "slot_accuracy": 0.9845774874156581,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 8.011743545532227
+    },
+    {
+      "step": 1000,
+      "train_slot_ce": 0.01780538819730282,
+      "dev": {
+        "slot_loss": 0.08582425513282327,
+        "slot_accuracy": 0.9821141694334369,
+        "slots": 9337.0
+      },
+      "elapsed_sec": 8.813773393630981
+    }
+  ],
+  "elapsed_sec": 9.05665898323059
+}

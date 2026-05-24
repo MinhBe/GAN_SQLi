@@ -1,0 +1,17 @@
+{
+  "checkpoint": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\checkpoints\\paired_surgery_gan_max_aggressive\\paired_surgery_gan_latest.pt",
+  "samples": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\gan_candidate_pools\\paired_surgery_gan_max_aggressive_candidates.jsonl",
+  "name": "paired_surgery_gan_max_aggressive_candidates",
+  "rows_per_round": 1000,
+  "rounds": 8,
+  "total_candidates": 8000,
+  "temperature": 1.7,
+  "top_k": 24,
+  "slot_mode": "aggressive",
+  "sample_summary": {
+    "samples": 8000,
+    "unique_ratio": 0.535,
+    "avg_tokens": 31.763,
+    "empty_count": 0
+  }
+}

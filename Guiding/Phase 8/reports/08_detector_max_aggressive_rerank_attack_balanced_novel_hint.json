@@ -1,0 +1,82 @@
+{
+  "samples": "Guiding\\Phase 8\\outputs\\classifier_oracle_rerank\\max_aggressive_candidates_top400_attack_balanced_novel_hint.jsonl",
+  "detector_results": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Guiding\\Phase 8\\outputs\\detector_results\\max_aggressive_rerank_attack_balanced_novel_hint_detector_results.csv",
+  "threshold": 3.0,
+  "strict_threshold": 5.0,
+  "n_samples": 245,
+  "detected_rate": 0.746938775510204,
+  "bypass_rate": 0.2530612244897959,
+  "strict_detected_rate": 0.3795918367346939,
+  "top_reasons": [
+    [
+      "placeholder_density",
+      220
+    ],
+    [
+      "comment_marker",
+      172
+    ],
+    [
+      "keyword_comment_combo",
+      168
+    ],
+    [
+      "keyword_density",
+      155
+    ],
+    [
+      "time_function",
+      73
+    ],
+    [
+      "union_select",
+      44
+    ],
+    [
+      "union_comment_combo",
+      40
+    ],
+    [
+      "error_function",
+      26
+    ],
+    [
+      "suspicious_operator",
+      16
+    ],
+    [
+      "boolean_condition",
+      8
+    ],
+    [
+      "keyword_boolean_combo",
+      8
+    ]
+  ],
+  "by_technique": {
+    "boolean_blind": {
+      "samples": 6,
+      "detected_rate": 1.0,
+      "bypass_rate": 0.0,
+      "strict_detected_rate": 1.0
+    },
+    "error_based": {
+      "samples": 11,
+      "detected_rate": 1.0,
+      "bypass_rate": 0.0,
+      "strict_detected_rate": 0.8181818181818182
+    },
+    "time_blind": {
+      "samples": 61,
+      "detected_rate": 0.9180327868852459,
+      "bypass_rate": 0.08196721311475408,
+      "strict_detected_rate": 0.29508196721311475
+    },
+    "union_based": {
+      "samples": 167,
+      "detected_rate": 0.6586826347305389,
+      "bypass_rate": 0.3413173652694611,
+      "strict_detected_rate": 0.3592814371257485
+    }
+  }
+}

@@ -70,7 +70,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--checkpoint-dir", type=Path, default=DEFAULT_CHECKPOINT_DIR)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report-dir", type=Path, default=DEFAULT_REPORT_DIR)
+    parser.add_argument("--report-name", default="06_mle_baseline_report.md")
+    parser.add_argument("--report-title", default="06 - MLE Baseline Report")
     parser.add_argument("--log-dir", type=Path, default=DEFAULT_LOG_DIR)
+    parser.add_argument("--progress-name", default="phase06_mle_progress.json")
     parser.add_argument("--resume", type=Path, default=None)
     parser.add_argument("--resume-latest", action="store_true")
     parser.add_argument("--epochs", type=int, default=None)
@@ -83,6 +86,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--eval-max-batches", type=int, default=None)
     parser.add_argument("--sample-count", type=int, default=None)
     parser.add_argument("--no-mixed-precision", action="store_true")
+    parser.add_argument("--allow-cpu", action="store_true")
+    parser.add_argument("--eval-only", action="store_true")
+    parser.add_argument("--eval-tag", default=None)
     return parser.parse_args()
 
 
@@ -336,6 +342,13 @@ def find_latest_checkpoint(checkpoint_dir: Path) -> Path | None:
     return candidates[-1] if candidates else None
 
 
+def move_optimizer_state_to_device(optimizer: torch.optim.Optimizer, device: torch.device) -> None:
+    for state in optimizer.state.values():
+        for key, value in list(state.items()):
+            if torch.is_tensor(value):
+                state[key] = value.to(device)
+
+
 def write_samples(path: Path, samples: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as handle:
@@ -351,6 +364,7 @@ def write_report(
     history: list[dict[str, Any]],
     metrics: dict[str, Any] | None,
     checkpoint_dir: Path,
+    title: str = "06 - MLE Baseline Report",
 ) -> None:
     latest = history[-1] if history else {}
     gate_lines = []
@@ -369,7 +383,7 @@ def write_report(
     )
 
     lines = [
-        "# 06 - MLE Baseline Report",
+        f"# {title}",
         "",
         f"**Device:** `{device}`",
         f"**Train rows:** `{manifest['splits']['train']['rows']:,}`",
@@ -452,6 +466,11 @@ def main() -> None:
     test_paths = shard_paths(args.cache_dir, "test")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if bool(cfg.get("require_cuda", False)) and device.type != "cuda" and not args.allow_cpu:
+        raise RuntimeError(
+            "CUDA is required for this Phase 6 config, but PyTorch does not see a CUDA device. "
+            "Use --allow-cpu only for intentional debugging runs."
+        )
     amp_enabled = bool(cfg["mixed_precision"]) and device.type == "cuda"
     cfg["mixed_precision"] = amp_enabled
 
@@ -464,24 +483,27 @@ def main() -> None:
     global_step = 0
     best_val_loss = float("inf")
     resume_path = args.resume
-    if args.resume_latest and resume_path is None:
+    if (args.resume_latest or args.eval_only) and resume_path is None:
         resume_path = find_latest_checkpoint(args.checkpoint_dir)
     if resume_path:
         checkpoint = load_tensor_file(resume_path)
         model.load_state_dict(checkpoint["model_state"])
         optimizer.load_state_dict(checkpoint["optimizer_state"])
+        move_optimizer_state_to_device(optimizer, device)
         if checkpoint.get("scaler_state") and scaler is not None:
             scaler.load_state_dict(checkpoint["scaler_state"])
         start_epoch = int(checkpoint.get("epoch", 0))
         global_step = int(checkpoint.get("global_step", 0))
         best_val_loss = float(checkpoint.get("best_val_loss", best_val_loss))
         print(f"Resumed checkpoint: {resume_path} step={global_step} epoch={start_epoch}")
+    elif args.eval_only:
+        raise FileNotFoundError("Eval-only mode needs --resume, --resume-latest, or an existing latest checkpoint.")
 
     train_rows = int(manifest["splits"]["train"]["rows"])
     batches_per_epoch = math.ceil(train_rows / int(cfg["batch_size"]))
     steps_per_epoch = math.ceil(batches_per_epoch / int(cfg["grad_accum"]))
     total_steps = int(cfg["max_steps"]) if cfg.get("max_steps") else int(cfg["epochs"]) * steps_per_epoch
-    progress_file = args.log_dir / "phase06_mle_progress.json"
+    progress_file = args.log_dir / args.progress_name
     history_file = args.output_dir / "history.jsonl"
     history: list[dict[str, Any]] = []
     latest_metrics: dict[str, Any] | None = None
@@ -503,6 +525,83 @@ def main() -> None:
         )
     )
     print(f"estimated_total_steps={total_steps:,} starting_step={global_step:,}")
+
+    if args.eval_only:
+        tag = args.eval_tag or (resume_path.stem if resume_path else f"step_{global_step}")
+        eval_max_batches = int(cfg["eval_max_batches"]) if cfg.get("eval_max_batches") else None
+        dev_loss = evaluate_loss(
+            model,
+            dev_paths,
+            int(cfg["batch_size"]),
+            device,
+            pad_id,
+            vocab_size,
+            amp_enabled,
+            eval_max_batches,
+        )
+        test_loss = evaluate_loss(
+            model,
+            test_paths,
+            int(cfg["batch_size"]),
+            device,
+            pad_id,
+            vocab_size,
+            amp_enabled,
+            eval_max_batches,
+        )
+        samples = generate_samples(model, vocab, techniques, device, cfg)
+        latest_metrics = sample_metrics(samples)
+        sample_path = args.output_dir / f"samples_eval_{tag}.jsonl"
+        write_samples(sample_path, samples)
+        event = {
+            "mode": "eval_only",
+            "tag": tag,
+            "checkpoint": str(resume_path),
+            "epoch": start_epoch,
+            "global_step": global_step,
+            "dev_loss": dev_loss,
+            "test_loss": test_loss,
+            "sample_metrics": latest_metrics,
+            "sample_path": str(sample_path),
+            "eval_max_batches": eval_max_batches,
+            "elapsed_sec": time.time() - started,
+            "device": device_summary(device),
+        }
+        eval_path = args.output_dir / f"eval_{tag}.json"
+        save_json(eval_path, event)
+        history.append(
+            {
+                "epoch": start_epoch,
+                "global_step": global_step,
+                "train_loss": None,
+                "val_loss": dev_loss,
+                "sample_metrics": latest_metrics,
+                "sample_path": str(sample_path),
+                "elapsed_sec": event["elapsed_sec"],
+            }
+        )
+        write_report(
+            args.report_dir / f"06_mle_eval_{tag}_report.md",
+            cfg,
+            manifest,
+            device,
+            history,
+            latest_metrics,
+            args.checkpoint_dir,
+            args.report_title,
+        )
+        print(
+            "eval_only tag={} step={} dev_loss={:.6f} test_loss={:.6f} unique_ratio={:.4f} syntax={:.4f}".format(
+                tag,
+                global_step,
+                dev_loss,
+                test_loss,
+                latest_metrics["unique_ratio"],
+                latest_metrics["syntax_validity_rate"],
+            ),
+            flush=True,
+        )
+        return
 
     optimizer.zero_grad(set_to_none=True)
     try:
@@ -610,13 +709,14 @@ def main() -> None:
                                 checkpoint_payload(model, optimizer, scaler, cfg, epoch, global_step, best_val_loss, manifest),
                             )
                         write_report(
-                            args.report_dir / "06_mle_baseline_report.md",
+                            args.report_dir / args.report_name,
                             cfg,
                             manifest,
                             device,
                             history,
                             latest_metrics,
                             args.checkpoint_dir,
+                            args.report_title,
                         )
                         model.train()
 
@@ -669,7 +769,8 @@ def main() -> None:
 
         payload = checkpoint_payload(model, optimizer, scaler, cfg, start_epoch, global_step, best_val_loss, manifest)
         save_checkpoint(args.checkpoint_dir / "latest.pt", payload)
-        write_report(args.report_dir / "06_mle_baseline_report.md", cfg, manifest, device, history, latest_metrics, args.checkpoint_dir)
+        report_path = args.report_dir / args.report_name
+        write_report(report_path, cfg, manifest, device, history, latest_metrics, args.checkpoint_dir, args.report_title)
         save_json(
             progress_file,
             {
@@ -683,7 +784,7 @@ def main() -> None:
         print("Phase 06 MLE baseline complete")
         print(f"global_step={global_step:,} best_val_loss={best_val_loss:.6f}")
         print(f"latest_checkpoint={args.checkpoint_dir / 'latest.pt'}")
-        print(f"report={args.report_dir / '06_mle_baseline_report.md'}")
+        print(f"report={report_path}")
 
     except RuntimeError as exc:
         if "out of memory" in str(exc).lower() and torch.cuda.is_available():
