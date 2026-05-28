@@ -1,0 +1,510 @@
+{
+  "full_count": 4602,
+  "filtered_count": 1102,
+  "sources_full": [
+    [
+      "openalex",
+      3343
+    ],
+    [
+      "crossref",
+      1259
+    ]
+  ],
+  "sources_filtered": [
+    [
+      "openalex",
+      689
+    ],
+    [
+      "crossref",
+      413
+    ]
+  ],
+  "bucket_counts": [
+    [
+      "modern_surfaces",
+      743
+    ],
+    [
+      "ml_dl_detection",
+      699
+    ],
+    [
+      "surveys_root_causes",
+      372
+    ],
+    [
+      "defense_secure_coding",
+      351
+    ],
+    [
+      "datasets_benchmarks",
+      288
+    ],
+    [
+      "evasion_waf_adversarial",
+      168
+    ],
+    [
+      "general_recent_sqli",
+      82
+    ],
+    [
+      "ai_llm_text2sql",
+      82
+    ],
+    [
+      "attack_variants",
+      42
+    ]
+  ],
+  "years_filtered": [
+    [
+      2025,
+      264
+    ],
+    [
+      2024,
+      230
+    ],
+    [
+      2023,
+      161
+    ],
+    [
+      2022,
+      139
+    ],
+    [
+      2021,
+      116
+    ],
+    [
+      2026,
+      101
+    ],
+    [
+      2020,
+      91
+    ]
+  ],
+  "countries_filtered": [
+    [
+      "IN",
+      100
+    ],
+    [
+      "CN",
+      76
+    ],
+    [
+      "ID",
+      62
+    ],
+    [
+      "US",
+      52
+    ],
+    [
+      "GB",
+      30
+    ],
+    [
+      "SA",
+      24
+    ],
+    [
+      "MY",
+      21
+    ],
+    [
+      "PK",
+      19
+    ],
+    [
+      "IQ",
+      14
+    ],
+    [
+      "JO",
+      13
+    ],
+    [
+      "TR",
+      13
+    ],
+    [
+      "NG",
+      11
+    ],
+    [
+      "BD",
+      11
+    ],
+    [
+      "DE",
+      11
+    ],
+    [
+      "AE",
+      10
+    ],
+    [
+      "CA",
+      10
+    ],
+    [
+      "UA",
+      9
+    ],
+    [
+      "IR",
+      8
+    ],
+    [
+      "EG",
+      7
+    ],
+    [
+      "IT",
+      7
+    ],
+    [
+      "KR",
+      7
+    ],
+    [
+      "RU",
+      7
+    ],
+    [
+      "ES",
+      6
+    ],
+    [
+      "PT",
+      6
+    ],
+    [
+      "JP",
+      6
+    ],
+    [
+      "RO",
+      6
+    ],
+    [
+      "AZ",
+      5
+    ],
+    [
+      "AU",
+      5
+    ],
+    [
+      "VN",
+      5
+    ],
+    [
+      "FR",
+      5
+    ]
+  ],
+  "oa_filtered": [
+    [
+      "True",
+      447
+    ],
+    [
+      "None",
+      413
+    ],
+    [
+      "False",
+      242
+    ]
+  ],
+  "top_filtered": [
+    {
+      "year": 2022,
+      "citation_count": 112,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+surveys_root_causes",
+      "title": "Detection of SQL Injection Attack Using Machine Learning Techniques: A Systematic Literature Review",
+      "doi_or_url": "10.3390/jcp2040039"
+    },
+    {
+      "year": 2024,
+      "citation_count": 108,
+      "topic_bucket": "modern_surfaces+ai_llm_text2sql+ml_dl_detection+datasets_benchmarks+surveys_root_causes",
+      "title": "Machine Learning and Deep Learning Techniques for Internet of Things Network Anomaly Detection—Current Research Trends",
+      "doi_or_url": "10.3390/s24061968"
+    },
+    {
+      "year": 2020,
+      "citation_count": 100,
+      "topic_bucket": "ml_dl_detection",
+      "title": "Detection of SQL injection based on artificial neural network",
+      "doi_or_url": "10.1016/j.knosys.2020.105528"
+    },
+    {
+      "year": 2020,
+      "citation_count": 98,
+      "topic_bucket": "modern_surfaces+datasets_benchmarks+surveys_root_causes",
+      "title": "opencv/cvat: v1.1.0",
+      "doi_or_url": "10.5281/zenodo.4009388"
+    },
+    {
+      "year": 2023,
+      "citation_count": 82,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+evasion_waf_adversarial+datasets_benchmarks",
+      "title": "Deep Learning Technique-Enabled Web Application Firewall for the Detection of Web Attacks",
+      "doi_or_url": "10.3390/s23042073"
+    },
+    {
+      "year": 2023,
+      "citation_count": 82,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+datasets_benchmarks+surveys_root_causes",
+      "title": "SQL injection attack detection in network flow data",
+      "doi_or_url": "10.1016/j.cose.2023.103093"
+    },
+    {
+      "year": 2022,
+      "citation_count": 65,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+datasets_benchmarks+surveys_root_causes",
+      "title": "A Systematic Literature Review on the Characteristics and Effectiveness of Web Application Vulnerability Scanners",
+      "doi_or_url": "10.1109/access.2022.3161522"
+    },
+    {
+      "year": 2021,
+      "citation_count": 60,
+      "topic_bucket": "ml_dl_detection+defense_secure_coding+surveys_root_causes",
+      "title": "SQL Injection Attack Detection and Prevention Techniques Using Deep Learning",
+      "doi_or_url": "10.1088/1742-6596/1757/1/012055"
+    },
+    {
+      "year": 2021,
+      "citation_count": 60,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+defense_secure_coding+surveys_root_causes",
+      "title": "A review of phishing attacks and countermeasures for internet of things‐based smart business applications in industry 4.0",
+      "doi_or_url": "10.1002/hbe2.301"
+    },
+    {
+      "year": 2021,
+      "citation_count": 59,
+      "topic_bucket": "modern_surfaces+ml_dl_detection",
+      "title": "Semantic Query-Featured Ensemble Learning Model for SQL-Injection Attack Detection in IoT-Ecosystems",
+      "doi_or_url": "10.1109/tr.2021.3124331"
+    },
+    {
+      "year": 2022,
+      "citation_count": 58,
+      "topic_bucket": "modern_surfaces",
+      "title": "Effective Cyber Security Using IoT to Prevent E-Threats and Hacking During Covid-19",
+      "doi_or_url": "10.37391/ijeer.100210"
+    },
+    {
+      "year": 2021,
+      "citation_count": 57,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+defense_secure_coding+surveys_root_causes",
+      "title": "A systematic review of detection and prevention techniques of SQL injection attacks",
+      "doi_or_url": "10.1080/19393555.2021.1995537"
+    },
+    {
+      "year": 2020,
+      "citation_count": 53,
+      "topic_bucket": "modern_surfaces+evasion_waf_adversarial",
+      "title": "A novel technique to prevent SQL injection and cross-site scripting attacks using Knuth-Morris-Pratt string match algorithm",
+      "doi_or_url": "10.1186/s13635-020-00113-y"
+    },
+    {
+      "year": 2022,
+      "citation_count": 53,
+      "topic_bucket": "modern_surfaces+ml_dl_detection",
+      "title": "Deep Neural Network-Based SQL Injection Detection Method",
+      "doi_or_url": "10.1155/2022/4836289"
+    },
+    {
+      "year": 2020,
+      "citation_count": 50,
+      "topic_bucket": "modern_surfaces",
+      "title": "A Novel Method to Detect and Prevent SQLIA Using Ontology to Cloud Web Security",
+      "doi_or_url": "10.1007/s11277-020-07243-z"
+    },
+    {
+      "year": 2020,
+      "citation_count": 49,
+      "topic_bucket": "modern_surfaces+ml_dl_detection",
+      "title": "Detecting SQL Injection Attacks in Cloud SaaS using Machine Learning",
+      "doi_or_url": "10.1109/bigdatasecurity-hpsc-ids49724.2020.00035"
+    },
+    {
+      "year": 2024,
+      "citation_count": 49,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+datasets_benchmarks+surveys_root_causes",
+      "title": "Across the Spectrum In-Depth Review AI-Based Models for Phishing Detection",
+      "doi_or_url": "10.1109/ojcoms.2024.3462503"
+    },
+    {
+      "year": 2024,
+      "citation_count": 47,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+evasion_waf_adversarial+datasets_benchmarks",
+      "title": "Securing web applications against XSS and SQLi attacks using a novel deep learning approach",
+      "doi_or_url": "10.1038/s41598-023-48845-4"
+    },
+    {
+      "year": 2023,
+      "citation_count": 43,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+defense_secure_coding+surveys_root_causes",
+      "title": "SQL Injection Attack: Quick View",
+      "doi_or_url": "10.58496/mjcs/2023/006"
+    },
+    {
+      "year": 2021,
+      "citation_count": 43,
+      "topic_bucket": "ml_dl_detection",
+      "title": "A CNN-BiLSTM based Approach for Detection of SQL Injection Attacks",
+      "doi_or_url": "10.1109/iccike51210.2021.9410675"
+    },
+    {
+      "year": 2024,
+      "citation_count": 43,
+      "topic_bucket": "datasets_benchmarks",
+      "title": "Cyberattack patterns in blockchain-based communication networks for distributed renewable energy systems: A study on big datasets",
+      "doi_or_url": "10.1016/j.dib.2024.110212"
+    },
+    {
+      "year": 2020,
+      "citation_count": 43,
+      "topic_bucket": "modern_surfaces",
+      "title": "Comparative study on Python web frameworks: Flask and Django",
+      "doi_or_url": "https://openalex.org/W3032576892"
+    },
+    {
+      "year": 2020,
+      "citation_count": 43,
+      "topic_bucket": "ml_dl_detection+defense_secure_coding",
+      "title": "Applied Machine Learning Predictive Analytics to SQL Injection Attack Detection and Prevention",
+      "doi_or_url": "https://openalex.org/W3139278248"
+    },
+    {
+      "year": 2023,
+      "citation_count": 42,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+datasets_benchmarks",
+      "title": "Enhancing the Performance of SQL Injection Attack Detection through Probabilistic Neural Networks",
+      "doi_or_url": "10.3390/app13074365"
+    },
+    {
+      "year": 2020,
+      "citation_count": 42,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+evasion_waf_adversarial",
+      "title": "WAF-A-MoLE",
+      "doi_or_url": "10.1145/3341105.3373962"
+    },
+    {
+      "year": 2022,
+      "citation_count": 39,
+      "topic_bucket": "ml_dl_detection",
+      "title": "SQL Injection Attack Detection by Machine Learning Classifier",
+      "doi_or_url": "10.1109/icaaic53929.2022.9792964"
+    },
+    {
+      "year": 2020,
+      "citation_count": 39,
+      "topic_bucket": "general_recent_sqli",
+      "title": "DeepSQLi: deep semantic learning for testing SQL injection",
+      "doi_or_url": "10.1145/3395363.3397375"
+    },
+    {
+      "year": 2022,
+      "citation_count": 38,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+datasets_benchmarks+defense_secure_coding+surveys_root_causes",
+      "title": "Detection and prevention of SQLI attacks and developing compressive framework using machine learning and hybrid techniques",
+      "doi_or_url": "10.1186/s40537-022-00678-0"
+    },
+    {
+      "year": 2025,
+      "citation_count": 38,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+datasets_benchmarks",
+      "title": "HIDS-IoMT: A Deep Learning-Based Intelligent Intrusion Detection System for the Internet of Medical Things",
+      "doi_or_url": "10.1109/access.2025.3543127"
+    },
+    {
+      "year": 2020,
+      "citation_count": 38,
+      "topic_bucket": "modern_surfaces+surveys_root_causes",
+      "title": "A Django Based Educational Resource Sharing Website: Shreic",
+      "doi_or_url": "10.37398/jsr.2020.640134"
+    },
+    {
+      "year": 2023,
+      "citation_count": 37,
+      "topic_bucket": "modern_surfaces+surveys_root_causes",
+      "title": "Online Banking User Authentication Methods: A Systematic Literature Review",
+      "doi_or_url": "10.1109/access.2023.3346045"
+    },
+    {
+      "year": 2020,
+      "citation_count": 37,
+      "topic_bucket": "ml_dl_detection+defense_secure_coding",
+      "title": "A Detection and Prevention Technique on SQL Injection Attacks",
+      "doi_or_url": "10.1109/icca49400.2020.9022833"
+    },
+    {
+      "year": 2021,
+      "citation_count": 36,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+defense_secure_coding",
+      "title": "Web Attack Detection Using the Input Validation Method: DPDA Theory",
+      "doi_or_url": "10.32604/cmc.2021.016099"
+    },
+    {
+      "year": 2023,
+      "citation_count": 35,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+datasets_benchmarks",
+      "title": "Deep Learning Architecture for Detecting SQL Injection Attacks Based on RNN Autoencoder Model",
+      "doi_or_url": "10.3390/math11153286"
+    },
+    {
+      "year": 2024,
+      "citation_count": 35,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+datasets_benchmarks",
+      "title": "Detecting SQL injection attacks by binary gray wolf optimizer and machine learning algorithms",
+      "doi_or_url": "10.1007/s00521-024-09429-z"
+    },
+    {
+      "year": 2020,
+      "citation_count": 35,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+datasets_benchmarks",
+      "title": "Synthesis of a Machine Learning Model for Detecting Computer Attacks Based on the CICIDS2017 Dataset",
+      "doi_or_url": "10.15514/ispras-2020-32(5)-6"
+    },
+    {
+      "year": 2021,
+      "citation_count": 34,
+      "topic_bucket": "modern_surfaces+defense_secure_coding+surveys_root_causes",
+      "title": "SQL Injection Attacks Prevention System Technology: Review",
+      "doi_or_url": "10.9734/ajrcos/2021/v10i330242"
+    },
+    {
+      "year": 2020,
+      "citation_count": 33,
+      "topic_bucket": "surveys_root_causes",
+      "title": "Security issues and framework of electronic medical record: A review",
+      "doi_or_url": "10.11591/eei.v9i2.2064"
+    },
+    {
+      "year": 2021,
+      "citation_count": 33,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+evasion_waf_adversarial",
+      "title": "RAT: Reinforcement-Learning-Driven and Adaptive Testing for Vulnerability Discovery in Web Application Firewalls",
+      "doi_or_url": "10.1109/tdsc.2021.3095417"
+    },
+    {
+      "year": 2022,
+      "citation_count": 32,
+      "topic_bucket": "modern_surfaces+ml_dl_detection+evasion_waf_adversarial+defense_secure_coding+surveys_root_causes",
+      "title": "SQL Injection Attack Detection Using Machine Learning Algorithm",
+      "doi_or_url": "10.58496/mjcs/2022/002"
+    }
+  ]
+}

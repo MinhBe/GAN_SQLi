@@ -1,0 +1,350 @@
+{
+  "generated": "2026-05-26",
+  "source": "DOWNLOAD_MANIFEST_240526.md",
+  "note": "Danh sách tài liệu chưa có PDF trong Total_PDF1, tổ chức theo priority từ DOWNLOAD_MANIFEST.",
+  "total_missing": 49,
+  "categories": [
+    {
+      "name": "1. CORE GAN FOUNDATION (BẮT BUỘC)",
+      "priority": "CRITICAL",
+      "papers": [
+        {
+          "file": "Salimans_2016_Improved_GANs.pdf",
+          "title": "Improved Techniques for Training GANs",
+          "url": "https://arxiv.org/pdf/1606.03498",
+          "note": "Thiếu duy nhất trong core GAN foundation"
+        }
+      ]
+    },
+    {
+      "name": "2. TEXT GAN / DISCRETE SEQUENCE GAN (Missing rất quan trọng)",
+      "priority": "HIGH",
+      "papers": [
+        {
+          "file": "Kusner_2016_GSGAN.pdf",
+          "title": "GANs for Sequences of Discrete Elements",
+          "url": "https://arxiv.org/pdf/1611.04051"
+        },
+        {
+          "file": "Xu_2018_DPGAN.pdf",
+          "title": "DPGAN: Diversified Text Generation via GAN",
+          "url": "https://arxiv.org/pdf/1802.01345"
+        },
+        {
+          "file": "deMasson_2019_ScratchGAN.pdf",
+          "title": "ScratchGAN: Training GANs from Scratch for Text",
+          "url": "https://arxiv.org/pdf/1905.09922"
+        },
+        {
+          "file": "Caccia_2018_LanguageGANs.pdf",
+          "title": "Language GANs Falling Short",
+          "url": "https://arxiv.org/pdf/1810.02050"
+        },
+        {
+          "file": "Press_2017_Language_Modeling_GAN.pdf",
+          "title": "Language Modeling with GANs",
+          "url": "https://arxiv.org/pdf/1705.11029"
+        },
+        {
+          "file": "Subramanian_2018_Adversarial_Generation_Text.pdf",
+          "title": "Adversarial Generation of Natural Language",
+          "url": "https://arxiv.org/pdf/1804.07950"
+        },
+        {
+          "file": "Semeniuta_2018_SeqGAN_Evaluation.pdf",
+          "title": "On the Evaluation of Text GANs",
+          "url": "https://arxiv.org/pdf/1804.05491"
+        },
+        {
+          "file": "Guo_2017_Long_Text_SeqGAN.pdf",
+          "title": "Long Text Generation via SeqGAN",
+          "url": "https://arxiv.org/pdf/1709.08878"
+        },
+        {
+          "file": "Nie_2018_RelGAN.pdf",
+          "title": "RelGAN (2018 version - khác với Nie_2019_RelGAN)",
+          "url": "https://arxiv.org/pdf/1908.09257"
+        }
+      ]
+    },
+    {
+      "name": "3. TABULAR / STRUCTURED DATA GAN (BẮT BUỘC PHẢI CÓ)",
+      "priority": "CRITICAL",
+      "papers": [
+        {
+          "file": "Park_2018_TableGAN.pdf",
+          "title": "TableGAN: Synthesizing Tabular Data",
+          "url": "https://arxiv.org/pdf/1811.11264"
+        },
+        {
+          "file": "Choi_2017_medGAN.pdf",
+          "title": "medGAN: Medical Record Generation",
+          "url": "https://arxiv.org/pdf/1703.06490"
+        },
+        {
+          "file": "Xu_2019_TVAE.pdf",
+          "title": "TVAE: Tabular Variational Autoencoder",
+          "url": "https://arxiv.org/pdf/1907.00503"
+        },
+        {
+          "file": "Camino_2023_CopulaGAN.pdf",
+          "title": "CopulaGAN",
+          "url": "https://docs.sdv.dev/sdv/single-table-data/modeling/synthesizers/copulagansynthesizer"
+        },
+        {
+          "file": "Kotelnikov_2022_TabDDPM.pdf",
+          "title": "TabDDPM: Diffusion for Tabular Data",
+          "url": "https://arxiv.org/pdf/2209.15421"
+        },
+        {
+          "file": "Zhao_2021_STaSy.pdf",
+          "title": "STaSy: Score-based Tabular Data Synthesis",
+          "url": "https://arxiv.org/pdf/2107.06643"
+        },
+        {
+          "file": "Kim_2023_CoDi.pdf",
+          "title": "CoDi: Diffusion for Tabular Data",
+          "url": "https://arxiv.org/pdf/2302.05657"
+        },
+        {
+          "file": "Huang_2020_TabTransformer.pdf",
+          "title": "TabTransformer",
+          "url": "https://arxiv.org/pdf/2012.06678"
+        },
+        {
+          "file": "Gorishniy_2021_Revisiting_Tabular_DL.pdf",
+          "title": "Revisiting Deep Learning for Tabular Data",
+          "url": "https://arxiv.org/pdf/2106.11959"
+        }
+      ]
+    },
+    {
+      "name": "4. CYBERSECURITY GAN / OFFENSIVE GAN (MUST HAVE)",
+      "priority": "CRITICAL",
+      "papers": [
+        {
+          "file": "Hu_2017_MalGAN.pdf",
+          "title": "MalGAN: Adversarial Malware Generation",
+          "url": "https://arxiv.org/pdf/1702.05983"
+        },
+        {
+          "file": "Hitaj_2019_PassGAN.pdf",
+          "title": "PassGAN: Password Generation",
+          "url": "https://arxiv.org/pdf/1709.00440"
+        },
+        {
+          "file": "Anderson_2018_GANS_Malware.pdf",
+          "title": "GANs for Malware Generation",
+          "url": "https://arxiv.org/pdf/1802.04528"
+        },
+        {
+          "file": "Tran_2018_DeepDGA.pdf",
+          "title": "DeepDGA: Domain Generation via GAN",
+          "url": "https://arxiv.org/pdf/1806.03370"
+        },
+        {
+          "file": "Rigaki_2018_Malware_GAN_C2.pdf",
+          "title": "Malware C2 Traffic via GAN",
+          "url": "https://arxiv.org/pdf/1802.04528"
+        },
+        {
+          "file": "Rigaki_2018_GAN_Mimicry_Attacks.pdf",
+          "title": "Mimicry Attacks via GAN",
+          "url": "https://arxiv.org/pdf/1805.09190"
+        },
+        {
+          "file": "Suciu_2019_Exploring_Adversarial_Malware.pdf",
+          "title": "Exploring Adversarial Malware",
+          "url": "https://arxiv.org/pdf/1810.08280"
+        }
+      ]
+    },
+    {
+      "name": "5. IDS / IPS / NIDS / TRAFFIC GAN",
+      "priority": "HIGH",
+      "papers": [
+        {
+          "file": "Shahriar_2020_G_IDS.pdf",
+          "title": "G-IDS: GAN for IDS",
+          "url": "https://arxiv.org/pdf/2006.00676"
+        },
+        {
+          "file": "Menssouri_2025_CTGAN_IDS.pdf",
+          "title": "CTGAN for IDS (Menssouri)",
+          "url": "https://arxiv.org/pdf/2502.06031"
+        },
+        {
+          "file": "Hassan_2022_Adversarial_DDOS_CTGAN.pdf",
+          "title": "Adversarial DDOS with CTGAN",
+          "url": "https://arxiv.org/pdf/2212.14109"
+        },
+        {
+          "file": "Ferrag_2022_GAN_IDS_Survey.pdf",
+          "title": "GAN for IDS Survey",
+          "url": "https://arxiv.org/pdf/2112.09130"
+        },
+        {
+          "file": "Verkerken_2022_GAN_Imbalanced_IDS.pdf",
+          "title": "GAN for Imbalanced IDS",
+          "url": "https://arxiv.org/pdf/2205.00049"
+        },
+        {
+          "file": "Chawla_2002_SMOTE.pdf",
+          "title": "SMOTE",
+          "url": "https://arxiv.org/pdf/1106.1813"
+        },
+        {
+          "file": "Moustafa_2015_UNSW_NB15.pdf",
+          "title": "UNSW-NB15 Dataset",
+          "url": "https://research.unsw.edu.au/projects/unsw-nb15-dataset"
+        },
+        {
+          "file": "Sharafaldin_2018_CICIDS2017.pdf",
+          "title": "CICIDS2017 Dataset",
+          "url": "https://www.unb.ca/cic/datasets/ids-2017.html"
+        }
+      ]
+    },
+    {
+      "name": "6. ADVERSARIAL ML (PHẢI CÓ) - WAF bypass",
+      "priority": "CRITICAL",
+      "papers": [
+        {
+          "file": "Goodfellow_2015_FGSM.pdf",
+          "title": "FGSM: Explaining and Harnessing Adversarial Examples",
+          "url": "https://arxiv.org/pdf/1412.6572"
+        },
+        {
+          "file": "Madry_2018_PGD.pdf",
+          "title": "PGD: Towards Deep Learning Models Resistant to Adversarial Attacks",
+          "url": "https://arxiv.org/pdf/1706.06083"
+        },
+        {
+          "file": "Carlini_2017_CW_Attack.pdf",
+          "title": "Carlini-Wagner Attack",
+          "url": "https://arxiv.org/pdf/1608.04644"
+        },
+        {
+          "file": "Papernot_2016_Blackbox_Attacks.pdf",
+          "title": "Blackbox Adversarial Attacks",
+          "url": "https://arxiv.org/pdf/1602.02697"
+        },
+        {
+          "file": "Athalye_2018_Obfuscated_Gradients.pdf",
+          "title": "Obfuscated Gradients",
+          "url": "https://arxiv.org/pdf/1802.00420"
+        },
+        {
+          "file": "Xiao_2018_AdvGAN.pdf",
+          "title": "AdvGAN: Adversarial Example Generation",
+          "url": "https://arxiv.org/pdf/1801.02610"
+        },
+        {
+          "file": "Samangouei_2018_DefenseGAN.pdf",
+          "title": "DefenseGAN",
+          "url": "https://arxiv.org/pdf/1805.06605"
+        }
+      ]
+    },
+    {
+      "name": "7. DIFFUSION MODELS (MUST HAVE 2025+)",
+      "priority": "HIGH",
+      "papers": [
+        {
+          "file": "Ho_2020_DDPM.pdf",
+          "title": "DDPM: Denoising Diffusion Probabilistic Models",
+          "url": "https://arxiv.org/pdf/2006.11239"
+        },
+        {
+          "file": "Song_2021_Score_Based_Generative.pdf",
+          "title": "Score-Based Generative Modeling",
+          "url": "https://arxiv.org/pdf/2011.13456"
+        },
+        {
+          "file": "Tashiro_2021_CSDI.pdf",
+          "title": "CSDI: Conditional Score-based Diffusion for Imputation",
+          "url": "https://arxiv.org/pdf/2107.03502"
+        }
+      ]
+    },
+    {
+      "name": "8. LLM + SQL SECURITY + AGENTIC ATTACKS",
+      "priority": "HIGH",
+      "papers": [
+        {
+          "file": "SQLPrompt_2023.pdf",
+          "title": "SQLPrompt",
+          "url": "https://arxiv.org/pdf/2305.11755"
+        },
+        {
+          "file": "DIN_SQL_2023.pdf",
+          "title": "DIN-SQL",
+          "url": "https://arxiv.org/pdf/2304.11015"
+        },
+        {
+          "file": "RESDSQL_2023.pdf",
+          "title": "RESDSQL",
+          "url": "https://arxiv.org/pdf/2302.05965"
+        },
+        {
+          "file": "CodeT5_2021.pdf",
+          "title": "CodeT5",
+          "url": "https://arxiv.org/pdf/2109.00859"
+        },
+        {
+          "file": "Text2SQL_Survey_2022.pdf",
+          "title": "Text-to-SQL Survey",
+          "url": "https://arxiv.org/pdf/2208.13629"
+        }
+      ]
+    },
+    {
+      "name": "9. ANOMALY DETECTION GAN",
+      "priority": "MEDIUM",
+      "papers": [
+        {
+          "file": "Schlegl_2017_AnoGAN.pdf",
+          "title": "AnoGAN",
+          "url": "https://arxiv.org/pdf/1703.05921"
+        },
+        {
+          "file": "Akcay_2018_GANomaly.pdf",
+          "title": "GANomaly",
+          "url": "https://arxiv.org/pdf/1805.06725"
+        },
+        {
+          "file": "Akcay_2019_SkipGANomaly.pdf",
+          "title": "SkipGANomaly",
+          "url": "https://arxiv.org/pdf/1901.08954"
+        }
+      ]
+    },
+    {
+      "name": "10. IE-GAN & BERT-GAN - Target papers (có metadata, chưa có PDF)",
+      "priority": "HIGH",
+      "note": "Đã crawl metadata, cần tải PDF thủ công (IEEE paywall / journal robots.txt)",
+      "papers": [
+        {
+          "file": "Xu_2023_IE_GAN.pdf",
+          "title": "SQL injection attack sample generation based on IE-GAN",
+          "authors": "Mingdi Xu et al.",
+          "year": 2023,
+          "doi": "10.1109/trustcom60117.2023.00142",
+          "venue": "IEEE TrustCom 2023",
+          "url": "https://doi.org/10.1109/trustcom60117.2023.00142",
+          "access_notes": "IEEE paywall - cần tải thủ công"
+        },
+        {
+          "file": "Luo_2024_BERT_GAN.pdf",
+          "title": "Research on SQL injection attacks detection method based on BERT-GAN",
+          "authors": "LUO Yiming, TAN Yubo, LI Jianping",
+          "year": 2024,
+          "doi": "10.19304/J.ISSN1000-7180.2023.0721",
+          "venue": "Microelectronics & Computer",
+          "url": "https://mc.spacejournal.cn/cn/article/pdf/preview/10.19304/J.ISSN1000-7180.2023.0721.pdf",
+          "access_notes": "robots.txt blocks crawler - cần tải thủ công"
+        }
+      ]
+    }
+  ]
+}

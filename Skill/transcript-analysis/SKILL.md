@@ -9,6 +9,11 @@ description: Extract structured knowledge (JSON nodes) from raw transcripts (boo
 
 ### 1. Setup & Preprocess
 - Ensure the domain folder and `knowledge-graph.json` exist.
+- If the work involves audio transcription, local LLMs, OCR, VLMs, CUDA/GPU,
+  or model-cache checks, delegate runtime inspection to:
+  ```bash
+  python Skill/model-runtime-advisor/scripts/inspect_runtime.py --workload stt
+  ```
 - If transcript has timestamps `[MM:SS]`, run:
   ```bash
   python scripts/preprocess_transcript.py --input transcript.txt --output clean.txt

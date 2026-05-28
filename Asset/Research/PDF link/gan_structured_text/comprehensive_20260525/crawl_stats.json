@@ -1,0 +1,518 @@
+{
+  "full_count": 8011,
+  "filtered_count": 1662,
+  "sources_full": [
+    [
+      "openalex",
+      5254
+    ],
+    [
+      "crossref",
+      2757
+    ]
+  ],
+  "sources_filtered": [
+    [
+      "openalex",
+      1253
+    ],
+    [
+      "crossref",
+      409
+    ]
+  ],
+  "bucket_counts": [
+    [
+      "structured_tabular",
+      1091
+    ],
+    [
+      "relational_graph",
+      455
+    ],
+    [
+      "text_discrete_sequence",
+      291
+    ],
+    [
+      "ehr_health",
+      258
+    ],
+    [
+      "time_series",
+      188
+    ]
+  ],
+  "years_filtered": [
+    [
+      2023,
+      320
+    ],
+    [
+      2024,
+      306
+    ],
+    [
+      2025,
+      290
+    ],
+    [
+      2022,
+      197
+    ],
+    [
+      2021,
+      153
+    ],
+    [
+      2020,
+      119
+    ],
+    [
+      2026,
+      93
+    ],
+    [
+      2019,
+      79
+    ],
+    [
+      2018,
+      66
+    ],
+    [
+      2017,
+      35
+    ],
+    [
+      2015,
+      2
+    ],
+    [
+      2014,
+      1
+    ],
+    [
+      2016,
+      1
+    ]
+  ],
+  "countries_filtered": [
+    [
+      "CN",
+      301
+    ],
+    [
+      "US",
+      242
+    ],
+    [
+      "GB",
+      94
+    ],
+    [
+      "IN",
+      74
+    ],
+    [
+      "KR",
+      67
+    ],
+    [
+      "CA",
+      60
+    ],
+    [
+      "DE",
+      44
+    ],
+    [
+      "AU",
+      37
+    ],
+    [
+      "ES",
+      33
+    ],
+    [
+      "IT",
+      30
+    ],
+    [
+      "JP",
+      28
+    ],
+    [
+      "SA",
+      27
+    ],
+    [
+      "PK",
+      26
+    ],
+    [
+      "FR",
+      25
+    ],
+    [
+      "CH",
+      23
+    ],
+    [
+      "SG",
+      23
+    ],
+    [
+      "NL",
+      22
+    ],
+    [
+      "MY",
+      21
+    ],
+    [
+      "TW",
+      18
+    ],
+    [
+      "HK",
+      17
+    ],
+    [
+      "GR",
+      15
+    ],
+    [
+      "TR",
+      15
+    ],
+    [
+      "IR",
+      13
+    ],
+    [
+      "NO",
+      12
+    ],
+    [
+      "SE",
+      12
+    ],
+    [
+      "BD",
+      11
+    ],
+    [
+      "AE",
+      10
+    ],
+    [
+      "ID",
+      10
+    ],
+    [
+      "JO",
+      10
+    ],
+    [
+      "PT",
+      8
+    ]
+  ],
+  "oa_filtered": [
+    [
+      "True",
+      920
+    ],
+    [
+      "None",
+      409
+    ],
+    [
+      "False",
+      333
+    ]
+  ],
+  "top_filtered": [
+    {
+      "year": 2014,
+      "citation_count": 4547,
+      "topic_bucket": "relational_graph",
+      "title": "Generative Adversarial Networks",
+      "doi_or_url": "10.48550/arxiv.1406.2661"
+    },
+    {
+      "year": 2017,
+      "citation_count": 2292,
+      "topic_bucket": "structured_tabular+text_discrete_sequence",
+      "title": "SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient",
+      "doi_or_url": "10.1609/aaai.v31i1.10804"
+    },
+    {
+      "year": 2017,
+      "citation_count": 1511,
+      "topic_bucket": "text_discrete_sequence",
+      "title": "Improved Training of Wasserstein GANs",
+      "doi_or_url": "10.48550/arxiv.1704.00028"
+    },
+    {
+      "year": 2023,
+      "citation_count": 923,
+      "topic_bucket": "ehr_health+relational_graph",
+      "title": "Deep learning modelling techniques: current progress, applications, advantages, and challenges",
+      "doi_or_url": "10.1007/s10462-023-10466-8"
+    },
+    {
+      "year": 2020,
+      "citation_count": 843,
+      "topic_bucket": "text_discrete_sequence",
+      "title": "MaskGAN: Towards Diverse and Interactive Facial Image Manipulation",
+      "doi_or_url": "10.1109/cvpr42600.2020.00559"
+    },
+    {
+      "year": 2020,
+      "citation_count": 769,
+      "topic_bucket": "relational_graph",
+      "title": "CovidGAN: Data Augmentation Using Auxiliary Classifier GAN for Improved Covid-19 Detection",
+      "doi_or_url": "10.1109/access.2020.2994762"
+    },
+    {
+      "year": 2023,
+      "citation_count": 766,
+      "topic_bucket": "structured_tabular",
+      "title": "A survey on deep learning tools dealing with data scarcity: definitions, challenges, solutions, tips, and applications",
+      "doi_or_url": "10.1186/s40537-023-00727-2"
+    },
+    {
+      "year": 2019,
+      "citation_count": 675,
+      "topic_bucket": "structured_tabular",
+      "title": "Recent Progress on Generative Adversarial Networks (GANs): A Survey",
+      "doi_or_url": "10.1109/access.2019.2905015"
+    },
+    {
+      "year": 2018,
+      "citation_count": 605,
+      "topic_bucket": "relational_graph",
+      "title": "GraphGAN: Graph Representation Learning With Generative Adversarial Nets",
+      "doi_or_url": "10.1609/aaai.v32i1.11872"
+    },
+    {
+      "year": 2023,
+      "citation_count": 558,
+      "topic_bucket": "text_discrete_sequence",
+      "title": "The Power of Generative AI: A Review of Requirements, Models, Input–Output Formats, Evaluation Metrics, and Challenges",
+      "doi_or_url": "10.3390/fi15080260"
+    },
+    {
+      "year": 2020,
+      "citation_count": 554,
+      "topic_bucket": "ehr_health",
+      "title": "Within the Lack of Chest COVID-19 X-ray Dataset: A Novel Detection Model Based on GAN and Deep Transfer Learning",
+      "doi_or_url": "10.3390/sym12040651"
+    },
+    {
+      "year": 2020,
+      "citation_count": 550,
+      "topic_bucket": "structured_tabular+ehr_health",
+      "title": "Artificial Intelligence and COVID-19: Deep Learning Approaches for Diagnosis and Treatment",
+      "doi_or_url": "10.1109/access.2020.3001973"
+    },
+    {
+      "year": 2017,
+      "citation_count": 544,
+      "topic_bucket": "relational_graph",
+      "title": "Reconstruction of three-dimensional porous media using generative adversarial neural networks",
+      "doi_or_url": "10.1103/physreve.96.043309"
+    },
+    {
+      "year": 2019,
+      "citation_count": 537,
+      "topic_bucket": "ehr_health",
+      "title": "Electrocardiogram generation with a bidirectional LSTM-CNN generative adversarial network",
+      "doi_or_url": "10.1038/s41598-019-42516-z"
+    },
+    {
+      "year": 2019,
+      "citation_count": 511,
+      "topic_bucket": "relational_graph",
+      "title": "Deep Multimodal Representation Learning: A Survey",
+      "doi_or_url": "10.1109/access.2019.2916887"
+    },
+    {
+      "year": 2017,
+      "citation_count": 498,
+      "topic_bucket": "structured_tabular+text_discrete_sequence",
+      "title": "Objective-Reinforced Generative Adversarial Networks (ORGAN) for Sequence Generation Models",
+      "doi_or_url": "10.48550/arxiv.1705.10843"
+    },
+    {
+      "year": 2018,
+      "citation_count": 477,
+      "topic_bucket": "structured_tabular+relational_graph",
+      "title": "MolGAN: An implicit generative model for small molecular graphs",
+      "doi_or_url": "10.48550/arxiv.1805.11973"
+    },
+    {
+      "year": 2023,
+      "citation_count": 477,
+      "topic_bucket": "ehr_health",
+      "title": "How Artificial Intelligence Is Shaping Medical Imaging Technology: A Survey of Innovations and Applications",
+      "doi_or_url": "10.3390/bioengineering10121435"
+    },
+    {
+      "year": 2018,
+      "citation_count": 433,
+      "topic_bucket": "relational_graph",
+      "title": "Cross-Modality Person Re-Identification with Generative Adversarial Training",
+      "doi_or_url": "10.24963/ijcai.2018/94"
+    },
+    {
+      "year": 2023,
+      "citation_count": 429,
+      "topic_bucket": "relational_graph",
+      "title": "Machine Learning Methods for Small Data Challenges in Molecular Science",
+      "doi_or_url": "10.1021/acs.chemrev.3c00189"
+    },
+    {
+      "year": 2023,
+      "citation_count": 424,
+      "topic_bucket": "ehr_health",
+      "title": "Medical image analysis using deep learning algorithms",
+      "doi_or_url": "10.3389/fpubh.2023.1273253"
+    },
+    {
+      "year": 2019,
+      "citation_count": 424,
+      "topic_bucket": "relational_graph",
+      "title": "Cancer Diagnosis Using Deep Learning: A Bibliographic Review",
+      "doi_or_url": "10.3390/cancers11091235"
+    },
+    {
+      "year": 2018,
+      "citation_count": 420,
+      "topic_bucket": "structured_tabular+text_discrete_sequence",
+      "title": "Long Text Generation via Adversarial Training with Leaked Information",
+      "doi_or_url": "10.1609/aaai.v32i1.11957"
+    },
+    {
+      "year": 2019,
+      "citation_count": 416,
+      "topic_bucket": "structured_tabular",
+      "title": "A de novo molecular generation method using latent vector based generative adversarial network",
+      "doi_or_url": "10.1186/s13321-019-0397-9"
+    },
+    {
+      "year": 2023,
+      "citation_count": 400,
+      "topic_bucket": "relational_graph",
+      "title": "A Comprehensive Survey of AI-Generated Content (AIGC): A History of Generative AI from GAN to ChatGPT",
+      "doi_or_url": "10.48550/arxiv.2303.04226"
+    },
+    {
+      "year": 2019,
+      "citation_count": 398,
+      "topic_bucket": "relational_graph",
+      "title": "Recent Advances in Electrochemical Sensors for Detecting Toxic Gases: NO2, SO2 and H2S",
+      "doi_or_url": "10.3390/s19040905"
+    },
+    {
+      "year": 2018,
+      "citation_count": 393,
+      "topic_bucket": "structured_tabular",
+      "title": "Adversarially Learned Anomaly Detection",
+      "doi_or_url": "10.1109/icdm.2018.00088"
+    },
+    {
+      "year": 2018,
+      "citation_count": 366,
+      "topic_bucket": "structured_tabular+relational_graph",
+      "title": "Training‐Image Based Geostatistical Inversion Using a Spatial Generative Adversarial Neural Network",
+      "doi_or_url": "10.1002/2017wr022148"
+    },
+    {
+      "year": 2020,
+      "citation_count": 365,
+      "topic_bucket": "structured_tabular+ehr_health",
+      "title": "Generation and evaluation of synthetic patient data",
+      "doi_or_url": "10.1186/s12874-020-00977-1"
+    },
+    {
+      "year": 2022,
+      "citation_count": 358,
+      "topic_bucket": "structured_tabular",
+      "title": "Survey on Synthetic Data Generation, Evaluation Methods and GANs",
+      "doi_or_url": "10.3390/math10152733"
+    },
+    {
+      "year": 2017,
+      "citation_count": 342,
+      "topic_bucket": "ehr_health",
+      "title": "Generating Multi-label Discrete Patient Records using Generative Adversarial Networks",
+      "doi_or_url": "10.48550/arxiv.1703.06490"
+    },
+    {
+      "year": 2020,
+      "citation_count": 312,
+      "topic_bucket": "relational_graph",
+      "title": "Generative adversarial network for road damage detection",
+      "doi_or_url": "10.1111/mice.12561"
+    },
+    {
+      "year": 2016,
+      "citation_count": 294,
+      "topic_bucket": "structured_tabular+text_discrete_sequence",
+      "title": "SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient",
+      "doi_or_url": "10.48550/arxiv.1609.05473"
+    },
+    {
+      "year": 2024,
+      "citation_count": 287,
+      "topic_bucket": "ehr_health+text_discrete_sequence",
+      "title": "Advancements in Generative AI: A Comprehensive Review of GANs, GPT, Autoencoders, Diffusion Model, and Transformers",
+      "doi_or_url": "10.1109/access.2024.3397775"
+    },
+    {
+      "year": 2024,
+      "citation_count": 283,
+      "topic_bucket": "text_discrete_sequence",
+      "title": "Generative AI in Medical Practice: In-Depth Exploration of Privacy and Security Challenges",
+      "doi_or_url": "10.2196/53008"
+    },
+    {
+      "year": 2020,
+      "citation_count": 276,
+      "topic_bucket": "structured_tabular+ehr_health",
+      "title": "Anonymization Through Data Synthesis Using Generative Adversarial Networks (ADS-GAN)",
+      "doi_or_url": "10.1109/jbhi.2020.2980262"
+    },
+    {
+      "year": 2017,
+      "citation_count": 272,
+      "topic_bucket": "time_series",
+      "title": "Temporal Generative Adversarial Nets with Singular Value Clipping",
+      "doi_or_url": "10.1109/iccv.2017.308"
+    },
+    {
+      "year": 2024,
+      "citation_count": 262,
+      "topic_bucket": "ehr_health+relational_graph",
+      "title": "Mineral commodity summaries 2024",
+      "doi_or_url": "10.3133/mcs2024"
+    },
+    {
+      "year": 2020,
+      "citation_count": 261,
+      "topic_bucket": "structured_tabular+ehr_health",
+      "title": "Realistic in silico generation and augmentation of single-cell RNA-seq data using generative adversarial networks",
+      "doi_or_url": "10.1038/s41467-019-14018-z"
+    },
+    {
+      "year": 2021,
+      "citation_count": 260,
+      "topic_bucket": "structured_tabular",
+      "title": "Conditional Wasserstein GAN-based oversampling of tabular data for imbalanced learning",
+      "doi_or_url": "10.1016/j.eswa.2021.114582"
+    }
+  ]
+}

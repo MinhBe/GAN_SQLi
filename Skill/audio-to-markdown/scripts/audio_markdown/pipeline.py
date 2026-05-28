@@ -3,15 +3,25 @@
 from __future__ import annotations
 
 import shutil
+import sys
 import tempfile
 from pathlib import Path
-from typing import Any
 
-from .models import QUALITY_FAILED, QUALITY_REVIEW, QUALITY_USABLE
+from .models import QUALITY_FAILED, QUALITY_USABLE
 from .quality import assess_quality
 from .repair import repair_vietnamese_segments
 from .render import render_analysis_file, render_markdown
 from .stt import choose_stt, inspect_audio, normalize, probe_duration, run_advisor
+
+
+def print_output_path(output: Path) -> None:
+    text = str(output)
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        encoded = text.encode(sys.stdout.encoding or "utf-8", errors="backslashreplace")
+        sys.stdout.buffer.write(encoded + b"\n")
+        sys.stdout.flush()
 
 
 def run_pipeline(
@@ -48,7 +58,7 @@ def run_pipeline(
 
         duration = audio_info.get("duration_seconds") or probe_duration(normalized_path)
         quality_report = assess_quality(stt.get("segments", []), duration)
-        if repair.get("mojibake_detected") and quality_report.status == QUALITY_USABLE:
+        if repair.get("repair_applied") and quality_report.status == QUALITY_USABLE:
             quality_report.status = QUALITY_REVIEW
             quality_report.reasons.append("Vietnamese mojibake was detected and repaired.")
         if not stt.get("ok") and quality_report.status != QUALITY_FAILED:
@@ -72,6 +82,5 @@ def run_pipeline(
     finally:
         temp_dir_obj.cleanup()
 
-    print(str(output))
+    print_output_path(output)
     return 0 if stt.get("ok") and quality["status"] != QUALITY_FAILED else 2
-

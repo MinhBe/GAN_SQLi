@@ -1,0 +1,242 @@
+[
+  {
+    "id": "q001_gan_tabular_generation",
+    "query": "GAN tabular data generation"
+  },
+  {
+    "id": "q002_generative_adversarial_tabular",
+    "query": "generative adversarial networks tabular data"
+  },
+  {
+    "id": "q003_synthetic_tabular_gan",
+    "query": "synthetic tabular data GAN"
+  },
+  {
+    "id": "q004_tabular_data_synthesis_gan",
+    "query": "tabular data synthesis generative adversarial network"
+  },
+  {
+    "id": "q005_structured_data_gan",
+    "query": "structured data generative adversarial network"
+  },
+  {
+    "id": "q006_relational_data_gan",
+    "query": "relational data generation GAN"
+  },
+  {
+    "id": "q007_database_gan",
+    "query": "database data generation generative adversarial network"
+  },
+  {
+    "id": "q008_categorical_data_gan",
+    "query": "categorical data generative adversarial network"
+  },
+  {
+    "id": "q009_mixed_type_tabular_gan",
+    "query": "mixed-type tabular data GAN"
+  },
+  {
+    "id": "q010_privacy_tabular_gan",
+    "query": "privacy preserving synthetic tabular data GAN"
+  },
+  {
+    "id": "q011_imbalanced_tabular_gan",
+    "query": "imbalanced tabular data GAN oversampling"
+  },
+  {
+    "id": "q012_credit_fraud_tabular_gan",
+    "query": "tabular GAN credit fraud synthetic data"
+  },
+  {
+    "id": "q013_network_intrusion_tabular_gan",
+    "query": "tabular GAN intrusion detection synthetic data"
+  },
+  {
+    "id": "q014_iot_botnet_ctgan",
+    "query": "CTGAN IoT botnet tabular data"
+  },
+  {
+    "id": "q015_medical_tabular_gan",
+    "query": "medical tabular data generative adversarial network"
+  },
+  {
+    "id": "q016_ehr_gan",
+    "query": "electronic health records GAN synthetic data"
+  },
+  {
+    "id": "q017_patient_records_gan",
+    "query": "patient records generative adversarial network"
+  },
+  {
+    "id": "q018_medgan",
+    "query": "medGAN synthetic electronic health records"
+  },
+  {
+    "id": "q019_ehrgan",
+    "query": "EHR-GAN synthetic patient records"
+  },
+  {
+    "id": "q020_healthcare_synthetic_gan",
+    "query": "healthcare synthetic data GAN electronic health records"
+  },
+  {
+    "id": "q021_ctgan",
+    "query": "CTGAN tabular data"
+  },
+  {
+    "id": "q022_tablegan",
+    "query": "TableGAN synthetic data"
+  },
+  {
+    "id": "q023_tgan",
+    "query": "TGAN tabular generative adversarial network"
+  },
+  {
+    "id": "q024_ctabgan",
+    "query": "CTAB-GAN tabular data synthesis"
+  },
+  {
+    "id": "q025_ctabgan_plus",
+    "query": "CTAB-GAN+ tabular data synthesis"
+  },
+  {
+    "id": "q026_ads_gan",
+    "query": "ADS-GAN synthetic data generation"
+  },
+  {
+    "id": "q027_ganblr",
+    "query": "GANBLR tabular data generation"
+  },
+  {
+    "id": "q028_bayesian_network_gan_tabular",
+    "query": "Bayesian network GAN tabular data"
+  },
+  {
+    "id": "q029_rctgan",
+    "query": "RCTGAN relational tabular data"
+  },
+  {
+    "id": "q030_table_evaluator_gan",
+    "query": "tabular GAN synthetic data evaluation"
+  },
+  {
+    "id": "q031_graph_gan_structured",
+    "query": "graph generative adversarial network structured data"
+  },
+  {
+    "id": "q032_molgan",
+    "query": "MolGAN graph generative adversarial network"
+  },
+  {
+    "id": "q033_time_series_gan_structured",
+    "query": "time series GAN structured data synthesis"
+  },
+  {
+    "id": "q034_text_generation_gan",
+    "query": "generative adversarial network text generation"
+  },
+  {
+    "id": "q035_adversarial_text_generation",
+    "query": "adversarial text generation GAN"
+  },
+  {
+    "id": "q036_natural_language_generation_gan",
+    "query": "natural language generation generative adversarial network"
+  },
+  {
+    "id": "q037_discrete_sequence_gan",
+    "query": "discrete sequence generation GAN"
+  },
+  {
+    "id": "q038_sequence_gan_policy_gradient",
+    "query": "sequence generative adversarial nets policy gradient"
+  },
+  {
+    "id": "q039_seqgan",
+    "query": "SeqGAN text generation"
+  },
+  {
+    "id": "q040_textgan",
+    "query": "TextGAN natural language generation"
+  },
+  {
+    "id": "q041_rankgan",
+    "query": "RankGAN language generation"
+  },
+  {
+    "id": "q042_leakgan",
+    "query": "LeakGAN long text generation"
+  },
+  {
+    "id": "q043_maligan",
+    "query": "MaliGAN text generation"
+  },
+  {
+    "id": "q044_maskgan",
+    "query": "MaskGAN text generation"
+  },
+  {
+    "id": "q045_relgan",
+    "query": "RelGAN text generation"
+  },
+  {
+    "id": "q046_sentigan",
+    "query": "SentiGAN sentimental text generation"
+  },
+  {
+    "id": "q047_scratchgan",
+    "query": "ScratchGAN text generation"
+  },
+  {
+    "id": "q048_stepgan",
+    "query": "StepGAN text generation"
+  },
+  {
+    "id": "q049_text_discrete_gumbel_gan",
+    "query": "Gumbel Softmax GAN discrete text generation"
+  },
+  {
+    "id": "q050_text_vae_gan",
+    "query": "VAE GAN text generation discrete sequences"
+  },
+  {
+    "id": "q051_nlp_gan_review",
+    "query": "GAN natural language processing survey"
+  },
+  {
+    "id": "q052_gan_discrete_data",
+    "query": "generative adversarial networks discrete data"
+  },
+  {
+    "id": "q053_adversarial_sequence_generation",
+    "query": "adversarial sequence generation generative adversarial network"
+  },
+  {
+    "id": "q054_objective_reinforced_gan",
+    "query": "Objective-Reinforced Generative Adversarial Networks sequence generation"
+  },
+  {
+    "id": "q055_organ_sequence",
+    "query": "ORGAN sequence generation generative adversarial network"
+  },
+  {
+    "id": "q056_sql_gan_text",
+    "query": "SQL query generation GAN text"
+  },
+  {
+    "id": "q057_code_generation_gan",
+    "query": "code generation generative adversarial network discrete sequence"
+  },
+  {
+    "id": "q058_query_generation_gan",
+    "query": "query generation generative adversarial network text"
+  },
+  {
+    "id": "q059_structured_text_gan",
+    "query": "structured text generation GAN"
+  },
+  {
+    "id": "q060_synthetic_data_generation_gan_survey",
+    "query": "synthetic data generation GAN survey tabular text"
+  }
+]

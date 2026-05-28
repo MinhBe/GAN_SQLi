@@ -1,0 +1,242 @@
+[
+  {
+    "id": "q001_recent_sqli_survey",
+    "query": "SQL injection survey recent trends"
+  },
+  {
+    "id": "q002_sqli_systematic_review",
+    "query": "SQL injection systematic literature review"
+  },
+  {
+    "id": "q003_sqli_detection_recent",
+    "query": "SQL injection detection recent"
+  },
+  {
+    "id": "q004_sqli_prevention_recent",
+    "query": "SQL injection prevention recent"
+  },
+  {
+    "id": "q005_sqli_vulnerabilities_current",
+    "query": "SQL injection vulnerabilities current web applications"
+  },
+  {
+    "id": "q006_sqli_variants",
+    "query": "SQL injection variants blind time based error based union boolean"
+  },
+  {
+    "id": "q007_blind_sqli",
+    "query": "blind SQL injection detection prevention"
+  },
+  {
+    "id": "q008_time_based_sqli",
+    "query": "time based SQL injection"
+  },
+  {
+    "id": "q009_boolean_based_sqli",
+    "query": "boolean based SQL injection"
+  },
+  {
+    "id": "q010_error_based_sqli",
+    "query": "error based SQL injection"
+  },
+  {
+    "id": "q011_union_based_sqli",
+    "query": "union based SQL injection"
+  },
+  {
+    "id": "q012_second_order_sqli",
+    "query": "second order SQL injection"
+  },
+  {
+    "id": "q013_stored_sqli",
+    "query": "stored SQL injection second order"
+  },
+  {
+    "id": "q014_no_sql_injection",
+    "query": "NoSQL injection survey detection"
+  },
+  {
+    "id": "q015_orm_injection",
+    "query": "ORM injection SQL injection"
+  },
+  {
+    "id": "q016_api_sqli",
+    "query": "API SQL injection vulnerabilities"
+  },
+  {
+    "id": "q017_rest_sqli",
+    "query": "REST API SQL injection"
+  },
+  {
+    "id": "q018_graphql_sqli",
+    "query": "GraphQL SQL injection"
+  },
+  {
+    "id": "q019_microservices_sqli",
+    "query": "microservices SQL injection"
+  },
+  {
+    "id": "q020_cloud_sqli",
+    "query": "cloud SQL injection web applications"
+  },
+  {
+    "id": "q021_serverless_sqli",
+    "query": "serverless SQL injection"
+  },
+  {
+    "id": "q022_text_to_sql_injection",
+    "query": "Text-to-SQL SQL injection"
+  },
+  {
+    "id": "q023_llm_sqli",
+    "query": "large language model SQL injection"
+  },
+  {
+    "id": "q024_ai_generated_code_sqli",
+    "query": "AI generated code SQL injection vulnerability"
+  },
+  {
+    "id": "q025_prompt_to_sql_injection",
+    "query": "prompt to SQL injection"
+  },
+  {
+    "id": "q026_sqli_llm_detection",
+    "query": "LLM SQL injection detection"
+  },
+  {
+    "id": "q027_machine_learning_sqli",
+    "query": "SQL injection machine learning detection"
+  },
+  {
+    "id": "q028_deep_learning_sqli",
+    "query": "SQL injection deep learning detection"
+  },
+  {
+    "id": "q029_transformer_sqli",
+    "query": "SQL injection transformer detection"
+  },
+  {
+    "id": "q030_bert_sqli",
+    "query": "BERT SQL injection detection"
+  },
+  {
+    "id": "q031_lstm_sqli",
+    "query": "LSTM SQL injection detection"
+  },
+  {
+    "id": "q032_cnn_sqli",
+    "query": "CNN SQL injection detection"
+  },
+  {
+    "id": "q033_autoencoder_sqli",
+    "query": "SQL injection autoencoder detection"
+  },
+  {
+    "id": "q034_gan_sqli",
+    "query": "SQL injection GAN adversarial generation"
+  },
+  {
+    "id": "q035_adversarial_sqli",
+    "query": "adversarial SQL injection evasion detection"
+  },
+  {
+    "id": "q036_waf_sqli_bypass",
+    "query": "web application firewall SQL injection bypass"
+  },
+  {
+    "id": "q037_sqli_obfuscation",
+    "query": "SQL injection obfuscation evasion"
+  },
+  {
+    "id": "q038_sqli_payload_generation",
+    "query": "SQL injection payload generation"
+  },
+  {
+    "id": "q039_sqli_dataset",
+    "query": "SQL injection dataset benchmark"
+  },
+  {
+    "id": "q040_sqli_benchmark",
+    "query": "SQL injection detection benchmark dataset"
+  },
+  {
+    "id": "q041_sqli_static_analysis",
+    "query": "SQL injection static analysis"
+  },
+  {
+    "id": "q042_sqli_dynamic_analysis",
+    "query": "SQL injection dynamic analysis"
+  },
+  {
+    "id": "q043_sqli_taint_analysis",
+    "query": "SQL injection taint analysis"
+  },
+  {
+    "id": "q044_sqli_fuzzing",
+    "query": "SQL injection fuzzing"
+  },
+  {
+    "id": "q045_sqli_vapt",
+    "query": "SQL injection vulnerability assessment penetration testing"
+  },
+  {
+    "id": "q046_sqli_secure_coding",
+    "query": "SQL injection secure coding parameterized queries"
+  },
+  {
+    "id": "q047_sqli_prepared_statements",
+    "query": "SQL injection prepared statements parameterized queries"
+  },
+  {
+    "id": "q048_sqli_input_validation",
+    "query": "SQL injection input validation sanitization"
+  },
+  {
+    "id": "q049_sqli_still_prevalent",
+    "query": "why SQL injection still prevalent"
+  },
+  {
+    "id": "q050_sqli_web_security",
+    "query": "web application security SQL injection recent"
+  },
+  {
+    "id": "q051_sqli_owasp",
+    "query": "OWASP SQL injection 2021 2023 2024"
+  },
+  {
+    "id": "q052_sqli_cwe89",
+    "query": "CWE-89 SQL injection recent vulnerabilities"
+  },
+  {
+    "id": "q053_sqli_cve_analysis",
+    "query": "SQL injection CVE analysis"
+  },
+  {
+    "id": "q054_sqli_cms",
+    "query": "SQL injection CMS plugin vulnerabilities"
+  },
+  {
+    "id": "q055_wordpress_sqli",
+    "query": "WordPress plugin SQL injection vulnerabilities"
+  },
+  {
+    "id": "q056_ecommerce_sqli",
+    "query": "e-commerce SQL injection vulnerabilities"
+  },
+  {
+    "id": "q057_iot_sqli",
+    "query": "IoT SQL injection web interface"
+  },
+  {
+    "id": "q058_mobile_backend_sqli",
+    "query": "mobile application backend SQL injection"
+  },
+  {
+    "id": "q059_sqli_training_education",
+    "query": "SQL injection developer education secure coding"
+  },
+  {
+    "id": "q060_sqli_root_causes",
+    "query": "SQL injection root causes software development"
+  }
+]

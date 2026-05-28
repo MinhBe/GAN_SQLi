@@ -1,0 +1,58 @@
+{
+  "task": "Convert all PDFs under C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Research\\PDF to OCR output under C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Research\\OCR",
+  "run_timestamp": "2026-05-25T02:38:17.9370180+07:00",
+  "status": "not_converted_no_source_pdfs",
+  "input_root": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Research\\PDF",
+  "output_root": "C:\\Users\\Admin\\Documents\\GAN_SQLi\\Asset\\Research\\OCR",
+  "source_scan": {
+    "pdf_files_found": 0,
+    "jsonl_metadata_files_found": 154,
+    "metadata_records_scanned": 91980,
+    "metadata_records_with_pdf_url": 57185,
+    "notes": [
+      "Recursive file scan found no files ending in .pdf under the input root.",
+      "The input root currently contains crawler metadata and reports rather than downloaded PDF files.",
+      "Existing report Asset\\Research\\PDF\\gan_structured_text\\comprehensive_20260525\\COMPREHENSIVE_SEARCH_REPORT.md states that the crawl was metadata only and no PDFs were downloaded."
+    ]
+  },
+  "ocr_environment": {
+    "python": "3.11.9",
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "engines_available": [
+      "native_pdf",
+      "easyocr",
+      "tesseract",
+      "pytesseract_wrapper",
+      "rapidocr",
+      "paddleocr",
+      "surya",
+      "marker",
+      "doctr"
+    ],
+    "runtime_verdict": "local-limited; OCR dependencies available"
+  },
+  "conversion": {
+    "mode_requested": "auto",
+    "files_attempted": 0,
+    "files_succeeded": 0,
+    "files_failed": 0,
+    "outputs_written": []
+  },
+  "quality_check": {
+    "performed": true,
+    "readability_result": "not_applicable_no_outputs",
+    "criteria": [
+      "Output file exists",
+      "Extracted text length is sufficient",
+      "Per-page output is not empty or suspiciously short",
+      "Text is human-readable enough for downstream review"
+    ],
+    "readable_outputs": 0,
+    "weak_outputs": 0,
+    "failed_outputs": 0
+  },
+  "recommended_next_step": {
+    "action": "Download open-access PDFs from metadata pdf_url fields into the input tree, then rerun OCR_PDF over those downloaded .pdf files.",
+    "caution": "There are 57185 metadata records with pdf_url values, so downloading all URLs would be a separate large network job and may include publisher access restrictions, duplicates, and non-PDF endpoints."
+  }
+}

@@ -47,6 +47,17 @@ def repair_text_candidate(text: str) -> str:
             candidates.append(text.encode(encoding, errors="ignore").decode("utf-8", errors="ignore"))
         except UnicodeError:
             pass
+    try:
+        raw = bytearray()
+        for char in text:
+            codepoint = ord(char)
+            if codepoint <= 0xFF:
+                raw.append(codepoint)
+            else:
+                raw.extend(char.encode("cp1252"))
+        candidates.append(bytes(raw).decode("utf-8"))
+    except UnicodeError:
+        pass
     return max(candidates, key=lambda item: (vietnamese_score(item) - mojibake_score(item) * 2, len(item)))
 
 

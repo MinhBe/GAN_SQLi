@@ -1,101 +1,152 @@
 ---
 name: mistral-ocr
 description: >-
-  Extract text from images and PDFs using a local OCR engine (EasyOCR). Works
-  completely offline — no API key, no network calls, no data leaves your
-  machine. Use when the user needs to OCR a document, extract text from
-  scanned PDFs/images, digitize printed documents, or convert PDF/image to
-  Markdown/plain text without sending data to any external service. Fully
-  air-gap compatible.
-compatibility: python3, easyocr, PyMuPDF
+  Convert PDFs and images into readable text or Markdown with an adaptive local
+  OCR router. Use this skill whenever the user needs to read, OCR, digitize,
+  batch-convert, or extract Markdown/text from PDFs, scanned documents, images,
+  research papers, tables, or mixed digital/scanned files. The skill should
+  first probe the machine, detect available OCR engines, classify the document,
+  and choose the fastest reliable path before asking the user to install any
+  missing engine.
+compatibility: python3, PyMuPDF, Pillow, optional OCR engines
 ---
 
-# OCR PDF (Offline)
+# OCR PDF Adaptive Router
 
-Fully local OCR processor. No API key, no internet, no data sent anywhere.
+Local-first PDF/image OCR and PDF-to-Markdown workflow. Prefer fast native text
+extraction when it is good enough, OCR only the pages that need it, and escalate
+to stronger engines only when the document requires them.
 
-## Requirements
+## Operating Principle
 
-```bash
-pip install -r requirements.txt
-```
+Do not ask the user what is installed. Probe the machine first, summarize what
+is available, then ask for installation only when a missing engine would improve
+the requested output.
 
-First run downloads EasyOCR models (~100MB) — after that, fully offline.
+Default workflow:
 
-## Two Modes
+1. Run `..\model-runtime-advisor\scripts\inspect_runtime.py --workload ocr`
+   for machine-level readiness: Python, CPU/RAM, disk, GPU/CUDA, `ffmpeg`,
+   model caches, and local model feasibility.
+2. Run `scripts/env_probe.py` only for OCR-specific engine availability:
+   PyMuPDF, OCR packages, Tesseract binary, and OCR model cache hints.
+3. Inspect the input document. For PDFs, detect per-page text layer quality and
+   whether pages are likely scanned/image-heavy.
+4. Route each page through the cheapest reliable path:
+   - Native text extraction for digital pages.
+   - OCR only for pages with missing or poor text.
+   - Layout/Markdown engines for complex documents.
+5. Validate output length and quality. Retry weak pages with a stronger engine,
+   higher DPI, or a layout-aware profile.
+6. Cache page results by file hash, page, DPI, language, engine, and profile so
+   reruns do not repeat expensive OCR.
 
-| Mode | Technology | Paragraph | Use Case | Speed |
-|------|------------|-----------|----------|-------|
-| `fast` | Native Text Extraction | No | Digital PDFs with text layer | **Instant** |
-| `max` | EasyOCR (Offline) | Yes | Scanned PDFs, Images, difficult docs | Slow |
+## Modes
 
-- **Fast** is default — Near-instant, uses PyMuPDF to extract existing text. Skips images.
-- **Max** uses deep learning (EasyOCR) to read text from pixels. 10-50x slower but works on anything.
+| Mode | Purpose | Typical Engine |
+|------|---------|----------------|
+| `auto` | Default balanced routing | PyMuPDF + best installed OCR fallback |
+| `native` | Digital PDFs with good text layer | PyMuPDF |
+| `scan-fast` | Fast OCR on simple scans | RapidOCR/Tesseract/EasyOCR |
+| `balanced` | Better OCR without maximum cost | PaddleOCR/RapidOCR/EasyOCR |
+| `quality` | Difficult scans or dense text | PaddleOCR/EasyOCR/Surya |
+| `markdown` | Readable Markdown with layout | Marker/Surya |
+| `scientific` | Papers, formulas, LaTeX-heavy PDFs | Nougat/Marker |
+| `vlm-quality` | Hard documents when GPU is available | olmOCR or a VLM OCR path |
+| `fast` | Backward-compatible alias for `native` | PyMuPDF |
+| `max` | Backward-compatible alias for `quality` | EasyOCR/PaddleOCR |
+
+Use `auto` unless the user explicitly asks for a specific profile.
+
+## Engine Preference
+
+Choose engines in this order when available:
+
+1. `PyMuPDF` for digital PDF text layers.
+2. `Marker` or `Surya` for PDF-to-Markdown, layout, reading order, tables, or
+   mixed content.
+3. `PaddleOCR` or `RapidOCR` for fast general OCR.
+4. `Tesseract` for lightweight CPU fallback and simple scans.
+5. `EasyOCR` for robust offline fallback and languages supported by local
+   models.
+6. `Nougat` for scientific PDFs.
+7. `olmOCR` for high-quality VLM OCR when installed and hardware allows it.
+
+If a preferred engine is missing, continue with the best installed engine. Ask
+to install only if the installed path is likely to be too slow or low quality
+for the user's task.
 
 ## Usage
 
 ```bash
-# Fast (default)
-python scripts/ocr_processor.py --input paper.pdf --output paper.md
+# Machine/runtime readiness, delegated to model-runtime-advisor
+python ..\model-runtime-advisor\scripts\inspect_runtime.py --workload ocr
 
-# Max quality
-python scripts/ocr_processor.py --input paper.pdf --output paper.md --mode max
+# Probe installed engines and hardware
+python scripts/env_probe.py
 
-# Override DPI manually
-python scripts/ocr_processor.py --input paper.pdf --output paper.md --mode max --dpi 400
+# Adaptive default
+python scripts/ocr_router.py --input paper.pdf --output paper.md
+
+# Force Markdown/layout profile
+python scripts/ocr_router.py --input paper.pdf --output paper.md --mode markdown
+
+# Backward-compatible legacy processor
+python scripts/ocr_processor.py --input paper.pdf --output paper.md --mode fast
 ```
 
 ### Flags
 
 | Flag | Description |
 |------|-------------|
-| `--input` / `-i` | Path to PDF, PNG, JPG, WEBP, GIF |
-| `--output` / `-o` | Output `.md` file (default: stdout) |
-| `--mode` | `fast` (default) or `max` |
-| `--lang` | Language code(s) (default: `en`) |
-| `--dpi` | Override DPI (overrides mode default) |
+| `--input` / `-i` | Path to PDF, PNG, JPG, JPEG, WEBP, GIF |
+| `--output` / `-o` | Output `.md`/`.txt` file (default: stdout) |
+| `--mode` | `auto`, `native`, `scan-fast`, `balanced`, `quality`, `markdown`, `scientific`, `vlm-quality`, `fast`, `max` |
+| `--lang` | Language code(s), comma-separated (default: `en`) |
+| `--dpi` | Override auto DPI |
 | `--page-separator` | Text between pages (default: `---`) |
-| `--include-images` | Save rendered page images as PNG |
-| `--gpu` | Use GPU if available |
+| `--include-images` | Save rendered PDF pages as PNG |
+| `--gpu` | Prefer GPU-capable engines when available |
+| `--pages` | Page subset such as `1,2,5-8` |
+| `--no-cache` | Disable page cache |
+
+## Installation Policy
+
+Base dependencies are in `requirements.txt`. Optional heavy engines are in
+`requirements-optional.txt`.
+
+Install flow:
+
+1. Run `python ..\model-runtime-advisor\scripts\inspect_runtime.py --workload ocr`.
+2. Run `python scripts/env_probe.py`.
+3. Compare installed engines with the requested task.
+4. If a missing engine is useful, ask the user before installing. State the
+   package names and that model downloads may occur.
+5. After installation, run both probes again and report what changed.
 
 ## Error Detection
 
-The script auto-detects problems and writes to `ocr_errors.json` in the output directory:
+The router detects problems and writes logs beside the output:
 
 | Error Type | Meaning |
 |------------|---------|
 | `exception` | File corrupt, encrypted, or unreadable |
 | `empty_output` | OCR returned no text at all |
-| `output_too_short` | Very little text extracted (< 50 chars) |
+| `output_too_short` | Very little text extracted |
+| `weak_page` | A page produced suspiciously little or noisy text |
+| `engine_missing` | Best engine for the requested mode is not installed |
 
-### Batch Pipeline
+## Batch Pipeline
 
 ```powershell
-# Step 1: Fast batch
 foreach ($pdf in Get-ChildItem "*.pdf") {
-  python scripts/ocr_processor.py --input $pdf --output "out/$($pdf.BaseName).md" --mode fast
-}
-
-# Step 2: Check errors.json, retry failed with --mode max
-$errors = Get-Content "out/ocr_errors.json" | ConvertFrom-Json
-foreach ($e in $errors) {
-  python scripts/ocr_processor.py --input $e.path --output "out/$($e.file -replace '.pdf','.md')" --mode max
+  python scripts/ocr_router.py --input $pdf.FullName --output "out/$($pdf.BaseName).md" --mode auto
 }
 ```
 
-## Examples
+## References
 
-```bash
-# Fast batch all PDFs in folder
-python scripts/ocr_processor.py --input scan.png
-
-# Vietnamese with max quality
-python scripts/ocr_processor.py --input doc.pdf --lang vi --mode max --output doc.md
-
-# Extract page images too
-python scripts/ocr_processor.py --input doc.pdf --output doc.md --include-images
-```
-
-## Supported Formats
-
-PDF, PNG, JPG/JPEG, WEBP, GIF — all processed locally.
+- Read `references/engine-matrix.md` when choosing an engine.
+- Read `references/install-policy.md` before installing optional engines.
+- Read `references/auto-mode.md` for the adaptive routing algorithm.
+- Read `references/pdf-to-markdown.md` for Markdown-specific conversion.

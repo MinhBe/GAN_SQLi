@@ -1,6 +1,0 @@
-{
-  "model_path": "C:\\Projects\\GAN_SQLi\\models\\gumbel\\d_scorer\\paired_d_scorer.pt",
-  "epochs": 1,
-  "dev_accuracy": 0.8485,
-  "dev_examples": 2000
-}

@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2026-05-26T01:29:09.769596",
+    "file": "Lu_2022_GA_WGAN_SQLi.pdf",
+    "mode": "quality",
+    "error_type": "exception",
+    "message": "Unknown argument: show_log",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\GAN_SQLi\\Skill\\OCR_PDF\\scripts\\ocr_router.py\", line 276, in main\n    output = process(args)\n             ^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\GAN_SQLi\\Skill\\OCR_PDF\\scripts\\ocr_router.py\", line 218, in process\n    text = ocr_image(image, engine, args.lang, args.gpu, paragraph=mode in {\"quality\", \"markdown\"})\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\GAN_SQLi\\Skill\\OCR_PDF\\scripts\\ocr_router.py\", line 151, in ocr_image\n    ocr = PaddleOCR(use_angle_cls=True, lang=lang.split(\",\")[0], show_log=False)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\paddleocr\\_pipelines\\ocr.py\", line 163, in __init__\n    super().__init__(**base_params)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\paddleocr\\_pipelines\\base.py\", line 63, in __init__\n    self._common_args = parse_common_args(\n                        ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\paddleocr\\_common_args.py\", line 53, in parse_common_args\n    raise ValueError(f\"Unknown argument: {name}\")\nValueError: Unknown argument: show_log\n"
+  },
+  {
+    "timestamp": "2026-05-26T01:31:32.825753",
+    "file": "Lu_2022_GA_WGAN_SQLi.pdf",
+    "mode": "quality",
+    "error_type": "exception",
+    "message": "Unknown argument: show_log",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\GAN_SQLi\\Skill\\OCR_PDF\\scripts\\ocr_router.py\", line 276, in main\n    output = process(args)\n             ^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\GAN_SQLi\\Skill\\OCR_PDF\\scripts\\ocr_router.py\", line 218, in process\n    text = ocr_image(image, engine, args.lang, args.gpu, paragraph=mode in {\"quality\", \"markdown\"})\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\Documents\\GAN_SQLi\\Skill\\OCR_PDF\\scripts\\ocr_router.py\", line 151, in ocr_image\n    ocr = PaddleOCR(use_angle_cls=True, lang=lang.split(\",\")[0], show_log=False)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\paddleocr\\_pipelines\\ocr.py\", line 163, in __init__\n    super().__init__(**base_params)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\paddleocr\\_pipelines\\base.py\", line 63, in __init__\n    self._common_args = parse_common_args(\n                        ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\paddleocr\\_common_args.py\", line 53, in parse_common_args\n    raise ValueError(f\"Unknown argument: {name}\")\nValueError: Unknown argument: show_log\n"
+  }
+]
