@@ -1,0 +1,13 @@
+timestamp=2026-05-29T02:17:09+07:00
+evaluator_id=week4_real_waf_smoke_v1
+waf_engine=modsecurity_crs
+waf_mode=modsecurity_crs_docker
+waf_image=owasp/modsecurity-crs:nginx
+container_id=667eb50a99b5f3db3f3bdc89238bf3ce738ccbf6340b93459a9f18cb260ea5d4
+payload_text_logged=false
+rule_ids_collected=false
+sample_count=45
+real_waf_blocked=41
+real_waf_allowed=4
+real_waf_errors=0
+note=Real local ModSecurity+OWASP CRS smoke test; detailed request payloads were not written to artifacts.

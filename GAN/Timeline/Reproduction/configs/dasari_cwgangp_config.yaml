@@ -1,0 +1,23 @@
+run_id: dasari_cwgangp_smoke_v1
+paper: Dasari 2025 - Enhancing SQL Injection Detection and Prevention Using Generative Models
+reproduction_level: partial_smoke
+source_status: fallback_mirror_not_exact
+source_url: https://github.com/nidnogg/sqliv5-dataset
+local_source: Timeline/Data/raw/sqliv5-dataset/sqli.csv
+official_kaggle_sqli_available: false
+modified_sql_dataset_available: false
+model: CWGAN-GP character-level smoke implementation
+max_len: 80
+vocab_limit: 96
+noise_dim: 32
+hidden_dim: 64
+batch_size: 128
+epochs: 1
+critic_steps: 1
+gp_lambda: 10.0
+synthetic_count: 80
+seed: 20260529
+guardrails:
+  - local_lab_only
+  - no_raw_payloads_in_reports_or_logs
+  - do_not_claim_exact_until_official_kaggle_snapshot_is_recorded

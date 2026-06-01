@@ -1,0 +1,15 @@
+evaluator_id: wafamole_original_runtime_probe_v1
+scope: original_faithful_wafamole_runtime
+runtime:
+  dockerfile: Timeline/Reproduction/original_repro/Dockerfile.wafamole-legacy
+  python: "3.7.4"
+  scikit_learn_target: "0.21.1"
+sources:
+  wafamole_code: Timeline/Reproduction/external/WAF-A-MoLE
+  wafamole_dataset: Timeline/Reproduction/external/wafamole-dataset
+probe:
+  bundled_models: true
+  guided_engine_smoke: true
+reporting:
+  include_payload_text_in_reports: false
+  include_payload_hashes: true

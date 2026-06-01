@@ -1,0 +1,5 @@
+evaluator_id=wafamole_original_guided_long_v1
+models_total=5
+guided_attempted=4
+threshold_reached=0
+payload_text_logged=false

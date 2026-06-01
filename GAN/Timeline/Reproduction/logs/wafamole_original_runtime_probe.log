@@ -1,0 +1,5 @@
+evaluator_id=wafamole_original_runtime_probe_v1
+status=guided_engine_smoke_no_evasion
+model_ok=5
+guided_smoke_ok=1
+payload_text_logged=false

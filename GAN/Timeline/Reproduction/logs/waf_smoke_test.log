@@ -1,0 +1,9 @@
+timestamp=2026-05-29T01:50:11+07:00
+evaluator_id=week4_offline_evaluator_smoke_v1
+waf_mode=local_rule_smoke
+waf_engine=not_configured
+payload_text_logged=false
+sample_count=45
+local_waf_blocked=27
+local_waf_allowed=18
+note=This is a deterministic local rule-smoke placeholder, not ModSecurity/CRS/Coraza.

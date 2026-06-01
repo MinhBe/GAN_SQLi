@@ -1,0 +1,26 @@
+evaluator_id: week4_real_waf_smoke_v1
+scope: week4_real_waf_smoke_test
+input:
+  smoke_samples: Timeline/Reproduction/results/evaluator_smoke_samples.csv
+  combined_csv: Timeline/Data/processed/teacher_seed_sqli_normalized_combined.csv
+waf:
+  engine: modsecurity_crs
+  mode: modsecurity_crs_docker
+  image: owasp/modsecurity-crs:nginx
+  host_port: 18080
+  backend_port: 18081
+  backend: http://host.docker.internal:18081
+  environment:
+    MODSEC_RULE_ENGINE: "on"
+    PARANOIA: "1"
+    BLOCKING_PARANOIA: "1"
+    ANOMALY_INBOUND: "5"
+    ANOMALY_OUTBOUND: "4"
+reporting:
+  include_payload_text: false
+  include_hashes: true
+  include_rule_ids: false
+guardrails:
+  - Run only against the local Docker WAF and local backend.
+  - Do not print detailed payload strings in markdown reports or logs.
+  - Keep local_rule_smoke artifacts separate from real WAF artifacts.

@@ -1,0 +1,25 @@
+evaluator_id: week5_wafamole_smoke_v1
+scope: wafamole_smoke_and_failure_report
+external_sources:
+  wafamole_code: Timeline/Reproduction/external/WAF-A-MoLE
+  wafamole_dataset: Timeline/Reproduction/external/wafamole-dataset
+  wafamole_code_commit: 4a2cb9438f874ec0d09acaa04402174cc6334880
+  wafamole_dataset_commit: b8f0118b8586f8b069ac980b3909970838f69d5e
+waf:
+  engine: modsecurity_crs
+  mode: modsecurity_crs_docker
+  image: owasp/modsecurity-crs:nginx
+  host_port: 18084
+  backend_port: 18085
+smoke:
+  operator_samples: 40
+  guided_model_probe_payload: hash_only_not_reported
+reporting:
+  include_payload_text_in_reports: false
+  include_payload_base64_in_machine_csv: true
+  include_hashes: true
+  include_rule_ids: false
+guardrails:
+  - Do not label operator-only SqlFuzzer output as full guided WAF-A-MoLE evasion.
+  - Do not print detailed payload strings in markdown reports or logs.
+  - Treat payload CSVs as local machine artifacts, not public report content.

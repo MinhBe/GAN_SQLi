@@ -1,0 +1,17 @@
+evaluator_id: wafamole_original_guided_long_v1
+scope: original_faithful_wafamole_guided_long
+runtime:
+  image: gan-sqli-wafamole-legacy:py37
+  python: "3.7.4"
+  scikit_learn: "0.21.1"
+guided_run:
+  payload: hash_only_not_reported
+  max_rounds: 200
+  round_size: 20
+  timeout_seconds: 120
+  threshold: 0.5
+models:
+  source: bundled WAF-A-MoLE example models
+reporting:
+  include_payload_text_in_reports: false
+  include_payload_hashes: true

@@ -1,0 +1,15 @@
+[2026-05-29T09:18:22.456392+00:00] dasari_cwgangp_smoke_v1
+source_id=sqliv5_sqli_csv_fallback
+source_status=fallback_mirror_not_exact
+rows_prepared=3936
+train_rows=3134
+validation_rows=384
+test_rows=418
+device=cuda
+epochs=1
+critic_steps=1
+synthetic_count=80
+synthetic_unique_hashes=78
+last_critic_loss=1.857963
+last_generator_loss=-0.004982
+raw_payloads_printed=false

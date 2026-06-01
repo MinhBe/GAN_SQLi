@@ -1,0 +1,8 @@
+timestamp=2026-05-29T07:04:40+07:00
+evaluator_id=week5_baseline_real_waf_v1
+waf_engine=modsecurity_crs
+waf_mode=modsecurity_crs_docker
+payload_text_logged=false
+rule_ids_collected=false
+baseline=deterministic_mutation samples=60 blocked=36 allowed=24 errors=0
+baseline=template_rule samples=60 blocked=43 allowed=17 errors=0

@@ -1,0 +1,30 @@
+evaluator_id: week4_offline_evaluator_smoke_v1
+scope: week4_smoke_test
+input:
+  combined_csv: Timeline/Data/processed/teacher_seed_sqli_normalized_combined.csv
+  split_assignments: Timeline/Data/splits/teacher_seed_split_assignments.csv
+sampling:
+  per_split: 15
+  splits:
+    - train
+    - validation
+    - test
+checks:
+  validity: lightweight_sqli_like_rules
+  novelty: exact_hash_vs_train
+  uniqueness: normalized_sha256
+  diversity:
+    - length
+    - token_count
+    - char_entropy
+waf:
+  mode: local_rule_smoke
+  note: local deterministic smoke rules only; not ModSecurity, CRS, or Coraza
+reporting:
+  include_payload_text: false
+  include_hashes: true
+  include_rule_ids: true
+guardrails:
+  - Do not treat local_rule_smoke as final WAF ASR/FNR.
+  - Do not print detailed payload strings in markdown reports or logs.
+  - Use split-aware sampling before reporting novelty.
