@@ -6,6 +6,16 @@
 
 Upload the **complete, unmodified** `Boolean_ABCD.zip` at the repository root. The training entry point accepts it directly with `--data Boolean_ABCD.zip`, and reads only `A_GENERATOR_CORPUS` from the archive. Keep metadata/provenance files intact; Corpus B is not used for training.
 
+## Dataset tracked as extracted files
+
+The complete dataset is stored under `Boolean_ABCD/` in this repository (not as a ZIP). The trainer can read that directory directly:
+
+```bash
+python -m abcd_seqgan.train --data Boolean_ABCD --out runs/abcd --mle-epochs 1 --d-epochs 1 --adv-epochs 1 --max-steps 2
+```
+
+On Kaggle, use `--data /kaggle/working/GAN_SQLi/Boolean_ABCD` after cloning. Only `A_GENERATOR_CORPUS` is used for training; `B_DETECTOR_CORPUS`, provenance files and research context remain available as source materials. The dataset is synthetic and is not evidence of successful exploitation.
+
 ## Algorithm
 
 Modern PyTorch implementation inspired by [Lantao Yu SeqGAN](https://github.com/LantaoYu/SeqGAN): conditional LSTM generator; conditional CNN discriminator; generator MLE pretraining; discriminator pretraining; alternating token-level REINFORCE and discriminator training; EMA rollout policy for intermediate prefix rewards. Unlike original SeqGAN, the architecture conditions on **six fields**: `y_complexity`, `abstract_family_id`, `database`, `query_language`, `root_id`, `structure_cell_id`. All six are metadata conditions, not text tokens. No normalization of raw payload text.

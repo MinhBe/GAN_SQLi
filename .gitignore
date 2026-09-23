@@ -4,6 +4,8 @@ __pycache__/
 runs/
 *.pt
 *.zip
-!/Boolean_ABCD.zip
 *.csv
 !tests/fixtures/*.csv
+
+# Complete extracted research corpus is intentionally versioned
+!Boolean_ABCD/**/*.csv
