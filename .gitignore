@@ -4,5 +4,6 @@ __pycache__/
 runs/
 *.pt
 *.zip
+!/Boolean_ABCD.zip
 *.csv
 !tests/fixtures/*.csv

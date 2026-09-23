@@ -2,6 +2,10 @@
 
 **Only Corpus A is read.** The input archive is `Boolean_ABCD.zip`; `B_DETECTOR_CORPUS` is ignored. The archive has 28,800 A rows, of which 28,000 contain nonempty text; 800 Cassandra slots are unsupported. There are 1,400 nonempty cells × 20 samples. This is a *synthetic Boolean-style cross-dialect representation corpus*, not confirmed exploit observations.
 
+## Repository dataset
+
+Upload the **complete, unmodified** `Boolean_ABCD.zip` at the repository root. The training entry point accepts it directly with `--data Boolean_ABCD.zip`, and reads only `A_GENERATOR_CORPUS` from the archive. Keep metadata/provenance files intact; Corpus B is not used for training.
+
 ## Algorithm
 
 Modern PyTorch implementation inspired by [Lantao Yu SeqGAN](https://github.com/LantaoYu/SeqGAN): conditional LSTM generator; conditional CNN discriminator; generator MLE pretraining; discriminator pretraining; alternating token-level REINFORCE and discriminator training; EMA rollout policy for intermediate prefix rewards. Unlike original SeqGAN, the architecture conditions on **six fields**: `y_complexity`, `abstract_family_id`, `database`, `query_language`, `root_id`, `structure_cell_id`. All six are metadata conditions, not text tokens. No normalization of raw payload text.
