@@ -1,0 +1,9 @@
+payload_raw,y_complexity,abstract_family_id,database,query_language,root_id,structure_cell_id,compatibility_status
+score = 10,Y4_Basic_Obfuscation,AF_01,SQLite,SQL,Y4_Basic_Obfuscation_R01,Y4_Basic_Obfuscation_R01_D01,ok
+score = 11,Y4_Basic_Obfuscation,AF_01,SQLite,SQL,Y4_Basic_Obfuscation_R01,Y4_Basic_Obfuscation_R01_D01,ok
+score = 12,Y4_Basic_Obfuscation,AF_01,SQLite,SQL,Y4_Basic_Obfuscation_R01,Y4_Basic_Obfuscation_R01_D01,ok
+score = 13,Y4_Basic_Obfuscation,AF_01,SQLite,SQL,Y4_Basic_Obfuscation_R01,Y4_Basic_Obfuscation_R01_D01,ok
+score = 14,Y4_Basic_Obfuscation,AF_01,SQLite,SQL,Y4_Basic_Obfuscation_R01,Y4_Basic_Obfuscation_R01_D01,ok
+score = 15,Y4_Basic_Obfuscation,AF_01,SQLite,SQL,Y4_Basic_Obfuscation_R01,Y4_Basic_Obfuscation_R01_D01,ok
+score = 16,Y4_Basic_Obfuscation,AF_01,SQLite,SQL,Y4_Basic_Obfuscation_R01,Y4_Basic_Obfuscation_R01_D01,ok
+score = 17,Y4_Basic_Obfuscation,AF_01,SQLite,SQL,Y4_Basic_Obfuscation_R01,Y4_Basic_Obfuscation_R01_D01,ok
