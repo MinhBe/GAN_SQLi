@@ -1,9 +1,12 @@
-# Oversized files > 100 MB — chunks pushed instead
-Asset/LabelData/FinalDataSet/final_dataset.csv
-Asset/LabelData/Dataset Source/rbsqli_dataset.csv
-Asset/LabelData/Dataset Source/zenodo_dataset.csv
-
-# Python cache
+.venv/
 __pycache__/
 *.pyc
-*.egg-info/
+runs/
+models/
+artifacts/
+data/raw/
+*.joblib
+*.pt
+*.parquet
+.env
+kaggle.json

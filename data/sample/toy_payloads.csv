@@ -1,0 +1,7 @@
+payload,label,source,attack_family,lineage_id
+normal user search text,0,toy,benign,b0
+product lookup by id,0,toy,benign,b1
+account profile page,0,toy,benign,b2
+LAB_SQLI_BOOLEAN_PATTERN_A,1,toy,boolean,l0
+LAB_SQLI_BOOLEAN_PATTERN_B,1,toy,boolean,l1
+LAB_SQLI_BOOLEAN_PATTERN_C,1,toy,boolean,l2
