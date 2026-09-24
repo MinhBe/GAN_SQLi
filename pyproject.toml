@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlgan-dual-experiment"
+version = "0.1.0"
+description = "Dual-branch SeqGAN experiment toolkit for PostgreSQL Boolean predicate corpora"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.0",
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "tqdm>=4.66",
+  "PyYAML>=6.0",
+  "scikit-learn>=1.3",
+]
+
+[tool.setuptools.packages.find]
+include = ["sqlgan_dual*"]

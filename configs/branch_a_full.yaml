@@ -1,0 +1,10 @@
+# Four independent module experiment. Increase epochs on GPU.
+data: /kaggle/input/YOUR_DATA/SQLGAN_PostgreSQL_Boolean_Attack_Corpus_V4_1_StaticTrainingCorpus.zip
+out: /kaggle/working/sqlgan_branch_a_full
+mle_epochs: 12
+d_epochs: 3
+adv_epochs: 2
+adv_steps: 200
+generate_n: 5000
+batch_size: 128
+max_len: 192
