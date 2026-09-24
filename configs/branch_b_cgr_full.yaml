@@ -1,0 +1,11 @@
+surface: validation
+mle_epochs: 12
+d_epochs: 4
+adv_epochs: 4
+adv_steps: 100
+rollouts: 4
+batch_size: 256
+generate_n: 5000
+max_len: 192
+static_weight: 0.35
+per_parent: 2
