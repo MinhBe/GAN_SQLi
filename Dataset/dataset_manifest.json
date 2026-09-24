@@ -1,9 +1,26 @@
 {
-  "title": "ABCD Boolean-style Z1 cross-dialect research pack",
-  "A_count": 28800,
-  "B_count": 27600,
-  "total": 56400,
-  "tier_structure": "4x20 root IDs x18 target engines x (20 in A;15 in B) +6000 designed controls",
-  "not_a_validated_attack_corpus": true,
-  "required_review_before_detector_training": true
+  "dataset_name": "PostgreSQL Boolean No-Context Attack Corpus V2",
+  "purpose": "Attack-side source corpus for four independent character-level SeqGAN models",
+  "dbms": "PostgreSQL",
+  "context": "Z1 / no-context / payload-only",
+  "injection_scope": "Boolean predicate injection intent only",
+  "tiers": {
+    "Y1": 6000,
+    "Y2": 6000,
+    "Y3": 6000,
+    "Y4": 6000
+  },
+  "total_samples": 24000,
+  "benchmark_splits_present": false,
+  "benign_samples_present": false,
+  "hard_negative_samples_present": false,
+  "raw_unique_global": 24000,
+  "attack_fingerprint_unique_global": 24000,
+  "important_boundary": "Rows are attack-intent grammar-constrained Boolean predicate fragments. Runtime exploit success is not claimed unless behavior_confirmed=true.",
+  "excluded_capabilities": [
+    "SELECT/UNION exfiltration",
+    "stacked/destructive SQL",
+    "time-based primitives",
+    "contextual query-boundary breakout"
+  ]
 }

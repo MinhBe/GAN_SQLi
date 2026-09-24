@@ -1,11 +1,7 @@
-source_id,URL,observed_samples_copied,used_for,license_status
-OWASP_SQLi_prevention,https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
-PortSwigger_dialect_variants,https://portswigger.net/web-security/sql-injection/cheat-sheet,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
-MongoDB_comparisons,https://www.mongodb.com/docs/v8.0/reference/mql/query-predicates/comparison/,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
-Elasticsearch_bool,https://www.elastic.co/docs/reference/query-languages/query-dsl/query-dsl-bool-query,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
-OpenSearch_DSL,https://docs.opensearch.org/latest/query-dsl/,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
-Redis_Search,https://redis.io/docs/latest/develop/ai/search-and-query/administration/overview/,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
-DynamoDB_expressions,https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.ExpressionAttributeValues.html,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
-Neo4j_predicates,https://neo4j.com/docs/cypher-manual/current/expressions/predicates/,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
-Couchbase_SQL++,https://docs.couchbase.com/server/current/n1ql/n1ql-language-reference/index.html,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
-BigQuery_operators,https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/operators,0,documentation-informed grammar and compatibility caveats; no scraped examples added,review source terms before redistribution
+coverage_area,source_name,url
+comparison_predicates,PostgreSQL 18 Comparison Functions and Operators,https://www.postgresql.org/docs/18/functions-comparison.html
+row_array_comparisons,PostgreSQL 18 Row and Array Comparisons,https://www.postgresql.org/docs/18/functions-comparisons.html
+array_operators,PostgreSQL 18 Array Functions and Operators,https://www.postgresql.org/docs/18/functions-array.html
+string_functions,PostgreSQL 18 String Functions and Operators,https://www.postgresql.org/docs/18/functions-string.html
+pattern_matching,PostgreSQL Pattern Matching,https://www.postgresql.org/docs/18/functions-matching.html
+json,PostgreSQL JSON Functions and Operators,https://www.postgresql.org/docs/18/functions-json.html
