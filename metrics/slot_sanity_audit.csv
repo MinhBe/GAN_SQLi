@@ -1,0 +1,5 @@
+module_id,samples,slot_sanity_mean,slot_sanity_min,max_number_digits_mean,max_number_digits_p95,long_number_rows_6_to_9_digits,extreme_number_rows_gt_9_digits,policy_interpretation
+Y1_basic_boolean,6000,0.95,0.0,2.0835,3.45,0,300,"slot-constraint sanity, not real-world traffic slot_sanity"
+Y2_boolean_variation,6000,0.95,0.0,2.0835,3.45,0,300,"slot-constraint sanity, not real-world traffic slot_sanity"
+Y3_encoded_boolean,6000,0.957,0.05,2.0835,3.45,0,300,"slot-constraint sanity, not real-world traffic slot_sanity"
+Y4_obfuscated_boolean,6000,0.957,0.05,2.0835,3.45,0,300,"slot-constraint sanity, not real-world traffic slot_sanity"

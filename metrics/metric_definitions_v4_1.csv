@@ -1,0 +1,9 @@
+metric,definition
+slot_sanity_score_v4,"0..1 score for literal fit to slot constraints: digit length, string length, and module complexity; not a real-world traffic slot_sanity claim"
+train_corpus_membership_v4_1,1 only when the row is accepted for SeqGAN training by static gate; source for seqgan_accepted_corpus.txt
+parent_sample_id,"for Y3/Y4, explicit source sample ID from Y1/Y2 used as transform lineage parent"
+transform_recipe_id,controlled recipe that derives Y3/Y4 representation from parent/canonical Boolean predicate
+roundtrip_valid,static proxy that raw transformed representation normalizes or decodes back to validation/canonical predicate
+structure_preserved,static proxy that required structure and module contract survived the transform
+semantic_preserved,canonical-normalization proxy only; runtime semantic behavior remains not_run until PostgreSQL validator executes
+postgres_runtime_valid_v4,left as not_run in this artifact; must be produced by validation/postgres_sandbox_validator.py

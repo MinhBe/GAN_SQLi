@@ -1,7 +1,0 @@
-coverage_area,source_name,url
-comparison_predicates,PostgreSQL 18 Comparison Functions and Operators,https://www.postgresql.org/docs/18/functions-comparison.html
-row_array_comparisons,PostgreSQL 18 Row and Array Comparisons,https://www.postgresql.org/docs/18/functions-comparisons.html
-array_operators,PostgreSQL 18 Array Functions and Operators,https://www.postgresql.org/docs/18/functions-array.html
-string_functions,PostgreSQL 18 String Functions and Operators,https://www.postgresql.org/docs/18/functions-string.html
-pattern_matching,PostgreSQL Pattern Matching,https://www.postgresql.org/docs/18/functions-matching.html
-json,PostgreSQL JSON Functions and Operators,https://www.postgresql.org/docs/18/functions-json.html
