@@ -1,5 +1,0 @@
-module_id,samples,roots,structure_cells,raw_unique,raw_duplicate_count,accepted_for_seqgan_count,accepted_raw_unique,accepted_raw_duplicate_count,static_valid_rate_v4_1,accepted_for_seqgan_rate_v4_1,slot_sanity_mean,module_contract_mean,parent_lineage_required,parent_lineage_complete_count,roundtrip_valid_rate_static_proxy,postgres_runtime_valid_rate
-Y1_basic_boolean,6000,100,1000,5840,160,4980,4820,160,0.868,0.83,0.95,0.972,False,0,1.0,not_run
-Y2_boolean_variation,6000,100,1000,5984,16,4980,4964,16,0.868,0.83,0.95,0.972,False,0,1.0,not_run
-Y3_encoded_boolean,6000,100,1000,5952,48,5436,5388,48,0.954,0.906,0.957,0.99,True,6000,1.0,not_run
-Y4_obfuscated_boolean,6000,100,1000,5960,40,5420,5380,40,0.951333,0.903333,0.957,0.989467,True,6000,1.0,not_run

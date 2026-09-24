@@ -1,9 +1,0 @@
-module_id,evidence_tier,count
-Y1_basic_boolean,T0_generated_candidate,792
-Y1_basic_boolean,T1_static_validated,5208
-Y2_boolean_variation,T0_generated_candidate,792
-Y2_boolean_variation,T1_static_validated,5208
-Y3_encoded_boolean,T0_generated_candidate,276
-Y3_encoded_boolean,T1_static_validated,5724
-Y4_obfuscated_boolean,T0_generated_candidate,292
-Y4_obfuscated_boolean,T1_static_validated,5708
