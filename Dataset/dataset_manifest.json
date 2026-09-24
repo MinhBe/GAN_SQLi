@@ -1,0 +1,9 @@
+{
+  "title": "ABCD Boolean-style Z1 cross-dialect research pack",
+  "A_count": 28800,
+  "B_count": 27600,
+  "total": 56400,
+  "tier_structure": "4x20 root IDs x18 target engines x (20 in A;15 in B) +6000 designed controls",
+  "not_a_validated_attack_corpus": true,
+  "required_review_before_detector_training": true
+}

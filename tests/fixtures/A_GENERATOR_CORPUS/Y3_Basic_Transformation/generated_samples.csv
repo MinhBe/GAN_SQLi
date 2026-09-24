@@ -1,9 +1,0 @@
-payload_raw,y_complexity,abstract_family_id,database,query_language,root_id,structure_cell_id,compatibility_status
-score = 10,Y3_Basic_Transformation,AF_01,SQLite,SQL,Y3_Basic_Transformation_R01,Y3_Basic_Transformation_R01_D01,ok
-score = 11,Y3_Basic_Transformation,AF_01,SQLite,SQL,Y3_Basic_Transformation_R01,Y3_Basic_Transformation_R01_D01,ok
-score = 12,Y3_Basic_Transformation,AF_01,SQLite,SQL,Y3_Basic_Transformation_R01,Y3_Basic_Transformation_R01_D01,ok
-score = 13,Y3_Basic_Transformation,AF_01,SQLite,SQL,Y3_Basic_Transformation_R01,Y3_Basic_Transformation_R01_D01,ok
-score = 14,Y3_Basic_Transformation,AF_01,SQLite,SQL,Y3_Basic_Transformation_R01,Y3_Basic_Transformation_R01_D01,ok
-score = 15,Y3_Basic_Transformation,AF_01,SQLite,SQL,Y3_Basic_Transformation_R01,Y3_Basic_Transformation_R01_D01,ok
-score = 16,Y3_Basic_Transformation,AF_01,SQLite,SQL,Y3_Basic_Transformation_R01,Y3_Basic_Transformation_R01_D01,ok
-score = 17,Y3_Basic_Transformation,AF_01,SQLite,SQL,Y3_Basic_Transformation_R01,Y3_Basic_Transformation_R01_D01,ok

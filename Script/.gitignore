@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+runs/
+*.pt
+*.zip
+*.csv
+!tests/fixtures/*.csv

@@ -1,9 +1,0 @@
-payload_raw,y_complexity,abstract_family_id,database,query_language,root_id,structure_cell_id,compatibility_status
-score = 10,Y2_Variation,AF_01,SQLite,SQL,Y2_Variation_R01,Y2_Variation_R01_D01,ok
-score = 11,Y2_Variation,AF_01,SQLite,SQL,Y2_Variation_R01,Y2_Variation_R01_D01,ok
-score = 12,Y2_Variation,AF_01,SQLite,SQL,Y2_Variation_R01,Y2_Variation_R01_D01,ok
-score = 13,Y2_Variation,AF_01,SQLite,SQL,Y2_Variation_R01,Y2_Variation_R01_D01,ok
-score = 14,Y2_Variation,AF_01,SQLite,SQL,Y2_Variation_R01,Y2_Variation_R01_D01,ok
-score = 15,Y2_Variation,AF_01,SQLite,SQL,Y2_Variation_R01,Y2_Variation_R01_D01,ok
-score = 16,Y2_Variation,AF_01,SQLite,SQL,Y2_Variation_R01,Y2_Variation_R01_D01,ok
-score = 17,Y2_Variation,AF_01,SQLite,SQL,Y2_Variation_R01,Y2_Variation_R01_D01,ok
