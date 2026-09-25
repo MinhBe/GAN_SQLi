@@ -1,0 +1,21 @@
+semantic_family,ruleset_family,module_count,cell_count,root_count,notes,schema_version,reward_contract_note
+any_all_array,any_all_array,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+arithmetic_expression,arithmetic_expression,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+array_operator,array_operator,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+between_range,between_range,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+cast_expression,cast_expression,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+comparison_numeric,comparison_numeric,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+comparison_text,comparison_text,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+conditional_expression,conditional_expression,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+full_text_predicate,full_text_predicate,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+jsonb_predicate,jsonb_predicate,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+like_ilike,like_ilike,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+logical_composition,logical_composition,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+membership_list,membership_list,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+network_inet,network_inet,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+null_boolean,null_boolean,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+range_type,range_type,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+regex_match,regex_match,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+row_comparison,row_comparison,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+string_function,string_function,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.
+uuid_predicate,uuid_predicate,4,200,5,V5 taxonomy derived from V4.1 semantic_family.,v5.1,Slot schemas are structured contracts; runtime evidence remains not_run.

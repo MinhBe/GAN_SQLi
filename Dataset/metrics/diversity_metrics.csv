@@ -1,0 +1,5 @@
+target_module_id,generated_count,unique_payloads,accepted_count,mean_reward,duplicate_rate
+Y1_basic_boolean,6000,5840,4980,0.8948900000000001,0.02666666666666667
+Y2_boolean_variation,6000,5920,4980,0.8978366666666667,0.013333333333333334
+Y3_encoded_boolean,6000,5952,5436,0.898065,0.0
+Y4_obfuscated_boolean,6000,5960,5420,0.8972733333333334,0.0

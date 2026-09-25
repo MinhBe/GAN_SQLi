@@ -1,0 +1,62 @@
+{
+  "ai_evaluator_status": "placeholder_not_run",
+  "candidate_generation_status": "bootstrap_from_v4_1_not_model_generated",
+  "conditioning": {
+    "fields": [
+      "ruleset_id",
+      "structure_cell_id",
+      "ruleset_family"
+    ],
+    "type": "prefix_conditioning"
+  },
+  "counts": {
+    "bootstrap_candidate_rows": 24000,
+    "cseqgan_training_rows_y1_y2": 9960,
+    "rulesets": 4000,
+    "source_samples": 24000
+  },
+  "created_utc": "2026-09-25T18:38:45Z",
+  "files": {
+    "coverage": "Dataset/metrics/coverage_metrics.csv",
+    "postgres_validator": "Dataset/validation/postgres_boolean_probe_validator.py",
+    "ruleset_contracts": "Dataset/A_ruleset_contracts/ruleset_contracts.csv",
+    "slot_schemas": "Dataset/A_ruleset_contracts/slot_schemas.jsonl"
+  },
+  "label_policy": {
+    "accepted_for_next_stage": "internal static/model-selection label, not runtime or exploit evidence",
+    "ruleset_match_score": "synthetic contract match score",
+    "truth_match": "unknown until PostgreSQL sandbox validator runs"
+  },
+  "match_source_policy": {
+    "current_candidate_rows": "source_assigned",
+    "future_model_output": "algorithmic_match_or_ai_reviewed_match"
+  },
+  "model_generated_proof_status": "not_run",
+  "modeling_strategy": "C-SeqGAN-Minimal / ruleset-conditioned generation",
+  "modules": [
+    "Y1_basic_boolean",
+    "Y2_boolean_variation",
+    "Y3_encoded_boolean",
+    "Y4_obfuscated_boolean"
+  ],
+  "runtime_claim_allowed": false,
+  "runtime_status": "not_run",
+  "scope": "PostgreSQL-only, Boolean-only, payload-only, no-context",
+  "source_dataset": "SQLGAN_PostgreSQL_Boolean_Attack_Corpus_V4_1_StaticTrainingCorpus",
+  "title": "SQLGAN PostgreSQL Boolean C-SeqGAN Corpus V5.1 Coverage-Fixed Bootstrap",
+  "training_files": {
+    "Y1_basic_boolean_full_coverage_mle": "B_conditioned_seqgan_training/Y1_basic_boolean/cseqgan_train_full_coverage.jsonl",
+    "Y1_basic_boolean_reward_positive": "B_conditioned_seqgan_training/Y1_basic_boolean/cseqgan_train.jsonl",
+    "Y2_boolean_variation_full_coverage_mle": "B_conditioned_seqgan_training/Y2_boolean_variation/cseqgan_train_full_coverage.jsonl",
+    "Y2_boolean_variation_reward_positive": "B_conditioned_seqgan_training/Y2_boolean_variation/cseqgan_train.jsonl"
+  },
+  "v5_1_fixes": {
+    "match_source_added": true,
+    "minimal_seed_files_added_for_missing_y1_y2_rulesets": true,
+    "required_tokens_missing_fixed": true,
+    "sha256_pending_fixed": true,
+    "unique_slot_schema_id": true,
+    "validator_payload_column_policy_added": true
+  },
+  "version": "V5.1_coverage_fixed_bootstrap"
+}

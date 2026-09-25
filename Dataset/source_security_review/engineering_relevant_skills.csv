@@ -1,0 +1,6 @@
+source,skill,dataset_design_use
+engineering.zip,codebase-design,"Split contracts, training rows, generated candidates, renderer lineage, evaluator feedback, and metrics."
+engineering.zip,domain-modeling,Make ruleset_id/cell_id first-class domain identifiers.
+engineering.zip,diagnosing-bugs,"Add collapse, duplicate, and per-ruleset failure metrics for debugging."
+engineering.zip,code-review,Make rejected_reason and reward components inspectable.
+engineering.zip,tdd,Runtime validator and coverage metrics should become repeatable tests.

@@ -1,0 +1,2 @@
+batch_id,run_id,item_count,sampling_policy,status
+EVAL_BATCH_BOOTSTRAP_001,BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED,160,top/mid/low/rejected reward stratified sample,prepared_not_reviewed

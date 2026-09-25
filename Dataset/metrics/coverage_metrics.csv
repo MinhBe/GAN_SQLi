@@ -1,0 +1,5 @@
+run_id,module_id,total_rulesets,covered_rulesets,ruleset_coverage,total_cells,covered_cells,cell_coverage,effective_ruleset_count,collapse_index,gini_over_rulesets,mean_unique_per_ruleset,median_unique_per_ruleset,training_rulesets_covered_full_mle,training_ruleset_coverage_full_mle,candidate_generation_status
+BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED,Y1_basic_boolean,1000,834,0.834,1000,834,0.834,832.7772247554012,1.2048192771084336,0.1699807228915662,5.84,6.0,1000.0,1.0,bootstrap_from_v4_1_not_model_generated
+BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED,Y2_boolean_variation,1000,834,0.834,1000,834,0.834,832.7772247554012,1.2048192771084336,0.1699807228915662,5.92,6.0,1000.0,1.0,bootstrap_from_v4_1_not_model_generated
+BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED,Y3_encoded_boolean,1000,910,0.91,1000,910,0.91,908.7768354638894,1.1037527593818983,0.0939823399558498,5.952,6.0,,,bootstrap_from_v4_1_not_model_generated
+BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED,Y4_obfuscated_boolean,1000,910,0.91,1000,910,0.91,908.3831425250548,1.1070110701107012,0.0966062730627306,5.96,6.0,,,bootstrap_from_v4_1_not_model_generated

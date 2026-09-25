@@ -1,0 +1,27 @@
+{
+  "candidate_rows": 24000,
+  "checks": {
+    "has_coverage_metrics": true,
+    "has_cseqgan_prefix_training": true,
+    "has_generated_candidate_schema": true,
+    "has_ruleset_contracts": true,
+    "has_runtime_validator_script": true,
+    "has_y3_y4_lineage": true
+  },
+  "created_utc": "2026-09-25T18:26:26+00:00",
+  "rulesets": 4000,
+  "runtime_not_run": true,
+  "source_samples": 24000,
+  "source_zip": "/mnt/data/SQLGAN_PostgreSQL_Boolean_Attack_Corpus_V4_1_StaticTrainingCorpus.zip",
+  "training_rows": 9960,
+  "v5_1_summary": {
+    "Y1_full_coverage_rulesets": 1000,
+    "Y2_full_coverage_rulesets": 1000,
+    "candidate_generation_status": "bootstrap_from_v4_1_not_model_generated",
+    "required_tokens_missing_after_fix": 0,
+    "ruleset_contracts_total": 4000,
+    "runtime_status": "not_run",
+    "slot_schema_rows": 4000,
+    "slot_schema_unique_ids_after_fix": 4000
+  }
+}

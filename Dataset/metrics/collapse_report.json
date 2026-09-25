@@ -1,0 +1,77 @@
+{
+  "coverage": [
+    {
+      "cell_coverage": 0.834,
+      "collapse_index": 1.2048192771084336,
+      "covered_cells": 834,
+      "covered_rulesets": 834,
+      "effective_ruleset_count": 832.7772247554012,
+      "gini_over_rulesets": 0.16998072289156627,
+      "mean_unique_per_ruleset": 5.84,
+      "median_unique_per_ruleset": 6.0,
+      "module_id": "Y1_basic_boolean",
+      "ruleset_coverage": 0.834,
+      "run_id": "BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED",
+      "total_cells": 1000,
+      "total_rulesets": 1000
+    },
+    {
+      "cell_coverage": 0.834,
+      "collapse_index": 1.2048192771084336,
+      "covered_cells": 834,
+      "covered_rulesets": 834,
+      "effective_ruleset_count": 832.7772247554012,
+      "gini_over_rulesets": 0.16998072289156627,
+      "mean_unique_per_ruleset": 5.92,
+      "median_unique_per_ruleset": 6.0,
+      "module_id": "Y2_boolean_variation",
+      "ruleset_coverage": 0.834,
+      "run_id": "BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED",
+      "total_cells": 1000,
+      "total_rulesets": 1000
+    },
+    {
+      "cell_coverage": 0.91,
+      "collapse_index": 1.1037527593818985,
+      "covered_cells": 910,
+      "covered_rulesets": 910,
+      "effective_ruleset_count": 908.7768354638894,
+      "gini_over_rulesets": 0.09398233995584988,
+      "mean_unique_per_ruleset": 5.952,
+      "median_unique_per_ruleset": 6.0,
+      "module_id": "Y3_encoded_boolean",
+      "ruleset_coverage": 0.91,
+      "run_id": "BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED",
+      "total_cells": 1000,
+      "total_rulesets": 1000
+    },
+    {
+      "cell_coverage": 0.91,
+      "collapse_index": 1.1070110701107012,
+      "covered_cells": 910,
+      "covered_rulesets": 910,
+      "effective_ruleset_count": 908.3831425250547,
+      "gini_over_rulesets": 0.09660627306273063,
+      "mean_unique_per_ruleset": 5.96,
+      "median_unique_per_ruleset": 6.0,
+      "module_id": "Y4_obfuscated_boolean",
+      "ruleset_coverage": 0.91,
+      "run_id": "BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED",
+      "total_cells": 1000,
+      "total_rulesets": 1000
+    }
+  ],
+  "note": "Bootstrap from V4.1 source rows should have broad source ruleset coverage; model-generated runs must compare against this. Runtime not run.",
+  "run_id": "BOOTSTRAP_V4_1_TO_V5_RULESET_CONDITIONED",
+  "v5_1_fixes": {
+    "candidate_generation_status": "bootstrap_from_v4_1_not_model_generated",
+    "match_source_added": "source_assigned",
+    "required_tokens_missing_after_fix": 0,
+    "runtime_status": "not_run",
+    "slot_schema_id_unique_after_fix": true,
+    "training_full_coverage_y1_y2": {
+      "Y1_basic_boolean": 1000,
+      "Y2_boolean_variation": 1000
+    }
+  }
+}

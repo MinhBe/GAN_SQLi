@@ -1,0 +1,17 @@
+{
+  "artifact": "SQLGAN_PostgreSQL_Boolean_CSeqGAN_V5_1_CoverageFixed.zip",
+  "created_utc": "2026-09-25T18:38:45Z",
+  "fixes": {
+    "match_source_added": true,
+    "minimal_seed_files_added_for_missing_y1_y2_rulesets": true,
+    "required_tokens_missing_fixed": true,
+    "sha256_pending_fixed": true,
+    "unique_slot_schema_id": true,
+    "validator_payload_column_policy_added": true
+  },
+  "runtime_status": "not_run",
+  "sha256_file": "SHA256.txt",
+  "sha256_pending": false,
+  "source_artifact": "SQLGAN_PostgreSQL_Boolean_CSeqGAN_V5.zip",
+  "status": "v5_1_coverage_fixed_bootstrap_not_model_generated"
+}

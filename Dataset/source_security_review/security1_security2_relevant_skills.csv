@@ -1,0 +1,9 @@
+source,skill,dataset_design_use
+Security1.zip,performing-second-order-sql-injection,Do not claim exploitability without source/sink context; keep payload-only scope separate.
+Security1.zip,integrating-dast-with-owasp-zap-in-pipeline,Separate static candidate labels from runtime/scanner evidence.
+Security1.zip,performing-web-application-vulnerability-triage,"Add evidence tiers, rejected reasons, and manual review buckets."
+Security1.zip,performing-web-application-penetration-test,Avoid overclaiming payload-only strings as exploit-confirmed.
+Security2.zip,detecting-sql-injection-via-waf-logs,Reserve observation/log fields for later; do not fabricate WAF evidence.
+Security2.zip,conducting-api-security-testing,Keep API/context envelopes out of core predicate-only corpus until explicitly modeled.
+Security2.zip,exploiting-sql-injection-vulnerabilities,Use only for defensive taxonomy; dataset excludes destructive/stacked/time/exfiltration families.
+Security2.zip,exploiting-sql-injection-with-sqlmap,Do not embed tool-driven exploit claims; use sandbox proof only.

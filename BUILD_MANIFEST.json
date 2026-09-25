@@ -1,0 +1,207 @@
+{
+  "package": "GAN_SQLi_CGR_clean_replacement",
+  "tests": "pytest -q -> 5 passed",
+  "smoke": "experiment_b_core_renderers dummy dataset -> passed",
+  "files": [
+    {
+      "path": ".pytest_cache/.gitignore",
+      "bytes": 37,
+      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
+    },
+    {
+      "path": ".pytest_cache/CACHEDIR.TAG",
+      "bytes": 191,
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
+    },
+    {
+      "path": ".pytest_cache/README.md",
+      "bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    {
+      "path": ".pytest_cache/v/cache/nodeids",
+      "bytes": 410,
+      "sha256": "62839260f46c62b4b450e039578ef2727e240c5df7629f7e804c4b90470d690c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2864,
+      "sha256": "ff861040791020545a0334827b5884322fcd7c819341c05827905695b309877f"
+    },
+    {
+      "path": "REPLACE_INSTRUCTIONS.md",
+      "bytes": 718,
+      "sha256": "dd14e3caa7faa3365933f7277a260320bd48073513d8d393edcad6b2504c9fc8"
+    },
+    {
+      "path": "configs/branch_b_cgr_full.yaml",
+      "bytes": 168,
+      "sha256": "d545f7f6be2d4855961a1077af3dd0b7e5ee9509b5ac530dbd6aeb4481c1c228"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 440,
+      "sha256": "667be957643b3130b2b240d70f1e4094a43f46464d982ad41a6d916cb11f1de5"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 70,
+      "sha256": "fa0448593d6c3194c7ab206244df211428d113a75623f4794694b3e8fc843bfe"
+    },
+    {
+      "path": "scripts/run_branch_b_smoke.sh",
+      "bytes": 188,
+      "sha256": "14f1b7c00758906d62a42ac76f797568100170bccea75d18c9eb81b2cf25d2eb"
+    },
+    {
+      "path": "sqlgan_dual/__init__.py",
+      "bytes": 222,
+      "sha256": "7e3be93dba063d3004bae0c600b70e48f7b91221a63471029d885d2e546c7d42"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 389,
+      "sha256": "4c1e8cc072719be82e4227c05dfc5b35e81ba9397755be04cf1ce05e7685ca83"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/data.cpython-313.pyc",
+      "bytes": 11786,
+      "sha256": "1390a0cc8383752452b37d0115584522e1f7be4e850f1e26c83b8de98cb496d6"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/evaluate.cpython-313.pyc",
+      "bytes": 4661,
+      "sha256": "ceae466d58b80a35e9560d42ebfcb6cd39bd7bc913c19724eae7024d18dc0a86"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/experiment_b_core_renderers.cpython-313.pyc",
+      "bytes": 6064,
+      "sha256": "3d0ea8bb6a6fda94eb2ba99f3ba5a72b7697007d455942d282d5f4791ca1735f"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/generate.cpython-313.pyc",
+      "bytes": 6840,
+      "sha256": "3c5b99ffa9d792e911a6489a8daf690b80d5c03696bbec2454379f9076d549f9"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/models.cpython-313.pyc",
+      "bytes": 9361,
+      "sha256": "b18d811519d99353f4975903f276b5df7200ae7ec30ca48eccdeead1436e5832"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/renderers.cpython-313.pyc",
+      "bytes": 5593,
+      "sha256": "4b9edd7640315db4a4b28ecb2eeedef8cda6d62ee837e6298cbf6079e3e1ff6c"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/reward.cpython-313.pyc",
+      "bytes": 4110,
+      "sha256": "2d9cc1db815ab9137aefeb1c02e8eceba24e3c15b2b9f45f8c36c57973a7838b"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/rollout.cpython-313.pyc",
+      "bytes": 4836,
+      "sha256": "e8349a972f99a378d59d9819c6f8120ee1cd784737df06c5e7182472c5fad16b"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/tokenizer.cpython-313.pyc",
+      "bytes": 5830,
+      "sha256": "ef8f816f4e81081b5b00cc687f6b7d30a2d9064f978fdd0ef383f28f2d1fdaca"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/train_module.cpython-313.pyc",
+      "bytes": 6161,
+      "sha256": "728f219d63bd293fe4d189d507d9267469624004bba12c48c345ec4dbc87d353"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/train_seqgan.cpython-313.pyc",
+      "bytes": 19246,
+      "sha256": "0af77fecc476bd5c9b55ba2292e48e28025f011f21f54f5d189c1b2da91f2be1"
+    },
+    {
+      "path": "sqlgan_dual/__pycache__/validators.cpython-313.pyc",
+      "bytes": 13575,
+      "sha256": "e5f9d07305e46b0929023962741d83811fe9924105b345dc2243b19a8b802e96"
+    },
+    {
+      "path": "sqlgan_dual/audit_length.py",
+      "bytes": 1842,
+      "sha256": "f303b79249e02cb73cf47b0facb482ef336a484cbef40186832acf74b369ad52"
+    },
+    {
+      "path": "sqlgan_dual/data.py",
+      "bytes": 7305,
+      "sha256": "13d7a0bf6bf7a9c90debcc44eb6d0db4291743cb445cd54ffc2bb87883b61fe6"
+    },
+    {
+      "path": "sqlgan_dual/evaluate.py",
+      "bytes": 2485,
+      "sha256": "3fea36a0d7805e48e61fdb8b3b2ce9a674393debf1f0743f383d3bfa1e361e73"
+    },
+    {
+      "path": "sqlgan_dual/experiment_b_core_renderers.py",
+      "bytes": 3948,
+      "sha256": "1096f2282d802ac2f7b3a2f8e5ba7d14f04709ea4c28accdf6c94f779bb76601"
+    },
+    {
+      "path": "sqlgan_dual/generate.py",
+      "bytes": 4120,
+      "sha256": "2fe059faf8dc29af190c7da5569957641fe46a969db12795a60e088013ba713e"
+    },
+    {
+      "path": "sqlgan_dual/models.py",
+      "bytes": 5015,
+      "sha256": "f049d4113c3934fa06f4a5bcc7ce5d19a1e42de4055b42bf46a2039a6195327b"
+    },
+    {
+      "path": "sqlgan_dual/renderers.py",
+      "bytes": 3569,
+      "sha256": "f189588486faa25bca1b046446923e52c698f2489fc13cd80ad8f4ab797d3bb3"
+    },
+    {
+      "path": "sqlgan_dual/reward.py",
+      "bytes": 2420,
+      "sha256": "1231b426302a277afafaa702630090acc06d47591c2eb91612f313d879cf2390"
+    },
+    {
+      "path": "sqlgan_dual/rollout.py",
+      "bytes": 2549,
+      "sha256": "7b836734fdf0a5acd07c0608ea71ec293c0b2b3e50ac8d51eca13ae5894b14c0"
+    },
+    {
+      "path": "sqlgan_dual/tokenizer.py",
+      "bytes": 2547,
+      "sha256": "e903529a787baf759652b4229a3d66495b3559c49f6295ad5e971f695f187954"
+    },
+    {
+      "path": "sqlgan_dual/train_module.py",
+      "bytes": 4047,
+      "sha256": "810f1d880477692190bd5bcdc53b059e0ef637389fc6e378393be960fe62e67e"
+    },
+    {
+      "path": "sqlgan_dual/train_seqgan.py",
+      "bytes": 10719,
+      "sha256": "f4679451e1f57bda64582391a33e2fc58c6d21c47539b2697366e9e27fd13ef2"
+    },
+    {
+      "path": "sqlgan_dual/validators.py",
+      "bytes": 8330,
+      "sha256": "2bc46ce6f2ecb99984d8686c31ed21bc72b8d5cbefa48b7ade1a08b012147657"
+    },
+    {
+      "path": "tests/__pycache__/test_cgr_pipeline.cpython-313-pytest-9.0.2.pyc",
+      "bytes": 10244,
+      "sha256": "9eb465f95dde84d7ba1c7a3e349fbf2c7b810a1ac31e9389dddfd27d2877869b"
+    },
+    {
+      "path": "tests/test_cgr_pipeline.py",
+      "bytes": 2100,
+      "sha256": "b9a61ffb0a38fe052df29f60c887fa4a48a85a111abcb0d58f62121207a138de"
+    },
+    {
+      "path": "validation/postgres_sandbox_validator.py",
+      "bytes": 3362,
+      "sha256": "a76aa2fecdf47880a72c43520afb6c1ad3522f3947f7be1d5538b29e6ea83bbc"
+    }
+  ]
+}

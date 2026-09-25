@@ -1,0 +1,7 @@
+check,value,status
+ruleset_count,4000,ok
+missing_required_tokens,0,ok
+slot_schema_rows,4000,ok
+slot_schema_unique_ids,4000,ok
+Y1_basic_boolean_full_coverage_rulesets,1000,ok
+Y2_boolean_variation_full_coverage_rulesets,1000,ok

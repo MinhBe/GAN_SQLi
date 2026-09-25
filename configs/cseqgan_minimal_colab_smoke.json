@@ -1,0 +1,22 @@
+{
+  "branch": "C-SeqGAN-Minimal",
+  "data": "/content/GAN_SQLi/SQLGAN_PostgreSQL_Boolean_CSeqGAN_V5_1_CoverageFixed.zip",
+  "out": "/content/runs_sqlgan/branch_c_cseqgan_minimal_smoke",
+  "modules": ["Y1_basic_boolean", "Y2_boolean_variation"],
+  "limit": 2048,
+  "max_len": 256,
+  "batch_size": 160,
+  "mle_epochs": 6,
+  "d_epochs": 1,
+  "adv_epochs": 1,
+  "adv_steps": 25,
+  "emb_dim": 128,
+  "hidden_dim": 256,
+  "temperature": 0.85,
+  "static_weight": 0.45,
+  "generate_per_ruleset": 2,
+  "generate_ruleset_limit": 100,
+  "parallel_modules": "auto",
+  "cpu_threads": 2,
+  "num_workers": 0
+}

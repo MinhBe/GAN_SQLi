@@ -1,0 +1,5 @@
+target_module_id,reward_total,r_ruleset,r_skeleton,r_slot,r_structure,r_diversity,r_coverage,r_length,p_duplicate,p_near_duplicate,p_off_ruleset
+Y1_basic_boolean,0.8948900000000001,1.0,0.996,0.95,1.0,0.8109,0.5,1.0,0.04,0.0,0.0
+Y2_boolean_variation,0.8978366666666667,1.0,0.996,0.95,1.0,0.8403666666666666,0.5,1.0,0.005333333333333333,0.0,0.0
+Y3_encoded_boolean,0.898065,1.0,0.996,0.957,1.0,0.83215,0.5,1.0,0.015,0.0,0.0
+Y4_obfuscated_boolean,0.8972733333333334,1.0,0.996,0.957,1.0,0.8335666666666666,0.5,1.0,0.013333333333333334,0.0,0.0
